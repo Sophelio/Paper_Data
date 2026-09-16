@@ -46,26 +46,6 @@ WHITE: Final = source.WHITE
 PALE_GREEN: Final = source.PALE_GREEN
 PALE_BLUE: Final = source.PALE_BLUE
 
-# Standard type scale, in points at the final printed size (183 mm wide).
-PRINT_WIDTH_IN: Final = 183.0 / 25.4
-PRINT_SCALE: Final = (WIDTH_MM / MM_PER_INCH) / PRINT_WIDTH_IN
-
-
-def pt(size: float) -> float:
-    """Convert a printed point size to canvas points."""
-    return size * PRINT_SCALE
-
-
-FS_TITLE: Final = pt(8.0)
-FS_PANEL_LETTER: Final = pt(8.0)
-FS_PANEL_TITLE: Final = pt(7.0)
-FS_SUBTITLE: Final = pt(6.0)
-FS_LABEL: Final = pt(6.5)
-FS_TICK: Final = pt(6.0)
-FS_BODY: Final = pt(6.0)
-FS_FINE: Final = pt(5.5)
-FS_EQUATION: Final = pt(6.5)  # featured equation displays (STYLE_SPEC 7B)
-
 # Pin the 10 pt Latin Modern design at every size (STYLE_SPEC 7A); copied
 # verbatim from the Figure 6 script.
 LM_DESIGN_SIZE_PIN = (
@@ -106,14 +86,12 @@ STYLE.update(
         "pdf.fonttype": 42,
         "ps.fonttype": 42,
         "svg.fonttype": "path",
-        "font.size": FS_BODY,
-        "axes.labelsize": FS_LABEL,
-        "axes.titlesize": FS_PANEL_TITLE,
-        "xtick.labelsize": FS_TICK,
-        "ytick.labelsize": FS_TICK,
-        "legend.fontsize": FS_BODY,
-        "legend.title_fontsize": FS_BODY,
-        "figure.titlesize": FS_TITLE,
+        "font.size": 5.9,
+        "axes.labelsize": 6.25,
+        "axes.titlesize": 6.5,
+        "xtick.labelsize": 5.55,
+        "ytick.labelsize": 5.55,
+        "legend.fontsize": 4.8,
     }
 )
 
@@ -126,11 +104,12 @@ def sci_tex(value: float, digits: int) -> str:
     return rf"{mantissa}\times 10^{{{int(exponent)}}}"
 
 
-# Header baselines (figure fraction above the panel slot). Panel b's title wraps
-# to two lines at the standard 7 pt size, so every panel letter and first title
-# line sits one title line higher to keep the letters aligned across the row.
-HEADER_FIRST_BASELINE: Final = 0.140
-HEADER_LINE_STEP: Final = 0.032
+# Header baselines (figure fraction above the panel slot). In Latin Modern bold,
+# panel b's title overruns the canvas on one line, so it wraps to two lines; every
+# panel letter and first title line sits one title line higher so the letters stay
+# aligned across the row.
+HEADER_FIRST_BASELINE: Final = 0.138
+HEADER_LINE_STEP: Final = 0.030
 
 
 def add_panel_header(
@@ -139,7 +118,7 @@ def add_panel_header(
     label: str,
     title: str | tuple[str, ...],
     subtitle: str,
-    title_fontsize: float = FS_PANEL_TITLE,
+    title_fontsize: float = 7.35,
 ) -> None:
     """Align panel labels and headers above both side-by-side cells."""
     bounds = slot.get_position(fig)
@@ -150,7 +129,7 @@ def add_panel_header(
         rf"\textbf{{{label}}}",
         ha="left",
         va="baseline",
-        fontsize=FS_PANEL_LETTER,
+        fontsize=8.2,
         color=INK,
     )
     for index, line in enumerate(title_lines):
@@ -169,7 +148,7 @@ def add_panel_header(
         subtitle,
         ha="left",
         va="baseline",
-        fontsize=FS_SUBTITLE,
+        fontsize=5.4,
         color=MID,
     )
 
@@ -189,7 +168,7 @@ def add_contract_header(
         rf"\textbf{{{title}}}",
         ha="left",
         va="top",
-        fontsize=FS_PANEL_TITLE,
+        fontsize=7.0,
         color=color,
     )
     ax.text(
@@ -198,7 +177,7 @@ def add_contract_header(
         subtitle,
         ha="left",
         va="top",
-        fontsize=FS_SUBTITLE,
+        fontsize=5.35,
         color=MID,
     )
     ax.text(
@@ -207,7 +186,7 @@ def add_contract_header(
         equation,
         ha="left",
         va="bottom",
-        fontsize=FS_EQUATION,
+        fontsize=6.05,
         color=INK,
         bbox={
             "boxstyle": "round,pad=0.23",
@@ -289,7 +268,7 @@ def draw_panel_a(
         transform=ax_comp.transAxes,
         ha="left",
         va="top",
-        fontsize=FS_BODY,
+        fontsize=4.8,
         color=MID,
     )
     ax_comp.text(
@@ -301,7 +280,7 @@ def draw_panel_a(
         transform=ax_comp.transAxes,
         ha="right",
         va="bottom",
-        fontsize=FS_BODY,
+        fontsize=4.35,
         color=INK,
         linespacing=1.18,
         bbox={
@@ -318,10 +297,10 @@ def draw_panel_a(
     scalar_map.set_array([])
     colorbar = fig.colorbar(scalar_map, cax=cax)
     colorbar.set_label("")
-    colorbar.ax.set_title(r"$E_i$", fontsize=FS_LABEL, color=INK, pad=1.5)
+    colorbar.ax.set_title(r"$E_i$", fontsize=4.8, color=INK, pad=1.5)
     colorbar.ax.yaxis.set_ticks_position("left")
     colorbar.ax.tick_params(
-        labelsize=FS_TICK,
+        labelsize=4.7,
         colors=MID,
         length=1.5,
         width=0.45,
@@ -361,17 +340,14 @@ def draw_panel_a(
         xticks=[0, 5, 10, 20, 30],
     )
     ax_pred.yaxis.labelpad = 1.0
-    # Bottom-row x labels sit 0.5 pt closer to their ticks for >= 2 mm canvas-edge clearance.
-    ax_comp.xaxis.labelpad = 3.5
-    ax_pred.xaxis.labelpad = 3.5
     ax_pred.text(
-        0.03,
+        0.02,
         0.98,
         "Initial state supplied only at $t=0$",
         transform=ax_pred.transAxes,
         ha="left",
         va="top",
-        fontsize=FS_BODY,
+        fontsize=4.7,
         color=MID,
     )
     ax_pred.legend(
@@ -390,7 +366,7 @@ def draw_panel_a(
         transform=ax_pred.transAxes,
         ha="right",
         va="bottom",
-        fontsize=FS_BODY,
+        fontsize=4.25,
         color=INK,
         linespacing=1.15,
         bbox={
@@ -443,17 +419,17 @@ def add_relation_strip(
         transform=ax.transAxes,
         ha="left",
         va="center",
-        fontsize=FS_BODY,
+        fontsize=4.65,
         color=INK,
     )
     ax.text(
         0.97,
-        y0 + 0.068,
+        y0 + 0.177,
         rf"$\|R\|_\infty={sci_tex(residual, 1)}$",
         transform=ax.transAxes,
         ha="right",
         va="center",
-        fontsize=FS_BODY,
+        fontsize=4.55,
         color=MID,
     )
     ax.text(
@@ -463,17 +439,17 @@ def add_relation_strip(
         transform=ax.transAxes,
         ha="left",
         va="center",
-        fontsize=FS_BODY,
+        fontsize=6.15,
         color=ORANGE,
     )
     ax.text(
         0.97,
-        y0 + 0.177,
+        y0 + 0.068,
         parameter,
         transform=ax.transAxes,
         ha="right",
         va="center",
-        fontsize=FS_BODY,
+        fontsize=4.7,
         color=MID,
     )
 
@@ -517,8 +493,7 @@ def draw_panel_b(
         rasterized=True,
     )
     ax_field.set(xlabel="$x$", ylabel="$t$", title=r"\textbf{Observed field} $u(x,t)$")
-    ax_field.title.set_fontsize(FS_PANEL_TITLE)
-    ax_field.set_title(ax_field.get_title(), pad=3.0)
+    ax_field.title.set_fontsize(5.9)
     ax_field.title.set_color(INK)
     ax_field.tick_params(length=2.0)
     ax_field.spines[["top", "right"]].set_visible(True)
@@ -528,16 +503,14 @@ def draw_panel_b(
     colorbar.set_ticks([-1.0, 0.0, 1.0])
     colorbar.set_label(
         r"Field amplitude $u(x,t)$",
-        fontsize=FS_LABEL,
+        fontsize=4.55,
         color=INK,
-        # Pulled toward the tick labels for >= 2 mm right-edge clearance; the
-        # label clears the "0" and "1" tick labels by ~1.1 mm.
-        labelpad=-2.5,
+        labelpad=1.0,
         rotation=270,
         va="bottom",
     )
     colorbar.ax.tick_params(
-        labelsize=FS_TICK,
+        labelsize=4.65,
         colors=MID,
         length=1.4,
         width=0.45,
@@ -577,7 +550,7 @@ def draw_panel_b(
         transform=ax_relations.transAxes,
         ha="center",
         va="bottom",
-        fontsize=FS_BODY,
+        fontsize=4.5,
         color=ORANGE,
     )
 
@@ -615,6 +588,7 @@ def build_figure(
         "b",
         ("Structural uncertainty supports", "multiple representations"),
         "Temporal, spatial and coupled relations on one mode",
+        title_fontsize=6.65,
     )
     return fig
 

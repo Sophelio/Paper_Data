@@ -48,26 +48,6 @@ WIDTH_MM: Final = 183.0
 HEIGHT_MM: Final = 150.0
 MM_PER_INCH: Final = 25.4
 
-# Standard SIR figure type scale, in points at the final printed size.  The
-# canvas is printed at double-column width (183 mm), so PRINT_SCALE == 1 here.
-PRINT_WIDTH_IN: Final = 183.0 / 25.4
-PRINT_SCALE: Final = (WIDTH_MM / MM_PER_INCH) / PRINT_WIDTH_IN
-
-
-def pt(size: float) -> float:
-    """Convert a printed point size to canvas points."""
-    return size * PRINT_SCALE
-
-
-FS_TITLE: Final = pt(8.0)
-FS_PANEL_LETTER: Final = pt(8.0)
-FS_PANEL_TITLE: Final = pt(7.0)
-FS_SUBTITLE: Final = pt(6.0)
-FS_LABEL: Final = pt(6.5)
-FS_TICK: Final = pt(6.0)
-FS_BODY: Final = pt(6.0)
-FS_FINE: Final = pt(5.5)
-
 # Pin the 10 pt Latin Modern design at every size (SIR style spec, section 7A).
 LM_DESIGN_SIZE_PIN = (
     r"\DeclareFontFamily{T1}{lmr}{}"
@@ -131,16 +111,16 @@ STYLE: Final = {
     "pdf.fonttype": 42,
     "ps.fonttype": 42,
     "svg.fonttype": "path",
-    "font.size": FS_BODY,
-    "axes.labelsize": FS_LABEL,
-    "axes.titlesize": FS_PANEL_TITLE,
+    "font.size": 6.9,
+    "axes.labelsize": 7.4,
+    "axes.titlesize": 8.0,
     "axes.labelcolor": INK,
     "axes.edgecolor": INK,
     "axes.linewidth": 0.65,
     "axes.spines.top": False,
     "axes.spines.right": False,
-    "xtick.labelsize": FS_TICK,
-    "ytick.labelsize": FS_TICK,
+    "xtick.labelsize": 6.65,
+    "ytick.labelsize": 6.65,
     "xtick.color": INK,
     "ytick.color": INK,
     "xtick.direction": "out",
@@ -149,9 +129,7 @@ STYLE: Final = {
     "ytick.major.size": 2.5,
     "xtick.major.width": 0.6,
     "ytick.major.width": 0.6,
-    "legend.fontsize": FS_BODY,
-    "legend.title_fontsize": FS_BODY,
-    "figure.titlesize": FS_TITLE,
+    "legend.fontsize": 6.4,
     "lines.solid_capstyle": "round",
     "lines.solid_joinstyle": "round",
 }
@@ -577,7 +555,7 @@ def add_panel_header(
         rf"\textbf{{{label}}}",
         ha="left",
         va="baseline",
-        fontsize=FS_PANEL_LETTER,
+        fontsize=8.5,
         color=INK,
     )
     fig.text(
@@ -586,7 +564,7 @@ def add_panel_header(
         rf"\textbf{{{title}}}",
         ha="left",
         va="baseline",
-        fontsize=FS_PANEL_TITLE,
+        fontsize=8.0,
         color=INK,
     )
     fig.text(
@@ -595,7 +573,7 @@ def add_panel_header(
         subtitle,
         ha="left",
         va="baseline",
-        fontsize=FS_SUBTITLE,
+        fontsize=6.0,
         color=MID,
     )
 
@@ -645,9 +623,9 @@ def draw_panel_a(fig: plt.Figure, slot, data: FigureData) -> None:
         equations,
         ha="center",
         va="top",
-        fontsize=FS_LABEL,  # featured equation display: axis-label tier
+        fontsize=8.1,
         color=INK,
-        linespacing=1.45,
+        linespacing=1.16,
     )
     text_ax.text(
         0.50,
@@ -656,7 +634,7 @@ def draw_panel_a(fig: plt.Figure, slot, data: FigureData) -> None:
         + rf"$\|\Delta\mathbf{{c}}\|_\infty={_latex_sci(data.recovery['max_abs_coefficient_deviation'])}$",
         ha="center",
         va="bottom",
-        fontsize=FS_BODY,
+        fontsize=6.5,
         color=MID,
         clip_on=False,
     )
@@ -746,10 +724,10 @@ def draw_panel_b(ax: plt.Axes, landscape: pd.DataFrame) -> None:
     ax.annotate(
         "Quadratic baseline\n10 coordinates\n" r"$\rightarrow$ 65 features",
         xy=(quadratic["n_coordinates"], quadratic["cv_rmse_mean"]),
-        xytext=(1.1, 0.16),
+        xytext=(1.6, 0.16),
         ha="left",
         va="center",
-        fontsize=FS_BODY,
+        fontsize=6.05,
         linespacing=1.12,
         color=COLORS["C0_poly2"],
         bbox=dict(boxstyle="round,pad=0.20", fc="white", ec="#D3A27E", lw=0.6),
@@ -769,7 +747,7 @@ def draw_panel_b(ax: plt.Axes, landscape: pd.DataFrame) -> None:
         xytext=(14.3, 1.8e-3),
         ha="left",
         va="center",
-        fontsize=FS_BODY,
+        fontsize=6.05,
         linespacing=1.15,
         color=COLORS["C_compact"],
         bbox=dict(boxstyle="round,pad=0.20", fc="white", ec="#8CB9AA", lw=0.6),
@@ -786,10 +764,10 @@ def draw_panel_b(ax: plt.Axes, landscape: pd.DataFrame) -> None:
         "Accuracy and robustness criteria\n"
         r"$C_{\mathrm{all}}$: 38 coordinates",
         xy=(all_rep["n_coordinates"], all_rep["cv_rmse_mean"]),
-        xytext=(23.4, 2.2e-4),
+        xytext=(26.5, 2.2e-4),
         ha="left",
         va="center",
-        fontsize=FS_BODY,
+        fontsize=6.05,
         linespacing=1.15,
         color=COLORS["C_all"],
         bbox=dict(boxstyle="round,pad=0.20", fc="white", ec="#8EB0C8", lw=0.6),
@@ -806,7 +784,7 @@ def draw_panel_b(ax: plt.Axes, landscape: pd.DataFrame) -> None:
         r"$C_0+Q_{\dot y|x}$",
         xy=(one_q["n_coordinates"], one_q["cv_rmse_mean"]),
         xytext=(13.5, 1.4),
-        fontsize=FS_BODY,
+        fontsize=6.0,
         color=MID,
         arrowprops=dict(arrowstyle="-", color=LIGHT, lw=0.55),
     )
@@ -827,7 +805,7 @@ def draw_panel_b(ax: plt.Axes, landscape: pd.DataFrame) -> None:
         handlelength=4.4,
         handletextpad=0.65,
         borderaxespad=0.0,
-        fontsize=FS_BODY,
+        fontsize=6.2,
     )
     ax.text(
         0.985,
@@ -836,7 +814,7 @@ def draw_panel_b(ax: plt.Axes, landscape: pd.DataFrame) -> None:
         transform=ax.transAxes,
         ha="right",
         va="top",
-        fontsize=FS_FINE,
+        fontsize=5.75,
         color=MID,
     )
 
@@ -917,7 +895,7 @@ def draw_panel_c(
         transform=ax.transAxes,
         ha="right",
         va="top",
-        fontsize=FS_BODY,
+        fontsize=6.25,
         color=INK,
         linespacing=1.15,
     )
@@ -928,7 +906,7 @@ def draw_panel_c(
         transform=ax.transAxes,
         ha="right",
         va="top",
-        fontsize=FS_FINE,
+        fontsize=5.75,
         color=MID,
         linespacing=1.15,
     )
@@ -978,7 +956,7 @@ def draw_panel_d(ax: plt.Axes, bootstrap: BootstrapResult) -> None:
             textcoords="offset points",
             ha="left",
             va="center",
-            fontsize=FS_BODY,
+            fontsize=6.15,
             color=COLORS[rep],
             clip_on=False,
         )
@@ -999,7 +977,7 @@ def draw_panel_d(ax: plt.Axes, bootstrap: BootstrapResult) -> None:
         "Compact--Quadratic\n" r"crossover $\approx 0.45\%$",
         ha="right",
         va="bottom",
-        fontsize=FS_FINE,
+        fontsize=5.75,
         color=MID,
         linespacing=1.1,
     )
@@ -1019,7 +997,7 @@ def draw_panel_d(ax: plt.Axes, bootstrap: BootstrapResult) -> None:
         transform=ax.transAxes,
         ha="left",
         va="top",
-        fontsize=FS_BODY,
+        fontsize=6.15,
         color=COLORS["C_all"],
         linespacing=1.18,
         bbox=dict(boxstyle="round,pad=0.22", fc=PALE_BLUE, ec="#A9C1D3", lw=0.55),
@@ -1032,7 +1010,7 @@ def draw_panel_d(ax: plt.Axes, bootstrap: BootstrapResult) -> None:
         transform=ax.transAxes,
         ha="right",
         va="bottom",
-        fontsize=FS_FINE,
+        fontsize=5.75,
         color=MID,
     )
 
@@ -1096,7 +1074,7 @@ def build_figure(data: FigureData, bootstrap: BootstrapResult) -> plt.Figure:
         "Development data select representations; the protected confirmation cohort is used only for evaluation.",
         ha="center",
         va="bottom",
-        fontsize=FS_FINE,
+        fontsize=5.75,
         color=MID,
     )
     return fig

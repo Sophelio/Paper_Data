@@ -22,31 +22,11 @@ FIG = Path(os.environ.get("CORRECTION_FIGURE_DIR", BASE / "figures"))
 FIG.mkdir(parents=True, exist_ok=True)
 
 # ---------------------------------------------------------------------------
-# Manuscript typography: Latin Modern through LaTeX, standard type scale.
-# The three Supplementary Figure S1 panels print at double-column width
-# (183 mm), so their canvases are set to that width and PRINT_SCALE = 1.
-# The style is applied only to those three panels (via rc_context); the other
-# audit figures keep matplotlib defaults.
+# Manuscript typography: Latin Modern through LaTeX. Font sizes and canvases
+# are the original ones (matplotlib defaults plus the per-site values below).
+# The style is applied only to the three Supplementary Figure S1 panels (via
+# rc_context); the other audit figures keep matplotlib defaults.
 # ---------------------------------------------------------------------------
-PRINT_WIDTH_IN = 183.0 / 25.4
-FIG_WIDTH_IN = PRINT_WIDTH_IN
-PRINT_SCALE = FIG_WIDTH_IN / PRINT_WIDTH_IN
-
-
-def pt(size: float) -> float:
-    """Printed point size -> canvas point size."""
-    return size * PRINT_SCALE
-
-
-FS_TITLE = pt(8.0)
-FS_PANEL_LETTER = pt(8.0)
-FS_PANEL_TITLE = pt(7.0)
-FS_SUBTITLE = pt(6.0)
-FS_LABEL = pt(6.5)
-FS_TICK = pt(6.0)
-FS_BODY = pt(6.0)
-FS_FINE = pt(5.5)
-
 # Pin the 10 pt Latin Modern design at every size (copied verbatim from
 # Figure 6); otherwise lmodern switches to wider optical designs below 10 pt.
 LM_DESIGN_SIZE_PIN = (
@@ -82,20 +62,7 @@ S1_STYLE = {
     "pdf.fonttype": 42,
     "ps.fonttype": 42,
     "svg.fonttype": "path",
-    "font.size": FS_BODY,
-    "axes.labelsize": FS_LABEL,
-    "axes.titlesize": FS_PANEL_TITLE,
-    "xtick.labelsize": FS_TICK,
-    "ytick.labelsize": FS_TICK,
-    "legend.fontsize": FS_BODY,
-    "legend.title_fontsize": FS_BODY,
-    "figure.titlesize": FS_TITLE,
 }
-
-
-def panel_size(width_in: float, height_in: float) -> tuple[float, float]:
-    """Rescale an original canvas to 183 mm width, keeping its aspect ratio."""
-    return FIG_WIDTH_IN, FIG_WIDTH_IN * height_in / width_in
 
 
 def bold(text: str) -> str:
@@ -199,7 +166,7 @@ def main():
 
     # 2. coefficient_change_vs_rank_removed  (Supplementary Figure S1a)
     with mpl.rc_context(S1_STYLE):
-        fig, ax = plt.subplots(1, 2, figsize=panel_size(10, 4))
+        fig, ax = plt.subplots(1, 2, figsize=(10, 4))
         for rk in [7, 6, 5, 4]:
             g = frank[frank.retained_rank == rk]
             ax[0].boxplot(g["relative_coefficient_change"], positions=[7 - rk], widths=0.6)
@@ -269,7 +236,7 @@ def main():
 
     # 5. heterogeneity_interval_by_coefficient  (Supplementary Figure S1b)
     with mpl.rc_context(S1_STYLE):
-        fig, ax = plt.subplots(figsize=panel_size(8, 4.5))
+        fig, ax = plt.subplots(figsize=(8, 4.5))
         y = np.arange(len(keys))
         p = primary.set_index("feature").reindex(keys)
         ax.errorbar(
@@ -283,7 +250,7 @@ def main():
             capsize=3,
         )
         ax.set_yticks(y)
-        ax.set_yticklabels([COORD_MATH[disp[k]] for k in keys], fontsize=FS_TICK)
+        ax.set_yticklabels([COORD_MATH[disp[k]] for k in keys], fontsize=8)
         ax.set_xlabel(r"$\tau^2$ (REML) with profile interval")
         ax.set_title(bold("Corrected heterogeneity intervals"))
         ax.set_xscale("symlog", linthresh=1e-6)
@@ -314,7 +281,7 @@ def main():
 
     # 7. multivariate_eigenvalue_uncertainty  (Supplementary Figure S1c)
     with mpl.rc_context(S1_STYLE):
-        fig, ax = plt.subplots(figsize=panel_size(8, 4.5))
+        fig, ax = plt.subplots(figsize=(8, 4.5))
         idx = eigs["eigenvalue_index"]
         ax.errorbar(
             idx,
@@ -331,7 +298,7 @@ def main():
         ax.axhline(0, color="k", lw=0.8)
         ax.set_xlabel("ordered eigenvalue index")
         ax.set_ylabel("eigenvalue of $\\Sigma_B-\\Sigma_W$")
-        ax.legend(fontsize=FS_BODY)
+        ax.legend(fontsize=8)
         ax.set_title(bold("Multivariate eigenvalue uncertainty"))
         save_fig(
             fig,

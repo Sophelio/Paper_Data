@@ -57,10 +57,16 @@ LOSS_FACE = "#F7EFE8"
 UNUSED = "#637480"
 UNUSED_FACE = "#FAFBFC"
 
+# Semantic enlargement for explanatory slate/gray text only. Scientific marks,
+# colored annotations, equations, and axis typography retain their own scales.
+GRAY_TEXT_SCALE = 1.15
+LOWER_PANEL_GRAY_BOOST = 1.15
+GLOBAL_SUBTITLE_FONTSIZE = 7.8
+
 
 @dataclass(frozen=True)
 class PanelLayout:
-    """Top-level transform controls for one panel.
+    """Top-level transform and typography controls for one panel.
 
     ``rect`` is ``(left, bottom, width, height)`` in the panel GridSpec cell.
     Editing this one tuple moves or scales every content artist in the panel;
@@ -68,17 +74,18 @@ class PanelLayout:
     """
 
     rect: tuple[float, float, float, float]
+    font_scale: float = 1.0
     box_scale: float = 1.0
 
 
 # --------------------------------------------------------------------------
 # Panel containers: tune the whole figure from these four lines.
-# ``box_scale`` changes Panel-A nodes only; type follows the FS_* tiers below.
+# ``font_scale`` changes type only; ``box_scale`` changes Panel-A nodes only.
 # --------------------------------------------------------------------------
-PANEL_A_LAYOUT = PanelLayout(rect=(-0.025, -0.005, 1.055, 0.995), box_scale=1.04)
-PANEL_B_LAYOUT = PanelLayout(rect=(-0.015, -0.005, 1.030, 0.995))
-PANEL_C_LAYOUT = PanelLayout(rect=(-0.015, -0.005, 1.030, 0.995))
-PANEL_D_LAYOUT = PanelLayout(rect=(-0.010, -0.005, 1.020, 0.995))
+PANEL_A_LAYOUT = PanelLayout(rect=(-0.025, -0.005, 1.055, 0.995), font_scale=1.12, box_scale=1.04)
+PANEL_B_LAYOUT = PanelLayout(rect=(-0.015, -0.005, 1.030, 0.995), font_scale=1.10)
+PANEL_C_LAYOUT = PanelLayout(rect=(-0.015, -0.005, 1.030, 0.995), font_scale=1.10)
+PANEL_D_LAYOUT = PanelLayout(rect=(-0.010, -0.005, 1.020, 0.995), font_scale=1.12)
 
 # Panel-A bottom summaries share a height but allocate width according to content:
 # the semantic inventory is compact, while the complete cohort equation is wide.
@@ -91,31 +98,6 @@ PANEL_A_FORM_BOX_SIZE = (0.700, 0.185)
 # publisher-specific requirements should be checked at submission time.
 FIGURE_SIZE_IN = (7.15, 6.90)
 EXPORT_DPI = 600
-
-# Standard SIR figure type scale, in points at the printed size (183 mm wide).
-PRINT_WIDTH_IN = 183.0 / 25.4
-PRINT_SCALE = FIGURE_SIZE_IN[0] / PRINT_WIDTH_IN
-
-
-def pt(size: float) -> float:
-    """Convert a printed point size to canvas points."""
-    return size * PRINT_SCALE
-
-
-FS_TITLE = pt(8.0)
-FS_PANEL_LETTER = pt(8.0)
-FS_PANEL_TITLE = pt(7.0)
-FS_SUBTITLE = pt(6.0)
-FS_LABEL = pt(6.5)
-FS_TICK = pt(6.0)
-FS_BODY = pt(6.0)
-FS_FINE = pt(5.5)
-
-
-def _bold(text: str) -> str:
-    """Bold text under usetex, line by line so multi-line labels stay valid TeX."""
-    return "\n".join(r"\textbf{" + line + "}" for line in text.split("\n"))
-
 
 PRIM_MATH = {
     "pcdiamag3": r"$W_{\mathrm{dia}}$",
@@ -172,6 +154,11 @@ LM_DESIGN_SIZE_PIN = (
 )
 
 
+def _bold(text: str) -> str:
+    """Bold text under usetex, line by line so multi-line labels stay valid TeX."""
+    return "\n".join(r"\textbf{" + line + "}" for line in text.split("\n"))
+
+
 def _style() -> dict[str, object]:
     """Return a scoped print style without mutating caller-wide rcParams."""
     return {
@@ -193,14 +180,7 @@ def _style() -> dict[str, object]:
         "pdf.fonttype": 42,
         "ps.fonttype": 42,
         "svg.fonttype": "path",
-        "font.size": FS_BODY,
-        "axes.labelsize": FS_LABEL,
-        "axes.titlesize": FS_PANEL_TITLE,
-        "xtick.labelsize": FS_TICK,
-        "ytick.labelsize": FS_TICK,
-        "legend.fontsize": FS_BODY,
-        "legend.title_fontsize": FS_BODY,
-        "figure.titlesize": FS_TITLE,
+        "font.size": 7.3,
         "axes.linewidth": 0.6,
     }
 
@@ -242,7 +222,7 @@ def _node(
     ec=RULE,
     lw=0.8,
     ls="-",
-    fontsize=FS_BODY,
+    fontsize=6.2,
     color=INK,
     bold=False,
     z=4,
@@ -302,7 +282,7 @@ def _panel_title(ax, letter: str, title: str, task: str, color: str) -> None:
         transform=ax.transAxes,
         ha="left",
         va="baseline",
-        fontsize=FS_PANEL_LETTER,
+        fontsize=9.8,
         color=INK,
         clip_on=False,
         zorder=20,
@@ -315,7 +295,7 @@ def _panel_title(ax, letter: str, title: str, task: str, color: str) -> None:
         transform=ax.transAxes,
         ha="left",
         va="baseline",
-        fontsize=FS_PANEL_TITLE,
+        fontsize=8.35,
         color=color,
         clip_on=False,
         zorder=20,
@@ -408,6 +388,8 @@ def _assert_invariants(coef, cls, held, folds, matrix):
 
 def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
     layout = PANEL_A_LAYOUT
+    fs = lambda size: size * layout.font_scale
+    gfs = lambda size: fs(size) * GRAY_TEXT_SCALE
     bs = lambda size: size * layout.box_scale
 
     _panel_title(
@@ -428,7 +410,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         _bold("Observed"),
         ha="center",
         va="top",
-        fontsize=FS_BODY,
+        fontsize=gfs(6.5),
         color=SLATE,
     )
     ax.text(
@@ -437,7 +419,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         _bold("Selected Coordinates"),
         ha="center",
         va="top",
-        fontsize=FS_BODY,
+        fontsize=gfs(6.5),
         color=SLATE,
     )
     ax.text(
@@ -446,7 +428,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         _bold("Response"),
         ha="center",
         va="top",
-        fontsize=FS_BODY,
+        fontsize=gfs(6.5),
         color=SLATE,
     )
 
@@ -464,7 +446,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
             fc=WHITE,
             ec="#9FB0BE",
             lw=0.7,
-            fontsize=FS_BODY,
+            fontsize=fs(7.15),
         )
 
     unused_x, unused_y = PANEL_A_UNUSED_BOX_CENTER
@@ -486,7 +468,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         _bold("Available,\nUnselected"),
         ha="center",
         va="center",
-        fontsize=FS_BODY,
+        fontsize=gfs(5.65),
         color=UNUSED,
         linespacing=1.06,
     )
@@ -496,7 +478,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         r"$P_{\mathrm{NBI}}\quad n_e\quad I_p$",
         ha="center",
         va="center",
-        fontsize=FS_BODY,
+        fontsize=gfs(6.20),
         color=UNUSED,
     )
 
@@ -519,7 +501,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
             _bold(text),
             ha="center",
             va="center",
-            fontsize=FS_BODY,
+            fontsize=fs(5.35),
             color=GREEN,
             zorder=6,
         )
@@ -535,7 +517,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         COORD_MATH["dot beta_N"],
         fc=GREEN_PALE,
         ec=GREEN_LIGHT,
-        fontsize=FS_BODY,
+        fontsize=fs(6.65),
     )
     c_dotk = _node(
         ax,
@@ -546,7 +528,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         COORD_MATH["dot kappa"],
         fc=GREEN_PALE,
         ec=GREEN_LIGHT,
-        fontsize=FS_BODY,
+        fontsize=fs(6.65),
     )
 
     pill(0.720, "Trajectory-Relational", 0.29)
@@ -559,7 +541,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         COORD_MATH["D_betaN kappa"],
         fc=WHITE,
         ec=GREEN_LIGHT,
-        fontsize=FS_BODY,
+        fontsize=fs(6.55),
     )
     c_dbl = _node(
         ax,
@@ -570,7 +552,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         COORD_MATH["D_betaN l_i"],
         fc=WHITE,
         ec=GREEN_LIGHT,
-        fontsize=FS_BODY,
+        fontsize=fs(6.55),
     )
 
     pill(0.550, "Target-Containing", 0.25)
@@ -583,7 +565,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         COORD_MATH["D_kappa W_dia"],
         fc="#FFFCF5",
         ec=GREEN,
-        fontsize=FS_BODY,
+        fontsize=fs(6.45),
         ls=(0, (2.4, 1.3)),
     )
     c_dbw = _node(
@@ -595,7 +577,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         COORD_MATH["D_betaN W_dia"],
         fc="#FFFCF5",
         ec=GREEN,
-        fontsize=FS_BODY,
+        fontsize=fs(6.45),
         ls=(0, (2.4, 1.3)),
     )
 
@@ -609,7 +591,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         COORD_MATH["q95 / kappa"],
         fc=WHITE,
         ec=GREEN_LIGHT,
-        fontsize=FS_BODY,
+        fontsize=fs(6.55),
     )
 
     coords = {
@@ -638,7 +620,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         fc=GREEN_PALE,
         ec=GREEN,
         lw=1.0,
-        fontsize=FS_BODY,
+        fontsize=fs(8.1),
         z=5,
     )
     ax.text(
@@ -647,7 +629,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         _bold("Shared Support"),
         ha="center",
         va="center",
-        fontsize=FS_BODY,
+        fontsize=fs(5.45),
         color=GREEN,
     )
     for node, _ in coords.values():
@@ -674,7 +656,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         _bold("Cohort-Mean Descriptive Form"),
         ha="center",
         va="center",
-        fontsize=FS_BODY,
+        fontsize=fs(6.15),
         color=GREEN,
         zorder=5,
     )
@@ -695,7 +677,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
             line,
             ha="center",
             va="center",
-            fontsize=FS_BODY,
+            fontsize=fs(5.35),
             color=INK,
             zorder=5,
         )
@@ -705,7 +687,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         r"62 discharges $\cdot$ shared support $\cdot$ discharge-specific coefficients",
         ha="center",
         va="center",
-        fontsize=FS_FINE,
+        fontsize=gfs(4.35),
         color=SLATE,
         zorder=5,
     )
@@ -718,6 +700,8 @@ def _draw_panel_b(
     het: pd.DataFrame,
 ) -> None:
     layout = PANEL_B_LAYOUT
+    fs = lambda size: size * layout.font_scale
+    gfs = lambda size: fs(size) * GRAY_TEXT_SCALE
     _panel_title(
         panel_ax,
         "b",
@@ -732,7 +716,7 @@ def _draw_panel_b(
         transform=panel_ax.transAxes,
         ha="left",
         va="top",
-        fontsize=FS_SUBTITLE,
+        fontsize=gfs(5.05),
         color=SLATE,
         clip_on=False,
         zorder=20,
@@ -754,24 +738,24 @@ def _draw_panel_b(
     het = het.set_index("display_name")
 
     ax.text(
-        0.835,
+        0.83,
         1.005,
         _bold("Decision rule"),
         transform=ax.transAxes,
         ha="center",
         va="top",
-        fontsize=FS_BODY,
+        fontsize=fs(4.75),
         color=GREEN,
     )
     ax.text(
-        0.835,
+        0.83,
         0.966,
         "Resolved when between-discharge variation\n"
         "persists beyond within-discharge uncertainty",
         transform=ax.transAxes,
         ha="center",
         va="top",
-        fontsize=FS_FINE,
+        fontsize=fs(4.15),
         color=GREEN,
         linespacing=1.05,
     )
@@ -843,7 +827,7 @@ def _draw_panel_b(
             axis="x",
             which="major",
             labelbottom=True,
-            labelsize=FS_FINE,
+            labelsize=gfs(3.55),
             labelcolor=SLATE,
             color="#AAB6BE",
             length=1.5,
@@ -874,7 +858,7 @@ def _draw_panel_b(
             transform=ax.transAxes,
             ha="left",
             va="center",
-            fontsize=FS_BODY,
+            fontsize=fs(5.15),
             color=INK,
         )
 
@@ -887,7 +871,7 @@ def _draw_panel_b(
             transform=ax.transAxes,
             ha="left",
             va="center",
-            fontsize=FS_FINE,
+            fontsize=fs(4.25) if robust else gfs(4.25),
             color=GREEN if robust else MID_SLATE,
             linespacing=0.90,
         )
@@ -898,7 +882,7 @@ def _draw_panel_b(
             transform=ax.transAxes,
             ha="left",
             va="center",
-            fontsize=FS_FINE,
+            fontsize=gfs(4.05),
             color=SLATE,
         )
 
@@ -913,23 +897,25 @@ def _draw_panel_b(
     ax.text(
         0.01,
         0.082,
-        r"Native-scale histogram + KDE; range: observed min--max; diamond: random-effects mean $\mu_{\mathrm{REML}}$.",
+        r"Native-scale histogram + KDE; range: observed min--max;"
+        "\n"
+        r"diamond: random-effects mean $\mu_{\mathrm{REML}}$.",
         transform=ax.transAxes,
         ha="left",
         va="top",
-        fontsize=FS_FINE,
+        fontsize=gfs(4.45),
         color=SLATE,
     )
     ax.text(
         0.01,
-        0.027,
+        -0.012,
         rf"$D_{{\beta_N}}\ell_i$ is resolved ($H_r={resolved_ratio:.2f}$, $\tau^2_{{\mathrm{{REML}}}}>0$);"
         "\n"
         rf"$D_\kappa W_{{\mathrm{{dia}}}}$ is uncertainty-dominated ($H_r={unresolved_ratio:.2f}$, {tau_text}).",
         transform=ax.transAxes,
         ha="left",
         va="top",
-        fontsize=FS_FINE,
+        fontsize=gfs(4.45),
         color=NAVY,
         linespacing=1.05,
     )
@@ -986,6 +972,8 @@ def _short_coord(c: str) -> str:
 
 def _draw_panel_c(panel_ax: plt.Axes, matrix: pd.DataFrame) -> None:
     layout = PANEL_C_LAYOUT
+    fs = lambda size: size * layout.font_scale
+    gfs = lambda size: fs(size) * GRAY_TEXT_SCALE * LOWER_PANEL_GRAY_BOOST
     _panel_title(
         panel_ax,
         "c",
@@ -1016,7 +1004,6 @@ def _draw_panel_c(panel_ax: plt.Axes, matrix: pd.DataFrame) -> None:
     rec_bar_left = 5.58
     rec_bar_max = 0.34
     rec_count_x = 6.24
-    TYPE_COLUMN_X = -2.17
 
     ax.set_xlim(-2.25, 6.65)
     ax.set_ylim(len(ordered) - 0.5, -1.70)
@@ -1025,21 +1012,21 @@ def _draw_panel_c(panel_ax: plt.Axes, matrix: pd.DataFrame) -> None:
     ax.spines[:].set_visible(False)
 
     ax.text(
-        TYPE_COLUMN_X,
+        -2.05,
         -1.35,
         _bold("Type"),
         ha="left",
         va="center",
-        fontsize=FS_BODY,
+        fontsize=gfs(4.65),
         color=SLATE,
     )
     ax.text(
         0.55,
         -1.35,
-        _bold("Relational Term"),
+        _bold("Relational\nTerm"),
         ha="right",
         va="center",
-        fontsize=FS_BODY,
+        fontsize=gfs(4.65),
         color=SLATE,
     )
     ax.text(
@@ -1048,7 +1035,7 @@ def _draw_panel_c(panel_ax: plt.Axes, matrix: pd.DataFrame) -> None:
         _bold("Fold Support"),
         ha="center",
         va="center",
-        fontsize=FS_BODY,
+        fontsize=gfs(4.65),
         color=SLATE,
     )
     ax.text(
@@ -1057,7 +1044,7 @@ def _draw_panel_c(panel_ax: plt.Axes, matrix: pd.DataFrame) -> None:
         _bold("Rec."),
         ha="center",
         va="center",
-        fontsize=FS_BODY,
+        fontsize=gfs(4.65),
         color=SLATE,
     )
 
@@ -1068,7 +1055,7 @@ def _draw_panel_c(panel_ax: plt.Axes, matrix: pd.DataFrame) -> None:
             f"F{k + 1}",
             ha="center",
             va="center",
-            fontsize=FS_FINE,
+            fontsize=gfs(4.55),
             color=SLATE,
         )
 
@@ -1079,12 +1066,12 @@ def _draw_panel_c(panel_ax: plt.Axes, matrix: pd.DataFrame) -> None:
         edge, face = family_palette.get(family, (MID_SLATE, BLUE_LIGHT))
 
         ax.text(
-            TYPE_COLUMN_X,
+            -2.05,
             i,
             _bold(family.lower()),
             ha="left",
             va="center",
-            fontsize=FS_FINE,
+            fontsize=fs(4.30) if family in family_palette else gfs(4.30),
             color=edge,
         )
         ax.text(
@@ -1093,7 +1080,7 @@ def _draw_panel_c(panel_ax: plt.Axes, matrix: pd.DataFrame) -> None:
             _short_coord(term),
             ha="right",
             va="center",
-            fontsize=FS_FINE,
+            fontsize=fs(4.25),
             color=INK,
         )
 
@@ -1143,7 +1130,7 @@ def _draw_panel_c(panel_ax: plt.Axes, matrix: pd.DataFrame) -> None:
             _bold(str(int(recurrent[term]))),
             ha="center",
             va="center",
-            fontsize=FS_FINE,
+            fontsize=fs(4.45) if int(recurrent[term]) >= 4 else gfs(4.45),
             color=INK if int(recurrent[term]) >= 4 else MID_SLATE,
         )
 
@@ -1174,7 +1161,7 @@ def _draw_panel_c(panel_ax: plt.Axes, matrix: pd.DataFrame) -> None:
             transform=footer.transAxes,
             ha="left",
             va="center",
-            fontsize=FS_BODY,
+            fontsize=gfs(4.35),
             color=SLATE,
         )
 
@@ -1186,19 +1173,19 @@ def _draw_panel_c(panel_ax: plt.Axes, matrix: pd.DataFrame) -> None:
         transform=footer.transAxes,
         ha="center",
         va="top",
-        fontsize=FS_FINE,
+        fontsize=gfs(4.40),
         color=SLATE,
         linespacing=1.05,
     )
     footer.text(
-        0.5,
+        0.512,
         0.30,
-        f"Ratio constructions comprise {n_ratios} / {len(ordered)} recurrent terms. Ratio and reciprocal terms shown passed\n"
-        "the frozen admissibility and range-support checks in every fold where selected.",
+        f"Ratio constructions comprise {n_ratios} / {len(ordered)} recurrent terms. Ratio and reciprocal terms shown\n"
+        "passed the frozen admissibility and range-support checks in every fold where selected.",
         transform=footer.transAxes,
         ha="center",
         va="top",
-        fontsize=FS_FINE,
+        fontsize=fs(5.5),
         color=NAVY,
         linespacing=1.08,
     )
@@ -1206,6 +1193,8 @@ def _draw_panel_c(panel_ax: plt.Axes, matrix: pd.DataFrame) -> None:
 
 def _draw_panel_d(panel_ax: plt.Axes, held: pd.DataFrame) -> None:
     layout = PANEL_D_LAYOUT
+    fs = lambda size: size * layout.font_scale
+    gfs = lambda size: fs(size) * GRAY_TEXT_SCALE * LOWER_PANEL_GRAY_BOOST
     _panel_title(
         panel_ax,
         "d",
@@ -1271,7 +1260,7 @@ def _draw_panel_d(panel_ax: plt.Axes, held: pd.DataFrame) -> None:
         bbox_to_anchor=(0.095, 0.995),
         ncol=3,
         frameon=False,
-        fontsize=FS_BODY,
+        fontsize=fs(4.55),
         handletextpad=0.35,
         columnspacing=0.85,
         borderaxespad=0.0,
@@ -1287,7 +1276,7 @@ def _draw_panel_d(panel_ax: plt.Axes, held: pd.DataFrame) -> None:
         transform=container.transAxes,
         ha="right",
         va="top",
-        fontsize=FS_BODY,
+        fontsize=fs(4.85),
         color=NAVY,
         linespacing=1.12,
         bbox=dict(
@@ -1338,9 +1327,9 @@ def _draw_panel_d(panel_ax: plt.Axes, held: pd.DataFrame) -> None:
 
     ax.set_xlim(0, 0.70)
     ax.set_ylim(0, 1.00)
-    ax.set_xlabel("Persistence NRMSE", fontsize=FS_LABEL, labelpad=2)
-    ax.set_ylabel("Relational NRMSE", fontsize=FS_LABEL, labelpad=2)
-    ax.tick_params(labelsize=FS_TICK, length=2.5, width=0.55)
+    ax.set_xlabel("Persistence NRMSE", fontsize=fs(6.0), labelpad=2)
+    ax.set_ylabel("Relational NRMSE", fontsize=fs(6.0), labelpad=2)
+    ax.tick_params(labelsize=fs(5.25), length=2.5, width=0.55)
     ax.grid(True, color=GRID, lw=0.42, alpha=0.75)
     ax.set_axisbelow(True)
     ax.spines[["top", "right"]].set_visible(False)
@@ -1352,7 +1341,7 @@ def _draw_panel_d(panel_ax: plt.Axes, held: pd.DataFrame) -> None:
         transform=ax.transAxes,
         ha="right",
         va="bottom",
-        fontsize=FS_BODY,
+        fontsize=fs(4.85),
         color=GREEN,
     )
     ax.text(
@@ -1362,7 +1351,7 @@ def _draw_panel_d(panel_ax: plt.Axes, held: pd.DataFrame) -> None:
         transform=ax.transAxes,
         ha="left",
         va="top",
-        fontsize=FS_BODY,
+        fontsize=fs(4.75),
         color=LOSS,
     )
 
@@ -1373,31 +1362,27 @@ def _draw_panel_d(panel_ax: plt.Axes, held: pd.DataFrame) -> None:
         transform=container.transAxes,
         ha="left",
         va="top",
-        fontsize=FS_BODY,
+        fontsize=gfs(4.35),
         color=SLATE,
     )
-    footnote = container.text(
-        0.05,
+    container.text(
+        0.005,
         0.130,
         r"62 out-of-fold discharges $\cdot$ finite-object, target-cross-fitted qualification",
         transform=container.transAxes,
         ha="left",
         va="top",
-        fontsize=FS_FINE,
+        fontsize=gfs(5),
         color=NAVY,
     )
-    # Centre the second line under the first; its width depends on the TeX metrics.
-    footnote_box = footnote.get_window_extent(
-        container.figure.canvas.get_renderer()
-    ).transformed(container.transAxes.inverted())
     container.text(
-        0.5 * (footnote_box.x0 + footnote_box.x1),
+        0.355,
         0.095,
         "not external validation",
         transform=container.transAxes,
-        ha="center",
+        ha="left",
         va="top",
-        fontsize=FS_FINE,
+        fontsize=gfs(5),
         color=NAVY,
     )
 
@@ -1432,7 +1417,7 @@ def _build_figure(
         _bold("DIII-D: Task-Conditioned Relational Discovery"),
         ha="center",
         va="top",
-        fontsize=FS_TITLE,
+        fontsize=11.4,
         color=INK,
     )
     fig.text(
@@ -1441,7 +1426,7 @@ def _build_figure(
         r"One 62-discharge observational record $\;\rightarrow\;$ Distinct qualified organizations under $q_{\mathrm{desc}}$ and $q_{\mathrm{rec}}$",
         ha="center",
         va="top",
-        fontsize=FS_SUBTITLE,
+        fontsize=GLOBAL_SUBTITLE_FONTSIZE,
         color=SLATE,
     )
 

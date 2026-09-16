@@ -63,25 +63,17 @@ MUTED = "#555555"
 GUIDE = "#777777"
 PANEL_BG = "#F5F5F5"
 BRANCH_ALPHA = 0.96
-# Standard SIR type scale, in points at the final printed size. The canvas is
-# already the 183 mm double-column print width, so PRINT_SCALE is 1.
-PRINT_WIDTH_IN = 183.0 / 25.4
-PRINT_SCALE = (WIDTH_MM / MM_PER_INCH) / PRINT_WIDTH_IN
-
-
-def pt(size):
-    """Convert a printed point size to canvas points."""
-    return size * PRINT_SCALE
-
-
-FS_TITLE = pt(8.0)
-FS_PANEL_LETTER = pt(8.0)
-FS_PANEL_TITLE = pt(7.0)
-FS_SUBTITLE = pt(6.0)
-FS_LABEL = pt(6.5)
-FS_TICK = pt(6.0)
-FS_BODY = pt(6.0)
-FS_FINE = pt(5.5)
+# Font sizes in points at the final 183 x 170 mm print size.
+FS_TITLE = 9.0
+FS_PANEL_LETTER = 8.0
+FS_PANEL_TITLE = 7.0
+FS_SUBTITLE = 5.7
+FS_LABEL = 6.6
+FS_TICK = 5.8
+FS_BODY = 6.2
+FS_KEY = 5.0
+FS_NOTE = 5.3
+FS_INSET_TICK = 5.3
 # Latin Modern ships optical sizes: at 5-8 pt it switches to the lmr5-lmr8
 # designs, which are 15-23% wider than lmr10 and overflow this fixed layout.
 # Declaring the families before their .fd files load pins every shape to the
@@ -256,26 +248,26 @@ def add_panel_c_key(ax):
     ))
     artists = []
 
-    y_rows = [0.84, 0.50, 0.16]
+    y_rows = [0.80, 0.50, 0.20]
     ax.plot([0.02, 0.14], [y_rows[0], y_rows[0]], color=MANIFOLD, lw=1.40,
             transform=ax.transAxes, clip_on=False)
     artists.append(ax.text(
         0.20, y_rows[0], r"$\dot{x}_1=0$",
-        transform=ax.transAxes, fontsize=FS_BODY, va="center"
+        transform=ax.transAxes, fontsize=FS_KEY, va="center"
     ))
 
     ax.plot([0.02, 0.14], [y_rows[1], y_rows[1]], color=CONDITION, lw=1.20,
             linestyle=(0, (4.0, 2.5)), transform=ax.transAxes, clip_on=False)
     artists.append(ax.text(
         0.20, y_rows[1], r"$g=\bar{g}$ locus",
-        transform=ax.transAxes, fontsize=FS_BODY, va="center"
+        transform=ax.transAxes, fontsize=FS_KEY, va="center"
     ))
 
     ax.scatter([0.08], [y_rows[2]], marker="x", s=22, color=INTERSECTION,
                linewidth=1.05, transform=ax.transAxes, clip_on=False)
     artists.append(ax.text(
         0.20, y_rows[2], "Intersection",
-        transform=ax.transAxes, fontsize=FS_BODY, va="center"
+        transform=ax.transAxes, fontsize=FS_KEY, va="center"
     ))
     return artists
 
@@ -296,13 +288,11 @@ def add_panel_c_condition_note(ax):
     note = ax.text(
         0.50,
         0.50,
-        r"$g=\bar{g}$: Direct Numerator"
+        r"$g=\bar{g}$: Direct Numerator Sensitivity"
         "\n"
-        "Sensitivity Vanishes At"
-        "\n"
-        "The Conditioning Locus",
+        "Vanishes At The Conditioning Locus",
         transform=ax.transAxes,
-        fontsize=FS_BODY,
+        fontsize=FS_NOTE,
         linespacing=1.08,
         color=MUTED,
         ha="center",
@@ -323,13 +313,13 @@ def add_panel_c_equations(ax):
     ax.set_axis_off()
     ax.set_facecolor("none")
     equation = ax.text(
-        0.0,
-        0.72,
-        r"$D^{\mathrm{sc}}=u_n(g-\bar{g})+s_{\mathrm{eff}}\,g$"
+        0.03,
+        0.82,
+        r"$D^{\mathrm{sc}}=u_n(g-\bar{g})+s_{\mathrm{eff}}g$"
         "\n"
-        r"$\dot{x}_1=0 \;\Leftrightarrow\; D^{\mathrm{sc}}=s_{\mathrm{eff}}\,g(\dot{x}_2)$",
+        r"$\dot{x}_1=0\;\Longleftrightarrow\;D^{\mathrm{sc}}=s_{\mathrm{eff}}g(\dot{x}_2)$",
         transform=ax.transAxes,
-        fontsize=FS_BODY,
+        fontsize=FS_NOTE,
         linespacing=1.18,
         ha="left",
         va="top",
@@ -393,7 +383,7 @@ def audit_typography(fig, panel_labels, figure_title):
             raise RuntimeError(f"Panel label {artist.get_text()!r} is not exactly 8 pt.")
 
     if not np.isclose(figure_title.get_fontsize(), FS_TITLE, rtol=0.0, atol=1e-12):
-        raise RuntimeError("The global figure title must be exactly 8 pt.")
+        raise RuntimeError("The global figure title must be exactly 9 pt.")
     if not figure_title.get_text().startswith(r"\textbf{"):
         raise RuntimeError("The global figure title must be bold.")
 
@@ -633,14 +623,12 @@ def main():
     ax_c = fig.add_subplot(c_grid[1])
     ax_c_zoom = ax_c.inset_axes([0.60, 0.66, 0.38, 0.32], zorder=20)
     # Use the open upper-left region for the borderless semantic key.
-    ax_c_key = ax_c.inset_axes([0.12, 0.735, 0.24, 0.25], zorder=19)
-    # Place the conditioning statement directly below the local zoom, right of
-    # the zoom connectors and inside the panel's right spine (three lines keep
-    # it clear of both at 6 pt).
-    ax_c_condition = ax_c.inset_axes([0.586, 0.337, 0.411, 0.215], zorder=19)
+    ax_c_key = ax_c.inset_axes([0.12, 0.75, 0.2, 0.18], zorder=19)
+    # Place the conditioning statement directly below the local zoom.
+    ax_c_condition = ax_c.inset_axes([0.55, 0.43, 0.48, 0.14], zorder=19)
     # Place the defining identities in the lower-left white region near x=-1,
-    # clear of the g = g-bar locus and the zoom source box.
-    ax_c_equations = ax_c.inset_axes([0.0155, 0.012, 0.47, 0.235], zorder=19)
+    # with only a compact horizontal margin around the equation text.
+    ax_c_equations = ax_c.inset_axes([0.04, 0.04, 0.41, 0.18], zorder=19)
 
     draw_branch_runs(ax_c, r2, d_sc, increasing, lw=1.25, alpha=BRANCH_ALPHA)
     draw_turning_events(ax_c, tp_r2, tp_d_sc, size=15)
@@ -702,9 +690,9 @@ def main():
     )
     ax_c_zoom.set_xlim(*zoom_xlim)
     ax_c_zoom.set_ylim(*zoom_ylim)
-    ax_c_zoom.tick_params(labelsize=FS_FINE, length=2.4, width=0.65, pad=1.2)
-    ax_c_zoom.xaxis.get_offset_text().set_fontsize(FS_FINE)
-    ax_c_zoom.yaxis.get_offset_text().set_fontsize(FS_FINE)
+    ax_c_zoom.tick_params(labelsize=FS_INSET_TICK, length=2.4, width=0.65, pad=1.2)
+    ax_c_zoom.xaxis.get_offset_text().set_fontsize(FS_INSET_TICK)
+    ax_c_zoom.yaxis.get_offset_text().set_fontsize(FS_INSET_TICK)
     ax_c_zoom.grid(False)
     for spine in ax_c_zoom.spines.values():
         spine.set_linewidth(0.75)
@@ -809,7 +797,9 @@ def main():
     figure_title = fig.suptitle(
         r"\textbf{Relational Coordinates Can Simplify The Organization Of A Scientific Target}",
         x=0.5,
-        y=0.985,
+        # 0.9845 (not 0.985) keeps the taller Latin Modern title's top
+        # clearance no smaller than the pre-polish Arial render.
+        y=0.9845,
         fontsize=FS_TITLE,
         color=TEXT,
     )

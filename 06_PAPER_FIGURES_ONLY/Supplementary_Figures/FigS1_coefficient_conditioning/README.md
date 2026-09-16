@@ -40,10 +40,7 @@ See `../../README.md` for the standard. S1-specific points:
 - The spec style is applied only to the three S1 plots, via `mpl.rc_context`. The
   other seven audit figures from the same generator are untouched, because their
   raw-underscore labels are not LaTeX-safe.
-- Each panel canvas is now 183 mm wide with its original aspect ratio. The
-  exports keep `bbox_inches="tight"`, so the PDFs trim to about 156–161 mm.
-  **Place them at natural size** for the type tiers to be exact; scaling to
-  183 mm prints text about 15% larger.
+- Original canvases (10×4 in; 8×4.5 in) and original font sizes are kept.
 - Panel b tick labels use the same coefficient notation as Figure 6.
 - `render_figS1.py` writes all audit figures to a temporary directory and
   copies out only the three `d3d_` panels as PDF, PNG and SVG. The PNG/SVG

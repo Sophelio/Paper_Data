@@ -37,6 +37,8 @@ LM_DESIGN_SIZE_PIN = (
 )
 
 
+# Latin Modern via LaTeX, matching the manuscript. Font sizes are the original
+# canvas sizes (the canvas prints at about half size at 183 mm).
 mpl.rcParams.update({
     "text.usetex": True,
     "font.family": "serif",
@@ -49,42 +51,6 @@ mpl.rcParams.update({
     "pdf.fonttype": 42,
     "ps.fonttype": 42,
     "svg.fonttype": "path",
-})
-
-# Standard SIR type scale, in points at the final printed size. The canvas is
-# drawn at roughly twice the 183 mm double-column print width, so every size is
-# routed through pt() to land on the same printed size as the other figures.
-FIG_WIDTH_IN = 14.4
-FIG_HEIGHT_IN = 8.35
-# Export padding around the tight bbox; sized so all ink clears the printed
-# canvas edge by >= 2 mm. The padded width is what prints at 183 mm.
-EXPORT_PAD_IN = 0.12
-PRINT_WIDTH_IN = 183.0 / 25.4
-PRINT_SCALE = (FIG_WIDTH_IN + 2.0 * EXPORT_PAD_IN) / PRINT_WIDTH_IN
-
-
-def pt(size):
-    return size * PRINT_SCALE
-
-
-FS_TITLE = pt(8.0)
-FS_PANEL_LETTER = pt(8.0)
-FS_PANEL_TITLE = pt(7.0)
-FS_SUBTITLE = pt(6.0)
-FS_LABEL = pt(6.5)
-FS_TICK = pt(6.0)
-FS_BODY = pt(6.0)
-FS_FINE = pt(5.5)
-FS_EQUATION = pt(6.5)  # featured standalone equation display
-mpl.rcParams.update({
-    "font.size": FS_BODY,
-    "axes.labelsize": FS_LABEL,
-    "axes.titlesize": FS_PANEL_TITLE,
-    "xtick.labelsize": FS_TICK,
-    "ytick.labelsize": FS_TICK,
-    "legend.fontsize": FS_BODY,
-    "legend.title_fontsize": FS_BODY,
-    "figure.titlesize": FS_TITLE,
 })
 
 DARK = "#0D4B25"
@@ -244,7 +210,7 @@ def category_patch(cx, cy, rx, ry, phase=0.0, top_widen=0.08,
     )
 
 
-def draw_sub(ax, x, y, w, h, text, fs=FS_BODY, fc=SUB, ec=MID2,
+def draw_sub(ax, x, y, w, h, text, fs=15.5, fc=SUB, ec=MID2,
              lw=0.55, alpha=0.86, z=5):
     patch = Ellipse(
         (x, y), w, h, facecolor=fc, edgecolor=ec,
@@ -265,12 +231,11 @@ def draw_category(ax, spec):
         facecolor=spec["fill"],
     ))
     ax.text(
-        spec["title_x"], spec["title_y"],
-        "\n".join(rf"\textbf{{{line}}}" for line in spec["title"].split("\n")),
+        spec["title_x"], spec["title_y"], spec["title"],
         ha="center", va="center",
-        fontsize=FS_PANEL_TITLE,
+        fontsize=spec.get("title_fs", 18.4),
         color=DARK,
-        linespacing=spec.get("title_linespacing", 0.95),
+        linespacing=spec.get("title_linespacing", 0.88),
         zorder=7,
     )
     for sub in spec.get("subs", []):
@@ -338,45 +303,45 @@ categories = [
     dict(
         title="Algebraic /\nFunctional",
         cx=2.10, cy=7.92, rx=1.58, ry=1.23, phase=0.35, fill=CAT_C,
-        title_x=2.10, title_y=8.55, top_widen=0.09,
+        title_x=2.10, title_y=8.55, title_fs=18.4, top_widen=0.09,
         subs=[
-            dict(x=1.38, y=7.78, w=1.08, h=0.50, text=r"$y=F(x)$"),
-            dict(x=2.47, y=7.79, w=0.99, h=0.50, text=r"$F=0$"),
+            dict(x=1.38, y=7.78, w=1.37, h=0.50, text=r"$y=F(x)$"),
+            dict(x=2.62, y=7.79, w=0.99, h=0.50, text=r"$F=0$"),
             dict(x=1.68, y=7.16, w=0.96, h=0.47, text=r"$P/Q$"),
             dict(x=2.70, y=7.16, w=1.02, h=0.47,
-                 text=r"$\mathcal{R}_{\mathrm{SR}}$",
+                 text=r"$\mathcal{R}_{\mathrm{SR}}$", fs=15.8,
                  fc=AMBER_FILL, ec=AMBER, lw=0.85, alpha=0.96),
         ],
     ),
     dict(
         title="Differential /\nEvolution",
         cx=5.78, cy=8.01, rx=1.59, ry=1.23, phase=1.05, fill=CAT_B,
-        title_x=5.78, title_y=8.62, top_widen=0.08,
+        title_x=5.78, title_y=8.62, title_fs=18.4, top_widen=0.08,
         subs=[
             dict(x=5.07, y=7.88, w=0.94, h=0.50, text=r"$d/dt$"),
-            dict(x=6.14, y=7.88, w=0.94, h=0.50, text=r"$\partial_i$"),
-            dict(x=5.30, y=7.24, w=1.12, h=0.49, text=r"$D_g^\gamma f$"),
+            dict(x=6.14, y=7.88, w=0.94, h=0.50, text=r"$\partial_i$", fs=16.0),
+            dict(x=5.30, y=7.24, w=1.12, h=0.49, text=r"$D_g^\gamma f$", fs=15.0),
             dict(x=6.39, y=7.24, w=1.00, h=0.49, text=r"$\nabla^2u$"),
         ],
     ),
     dict(
         title="Integral /\nNonlocal / Memory",
         cx=9.44, cy=7.93, rx=1.57, ry=1.23, phase=1.95, fill=CAT_C,
-        title_x=9.44, title_y=8.55, top_widen=0.11,
+        title_x=9.44, title_y=8.55, title_fs=17.5, top_widen=0.11,
         subs=[
-            dict(x=8.76, y=7.79, w=0.85, h=0.51, text=r"$\displaystyle\int$"),
-            dict(x=9.88, y=7.79, w=1.16, h=0.51, text=r"$u(t-\tau)$"),
+            dict(x=8.76, y=7.79, w=0.85, h=0.51, text=r"$\displaystyle\int$", fs=18.0),
+            dict(x=9.88, y=7.79, w=1.16, h=0.51, text=r"$u(t-\tau)$", fs=15.0),
             dict(x=9.30, y=7.15, w=1.08, h=0.48, text=r"$K*u$"),
         ],
     ),
     dict(
         title="Geometric /\nTopological /\nSymmetry",
         cx=2.14, cy=4.95, rx=1.73, ry=1.23, phase=2.65, fill=CAT_B,
-        title_x=2.14, title_y=5.68, top_widen=0.15,
-        title_linespacing=0.95,
+        title_x=2.14, title_y=5.68, title_fs=15.9, top_widen=0.15,
+        title_linespacing=0.82,
         subs=[
             dict(x=1.43, y=4.83, w=0.99, h=0.49, text=r"$\kappa_\gamma$"),
-            dict(x=2.52, y=4.83, w=1.08, h=0.49, text=r"$d_{\mathcal{M}}$"),
+            dict(x=2.52, y=4.83, w=1.08, h=0.49, text=r"$d_{\mathcal{M}}$", fs=15.1),
             dict(x=1.78, y=4.17, w=1.08, h=0.48, text=r"$g\!\cdot\!x$"),
             dict(x=2.84, y=4.17, w=0.90, h=0.48, text=r"$H_k$"),
         ],
@@ -384,62 +349,62 @@ categories = [
     dict(
         title="Spectral /\nModal / Multiscale",
         cx=5.82, cy=5.00, rx=1.75, ry=1.23, phase=3.45, fill=CAT_A,
-        title_x=5.82, title_y=5.72, top_widen=0.11,
+        title_x=5.82, title_y=5.72, title_fs=16.4, top_widen=0.11,
         subs=[
-            dict(x=5.08, y=4.85, w=1.28, h=0.50, text=r"$L\phi=\lambda\phi$"),
-            dict(x=6.39, y=4.85, w=1.24, h=0.50, text=r"$\sum a_k\phi_k$"),
-            dict(x=5.80, y=4.19, w=1.48, h=0.48, text=r"$u_0+\epsilon u_1+\cdots$"),
+            dict(x=5.08, y=4.85, w=1.28, h=0.50, text=r"$L\phi=\lambda\phi$", fs=14.0),
+            dict(x=6.39, y=4.85, w=1.24, h=0.50, text=r"$\sum a_k\phi_k$", fs=14.0),
+            dict(x=5.80, y=4.19, w=1.72, h=0.48, text=r"$u_0+\epsilon u_1+\cdots$", fs=13.1),
         ],
     ),
     dict(
         title="Statistical /\nStochastic /\nPopulation",
         cx=9.43, cy=4.94, rx=1.71, ry=1.23, phase=4.15, fill=CAT_B,
-        title_x=9.43, title_y=5.68, top_widen=0.14,
-        title_linespacing=0.95,
+        title_x=9.43, title_y=5.68, title_fs=15.9, top_widen=0.14,
+        title_linespacing=0.82,
         subs=[
             dict(x=8.78, y=4.80, w=1.01, h=0.49, text=r"$p(y|x)$"),
             dict(x=9.95, y=4.80, w=1.34, h=0.49,
-                 text=r"$\theta^{(j)}\!\sim P_\theta$"),
+                 text=r"$\theta^{(j)}\!\sim P_\theta$", fs=13.3),
             dict(x=9.35, y=4.16, w=1.26, h=0.48,
-                 text=r"$\mathbb{E},\,\mathrm{Cov}$"),
+                 text=r"$\mathbb{E},\,\mathrm{Cov}$", fs=14.2),
         ],
     ),
     dict(
         title="Constraint /\nConservation /\nVariational",
         cx=2.22, cy=1.98, rx=1.77, ry=1.17, phase=4.90, fill=CAT_C,
-        title_x=2.22, title_y=2.67, top_widen=0.16,
-        title_linespacing=0.95,
+        title_x=2.22, title_y=2.67, title_fs=15.5, top_widen=0.16,
+        title_linespacing=0.82,
         subs=[
             dict(x=1.43, y=1.87, w=0.92, h=0.46, text=r"$C=0$"),
             dict(x=2.47, y=1.87, w=0.98, h=0.46, text=r"$C\leq0$"),
             dict(x=1.72, y=1.29, w=1.08, h=0.45, text=r"$\nabla\!\cdot J$"),
-            dict(x=2.82, y=1.29, w=1.16, h=0.45, text=r"$\delta\mathcal{J}=0$"),
+            dict(x=2.82, y=1.29, w=1.16, h=0.45, text=r"$\delta\mathcal{J}=0$", fs=14.0),
         ],
     ),
     dict(
         title="Discrete /\nGraph / Hybrid",
         cx=5.84, cy=2.04, rx=1.70, ry=1.15, phase=5.65, fill=CAT_B,
-        title_x=5.84, title_y=2.68, top_widen=0.10,
+        title_x=5.84, title_y=2.68, title_fs=16.2, top_widen=0.10,
         subs=[
-            dict(x=5.01, y=1.91, w=1.46, h=0.47, text=r"$x_{n+1}=F(x_n)$"),
-            dict(x=6.32, y=1.91, w=0.94, h=0.47, text=r"$L_Gx$"),
-            dict(x=5.78, y=1.31, w=1.18, h=0.45, text=r"$R_k|_{\Omega_k}$"),
+            dict(x=5.06, y=1.91, w=1.60, h=0.47, text=r"$x_{n+1}=F(x_n)$", fs=13.0),
+            dict(x=6.44, y=1.91, w=0.94, h=0.47, text=r"$L_Gx$"),
+            dict(x=5.78, y=1.31, w=1.18, h=0.45, text=r"$R_k|_{\Omega_k}$", fs=13.8),
         ],
     ),
     dict(
         title="Learned /\nNonparametric",
         cx=9.43, cy=1.97, rx=1.65, ry=1.15, phase=0.15, fill=CAT_A,
-        title_x=9.43, title_y=2.61, top_widen=0.09,
+        title_x=9.43, title_y=2.61, title_fs=17.0, top_widen=0.09,
         subs=[
-            dict(x=8.79, y=1.88, w=1.18, h=0.47, text=r"$z=\Phi_\theta(x)$"),
-            dict(x=9.96, y=1.88, w=1.03, h=0.47, text=r"$K(x,x')$"),
-            dict(x=9.37, y=1.28, w=1.25, h=0.45, text=r"$\widehat{F}_{\mathrm{data}}$"),
+            dict(x=8.76, y=1.88, w=1.31, h=0.47, text=r"$z=\Phi_\theta(x)$", fs=13.8),
+            dict(x=10.03, y=1.88, w=1.09, h=0.47, text=r"$K(x,x')$", fs=14.0),
+            dict(x=9.37, y=1.28, w=1.25, h=0.45, text=r"$\widehat{F}_{\mathrm{data}}$", fs=13.6),
         ],
     ),
 ]
 
 
-fig = plt.figure(figsize=(FIG_WIDTH_IN, FIG_HEIGHT_IN), dpi=180)
+fig = plt.figure(figsize=(14.4, 8.35), dpi=180)
 ax = fig.add_axes([0, 0, 1, 1])
 fig.patch.set_facecolor("white")
 ax.set_xlim(-0.1, 19.20)
@@ -476,8 +441,8 @@ for cy, scale, rotation, facecolor, linewidth in frontier_cloud_specs:
     frontier_cloud_artists.append(patch)
 
 ax.text(
-    6.10, 10.43, r"\textbf{Admissible Relational Space} $\mathfrak{R}_q$",
-    ha="center", va="center", fontsize=FS_TITLE, color=DARK
+    6.10, 10.43, r"Admissible Relational Space $\mathfrak{R}_q$",
+    ha="center", va="center", fontsize=29.6, color=DARK
 )
 
 # Temporary label position; after the operator panel is measured, the label and
@@ -486,7 +451,7 @@ FRONTIER_LABEL_Y = 6.46
 frontier_label = ax.text(
     12.45, FRONTIER_LABEL_Y,
     "\\textbf{Open, Expandable}\n\\textbf{Discovery Frontier}",
-    ha="center", va="center", fontsize=FS_BODY, color=DARK,
+    ha="center", va="center", fontsize=14.0, color=DARK,
     linespacing=0.92,
 )
 
@@ -532,7 +497,7 @@ overlap_y, overlap_gap = row_gap_center("Spectral", "Discrete", 6.02)
 ax.text(
     6.02, overlap_y,
     "Overlapping categories permit hybrid/composed representations",
-    ha="center", va="center", fontsize=FS_BODY,
+    ha="center", va="center", fontsize=11.8,
     color=MID,
 )
 
@@ -540,35 +505,41 @@ ax.text(
 # connector; the leader line is attached once the text extent is known.
 sr_caption = ax.text(
     sr_x, sr_y, r"Symbolic Regression:\ One Restricted Subfamily",
-    ha="center", va="center", fontsize=FS_BODY,
+    ha="center", va="center", fontsize=11.9,
     color=AMBER, zorder=8,
 )
 
 ax.text(
     6.10, 0.30,
     "Illustrative, non-exhaustive categories; each SIR run instantiates a finite, auditable grammar.",
-    ha="center", va="center", fontsize=FS_FINE,
+    ha="center", va="center", fontsize=11.8,
     color="black",
 )
 
 # Coordinate-generation panel: content retained from v14 and shifted as one
 # unit to preserve its internal alignment while opening a clear visual gutter.
-OP_SHIFT = 0.65
+# Latin Modern at the original sizes is wider than STIX: the panel moves 0.11
+# further right so the frontier clouds keep a visible gutter (pre-polish 0.65).
+OP_SHIFT = 0.76
 SYMBOL_SHIFT = 0.35
+# Header and subtitle sit together slightly left of the shifted column centre;
+# centred there the header would cross the right canvas edge, and this position
+# keeps the right-edge clearance set by the composition box.
+HEADER_X = 15.63
 ax.text(
-    15.28 + OP_SHIFT, 10.38, r"\textbf{Coordinate-Generation Operators}",
-    ha="center", va="center", fontsize=FS_TITLE, color=DARK
+    HEADER_X, 10.38, "Coordinate-Generation Operators",
+    ha="center", va="center", fontsize=23.3, color=DARK
 )
 ax.text(
-    15.28 + OP_SHIFT, 9.98, "Representative groups; recursively composable",
-    ha="center", va="center", fontsize=FS_SUBTITLE,
+    HEADER_X, 9.98, "Representative groups; recursively composable",
+    ha="center", va="center", fontsize=12.5,
     color=MID,
 )
 
 op_rows = [
-    (r"$\partial,\ d,\ \Delta,\ D^\gamma$", "Local",
+    (r"$\partial,\,d,\,\Delta,\,D^\gamma$", "Local",
      "Derivatives, differences,\ntangent / phase constructions"),
-    (r"$\int,\ *,\ \mathcal{L}_\tau$", "Nonlocal / History",
+    (r"$\displaystyle\int,\ *,\ \mathcal{L}_\tau$", "Nonlocal / History",
      "Integrals, convolutions,\nlags and memory operators"),
     (r"$\mathcal{T},\ \mathcal{B},\ \Pi$", "Algebraic / Basis",
      "Transforms, ratios, reductions,\nnondimensional groups and bases"),
@@ -588,15 +559,15 @@ step = 1.10
 for sym, heading, detail in op_rows:
     row_artists.append(ax.text(
         12.93 + OP_SHIFT + SYMBOL_SHIFT, y, sym, ha="center", va="center",
-        fontsize=FS_PANEL_TITLE, color=DARK
+        fontsize=18.8, color=DARK
     ))
     row_artists.append(ax.text(
         14.27 + OP_SHIFT, y + 0.10, rf"\textbf{{{heading}}}", ha="left", va="center",
-        fontsize=FS_BODY, color=DARK
+        fontsize=15.0, color=DARK
     ))
     row_artists.append(ax.text(
         14.27 + OP_SHIFT, y - 0.25, detail, ha="left", va="center",
-        fontsize=FS_BODY, color=DARK, linespacing=1.08
+        fontsize=12.5, color=DARK, linespacing=1.08
     ))
     y -= step
 
@@ -610,16 +581,16 @@ ax.add_patch(box)
 ax.text(
     15.40 + OP_SHIFT, 1.97,
     r"$G=G_{i_k}\circ\cdots\circ G_{i_2}\circ G_{i_1}$",
-    ha="center", va="center", fontsize=FS_EQUATION, color=DARK
+    ha="center", va="center", fontsize=16.8, color=DARK
 )
 ax.text(
     15.40 + OP_SHIFT, 1.58, "Operators may compose recursively",
-    ha="center", va="center", fontsize=FS_BODY,
+    ha="center", va="center", fontsize=12.4,
     color=MID,
 )
 
 ax.text(
-    12.74 + OP_SHIFT, 0.42, r"\textbf{Key}", fontsize=FS_BODY, color=DARK,
+    12.74 + OP_SHIFT, 0.42, r"\textbf{Key}", fontsize=12.2, color=DARK,
     ha="left", va="center"
 )
 ax.add_patch(Ellipse(
@@ -627,7 +598,7 @@ ax.add_patch(Ellipse(
     facecolor=CAT_B, edgecolor=MID, lw=0.60, alpha=0.55
 ))
 ax.text(
-    13.69 + OP_SHIFT, 0.42, "Category", fontsize=FS_BODY,
+    13.69 + OP_SHIFT, 0.42, "Category", fontsize=11.4,
     color=DARK, ha="left", va="center"
 )
 ax.add_patch(Ellipse(
@@ -635,7 +606,7 @@ ax.add_patch(Ellipse(
     facecolor=SUB, edgecolor=MID2, lw=0.55, alpha=0.86
 ))
 ax.text(
-    14.95 + OP_SHIFT, 0.42, "Illustrative subfamily", fontsize=FS_BODY,
+    14.95 + OP_SHIFT, 0.42, "Illustrative subfamily", fontsize=11.4,
     color=DARK, ha="left", va="center"
 )
 
@@ -914,13 +885,13 @@ if smooth_field[:, 1].min() <= 0.40:
     raise RuntimeError("Metaball membrane extends too close to the footer.")
 
 fig.savefig(
-    PDF_PATH, bbox_inches="tight", pad_inches=EXPORT_PAD_IN, facecolor="white"
+    PDF_PATH, bbox_inches="tight", pad_inches=0.04, facecolor="white"
 )
 fig.savefig(
-    SVG_PATH, bbox_inches="tight", pad_inches=EXPORT_PAD_IN, facecolor="white"
+    SVG_PATH, bbox_inches="tight", pad_inches=0.04, facecolor="white"
 )
 fig.savefig(
-    PNG_PATH, dpi=600, bbox_inches="tight", pad_inches=EXPORT_PAD_IN,
+    PNG_PATH, dpi=600, bbox_inches="tight", pad_inches=0.04,
     facecolor="white"
 )
 plt.close(fig)
