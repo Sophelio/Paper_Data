@@ -1,0 +1,35 @@
+{
+  "universe_id": "C_REC_HARD_ATOM_V2",
+  "parent_ontology": "G_REC_DENSITY_HARDENED_V2",
+  "ontology_version": "2.0.0",
+  "primitive_basis_size": 70,
+  "n_atoms": 10778,
+  "by_constructor": {
+    "C0": 66,
+    "C1": 59,
+    "C2": 2080,
+    "C3": 2457,
+    "C4": 0,
+    "C5": 39,
+    "C6": 3776,
+    "C7": 2301,
+    "C8": 0
+  },
+  "symbolic_before_admissibility": {
+    "C0": 70,
+    "C1": 63,
+    "C2": 2346,
+    "C3": 4556,
+    "C4": 3906,
+    "C5": 68,
+    "C6": 4284,
+    "C7": 4284,
+    "C8": 4284
+  },
+  "symbolic_total": 23861,
+  "overall_survival_rate": 0.45169942584133105,
+  "atoms_file": "primary_atomic_coordinate_universe.csv",
+  "sensitivity_only_registry": "sensitivity_only_coordinate_registry.csv",
+  "regenerated_from_scratch": true,
+  "imported_from_S7_6_V1": false
+}

@@ -1,0 +1,230 @@
+{
+  "fold_0": {
+    "support_id": "ID(pcdiamag3)|PROD(prmtan_neped,cerqtit6)|RATIO(ece21,cerqtit10)|RATIO(ece39,bt)|RATIO(fs03da,cerqtit3)|RATIO(ip,bt)|RATIO(prmtan_neped,cerqtit3)|RECIP(cerqtit10)|RECIP(cerqtit11)|RECIP(ece1)|RECIP(ece38)|RECIP(ece39)",
+    "support_size": 12,
+    "sha256": "4654cd92613002c10ee9d97a480ae6a04dd9682d34fa802ef630d3d60258c8ac",
+    "hashed_utc": "2026-09-06T05:09:08.208218+00:00",
+    "constructors": [
+      "C0",
+      "C2",
+      "C3",
+      "C5"
+    ],
+    "primitives": [
+      "bt",
+      "cerqtit10",
+      "cerqtit11",
+      "cerqtit3",
+      "cerqtit6",
+      "ece1",
+      "ece21",
+      "ece38",
+      "ece39",
+      "fs03da",
+      "ip",
+      "pcdiamag3",
+      "prmtan_neped"
+    ],
+    "families": [
+      "cer_rotation_ti",
+      "density",
+      "ece_te_profile",
+      "filterscope_dalpha",
+      "magnetics"
+    ]
+  },
+  "fold_1": {
+    "support_id": "ID(pcdiamag3)|PROD(cerqtit8,cerqtit8)|PROD(ece37,ece39)|PROD(ip,gasc)|PROD(pinj,cerqrott6)|RATIO(ece21,cerqtit10)|RATIO(fs03da,cerqtit3)|RATIO(ip,ece39)|RATIO(pinj_33r,prmtan_neped)|RATIO(prmtan_neped,ece38)|RATIO(tinj,ece20)|RECIP(cerqtit10)",
+    "support_size": 12,
+    "sha256": "c3206098d6177f64aeac55049feda714d904d155d39e382db3b4cc9683136adb",
+    "hashed_utc": "2026-09-06T05:11:17.028819+00:00",
+    "constructors": [
+      "C0",
+      "C2",
+      "C3",
+      "C5"
+    ],
+    "primitives": [
+      "cerqrott6",
+      "cerqtit10",
+      "cerqtit3",
+      "cerqtit8",
+      "ece20",
+      "ece21",
+      "ece37",
+      "ece38",
+      "ece39",
+      "fs03da",
+      "gasc",
+      "ip",
+      "pcdiamag3",
+      "pinj",
+      "pinj_33r",
+      "prmtan_neped",
+      "tinj"
+    ],
+    "families": [
+      "cer_rotation_ti",
+      "density",
+      "ece_te_profile",
+      "filterscope_dalpha",
+      "gas_injection",
+      "magnetics",
+      "neutral_beams"
+    ]
+  },
+  "fold_2": {
+    "support_id": "ID(ece39)|ID(pcdiamag3)|PROD(fs04,cerqrott8)|PROD(pinj,ece36)|RATIO(cerqrott12,cerqtit10)|RATIO(ece21,cerqtit10)|RATIO(ip,bt)|RATIO(ip,cerqtit10)|RATIO(ip,ece39)|RATIO(prmtan_neped,cerqtit3)|RATIO(tinj,ece20)|RECIP(bt)",
+    "support_size": 12,
+    "sha256": "08fd3481eeea2e70375c7c346c02b32195501349da0250dbe900a2910e35781d",
+    "hashed_utc": "2026-09-06T05:13:16.171522+00:00",
+    "constructors": [
+      "C0",
+      "C2",
+      "C3",
+      "C5"
+    ],
+    "primitives": [
+      "bt",
+      "cerqrott12",
+      "cerqrott8",
+      "cerqtit10",
+      "cerqtit3",
+      "ece20",
+      "ece21",
+      "ece36",
+      "ece39",
+      "fs04",
+      "ip",
+      "pcdiamag3",
+      "pinj",
+      "prmtan_neped",
+      "tinj"
+    ],
+    "families": [
+      "cer_rotation_ti",
+      "density",
+      "ece_te_profile",
+      "filterscope_dalpha",
+      "magnetics",
+      "neutral_beams"
+    ]
+  },
+  "fold_3": {
+    "support_id": "ID(pcdiamag3)|PROD(ece37,ece39)|PROD(prmtan_neped,cerqtit6)|PROD(prmtan_neped,pinj_30l)|RATE_OVER_LEVEL(cerqrott3|prmtan_neped)|RATE_OVER_LEVEL(ip|ece39)|RATIO(ece21,cerqtit10)|RATIO(pinj_33r,cerqtit10)|RATIO(prmtan_neped,cerqtit3)|RATIO(tinj,ece20)|RECIP(bt)|RECIP(cerqtit10)",
+    "support_size": 12,
+    "sha256": "e69c6efc20b77d1cd2b1cb87d167621fa8be08b597e3cff805b4360a3839c44a",
+    "hashed_utc": "2026-09-06T05:15:22.927017+00:00",
+    "constructors": [
+      "C0",
+      "C2",
+      "C3",
+      "C5",
+      "C7"
+    ],
+    "primitives": [
+      "bt",
+      "cerqrott3",
+      "cerqtit10",
+      "cerqtit3",
+      "cerqtit6",
+      "ece20",
+      "ece21",
+      "ece37",
+      "ece39",
+      "ip",
+      "pcdiamag3",
+      "pinj_30l",
+      "pinj_33r",
+      "prmtan_neped",
+      "tinj"
+    ],
+    "families": [
+      "cer_rotation_ti",
+      "density",
+      "ece_te_profile",
+      "magnetics",
+      "neutral_beams"
+    ]
+  },
+  "fold_4": {
+    "support_id": "ID(pcdiamag3)|LEVEL_RATE(cerqrott12|ece35)|PROD(ece37,ece39)|PROD(prmtan_neped,gasc)|RATIO(ece21,cerqtit10)|RATIO(fs03da,cerqtit3)|RATIO(ip,ece39)|RATIO(pinj,bt)|RATIO(pinj_33r,cerqtit10)|RATIO(prmtan_neped,cerqtit3)|RATIO(tinj,ece20)|RECIP(cerqtit10)",
+    "support_size": 12,
+    "sha256": "688791d4cb56a0ee96019a96ff99d7a66bd1027a41e65b91f4fe7364d4dc94af",
+    "hashed_utc": "2026-09-06T05:17:37.537015+00:00",
+    "constructors": [
+      "C0",
+      "C2",
+      "C3",
+      "C5",
+      "C6"
+    ],
+    "primitives": [
+      "bt",
+      "cerqrott12",
+      "cerqtit10",
+      "cerqtit3",
+      "ece20",
+      "ece21",
+      "ece35",
+      "ece37",
+      "ece39",
+      "fs03da",
+      "gasc",
+      "ip",
+      "pcdiamag3",
+      "pinj",
+      "pinj_33r",
+      "prmtan_neped",
+      "tinj"
+    ],
+    "families": [
+      "cer_rotation_ti",
+      "density",
+      "ece_te_profile",
+      "filterscope_dalpha",
+      "gas_injection",
+      "magnetics",
+      "neutral_beams"
+    ]
+  },
+  "fold_5": {
+    "support_id": "ID(pcdiamag3)|LEVEL_RATE(cerqrott12|ece36)|PROD(fs04,cerqrott8)|PROD(ip,ece39)|PROD(pinj,ece36)|PROD(prmtan_neped,cerqtit6)|RATIO(ece21,cerqtit10)|RATIO(ip,bt)|RATIO(ip,cerqtit10)|RATIO(prmtan_neped,cerqtit3)|RATIO(tinj,ece20)|RECIP(bt)",
+    "support_size": 12,
+    "sha256": "358854514ab519b94437227dc2ab8fe4c2a435ccbc2c355c1cdc8afc88ecf1be",
+    "hashed_utc": "2026-09-06T05:19:44.716741+00:00",
+    "constructors": [
+      "C0",
+      "C2",
+      "C3",
+      "C5",
+      "C6"
+    ],
+    "primitives": [
+      "bt",
+      "cerqrott12",
+      "cerqrott8",
+      "cerqtit10",
+      "cerqtit3",
+      "cerqtit6",
+      "ece20",
+      "ece21",
+      "ece36",
+      "ece39",
+      "fs04",
+      "ip",
+      "pcdiamag3",
+      "pinj",
+      "prmtan_neped",
+      "tinj"
+    ],
+    "families": [
+      "cer_rotation_ti",
+      "density",
+      "ece_te_profile",
+      "filterscope_dalpha",
+      "magnetics",
+      "neutral_beams"
+    ]
+  }
+}

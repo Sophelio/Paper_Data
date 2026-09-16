@@ -1,0 +1,246 @@
+{
+  "policy_id": "SIGMA_REC_PREVALUE_V2_ONE_SEED",
+  "status": "FROZEN_BEFORE_ANY_DENSITY_VALUE",
+  "frozen_utc": "2026-09-05T00:17:10.479649+00:00",
+  "stage_b_opens_no_archive": true,
+  "parent_universe": "A_REC_DENSITY_HARDENED_V2",
+  "parent_ontology": "G_REC_DENSITY_HARDENED_V2",
+  "pre_search_contract_sha256": "1b8df4c0672686be21665c00aaf4fc8f36ab9e53646f983fcd2f9b253fd7c10f",
+  "s5_multiplicity_problem": {
+    "ece_share_of_P_hard": 0.471,
+    "ece_ancestry_share_of_admissible_atoms": 0.842,
+    "is_an_admissibility_defect": false,
+    "coordinates_deleted": 0,
+    "P_hard_altered": false,
+    "must_prevent": "atom count -> automatic search priority",
+    "principle": "ADMISSIBLE != PRIORITIZED",
+    "balance_by": [
+      "constructor_family",
+      "scientific_ancestor_family_signature"
+    ]
+  },
+  "s6_search_strata": {
+    "definition": "search_stratum(c) = (constructor_family, scientific_family_signature)",
+    "signatures": {
+      "C0": "(family_i)",
+      "C1": "(family_i)",
+      "C5": "(family_i)",
+      "C2": "unordered sorted pair {family_i, family_j}",
+      "C3": "(numerator_family | denominator_family)",
+      "C6": "(level_family | rate_family)",
+      "C7": "(rate_family | denominator_level_family)"
+    },
+    "C4_C8": "no admissible atoms, therefore no active strata",
+    "exactly_one_stratum_per_atom": true,
+    "multiple_counting_memberships": false,
+    "assigned_from_metadata_only": true,
+    "n_active_strata": 127,
+    "strata_per_constructor": {
+      "C0": 7,
+      "C1": 5,
+      "C2": 28,
+      "C3": 28,
+      "C5": 4,
+      "C6": 35,
+      "C7": 20
+    }
+  },
+  "s7_search_proxy": {
+    "id": "SEARCH_PROXY_OLS_V1",
+    "is_final_estimator": false,
+    "is_validation": false,
+    "procedure": [
+      "calibration values only for predictor mean/std",
+      "standardize each coordinate with those calibration statistics",
+      "apply unchanged to protected predictor values",
+      "fit affine OLS y_cal = beta_0 + X_C,cal beta",
+      "score protected target with frozen NRMSE = RMSE_protected / std(y_cal, ddof=0)"
+    ],
+    "solver": "numpy.linalg.lstsq(..., rcond=None)",
+    "joint_fit_across_discharges": false,
+    "coefficients": "discharge/block local",
+    "rank_deficient_handling": {
+      "flag": "SEARCH_PROXY_RANK_DEFICIENT",
+      "navigation_score": "+infinity",
+      "declares_support_scientifically_inadmissible": false,
+      "note": "that distinction belongs to later qualification"
+    }
+  },
+  "s8_navigation_score": {
+    "definition": "J_search(C) = mean over 20 development discharges of NRMSE_s(C), where NRMSE_s(C) = mean_b NRMSE_{s,b}(C) over blocks A, B, C",
+    "lower_is_better": true,
+    "is_U_rec": false,
+    "is_validation_evidence": false,
+    "is_final_qualification": false,
+    "terms_explicitly_excluded": [
+      "parsimony",
+      "conditioning",
+      "scientific-family bonus",
+      "baseline skill",
+      "persistence skill"
+    ],
+    "support_size_control": "already handled by search depth",
+    "tie_break": "canonical support ID, lexicographic"
+  },
+  "s10_atomic_scoring": {
+    "scope": "ALL admissible atoms as one-coordinate supports",
+    "n_expected": 10778,
+    "cohort": "20 development discharges only",
+    "external_sealed": true,
+    "poor_performance_causes_inadmissibility": false
+  },
+  "s11_within_stratum_ranking": {
+    "sort_key": [
+      "lower J_search",
+      "canonical coordinate ID"
+    ],
+    "global_top_K_pruning": false,
+    "rationale": "prevents large diagnostic families from receiving more initial search opportunities merely because they contain more atoms"
+  },
+  "s12_shortlist": {
+    "MAX_ATOMS_PER_CONSTRUCTOR_FOR_EXPANSION": 96,
+    "method": "per constructor, round-robin over its nonempty scientific-family strata; round r takes the r-th best atom of every stratum",
+    "constructors": [
+      "C0",
+      "C1",
+      "C2",
+      "C3",
+      "C5",
+      "C6",
+      "C7"
+    ],
+    "retain_all_if_at_or_below_cap": true,
+    "projected_shortlist_size": {
+      "C0": 66,
+      "C1": 59,
+      "C2": 96,
+      "C3": 96,
+      "C5": 39,
+      "C6": 96,
+      "C7": 96
+    },
+    "not_shortlisted_label": "ADMISSIBLE_NOT_IN_EXPANSION_SHORTLIST",
+    "not_shortlisted_is_not": "INADMISSIBLE"
+  },
+  "s13_budget_interpretation": {
+    "96_is": "a computational search allowance",
+    "96_is_not": "a scientific threshold",
+    "claim_about_rank_97": "none; no claim that rank 97 is scientifically inferior",
+    "changing_after_outcomes_seen": "FORBIDDEN",
+    "stop_condition": "if 96 cannot give at least one slot to every nonempty stratum of a constructor, STOP before target access",
+    "stop_condition_triggered": false,
+    "insufficient_constructors": {}
+  },
+  "s14_greedy_search": {
+    "seeds": "top 1 atom by within-stratum rank per active stratum",
+    "n_seeds_projected": 127,
+    "growth_sizes": "m = 2..12",
+    "proposal_rule": "at each step, EVERY active stratum represented in the expansion shortlist proposes exactly one atom: its highest within-stratum-ranked shortlisted atom not already in the support",
+    "no_proposal_if_stratum_exhausted": true,
+    "extension_filter": "discard only extensions violating frozen Phi_set",
+    "selection": "lowest J_search; tie-break canonical support ID",
+    "terminate": "|C| = 12 or no valid extension",
+    "opportunity_set": "stratum-balanced",
+    "expansion_choice": "performance-guided",
+    "seed_rank_deficient_handling": "if the only atom in a stratum has +infinity navigation score it is retained as the formal seed and flagged SEED_PROXY_RANK_DEFICIENT; normal path rules then determine whether useful extension is possible"
+  },
+  "s15_raw_only_lane": {
+    "lane_id": "C0_ONLY_GREEDY",
+    "atoms": "the 66 admissible C0 atoms only",
+    "strata": "the broad scientific families represented among C0",
+    "n_strata": 7,
+    "seeds": "top one C0 atom per nonempty scientific family",
+    "n_seeds_projected": 7,
+    "growth": "same greedy rule, one highest-ranked unused C0 atom offered per scientific-family stratum per step",
+    "support_max": 12,
+    "purpose": "guarantee the explored frontier contains compact raw-only representations",
+    "is_B2": false,
+    "B2_remains": "the frozen full-information raw Ridge comparator"
+  },
+  "s17_explored_definition": {
+    "in_Ahat_rec_iff": "its search proxy was actually evaluated",
+    "includes": [
+      "all one-coordinate supports",
+      "every candidate multivariate extension actually scored",
+      "every retained greedy path support"
+    ],
+    "PROPOSED_BUT_SET_INADMISSIBLE": "outside Ahat_rec because already outside A_rec",
+    "ADMISSIBLE_UNSEARCHED": "admissible support never proposed",
+    "invariant": "NOT SEARCHED != INADMISSIBLE"
+  },
+  "s19_no_selection": {
+    "returns_C_star": false,
+    "returns_R_star": false,
+    "returns_Q_rec_star": false,
+    "lowest_J_search_may_be_called": "lowest-navigation-score support in the explored frontier",
+    "may_not_be_called": "best scientific representation"
+  },
+  "s20_no_baselines": {
+    "B0": false,
+    "B1": false,
+    "B1A_AR1": false,
+    "B2": false,
+    "B3": false,
+    "H0_RAW_HARDENED": false,
+    "persistence_skill_used_for_search": false,
+    "relational_vs_baseline_comparison": false
+  },
+  "s21_external": {
+    "external_signal_values": 0,
+    "external_target_values": 0,
+    "on_any_read": "FIREWALL_BREACH, STOP"
+  },
+  "unchanged_from_parents": {
+    "A_rec": true,
+    "G_rec": true,
+    "target": true,
+    "P_hard": true,
+    "constructor_catalogue_C0_C8": true,
+    "denominator_rule": true,
+    "support_bound_1_12": true,
+    "T_REC_V1": true,
+    "Phi_set": true
+  },
+  "forbidden": [
+    "rescue C4",
+    "rescue C8",
+    "shifted phase derivative",
+    "bounded phase derivative",
+    "q_desc coordinate seeding",
+    "retired q_rec support seeding",
+    "external information",
+    "final representation selection",
+    "validation claim"
+  ],
+  "supersedes": "SIGMA_REC_PREVALUE_V1",
+  "supersedes_for_primary_use": true,
+  "SEEDS_PER_STRATUM": 1,
+  "s6_primary_vs_sensitivity": {
+    "ONE_SEED_SEARCH": "PRIMARY",
+    "TWO_SEED_SEARCH": [
+      "NOT_EXECUTED",
+      "OPTIONAL_FUTURE_SEARCH_DEPTH_SENSITIVITY"
+    ],
+    "decided_by": "prospective human decision, before any density value",
+    "reason": "computational economy while retaining one independent starting path for every active stratum",
+    "a_future_two_seed_analysis": {
+      "may": [
+        "test search robustness",
+        "show whether a larger exploration frontier changes conclusions"
+      ],
+      "must": [
+        "preserve the present primary one-seed result"
+      ],
+      "may_not": [
+        "retroactively become the primary result merely because it finds a better representation",
+        "convert a failed primary q_rec into a successful primary structural-transfer claim",
+        "replace, rescue, redefine or retroactively optimize the primary one-seed result"
+      ]
+    },
+    "outcome_trigger_defined": false,
+    "outcome_trigger_forbidden_example": "'run if the primary result is bad' - forbidden; if later authorised it is a sensitivity REGARDLESS of the primary result",
+    "recorded_before_density_access": true,
+    "price_accepted_prospectively": "broad in scientific opportunity, shallower in multi-start depth; reduced protection against greedy-start sensitivity. No stratum was removed to meet the budget."
+  },
+  "parent_policy_sha256": "a97e690e414da7a0ace4c70ab56e7d5851eb73f940d98e9f2a7add7f33d4b265"
+}

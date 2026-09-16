@@ -1,0 +1,97 @@
+{
+  "record_id": "OMEGA_REC_EXTERNAL_V1",
+  "generated_utc": "2026-09-05T22:59:39.900445+00:00",
+  "intended_external_domain": {
+    "n": 42,
+    "earlier": 24,
+    "later": 18,
+    "shot_ids": [
+      "155537",
+      "159310",
+      "160717",
+      "160719",
+      "160721",
+      "161136",
+      "161145",
+      "161414",
+      "165017",
+      "165026",
+      "165027",
+      "165029",
+      "165031",
+      "165043",
+      "165860",
+      "165955",
+      "165965",
+      "170394",
+      "170411",
+      "186997",
+      "187018",
+      "187019",
+      "187021",
+      "187022",
+      "189646",
+      "189649",
+      "189650",
+      "189652",
+      "195261",
+      "195265",
+      "195266",
+      "195268",
+      "195269",
+      "195274",
+      "195626",
+      "195642",
+      "195645",
+      "195648",
+      "195649",
+      "195651",
+      "195652",
+      "195659"
+    ]
+  },
+  "evaluated": {
+    "n_discharges_evaluated": 42,
+    "n_blocks_total": 126,
+    "n_blocks_eligible": 126,
+    "n_blocks_NOT_APPLICABLE": 0,
+    "not_applicable_reasons": {},
+    "denominator_admissibility": {
+      "n_denominator_block_checks": 378,
+      "n_admissible": 378,
+      "n_failures": 0,
+      "denominators": [
+        "cerqtit10",
+        "ece22",
+        "prmtan_neped"
+      ],
+      "rule": "DENOMINATOR_ADMISSIBILITY_PRIMARY_V1, inherited unchanged",
+      "eta_min_observed": 0.0996864405620637,
+      "eta_threshold": 0.05
+    }
+  },
+  "result_dependent_discharge_deletion": false,
+  "domain_expanded_beyond_frozen_candidate_object": false,
+  "supported_claim_domain": {
+    "domain": "EMPTY",
+    "reason": "mandatory gate V3 failed on the full external cohort, and mandatory gate V6 therefore cannot resolve to PASS. No external domain supports a successful structural-transfer claim.",
+    "narrowed_to_an_era": false,
+    "narrowing_to_an_era_would_be": "forbidden: pooled V3 failed, and narrowing to the later era to obtain a passing V3 is explicitly prohibited"
+  },
+  "era_observation_recorded_not_claimed": {
+    "earlier_24": {
+      "Delta_0": 0.2907794131889924,
+      "Delta_1": 0.9538968586776063,
+      "direction_vs_B0": "MATERIAL_ADVERSE",
+      "direction_vs_B1": "MATERIAL_ADVERSE"
+    },
+    "later_18": {
+      "Delta_0": -0.8079276135727665,
+      "Delta_1": -0.03031783355053282,
+      "direction_vs_B0": "MATERIAL_IMPROVEMENT",
+      "direction_vs_B1": "MATERIAL_IMPROVEMENT"
+    },
+    "status": "REPORTED_AS_EVIDENCE_ONLY",
+    "is_a_claim": false
+  }
+}

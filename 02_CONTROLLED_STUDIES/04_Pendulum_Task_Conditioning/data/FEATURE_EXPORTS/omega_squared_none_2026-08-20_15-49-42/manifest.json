@@ -1,0 +1,410 @@
+[
+  {
+    "record": "pendulum_000",
+    "target": "omega_squared",
+    "timestamp": "2026-08-20_15-49-42",
+    "smoothing": {
+      "smoothing_method": "none",
+      "Splsmooth": 100.0,
+      "spline_BC_window": 2,
+      "spline_BC_weight": 2.0,
+      "process_noise": 0.0001,
+      "measurement_noise": 0.001
+    },
+    "normalization": "none",
+    "processing": "raw",
+    "model": "D:\\SIR_paper\\Pendulum\\data\\FEATURE_EXPORTS\\omega_squared_none_2026-08-20_15-49-42\\pendulum_000__model.parquet",
+    "n_features": 3
+  },
+  {
+    "record": "pendulum_001",
+    "target": "omega_squared",
+    "timestamp": "2026-08-20_15-49-42",
+    "smoothing": {
+      "smoothing_method": "none",
+      "Splsmooth": 100.0,
+      "spline_BC_window": 2,
+      "spline_BC_weight": 2.0,
+      "process_noise": 0.0001,
+      "measurement_noise": 0.001
+    },
+    "normalization": "none",
+    "processing": "raw",
+    "model": "D:\\SIR_paper\\Pendulum\\data\\FEATURE_EXPORTS\\omega_squared_none_2026-08-20_15-49-42\\pendulum_001__model.parquet",
+    "n_features": 3
+  },
+  {
+    "record": "pendulum_002",
+    "target": "omega_squared",
+    "timestamp": "2026-08-20_15-49-42",
+    "smoothing": {
+      "smoothing_method": "none",
+      "Splsmooth": 100.0,
+      "spline_BC_window": 2,
+      "spline_BC_weight": 2.0,
+      "process_noise": 0.0001,
+      "measurement_noise": 0.001
+    },
+    "normalization": "none",
+    "processing": "raw",
+    "model": "D:\\SIR_paper\\Pendulum\\data\\FEATURE_EXPORTS\\omega_squared_none_2026-08-20_15-49-42\\pendulum_002__model.parquet",
+    "n_features": 3
+  },
+  {
+    "record": "pendulum_004",
+    "target": "omega_squared",
+    "timestamp": "2026-08-20_15-49-42",
+    "smoothing": {
+      "smoothing_method": "none",
+      "Splsmooth": 100.0,
+      "spline_BC_window": 2,
+      "spline_BC_weight": 2.0,
+      "process_noise": 0.0001,
+      "measurement_noise": 0.001
+    },
+    "normalization": "none",
+    "processing": "raw",
+    "model": "D:\\SIR_paper\\Pendulum\\data\\FEATURE_EXPORTS\\omega_squared_none_2026-08-20_15-49-42\\pendulum_004__model.parquet",
+    "n_features": 3
+  },
+  {
+    "record": "pendulum_005",
+    "target": "omega_squared",
+    "timestamp": "2026-08-20_15-49-42",
+    "smoothing": {
+      "smoothing_method": "none",
+      "Splsmooth": 100.0,
+      "spline_BC_window": 2,
+      "spline_BC_weight": 2.0,
+      "process_noise": 0.0001,
+      "measurement_noise": 0.001
+    },
+    "normalization": "none",
+    "processing": "raw",
+    "model": "D:\\SIR_paper\\Pendulum\\data\\FEATURE_EXPORTS\\omega_squared_none_2026-08-20_15-49-42\\pendulum_005__model.parquet",
+    "n_features": 3
+  },
+  {
+    "record": "pendulum_006",
+    "target": "omega_squared",
+    "timestamp": "2026-08-20_15-49-42",
+    "smoothing": {
+      "smoothing_method": "none",
+      "Splsmooth": 100.0,
+      "spline_BC_window": 2,
+      "spline_BC_weight": 2.0,
+      "process_noise": 0.0001,
+      "measurement_noise": 0.001
+    },
+    "normalization": "none",
+    "processing": "raw",
+    "model": "D:\\SIR_paper\\Pendulum\\data\\FEATURE_EXPORTS\\omega_squared_none_2026-08-20_15-49-42\\pendulum_006__model.parquet",
+    "n_features": 3
+  },
+  {
+    "record": "pendulum_008",
+    "target": "omega_squared",
+    "timestamp": "2026-08-20_15-49-42",
+    "smoothing": {
+      "smoothing_method": "none",
+      "Splsmooth": 100.0,
+      "spline_BC_window": 2,
+      "spline_BC_weight": 2.0,
+      "process_noise": 0.0001,
+      "measurement_noise": 0.001
+    },
+    "normalization": "none",
+    "processing": "raw",
+    "model": "D:\\SIR_paper\\Pendulum\\data\\FEATURE_EXPORTS\\omega_squared_none_2026-08-20_15-49-42\\pendulum_008__model.parquet",
+    "n_features": 3
+  },
+  {
+    "record": "pendulum_009",
+    "target": "omega_squared",
+    "timestamp": "2026-08-20_15-49-42",
+    "smoothing": {
+      "smoothing_method": "none",
+      "Splsmooth": 100.0,
+      "spline_BC_window": 2,
+      "spline_BC_weight": 2.0,
+      "process_noise": 0.0001,
+      "measurement_noise": 0.001
+    },
+    "normalization": "none",
+    "processing": "raw",
+    "model": "D:\\SIR_paper\\Pendulum\\data\\FEATURE_EXPORTS\\omega_squared_none_2026-08-20_15-49-42\\pendulum_009__model.parquet",
+    "n_features": 3
+  },
+  {
+    "record": "pendulum_010",
+    "target": "omega_squared",
+    "timestamp": "2026-08-20_15-49-42",
+    "smoothing": {
+      "smoothing_method": "none",
+      "Splsmooth": 100.0,
+      "spline_BC_window": 2,
+      "spline_BC_weight": 2.0,
+      "process_noise": 0.0001,
+      "measurement_noise": 0.001
+    },
+    "normalization": "none",
+    "processing": "raw",
+    "model": "D:\\SIR_paper\\Pendulum\\data\\FEATURE_EXPORTS\\omega_squared_none_2026-08-20_15-49-42\\pendulum_010__model.parquet",
+    "n_features": 3
+  },
+  {
+    "record": "pendulum_012",
+    "target": "omega_squared",
+    "timestamp": "2026-08-20_15-49-42",
+    "smoothing": {
+      "smoothing_method": "none",
+      "Splsmooth": 100.0,
+      "spline_BC_window": 2,
+      "spline_BC_weight": 2.0,
+      "process_noise": 0.0001,
+      "measurement_noise": 0.001
+    },
+    "normalization": "none",
+    "processing": "raw",
+    "model": "D:\\SIR_paper\\Pendulum\\data\\FEATURE_EXPORTS\\omega_squared_none_2026-08-20_15-49-42\\pendulum_012__model.parquet",
+    "n_features": 3
+  },
+  {
+    "record": "pendulum_013",
+    "target": "omega_squared",
+    "timestamp": "2026-08-20_15-49-42",
+    "smoothing": {
+      "smoothing_method": "none",
+      "Splsmooth": 100.0,
+      "spline_BC_window": 2,
+      "spline_BC_weight": 2.0,
+      "process_noise": 0.0001,
+      "measurement_noise": 0.001
+    },
+    "normalization": "none",
+    "processing": "raw",
+    "model": "D:\\SIR_paper\\Pendulum\\data\\FEATURE_EXPORTS\\omega_squared_none_2026-08-20_15-49-42\\pendulum_013__model.parquet",
+    "n_features": 3
+  },
+  {
+    "record": "pendulum_014",
+    "target": "omega_squared",
+    "timestamp": "2026-08-20_15-49-42",
+    "smoothing": {
+      "smoothing_method": "none",
+      "Splsmooth": 100.0,
+      "spline_BC_window": 2,
+      "spline_BC_weight": 2.0,
+      "process_noise": 0.0001,
+      "measurement_noise": 0.001
+    },
+    "normalization": "none",
+    "processing": "raw",
+    "model": "D:\\SIR_paper\\Pendulum\\data\\FEATURE_EXPORTS\\omega_squared_none_2026-08-20_15-49-42\\pendulum_014__model.parquet",
+    "n_features": 3
+  },
+  {
+    "record": "pendulum_016",
+    "target": "omega_squared",
+    "timestamp": "2026-08-20_15-49-42",
+    "smoothing": {
+      "smoothing_method": "none",
+      "Splsmooth": 100.0,
+      "spline_BC_window": 2,
+      "spline_BC_weight": 2.0,
+      "process_noise": 0.0001,
+      "measurement_noise": 0.001
+    },
+    "normalization": "none",
+    "processing": "raw",
+    "model": "D:\\SIR_paper\\Pendulum\\data\\FEATURE_EXPORTS\\omega_squared_none_2026-08-20_15-49-42\\pendulum_016__model.parquet",
+    "n_features": 3
+  },
+  {
+    "record": "pendulum_017",
+    "target": "omega_squared",
+    "timestamp": "2026-08-20_15-49-42",
+    "smoothing": {
+      "smoothing_method": "none",
+      "Splsmooth": 100.0,
+      "spline_BC_window": 2,
+      "spline_BC_weight": 2.0,
+      "process_noise": 0.0001,
+      "measurement_noise": 0.001
+    },
+    "normalization": "none",
+    "processing": "raw",
+    "model": "D:\\SIR_paper\\Pendulum\\data\\FEATURE_EXPORTS\\omega_squared_none_2026-08-20_15-49-42\\pendulum_017__model.parquet",
+    "n_features": 3
+  },
+  {
+    "record": "pendulum_018",
+    "target": "omega_squared",
+    "timestamp": "2026-08-20_15-49-42",
+    "smoothing": {
+      "smoothing_method": "none",
+      "Splsmooth": 100.0,
+      "spline_BC_window": 2,
+      "spline_BC_weight": 2.0,
+      "process_noise": 0.0001,
+      "measurement_noise": 0.001
+    },
+    "normalization": "none",
+    "processing": "raw",
+    "model": "D:\\SIR_paper\\Pendulum\\data\\FEATURE_EXPORTS\\omega_squared_none_2026-08-20_15-49-42\\pendulum_018__model.parquet",
+    "n_features": 3
+  },
+  {
+    "record": "pendulum_020",
+    "target": "omega_squared",
+    "timestamp": "2026-08-20_15-49-42",
+    "smoothing": {
+      "smoothing_method": "none",
+      "Splsmooth": 100.0,
+      "spline_BC_window": 2,
+      "spline_BC_weight": 2.0,
+      "process_noise": 0.0001,
+      "measurement_noise": 0.001
+    },
+    "normalization": "none",
+    "processing": "raw",
+    "model": "D:\\SIR_paper\\Pendulum\\data\\FEATURE_EXPORTS\\omega_squared_none_2026-08-20_15-49-42\\pendulum_020__model.parquet",
+    "n_features": 3
+  },
+  {
+    "record": "pendulum_021",
+    "target": "omega_squared",
+    "timestamp": "2026-08-20_15-49-42",
+    "smoothing": {
+      "smoothing_method": "none",
+      "Splsmooth": 100.0,
+      "spline_BC_window": 2,
+      "spline_BC_weight": 2.0,
+      "process_noise": 0.0001,
+      "measurement_noise": 0.001
+    },
+    "normalization": "none",
+    "processing": "raw",
+    "model": "D:\\SIR_paper\\Pendulum\\data\\FEATURE_EXPORTS\\omega_squared_none_2026-08-20_15-49-42\\pendulum_021__model.parquet",
+    "n_features": 3
+  },
+  {
+    "record": "pendulum_022",
+    "target": "omega_squared",
+    "timestamp": "2026-08-20_15-49-42",
+    "smoothing": {
+      "smoothing_method": "none",
+      "Splsmooth": 100.0,
+      "spline_BC_window": 2,
+      "spline_BC_weight": 2.0,
+      "process_noise": 0.0001,
+      "measurement_noise": 0.001
+    },
+    "normalization": "none",
+    "processing": "raw",
+    "model": "D:\\SIR_paper\\Pendulum\\data\\FEATURE_EXPORTS\\omega_squared_none_2026-08-20_15-49-42\\pendulum_022__model.parquet",
+    "n_features": 3
+  },
+  {
+    "record": "pendulum_024",
+    "target": "omega_squared",
+    "timestamp": "2026-08-20_15-49-42",
+    "smoothing": {
+      "smoothing_method": "none",
+      "Splsmooth": 100.0,
+      "spline_BC_window": 2,
+      "spline_BC_weight": 2.0,
+      "process_noise": 0.0001,
+      "measurement_noise": 0.001
+    },
+    "normalization": "none",
+    "processing": "raw",
+    "model": "D:\\SIR_paper\\Pendulum\\data\\FEATURE_EXPORTS\\omega_squared_none_2026-08-20_15-49-42\\pendulum_024__model.parquet",
+    "n_features": 3
+  },
+  {
+    "record": "pendulum_025",
+    "target": "omega_squared",
+    "timestamp": "2026-08-20_15-49-42",
+    "smoothing": {
+      "smoothing_method": "none",
+      "Splsmooth": 100.0,
+      "spline_BC_window": 2,
+      "spline_BC_weight": 2.0,
+      "process_noise": 0.0001,
+      "measurement_noise": 0.001
+    },
+    "normalization": "none",
+    "processing": "raw",
+    "model": "D:\\SIR_paper\\Pendulum\\data\\FEATURE_EXPORTS\\omega_squared_none_2026-08-20_15-49-42\\pendulum_025__model.parquet",
+    "n_features": 3
+  },
+  {
+    "record": "pendulum_026",
+    "target": "omega_squared",
+    "timestamp": "2026-08-20_15-49-42",
+    "smoothing": {
+      "smoothing_method": "none",
+      "Splsmooth": 100.0,
+      "spline_BC_window": 2,
+      "spline_BC_weight": 2.0,
+      "process_noise": 0.0001,
+      "measurement_noise": 0.001
+    },
+    "normalization": "none",
+    "processing": "raw",
+    "model": "D:\\SIR_paper\\Pendulum\\data\\FEATURE_EXPORTS\\omega_squared_none_2026-08-20_15-49-42\\pendulum_026__model.parquet",
+    "n_features": 3
+  },
+  {
+    "record": "pendulum_028",
+    "target": "omega_squared",
+    "timestamp": "2026-08-20_15-49-42",
+    "smoothing": {
+      "smoothing_method": "none",
+      "Splsmooth": 100.0,
+      "spline_BC_window": 2,
+      "spline_BC_weight": 2.0,
+      "process_noise": 0.0001,
+      "measurement_noise": 0.001
+    },
+    "normalization": "none",
+    "processing": "raw",
+    "model": "D:\\SIR_paper\\Pendulum\\data\\FEATURE_EXPORTS\\omega_squared_none_2026-08-20_15-49-42\\pendulum_028__model.parquet",
+    "n_features": 3
+  },
+  {
+    "record": "pendulum_029",
+    "target": "omega_squared",
+    "timestamp": "2026-08-20_15-49-42",
+    "smoothing": {
+      "smoothing_method": "none",
+      "Splsmooth": 100.0,
+      "spline_BC_window": 2,
+      "spline_BC_weight": 2.0,
+      "process_noise": 0.0001,
+      "measurement_noise": 0.001
+    },
+    "normalization": "none",
+    "processing": "raw",
+    "model": "D:\\SIR_paper\\Pendulum\\data\\FEATURE_EXPORTS\\omega_squared_none_2026-08-20_15-49-42\\pendulum_029__model.parquet",
+    "n_features": 3
+  },
+  {
+    "record": "pendulum_030",
+    "target": "omega_squared",
+    "timestamp": "2026-08-20_15-49-42",
+    "smoothing": {
+      "smoothing_method": "none",
+      "Splsmooth": 100.0,
+      "spline_BC_window": 2,
+      "spline_BC_weight": 2.0,
+      "process_noise": 0.0001,
+      "measurement_noise": 0.001
+    },
+    "normalization": "none",
+    "processing": "raw",
+    "model": "D:\\SIR_paper\\Pendulum\\data\\FEATURE_EXPORTS\\omega_squared_none_2026-08-20_15-49-42\\pendulum_030__model.parquet",
+    "n_features": 3
+  }
+]

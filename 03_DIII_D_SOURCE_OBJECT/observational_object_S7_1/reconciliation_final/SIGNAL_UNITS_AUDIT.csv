@@ -1,0 +1,96 @@
+signal,group,previous_unit,final_unit,status,evidence_class,changed_in_S7_1R,has_physical_unit,notes
+aminor,,m,m,documented,LOCAL_DOCUMENTED,False,True,
+area,,m^2,m^2,documented,LOCAL_DOCUMENTED,False,True,
+betan,,1,1,dimensionless,LOCAL_DOCUMENTED,False,True,"Dimensionless by definition. Upstream reports ' ' (MDSplus explicit dimensionless), not '' (attribute unset)."
+bt,,T,T,resolved_partial,LOCAL_DOCUMENTED,False,True,Unit string present on 35/62 shots and empty on the rest. Canonical unit taken from the shots that report it; the signal is the same pointname on every shot.
+cerqrott10,,km/s,km/s,documented,LOCAL_DOCUMENTED,False,True,
+cerqrott11,,km/s,km/s,documented,LOCAL_DOCUMENTED,False,True,
+cerqrott12,,km/s,km/s,documented,LOCAL_DOCUMENTED,False,True,
+cerqrott13,,km/s,km/s,documented,LOCAL_DOCUMENTED,False,True,
+cerqrott3,,km/s,km/s,documented,LOCAL_DOCUMENTED,False,True,
+cerqrott6,,km/s,km/s,documented,LOCAL_DOCUMENTED,False,True,
+cerqrott8,,km/s,km/s,documented,LOCAL_DOCUMENTED,False,True,
+cerqtit10,,eV,eV,documented,LOCAL_DOCUMENTED,False,True,
+cerqtit11,,eV,eV,documented,LOCAL_DOCUMENTED,False,True,
+cerqtit12,,eV,eV,documented,LOCAL_DOCUMENTED,False,True,
+cerqtit13,,eV,eV,documented,LOCAL_DOCUMENTED,False,True,
+cerqtit3,,eV,eV,documented,LOCAL_DOCUMENTED,False,True,
+cerqtit6,,eV,eV,documented,LOCAL_DOCUMENTED,False,True,
+cerqtit8,,eV,eV,documented,LOCAL_DOCUMENTED,False,True,
+density,,cm^-3,cm^-3,documented,LOCAL_DOCUMENTED,False,True,
+drsep,,m,m,documented,LOCAL_DOCUMENTED,False,True,
+ece1,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece10,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece11,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece12,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece13,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece14,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece15,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece16,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece17,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece18,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece19,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece2,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece20,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece21,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece22,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece23,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece24,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece25,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece26,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece27,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece28,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece29,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece3,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece30,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece31,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece32,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece33,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece34,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece35,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece36,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece37,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece38,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece39,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece4,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece40,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece5,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece6,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece7,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece8,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+ece9,,,keV,domain_authorized,DOMAIN_AUTHORIZED,True,True,"Upstream units attribute is empty on all shots. Unit supplied as an explicit domain-authorized correction during S7.1R-FINAL (2026-09-02): the ECE radiometer reports electron temperature in keV. This is expert assignment, not recovered metadata."
+fs03da,,ph/(sr cm^2 s),ph/(sr cm^2 s),resolved_spelling,LOCAL_DOCUMENTED,False,True,Same physical unit written differently across shots; canonicalised. No numeric conversion applied.
+fs04,,ph/(sr cm^2 s),ph/(sr cm^2 s),resolved_spelling,LOCAL_DOCUMENTED,False,True,Same physical unit written differently across shots; canonicalised. No numeric conversion applied.
+fs04da,,ph/(sr cm^2 s),ph/(sr cm^2 s),resolved_spelling,LOCAL_DOCUMENTED,False,True,Same physical unit written differently across shots; canonicalised. No numeric conversion applied.
+fs05da,,ph/(sr cm^2 s),ph/(sr cm^2 s),resolved_spelling,LOCAL_DOCUMENTED,False,True,Same physical unit written differently across shots; canonicalised. No numeric conversion applied.
+gasa,,V,V,resolved_partial,LOCAL_DOCUMENTED,False,True,Unit string present on 51/62 shots and empty on the rest. Canonical unit taken from the shots that report it; the signal is the same pointname on every shot.
+gasb,,V,V,resolved_partial,LOCAL_DOCUMENTED,False,True,Unit string present on 51/62 shots and empty on the rest. Canonical unit taken from the shots that report it; the signal is the same pointname on every shot.
+gasc,,V,V,resolved_partial,LOCAL_DOCUMENTED,False,True,Unit string present on 51/62 shots and empty on the rest. Canonical unit taken from the shots that report it; the signal is the same pointname on every shot.
+gasd,,V,V,documented,LOCAL_DOCUMENTED,False,True,
+ip,,A,A,resolved_spelling,LOCAL_DOCUMENTED,False,True,Same physical unit written differently across shots; canonicalised. No numeric conversion applied.
+kappa,,1,1,dimensionless,LOCAL_DOCUMENTED,False,True,"Dimensionless by definition. Upstream reports ' ' (MDSplus explicit dimensionless), not '' (attribute unset)."
+li,,1,1,dimensionless,LOCAL_DOCUMENTED,False,True,"Dimensionless by definition. Upstream reports ' ' (MDSplus explicit dimensionless), not '' (attribute unset)."
+pcbcoil,,,,uncalibrated,LOCAL_DOCUMENTED,False,False,Upstream reports 'raw': uncalibrated digitiser output with no physical unit. Do not treat as a calibrated engineering quantity.
+pcdiamag3,,,,uncalibrated,LOCAL_DOCUMENTED,False,False,Upstream reports 'raw': uncalibrated digitiser output with no physical unit. Do not treat as a calibrated engineering quantity.
+pinj,,kW,kW,documented,LOCAL_DOCUMENTED,False,True,
+pinj_15l,,W,W,documented,LOCAL_DOCUMENTED,False,True,
+pinj_15r,,W,W,documented,LOCAL_DOCUMENTED,False,True,
+pinj_21l,,W,W,documented,LOCAL_DOCUMENTED,False,True,
+pinj_21r,,W,W,documented,LOCAL_DOCUMENTED,False,True,
+pinj_30l,,W,W,documented,LOCAL_DOCUMENTED,False,True,
+pinj_30r,,W,W,documented,LOCAL_DOCUMENTED,False,True,
+pinj_33l,,W,W,documented,LOCAL_DOCUMENTED,False,True,
+pinj_33r,,W,W,documented,LOCAL_DOCUMENTED,False,True,
+prmtan_neped,,m^-3,m^-3,documented,LOCAL_DOCUMENTED,False,True,
+prmtan_teped,,eV,eV,documented,LOCAL_DOCUMENTED,False,True,
+q95,,1,1,dimensionless,LOCAL_DOCUMENTED,False,True,"Dimensionless by definition. Upstream reports ' ' (MDSplus explicit dimensionless), not '' (attribute unset)."
+rmaxis,,m,m,documented,LOCAL_DOCUMENTED,False,True,
+rsurf,,m,m,documented,LOCAL_DOCUMENTED,False,True,
+tinj,,N m,N m,documented,LOCAL_DOCUMENTED,False,True,
+tribot,,1,1,dimensionless,LOCAL_DOCUMENTED,False,True,"Dimensionless by definition. Upstream reports ' ' (MDSplus explicit dimensionless), not '' (attribute unset)."
+tritop,,1,1,dimensionless,LOCAL_DOCUMENTED,False,True,"Dimensionless by definition. Upstream reports ' ' (MDSplus explicit dimensionless), not '' (attribute unset)."
+volume,,m^3,m^3,documented,LOCAL_DOCUMENTED,False,True,
+vsurf,,V,V,documented,LOCAL_DOCUMENTED,False,True,
+zcur,,m,m,documented,LOCAL_DOCUMENTED,False,True,
+zmaxis,,m,m,documented,LOCAL_DOCUMENTED,False,True,
+zsurf,,m,m,documented,LOCAL_DOCUMENTED,False,True,

@@ -1,0 +1,92 @@
+{
+  "policy_id": "ESTIMATOR_POLICY_V1",
+  "generated_utc": "2026-09-05T08:07:46.430834+00:00",
+  "estimator_id": "DEVELOPMENT_RELATION_OLS_V1",
+  "role": "PRIMARY development relation estimator for U_rec",
+  "parent_permission": {
+    "source": "S7.2 RELATION_AND_TRANSFER_POLICY.md",
+    "wording": "a transparent linear estimator: ordinary least squares, or ridge with a development-selected penalty",
+    "s7_8_choice": "OLS",
+    "is_a_narrowing_not_a_change": true
+  },
+  "reasons": [
+    "relation support is at most 12 coordinates",
+    "the scientific claim must remain attributable to the coordinate representation rather than to estimator complexity",
+    "OLS is transparent and hyperparameter-free",
+    "it is the estimator already used by the frozen search proxy SEARCH_PROXY_OLS_V1",
+    "S7.7R found no rank-deficient explored design (atoms_rank_deficient = 0)",
+    "no hyperparameter selection is required, so no selection discretion is created"
+  ],
+  "freeze_character": {
+    "is_estimator_policy_freeze": true,
+    "is_performance_comparison": false,
+    "no_ridge_fit_was_run_to_decide_this": true
+  },
+  "procedure": [
+    "1. fit predictor means and standard deviations on the cell CALIBRATION interval only",
+    "2. standardize coordinates using those calibration values",
+    "3. apply the calibration mean and sd unchanged to the protected predictor values",
+    "4. fit an intercept",
+    "5. solve affine OLS on the standardized design",
+    "6. coefficients are discharge/block local"
+  ],
+  "intercept": {
+    "fitted": true,
+    "counts_toward_parsimony": false,
+    "counts_toward_conditioning": false,
+    "rationale": "the Lorenz benchmarks in this project established that a no-intercept estimator silently destroys performance when the target is not centred"
+  },
+  "coefficients": {
+    "shared_across_discharges": false,
+    "scope": "one coefficient vector per discharge/block cell",
+    "transfer_statement": "the scientific coordinate support is shared; numerical coefficients may be discharge-specific"
+  },
+  "standardization": {
+    "rule_id": "CALIBRATION_STANDARDIZATION_V1",
+    "inherited_from": "S7.7R scripts/s7_7r_b_search.py (unchanged)",
+    "location": "fit on CALIBRATION rows only, applied unchanged to protected rows",
+    "mean": "mu = mean of the coordinate over the cell calibration interval",
+    "sd": "sd = std of the coordinate over the cell calibration interval, ddof=0",
+    "zero_sd_rule": "if sd <= 0 or sd is non-finite the divisor is the exact value 1.0; the column is centred but not rescaled",
+    "epsilon_added": false,
+    "consequence_of_zero_sd": "the standardized column is exactly zero on the calibration rows, so the design loses rank there and sigma_min = 0, giving kappa = +inf under the Rank-4 rule; this is a conditioning outcome, never an admissibility decision"
+  },
+  "ridge": {
+    "primary_status": "NOT_PRIMARY_IN_S7_8",
+    "permitted_later_as": "CONDITIONING sensitivity realization, separately labelled",
+    "may_be_chosen_on_performance": false,
+    "must_be_justified_by": "numerical conditioning evidence on development data only",
+    "must_be_granted_equally_to": "baseline B2",
+    "must_be_recorded_in": "the decision ledger with conditioning evidence"
+  },
+  "search_proxy_equivalence": {
+    "search_proxy_id": "SEARCH_PROXY_OLS_V1",
+    "method": "partitioned (Frisch-Waugh) normal equations on the centred calibration design",
+    "algebraic_relation": "identical to numpy.linalg.lstsq on the explicit [1, Z] design for a full-rank design",
+    "s7_7r_numerical_check": {
+      "reference": "numpy.linalg.lstsq(..., rcond=None)",
+      "support_sizes_tested": [
+        2,
+        5,
+        9,
+        12
+      ],
+      "max_relative_deviation": 1.7176192738513556e-13,
+      "tolerance": 1e-09,
+      "passes": true
+    },
+    "semantic_separation": {
+      "statement": "the fact that FIT(C) may numerically equal J_search(C) does NOT make J_search the scientific utility",
+      "J_search_role": "determined WHERE the search looked (navigation)",
+      "FIT_role": "one criterion inside U_rec applied to the frozen frontier",
+      "preserved_even_if_numbers_coincide": true,
+      "search_frequency_is_not_scientific_importance": true,
+      "search_priority_is_not_validation": true
+    }
+  },
+  "execution_stage": "S7.9",
+  "selection_domain": "AHAT_REC_DENSITY_ONE_SEED_V2",
+  "selection_domain_cardinality": 162845,
+  "global_optimality_claim": false,
+  "domain_reading": "every quantity defined here is evaluated over the frozen explored frontier Ahat_rec only; A_rec minus Ahat_rec remains ADMISSIBLE_UNSEARCHED and carries no negative finding"
+}

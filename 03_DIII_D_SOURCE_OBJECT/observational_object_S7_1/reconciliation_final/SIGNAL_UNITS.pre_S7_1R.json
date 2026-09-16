@@ -1,0 +1,943 @@
+{
+  "dataset": "resampled_data_v6",
+  "generated_utc": "2026-09-02T16:48:00Z",
+  "generated_by": "build_signal_units.py",
+  "machine": "DIII-D",
+  "n_signals": 95,
+  "n_shots": 62,
+  "time_units": "ms",
+  "provenance": {
+    "units_source": "smallELM_freq_v6_ZL_data/{shot}_metadata.json ('units' per signal)",
+    "audited_over": "all 62 shots present in resampled_data_v6",
+    "note": "resampled_data_v6 itself stores no units. Its npz files hold only {signal}_data / {signal}_times and its shot_*_metadata.json holds only method/category/lengths. Units here are recovered from the upstream fetch metadata."
+  },
+  "status_meanings": {
+    "documented": "One non-blank unit string, identical on all shots.",
+    "resolved_spelling": "Several spellings of the same unit; canonicalised.",
+    "resolved_partial": "Unit reported on some shots, blank on others; taken from those that report it.",
+    "dimensionless": "Genuinely dimensionless; upstream reports ' '.",
+    "uncalibrated": "Upstream reports 'raw'; no physical unit exists.",
+    "unresolved": "No unit information available. Deliberately null, not guessed.",
+    "conflict": "Upstream strings disagree on the physical unit; needs a human decision."
+  },
+  "summary": {
+    "by_status": {
+      "unresolved": 40,
+      "documented": 38,
+      "dimensionless": 6,
+      "resolved_spelling": 5,
+      "resolved_partial": 4,
+      "uncalibrated": 2
+    },
+    "unresolved_signals": [
+      "ece1",
+      "ece10",
+      "ece11",
+      "ece12",
+      "ece13",
+      "ece14",
+      "ece15",
+      "ece16",
+      "ece17",
+      "ece18",
+      "ece19",
+      "ece2",
+      "ece20",
+      "ece21",
+      "ece22",
+      "ece23",
+      "ece24",
+      "ece25",
+      "ece26",
+      "ece27",
+      "ece28",
+      "ece29",
+      "ece3",
+      "ece30",
+      "ece31",
+      "ece32",
+      "ece33",
+      "ece34",
+      "ece35",
+      "ece36",
+      "ece37",
+      "ece38",
+      "ece39",
+      "ece4",
+      "ece40",
+      "ece5",
+      "ece6",
+      "ece7",
+      "ece8",
+      "ece9"
+    ],
+    "uncalibrated_signals": [
+      "pcbcoil",
+      "pcdiamag3"
+    ]
+  },
+  "scale_warnings": [
+    {
+      "signals": [
+        "pinj",
+        "pinj_15l",
+        "pinj_15r",
+        "pinj_21l",
+        "pinj_21r",
+        "pinj_30l",
+        "pinj_30r",
+        "pinj_33l",
+        "pinj_33r"
+      ],
+      "issue": "pinj is kW but the per-beamline pinj_* channels are W: a factor of 1000 between the total and its parts."
+    },
+    {
+      "signals": [
+        "density",
+        "prmtan_neped"
+      ],
+      "issue": "density is cm^-3 but prmtan_neped is m^-3: a factor of 1e6 between core and pedestal density."
+    },
+    {
+      "signals": [
+        "prmtan_teped",
+        "cerqtit3",
+        "cerqtit6",
+        "cerqtit8",
+        "cerqtit10",
+        "cerqtit11",
+        "cerqtit12",
+        "cerqtit13"
+      ],
+      "issue": "Temperatures here are eV. Confirm the scale of any other temperature channel before combining."
+    }
+  ],
+  "signals": {
+    "aminor": {
+      "units": "m",
+      "status": "documented",
+      "description": "Plasma minor radius (EFIT)",
+      "upstream_variants": {
+        "m": 62
+      }
+    },
+    "area": {
+      "units": "m^2",
+      "status": "documented",
+      "description": "Plasma poloidal cross-sectional area (EFIT)",
+      "upstream_variants": {
+        "m^2": 62
+      }
+    },
+    "betan": {
+      "units": "1",
+      "status": "dimensionless",
+      "description": "Normalised beta",
+      "upstream_variants": {
+        " ": 62
+      },
+      "note": "Dimensionless by definition. Upstream reports ' ' (MDSplus explicit dimensionless), not '' (attribute unset)."
+    },
+    "bt": {
+      "units": "T",
+      "status": "resolved_partial",
+      "description": "Toroidal magnetic field",
+      "upstream_variants": {
+        "t": 35,
+        "": 27
+      },
+      "note": "Unit string present on 35/62 shots and empty on the rest. Canonical unit taken from the shots that report it; the signal is the same pointname on every shot."
+    },
+    "cerqrott10": {
+      "units": "km/s",
+      "status": "documented",
+      "description": "CER toroidal rotation velocity, channel 10",
+      "upstream_variants": {
+        "km/s": 62
+      }
+    },
+    "cerqrott11": {
+      "units": "km/s",
+      "status": "documented",
+      "description": "CER toroidal rotation velocity, channel 11",
+      "upstream_variants": {
+        "km/s": 62
+      }
+    },
+    "cerqrott12": {
+      "units": "km/s",
+      "status": "documented",
+      "description": "CER toroidal rotation velocity, channel 12",
+      "upstream_variants": {
+        "km/s": 62
+      }
+    },
+    "cerqrott13": {
+      "units": "km/s",
+      "status": "documented",
+      "description": "CER toroidal rotation velocity, channel 13",
+      "upstream_variants": {
+        "km/s": 62
+      }
+    },
+    "cerqrott3": {
+      "units": "km/s",
+      "status": "documented",
+      "description": "CER toroidal rotation velocity, channel 3",
+      "upstream_variants": {
+        "km/s": 62
+      }
+    },
+    "cerqrott6": {
+      "units": "km/s",
+      "status": "documented",
+      "description": "CER toroidal rotation velocity, channel 6",
+      "upstream_variants": {
+        "km/s": 62
+      }
+    },
+    "cerqrott8": {
+      "units": "km/s",
+      "status": "documented",
+      "description": "CER toroidal rotation velocity, channel 8",
+      "upstream_variants": {
+        "km/s": 62
+      }
+    },
+    "cerqtit10": {
+      "units": "eV",
+      "status": "documented",
+      "description": "CER ion temperature, channel 10",
+      "upstream_variants": {
+        "eV": 62
+      }
+    },
+    "cerqtit11": {
+      "units": "eV",
+      "status": "documented",
+      "description": "CER ion temperature, channel 11",
+      "upstream_variants": {
+        "eV": 62
+      }
+    },
+    "cerqtit12": {
+      "units": "eV",
+      "status": "documented",
+      "description": "CER ion temperature, channel 12",
+      "upstream_variants": {
+        "eV": 62
+      }
+    },
+    "cerqtit13": {
+      "units": "eV",
+      "status": "documented",
+      "description": "CER ion temperature, channel 13",
+      "upstream_variants": {
+        "eV": 62
+      }
+    },
+    "cerqtit3": {
+      "units": "eV",
+      "status": "documented",
+      "description": "CER ion temperature, channel 3",
+      "upstream_variants": {
+        "eV": 62
+      }
+    },
+    "cerqtit6": {
+      "units": "eV",
+      "status": "documented",
+      "description": "CER ion temperature, channel 6",
+      "upstream_variants": {
+        "eV": 62
+      }
+    },
+    "cerqtit8": {
+      "units": "eV",
+      "status": "documented",
+      "description": "CER ion temperature, channel 8",
+      "upstream_variants": {
+        "eV": 62
+      }
+    },
+    "density": {
+      "units": "cm^-3",
+      "status": "documented",
+      "description": "Line-averaged electron density",
+      "upstream_variants": {
+        "/cm^3": 62
+      }
+    },
+    "drsep": {
+      "units": "m",
+      "status": "documented",
+      "description": "Separatrix-to-separatrix distance (upper/lower balance)",
+      "upstream_variants": {
+        "m": 62
+      }
+    },
+    "ece1": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 1",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece10": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 10",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece11": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 11",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece12": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 12",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece13": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 13",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece14": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 14",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece15": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 15",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece16": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 16",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece17": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 17",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece18": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 18",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece19": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 19",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece2": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 2",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece20": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 20",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece21": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 21",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece22": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 22",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece23": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 23",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece24": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 24",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece25": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 25",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece26": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 26",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece27": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 27",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece28": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 28",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece29": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 29",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece3": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 3",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece30": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 30",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece31": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 31",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece32": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 32",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece33": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 33",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece34": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 34",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece35": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 35",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece36": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 36",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece37": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 37",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece38": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 38",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece39": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 39",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece4": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 4",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece40": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 40",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece5": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 5",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece6": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 6",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece7": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 7",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece8": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 8",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "ece9": {
+      "units": null,
+      "status": "unresolved",
+      "description": "ECE radiometer channel 9",
+      "upstream_variants": {
+        "": 62
+      },
+      "note": "Upstream units attribute is empty on all shots and no authoritative public documentation was found. Left null deliberately: NOT inferred."
+    },
+    "fs03da": {
+      "units": "ph/(sr cm^2 s)",
+      "status": "resolved_spelling",
+      "description": "Filterscope D-alpha channel (fs03da)",
+      "upstream_variants": {
+        "ph/(sr cm2 s)": 35,
+        "ph/cm2/sr/s": 27
+      },
+      "note": "Same physical unit written differently across shots; canonicalised. No numeric conversion applied."
+    },
+    "fs04": {
+      "units": "ph/(sr cm^2 s)",
+      "status": "resolved_spelling",
+      "description": "Filterscope D-alpha channel (fs04)",
+      "upstream_variants": {
+        "ph/(sr cm2 s)": 35,
+        "ph/cm2/sr/s": 27
+      },
+      "note": "Same physical unit written differently across shots; canonicalised. No numeric conversion applied."
+    },
+    "fs04da": {
+      "units": "ph/(sr cm^2 s)",
+      "status": "resolved_spelling",
+      "description": "Filterscope D-alpha channel (fs04da)",
+      "upstream_variants": {
+        "ph/(sr cm2 s)": 35,
+        "ph/cm2/sr/s": 27
+      },
+      "note": "Same physical unit written differently across shots; canonicalised. No numeric conversion applied."
+    },
+    "fs05da": {
+      "units": "ph/(sr cm^2 s)",
+      "status": "resolved_spelling",
+      "description": "Filterscope D-alpha channel (fs05da)",
+      "upstream_variants": {
+        "ph/(sr cm2 s)": 35,
+        "ph/cm2/sr/s": 27
+      },
+      "note": "Same physical unit written differently across shots; canonicalised. No numeric conversion applied."
+    },
+    "gasa": {
+      "units": "V",
+      "status": "resolved_partial",
+      "description": "Gas injection valve command, manifold A",
+      "upstream_variants": {
+        "volt": 51,
+        "": 11
+      },
+      "note": "Unit string present on 51/62 shots and empty on the rest. Canonical unit taken from the shots that report it; the signal is the same pointname on every shot."
+    },
+    "gasb": {
+      "units": "V",
+      "status": "resolved_partial",
+      "description": "Gas injection valve command, manifold B",
+      "upstream_variants": {
+        "volt": 51,
+        "": 11
+      },
+      "note": "Unit string present on 51/62 shots and empty on the rest. Canonical unit taken from the shots that report it; the signal is the same pointname on every shot."
+    },
+    "gasc": {
+      "units": "V",
+      "status": "resolved_partial",
+      "description": "Gas injection valve command, manifold C",
+      "upstream_variants": {
+        "volt": 51,
+        "": 11
+      },
+      "note": "Unit string present on 51/62 shots and empty on the rest. Canonical unit taken from the shots that report it; the signal is the same pointname on every shot."
+    },
+    "gasd": {
+      "units": "V",
+      "status": "documented",
+      "description": "Gas injection valve command, manifold D",
+      "upstream_variants": {
+        "volt": 62
+      }
+    },
+    "ip": {
+      "units": "A",
+      "status": "resolved_spelling",
+      "description": "Plasma current",
+      "upstream_variants": {
+        "a": 35,
+        "amps": 27
+      },
+      "note": "Same physical unit written differently across shots; canonicalised. No numeric conversion applied."
+    },
+    "kappa": {
+      "units": "1",
+      "status": "dimensionless",
+      "description": "Plasma elongation",
+      "upstream_variants": {
+        " ": 62
+      },
+      "note": "Dimensionless by definition. Upstream reports ' ' (MDSplus explicit dimensionless), not '' (attribute unset)."
+    },
+    "li": {
+      "units": "1",
+      "status": "dimensionless",
+      "description": "Normalised internal inductance",
+      "upstream_variants": {
+        " ": 62
+      },
+      "note": "Dimensionless by definition. Upstream reports ' ' (MDSplus explicit dimensionless), not '' (attribute unset)."
+    },
+    "pcbcoil": {
+      "units": null,
+      "status": "uncalibrated",
+      "description": "Plasma control B-coil signal (uncalibrated)",
+      "upstream_variants": {
+        "raw": 62
+      },
+      "note": "Upstream reports 'raw': uncalibrated digitiser output with no physical unit. Do not treat as a calibrated engineering quantity."
+    },
+    "pcdiamag3": {
+      "units": null,
+      "status": "uncalibrated",
+      "description": "Diamagnetic loop signal (uncalibrated)",
+      "upstream_variants": {
+        "raw": 62
+      },
+      "note": "Upstream reports 'raw': uncalibrated digitiser output with no physical unit. Do not treat as a calibrated engineering quantity."
+    },
+    "pinj": {
+      "units": "kW",
+      "status": "documented",
+      "description": "Total injected neutral beam power",
+      "upstream_variants": {
+        "kW": 62
+      }
+    },
+    "pinj_15l": {
+      "units": "W",
+      "status": "documented",
+      "description": "Injected neutral beam power, beamline 15L",
+      "upstream_variants": {
+        "W": 62
+      }
+    },
+    "pinj_15r": {
+      "units": "W",
+      "status": "documented",
+      "description": "Injected neutral beam power, beamline 15R",
+      "upstream_variants": {
+        "W": 62
+      }
+    },
+    "pinj_21l": {
+      "units": "W",
+      "status": "documented",
+      "description": "Injected neutral beam power, beamline 21L",
+      "upstream_variants": {
+        "W": 62
+      }
+    },
+    "pinj_21r": {
+      "units": "W",
+      "status": "documented",
+      "description": "Injected neutral beam power, beamline 21R",
+      "upstream_variants": {
+        "W": 62
+      }
+    },
+    "pinj_30l": {
+      "units": "W",
+      "status": "documented",
+      "description": "Injected neutral beam power, beamline 30L",
+      "upstream_variants": {
+        "W": 62
+      }
+    },
+    "pinj_30r": {
+      "units": "W",
+      "status": "documented",
+      "description": "Injected neutral beam power, beamline 30R",
+      "upstream_variants": {
+        "W": 62
+      }
+    },
+    "pinj_33l": {
+      "units": "W",
+      "status": "documented",
+      "description": "Injected neutral beam power, beamline 33L",
+      "upstream_variants": {
+        "W": 62
+      }
+    },
+    "pinj_33r": {
+      "units": "W",
+      "status": "documented",
+      "description": "Injected neutral beam power, beamline 33R",
+      "upstream_variants": {
+        "W": 62
+      }
+    },
+    "prmtan_neped": {
+      "units": "m^-3",
+      "status": "documented",
+      "description": "Pedestal electron density from tanh fit",
+      "upstream_variants": {
+        "m**-3": 62
+      }
+    },
+    "prmtan_teped": {
+      "units": "eV",
+      "status": "documented",
+      "description": "Pedestal electron temperature from tanh fit",
+      "upstream_variants": {
+        "eV": 62
+      }
+    },
+    "q95": {
+      "units": "1",
+      "status": "dimensionless",
+      "description": "Safety factor at the 95% flux surface",
+      "upstream_variants": {
+        " ": 62
+      },
+      "note": "Dimensionless by definition. Upstream reports ' ' (MDSplus explicit dimensionless), not '' (attribute unset)."
+    },
+    "rmaxis": {
+      "units": "m",
+      "status": "documented",
+      "description": "Magnetic axis major radius",
+      "upstream_variants": {
+        "m": 62
+      }
+    },
+    "rsurf": {
+      "units": "m",
+      "status": "documented",
+      "description": "Plasma boundary geometric centre, major radius",
+      "upstream_variants": {
+        "m": 62
+      }
+    },
+    "tinj": {
+      "units": "N m",
+      "status": "documented",
+      "description": "Injected neutral beam torque",
+      "upstream_variants": {
+        "Nm": 62
+      }
+    },
+    "tribot": {
+      "units": "1",
+      "status": "dimensionless",
+      "description": "Bottom triangularity",
+      "upstream_variants": {
+        " ": 62
+      },
+      "note": "Dimensionless by definition. Upstream reports ' ' (MDSplus explicit dimensionless), not '' (attribute unset)."
+    },
+    "tritop": {
+      "units": "1",
+      "status": "dimensionless",
+      "description": "Top triangularity",
+      "upstream_variants": {
+        " ": 62
+      },
+      "note": "Dimensionless by definition. Upstream reports ' ' (MDSplus explicit dimensionless), not '' (attribute unset)."
+    },
+    "volume": {
+      "units": "m^3",
+      "status": "documented",
+      "description": "Plasma volume",
+      "upstream_variants": {
+        "m^3": 62
+      }
+    },
+    "vsurf": {
+      "units": "V",
+      "status": "documented",
+      "description": "Surface loop voltage",
+      "upstream_variants": {
+        "V": 62
+      }
+    },
+    "zcur": {
+      "units": "m",
+      "status": "documented",
+      "description": "Vertical position of the plasma current centroid",
+      "upstream_variants": {
+        "m": 62
+      }
+    },
+    "zmaxis": {
+      "units": "m",
+      "status": "documented",
+      "description": "Magnetic axis vertical position",
+      "upstream_variants": {
+        "m": 62
+      }
+    },
+    "zsurf": {
+      "units": "m",
+      "status": "documented",
+      "description": "Plasma boundary geometric centre, vertical position",
+      "upstream_variants": {
+        "m": 62
+      }
+    }
+  }
+}

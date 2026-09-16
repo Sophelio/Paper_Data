@@ -1,0 +1,71 @@
+{
+  "freeze_id": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-SOURCE-RESOLUTION-V2",
+  "supersedes": "S7.3 V1 target selection (vsurf)",
+  "selected_utc": "2026-09-03T04:37:36.686482+00:00",
+  "primary_target": "density",
+  "signal_index": 21,
+  "scientific_description": "Line-averaged electron density",
+  "archived_unit": "cm^-3",
+  "canonical_unit": "m^-3",
+  "origin_class": "DIAGNOSTIC_RECONSTRUCTION",
+  "origin_evidence_class": "LOCAL_DOCUMENTED",
+  "family": "density",
+  "selection": {
+    "rule": "S7.2C deterministic 5-level lexicographic - UNCHANGED",
+    "n_candidates": 64,
+    "n_eligible": 61,
+    "rank": 1,
+    "resolved_at_level": 2,
+    "runner_up": "fs05da",
+    "keys": {
+      "L1_flags": 0,
+      "L2_predictors": 78,
+      "L3_families": 7,
+      "L4_rrv_margin": 0.05056100660301942,
+      "L5_index": 21
+    },
+    "human_preference_used": false,
+    "model_used": false,
+    "correlation_used": false
+  },
+  "feasibility": {
+    "target": "density",
+    "canonical_unit": "m^-3",
+    "rrv_dev_median": 0.10056100660301942,
+    "rrv_min": 0.02991160655588505,
+    "rrv_max": 0.2620621396646173,
+    "rrv_margin": 0.05056100660301942,
+    "min_distinct_values_fraction": 1.0,
+    "n_identically_zero_development_discharges": 0,
+    "n_valid_nrmse_blocks": 60,
+    "n_invalid_nrmse_blocks": 0,
+    "n_eras_present": 2
+  },
+  "vsurf_status": {
+    "eligible_as_target": false,
+    "target_fail_reason": "TARGET_SOURCE_RESOLUTION_FAIL",
+    "target_fail_detail": {
+      "reason": "TARGET_SOURCE_RESOLUTION_FAIL",
+      "n_infeasible_shots": 1,
+      "worst_shot": "165027",
+      "worst_dt_ms": 82.9090909090909,
+      "detail": {
+        "165027": [
+          "A(cal=22,eval=5)",
+          "B(cal=33,eval=5)",
+          "C(cal=44,eval=5)"
+        ]
+      }
+    },
+    "retained_as_predictor_for_selected_target": false,
+    "removed_as_predictor_reason": "PRIMARY_NUMERICAL_SUPPORT_FAIL",
+    "v1_selection_status": "RETIRED_BY_SOURCE_RESOLUTION_RECONCILIATION",
+    "v1_reason": "archived cadence had been mistaken for source-supported cadence; the downstream temporal audit exposed incompatibility with the already-frozen no-super-resolution rule. No reconstruction was ever attempted; this is not a failed scientific result and not outcome tuning.",
+    "equilibrium_time_base_observation": "vsurf shares the equilibrium family's temporal support and sample counts in all 62 discharges. Preserved as provenance history. No inference that vsurf is an EFIT output is made and no EFIT recovery campaign was undertaken.",
+    "equilibrium_time_base_materiality": "NOT_MATERIAL_TO_PRIMARY_Q_REC_AFTER_RECONCILIATION"
+  },
+  "notation_clarification": {
+    "practical_equivalence": "|NRMSE_A - NRMSE_B| <= max(SE_delta, 0.01)",
+    "note": "inherited downstream; historical S7.2 V2 artifacts are NOT rewritten. No model is evaluated here."
+  }
+}

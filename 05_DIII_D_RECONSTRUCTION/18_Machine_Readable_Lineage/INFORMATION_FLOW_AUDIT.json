@@ -1,0 +1,168 @@
+{
+  "record_id": "S7_INFORMATION_FLOW_AUDIT_V2",
+  "generated_utc": "2026-09-08T00:51:17.641573+00:00",
+  "scientific_task_id": "q_rec",
+  "claim_branches_covered": [
+    "QREC-B1",
+    "QREC-B2"
+  ],
+  "target_instance": "density",
+  "policy_separation": {
+    "I_q": "what information is epistemically admissible to the scientific task",
+    "V_q": "what evidentiary role admissible information may play, and what qualification tests the resulting claim must satisfy",
+    "evidence_roles_are": "VARIABLE_AND_TRANSITION_SPECIFIC",
+    "worked_example": "predictor-side observations are admissible for applicability assessment while the corresponding held-out target values remain prohibited from support discovery",
+    "superseded_rule": "a datum or discharge does NOT carry one global development/validation status for all transitions"
+  },
+  "branch": "q_rec",
+  "target": "density",
+  "boundary": {
+    "n_quantities": 95,
+    "n_admitted": 78,
+    "n_excluded": 17,
+    "exclusions": {
+      "R1_target_itself": [
+        "density"
+      ],
+      "PRIMARY_NUMERICAL_SUPPORT_FAIL": [
+        "vsurf"
+      ],
+      "R5_unresolved_ancestry_fail_closed": [
+        "aminor",
+        "area",
+        "betan",
+        "drsep",
+        "kappa",
+        "li",
+        "q95",
+        "rmaxis",
+        "rsurf",
+        "tribot",
+        "tritop",
+        "volume",
+        "zcur",
+        "zmaxis",
+        "zsurf"
+      ]
+    },
+    "note": "The 15 fail-closed exclusions are every EFIT-derived equilibrium quantity. The retired I_p branch admitted q95, betan, li and kappa and was retired for it."
+  },
+  "adversarial_ancestry_test": {
+    "instrument": "same test that retired the I_p branch: per-shot correlation, single-signal R^2, and relative residual scatter of the target after removing the best per-shot affine function of the candidate",
+    "benchmark_retired_q95_vs_Ip": {
+      "median_abs_corr": 0.945,
+      "median_R2": 0.79,
+      "residual_scatter": 0.073,
+      "verdict": "ALGEBRAIC_CIRCULARITY"
+    },
+    "prmtan_neped_vs_density": {
+      "median_abs_corr": 0.892104,
+      "median_R2": 0.795854,
+      "residual_scatter": 0.534998,
+      "verdict": "NO_ALGEBRAIC_CIRCULARITY"
+    },
+    "pcdiamag3_vs_density": {
+      "median_abs_corr": 0.896865,
+      "median_R2": 0.804384,
+      "residual_scatter": 0.442202,
+      "verdict": "NO_ALGEBRAIC_CIRCULARITY"
+    },
+    "n_predictors_median_R2_ge_0_75": 2,
+    "n_predictors": 78,
+    "frozen_predeclared_ablation": {
+      "id": "PRMTAN_NEPED_ONLY",
+      "support_size": 1,
+      "mean_nrmse": 0.4631741682045934,
+      "Delta_1": 0.2528999520928648,
+      "V3_STYLE_PASS": false,
+      "reading": "the single most suspect coordinate, alone, is far worse than persistence; it is not a proxy for the target"
+    },
+    "governing_principle": "ancestry is definitional and computational, not statistical; correlation is reported as context only"
+  },
+  "checks": [
+    {
+      "id": 1,
+      "check": "no target descendant in any explanatory support",
+      "status": "PASS",
+      "evidence": "17 exclusions applied before coordinate construction; all 38 selected coordinates lie inside the qualified basis"
+    },
+    {
+      "id": 2,
+      "check": "range support uses no held-out target value",
+      "status": "PASS",
+      "evidence": "predicate is a function of predictor values alone; independently re-implemented and reproduced (3451 survivors, exact constructor counts, 263 degenerate cells of 2,004,708)"
+    },
+    {
+      "id": 3,
+      "check": "normalization does not leak protected statistics",
+      "status": "PASS",
+      "evidence": "mu and sd from the calibration slice only; sd<=0 -> divisor exactly 1.0; NRMSE normalized by std(y_calibration, ddof=0)"
+    },
+    {
+      "id": 4,
+      "check": "baselines share the target-availability assumptions",
+      "status": "PASS",
+      "evidence": "B0, B1, B1A, B2, B3, H0 all read y_cal only through the same gated accessor"
+    },
+    {
+      "id": 5,
+      "check": "fold construction is target-blind",
+      "status": "PASS",
+      "evidence": "deterministic sort by (era, discharge id), position mod 6; no seed; one partition generated; all 62 assignments reproduced"
+    },
+    {
+      "id": 6,
+      "check": "no support selection saw its own fold's held-out targets",
+      "status": "PASS",
+      "evidence": "runtime firewall vault; support hash precedes held-out target access in all six folds; protected windows opened last"
+    },
+    {
+      "id": 7,
+      "check": "no threshold chosen from held-out performance",
+      "status": "PASS",
+      "evidence": "tau grid hashed before survivor counts; V3 -0.01 and CLEAN_DEMO -0.05 frozen before Epoch 2; CLEAN_DEMO missed and not moved"
+    },
+    {
+      "id": 8,
+      "check": "global predictor statistics permitted by the claim made",
+      "status": "PASS_WITH_DISCLOSURE",
+      "evidence": "applicability instantiated from the whole finite object; the cost is carried in the claim itself (E2.0A)"
+    },
+    {
+      "id": 9,
+      "check": "block semantics consistent across estimator and baselines",
+      "status": "PASS",
+      "evidence": "three block-local prequential windows, identical for all seven methods"
+    }
+  ],
+  "protected_evidence_rule": {
+    "triggered": true,
+    "where": "S7.10 evaluation evidence was inspected and then used to diagnose the defect reconciled at S7.K2",
+    "consequence": "that evidence became development evidence for the revised procedure and could no longer qualify anything downstream",
+    "response": "a valid cross-fitted qualification design AND an explicitly narrowed claim, taken together",
+    "architectural_result": "descendant claim branch QREC-B2, constituted at S7.E2.0"
+  },
+  "residual_risks": [
+    {
+      "risk": "prmtan_neped is in the target's scientific family",
+      "status": "DISCLOSED_AND_BOUNDED"
+    },
+    {
+      "risk": "pcdiamag3 is an uncalibrated signal",
+      "status": "DISCLOSED"
+    },
+    {
+      "risk": "predictor-side applicability used the whole object",
+      "status": "DISCLOSED_AND_LOAD_BEARING"
+    },
+    {
+      "risk": "Epoch-1 evaluation evidence informed the Epoch-2 contract",
+      "status": "DISCLOSED_HANDLED_BY_CROSS_FITTING_AND_A_NARROWED_CLAIM"
+    },
+    {
+      "risk": "the prmtan ablation is Epoch-1, not Epoch-2",
+      "status": "NOTED_BOUNDS_TRANSFER"
+    }
+  ],
+  "verdict": "NO_LEAKAGE_FOUND"
+}

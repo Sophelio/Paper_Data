@@ -1,0 +1,34 @@
+{
+  "freeze_id": "D3D-SIR-S7.4-MATHEMATICAL-INTERPRETATION-V1",
+  "timestamp_utc": "2026-09-03T03:35:34.041992+00:00",
+  "status": "TARGET_TEMPORAL_RESOLUTION_RECONCILIATION_REQUIRED",
+  "X_rec_instantiated": false,
+  "parent_freezes": {
+    "s7_1": "D3D-SIR-S7.1-OBSERVATIONAL-OBJECT-FINAL-V1",
+    "s7_2_v1": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V1",
+    "s7_2_v2": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V2",
+    "s7_3": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-V1"
+  },
+  "parent_verification_sha256": "641bc7f15f937c491cd88a4d50b32f9ebdd75e6333626fcba6688a5af8152b6e",
+  "target_temporal_provenance_sha256": "78c8c5e0dda96ad76512c5200699b11c71e13e3a301715e0b7f86ab8d1590604",
+  "vsurf_temporal_provenance_csv_sha256": "b5d3a78a6c739b56a19b9e4af18e61024ba81c01eacf3725a2c1d132ba8615f7",
+  "temporal_verdict": "C_SOURCE_CADENCE_VARIES_BY_DISCHARGE",
+  "blocking_finding": "vsurf was resampled by cubic_spline in all 62 discharges. In 36 of them the archive contains MORE samples than the pipeline received (ratio > 1.01), so those archived samples are spline interpolations, not observations. The flag is not a bookkeeping detail: it records genuine interpolation-created samples in the target itself.",
+  "n_shots_source_coarser_than_grid": 20,
+  "environment": {
+    "python": "3.13.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "all_artifact_hashes": {
+    "manifests/PARENT_FREEZE_VERIFICATION.json": "641bc7f15f937c491cd88a4d50b32f9ebdd75e6333626fcba6688a5af8152b6e",
+    "README.md": "fcf604d43bc3e5ff6a31b5a6d7e9ac70d28cc78224844af94dd131293a31d532",
+    "S7_4_MATHEMATICAL_INTERPRETATION_AUDIT_REPORT.md": "0b4ece9537c17a113c1dc2c6dc64fad9da166bf7f594aadaa43a70f64c9bb671",
+    "scripts/s7_4_temporal_gate.py": "33c76617bf524213278703333f8411ff689445282420910cfb4de97e5d2f07e5",
+    "target_temporal_provenance.json": "78c8c5e0dda96ad76512c5200699b11c71e13e3a301715e0b7f86ab8d1590604",
+    "TARGET_TEMPORAL_PROVENANCE_AUDIT.md": "7c075c23368f96698506b8e84504cc0a252749b2116ad6e37eefdc1c87878203",
+    "vsurf_temporal_provenance.csv": "b5d3a78a6c739b56a19b9e4af18e61024ba81c01eacf3725a2c1d132ba8615f7"
+  },
+  "n_artifacts": 7,
+  "acceptance_checks": "24/24",
+  "next_stage": "S7.5 - NOT AUTHORISED; reconciliation required first"
+}

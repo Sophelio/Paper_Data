@@ -1,0 +1,79 @@
+{
+  "policy_id": "EXTERNAL_INFERENCE_POLICY_PREVALUE_V1",
+  "status": "PROSPECTIVE_SPECIFICATION_COMPLETION",
+  "frozen_utc": "2026-09-05T22:47:11.395345+00:00",
+  "frozen_before_first_external_value_access": true,
+  "not_an_outcome_response": true,
+  "completes_only_what_parents_left_unspecified": true,
+  "parent_audit": "manifests/STATISTICAL_INFERENCE_PARENT_AUDIT.json",
+  "bootstrap": {
+    "replicates": 10000,
+    "pooled_rng": "numpy.random.default_rng(2026090503)",
+    "earlier_era_rng": "numpy.random.default_rng(2026090504)",
+    "later_era_rng": "numpy.random.default_rng(2026090505)",
+    "pooled_seed": 2026090503,
+    "earlier_seed": 2026090504,
+    "later_seed": 2026090505,
+    "index_sharing": "ONE discharge-index bootstrap matrix per cohort/era, reused for every method comparison, preserving paired geometry",
+    "statistic": "mean discharge-level paired difference",
+    "ci": "percentile interval [2.5, 97.5] via numpy.percentile(method='linear')",
+    "bca": false,
+    "p_value_gate": false,
+    "resampled_unit": "external discharge"
+  },
+  "win_tie_loss": {
+    "quantity": "d_s = NRMSE_REL,s - NRMSE_B,s",
+    "WIN": "d_s <= -0.01",
+    "TIE": "-0.01 < d_s <= +0.01",
+    "LOSS": "d_s > +0.01",
+    "floor_source": "already-frozen 0.01 practical-relevance floor",
+    "reporting_only": true,
+    "alters_V3": false
+  },
+  "lodo": {
+    "definition": "for each external discharge k, remove k and recompute the mean paired difference",
+    "applies_to": "every comparator",
+    "v3_verdict_flip_recorded": true,
+    "replaces_full_cohort_verdict": false
+  },
+  "V6_operational": {
+    "quantity": "Delta_{j,e} = mean over discharges in era e of (NRMSE_REL - NRMSE_Bj)",
+    "MATERIAL_IMPROVEMENT": "Delta <= -0.01",
+    "PRACTICAL_TIE": "-0.01 < Delta <= +0.01",
+    "MATERIAL_ADVERSE": "Delta > +0.01",
+    "PASS": "pooled V3 passes AND every era/baseline comparison is MATERIAL_IMPROVEMENT",
+    "PASS_WITH_QUALIFICATION": "pooled V3 passes AND no era/baseline comparison is MATERIAL_ADVERSE AND at least one is PRACTICAL_TIE",
+    "FAIL_FOR_FULL_DOMAIN": "pooled V3 passes BUT at least one era/baseline comparison is MATERIAL_ADVERSE",
+    "if_pooled_V3_fails": "V6 MAY NOT rescue V3; era results still reported",
+    "external_counts": {
+      "earlier": 24,
+      "later": 18
+    }
+  },
+  "sign_convention": "negative = relational representation lower error; never switched",
+  "external_domain_rule": {
+    "rule_id": "DENOMINATOR_ADMISSIBILITY_PRIMARY_V1",
+    "inherited_unchanged": true,
+    "applied_on": "each external local-calibration block",
+    "require": [
+      "finite throughout",
+      "RMS(d) != 0",
+      "no sign change",
+      "eta(d) >= 0.05"
+    ],
+    "eta": "min(|d|)/RMS(d)",
+    "denominators_required_by_C_dev_star": [
+      "cerqtit10",
+      "ece22",
+      "prmtan_neped"
+    ],
+    "on_failure": "mark RELATIONAL_REPRESENTATION_NOT_APPLICABLE for that block",
+    "no_epsilon_clip_shift_bounded_reciprocal_or_repair": true
+  },
+  "metric": {
+    "scale": "std(y_calibration_{s,b}, ddof=0)",
+    "zero_scale": "INVALID_FOR_NORMALIZED_SCORING",
+    "epsilon": false,
+    "discharge_level": "mean over valid required A/B/C blocks"
+  }
+}

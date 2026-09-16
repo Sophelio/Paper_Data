@@ -1,0 +1,7 @@
+{
+  "policy_file": "HARDENING_POLICY_PREVALUE.json",
+  "sha256": "d8c81421b6a9cab5ea1a859ecc044ea6d200a80787e3fe0b5f3deaa4c4e66eaa",
+  "frozen_utc": "2026-09-04T22:19:49.073176+00:00",
+  "frozen_before_any_development_value_read": true,
+  "stage_A_opens_no_archive": true
+}

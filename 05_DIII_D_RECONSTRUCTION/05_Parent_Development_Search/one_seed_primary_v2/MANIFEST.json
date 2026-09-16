@@ -1,0 +1,47 @@
+{
+  "record_id": "S7_STAGE_MANIFEST_V1",
+  "generated_utc": "2026-09-08T00:51:17.508741+00:00",
+  "stage_id": "S7.7R",
+  "title": "Search policy and explored frontier",
+  "directory": "07_search_policy_and_frontier/one_seed_primary_v2",
+  "scientific_task_id": "q_rec",
+  "claim_branch": "QREC-B1",
+  "claim_branch_role": "MEMBER",
+  "parent_claim_branch": null,
+  "operational_epoch": 1,
+  "revision_level": "OPERATIONAL_CONTRACT",
+  "branch": "q_rec",
+  "status": "CANONICAL",
+  "sir_architecture_mapping": [
+    "Sigma_q",
+    "Ahat_q"
+  ],
+  "scientific_question": "Which part of the admissible universe was actually explored?",
+  "operation": "SIGMA_REC_ONE_SEED_PRIMARY_V2 executed over the development cohort; frontier recorded.",
+  "verdict": "AHAT_REC_DENSITY_ONE_SEED_V2: 162,845 supports of size 1-12, 43/43 acceptance.",
+  "parent_stages": [
+    "S7.6R"
+  ],
+  "child_stages": [
+    "S7.8"
+  ],
+  "key_numbers": {
+    "frontier": 162845,
+    "strata": 127
+  },
+  "notes": "A versioned Case-B correction WITHIN operational epoch 1: the superseded budget had not yet governed a completed qualification, so no epoch advance. S7.7 V1 (BLOCKED_SEARCH_BUDGET) preserved as audit history.",
+  "governing_freeze": {
+    "path": "S7_7R_FREEZE.json",
+    "freeze_id": "D3D-SIR-S7.7-ONE-SEED-PRIMARY-SEARCH-AND-EXPLORED-FRONTIER-V2",
+    "sha256": "576b1087b8fd767c631ad65cc1123f4e1ff40be7816b46dfe4fe77b7aafd47e2",
+    "authoritative": true,
+    "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+  },
+  "executables": [
+    "scripts/s7_7r_a_policy.py",
+    "scripts/s7_7r_b_search.py",
+    "scripts/s7_7r_c_frontier.py"
+  ],
+  "n_files": 45,
+  "indexes_not_replaces": true
+}

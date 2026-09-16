@@ -1,0 +1,2 @@
+support_id,support_size,COND_MEDIAN,COND_P90,COND_MAX,n_infinite_cells,in_E4
+"ID(cerqtit6)|ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(cerqtit10)|RECIP(prmtan_neped)",12,1.9917544203843867,2.173041735453102,2.2596409414020897,0,True

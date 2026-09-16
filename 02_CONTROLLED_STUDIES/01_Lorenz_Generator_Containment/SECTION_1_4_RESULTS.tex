@@ -1,0 +1,95 @@
+% Section 1.4 — nested representation benchmark (Lorenz, hidden z).
+% Auto-populated from the audited benchmark artifacts on 2026-08-27.
+% Every number here traces to tables/benchmark_results.csv,
+% tables/ablation_results.csv, or sir/containment/containment_full.json.
+%
+% NOT inserted into the main manuscript automatically.
+
+\subsection{Conventional estimators as restricted SIR contracts}
+\label{sec:nested-representation}
+
+\paragraph{Containment.}
+Restricting SIR to the representation of a conventional sparse-regression
+problem---identical state coordinates $(x,y,z)$, identical cubic library
+($20$ terms), identical analytic derivatives, and an identical sequentially
+thresholded least-squares rule ($\lambda=0.1$)---reproduces the canonical Lorenz
+recovery. Both procedures return the exact generator support with no false
+positives or negatives in any of the three equations, with maximum coefficient
+error $3.2\times10^{-14}$ against the true system and maximum disagreement
+$3.9\times10^{-14}$ between the two procedures. Conventional sparse recovery is
+therefore contained within a restricted SIR contract; this is parity by
+construction and is not evidence of an advantage.
+
+\paragraph{Representation expansion.}
+We then pose a retrospective reconstruction task: recover the withheld
+coordinate $z(t)$ from observations of $x$ and $y$ alone, on $48$ trajectories
+of the same system split $32/8/8$ into training, validation and protected test
+sets at the level of whole trajectories. All methods share one retrospective
+information set $I_k=\{x_{k-2:k+2},\,y_{k-2:k+2}\}$; the raw baseline
+$\mathcal{C}_0$ is exactly that stencil, so no method receives raw information
+the others are denied. From $I_k$ we declare $38$ admissible candidate
+coordinates---levels, rates, curvatures, algebraic products, masked quotients,
+and the regularised reference-shifted and sensitivity-centered phase families---
+none of which may depend on $z$, a constraint enforced and tested at the level
+of the dependency graph.
+
+Selection on training and validation data alone retained
+$\mathcal{C}^{*}=\mathcal{C}_0\cup\{Q[\dot y|x],\,Q[y|x]\}$
+($12$ coordinates of $38$), frozen with its provenance before any protected
+evaluation. On these coordinates the sparse estimator recovers
+\begin{equation}
+  z = 28.000005 - 1.0000\,Q[\dot y|x] - 1.0000\,Q[y|x],
+  \label{eq:recovered-z}
+\end{equation}
+which is the analytic identity $z=\rho-(\dot y+y)/x$ with $\rho=28$, obtained
+without that identity being supplied to the search.
+
+\paragraph{Held-out utility.}
+On the protected test trajectories ($\sigma_z=9.04$):
+
+\begin{center}
+\begin{tabular}{llrrr}
+\hline
+Representation & Learner & $|\mathcal{C}|$ & test RMSE & $R^2$ \\
+\hline
+$\mathcal{C}_0$ & STLSQ & 10 & $9.044$ & $-0.0009$ \\
+$\mathcal{C}_{\mathrm{all}}$ & STLSQ & 38 & $1.30\times10^{-5}$ & $1.000$ \\
+$\mathcal{C}^{*}$ & STLSQ & 12 & $3.32\times10^{-5}$ & $1.000$ \\
+$\mathcal{C}_0$ & MLP & 10 & $0.2476 \pm 0.0332$ & $0.9992$ \\
+$\mathcal{C}_{\mathrm{all}}$ & MLP & 38 & $0.0534 \pm 0.0051$ & $0.99997$ \\
+$\mathcal{C}^{*}$ & MLP & 12 & $0.0288 \pm 0.0056$ & $0.99999$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\noindent
+MLP values are mean $\pm$ s.d.\ over five predeclared seeds with fixed
+architecture; the parameter count rises only $2.6\%$ from $\mathcal{C}_0$ to
+$\mathcal{C}^{*}$ ($4929\rightarrow5057$), so the improvement is not attributable
+to capacity. All methods are scored on the same $88.5\%$ retained sample support.
+$\mathcal{C}^{*}$ is also four orders of magnitude better conditioned than
+$\mathcal{C}_{\mathrm{all}}$ ($2.6\times10^{12}$ versus $7.5\times10^{16}$).
+
+\paragraph{Scope of the claim.}
+This comparison is not intended to establish universal superiority over PySINDy
+or neural models. PySINDy can consume expanded or custom features when supplied
+with them, and here it was: given the full expanded library it attains
+$1.30\times10^{-5}$, marginally better than with the selected subset. The
+experiment instead tests whether conventional model classes can be represented as
+restricted SIR contracts, and whether explicit search over admissible
+representations provides additional task-relevant utility. The defensible
+contribution is that construction, admissibility, selection and provenance were
+part of the declared search, and that the selected representation is a third the
+size and far better conditioned at comparable accuracy.
+
+\paragraph{Limits.}
+Under a predeclared observational-noise sweep the neural learner's advantage does
+not persist: at $1\%$ noise on $x$ and $y$ the matched raw baseline
+($\mathrm{RMSE}=0.757$) outperforms both $\mathcal{C}_{\mathrm{all}}$ ($0.847$)
+and $\mathcal{C}^{*}$ ($0.817$), because differentiation and division amplify
+observation noise. The sparse estimator retains a substantial benefit
+($9.01\rightarrow2.21$). Representation utility on this task is therefore
+demonstrated for the sparse estimator, and for the neural learner on clean data
+only. Because $z$ is \emph{exactly} linear in $\mathcal{C}^{*}$, the noiseless
+comparison saturates at machine precision and the noise sweep carries the
+informative contrast.

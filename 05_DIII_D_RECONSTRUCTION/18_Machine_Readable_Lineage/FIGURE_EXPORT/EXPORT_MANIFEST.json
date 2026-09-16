@@ -1,0 +1,247 @@
+{
+  "record_id": "S7_FIGURE_EXPORT_MANIFEST_V1",
+  "generated_utc": "2026-09-09T21:21:30.526451+00:00",
+  "purpose": "minimal machine-readable inputs for a four-panel manuscript figure",
+  "read_only_with_respect_to_all_existing_artifacts": true,
+  "scientific_content_unchanged": true,
+  "files": [
+    {
+      "exported_as": "panel1_qdesc_discharge_coefficients.csv",
+      "panel": "1",
+      "role": "PRIMARY_FROZEN",
+      "source_path": "D:\\sir-web\\Paper Examples\\Relational Coordinates for Multimodal Plasma Observations\\canonical_d3d_62_shot_run_v1\\d3d_discharge_coefficients.csv",
+      "freeze_or_stage_id": "D3D-SIR-62-ALIGNED-V1 (q_desc canonical run; external to S7)",
+      "sha256": "154e9812dbda2928b97d24eec75493a03a35517424a851c02cabc2257d12c0bb",
+      "bytes": 28497,
+      "transformed": false,
+      "contents": "62 rows, one per discharge: shot, intercept and the seven coefficients coef_Dkappa_Wdia, coef_Dbetan_Wdia, coef_Dbetan_kappa, coef_Dbetan_li, coef_q95_over_kappa, coef_dot_betan, coef_dot_kappa, plus fit rank, residual sum of squares and source-export hashes."
+    },
+    {
+      "exported_as": "panel1_qdesc_coefficient_classification.csv",
+      "panel": "1",
+      "role": "PRIMARY_FROZEN",
+      "source_path": "D:\\sir-web\\Paper Examples\\Relational Coordinates for Multimodal Plasma Observations\\Coefficient_conditioning\\Correction_audit\\tables\\corrected_coefficient_classification.csv",
+      "freeze_or_stage_id": "D3D-SIR-62-COEFFICIENT-CONDITIONING-CORRECTION-V1",
+      "sha256": "742227c3c2022edb5ad332c02de86808a3191f4c3d812568671c5a1cb0ee1998",
+      "bytes": 2625,
+      "transformed": false,
+      "contents": "7 rows, one per coefficient: original_status, corrected_status (5 ROBUSTLY_RESOLVED, 2 WITHIN_DISCHARGE_UNCERTAINTY_DOMINATES), heterogeneity ratio, tau^2 under REML and ML, profile interval, bootstrap quantiles, short/long block sensitivity, leave-one-discharge-out range."
+    },
+    {
+      "exported_as": "panel1_qdesc_coefficient_uncertainty.csv",
+      "panel": "1",
+      "role": "PRIMARY_FROZEN",
+      "source_path": "D:\\sir-web\\Paper Examples\\Relational Coordinates for Multimodal Plasma Observations\\Coefficient_conditioning\\Correction_audit\\tables\\corrected_coefficient_heterogeneity_primary.csv",
+      "freeze_or_stage_id": "D3D-SIR-62-COEFFICIENT-CONDITIONING-CORRECTION-V1",
+      "sha256": "98009f6d6715710b75cfd6da66ac585fe33ac0ba65a5e84e3b458d272e525feb",
+      "bytes": 2794,
+      "transformed": false,
+      "contents": "7 rows: observed between-discharge variance, mean within-discharge variance, mu_REML, tau2_REML with profile interval and bootstrap quantiles. This is the error-bar source for panel 1."
+    },
+    {
+      "exported_as": "panel2_fold_0_result.json",
+      "panel": "2",
+      "role": "PRIMARY_FROZEN",
+      "source_path": "D:\\SIR_paper\\DIIID_example\\S7\\E2_1_crossfitted_discovery_and_qualification\\folds\\fold_0_result.json",
+      "freeze_or_stage_id": "D3D-SIR-S7.E2.1-CROSSFITTED-DISCOVERY-AND-QUALIFICATION-V1",
+      "sha256": "c94ff14b36a918c25f776b643200547dad2f0eb9df13a5aab21c346dd85aa637",
+      "bytes": 2336,
+      "transformed": false,
+      "contents": "fold record; `coordinates` is a JSON LIST of the 12 selected coordinate ids, plus support_sha256, train/test discharge lists and the U_rec quantities."
+    },
+    {
+      "exported_as": "panel2_fold_1_result.json",
+      "panel": "2",
+      "role": "PRIMARY_FROZEN",
+      "source_path": "D:\\SIR_paper\\DIIID_example\\S7\\E2_1_crossfitted_discovery_and_qualification\\folds\\fold_1_result.json",
+      "freeze_or_stage_id": "D3D-SIR-S7.E2.1-CROSSFITTED-DISCOVERY-AND-QUALIFICATION-V1",
+      "sha256": "65dc9eae229e5ba58509f890a5dd711452eff9f2286f26e55a02014b649ce09b",
+      "bytes": 2400,
+      "transformed": false,
+      "contents": "as fold 0"
+    },
+    {
+      "exported_as": "panel2_fold_2_result.json",
+      "panel": "2",
+      "role": "PRIMARY_FROZEN",
+      "source_path": "D:\\SIR_paper\\DIIID_example\\S7\\E2_1_crossfitted_discovery_and_qualification\\folds\\fold_2_result.json",
+      "freeze_or_stage_id": "D3D-SIR-S7.E2.1-CROSSFITTED-DISCOVERY-AND-QUALIFICATION-V1",
+      "sha256": "97edc3f8570b6b8ea855fed5031e7db50d36c9db6f89db8b05d29fce9c869f09",
+      "bytes": 2336,
+      "transformed": false,
+      "contents": "as fold 0"
+    },
+    {
+      "exported_as": "panel2_fold_3_result.json",
+      "panel": "2",
+      "role": "PRIMARY_FROZEN",
+      "source_path": "D:\\SIR_paper\\DIIID_example\\S7\\E2_1_crossfitted_discovery_and_qualification\\folds\\fold_3_result.json",
+      "freeze_or_stage_id": "D3D-SIR-S7.E2.1-CROSSFITTED-DISCOVERY-AND-QUALIFICATION-V1",
+      "sha256": "70d8cde215068b16646818c41d379d16a5eeada3dcb8871cbfbe9094afca4b76",
+      "bytes": 2433,
+      "transformed": false,
+      "contents": "as fold 0"
+    },
+    {
+      "exported_as": "panel2_fold_4_result.json",
+      "panel": "2",
+      "role": "PRIMARY_FROZEN",
+      "source_path": "D:\\SIR_paper\\DIIID_example\\S7\\E2_1_crossfitted_discovery_and_qualification\\folds\\fold_4_result.json",
+      "freeze_or_stage_id": "D3D-SIR-S7.E2.1-CROSSFITTED-DISCOVERY-AND-QUALIFICATION-V1",
+      "sha256": "4ae84b5abd522c1b49d02a1c5161c7530c3f39aaed7963c98fd32432721c8fbe",
+      "bytes": 2417,
+      "transformed": false,
+      "contents": "as fold 0"
+    },
+    {
+      "exported_as": "panel2_fold_5_result.json",
+      "panel": "2",
+      "role": "PRIMARY_FROZEN",
+      "source_path": "D:\\SIR_paper\\DIIID_example\\S7\\E2_1_crossfitted_discovery_and_qualification\\folds\\fold_5_result.json",
+      "freeze_or_stage_id": "D3D-SIR-S7.E2.1-CROSSFITTED-DISCOVERY-AND-QUALIFICATION-V1",
+      "sha256": "bc3cbd795e9cccd5f6345e942d0e28625157752009c64484499dec074bacf5f5",
+      "bytes": 2387,
+      "transformed": false,
+      "contents": "as fold 0"
+    },
+    {
+      "exported_as": "panel2_coordinate_recurrence.csv",
+      "panel": "2",
+      "role": "DERIVED_REPORTING_FROZEN",
+      "source_path": "D:\\SIR_paper\\DIIID_example\\S7\\E2_1_crossfitted_discovery_and_qualification\\coordinate_recurrence.csv",
+      "freeze_or_stage_id": "D3D-SIR-S7.E2.1-CROSSFITTED-DISCOVERY-AND-QUALIFICATION-V1",
+      "sha256": "fec7a9d9c4b8383840dbed19c51b9e1dcdb9dfe00afedea594cfa65d6df9f38f",
+      "bytes": 1467,
+      "transformed": false,
+      "contents": "35 rows: coordinate_id, n_folds (0-6), share. Useful for ordering the columns of the matrix."
+    },
+    {
+      "exported_as": "panel2_support_pairwise_jaccard.csv",
+      "panel": "2",
+      "role": "DERIVED_REPORTING_FROZEN",
+      "source_path": "D:\\SIR_paper\\DIIID_example\\S7\\E2_1_crossfitted_discovery_and_qualification\\support_recurrence.csv",
+      "freeze_or_stage_id": "D3D-SIR-S7.E2.1-CROSSFITTED-DISCOVERY-AND-QUALIFICATION-V1",
+      "sha256": "f68cfacd973f76f50741145b64c193f04ba04db1783a0d1041d6e16a2a82d8f9",
+      "bytes": 448,
+      "transformed": false,
+      "contents": "15 rows, all fold pairs: n_shared, jaccard, identical. Mean jaccard = 0.285244."
+    },
+    {
+      "exported_as": "panel2_constructor_recurrence.csv",
+      "panel": "2",
+      "role": "DERIVED_REPORTING_FROZEN",
+      "source_path": "D:\\SIR_paper\\DIIID_example\\S7\\E2_1_crossfitted_discovery_and_qualification\\constructor_recurrence.csv",
+      "freeze_or_stage_id": "D3D-SIR-S7.E2.1-CROSSFITTED-DISCOVERY-AND-QUALIFICATION-V1",
+      "sha256": "80324b0a8f588f186038e26eeecded4d1cdb2157af7cb3e51d2b0a8eb7be8967",
+      "bytes": 66,
+      "transformed": false,
+      "contents": "6 rows: constructor family and occurrence count across the 72 selected coordinate slots."
+    },
+    {
+      "exported_as": "panel3_heldout_discharge_results.csv",
+      "panel": "3",
+      "role": "PRIMARY_FROZEN",
+      "source_path": "D:\\SIR_paper\\DIIID_example\\S7\\E2_1_crossfitted_discovery_and_qualification\\heldout_discharge_results.csv",
+      "freeze_or_stage_id": "D3D-SIR-S7.E2.1-CROSSFITTED-DISCOVERY-AND-QUALIFICATION-V1",
+      "sha256": "6a932a4792ac4d5e69d002856106563dd4e143039e090f95a336a09a6954657c",
+      "bytes": 24655,
+      "transformed": false,
+      "contents": "62 rows, one per out-of-fold discharge: fold, shot_id, era, support_id, and NRMSE for REL, B0 (calibration mean), B1 (persistence), B1A (AR(1)), B2 (raw ridge, 78), B3 (raw HistGB, 78), H0 (hardened raw ridge, 70)."
+    },
+    {
+      "exported_as": "panel3_method_summaries.csv",
+      "panel": "3",
+      "role": "DERIVED_REPORTING_FROZEN",
+      "source_path": "D:\\SIR_paper\\DIIID_example\\S7\\E2_1_crossfitted_discovery_and_qualification\\baseline_results.csv",
+      "freeze_or_stage_id": "D3D-SIR-S7.E2.1-CROSSFITTED-DISCOVERY-AND-QUALIFICATION-V1",
+      "sha256": "d837fbcfba03ab8aeb0b14732b1bd1212995cc64024e9626fc45cb4d28e1b8c6",
+      "bytes": 887,
+      "transformed": false,
+      "contents": "7 rows, one per method: mean, median, p90, max, earlier_mean, later_mean."
+    },
+    {
+      "exported_as": "panel3_crossfitted_metrics.json",
+      "panel": "3",
+      "role": "DERIVED_REPORTING_FROZEN",
+      "source_path": "D:\\SIR_paper\\DIIID_example\\S7\\E2_1_crossfitted_discovery_and_qualification\\E2_1_CROSSFITTED_METRICS.json",
+      "freeze_or_stage_id": "D3D-SIR-S7.E2.1-CROSSFITTED-DISCOVERY-AND-QUALIFICATION-V1",
+      "sha256": "c2adaabc1ca9e46dc68890893f5235c4645da6136fef62fea583c6f74f384410",
+      "bytes": 3931,
+      "transformed": false,
+      "contents": "method summaries, paired differences (mean_delta, median_delta, wins/ties/losses) against every baseline, and the era-stratified result."
+    },
+    {
+      "exported_as": "panel2_fold_support_matrix.csv",
+      "panel": "2",
+      "role": "DERIVED_BY_THIS_EXPORT",
+      "source_path": "D:\\SIR_paper\\DIIID_example\\S7\\E2_1_crossfitted_discovery_and_qualification\\folds\\fold_{0..5}_result.json",
+      "freeze_or_stage_id": "D3D-SIR-S7.E2.1-CROSSFITTED-DISCOVERY-AND-QUALIFICATION-V1",
+      "sha256": "088e7c12080cfe3f5093f318758a3639d30e9ad2db9ebeb3107d68684617ad52",
+      "bytes": 1212,
+      "transformed": true,
+      "transformation": "one-hot of the six `coordinates` lists over the union of coordinate ids, sorted; no numerical value is altered and no support-id string is parsed",
+      "contents": "6 x 35 binary matrix, first column `fold` (0-5), remaining 35 columns named by coordinate id, 1 if that fold's support contains it.",
+      "self_checks": {
+        "n_folds": 6,
+        "n_distinct_coordinates": 35,
+        "support_sizes": [
+          12,
+          12,
+          12,
+          12,
+          12,
+          12
+        ],
+        "any_two_identical": false,
+        "mean_pairwise_jaccard": 0.28524448375841566,
+        "coordinates_in_all_six": [
+          "ID(pcdiamag3)",
+          "RATIO(ece21,cerqtit10)"
+        ]
+      }
+    }
+  ],
+  "cross_checks": {
+    "panel2": {
+      "n_folds": 6,
+      "n_distinct_coordinates": 35,
+      "support_sizes": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "any_two_identical": false,
+      "mean_pairwise_jaccard": 0.28524448375841566,
+      "coordinates_in_all_six": [
+        "ID(pcdiamag3)",
+        "RATIO(ece21,cerqtit10)"
+      ]
+    },
+    "panel3": {
+      "n_discharges": 62,
+      "n_unique_shots": 62,
+      "REL_mean": 0.18911466503138652,
+      "B1_persistence_mean": 0.21642228451057907,
+      "wins_ties_losses_vs_persistence": [
+        32,
+        5,
+        25
+      ],
+      "tie_rule": "the contract's own practical-equivalence floor, |delta| <= 0.01"
+    },
+    "panel1": {
+      "n_discharges": 62,
+      "n_coefficients": 7,
+      "robustly_resolved": 5,
+      "uncertainty_dominated": 2
+    }
+  },
+  "hazard_notice": {
+    "issue": "coordinate ids of the C4/C6/C7/C8 constructor families embed a pipe character inside parentheses, e.g. LEVEL_RATE(cerqrott12|ece35)",
+    "consequence": "splitting a pipe-joined `support_id` naively corrupts the support",
+    "mitigation": "this export takes coordinates from the per-fold JSON `coordinates` lists, so no parsing is required; panel2_fold_support_matrix.csv is already expanded"
+  }
+}

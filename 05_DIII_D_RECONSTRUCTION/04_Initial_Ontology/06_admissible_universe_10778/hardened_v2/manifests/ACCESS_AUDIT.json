@@ -1,0 +1,39 @@
+{
+  "development_shots_read": [
+    "160715",
+    "160720",
+    "161138",
+    "165022",
+    "165028",
+    "165042",
+    "165861",
+    "170396",
+    "187017",
+    "187020",
+    "187024",
+    "189647",
+    "189651",
+    "195264",
+    "195267",
+    "195273",
+    "195638",
+    "195647",
+    "195650",
+    "195655"
+  ],
+  "n_development_shots_read": 20,
+  "predictor_signals_read_per_shot": 70,
+  "predictor_signal_list_is_P_hard": true,
+  "calibration_blocks_read": [
+    "A",
+    "B",
+    "C"
+  ],
+  "target_values_accessed": 0,
+  "external_values_accessed": 0,
+  "external_shots_read": [],
+  "models_fitted": 0,
+  "baselines_run": 0,
+  "predictor_target_correlations_computed": 0,
+  "verdict": "FIREWALL_INTACT"
+}

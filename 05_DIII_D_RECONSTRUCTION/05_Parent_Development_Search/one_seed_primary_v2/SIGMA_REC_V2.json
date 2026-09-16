@@ -1,0 +1,50 @@
+{
+  "sigma_rec_id": "SIGMA_REC_ONE_SEED_PRIMARY_V2",
+  "freeze_id": "D3D-SIR-S7.7-ONE-SEED-PRIMARY-SEARCH-AND-EXPLORED-FRONTIER-V2",
+  "status": "FROZEN_AND_EXECUTED",
+  "policy_file": "SEARCH_POLICY_PREVALUE_V2.json",
+  "policy_sha256": "2049cf999dd99c0a1c5aa7f3539a7caaedbae8171d42678ea4cedef93734a255",
+  "policy_frozen_utc": "2026-09-05T00:17:10.479649+00:00",
+  "parent_policy_sha256": "a97e690e414da7a0ace4c70ab56e7d5851eb73f940d98e9f2a7add7f33d4b265",
+  "policy_diff_verdict": "ONLY_SEED_MULTIPLICITY_CHANGED",
+  "only_substantive_change": {
+    "SEEDS_PER_STRATUM": "2 -> 1",
+    "raw_only_lane_seeds": "2 -> 1 per C0 family"
+  },
+  "ONE_SEED_SEARCH": "PRIMARY",
+  "TWO_SEED_SEARCH": [
+    "NOT_EXECUTED",
+    "OPTIONAL_FUTURE_SEARCH_DEPTH_SENSITIVITY"
+  ],
+  "search_proxy": "SEARCH_PROXY_OLS_V1",
+  "proxy_equivalence_to_lstsq": {
+    "max_relative_deviation": 1.7176192738513556e-13,
+    "passes": true
+  },
+  "navigation_score": "J_search(C) = mean over 20 development discharges of NRMSE_s(C), where NRMSE_s(C) = mean_b NRMSE_{s,b}(C) over blocks A, B, C",
+  "navigation_score_is_not": [
+    "U_rec",
+    "validation evidence",
+    "final qualification"
+  ],
+  "n_active_strata": 127,
+  "n_seeds_main": 127,
+  "n_seeds_raw_only": 7,
+  "shortlist_total": 548,
+  "runtime": {
+    "record_id": "SEARCH_BUDGET_RUNTIME_AUDIT",
+    "projected_maximum": 188736,
+    "atomic_scoring_evaluations": 10778,
+    "multivariate_proposals": 177364,
+    "total_proposal_evaluations": 188142,
+    "unique_multivariate_supports_evaluated": 152067,
+    "cache_hits_reused_evaluations": 28,
+    "duplicate_proposals_within_step": 25269,
+    "phi_set_rejected_proposals": 0,
+    "MAX_SUPPORT_EVALUATIONS": 300000,
+    "within_frozen_allowance": true,
+    "within_metadata_projection": true,
+    "truncated_after_reaching_limit": false,
+    "verdict": "SEARCH_BUDGET_RUNTIME_OK"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "record_id": "E2_PROTOCOL_FIREWALL_V1",
+  "frozen_utc": "2026-09-06T03:53:06.773433+00:00",
+  "target_reads": 0,
+  "model_error_reads": 0,
+  "residual_reads": 0,
+  "epoch1_performance_reads_for_partition": 0,
+  "allowed_for_partition_design": [
+    "shot identifiers",
+    "processing-era metadata",
+    "operational period",
+    "missingness / signal availability",
+    "non-target provenance metadata",
+    "predictor and coordinate VALUES (for range support only, never for partitioning)"
+  ],
+  "forbidden_for_partition_design": [
+    "density target values",
+    "Epoch-1 NRMSE",
+    "residuals",
+    "Epoch-1 pass/fail labels",
+    "actuator excursion diagnostics",
+    "C_dev_star error",
+    "range-support failure identities from Epoch 1"
+  ],
+  "partition_variables_actually_used": [
+    "processing_era",
+    "discharge id (sort key only)"
+  ],
+  "asserted_in_code": true
+}

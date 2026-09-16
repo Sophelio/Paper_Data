@@ -1,0 +1,22 @@
+node_id,node_type,identity,evidence,evidence_class,status
+efit_equilibrium_reconstruction,reconstruction_family,EFIT,named explicitly in the aminor and area descriptions of the units registry,LOCAL_DOCUMENTED,FAMILY_IDENTIFIED_SETTINGS_UNRESOLVED
+magnetic_probes,presumed_input,NOT_PRESENT_AS_ARCHIVED_SIGNAL,standard EFIT inputs (external convention); NOT verified for this pipeline,UNRESOLVED,LINEAGE_UNRESOLVED
+flux_loops,presumed_input,NOT_PRESENT_AS_ARCHIVED_SIGNAL,standard EFIT inputs (external convention); NOT verified for this pipeline,UNRESOLVED,LINEAGE_UNRESOLVED
+measured_plasma_current,presumed_input,possibly archived 'ip',standard EFIT inputs (external convention); NOT verified for this pipeline,UNRESOLVED,LINEAGE_UNRESOLVED
+toroidal_field,presumed_input,possibly archived 'bt',standard EFIT inputs (external convention); NOT verified for this pipeline,UNRESOLVED,LINEAGE_UNRESOLVED
+kinetic_profiles,presumed_input,NOT_ESTABLISHED,standard EFIT inputs (external convention); NOT verified for this pipeline,UNRESOLVED,LINEAGE_UNRESOLVED
+aminor,equilibrium_output,aminor,Plasma minor radius (EFIT),LOCAL_DOCUMENTED,LINEAGE_PARTIAL
+area,equilibrium_output,area,Plasma poloidal cross-sectional area (EFIT),LOCAL_DOCUMENTED,LINEAGE_PARTIAL
+betan,equilibrium_output,betan,Normalised beta,STRONGLY_INFERRED,LINEAGE_PARTIAL
+drsep,equilibrium_output,drsep,Separatrix-to-separatrix distance (upper/lower balance),STRONGLY_INFERRED,LINEAGE_PARTIAL
+kappa,equilibrium_output,kappa,Plasma elongation,STRONGLY_INFERRED,LINEAGE_PARTIAL
+li,equilibrium_output,li,Normalised internal inductance,STRONGLY_INFERRED,LINEAGE_PARTIAL
+q95,equilibrium_output,q95,Safety factor at the 95% flux surface,STRONGLY_INFERRED,LINEAGE_PARTIAL
+rmaxis,equilibrium_output,rmaxis,Magnetic axis major radius,STRONGLY_INFERRED,LINEAGE_PARTIAL
+rsurf,equilibrium_output,rsurf,"Plasma boundary geometric centre, major radius",STRONGLY_INFERRED,LINEAGE_PARTIAL
+tribot,equilibrium_output,tribot,Bottom triangularity,STRONGLY_INFERRED,LINEAGE_PARTIAL
+tritop,equilibrium_output,tritop,Top triangularity,STRONGLY_INFERRED,LINEAGE_PARTIAL
+volume,equilibrium_output,volume,Plasma volume,STRONGLY_INFERRED,LINEAGE_PARTIAL
+zcur,equilibrium_output,zcur,Vertical position of the plasma current centroid,STRONGLY_INFERRED,LINEAGE_PARTIAL
+zmaxis,equilibrium_output,zmaxis,Magnetic axis vertical position,STRONGLY_INFERRED,LINEAGE_PARTIAL
+zsurf,equilibrium_output,zsurf,"Plasma boundary geometric centre, vertical position",STRONGLY_INFERRED,LINEAGE_PARTIAL

@@ -1,0 +1,137 @@
+{
+  "description": {
+    "n_discharges": 62,
+    "target": "d W_dia / dt",
+    "target_engine": "d[pcdiamag3]/d[t]",
+    "n_support": 7,
+    "canonical_run_id": "D3D-SIR-62-ALIGNED-V1",
+    "equation_key": "1_8*",
+    "admitted_signals": [
+      {
+        "engine": "pcdiamag3",
+        "display": "W_dia",
+        "selected": true
+      },
+      {
+        "engine": "pinj",
+        "display": "P_NBI",
+        "selected": false
+      },
+      {
+        "engine": "density",
+        "display": "n_e",
+        "selected": false
+      },
+      {
+        "engine": "ip",
+        "display": "I_p",
+        "selected": false
+      },
+      {
+        "engine": "betan",
+        "display": "beta_N",
+        "selected": true
+      },
+      {
+        "engine": "q95",
+        "display": "q_95",
+        "selected": true
+      },
+      {
+        "engine": "li",
+        "display": "ell_i",
+        "selected": true
+      },
+      {
+        "engine": "kappa",
+        "display": "kappa",
+        "selected": true
+      }
+    ],
+    "trajectory_reconstructions": [
+      "none",
+      "spline",
+      "RTS"
+    ]
+  },
+  "reconstruction": {
+    "target": "I_p",
+    "target_engine": "ip",
+    "n_development": 7,
+    "n_external": 55,
+    "n_rel10_wins": 46,
+    "frac_rel10_wins": 0.8363636363636363,
+    "candidate_basis_size": 141,
+    "rel10_size": 10,
+    "raw10_size": 10,
+    "nominal_reduction": 0.9290780141843972,
+    "pooled_rmse": {
+      "REL141": 0.1136860324756109,
+      "REL10": 0.1257122694487528,
+      "RAW10": 0.182086862730149
+    },
+    "median_effective_df": {
+      "REL141": 98.99646122678683,
+      "REL10": 10.572839159428751,
+      "RAW10": 5.973214114824849
+    },
+    "calibration_fraction": 0.8,
+    "evaluation_fraction": 0.2,
+    "rel10_features": [
+      "PROD_pcdiamag3_q95",
+      "L_q95",
+      "CU_pcdiamag3",
+      "L_density",
+      "PROD_pcdiamag3_density",
+      "L_pcdiamag3",
+      "PROD_q95_li",
+      "CU_li",
+      "CU_q95",
+      "L_kappa"
+    ],
+    "raw10_features": [
+      "Z_q95",
+      "L_q95",
+      "Z_density",
+      "L_density",
+      "L_pcdiamag3",
+      "Z_pcdiamag3",
+      "Z_pinj",
+      "L_pinj",
+      "Z_kappa",
+      "L_kappa"
+    ],
+    "rel10_formulas": [
+      "z(pcdiamag3)*z(q95)",
+      "q95",
+      "z(pcdiamag3)^3",
+      "density",
+      "z(pcdiamag3)*z(density)",
+      "pcdiamag3",
+      "z(q95)*z(li)",
+      "z(li)^3",
+      "z(q95)^3",
+      "kappa"
+    ],
+    "development_shots": [
+      165022,
+      160721,
+      165861,
+      195264,
+      195626,
+      159310,
+      155537
+    ]
+  },
+  "source_lineage": {
+    "paired_raw_vs_rel": "D:\\sir-web\\Paper Examples\\Relational Coordinates for Multimodal Plasma Observations\\DIII-D Ip relational reconstruction 62-shot confirmation\\tables\\RAW10_VS_REL10_PAIRED.csv",
+    "paired_rel_vs_dense": "D:\\sir-web\\Paper Examples\\Relational Coordinates for Multimodal Plasma Observations\\DIII-D Ip relational reconstruction 62-shot confirmation\\tables\\REL10_VS_REL141_PAIRED.csv",
+    "compression_summary": "D:\\sir-web\\Paper Examples\\Relational Coordinates for Multimodal Plasma Observations\\DIII-D Ip relational reconstruction 62-shot confirmation\\tables\\COMPRESSION_SUMMARY.csv",
+    "frozen_supports": "D:\\sir-web\\Paper Examples\\Relational Coordinates for Multimodal Plasma Observations\\DIII-D Ip relational reconstruction 62-shot confirmation\\tables\\FROZEN_SUPPORTS.csv",
+    "confirmation_run_summary": "D:\\sir-web\\Paper Examples\\Relational Coordinates for Multimodal Plasma Observations\\DIII-D Ip relational reconstruction 62-shot confirmation\\runs\\run_20260812_002129_ip62\\summary.json",
+    "descriptive_coordinate_manifest": "D:\\sir-web\\Paper Examples\\Relational Coordinates for Multimodal Plasma Observations\\canonical_d3d_62_shot_run_v1\\d3d_relational_coordinate_manifest.json",
+    "descriptive_pooled_metrics": "D:\\sir-web\\Paper Examples\\Relational Coordinates for Multimodal Plasma Observations\\canonical_d3d_62_shot_run_v1\\d3d_pooled_metrics.json",
+    "discovery_frozen_candidates": "D:\\sir-web\\Paper Examples\\Relational Coordinates for Multimodal Plasma Observations\\DIII-D Ip relational discovery\\FROZEN_RELATIONAL_CANDIDATES.json",
+    "development_cohort": "D:\\sir-web\\Paper Examples\\Relational Coordinates for Multimodal Plasma Observations\\DIII-D Ip relational discovery\\development_cohort.csv"
+  }
+}

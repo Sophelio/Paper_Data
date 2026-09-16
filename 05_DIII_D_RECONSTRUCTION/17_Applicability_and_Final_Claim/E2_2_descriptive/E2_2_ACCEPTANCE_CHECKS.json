@@ -1,0 +1,145 @@
+{
+  "record_id": "E2_2_ACCEPTANCE_CHECKS_V1",
+  "generated_utc": "2026-09-07T04:51:42.171512+00:00",
+  "checks": [
+    {
+      "check": "all eight parent freezes reproduce",
+      "pass": true
+    },
+    {
+      "check": "zero substantive drift",
+      "pass": true
+    },
+    {
+      "check": "E2.1 result unchanged",
+      "pass": true
+    },
+    {
+      "check": "basis = C_E2_FULL_DOMAIN, 3451",
+      "pass": true
+    },
+    {
+      "check": "constructor counts exact",
+      "pass": true
+    },
+    {
+      "check": "basis hash matches E2.0A",
+      "pass": true
+    },
+    {
+      "check": "basis identical to E2.1 search basis",
+      "pass": true
+    },
+    {
+      "check": "tau unchanged at 1",
+      "pass": true
+    },
+    {
+      "check": "tau_train retired",
+      "pass": true
+    },
+    {
+      "check": "no partial atoms used",
+      "pass": true
+    },
+    {
+      "check": "one fresh full-object search",
+      "pass": true
+    },
+    {
+      "check": "one seed per stratum",
+      "pass": true
+    },
+    {
+      "check": "no second seed",
+      "pass": true
+    },
+    {
+      "check": "shortlist cap 96 per constructor",
+      "pass": true
+    },
+    {
+      "check": "support bound 1-12",
+      "pass": true
+    },
+    {
+      "check": "within 300000 budget",
+      "pass": true
+    },
+    {
+      "check": "no outcome-triggered extension",
+      "pass": true
+    },
+    {
+      "check": "E2.1 supports not reused as candidates",
+      "pass": true
+    },
+    {
+      "check": "U_rec unchanged, ranks 1-5 applied",
+      "pass": true
+    },
+    {
+      "check": "bootstrap seed and replicates unchanged",
+      "pass": true
+    },
+    {
+      "check": "size not forced to 12",
+      "pass": true
+    },
+    {
+      "check": "all-object target access recorded",
+      "pass": true
+    },
+    {
+      "check": "descriptive fit not presented as validation",
+      "pass": true
+    },
+    {
+      "check": "no new external qualification computed",
+      "pass": true
+    },
+    {
+      "check": "support marked descriptive only",
+      "pass": true
+    },
+    {
+      "check": "support marked not externally validated",
+      "pass": true
+    },
+    {
+      "check": "support marked not held out",
+      "pass": true
+    },
+    {
+      "check": "no canonical-equation claim",
+      "pass": true
+    },
+    {
+      "check": "cannot change E2.1",
+      "pass": true
+    },
+    {
+      "check": "comparison made after freeze",
+      "pass": true
+    },
+    {
+      "check": "comparison did not influence selection",
+      "pass": true
+    },
+    {
+      "check": "descriptive support is not identical to any fold support",
+      "pass": true
+    },
+    {
+      "check": "every flagged primitive in the support carries its qualification",
+      "pass": true
+    },
+    {
+      "check": "no new physical meaning acquired",
+      "pass": true
+    }
+  ],
+  "n_pass": 34,
+  "n_total": 34,
+  "failed": []
+}

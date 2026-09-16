@@ -1,0 +1,38 @@
+{
+  "target": "vsurf",
+  "resolved_utc": "2026-09-03T03:35:34.038358+00:00",
+  "method": "metadata and provenance only; no archive opened, no signal value read (development or external)",
+  "three_cadences": {
+    "SOURCE_SUPPORTED_CADENCE": {
+      "definition": "archived support divided by (source sample count - 1), where source sample count is the original_length the upstream pipeline received",
+      "min_ms": 19.925093632958802,
+      "median_ms": 20.239521912350597,
+      "max_ms": 82.9090909090909,
+      "uniform": false,
+      "caveat": "this is a LOWER BOUND on coarseness. original_length is what the pipeline received, not necessarily the raw diagnostic cadence; the true source could be coarser still, never finer (U001)"
+    },
+    "ARCHIVED_CADENCE": {
+      "definition": "median dt of the archived vsurf time axis",
+      "min_ms": 20.0,
+      "median_ms": 20.0,
+      "max_ms": 20.0,
+      "uniform": true,
+      "value_ms": 20.0
+    },
+    "ANALYSIS_CADENCE": {
+      "definition": "S7.3 primary grid, set by the coarsest admitted quantity, which is vsurf itself",
+      "value_ms": 20.0
+    }
+  },
+  "upstream_upsampled_meaning": "vsurf was resampled by cubic_spline in all 62 discharges. In 36 of them the archive contains MORE samples than the pipeline received (ratio > 1.01), so those archived samples are spline interpolations, not observations. The flag is not a bookkeeping detail: it records genuine interpolation-created samples in the target itself.",
+  "n_shots_upsampled_gt_1pct": 36,
+  "n_shots_source_coarser_than_grid": 20,
+  "n_development_shots_source_coarser": 7,
+  "n_external_shots_source_coarser": 13,
+  "worst_source_dt_ms": 82.9090909090909,
+  "worst_shot": "165027",
+  "worst_development_source_dt_ms": 24.263959390862944,
+  "verdict": "C_SOURCE_CADENCE_VARIES_BY_DISCHARGE",
+  "no_super_resolution_rule_satisfied": false,
+  "shares_equilibrium_time_base_all_shots": true
+}

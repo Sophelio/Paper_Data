@@ -1,0 +1,12 @@
+{
+  "realization_index": 30.5,
+  "shot": 187019.5,
+  "F_kappa_median": 0.19053108127847213,
+  "F_betan_median": 0.7988059090528409,
+  "F_sum_median": 0.9853548863135939,
+  "cov_Fkappa_Fbetan": -3.4949506406226584e-05,
+  "frac_A_small_and_cancellation": 0.002,
+  "frac_A_small_large_Fkappa": 0.0,
+  "frac_A_small_large_Fbetan": 0.0495,
+  "frac_A_small_small_den": 0.0
+}

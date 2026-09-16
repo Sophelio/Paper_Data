@@ -1,0 +1,59 @@
+{
+  "record_id": "SEARCH_SPACE_CONSEQUENCE_AUDIT_V1",
+  "generated_utc": "2026-09-06T02:59:57.816714+00:00",
+  "tau": 1.0,
+  "atoms_total": 10778,
+  "atoms_full_domain": 3451,
+  "atoms_full_domain_fraction": 0.32018927444794953,
+  "atoms_locally_partial": 7327,
+  "degenerate_cells": 263,
+  "cell_applicability_rate": 0.9860488410282195,
+  "by_constructor": {
+    "C0": {
+      "n_atoms": 66,
+      "n_full_domain": 51,
+      "frac_full_domain": 0.7727272727272727
+    },
+    "C1": {
+      "n_atoms": 59,
+      "n_full_domain": 18,
+      "frac_full_domain": 0.3050847457627119
+    },
+    "C2": {
+      "n_atoms": 2080,
+      "n_full_domain": 1488,
+      "frac_full_domain": 0.7153846153846154
+    },
+    "C3": {
+      "n_atoms": 2457,
+      "n_full_domain": 382,
+      "frac_full_domain": 0.15547415547415547
+    },
+    "C5": {
+      "n_atoms": 39,
+      "n_full_domain": 8,
+      "frac_full_domain": 0.20512820512820512
+    },
+    "C6": {
+      "n_atoms": 3776,
+      "n_full_domain": 965,
+      "frac_full_domain": 0.2555614406779661
+    },
+    "C7": {
+      "n_atoms": 2301,
+      "n_full_domain": 539,
+      "frac_full_domain": 0.23424598000869187
+    }
+  },
+  "all_constructor_families_survive": true,
+  "key_closure_property": "if every coordinate of a support is individually full-domain then the support is automatically full-domain, because the support predicate is the conjunction of coordinate predicates over the same cells",
+  "available_size_12_full_domain_supports": "~1e33",
+  "fixed_217_family_full_domain_at_tau": 0,
+  "fixed_217_median_fraction_of_coordinates_full_domain": 0.5,
+  "C_dev_star_coordinates_full_domain": 6,
+  "C_dev_star_support_size": 12,
+  "why_the_217_fail": "the Epoch-1 frontier was searched under a utility with NO range-support pressure, so its winners contain coordinates that are not full-domain. Their failure under a condition they were never selected against is expected and is NOT evidence that the rule is over-restrictive",
+  "epoch2_viable": true,
+  "over_restrictive": false,
+  "vacuous": false
+}

@@ -1,0 +1,955 @@
+{
+  "record_id": "S7_CANONICAL_INDEX_V2",
+  "generated_utc": "2026-09-08T00:51:17.508741+00:00",
+  "root": "DIIID_example/S7",
+  "scientific_tasks": {
+    "q_rec": {
+      "task_id": "q_rec",
+      "statement": "contemporaneous reconstruction of an admissible diagnostic quantity from the remaining task-admissible observational system, under the declared target-selection, information, utility and qualification policies",
+      "note": "q_rec is the scientific TASK. It is deliberately more stable than any single target instance, protocol realization or validation implementation. The canonical target instance y* = density was selected under the frozen task rules after the source-resolution correction; the earlier vsurf instantiation was corrected under the SAME task and the SAME claim branch.",
+      "target_instance": "density (line-averaged electron density)",
+      "superseded_target_instance": "vsurf"
+    },
+    "q_desc": {
+      "task_id": "q_desc",
+      "statement": "retrospective descriptive organization of the realized plasma trajectories, admitting contemporaneous target-containing coordinates",
+      "note": "A DIFFERENT scientific task, not an operational epoch of q_rec: the information policy, utility and validation structure all differ materially. Its canonical artifacts are outside S7."
+    }
+  },
+  "claim_branches": {
+    "QREC-B1": {
+      "branch_id": "QREC-B1",
+      "task_id": "q_rec",
+      "label": "sealed-external claim branch",
+      "parent_claim_branch": null,
+      "claim_commitment": "structural transfer of a development-selected representation, qualified on a sealed external cohort of 42 discharges",
+      "operational_epochs": [
+        1,
+        2
+      ],
+      "branch_local_operational_epochs": 2,
+      "epoch_advance_stages": [
+        "S7.K2"
+      ],
+      "contract_corrections_not_advancing_epoch": [
+        "S7.2C",
+        "S7.7R"
+      ],
+      "status": "CLOSED_BY_QUALIFICATION_FAILURE_THEN_SUPERSEDED",
+      "outcome": "NO_QUALIFIED_NONTRIVIAL_STRUCTURAL_TRANSFER (S7.10): a NEGATIVE QUALIFICATION OUTCOME. The branch was subjected to qualification and FAILED it; the failure is preserved unmodified and the branch was then superseded."
+    },
+    "QREC-B2": {
+      "branch_id": "QREC-B2",
+      "task_id": "q_rec",
+      "label": "cross-fitted finite-object descendant claim branch",
+      "parent_claim_branch": "QREC-B1",
+      "claim_commitment": "target-cross-fitted reconstruction over the predictor-qualified frozen 62-discharge observational object",
+      "why_descendant": "Epoch-1 evaluation evidence had been inspected and used to diagnose the defect, so it could no longer serve as untouched validation evidence. The evidentiary commitment V_q was therefore MATERIALLY NARROWED, which constitutes a descendant claim branch under the same q_rec task. The narrowing was constituted at S7.E2.0, NOT at S7.K2: K2 was an operational-contract revision within QREC-B1.",
+      "Omega_q_status": "Omega_rec, the INTENDED claim domain and a member of K_q^claim, is UNCHANGED: the frozen 62-discharge observational object throughout. Only V_rec was materially revised. Omega*_rec, the domain actually SUPPORTED by qualification, is part of Q*_q and not a member of K_q^claim; it changes downstream as a consequence of the narrowed V_rec, not as a separate claim-defining revision.",
+      "operational_epochs": [
+        2
+      ],
+      "branch_local_operational_epochs": 1,
+      "epoch_label_note": "Retained as S7's historical label 'Epoch 2'. Counted branch-locally this is QREC-B2's FIRST operational epoch; the descendant branch begins its own operational lineage.",
+      "contract_corrections_not_advancing_epoch": [
+        "S7.E2.0A"
+      ],
+      "status": "CLOSED",
+      "outcome": "QUALIFIED_POSITIVE_RECONSTRUCTION_FORMAL_PASS, assembled as Q_rec* in S7.12."
+    }
+  },
+  "branch_lineage": {
+    "hierarchy": "scientific task q -> provenance-linked claim branch -> operational epoch(s)",
+    "q_rec": [
+      "QREC-B1",
+      "QREC-B2"
+    ],
+    "QREC-B1 -> QREC-B2": "descendant claim branch: the evidentiary commitment V_q was materially narrowed after protected evidence was spent, constituted at S7.E2.0",
+    "final_qualified_result": {
+      "branch": "QREC-B2",
+      "stage": "S7.12",
+      "status": "CLOSED"
+    },
+    "lineage_status": "q_rec scientific lineage closed; no further discovery epoch authorized on any q_rec branch"
+  },
+  "branches": {
+    "q_rec": "audited and stabilized in this directory",
+    "q_desc": {
+      "task_id": "q_desc",
+      "branch": "q_desc",
+      "location": "D:\\sir-web\\Paper Examples\\Relational Coordinates for Multimodal Plasma Observations",
+      "run_id": "D3D-SIR-62-ALIGNED-V1",
+      "packages": [
+        "canonical_d3d_62_shot_run_v1",
+        "Coefficient_conditioning",
+        "Coefficient_conditioning/Correction_audit",
+        "Implicit_elimination_and_denominator_conditioning",
+        "Conditioning_repair"
+      ],
+      "note": "S7 as a directory contains the q_rec branch only. The descriptive branch is audited here by reference; its artifacts were verified read-only and are not copied or modified."
+    }
+  },
+  "n_canonical_stages": 21,
+  "stages": [
+    {
+      "stage_id": "S7.1",
+      "title": "Observational object and provenance",
+      "directory": "01_observational_object",
+      "scientific_task_id": "shared",
+      "claim_branch": null,
+      "claim_branch_role": "PRE_CONTRACT",
+      "parent_claim_branch": null,
+      "revision_level": "NONE",
+      "branch": "shared",
+      "operational_epoch": null,
+      "status": "CANONICAL",
+      "sir_architecture_mapping": [
+        "O"
+      ],
+      "scientific_question": "What finite scientific object was supplied to discovery?",
+      "verdict": "FROZEN_WITH_QUALIFICATIONS - 62 discharges, 95 signals, 32/32 acceptance tests, 0 unresolved critical items.",
+      "parent_stages": [],
+      "child_stages": [
+        "S7.2"
+      ],
+      "key_numbers": {
+        "n_discharges": 62,
+        "n_signals": 95
+      },
+      "governing_freeze": {
+        "path": "reconciliation_final/S7_1_FINAL_FREEZE.json",
+        "freeze_id": "D3D-SIR-S7.1-OBSERVATIONAL-OBJECT-FINAL-V1",
+        "sha256": "be4807c65cdcf330244f2d80f0007f8f0448208b56ff3095f19fbdcf3097600f",
+        "authoritative": true,
+        "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+      }
+    },
+    {
+      "stage_id": "S7.2",
+      "title": "Reconstruction contract (target-blind skeleton)",
+      "directory": "02_reconstruction_contract",
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B1",
+      "claim_branch_role": "ORIGIN",
+      "parent_claim_branch": null,
+      "revision_level": "NONE",
+      "branch": "q_rec",
+      "operational_epoch": 1,
+      "status": "CANONICAL_SUPERSEDED_BY_S7.2C",
+      "sir_architecture_mapping": [
+        "K_claim",
+        "K_op"
+      ],
+      "scientific_question": "What contract governs the reconstruction claim, before any target is chosen?",
+      "verdict": "FROZEN_READY_FOR_S7.3 - contract skeleton frozen with no target selected.",
+      "parent_stages": [
+        "S7.1"
+      ],
+      "child_stages": [
+        "S7.2C",
+        "S7.3"
+      ],
+      "key_numbers": {
+        "development": 20,
+        "external": 42,
+        "blocks": 3
+      },
+      "governing_freeze": {
+        "path": "S7_2_FREEZE.json",
+        "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-V1",
+        "sha256": "5e65d87825024d2e62b0db8fab8add518f364110e41f3a63f61571c80cc3102f",
+        "authoritative": true,
+        "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+      }
+    },
+    {
+      "stage_id": "S7.2C",
+      "title": "Contract correction V2",
+      "directory": "02_reconstruction_contract/correction_v1",
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B1",
+      "claim_branch_role": "MEMBER",
+      "parent_claim_branch": null,
+      "revision_level": "OPERATIONAL_CONTRACT",
+      "branch": "q_rec",
+      "operational_epoch": 1,
+      "status": "CANONICAL",
+      "sir_architecture_mapping": [
+        "K_claim",
+        "K_op",
+        "delta",
+        "rho"
+      ],
+      "scientific_question": "Do any contract clauses need correcting before instantiation?",
+      "verdict": "V2 authoritative; V1 preserved byte-for-byte as audit history.",
+      "parent_stages": [
+        "S7.2"
+      ],
+      "child_stages": [
+        "S7.3"
+      ],
+      "key_numbers": {
+        "clauses_superseded": 9
+      },
+      "governing_freeze": {
+        "path": "S7_2_FREEZE_V2.json",
+        "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V2",
+        "sha256": "ecd15ef9e833e0b25feb42cdbcf30c67634f1949f4e50b08546f38bb61e7faab",
+        "authoritative": true,
+        "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+      }
+    },
+    {
+      "stage_id": "S7.3",
+      "title": "Target feasibility and information boundary",
+      "directory": "03_target_feasibility_and_boundary",
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B1",
+      "claim_branch_role": "MEMBER",
+      "parent_claim_branch": null,
+      "revision_level": "NONE",
+      "branch": "q_rec",
+      "operational_epoch": 1,
+      "status": "CANONICAL_SUPERSEDED_BY_S7.3V2",
+      "sir_architecture_mapping": [
+        "K_claim",
+        "O_q"
+      ],
+      "scientific_question": "Which target is feasible, and which observations may be used?",
+      "verdict": "Target selected; boundary instantiated.",
+      "parent_stages": [
+        "S7.2C"
+      ],
+      "child_stages": [
+        "S7.3V2"
+      ],
+      "key_numbers": {},
+      "governing_freeze": {
+        "path": "S7_3_FREEZE.json",
+        "freeze_id": "D3D-SIR-S7.3-TARGET-FEASIBILITY-V1",
+        "sha256": "27d79631276fbbc59dfc3428bd566d5ca8a726878107a7fe38c3b9f2f784fa8a",
+        "authoritative": true,
+        "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+      }
+    },
+    {
+      "stage_id": "S7.3V2",
+      "title": "Target and boundary, source-resolved",
+      "directory": "03_target_feasibility_and_boundary/reconciliation_source_resolution",
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B1",
+      "claim_branch_role": "MEMBER",
+      "parent_claim_branch": null,
+      "revision_level": "INSTANTIATION",
+      "branch": "q_rec",
+      "operational_epoch": 1,
+      "status": "CANONICAL",
+      "sir_architecture_mapping": [
+        "K_claim",
+        "O_q",
+        "delta",
+        "rho"
+      ],
+      "scientific_question": "Which target survives source-supported cadence, and which 78 predictors are admissible?",
+      "verdict": "Target INSTANCE y* = density (line-averaged), selected by applying the frozen task rules correctly. 78 predictors admitted, 17 excluded (1 target itself, 1 cadence failure, 15 fail-closed unresolved EFIT ancestry).",
+      "parent_stages": [
+        "S7.3"
+      ],
+      "child_stages": [
+        "S7.4V2"
+      ],
+      "key_numbers": {
+        "n_predictors": 78,
+        "n_excluded": 17,
+        "target": "density"
+      },
+      "governing_freeze": {
+        "path": "S7_3_FREEZE_V2.json",
+        "freeze_id": "D3D-SIR-S7.3-TARGET-FEASIBILITY-SOURCE-RESOLUTION-V2",
+        "sha256": "a8477f185c8dfb31d799c7607fa1a183d762405353c8bc21f195ff2524ff8a74",
+        "authoritative": true,
+        "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+      }
+    },
+    {
+      "stage_id": "S7.4V2",
+      "title": "Task-conditioned mathematical interpretation",
+      "directory": "04_mathematical_interpretation/retry_source_resolution_v2",
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B1",
+      "claim_branch_role": "MEMBER",
+      "parent_claim_branch": null,
+      "revision_level": "INSTANTIATION",
+      "branch": "q_rec",
+      "operational_epoch": 1,
+      "status": "CANONICAL",
+      "sir_architecture_mapping": [
+        "X_q"
+      ],
+      "scientific_question": "As what mathematical object is the admissible record to be read?",
+      "verdict": "X_rec instantiated; cadence 5.853-14.187 ms, discharge-specific; target never upsampled.",
+      "parent_stages": [
+        "S7.3V2"
+      ],
+      "child_stages": [
+        "S7.5"
+      ],
+      "key_numbers": {},
+      "governing_freeze": {
+        "path": "S7_4_FREEZE_V2.json",
+        "freeze_id": "D3D-SIR-S7.4-MATHEMATICAL-INTERPRETATION-SOURCE-RESOLUTION-V2",
+        "sha256": "0658d3c9949c19108ba5f8de17ba37966b5bd6bf41d9836f3ccc2ccf45c5183a",
+        "authoritative": true,
+        "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+      }
+    },
+    {
+      "stage_id": "S7.5",
+      "title": "Typed relational ontology",
+      "directory": "05_typed_relational_ontology",
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B1",
+      "claim_branch_role": "MEMBER",
+      "parent_claim_branch": null,
+      "revision_level": "NONE",
+      "branch": "q_rec",
+      "operational_epoch": 1,
+      "status": "CANONICAL_SUPERSEDED_BY_S7.5H",
+      "sir_architecture_mapping": [
+        "G_q"
+      ],
+      "scientific_question": "What grammar of representations may be constructed?",
+      "verdict": "Ontology frozen.",
+      "parent_stages": [
+        "S7.4V2"
+      ],
+      "child_stages": [
+        "S7.5H"
+      ],
+      "key_numbers": {},
+      "governing_freeze": {
+        "path": "S7_5_FREEZE.json",
+        "freeze_id": "D3D-SIR-S7.5-TYPED-RELATIONAL-ONTOLOGY-V1",
+        "sha256": "2cd73e77e0734177c56df175e084a319ad5913fcf1038d0dc87f7507a8a86721",
+        "authoritative": true,
+        "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+      }
+    },
+    {
+      "stage_id": "S7.5H",
+      "title": "Primitive space and ontology hardening",
+      "directory": "05H_primitive_space_and_ontology_hardening",
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B1",
+      "claim_branch_role": "MEMBER",
+      "parent_claim_branch": null,
+      "revision_level": "INSTANTIATION",
+      "branch": "q_rec",
+      "operational_epoch": 1,
+      "status": "CANONICAL",
+      "sir_architecture_mapping": [
+        "G_q"
+      ],
+      "scientific_question": "Which primitives and constructors survive hardening?",
+      "verdict": "G_REC_DENSITY_HARDENED_V2 v2.0.0 frozen, 48/48 acceptance.",
+      "parent_stages": [
+        "S7.5"
+      ],
+      "child_stages": [
+        "S7.6R"
+      ],
+      "key_numbers": {
+        "n_primitives": 70,
+        "n_symbolic": 23861,
+        "families": 9
+      },
+      "governing_freeze": {
+        "path": "S7_5H_FREEZE.json",
+        "freeze_id": "D3D-SIR-S7.5H-PRIMITIVE-SPACE-AND-ONTOLOGY-HARDENING-V1",
+        "sha256": "dffdd834ecf40b0f22b4844040bfe0ab5dd2bebb4b73d517a67387f4718f43d9",
+        "authoritative": true,
+        "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+      }
+    },
+    {
+      "stage_id": "S7.6R",
+      "title": "Admissible coordinate universe",
+      "directory": "06_admissible_universe/hardened_v2",
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B1",
+      "claim_branch_role": "MEMBER",
+      "parent_claim_branch": null,
+      "revision_level": "INSTANTIATION",
+      "branch": "q_rec",
+      "operational_epoch": 1,
+      "status": "CANONICAL",
+      "sir_architecture_mapping": [
+        "A_q"
+      ],
+      "scientific_question": "Which constructions are concretely admissible on this object?",
+      "verdict": "A_REC_DENSITY_HARDENED_V2: 10,778 atoms from 23,861 symbolic, 49/49 acceptance.",
+      "parent_stages": [
+        "S7.5H"
+      ],
+      "child_stages": [
+        "S7.7R"
+      ],
+      "key_numbers": {
+        "n_atoms": 10778,
+        "C0": 66,
+        "C1": 59,
+        "C2": 2080,
+        "C3": 2457,
+        "C5": 39,
+        "C6": 3776,
+        "C7": 2301
+      },
+      "governing_freeze": {
+        "path": "S7_6R_FREEZE.json",
+        "freeze_id": "D3D-SIR-S7.6-ADMISSIBLE-UNIVERSE-HARDENED-V2",
+        "sha256": "0cf779767940249fa515221f3fbd4bf2f7a93281c21cb63383b084504426fa59",
+        "authoritative": true,
+        "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+      }
+    },
+    {
+      "stage_id": "S7.7R",
+      "title": "Search policy and explored frontier",
+      "directory": "07_search_policy_and_frontier/one_seed_primary_v2",
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B1",
+      "claim_branch_role": "MEMBER",
+      "parent_claim_branch": null,
+      "revision_level": "OPERATIONAL_CONTRACT",
+      "branch": "q_rec",
+      "operational_epoch": 1,
+      "status": "CANONICAL",
+      "sir_architecture_mapping": [
+        "Sigma_q",
+        "Ahat_q"
+      ],
+      "scientific_question": "Which part of the admissible universe was actually explored?",
+      "verdict": "AHAT_REC_DENSITY_ONE_SEED_V2: 162,845 supports of size 1-12, 43/43 acceptance.",
+      "parent_stages": [
+        "S7.6R"
+      ],
+      "child_stages": [
+        "S7.8"
+      ],
+      "key_numbers": {
+        "frontier": 162845,
+        "strata": 127
+      },
+      "governing_freeze": {
+        "path": "S7_7R_FREEZE.json",
+        "freeze_id": "D3D-SIR-S7.7-ONE-SEED-PRIMARY-SEARCH-AND-EXPLORED-FRONTIER-V2",
+        "sha256": "576b1087b8fd767c631ad65cc1123f4e1ff40be7816b46dfe4fe77b7aafd47e2",
+        "authoritative": true,
+        "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+      }
+    },
+    {
+      "stage_id": "S7.8",
+      "title": "Utility and qualification rule operationalization",
+      "directory": "08_utility_and_qualification_rules",
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B1",
+      "claim_branch_role": "MEMBER",
+      "parent_claim_branch": null,
+      "revision_level": "NONE",
+      "branch": "q_rec",
+      "operational_epoch": 1,
+      "status": "CANONICAL",
+      "sir_architecture_mapping": [
+        "K_claim"
+      ],
+      "scientific_question": "How exactly are candidates compared and qualified?",
+      "verdict": "FROZEN_READY_FOR_S7.9, 48/48 acceptance.",
+      "parent_stages": [
+        "S7.7R"
+      ],
+      "child_stages": [
+        "S7.9"
+      ],
+      "key_numbers": {
+        "ranks": 5,
+        "equivalence_floor": 0.01
+      },
+      "governing_freeze": {
+        "path": "S7_8_FREEZE.json",
+        "freeze_id": "D3D-SIR-S7.8-UTILITY-AND-QUALIFICATION-RULES-V1",
+        "sha256": "1d12f78d165c09b77b4b853053e60a9a87784da2aaa2b38c4b882bb575d398e0",
+        "authoritative": true,
+        "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+      }
+    },
+    {
+      "stage_id": "S7.9",
+      "title": "Development selection and pre-external freeze",
+      "directory": "09_development_selection_and_freeze",
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B1",
+      "claim_branch_role": "MEMBER",
+      "parent_claim_branch": null,
+      "revision_level": "NONE",
+      "branch": "q_rec",
+      "operational_epoch": 1,
+      "status": "CANONICAL",
+      "sir_architecture_mapping": [
+        "CR"
+      ],
+      "scientific_question": "Which representation does the frozen utility select on development evidence alone?",
+      "verdict": "FROZEN_WITH_QUALIFICATIONS. C_dev_star selected at Rank 2; selection stability LOW and reported as found.",
+      "parent_stages": [
+        "S7.8"
+      ],
+      "child_stages": [
+        "S7.10"
+      ],
+      "key_numbers": {
+        "support_size": 12,
+        "E1": 1055,
+        "binding_rank": 2,
+        "bootstrap_selection_frequency": 0.093,
+        "distinct_bootstrap_winners": 217
+      },
+      "governing_freeze": {
+        "path": "S7_9_FREEZE.json",
+        "freeze_id": "D3D-SIR-S7.9-DEVELOPMENT-SELECTION-AND-PREEXTERNAL-FREEZE-V1",
+        "sha256": "966f9628dceb501e9f102d9ba3f74e0bfed3dddee7f25a58df47732eef3d553b",
+        "authoritative": true,
+        "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+      }
+    },
+    {
+      "stage_id": "S7.10",
+      "title": "External qualification - EPOCH 1 FAILURE",
+      "directory": "10_external_validation",
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B1",
+      "claim_branch_role": "MEMBER",
+      "parent_claim_branch": null,
+      "revision_level": "NONE",
+      "branch": "q_rec",
+      "operational_epoch": 1,
+      "status": "CANONICAL_NEGATIVE_RESULT",
+      "sir_architecture_mapping": [
+        "Q_q",
+        "delta"
+      ],
+      "scientific_question": "Does the frozen representation qualify on the sealed external cohort?",
+      "verdict": "PRIMARY_EXTERNAL_GATE_FAILURE. NO_QUALIFIED_NONTRIVIAL_STRUCTURAL_TRANSFER. V3 FAIL, V6 FAIL, Omega_rec EMPTY.",
+      "parent_stages": [
+        "S7.9"
+      ],
+      "child_stages": [
+        "S7.11"
+      ],
+      "key_numbers": {
+        "REL_mean": 0.7423647781201324,
+        "B1_mean": 0.21027421611172853,
+        "Delta_0": -0.18009502685176143,
+        "Delta_1": 0.5320905620084037,
+        "shot_187019": 11.952633,
+        "shot_187022": 11.766572,
+        "n_above_1": 2
+      },
+      "governing_freeze": {
+        "path": "S7_10_FREEZE.json",
+        "freeze_id": "D3D-SIR-S7.10-EXTERNAL-VALIDATION-AND-GATE-EVALUATION-V1",
+        "sha256": "8ea2062f0fc38fbf24e3b9d6477cace1d0fcd9a54e746e66c6e428d01437db97",
+        "authoritative": true,
+        "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+      }
+    },
+    {
+      "stage_id": "S7.11",
+      "title": "Sensitivity and failure interpretation",
+      "directory": "11_sensitivity_and_interpretation",
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B1",
+      "claim_branch_role": "MEMBER",
+      "parent_claim_branch": null,
+      "revision_level": "NONE",
+      "branch": "q_rec",
+      "operational_epoch": 1,
+      "status": "CANONICAL",
+      "sir_architecture_mapping": [
+        "delta"
+      ],
+      "scientific_question": "Was the failure specific to the selected support, or general?",
+      "verdict": "Development equivalence does not identify external robustness; the canonical representative is externally fragile; the primary failure is unchanged. V9 FAIL.",
+      "parent_stages": [
+        "S7.10"
+      ],
+      "child_stages": [
+        "S7.R1"
+      ],
+      "key_numbers": {
+        "family": 217,
+        "full_domain": 213,
+        "V3_style_pass": 70,
+        "C_dev_star_rank": 184,
+        "best_Delta_1": -0.028742,
+        "gasa2_in_passers": 0,
+        "gasa2_in_failures": 67
+      },
+      "governing_freeze": {
+        "path": "S7_11_FREEZE.json",
+        "freeze_id": "D3D-SIR-S7.11-SENSITIVITY-AND-FAILURE-INTERPRETATION-V1",
+        "sha256": "b93edac44994240e1fda4d6a0c8fa668cf712ac6a64b8d9fe63278e15c302e26",
+        "authoritative": true,
+        "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+      }
+    },
+    {
+      "stage_id": "S7.R1",
+      "title": "Operational-state reconciliation - HYPOTHESIS REFUTED",
+      "directory": "R1_operational_state_reconciliation",
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B1",
+      "claim_branch_role": "MEMBER",
+      "parent_claim_branch": null,
+      "revision_level": "NONE",
+      "branch": "q_rec",
+      "operational_epoch": 1,
+      "status": "CANONICAL",
+      "sir_architecture_mapping": [
+        "delta",
+        "rho",
+        "j_min"
+      ],
+      "scientific_question": "Did the development cohort pool distinct operational states?",
+      "verdict": "NO_CLEAN_OPERATIONAL_STATE_PARTITION. Hypothesis REFUTED. STOP_OPERATIONAL_STATE_ROUTE. earliest_invalidated_stage = NONE_OF_THE_INSTANTIATED_OBJECTS.",
+      "parent_stages": [
+        "S7.11"
+      ],
+      "child_stages": [
+        "S7.K2"
+      ],
+      "key_numbers": {
+        "K_REC_REVISION_REQUIRED": true,
+        "minimal_component": "P_rec"
+      },
+      "governing_freeze": {
+        "path": "S7_R1_FREEZE.json",
+        "freeze_id": "D3D-SIR-S7.R1-OPERATIONAL-STATE-RECONCILIATION-V1",
+        "sha256": "ae6092a67a0e099a868876611f7aeca769edac062c4c6a878d6f6a22146ca226",
+        "authoritative": true,
+        "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+      }
+    },
+    {
+      "stage_id": "S7.K2",
+      "title": "Observational range-support contract revision",
+      "directory": "K2_observational_range_support_contract",
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B1",
+      "claim_branch_role": "MEMBER",
+      "parent_claim_branch": null,
+      "revision_level": "OPERATIONAL_CONTRACT",
+      "branch": "q_rec",
+      "operational_epoch": "1 -> 2",
+      "status": "CANONICAL",
+      "sir_architecture_mapping": [
+        "K_op",
+        "rho"
+      ],
+      "scientific_question": "What minimal operational-contract revision addresses the localized defect?",
+      "verdict": "FROZEN_READY_FOR_DISCOVERY_EPOCH_2. Revision class MINIMAL_P_ONLY. K_REC_V2 issued.",
+      "parent_stages": [
+        "S7.R1"
+      ],
+      "child_stages": [
+        "S7.E2.0"
+      ],
+      "key_numbers": {
+        "tau": 1.0,
+        "full_domain_atoms": 3451,
+        "of": 10778,
+        "degenerate_cells": 263,
+        "of_cells": 2004708
+      },
+      "governing_freeze": {
+        "path": "S7_K2_FREEZE.json",
+        "freeze_id": "D3D-SIR-S7.K2-OBSERVATIONAL-RANGE-SUPPORT-CONTRACT-V1",
+        "sha256": "198fa046c7eb2650efcb910f02922752b8204477f8930300e6abf24163193459",
+        "authoritative": true,
+        "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+      }
+    },
+    {
+      "stage_id": "S7.E2.0",
+      "title": "Epoch-2 protocol and resampling freeze",
+      "directory": "E2_0_protocol_and_resampling_freeze",
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B2",
+      "claim_branch_role": "DESCENDANT_ORIGIN",
+      "parent_claim_branch": "QREC-B1",
+      "revision_level": "CLAIM_DEFINING",
+      "branch": "q_rec",
+      "operational_epoch": 2,
+      "status": "CANONICAL_SUPERSEDED_BY_E2.0A",
+      "sir_architecture_mapping": [
+        "K_claim",
+        "K_op"
+      ],
+      "scientific_question": "Under what evidential design may discovery legitimately resume?",
+      "verdict": "FROZEN_WITH_QUALIFICATIONS. Applicability risk disclosed prospectively. EPOCH2_IS_FINAL_QREC_ATTEMPT = true. This stage CONSTITUTES the descendant claim branch QREC-B2.",
+      "parent_stages": [
+        "S7.K2"
+      ],
+      "child_stages": [
+        "S7.E2.0A"
+      ],
+      "key_numbers": {
+        "n_folds": 6,
+        "budget_per_fold": 300000,
+        "budget_total": 1800000
+      },
+      "governing_freeze": {
+        "path": "E2_0_FREEZE.json",
+        "freeze_id": "D3D-SIR-S7.E2.0-DISCOVERY-EPOCH2-PROTOCOL-V1",
+        "sha256": "89af08c32468f0c9fc97046db47affa09a2cc864759e4b28374ddd5baa3842e6",
+        "authoritative": true,
+        "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+      }
+    },
+    {
+      "stage_id": "S7.E2.0A",
+      "title": "Predictor-side admissibility reconciliation",
+      "directory": "E2_0A_predictor_admissibility_reconciliation",
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B2",
+      "claim_branch_role": "MEMBER",
+      "parent_claim_branch": "QREC-B1",
+      "revision_level": "OPERATIONAL_CONTRACT",
+      "branch": "q_rec",
+      "operational_epoch": 2,
+      "status": "CANONICAL_AUTHORITATIVE_FOR_EPOCH2",
+      "sir_architecture_mapping": [
+        "K_op",
+        "delta",
+        "rho"
+      ],
+      "scientific_question": "Is predictor-side blinding consistent with the finite-object claim actually being made?",
+      "verdict": "FROZEN_READY_FOR_EPOCH2_SEARCH. Principle: PREDICTOR_QUALIFIED, TARGET_CROSS_FITTED, RECONSTRUCTION.",
+      "parent_stages": [
+        "S7.E2.0",
+        "S7.K2"
+      ],
+      "child_stages": [
+        "S7.E2.1"
+      ],
+      "key_numbers": {
+        "tau": 1.0,
+        "tau_train": "RETIRED",
+        "C_E2_FULL_DOMAIN": 3451
+      },
+      "governing_freeze": {
+        "path": "E2_0A_FREEZE.json",
+        "freeze_id": "D3D-SIR-S7.E2.0A-PREDICTOR-SIDE-ADMISSIBILITY-RECONCILIATION-V1",
+        "sha256": "d0b956b8ca4d086f296bc647a14cc9e267b8fe6e67e05c79b172346024ddd81e",
+        "authoritative": true,
+        "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+      }
+    },
+    {
+      "stage_id": "S7.E2.1",
+      "title": "Cross-fitted discovery and qualification - EPOCH 2 PASS",
+      "directory": "E2_1_crossfitted_discovery_and_qualification",
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B2",
+      "claim_branch_role": "MEMBER",
+      "parent_claim_branch": "QREC-B1",
+      "revision_level": "NONE",
+      "branch": "q_rec",
+      "operational_epoch": 2,
+      "status": "CANONICAL_PRIMARY_RESULT",
+      "sir_architecture_mapping": [
+        "Sigma_q",
+        "Ahat_q",
+        "CR",
+        "Q_q"
+      ],
+      "scientific_question": "Under the revised operational contract, does relational discovery qualify?",
+      "verdict": "QUALIFIED_POSITIVE_RECONSTRUCTION_FORMAL_PASS. FORMAL_PASS and, separately, CLEAN_DEMO_NOT_MET.",
+      "parent_stages": [
+        "S7.E2.0A"
+      ],
+      "child_stages": [
+        "S7.E2.2",
+        "S7.12"
+      ],
+      "key_numbers": {
+        "Delta_0": -0.764489,
+        "Delta_1": -0.027308,
+        "REL_mean": 0.1891,
+        "REL_max": 0.9199,
+        "V3": "PASS",
+        "V6": "PASS_WITH_QUALIFICATION",
+        "V_RANGE_checks": 2232,
+        "V_RANGE_failures": 0,
+        "proposals": 765758,
+        "n_supports": 6,
+        "mean_jaccard": 0.285
+      },
+      "governing_freeze": {
+        "path": "E2_1_FREEZE.json",
+        "freeze_id": "D3D-SIR-S7.E2.1-CROSSFITTED-DISCOVERY-AND-QUALIFICATION-V1",
+        "sha256": "25300460534ea0ff2708374c0c491343ed930018b604e2a499a58163be71f53d",
+        "authoritative": true,
+        "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+      }
+    },
+    {
+      "stage_id": "S7.E2.2",
+      "title": "Full-object descriptive representation",
+      "directory": "E2_2_full_object_descriptive_representation",
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B2",
+      "claim_branch_role": "MEMBER",
+      "parent_claim_branch": "QREC-B1",
+      "revision_level": "NONE",
+      "branch": "q_rec",
+      "operational_epoch": 2,
+      "status": "CANONICAL_DESCRIPTIVE_ONLY",
+      "sir_architecture_mapping": [
+        "CR"
+      ],
+      "scientific_question": "What single representation best exhibits the object, for exposition?",
+      "verdict": "FULL_OBJECT_DESCRIPTIVE_REPRESENTATION_FROZEN. C_E2_ALL_DESC, size 12.",
+      "parent_stages": [
+        "S7.E2.1"
+      ],
+      "child_stages": [
+        "S7.12"
+      ],
+      "key_numbers": {
+        "support_size": 12,
+        "proposals": 127642,
+        "descriptive_fit": 0.177509,
+        "mean_jaccard_with_folds": 0.313
+      },
+      "governing_freeze": {
+        "path": "E2_2_FREEZE.json",
+        "freeze_id": "D3D-SIR-S7.E2.2-FULL-OBJECT-DESCRIPTIVE-REPRESENTATION-V1",
+        "sha256": "91263a6439a0f52e572bfcedbb118ab76a135085196a6cfc5f875603db0b13c6",
+        "authoritative": true,
+        "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+      }
+    },
+    {
+      "stage_id": "S7.12",
+      "title": "Final qualified reconstruction result",
+      "directory": "S7_12_qualified_result",
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B2",
+      "claim_branch_role": "MEMBER",
+      "parent_claim_branch": "QREC-B1",
+      "revision_level": "NONE",
+      "branch": "q_rec",
+      "operational_epoch": 2,
+      "status": "CANONICAL_FINAL",
+      "sir_architecture_mapping": [
+        "Q_q"
+      ],
+      "scientific_question": "What does the completed branch establish, and what does it not?",
+      "verdict": "Q_REC_FINAL_QUALIFIED_POSITIVE_RESULT. Q_REC_BRANCH_CLOSED.",
+      "parent_stages": [
+        "S7.E2.1",
+        "S7.E2.2"
+      ],
+      "child_stages": [],
+      "key_numbers": {
+        "acceptance": "36/36",
+        "branch_closed": true
+      },
+      "governing_freeze": {
+        "path": "S7_12_FREEZE.json",
+        "freeze_id": "D3D-SIR-S7.12-QUALIFIED-RECONSTRUCTION-RESULT-V1",
+        "sha256": "1b1228cc5c33763836fa3bcb592affd6a8c300431df5d8fd5b742305faa7133b",
+        "authoritative": true,
+        "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+      }
+    }
+  ],
+  "historical": [
+    {
+      "path": "02_reconstruction_contract/S7_2_FREEZE.json",
+      "label": "S7.2 V1",
+      "status": "PRESERVED_AS_AUDIT_HISTORY",
+      "reason": "superseded by S7.2C correction_v1",
+      "exists": true,
+      "sha256": "5e65d87825024d2e62b0db8fab8add518f364110e41f3a63f61571c80cc3102f",
+      "preserved_unmodified": true
+    },
+    {
+      "path": "03_target_feasibility_and_boundary/S7_3_FREEZE.json",
+      "label": "S7.3 V1",
+      "status": "PRESERVED_AS_AUDIT_HISTORY",
+      "reason": "target vsurf; superseded by source-resolution V2",
+      "exists": true,
+      "sha256": "27d79631276fbbc59dfc3428bd566d5ca8a726878107a7fe38c3b9f2f784fa8a",
+      "preserved_unmodified": true
+    },
+    {
+      "path": "04_mathematical_interpretation/S7_4_FREEZE.json",
+      "label": "S7.4 V1",
+      "status": "PRESERVED_AS_AUDIT_HISTORY",
+      "reason": "blocked on target temporal resolution",
+      "exists": true,
+      "sha256": "7fdf4140986acb7df5e7aabd59b2007931c89654ed165d9a8f6b5ad638943879",
+      "preserved_unmodified": true
+    },
+    {
+      "path": "06_admissible_universe/S7_6_FREEZE.json",
+      "label": "S7.6 V1",
+      "status": "HISTORICAL_SUPERSEDED",
+      "reason": "6,034 atoms, C0-C4 on the 78-primitive ontology",
+      "exists": true,
+      "sha256": "ac3127136678499d7ef65f3d0ab55adb6dbff123a4f37ab21498d656f672e5bf",
+      "preserved_unmodified": true
+    },
+    {
+      "path": "07_search_policy_and_frontier/S7_7_FREEZE.json",
+      "label": "S7.7 V1",
+      "status": "PRESERVED_AS_AUDIT_HISTORY",
+      "reason": "BLOCKED_SEARCH_BUDGET",
+      "exists": true,
+      "sha256": "fa688ac6586c152864f979cb10843ce61475b07e636a64c6a42d94916abb181e",
+      "preserved_unmodified": true
+    },
+    {
+      "path": "_legacy_reference/LEGACY_QREC_STATUS.md",
+      "label": "legacy q_rec (I_p) branch",
+      "status": "RETIRED_NOT_USED",
+      "reason": "retired for target-provenance leakage and no skill over a persistence baseline; see DIIID_example/fig6data/RETIREMENT_RECORD.json",
+      "exists": true,
+      "sha256": "0a3b2d07caa6b2d3e1031d99cf4fa186392f6316f7d6de55a4a20607842d6077",
+      "preserved_unmodified": true
+    }
+  ],
+  "sir_architecture": {
+    "forward_chain": [
+      "O",
+      "O_q",
+      "X_q",
+      "G_q",
+      "A_q",
+      "Ahat_q",
+      "CR",
+      "Q_q"
+    ],
+    "contract": [
+      "K_claim = (q, I_q, U_q, V_q, Omega_q)",
+      "K_op(e) = (P_q, B_q, H_q)"
+    ],
+    "audit_chain": [
+      "delta",
+      "rho",
+      "j_min"
+    ],
+    "note": "G_q != A_q != Ahat_q != Sigma_q; the ontology is a task-conditioned grammar, not a feature library, not the concrete universe, not the explored frontier, and not the search policy."
+  }
+}

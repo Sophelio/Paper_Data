@@ -1,0 +1,26 @@
+{
+  "baseline_id": "B1A_AR1",
+  "role": "DIAGNOSTIC",
+  "carried_verbatim_from": "S7.7 PRE_SEARCH_CONTRACT_COMPLETION_V1",
+  "definition": "y_k = a + phi * y_{k-1} + eps_k, ordinary least squares on the calibration interval",
+  "protected_block_procedure": [
+    "initialise with the FINAL CALIBRATION target value",
+    "predict recursively",
+    "NEVER update the recursion using protected target values",
+    "a and phi remain calibration-fitted and frozen over that block"
+  ],
+  "no_teacher_forcing_on_protected_values": true,
+  "lag_order": 1,
+  "additional_lags": false,
+  "hyperparameters": {},
+  "n_hyperparameters": 0,
+  "added_to_mandatory_V3_thresholds": false,
+  "tuned_on_development": false,
+  "target": "density",
+  "geometry": "identical calibration intervals and protected samples as every comparator",
+  "preprocessing": "calibration-fitted only; sd<=0 divisor 1.0; no epsilon",
+  "metric": "NRMSE = RMSE(protected)/std(y_calibration, ddof=0)",
+  "development_discharges": 20,
+  "external_evaluation": "S7.10",
+  "run_in_S7_9": false
+}

@@ -1,0 +1,57 @@
+{
+  "record_id": "PRE_SEARCH_CONTRACT_COMPLETION_V1",
+  "status": "PROSPECTIVE_SPECIFICATION_COMPLETION",
+  "not_an_outcome_response": true,
+  "frozen_before_any_density_value_opened": true,
+  "frozen_utc": "2026-09-04T23:57:50.409286+00:00",
+  "parent_principle": "Both items were required by earlier q_rec planning but were never numerically instantiated. They are completed here, prospectively, before the first target-dependent operation of the pipeline.",
+  "S_PERS": {
+    "metric_id": "S_PERS_V1",
+    "name": "persistence skill",
+    "status": "REQUIRED_REPORTING",
+    "block_level_definition": "S_pers(M,s,b) = 1 - MSE(M,s,b) / MSE(B1_persistence,s,b)",
+    "identical_protected_samples_required": true,
+    "zero_denominator_behaviour": {
+      "condition": "MSE(B1_persistence,s,b) == 0",
+      "value": "UNDEFINED_ZERO_PERSISTENCE_ERROR",
+      "epsilon_permitted": false,
+      "note": "no epsilon, no floor, no substitution"
+    },
+    "discharge_level_definition": "S_pers(M,s) = 1 - mean_b MSE(M,s,b) / mean_b MSE(B1,s,b), provided the denominator is nonzero",
+    "cohort_summaries_operate_on": "discharge-level values",
+    "interpretation": {
+      "> 0": "improves on persistence",
+      "= 0": "matches persistence",
+      "< 0": "worse than persistence"
+    },
+    "does_not_replace_frozen_NRMSE": true,
+    "does_not_change_V3": true,
+    "V3_mandatory_gate": "remains exactly the already-frozen paired NRMSE condition, unchanged",
+    "may_guide_S7_7_search": false,
+    "run_in_S7_7": false
+  },
+  "B1A_AR1": {
+    "baseline_id": "B1A_AR1",
+    "name": "simple first-order autoregressive comparator",
+    "status": "DIAGNOSTIC_BASELINE",
+    "required_to_report": true,
+    "replaces_B1_persistence": false,
+    "added_to_mandatory_V3_thresholds": false,
+    "added_to_V3_note": "not added unless a frozen parent already requires it; no frozen parent does",
+    "calibration_fit": "y_k = a + phi * y_{k-1} + eps_k, ordinary least squares on the calibration interval",
+    "protected_block_procedure": [
+      "initialise with the FINAL CALIBRATION target value",
+      "predict recursively",
+      "NEVER update the recursion using protected target values",
+      "a and phi remain calibration-fitted and frozen over that block"
+    ],
+    "no_teacher_forcing_on_protected_values": true,
+    "lag_order": 1,
+    "additional_lags": false,
+    "hyperparameter_selection": "NONE",
+    "run_in_S7_7": false,
+    "belongs_to": "S7.9 / S7.10, alongside B0-B3 and H0_RAW_HARDENED"
+  },
+  "neither_baseline_run_here": true,
+  "no_density_value_opened_by_this_stage": true
+}

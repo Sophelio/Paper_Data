@@ -1,0 +1,312 @@
+{
+  "record_id": "S7_CLAIM_EVIDENCE_MATRIX_V2",
+  "generated_utc": "2026-09-08T00:51:17.641573+00:00",
+  "n_claims": 11,
+  "claims": [
+    {
+      "claim_id": "REC-01",
+      "claim": "Within the predictor-qualified frozen 62-discharge object, relational supports discovered without a discharge's own target values reconstruct that discharge nontrivially relative to the frozen baselines.",
+      "branch": "q_rec",
+      "stage": "S7.E2.1 / S7.12",
+      "manuscript_location": "Results 1.5, Fig. 4b, Supplementary S7.8 - MUST BE REPLACED",
+      "supporting_script": "E2_1_crossfitted_discovery_and_qualification/scripts/e2_1_c_aggregate.py",
+      "supporting_data": "E2_1_crossfitted_discovery_and_qualification/heldout_discharge_results.csv",
+      "supporting_result": "S7_12_qualified_result/Q_REC_STAR.json",
+      "value": {
+        "Delta_0": -0.764489,
+        "Delta_1": -0.027308,
+        "V3": "PASS"
+      },
+      "validation_status": "QUALIFIED_POSITIVE_FORMAL_PASS",
+      "limitations": [
+        "not external validation",
+        "not future-discharge transfer",
+        "not zero-shot",
+        "predictor-side applicability used the whole finite object",
+        "margin over persistence is modest and era-asymmetric"
+      ],
+      "superseded_predecessor": "the retired I_p / REL10 structural-transfer claim",
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B2"
+    },
+    {
+      "claim_id": "REC-02",
+      "claim": "Relational coordinates add substantial reconstruction utility over the tested raw-coordinate representations of the same admissible information.",
+      "branch": "q_rec",
+      "stage": "S7.E2.1",
+      "manuscript_location": "Results 1.5 - candidate replacement for the retired REL10/RAW10 claim",
+      "supporting_script": "E2_1_crossfitted_discovery_and_qualification/scripts/e2_1_c_aggregate.py",
+      "supporting_data": "E2_1_crossfitted_discovery_and_qualification/heldout_discharge_results.csv",
+      "supporting_result": "E2_1_crossfitted_discovery_and_qualification/E2_1_CROSSFITTED_METRICS.json",
+      "value": {
+        "vs_B2_raw_ridge_78": -0.096,
+        "vs_B3_raw_histgb_78": -0.1573,
+        "vs_H0_hardened_ridge_70": -0.0951
+      },
+      "validation_status": "SUPPORTED",
+      "limitations": [
+        "only the tested comparators",
+        "not 'universally better than raw features'"
+      ],
+      "superseded_predecessor": null,
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B2"
+    },
+    {
+      "claim_id": "REC-03",
+      "claim": "The object supports a family of adequate relational representations rather than identifying one.",
+      "branch": "q_rec",
+      "stage": "S7.9 / S7.11 / S7.E2.1 / S7.E2.2",
+      "manuscript_location": "Results 1.5 - present as a positive finding",
+      "supporting_script": "E2_1_crossfitted_discovery_and_qualification/scripts/e2_1_c_aggregate.py",
+      "supporting_data": "E2_1_crossfitted_discovery_and_qualification/fold_selected_supports.csv",
+      "supporting_result": "E2_1_crossfitted_discovery_and_qualification/support_recurrence.csv",
+      "value": {
+        "n_supports": 6,
+        "all_size": 12,
+        "any_identical": false,
+        "mean_pairwise_jaccard": 0.285244,
+        "distinct_coordinates": 35,
+        "seventh_search_also_distinct": true,
+        "epoch1_bootstrap_winners": 217
+      },
+      "validation_status": "SUPPORTED",
+      "limitations": [
+        "no canonical equation",
+        "no fold support is canonical",
+        "C_E2_ALL_DESC is representative only"
+      ],
+      "superseded_predecessor": null,
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B2"
+    },
+    {
+      "claim_id": "REC-04",
+      "claim": "The revised range-support-qualified discovery procedure eliminated the catastrophic extrapolation tail observed in Epoch 1.",
+      "branch": "q_rec",
+      "stage": "S7.10 / S7.E2.1",
+      "manuscript_location": "Results 1.5 / Supplement - new",
+      "supporting_script": "figures/make_s7_figures.py",
+      "supporting_data": "10_external_validation/external_discharge_metrics.csv; E2_1_crossfitted_discovery_and_qualification/heldout_discharge_results.csv",
+      "supporting_result": "S7_12_qualified_result/Q_REC_PROVENANCE_CHAIN.json",
+      "value": {
+        "epoch1_max": 11.95,
+        "epoch2_max": 0.9199,
+        "epoch1_above_1": 2,
+        "epoch2_above_1": 0,
+        "shot_187019": [
+          11.95,
+          0.297
+        ],
+        "shot_187022": [
+          11.77,
+          0.436
+        ]
+      },
+      "validation_status": "SUPPORTED_NON_CAUSAL",
+      "limitations": [
+        "NOT a controlled ablation: contract, basis, validation geometry and supports all differ between epochs",
+        "forbidden: 'K2 proved the range-support rule caused the improvement'"
+      ],
+      "superseded_predecessor": null,
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B2"
+    },
+    {
+      "claim_id": "REC-05",
+      "claim": "A frozen, prospectively declared external qualification of the Epoch-1 representation failed.",
+      "branch": "q_rec",
+      "stage": "S7.10",
+      "manuscript_location": "Supplement - new; currently absent",
+      "supporting_script": "10_external_validation/scripts",
+      "supporting_data": "10_external_validation/external_discharge_metrics.csv",
+      "supporting_result": "10_external_validation/S7_10_FREEZE.json",
+      "value": {
+        "REL_mean": 0.742365,
+        "B1_mean": 0.210274,
+        "Delta_1": 0.532091,
+        "V3": "FAIL",
+        "V6": "FAIL",
+        "Omega_rec": "EMPTY"
+      },
+      "validation_status": "NEGATIVE_RESULT_PRESERVED",
+      "limitations": [
+        "this is the result, not a preamble; nothing was repaired after it"
+      ],
+      "superseded_predecessor": null,
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B1"
+    },
+    {
+      "claim_id": "REC-06",
+      "claim": "The operational-state explanation of the Epoch-1 failure was tested target-blindly and refuted.",
+      "branch": "q_rec",
+      "stage": "S7.R1",
+      "manuscript_location": "Supplement - new; the load-bearing methodological episode",
+      "supporting_script": "R1_operational_state_reconciliation/scripts",
+      "supporting_data": "R1_operational_state_reconciliation (target-blind predictor evidence)",
+      "supporting_result": "R1_operational_state_reconciliation/S7_R1_FREEZE.json",
+      "value": {
+        "hypothesis_verdict": "REFUTED",
+        "earliest_invalidated_stage": "NONE_OF_THE_INSTANTIATED_OBJECTS",
+        "K_REC_REVISION_REQUIRED": true,
+        "minimal_component": "P_rec"
+      },
+      "validation_status": "SUPPORTED",
+      "limitations": [
+        "refutation, not confirmation of an alternative mechanism"
+      ],
+      "superseded_predecessor": null,
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B1"
+    },
+    {
+      "claim_id": "REC-07",
+      "claim": "Observational range support at tau = 1 admits 3,451 of 10,778 atoms and eliminates no constructor family.",
+      "branch": "q_rec",
+      "stage": "S7.K2",
+      "manuscript_location": "Supplement - new",
+      "supporting_script": "K2_observational_range_support_contract/scripts",
+      "supporting_data": "K2_observational_range_support_contract/range_support_threshold_sensitivity.csv",
+      "supporting_result": "K2_observational_range_support_contract/S7_K2_FREEZE.json",
+      "value": {
+        "tau": 1.0,
+        "survivors": 3451,
+        "of": 10778,
+        "family_survival_fraction": {
+          "C0": 0.773,
+          "C1": 0.305,
+          "C2": 0.715,
+          "C3": 0.155,
+          "C5": 0.205,
+          "C6": 0.256,
+          "C7": 0.234
+        },
+        "degenerate_cells": 263
+      },
+      "validation_status": "INDEPENDENTLY_REPRODUCED",
+      "limitations": [
+        "an applicability property, not a performance result",
+        "tau is not a hyperparameter, regularizer, physical constant or confidence level"
+      ],
+      "superseded_predecessor": null,
+      "scientific_task_id": "q_rec",
+      "claim_branch": "QREC-B2"
+    },
+    {
+      "claim_id": "DESC-01",
+      "claim": "A shared seven-coordinate relational support organizes standardized dW_dia/dt across 62 discharges, with discharge-specific coefficients.",
+      "branch": "q_desc",
+      "stage": "external: canonical_d3d_62_shot_run_v1",
+      "manuscript_location": "Results 1.5, Fig. 4a, Supplementary S7.3-S7.4",
+      "supporting_script": "canonical_d3d_62_shot_run_v1/build_canonical_run_package.py",
+      "supporting_data": "canonical_d3d_62_shot_run_v1/d3d_discharge_metrics.csv",
+      "supporting_result": "canonical_d3d_62_shot_run_v1/d3d_pooled_metrics.json",
+      "value": {
+        "pooled_rmse": 0.05758467247445343,
+        "mean_vector_rmse": 0.4125238315775986,
+        "n_discharges": 62,
+        "n_samples_each": 1000
+      },
+      "validation_status": "SUPPORTED_CURRENT",
+      "limitations": [
+        "target-containing implicit closure, not an independent predictor",
+        "not causal",
+        "cohort-mean coefficients summarize, they do not define"
+      ],
+      "superseded_predecessor": null,
+      "scientific_task_id": "q_desc",
+      "claim_branch": null
+    },
+    {
+      "claim_id": "DESC-02",
+      "claim": "Coefficient identifiability conditional on the selected support is mixed: five coefficients robustly resolved, two uncertainty-dominated, two robust coefficient-space directions of five positive.",
+      "branch": "q_desc",
+      "stage": "external: Coefficient_conditioning/Correction_audit",
+      "manuscript_location": "Supplementary S7.7, Fig. S1",
+      "supporting_script": "Coefficient_conditioning/Correction_audit/run_correction_audit.py",
+      "supporting_data": "Coefficient_conditioning/Correction_audit/tables/corrected_coefficient_classification.csv",
+      "supporting_result": "Coefficient_conditioning/Correction_audit/outputs/coefficient_conditioning_correction_summary.json",
+      "value": {
+        "verdict": "D3D-MIXED-COEFFICIENT-IDENTIFIABILITY",
+        "robust": 5,
+        "uncertainty_dominated": 2,
+        "positive_directions": 5,
+        "robust_directions": 2,
+        "rank6_median_rel_coef": 0.7993154563548318,
+        "rank6_median_abs_rmse": 0.031029606819801332,
+        "estimator": "REML_primary_with_ML_sensitivity"
+      },
+      "validation_status": "SUPPORTED_CURRENT",
+      "limitations": [
+        "conditional on the selected support",
+        "no coefficient is a dimensional physical constant"
+      ],
+      "superseded_predecessor": "D3D-COEFFICIENT-FAMILY-RESOLVED (archived and removed from active outputs)",
+      "scientific_task_id": "q_desc",
+      "claim_branch": null
+    },
+    {
+      "claim_id": "DESC-03",
+      "claim": "The eliminated target-map is explicitly ill conditioned.",
+      "branch": "q_desc",
+      "stage": "external: Implicit_elimination_and_denominator_conditioning",
+      "manuscript_location": "Supplementary S7.6",
+      "supporting_script": "Implicit_elimination_and_denominator_conditioning/run_implicit_conditioning_audit.py",
+      "supporting_data": "Implicit_elimination_and_denominator_conditioning/outputs/eliminated_A_summary.json",
+      "supporting_result": "Implicit_elimination_and_denominator_conditioning/outputs/implicit_conditioning_summary.json",
+      "value": {
+        "verdict": "D3D-IMPLICIT-CLOSURE-EXPLICITLY-ILL-CONDITIONED",
+        "min_abs_A": 2.6428213717455407e-07,
+        "frac_abs_A_lt_1e-4": 0.0023548387096774194,
+        "shiftval_range": [
+          14.643161791053483,
+          24.2426158353731
+        ],
+        "elimination_identity_max_error": 7.896461262646426e-15,
+        "explicit_pooled_rmse": 187.2273661101626
+      },
+      "validation_status": "SUPPORTED_CURRENT",
+      "limitations": [
+        "a briefing checkpoint expecting ~41% of samples below |A|<1e-4 is not supported; the frozen value is 0.24%"
+      ],
+      "superseded_predecessor": null,
+      "scientific_task_id": "q_desc",
+      "claim_branch": null
+    },
+    {
+      "claim_id": "RETIRED-01",
+      "claim": "A ten-coordinate target-free relational support selected on seven discharges retains reconstruction utility on 55 external discharges (REL10 0.126 vs RAW10 0.182, better on 46/55).",
+      "branch": "q_rec (retired)",
+      "stage": "external: DIII-D Ip relational reconstruction",
+      "manuscript_location": "Results 1.5, Fig. 4b, Supplementary S7.8 - STILL PRESENT IN THE SHIPPED MANUSCRIPT",
+      "supporting_script": "n/a",
+      "supporting_data": "Figure_data/d3d_reconstruction_summary.json",
+      "supporting_result": "fig6data/RETIREMENT_RECORD.json",
+      "value": {
+        "pooled_rmse_REL10": 0.1257122694487528,
+        "pooled_rmse_RAW10": 0.182086862730149,
+        "wins": 46,
+        "of": 55
+      },
+      "validation_status": "RETIRED_FOR_PROVENANCE_LEAKAGE",
+      "limitations": [
+        "6/10 REL10 and 4/10 RAW10 features carry upstream I_p dependence",
+        "a constant persistence predictor (0.0685) beats all three reported models",
+        "must not be cited"
+      ],
+      "superseded_predecessor": null,
+      "scientific_task_id": "q_rec",
+      "claim_branch": "RETIRED_PRE_S7_LINEAGE"
+    }
+  ],
+  "branch_lineage": {
+    "q_rec": [
+      "QREC-B1",
+      "QREC-B2"
+    ],
+    "QREC-B2": "descendant of QREC-B1, constituted at S7.E2.0",
+    "note": "REC-04 and REC-07 span both branches by construction (they compare epochs); they are attributed to QREC-B2, which is where the comparison is reported."
+  },
+  "rule": "a claim without a reproducible evidence path is not publication-ready"
+}

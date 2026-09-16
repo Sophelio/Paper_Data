@@ -1,0 +1,45 @@
+{
+  "audit_id": "D3D-FIG6-PROVENANCE-AUDIT-V1",
+  "generated_utc": "2026-09-02T04:38:13.777673+00:00",
+  "python": "3.13.5",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "seed": 20260901,
+  "data_dir": "D:\\SIR_paper\\DIIID_example\\data\\resampled_data_v6",
+  "n_shots": 62,
+  "documentary_provenance_available": false,
+  "documentary_provenance_note": "Archive metadata records only resampling method/category. No physical provenance or upstream diagnostic lineage is recorded, so documentary provenance could not be established and the conservative rule was applied.",
+  "thresholds": {
+    "abs_corr": 0.3,
+    "rel_scatter": 0.25
+  },
+  "verdicts": {
+    "pcdiamag3": "TARGET_INDEPENDENT",
+    "pinj": "TARGET_INDEPENDENT",
+    "density": "TARGET_INDEPENDENT",
+    "ip": "TARGET",
+    "betan": "TARGET_DEPENDENT",
+    "q95": "TARGET_DEPENDENT",
+    "li": "PROVENANCE_UNRESOLVED",
+    "kappa": "PROVENANCE_UNRESOLVED"
+  },
+  "decision_gate": {
+    "rule": "if the REL141/REL10 universe contains ANY target-dependent or unresolved coordinate, q_rec is NOT figure-ready",
+    "failed": true,
+    "REL10_leaking_features": 6,
+    "RAW10_leaking_features": 4,
+    "consequence": "RETIRED_FOR_PROVENANCE_LEAKAGE"
+  },
+  "corrected_universe_feasibility": {
+    "admissible_signals": [
+      "density",
+      "pcdiamag3",
+      "pinj"
+    ],
+    "n_shots": 62,
+    "median_normalised_rmse": 0.42095225076754816,
+    "median_r2": -25.604002145310893,
+    "frac_r2_above_0": 0.0
+  },
+  "operation_classification": "AUDITED_EXTERNAL_ANALYSIS",
+  "operation_note": "Dalia serves the DIII-D signals and the transform family, but exposes no provenance-lineage primitive, so this audit is an external harness reading the same archived NPZ inputs."
+}

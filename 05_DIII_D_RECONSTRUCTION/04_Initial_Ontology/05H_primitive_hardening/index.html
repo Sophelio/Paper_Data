@@ -1,0 +1,92 @@
+<title>S7.5H — Primitive space and ontology hardening</title><style>
+:root{--bg:#fbfaf8;--fg:#1c1b19;--mut:#6b6862;--line:#dedbd4;--card:#fff;
+--ok:#1d6f42;--warn:#8a5a00;--bad:#9b2226;--acc:#2b4c7e;--acc2:#f0f4fa}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:28px 22px 80px}
+header{border-bottom:2px solid var(--fg);padding-bottom:14px;margin-bottom:22px}
+.kicker{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+h1{font-size:26px;margin:6px 0 8px;line-height:1.25}
+h2{font-size:17px;margin:30px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--line)}
+h3{font-size:14px;margin:20px 0 6px;color:var(--acc)}
+.badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.b{font-size:11px;padding:3px 9px;border-radius:11px;border:1px solid var(--line);
+background:var(--card);white-space:nowrap}
+.b.ok{background:#e8f3ec;border-color:#bcdcc8;color:var(--ok)}
+.b.warn{background:#fdf3e0;border-color:#e8d3a8;color:var(--warn)}
+.b.bad{background:#fbeaea;border-color:#e6bebe;color:var(--bad)}
+.b.acc{background:var(--acc2);border-color:#c3d3e8;color:var(--acc)}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:13px}
+th,td{text-align:left;padding:6px 9px;border-bottom:1px solid var(--line);
+vertical-align:top}
+th{font-weight:600;color:var(--mut);font-size:11px;text-transform:uppercase;
+letter-spacing:.05em}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px}
+code{background:#f1efeb;padding:1px 5px;border-radius:3px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:7px;
+padding:14px 16px;margin:12px 0}
+.strip{display:flex;flex-wrap:wrap;align-items:center;gap:5px;background:var(--card);
+border:1px solid var(--line);border-radius:7px;padding:11px 13px;margin:12px 0;
+font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px}
+.node{padding:3px 9px;border-radius:5px;background:#f1efeb;border:1px solid var(--line);
+color:var(--mut)}
+.node.on{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:600}
+.arrow{color:#b8b4ad}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:34px;
+padding-top:14px;border-top:1px solid var(--line);font-size:13px}
+a{color:var(--acc)}
+ul{margin:8px 0;padding-left:20px}li{margin:3px 0}
+.note{color:var(--mut);font-size:12.5px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:11px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:7px;padding:11px 13px}
+.tile .id{font-size:11px;letter-spacing:.08em;color:var(--mut);text-transform:uppercase}
+.tile .t{font-weight:600;margin:3px 0 5px;font-size:13.5px}
+.q{border-left:3px solid var(--acc);padding-left:12px;color:var(--mut);margin:8px 0}
+.scroll{overflow-x:auto}
+@media(prefers-color-scheme:dark){:root{--bg:#16151a;--fg:#e8e6e1;--mut:#9a968e;
+--line:#33313a;--card:#1e1d23;--acc:#8fb4e8;--acc2:#22283a}
+code{background:#26252c}.node{background:#26252c}
+.b.ok{background:#16281d;border-color:#2c4a36}
+.b.warn{background:#2b2312;border-color:#4d3d1c}
+.b.bad{background:#2c1618;border-color:#4d2427}}
+</style>
+<div class="wrap"><header>
+<div class="kicker">SIR — DIII-D Supplementary Note S7</div>
+<h1>S7.5H &middot; Primitive space and ontology hardening</h1>
+<div class="badges">
+<span class="b acc">task q_rec</span>
+<span class="b acc">claim branch QREC-B1</span>
+<span class="b acc">operational epoch 1</span>
+<span class="b">INSTANTIATION</span>
+<span class="b acc">CANONICAL</span>
+<span class="b">34 files</span></div>
+</header>
+<h2>Position in the SIR architecture</h2>
+<div class="strip"><span class="node">𝒪</span><span class="arrow">→</span><span class="node">𝒪<sub>q</sub></span><span class="arrow">→</span><span class="node">X<sub>q</sub></span><span class="arrow">→</span><span class="node on">𝒢<sub>q</sub></span><span class="arrow">→</span><span class="node">𝔄<sub>q</sub></span><span class="arrow">→</span><span class="node">𝔄̂<sub>q</sub></span><span class="arrow">→</span><span class="node">(C*,R*)</span><span class="arrow">→</span><span class="node">𝒬*<sub>q</sub></span></div><div class="strip"><span class="node">contract</span><span class="node">𝒦<sup>claim</sup></span><span class="node">𝒦<sup>op,(e)</sup></span><span class="node">Σ<sub>q</sub></span><span class="arrow">&nbsp;&nbsp;audit&nbsp;</span><span class="node">δ<sup>(e)</sup></span><span class="arrow">→</span><span class="node">ρ<sub>q</sub></span><span class="arrow">→</span><span class="node">j<sub>min</sub></span></div>
+<p class="note">Highlighted elements are the ones this stage instantiates, audits
+or revises. A stage may touch more than one.</p>
+<table><tr><th>scientific task</th><th>claim branch</th><th>role</th>
+<th>operational epoch</th><th>revision level</th></tr>
+<tr><td>q_rec</td><td>QREC-B1</td><td>MEMBER</td>
+<td>1</td><td>INSTANTIATION</td></tr></table>
+<p class="note">A claim branch fixes (q, ℐ<sub>q</sub>, U<sub>q</sub>,
+𝒱<sub>q</sub>, Ω<sub>q</sub>); an operational epoch revises
+(𝒫<sub>q</sub>, ℬ<sub>q</sub>, ℋ<sub>q</sub>). A material revision of a
+claim-defining commitment produces a <em>descendant</em> claim branch under the
+same task — see <a href="../REVISION_LEDGER.md">REVISION_LEDGER.md</a>.</p>
+<h2>Scientific question</h2>
+<div class="q">Which primitives and constructors survive hardening?</div>
+<h2>Operation</h2><p>70-primitive hardened basis; 9 constructor families C0-C8; 23,861 symbolic coordinates.</p>
+<h2>Verdict</h2><div class="card"><strong>G_REC_DENSITY_HARDENED_V2 v2.0.0 frozen, 48/48 acceptance.</strong></div>
+<table><tr><th>quantity</th><th>value</th></tr><tr><td>n_primitives</td><td class='num'>70</td></tr><tr><td>n_symbolic</td><td class='num'>23861</td></tr><tr><td>families</td><td class='num'>9</td></tr></table>
+<h2>Qualifications</h2><p class="note">Derivative eligibility declared per primitive (63 of 70).</p>
+<h2>Governing freeze</h2>
+<div class="card"><code>D3D-SIR-S7.5H-PRIMITIVE-SPACE-AND-ONTOLOGY-HARDENING-V1</code><br>
+<span class="note">S7_5H_FREEZE.json &middot; sha256 <code>dffdd834ecf40b0f22b48440…</code></span><br>
+<span class="note">This page indexes the freeze; the freeze remains authoritative
+for all hashes, acceptance checks and numerical facts.</span></div>
+<h2>Executables</h2><ul><li><code>scripts/s7_5h_a_policy.py</code></li><li><code>scripts/s7_5h_b_redundancy.py</code></li><li><code>scripts/s7_5h_c_ontology.py</code></li></ul>
+<div class="nav"><div><a href="../05_typed_relational_ontology/index.html">&larr; S7.5</a></div><div><a href="../index.html">S7 dashboard</a></div>
+<div><a href="../06_admissible_universe/hardened_v2/index.html">S7.6R &rarr;</a></div></div></div>

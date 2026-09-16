@@ -1,0 +1,61 @@
+{
+  "record_id": "GAS_SIGNAL_PROVENANCE_CORRECTION_V1",
+  "generated_utc": "2026-09-06T02:49:44.653123+00:00",
+  "resolution": "GAS_SIGNAL_UNIT_RESOLVED_COMMAND_VOLTAGE",
+  "applies_to": [
+    "gasa",
+    "gasb",
+    "gasc",
+    "gasd"
+  ],
+  "resolved_unit": "V",
+  "resolved_semantics": "gas injection valve COMMAND signal (actuator command voltage)",
+  "not_a_flow_rate": true,
+  "authoritative_source": {
+    "artifact": "S7/SIGNAL_UNITS.json",
+    "sha256": "b8b3cead0d1d23d8fc42a54824421472847c0744fb293b6fd2196ac93e598e72",
+    "units_source": "smallELM_freq_v6_ZL_data/{shot}_metadata.json ('units' per signal)",
+    "evidence_class": "LOCAL_DOCUMENTED (units registry)",
+    "upstream_variants": {
+      "gasa": {
+        "volt": 51,
+        "": 11
+      },
+      "gasb": {
+        "volt": 51,
+        "": 11
+      },
+      "gasc": {
+        "volt": 51,
+        "": 11
+      },
+      "gasd": {
+        "volt": 62
+      }
+    },
+    "reading": "the upstream per-shot metadata records the unit string literally as 'volt' on 51 of 62 shots for gasa/gasb/gasc and on 62 of 62 for gasd; the remainder report an empty string, never a conflicting unit"
+  },
+  "superseded_record": {
+    "artifact": "diiid_sir_data_provider.py SIGNAL_MANIFEST; S7.1 reconciliation/units_recovery.csv; S7.1 units_sources.md",
+    "unit": "Torr*L/s",
+    "semantic_physical_type": "gas_flow",
+    "evidence_class": "STRONGLY_INFERRED",
+    "confidence": "low",
+    "dimensional_signature": "ambiguous",
+    "magnitude_test": "NOT_TESTED",
+    "unresolved_reason": "external convention identifies the quantity but the stored scale/units are ambiguous and no local artifact resolves them",
+    "status": "SUPERSEDED_BY_S7_1R_UNITS_REGISTRY"
+  },
+  "correction_to_R1_ledger_entry_K_R1_02": "R1 recorded this as an unreconciled inconsistency between two records of equal standing. K2 finds they are NOT of equal standing: the Torr*L/s entry is a first-pass external-convention hypothesis at LOW confidence with an AMBIGUOUS dimensional signature and NOT_TESTED magnitude, and the S7.1R units registry SUPERSEDED it with local documentary evidence. The same registry and the same evidence mechanism resolved pcdiamag3 to 'raw'/uncalibrated, which the entire downstream lineage accepted. The ontology is CORRECT; the stale record is the provider manifest.",
+  "consequence_for_frozen_coordinates": {
+    "PROD(gasa,gasa) output_dimension": "(V)*(V)",
+    "is_correct": true,
+    "R1_concern_withdrawn": true,
+    "numerical_impact": "NONE - CANON contains neither label, scale factor is exactly 1.0"
+  },
+  "epoch1_files_edited": 0,
+  "record_class": "FUTURE_EPOCH_SUPERSEDING_PROVENANCE_RECORD",
+  "physical_reading_for_epoch2": "gasa..gasd are actuator COMMAND voltages, not fueling rates. A squared gas command, PROD(gasa,gasa), is dimensionally V^2 and carries no direct physical interpretation as a fueling quantity. This strengthens, and does not weaken, the S7.11/R1 reading of the Epoch-1 pathology.",
+  "blocks_K2": false,
+  "range_support_metric_must_remain_dimensionless_regardless": true
+}

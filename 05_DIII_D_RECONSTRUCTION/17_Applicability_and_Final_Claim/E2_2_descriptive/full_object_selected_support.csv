@@ -1,0 +1,13 @@
+coordinate_id,constructor,position
+ID(pcdiamag3),C0,1
+"PROD(ece37,ece39)",C2,2
+"PROD(pinj,pinj_30l)",C2,3
+"RATIO(ece21,cerqtit10)",C3,4
+"RATIO(fs03da,cerqtit3)",C3,5
+"RATIO(gasc,cerqtit10)",C3,6
+"RATIO(gasc,cerqtit11)",C3,7
+"RATIO(ip,ece39)",C3,8
+"RATIO(pinj_33r,cerqtit10)",C3,9
+"RATIO(prmtan_neped,ece38)",C3,10
+"RATIO(tinj,ece20)",C3,11
+RECIP(cerqtit10),C5,12

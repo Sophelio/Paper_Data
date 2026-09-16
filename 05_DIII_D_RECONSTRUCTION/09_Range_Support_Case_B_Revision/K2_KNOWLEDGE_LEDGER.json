@@ -1,0 +1,130 @@
+{
+  "record_id": "K2_KNOWLEDGE_LEDGER_V1",
+  "generated_utc": "2026-09-06T02:59:57.816714+00:00",
+  "A_inherited_from_epoch1_and_R1": [
+    {
+      "knowledge_id": "K2-A-01",
+      "statement": "Epoch-1 qualification failed V3 and V6; the pooled mean was dominated by two blocks in which a C2 self-product left its calibration range.",
+      "evidence_class": "INHERITED_HISTORICAL",
+      "source": "S7.10 / S7.11 / S7.R1 freezes",
+      "stage": "S7.K2",
+      "target_used": false,
+      "model_error_used": true,
+      "normative_or_empirical": "empirical",
+      "implication": "MOTIVATING_EVIDENCE only - never prospective validation",
+      "affected_K_component": null
+    },
+    {
+      "knowledge_id": "K2-A-02",
+      "statement": "R1 tested and refuted the operational-state hypothesis and localized the defect to P_rec, with no instantiated SIR object invalidated.",
+      "evidence_class": "INHERITED_HISTORICAL",
+      "source": "S7_R1_FREEZE.json",
+      "stage": "S7.K2",
+      "target_used": false,
+      "model_error_used": false,
+      "normative_or_empirical": "empirical",
+      "implication": "K2 is a contract-hardening stage, not an object reconciliation",
+      "affected_K_component": "P_rec"
+    }
+  ],
+  "B_predictor_only_K2_findings": [
+    {
+      "knowledge_id": "K2-B-01",
+      "statement": "gasa..gasd are gas injection valve COMMAND signals in volts. The upstream per-shot metadata records the unit string literally as 'volt' on 51/62 shots (gasa-c) and 62/62 (gasd). The provider manifest's Torr*L/s / gas_flow entry is a superseded first-pass external-convention hypothesis at LOW confidence with an AMBIGUOUS dimensional signature and NOT_TESTED magnitude.",
+      "evidence_class": "FROZEN_SIGNAL_PROVENANCE",
+      "source": "S7/SIGNAL_UNITS.json; S7.1 units_recovery.csv",
+      "stage": "S7.K2",
+      "target_used": false,
+      "model_error_used": false,
+      "normative_or_empirical": "empirical",
+      "implication": "GAS_SIGNAL_UNIT_RESOLVED_COMMAND_VOLTAGE; the frozen (V)*(V) dimension on PROD(gasa,gasa) is CORRECT and the R1 concern is withdrawn",
+      "affected_K_component": null
+    },
+    {
+      "knowledge_id": "K2-B-02",
+      "statement": "Over all 10,778 atoms x 186 cells there are ZERO non-finite coordinate-cells, so the existing denominator condition is not the binding constraint anywhere in the atomic universe.",
+      "evidence_class": "PREDICTOR_VALUE_EVIDENCE",
+      "source": "range_support_atomic_audit.csv",
+      "stage": "S7.K2",
+      "target_used": false,
+      "model_error_used": false,
+      "normative_or_empirical": "empirical",
+      "implication": "range support is a genuinely distinct condition, not a restatement of denominator admissibility",
+      "affected_K_component": "P_rec"
+    },
+    {
+      "knowledge_id": "K2-B-03",
+      "statement": "Hull excess over calibration RANGE is markedly more constructor-neutral than hull excess over calibration RMS: p90 spread ratio 4.3 across the seven families versus 35.1. RMS-normalisation systematically penalises rate-bearing families whose calibration mean sits near zero.",
+      "evidence_class": "PREDICTOR_VALUE_EVIDENCE",
+      "source": "range_support_constructor_summary.csv",
+      "stage": "S7.K2",
+      "target_used": false,
+      "model_error_used": false,
+      "normative_or_empirical": "empirical",
+      "implication": "metric R1 selected on desideratum D6",
+      "affected_K_component": "P_rec"
+    },
+    {
+      "knowledge_id": "K2-B-04",
+      "statement": "At tau=1, 3,451 of 10,778 atoms (32.0 percent) retain full-domain range support across all 62 discharges, spanning all seven populated constructor families. Because the support predicate is a conjunction over the same cells, any combination of full-domain coordinates is automatically a full-domain support.",
+      "evidence_class": "PREDICTOR_VALUE_EVIDENCE",
+      "source": "range_support_threshold_sensitivity.csv",
+      "stage": "S7.K2",
+      "target_used": false,
+      "model_error_used": false,
+      "normative_or_empirical": "empirical",
+      "implication": "Epoch-2 search space remains ~1e34 size-12 full-domain supports; the rule is neither vacuous nor over-restrictive",
+      "affected_K_component": "P_rec"
+    },
+    {
+      "knowledge_id": "K2-B-05",
+      "statement": "None of the 217 Epoch-1 bootstrap-winning supports is full-domain at tau <= 1, and C_dev_star has only 6 of 12 coordinates individually full-domain.",
+      "evidence_class": "PREDICTOR_VALUE_EVIDENCE",
+      "source": "range_support_family_support_audit.csv",
+      "stage": "S7.K2",
+      "target_used": false,
+      "model_error_used": false,
+      "normative_or_empirical": "empirical",
+      "implication": "expected: that frontier was searched under a utility with no range-support pressure. It is ALSO direct evidence that tau was not outcome-tuned, since the chosen threshold is maximally unfavourable to every Epoch-1 object",
+      "affected_K_component": null
+    }
+  ],
+  "C_normative_contract_decisions": [
+    {
+      "knowledge_id": "K2-C-01",
+      "statement": "P_rec gains P-RANGE-SUPPORT with tau=1, separate from and additional to DENOMINATOR_ADMISSIBILITY_PRIMARY_V1.",
+      "evidence_class": "NORMATIVE_DECISION",
+      "source": "K_REC_V2.json",
+      "stage": "S7.K2",
+      "target_used": false,
+      "model_error_used": false,
+      "normative_or_empirical": "normative",
+      "implication": "the minimal contract revision R1 predicted",
+      "affected_K_component": "P_rec"
+    },
+    {
+      "knowledge_id": "K2-C-02",
+      "statement": "V_rec gains V-RANGE, a coverage gate only. It adds no performance threshold and does not modify V3-V10.",
+      "evidence_class": "NORMATIVE_DECISION",
+      "source": "K_REC_V2.json",
+      "stage": "S7.K2",
+      "target_used": false,
+      "model_error_used": false,
+      "normative_or_empirical": "normative",
+      "implication": "consequential operationalization of P-RANGE-SUPPORT",
+      "affected_K_component": "V_rec"
+    },
+    {
+      "knowledge_id": "K2-C-03",
+      "statement": "A_rec keeps locally unsupported coordinates; applicability is LOCAL and the coverage requirement lives in search and qualification.",
+      "evidence_class": "NORMATIVE_DECISION",
+      "source": "K_REC_V2.json",
+      "stage": "S7.K2",
+      "target_used": false,
+      "model_error_used": false,
+      "normative_or_empirical": "normative",
+      "implication": "preserves SIR partial-map semantics and an expressive ontology",
+      "affected_K_component": "P_rec/V_rec"
+    }
+  ]
+}

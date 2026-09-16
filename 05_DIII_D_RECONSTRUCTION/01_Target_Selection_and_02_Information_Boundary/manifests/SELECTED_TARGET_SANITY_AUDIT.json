@@ -1,0 +1,25 @@
+{
+  "target": "vsurf",
+  "checks": {
+    "signal_present_in_frozen_inventory": true,
+    "scientific_description_present": true,
+    "resolved_physical_unit": true,
+    "origin_class_eligible": true,
+    "belongs_to_described_scientific_object": true,
+    "new_documentation_or_provenance_defect_found": false
+  },
+  "inspected": [
+    "signal identity",
+    "scientific description",
+    "unit",
+    "provenance class",
+    "target-side flags"
+  ],
+  "not_inspected": [
+    "reconstructability",
+    "correlation with predictors",
+    "any reconstruction",
+    "any baseline"
+  ],
+  "verdict": "TARGET_SELECTION_CONFIRMED"
+}

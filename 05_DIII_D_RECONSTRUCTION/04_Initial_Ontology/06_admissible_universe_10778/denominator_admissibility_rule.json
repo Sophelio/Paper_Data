@@ -1,0 +1,46 @@
+{
+  "rule_id": "DENOMINATOR_ADMISSIBILITY_PRIMARY_V1",
+  "status": "PRE_ENUMERATION_CONTRACT_COMPLETION",
+  "not_an_empirical_correction": true,
+  "frozen_utc": "2026-09-04T06:02:48.210786+00:00",
+  "frozen_before_any_coordinate_value_inspected": true,
+  "parent_principle": "S7.2 P_rec class E froze the principle: a denominator whose calibration-interval sign changes, or whose minimum absolute magnitude falls below a fixed fraction of its calibration scale, is inadmissible unless a declared regularisation is used. The PRIMARY ontology declares NO denominator regularisation. The fixed fraction and the scale were never numerically instantiated; this completes that specification.",
+  "DENOMINATOR_MARGIN_PRIMARY": 0.05,
+  "scale_definition": "scale(d) = RMS(d) = sqrt(mean(d^2)) on one calibration block",
+  "margin_definition": "eta(d) = min(|d|) / RMS(d) on one calibration block",
+  "zero_scale_behaviour": "RMS(d) == 0  ->  FAIL",
+  "primary_conditions_all_required": [
+    "d is finite throughout the calibration block",
+    "d does NOT change sign within the calibration block",
+    "eta(d) >= 0.05"
+  ],
+  "interpretation": "the denominator must remain at least 5% of its RMS calibration scale away from zero",
+  "evaluated_on": "every required development calibration block (20 discharges x blocks A, B, C)",
+  "fail_if_any_required_block_fails": true,
+  "no_regularisation_permitted": [
+    "denominator shift",
+    "additive epsilon",
+    "clipping",
+    "bounded reciprocal",
+    "piecewise branch repair"
+  ],
+  "sensitivity_values_for_S7_11_only": [
+    0.01,
+    0.1
+  ],
+  "sensitivity_may_replace_primary": false,
+  "applies_to": {
+    "C3_ratio": "denominator d = x_j (level, canonical units)",
+    "C4_phase": "denominator d = dx_j/dt from FD2_PHYSICAL_TIME_V1"
+  },
+  "external_application_rule": {
+    "same_rule_applies": true,
+    "on_failure": [
+      "do NOT shift or regularize",
+      "do NOT replace the coordinate",
+      "do NOT refit the support",
+      "record the representation as NOT_APPLICABLE on that discharge/block"
+    ],
+    "outcome_decided_by": "the downstream qualification stage, not S7.6"
+  }
+}

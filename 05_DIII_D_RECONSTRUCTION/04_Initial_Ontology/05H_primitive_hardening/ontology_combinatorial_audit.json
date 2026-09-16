@@ -1,0 +1,87 @@
+{
+  "operands": {
+    "M": 70,
+    "Mt": 68,
+    "Md": 63
+  },
+  "formulas": {
+    "C0": "M",
+    "C1": "Md",
+    "C2": "Mt(Mt+1)/2",
+    "C3": "Mt(Mt-1)",
+    "C4": "Md(Md-1)",
+    "C5": "Mt",
+    "C6": "Mt*Md",
+    "C7": "Md*Mt",
+    "C8": "Mt*Md"
+  },
+  "counts": {
+    "C0": 70,
+    "C1": 63,
+    "C2": 2346,
+    "C3": 4556,
+    "C4": 3906,
+    "C5": 68,
+    "C6": 4284,
+    "C7": 4284,
+    "C8": 4284
+  },
+  "symbolic_primary_total": 23861,
+  "original_G_REC_V1_total": 13604,
+  "ratio_hardened_to_original": 1.754,
+  "direction": "LARGER",
+  "interpretation": "The hardened ontology is 1.75x LARGER than G_REC_DENSITY_V1 despite using 8 fewer primitives. The four new families contribute 12920 coordinates, of which C6/C7/C8 alone contribute 12852. Narrowing the primitive basis by 10% did not offset broadening the grammar from five families to nine.",
+  "instrumentation_density_audit": {
+    "ece_primitives_before": 40,
+    "ece_primitives_after": 33,
+    "ece_share_before": 0.5128,
+    "ece_share_after": 0.4714,
+    "materially_reduced": false,
+    "assessment": "NOT materially reduced. The ECE share of the primitive basis falls only from 51.3% to 47.1%. The frozen conservative pairwise criterion defers 7 of 40 ECE channels. The stated motivation of preventing one diagnostic family from dominating the combinatorial weight is therefore only marginally served by the primitive-space component of this hardening; the grammar-broadening component is what changed substantially.",
+    "no_tuning_performed": true
+  },
+  "effective_rank_disagreement": {
+    "status": "STRONG_DISAGREEMENT_RECORDED_NOT_ACTED_ON",
+    "detail": [
+      {
+        "semantic_group_id": "X_CER_Ti",
+        "n_members": 7,
+        "n_representatives_selected": 7,
+        "median_rank_95pct": 2.0,
+        "median_rank_99pct": 3.5,
+        "n_cells": 60,
+        "role": "AUDIT_ONLY_NEVER_SELECTION"
+      },
+      {
+        "semantic_group_id": "X_CER_v",
+        "n_members": 7,
+        "n_representatives_selected": 7,
+        "median_rank_95pct": 3.0,
+        "median_rank_99pct": 4.0,
+        "n_cells": 60,
+        "role": "AUDIT_ONLY_NEVER_SELECTION"
+      },
+      {
+        "semantic_group_id": "X_ECE",
+        "n_members": 40,
+        "n_representatives_selected": 33,
+        "median_rank_95pct": 3.0,
+        "median_rank_99pct": 7.0,
+        "n_cells": 60,
+        "role": "AUDIT_ONLY_NEVER_SELECTION"
+      },
+      {
+        "semantic_group_id": "X_fs",
+        "n_members": 4,
+        "n_representatives_selected": 3,
+        "median_rank_95pct": 2.0,
+        "median_rank_99pct": 3.0,
+        "n_cells": 60,
+        "role": "AUDIT_ONLY_NEVER_SELECTION"
+      }
+    ],
+    "explanation": "The audit-only SVD summary suggests each redundancy-eligible group has a far lower linear effective rank than the number of representatives the frozen rule selected - ECE median rank 3 at 95% variance and 7 at 99%, against 33 representatives. The frozen pairwise criterion is deliberately conservative and PAIRWISE: it defers a channel only on a DIRECT witness with |r| stable in the worst 10% of discharge/block cells. Group-level low rank does not imply any particular PAIR meets that bar. Per the frozen policy the disagreement is recorded and NOT acted on; thresholds were not tuned.",
+    "binding_threshold": "R_10 >= 0.97 is what binds: 40 of 780 ECE pairs reach R_med >= 0.99, but 32 of those fail R_10 >= 0.97."
+  },
+  "A_rec_enumerated": false
+}

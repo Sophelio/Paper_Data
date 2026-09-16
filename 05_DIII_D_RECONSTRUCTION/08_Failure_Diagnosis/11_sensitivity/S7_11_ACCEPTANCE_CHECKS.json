@@ -1,0 +1,166 @@
+{
+  "acceptance_id": "S7_11_ACCEPTANCE_CHECKS_V1",
+  "generated_utc": "2026-09-05T23:50:49.718613+00:00",
+  "n_checks": 39,
+  "n_passed": 39,
+  "result": "39/39",
+  "failed": [],
+  "checks": [
+    {
+      "check": "all parents through S7.10 verified",
+      "passed": true
+    },
+    {
+      "check": "S7.10 primary result unchanged",
+      "passed": true
+    },
+    {
+      "check": "C_dev_star unchanged",
+      "passed": true
+    },
+    {
+      "check": "V3 remains FAIL",
+      "passed": true
+    },
+    {
+      "check": "V6 remains FAIL",
+      "passed": true
+    },
+    {
+      "check": "Omega_rec primary supported domain remains EMPTY",
+      "passed": true
+    },
+    {
+      "check": "S7.11 predeclaration hash verified",
+      "passed": true
+    },
+    {
+      "check": "predeclaration predates first external access",
+      "passed": true
+    },
+    {
+      "check": "exactly 217 unique bootstrap winners recovered",
+      "passed": true
+    },
+    {
+      "check": "no top-K support selection",
+      "passed": true
+    },
+    {
+      "check": "all 217 evaluated or explicit domain failure recorded",
+      "passed": true
+    },
+    {
+      "check": "support-family domain audit complete",
+      "passed": true
+    },
+    {
+      "check": "no support substituted for C_dev_star",
+      "passed": true
+    },
+    {
+      "check": "V3-style sensitivity uses frozen Delta_0/Delta_1 rule",
+      "passed": true
+    },
+    {
+      "check": "support-family pass fraction reported without becoming a gate",
+      "passed": true
+    },
+    {
+      "check": "primary support's family percentile reported",
+      "passed": true
+    },
+    {
+      "check": "coordinate participation reporting does not drive selection",
+      "passed": true
+    },
+    {
+      "check": "minus-prmtan support constructed exactly as predeclared",
+      "passed": true
+    },
+    {
+      "check": "no replacement coordinates added",
+      "passed": true
+    },
+    {
+      "check": "prmtan-only support exactly ID(prmtan_neped)",
+      "passed": true
+    },
+    {
+      "check": "no target-history coordinate introduced",
+      "passed": true
+    },
+    {
+      "check": "B0/B1 definitions unchanged",
+      "passed": true
+    },
+    {
+      "check": "common-support geometry audited",
+      "passed": true
+    },
+    {
+      "check": "S7.10 LODO independently verified",
+      "passed": true
+    },
+    {
+      "check": "leave-one-block-out A/B/C analysis complete",
+      "passed": true
+    },
+    {
+      "check": "no new temporal windows",
+      "passed": true
+    },
+    {
+      "check": "no numerical realization invented after external outcomes",
+      "passed": true
+    },
+    {
+      "check": "V9 resolved under parent vocabulary",
+      "passed": true
+    },
+    {
+      "check": "V9 does not alter mandatory gate result",
+      "passed": true
+    },
+    {
+      "check": "two-seed search NOT executed",
+      "passed": true
+    },
+    {
+      "check": "PROD(gasa,gasa) NOT removed",
+      "passed": true
+    },
+    {
+      "check": "no range gate retrofitted",
+      "passed": true
+    },
+    {
+      "check": "no clipping/winsorization",
+      "passed": true
+    },
+    {
+      "check": "range-support issue labelled prospective future-contract lesson",
+      "passed": true
+    },
+    {
+      "check": "prmtan language distinguishes provenance from physical independence",
+      "passed": true
+    },
+    {
+      "check": "pcdiamag3 qualification carried",
+      "passed": true
+    },
+    {
+      "check": "no new structural-transfer success claim",
+      "passed": true
+    },
+    {
+      "check": "Markdown files <= 20",
+      "passed": true
+    },
+    {
+      "check": "S7.12 not started",
+      "passed": true
+    }
+  ]
+}

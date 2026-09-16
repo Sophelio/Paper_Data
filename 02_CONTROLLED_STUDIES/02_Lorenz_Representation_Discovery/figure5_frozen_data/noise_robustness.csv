@@ -1,0 +1,337 @@
+canonical_or_augmentation,noise_sigma,noise_percent,noise_replicate,noise_seed,trajectory_id,representation_id,representation_label,support_scope,rmse,estimator,cohort
+canonical,0.0,0.0,0,,conf_000,C0_matched,raw stencil (10),native,8.668608440940467,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_001,C0_matched,raw stencil (10),native,8.882524664609054,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_002,C0_matched,raw stencil (10),native,7.415776841117644,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_003,C0_matched,raw stencil (10),native,7.966711745436023,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_004,C0_matched,raw stencil (10),native,8.706593351353083,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_005,C0_matched,raw stencil (10),native,8.591855818365095,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_006,C0_matched,raw stencil (10),native,8.928580211813177,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_007,C0_matched,raw stencil (10),native,8.086574088294917,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_008,C0_matched,raw stencil (10),native,8.382987551509272,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_009,C0_matched,raw stencil (10),native,8.641927929987329,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_010,C0_matched,raw stencil (10),native,8.365098152427912,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_011,C0_matched,raw stencil (10),native,8.627270554473494,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_012,C0_matched,raw stencil (10),native,8.927664551611498,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_013,C0_matched,raw stencil (10),native,8.780105177708407,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_014,C0_matched,raw stencil (10),native,8.28390230066614,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_015,C0_matched,raw stencil (10),native,9.256735860457564,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_016,C0_matched,raw stencil (10),native,8.34747408191821,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_017,C0_matched,raw stencil (10),native,8.610002809803769,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_018,C0_matched,raw stencil (10),native,9.048739898082331,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_019,C0_matched,raw stencil (10),native,9.137435540442706,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_020,C0_matched,raw stencil (10),native,8.646748626211458,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_021,C0_matched,raw stencil (10),native,8.420360514403187,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_022,C0_matched,raw stencil (10),native,8.514604761477338,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_023,C0_matched,raw stencil (10),native,9.0922912901783,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_000,C0_poly2,quadratic (10->65),native,2.6410129605837898,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_001,C0_poly2,quadratic (10->65),native,2.0481726891884304,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_002,C0_poly2,quadratic (10->65),native,1.644930523593333,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_003,C0_poly2,quadratic (10->65),native,2.2132334190813823,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_004,C0_poly2,quadratic (10->65),native,2.2500700372318985,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_005,C0_poly2,quadratic (10->65),native,2.358293801004328,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_006,C0_poly2,quadratic (10->65),native,2.331266881617696,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_007,C0_poly2,quadratic (10->65),native,2.6719045844342406,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_008,C0_poly2,quadratic (10->65),native,2.094217307920892,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_009,C0_poly2,quadratic (10->65),native,2.236505038917758,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_010,C0_poly2,quadratic (10->65),native,2.4438221963781634,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_011,C0_poly2,quadratic (10->65),native,2.221514499168566,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_012,C0_poly2,quadratic (10->65),native,2.133825873840145,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_013,C0_poly2,quadratic (10->65),native,2.185418984886381,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_014,C0_poly2,quadratic (10->65),native,2.5368906792168104,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_015,C0_poly2,quadratic (10->65),native,2.610368073423949,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_016,C0_poly2,quadratic (10->65),native,2.197289743117337,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_017,C0_poly2,quadratic (10->65),native,2.22965082846419,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_018,C0_poly2,quadratic (10->65),native,2.13654622354155,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_019,C0_poly2,quadratic (10->65),native,2.266708479335589,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_020,C0_poly2,quadratic (10->65),native,2.3457947264042813,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_021,C0_poly2,quadratic (10->65),native,2.0525032484890264,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_022,C0_poly2,quadratic (10->65),native,1.985861678680239,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_023,C0_poly2,quadratic (10->65),native,2.3183526086875608,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_000,C0_poly3,cubic (10->285),native,2.6222604759552963,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_001,C0_poly3,cubic (10->285),native,2.095646007624628,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_002,C0_poly3,cubic (10->285),native,1.6475096574480208,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_003,C0_poly3,cubic (10->285),native,2.266754299165407,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_004,C0_poly3,cubic (10->285),native,2.3197695190842693,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_005,C0_poly3,cubic (10->285),native,2.402188918253843,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_006,C0_poly3,cubic (10->285),native,2.3576192366133126,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_007,C0_poly3,cubic (10->285),native,2.712618037419244,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_008,C0_poly3,cubic (10->285),native,2.14326266046592,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_009,C0_poly3,cubic (10->285),native,2.2585605464806022,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_010,C0_poly3,cubic (10->285),native,2.543109538480957,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_011,C0_poly3,cubic (10->285),native,2.3222732924975213,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_012,C0_poly3,cubic (10->285),native,2.1588016519377584,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_013,C0_poly3,cubic (10->285),native,2.2511633113017973,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_014,C0_poly3,cubic (10->285),native,2.646667393921677,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_015,C0_poly3,cubic (10->285),native,2.720806969979796,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_016,C0_poly3,cubic (10->285),native,2.308238719941107,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_017,C0_poly3,cubic (10->285),native,2.265145786687631,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_018,C0_poly3,cubic (10->285),native,2.185374893990934,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_019,C0_poly3,cubic (10->285),native,2.305777214289217,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_020,C0_poly3,cubic (10->285),native,2.3582234834458493,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_021,C0_poly3,cubic (10->285),native,2.0699069929802807,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_022,C0_poly3,cubic (10->285),native,2.015563669096885,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_023,C0_poly3,cubic (10->285),native,2.343328259075981,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_000,C_all,C_all (38),native,1.5285204928035807e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_001,C_all,C_all (38),native,1.1423147677802105e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_002,C_all,C_all (38),native,9.467291277263218e-06,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_003,C_all,C_all (38),native,1.293621779974234e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_004,C_all,C_all (38),native,1.2349759953694517e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_005,C_all,C_all (38),native,1.2139536824990871e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_006,C_all,C_all (38),native,1.3171964014666498e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_007,C_all,C_all (38),native,1.706087999847389e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_008,C_all,C_all (38),native,1.1965148531875636e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_009,C_all,C_all (38),native,1.2797992907728569e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_010,C_all,C_all (38),native,1.807159029856572e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_011,C_all,C_all (38),native,1.2299143249985864e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_012,C_all,C_all (38),native,1.1624028811768222e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_013,C_all,C_all (38),native,1.1927440333824615e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_014,C_all,C_all (38),native,2.084607534649262e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_015,C_all,C_all (38),native,1.7642163245603848e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_016,C_all,C_all (38),native,1.332732419541992e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_017,C_all,C_all (38),native,1.2664291723013348e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_018,C_all,C_all (38),native,1.1561389701255246e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_019,C_all,C_all (38),native,1.1806603234636002e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_020,C_all,C_all (38),native,1.3526020819901623e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_021,C_all,C_all (38),native,1.1674875498638993e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_022,C_all,C_all (38),native,1.0814026132333392e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_023,C_all,C_all (38),native,1.2945276068135588e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_000,C*_accuracy,q_acc -> C_all (38),native,1.5285204928035807e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_001,C*_accuracy,q_acc -> C_all (38),native,1.1423147677802105e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_002,C*_accuracy,q_acc -> C_all (38),native,9.467291277263218e-06,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_003,C*_accuracy,q_acc -> C_all (38),native,1.293621779974234e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_004,C*_accuracy,q_acc -> C_all (38),native,1.2349759953694517e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_005,C*_accuracy,q_acc -> C_all (38),native,1.2139536824990871e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_006,C*_accuracy,q_acc -> C_all (38),native,1.3171964014666498e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_007,C*_accuracy,q_acc -> C_all (38),native,1.706087999847389e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_008,C*_accuracy,q_acc -> C_all (38),native,1.1965148531875636e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_009,C*_accuracy,q_acc -> C_all (38),native,1.2797992907728569e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_010,C*_accuracy,q_acc -> C_all (38),native,1.807159029856572e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_011,C*_accuracy,q_acc -> C_all (38),native,1.2299143249985864e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_012,C*_accuracy,q_acc -> C_all (38),native,1.1624028811768222e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_013,C*_accuracy,q_acc -> C_all (38),native,1.1927440333824615e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_014,C*_accuracy,q_acc -> C_all (38),native,2.084607534649262e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_015,C*_accuracy,q_acc -> C_all (38),native,1.7642163245603848e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_016,C*_accuracy,q_acc -> C_all (38),native,1.332732419541992e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_017,C*_accuracy,q_acc -> C_all (38),native,1.2664291723013348e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_018,C*_accuracy,q_acc -> C_all (38),native,1.1561389701255246e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_019,C*_accuracy,q_acc -> C_all (38),native,1.1806603234636002e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_020,C*_accuracy,q_acc -> C_all (38),native,1.3526020819901623e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_021,C*_accuracy,q_acc -> C_all (38),native,1.1674875498638993e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_022,C*_accuracy,q_acc -> C_all (38),native,1.0814026132333392e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_023,C*_accuracy,q_acc -> C_all (38),native,1.2945276068135588e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_000,C*_compact,q_comp -> compact (12),native,3.4755107708546565e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_001,C*_compact,q_comp -> compact (12),native,3.2614580502284835e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_002,C*_compact,q_comp -> compact (12),native,2.313060943437524e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_003,C*_compact,q_comp -> compact (12),native,2.966882634359825e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_004,C*_compact,q_comp -> compact (12),native,3.36329505996098e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_005,C*_compact,q_comp -> compact (12),native,3.1244129417804884e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_006,C*_compact,q_comp -> compact (12),native,3.4475048689110053e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_007,C*_compact,q_comp -> compact (12),native,3.2687113103101274e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_008,C*_compact,q_comp -> compact (12),native,3.064759453262785e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_009,C*_compact,q_comp -> compact (12),native,3.2641109847552225e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_010,C*_compact,q_comp -> compact (12),native,3.2840847147810096e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_011,C*_compact,q_comp -> compact (12),native,3.357984029380064e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_012,C*_compact,q_comp -> compact (12),native,3.357072726477319e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_013,C*_compact,q_comp -> compact (12),native,3.291883764200364e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_014,C*_compact,q_comp -> compact (12),native,3.328114655477448e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_015,C*_compact,q_comp -> compact (12),native,3.818057472630216e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_016,C*_compact,q_comp -> compact (12),native,3.163571539012528e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_017,C*_compact,q_comp -> compact (12),native,3.1979070920875767e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_018,C*_compact,q_comp -> compact (12),native,3.3900542288892696e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_019,C*_compact,q_comp -> compact (12),native,3.311536558911064e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_020,C*_compact,q_comp -> compact (12),native,3.3986603543302646e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_021,C*_compact,q_comp -> compact (12),native,3.0357506675960595e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_022,C*_compact,q_comp -> compact (12),native,2.983170328451989e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_023,C*_compact,q_comp -> compact (12),native,3.507343440905525e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_000,C*_robust,q_rob -> C_all (38),native,1.5285204928035807e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_001,C*_robust,q_rob -> C_all (38),native,1.1423147677802105e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_002,C*_robust,q_rob -> C_all (38),native,9.467291277263218e-06,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_003,C*_robust,q_rob -> C_all (38),native,1.293621779974234e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_004,C*_robust,q_rob -> C_all (38),native,1.2349759953694517e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_005,C*_robust,q_rob -> C_all (38),native,1.2139536824990871e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_006,C*_robust,q_rob -> C_all (38),native,1.3171964014666498e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_007,C*_robust,q_rob -> C_all (38),native,1.706087999847389e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_008,C*_robust,q_rob -> C_all (38),native,1.1965148531875636e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_009,C*_robust,q_rob -> C_all (38),native,1.2797992907728569e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_010,C*_robust,q_rob -> C_all (38),native,1.807159029856572e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_011,C*_robust,q_rob -> C_all (38),native,1.2299143249985864e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_012,C*_robust,q_rob -> C_all (38),native,1.1624028811768222e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_013,C*_robust,q_rob -> C_all (38),native,1.1927440333824615e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_014,C*_robust,q_rob -> C_all (38),native,2.084607534649262e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_015,C*_robust,q_rob -> C_all (38),native,1.7642163245603848e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_016,C*_robust,q_rob -> C_all (38),native,1.332732419541992e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_017,C*_robust,q_rob -> C_all (38),native,1.2664291723013348e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_018,C*_robust,q_rob -> C_all (38),native,1.1561389701255246e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_019,C*_robust,q_rob -> C_all (38),native,1.1806603234636002e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_020,C*_robust,q_rob -> C_all (38),native,1.3526020819901623e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_021,C*_robust,q_rob -> C_all (38),native,1.1674875498638993e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_022,C*_robust,q_rob -> C_all (38),native,1.0814026132333392e-05,pysindy.STLSQ,confirmation_24
+canonical,0.0,0.0,0,,conf_023,C*_robust,q_rob -> C_all (38),native,1.2945276068135588e-05,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_000,C0_matched,raw stencil (10),native,8.681130808766548,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_001,C0_matched,raw stencil (10),native,8.883988156996205,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_002,C0_matched,raw stencil (10),native,7.410591802607785,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_003,C0_matched,raw stencil (10),native,7.96710133541846,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_004,C0_matched,raw stencil (10),native,8.699386426984963,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_005,C0_matched,raw stencil (10),native,8.597437658754647,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_006,C0_matched,raw stencil (10),native,8.940158463323911,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_007,C0_matched,raw stencil (10),native,8.08908212322839,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_008,C0_matched,raw stencil (10),native,8.385856810369024,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_009,C0_matched,raw stencil (10),native,8.645875712941926,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_010,C0_matched,raw stencil (10),native,8.356248891720279,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_011,C0_matched,raw stencil (10),native,8.616984317839675,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_012,C0_matched,raw stencil (10),native,8.93195886339964,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_013,C0_matched,raw stencil (10),native,8.775397357988865,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_014,C0_matched,raw stencil (10),native,8.275395534757081,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_015,C0_matched,raw stencil (10),native,9.243763802574575,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_016,C0_matched,raw stencil (10),native,8.332895131345198,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_017,C0_matched,raw stencil (10),native,8.614895450874803,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_018,C0_matched,raw stencil (10),native,9.045328007695344,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_019,C0_matched,raw stencil (10),native,9.14198288516561,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_020,C0_matched,raw stencil (10),native,8.656354329101582,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_021,C0_matched,raw stencil (10),native,8.429926157082601,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_022,C0_matched,raw stencil (10),native,8.520369465583794,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_023,C0_matched,raw stencil (10),native,9.102683509249015,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_000,C0_poly2,quadratic (10->65),native,3.322657259096113,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_001,C0_poly2,quadratic (10->65),native,2.8191436574635675,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_002,C0_poly2,quadratic (10->65),native,2.245602868711643,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_003,C0_poly2,quadratic (10->65),native,2.864392938608899,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_004,C0_poly2,quadratic (10->65),native,3.033731528346061,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_005,C0_poly2,quadratic (10->65),native,3.06396374477338,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_006,C0_poly2,quadratic (10->65),native,3.1418673944981386,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_007,C0_poly2,quadratic (10->65),native,3.282888541959595,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_008,C0_poly2,quadratic (10->65),native,2.8279765173336764,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_009,C0_poly2,quadratic (10->65),native,2.9720151920448066,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_010,C0_poly2,quadratic (10->65),native,3.1204227614376743,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_011,C0_poly2,quadratic (10->65),native,3.0015762804698505,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_012,C0_poly2,quadratic (10->65),native,2.933655163380327,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_013,C0_poly2,quadratic (10->65),native,2.976024917716716,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_014,C0_poly2,quadratic (10->65),native,3.1847685423883045,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_015,C0_poly2,quadratic (10->65),native,3.39283243179964,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_016,C0_poly2,quadratic (10->65),native,2.913519501592792,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_017,C0_poly2,quadratic (10->65),native,2.975628414183465,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_018,C0_poly2,quadratic (10->65),native,2.942959123033157,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_019,C0_poly2,quadratic (10->65),native,3.0940334940867147,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_020,C0_poly2,quadratic (10->65),native,3.135707430482418,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_021,C0_poly2,quadratic (10->65),native,2.8105337707163844,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_022,C0_poly2,quadratic (10->65),native,2.7372623812472177,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_023,C0_poly2,quadratic (10->65),native,3.098788215907748,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_000,C0_poly3,cubic (10->285),native,3.3017401956629104,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_001,C0_poly3,cubic (10->285),native,2.8296881564599867,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_002,C0_poly3,cubic (10->285),native,2.2495167734257016,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_003,C0_poly3,cubic (10->285),native,2.8577480321505284,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_004,C0_poly3,cubic (10->285),native,3.043874318910833,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_005,C0_poly3,cubic (10->285),native,3.0368330667122634,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_006,C0_poly3,cubic (10->285),native,3.1218002117867685,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_007,C0_poly3,cubic (10->285),native,3.280540290103614,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_008,C0_poly3,cubic (10->285),native,2.824609555667636,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_009,C0_poly3,cubic (10->285),native,2.9610315978273847,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_010,C0_poly3,cubic (10->285),native,3.1344481827479687,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_011,C0_poly3,cubic (10->285),native,3.036811869365796,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_012,C0_poly3,cubic (10->285),native,2.9235940873368613,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_013,C0_poly3,cubic (10->285),native,2.986966027472324,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_014,C0_poly3,cubic (10->285),native,3.2110931770045745,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_015,C0_poly3,cubic (10->285),native,3.4300304691973404,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_016,C0_poly3,cubic (10->285),native,2.9432610264279444,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_017,C0_poly3,cubic (10->285),native,2.9696728592619266,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_018,C0_poly3,cubic (10->285),native,2.9565894260507304,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_019,C0_poly3,cubic (10->285),native,3.0928057519071,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_020,C0_poly3,cubic (10->285),native,3.10829521034192,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_021,C0_poly3,cubic (10->285),native,2.7963941832051,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_022,C0_poly3,cubic (10->285),native,2.715832641780614,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_023,C0_poly3,cubic (10->285),native,3.0802323167174968,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_000,C_all,C_all (38),native,2.489100622704337,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_001,C_all,C_all (38),native,1.8378414210979104,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_002,C_all,C_all (38),native,1.540147251061554,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_003,C_all,C_all (38),native,2.247587040495966,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_004,C_all,C_all (38),native,2.319666190111317,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_005,C_all,C_all (38),native,2.163942278640746,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_006,C_all,C_all (38),native,2.477635520894754,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_007,C_all,C_all (38),native,2.571132985894416,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_008,C_all,C_all (38),native,2.2261458678017547,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_009,C_all,C_all (38),native,2.086866139152024,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_010,C_all,C_all (38),native,2.430530530533662,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_011,C_all,C_all (38),native,2.303320556716992,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_012,C_all,C_all (38),native,1.989021804033437,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_013,C_all,C_all (38),native,2.23491874527907,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_014,C_all,C_all (38),native,2.5100178828296755,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_015,C_all,C_all (38),native,2.5672141200908727,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_016,C_all,C_all (38),native,2.248102145603624,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_017,C_all,C_all (38),native,2.3151181877555733,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_018,C_all,C_all (38),native,2.028928625059933,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_019,C_all,C_all (38),native,2.115473400802345,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_020,C_all,C_all (38),native,2.4720528887129887,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_021,C_all,C_all (38),native,2.027700531604974,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_022,C_all,C_all (38),native,2.052484535698657,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_023,C_all,C_all (38),native,2.3479883316888728,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_000,C*_accuracy,q_acc -> C_all (38),native,2.489100622704337,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_001,C*_accuracy,q_acc -> C_all (38),native,1.8378414210979104,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_002,C*_accuracy,q_acc -> C_all (38),native,1.540147251061554,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_003,C*_accuracy,q_acc -> C_all (38),native,2.247587040495966,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_004,C*_accuracy,q_acc -> C_all (38),native,2.319666190111317,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_005,C*_accuracy,q_acc -> C_all (38),native,2.163942278640746,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_006,C*_accuracy,q_acc -> C_all (38),native,2.477635520894754,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_007,C*_accuracy,q_acc -> C_all (38),native,2.571132985894416,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_008,C*_accuracy,q_acc -> C_all (38),native,2.2261458678017547,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_009,C*_accuracy,q_acc -> C_all (38),native,2.086866139152024,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_010,C*_accuracy,q_acc -> C_all (38),native,2.430530530533662,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_011,C*_accuracy,q_acc -> C_all (38),native,2.303320556716992,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_012,C*_accuracy,q_acc -> C_all (38),native,1.989021804033437,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_013,C*_accuracy,q_acc -> C_all (38),native,2.23491874527907,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_014,C*_accuracy,q_acc -> C_all (38),native,2.5100178828296755,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_015,C*_accuracy,q_acc -> C_all (38),native,2.5672141200908727,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_016,C*_accuracy,q_acc -> C_all (38),native,2.248102145603624,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_017,C*_accuracy,q_acc -> C_all (38),native,2.3151181877555733,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_018,C*_accuracy,q_acc -> C_all (38),native,2.028928625059933,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_019,C*_accuracy,q_acc -> C_all (38),native,2.115473400802345,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_020,C*_accuracy,q_acc -> C_all (38),native,2.4720528887129887,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_021,C*_accuracy,q_acc -> C_all (38),native,2.027700531604974,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_022,C*_accuracy,q_acc -> C_all (38),native,2.052484535698657,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_023,C*_accuracy,q_acc -> C_all (38),native,2.3479883316888728,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_000,C*_compact,q_comp -> compact (12),native,5.401725293656698,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_001,C*_compact,q_comp -> compact (12),native,5.335825786064344,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_002,C*_compact,q_comp -> compact (12),native,3.9809276902870208,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_003,C*_compact,q_comp -> compact (12),native,4.297882634277078,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_004,C*_compact,q_comp -> compact (12),native,5.371877361224882,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_005,C*_compact,q_comp -> compact (12),native,4.58664384895515,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_006,C*_compact,q_comp -> compact (12),native,5.4337239832317366,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_007,C*_compact,q_comp -> compact (12),native,4.412929077407917,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_008,C*_compact,q_comp -> compact (12),native,4.922800262525935,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_009,C*_compact,q_comp -> compact (12),native,5.040249320341539,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_010,C*_compact,q_comp -> compact (12),native,4.81319572163903,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_011,C*_compact,q_comp -> compact (12),native,4.894785331351677,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_012,C*_compact,q_comp -> compact (12),native,5.583112920427635,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_013,C*_compact,q_comp -> compact (12),native,5.266733804440081,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_014,C*_compact,q_comp -> compact (12),native,4.723456678522918,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_015,C*_compact,q_comp -> compact (12),native,5.601999550059016,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_016,C*_compact,q_comp -> compact (12),native,5.124205182530046,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_017,C*_compact,q_comp -> compact (12),native,4.899137370645877,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_018,C*_compact,q_comp -> compact (12),native,5.980551546646836,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_019,C*_compact,q_comp -> compact (12),native,5.654128309310841,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_020,C*_compact,q_comp -> compact (12),native,5.211295450624897,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_021,C*_compact,q_comp -> compact (12),native,5.013111425125829,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_022,C*_compact,q_comp -> compact (12),native,4.94501903650141,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_023,C*_compact,q_comp -> compact (12),native,5.846784104029545,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_000,C*_robust,q_rob -> C_all (38),native,2.489100622704337,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_001,C*_robust,q_rob -> C_all (38),native,1.8378414210979104,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_002,C*_robust,q_rob -> C_all (38),native,1.540147251061554,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_003,C*_robust,q_rob -> C_all (38),native,2.247587040495966,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_004,C*_robust,q_rob -> C_all (38),native,2.319666190111317,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_005,C*_robust,q_rob -> C_all (38),native,2.163942278640746,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_006,C*_robust,q_rob -> C_all (38),native,2.477635520894754,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_007,C*_robust,q_rob -> C_all (38),native,2.571132985894416,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_008,C*_robust,q_rob -> C_all (38),native,2.2261458678017547,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_009,C*_robust,q_rob -> C_all (38),native,2.086866139152024,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_010,C*_robust,q_rob -> C_all (38),native,2.430530530533662,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_011,C*_robust,q_rob -> C_all (38),native,2.303320556716992,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_012,C*_robust,q_rob -> C_all (38),native,1.989021804033437,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_013,C*_robust,q_rob -> C_all (38),native,2.23491874527907,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_014,C*_robust,q_rob -> C_all (38),native,2.5100178828296755,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_015,C*_robust,q_rob -> C_all (38),native,2.5672141200908727,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_016,C*_robust,q_rob -> C_all (38),native,2.248102145603624,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_017,C*_robust,q_rob -> C_all (38),native,2.3151181877555733,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_018,C*_robust,q_rob -> C_all (38),native,2.028928625059933,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_019,C*_robust,q_rob -> C_all (38),native,2.115473400802345,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_020,C*_robust,q_rob -> C_all (38),native,2.4720528887129887,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_021,C*_robust,q_rob -> C_all (38),native,2.027700531604974,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_022,C*_robust,q_rob -> C_all (38),native,2.052484535698657,pysindy.STLSQ,confirmation_24
+canonical,0.01,1.0,0,901.0,conf_023,C*_robust,q_rob -> C_all (38),native,2.3479883316888728,pysindy.STLSQ,confirmation_24

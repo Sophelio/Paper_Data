@@ -1,0 +1,217 @@
+{
+  "preflight_id": "S7_10_PREFLIGHT_V1",
+  "generated_utc": "2026-09-05T22:47:11.395345+00:00",
+  "external_values_opened_by_this_script": 0,
+  "lineage": [
+    {
+      "stage": "S7.1",
+      "freeze_id": "D3D-SIR-S7.1-OBSERVATIONAL-OBJECT-FINAL-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "be4807c65cdcf330244f2d80f0007f8f0448208b56ff3095f19fbdcf3097600f"
+    },
+    {
+      "stage": "S7.2 V1",
+      "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V1",
+      "status": "FROZEN_READY_FOR_S7.3",
+      "file_sha256": "5e65d87825024d2e62b0db8fab8add518f364110e41f3a63f61571c80cc3102f"
+    },
+    {
+      "stage": "S7.2 V2",
+      "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V2",
+      "status": "FROZEN_READY_FOR_S7.3",
+      "file_sha256": "ecd15ef9e833e0b25feb42cdbcf30c67634f1949f4e50b08546f38bb61e7faab"
+    },
+    {
+      "stage": "S7.3R V2",
+      "freeze_id": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-SOURCE-RESOLUTION-V2",
+      "status": "FROZEN_READY_TO_RETRY_S7.4",
+      "file_sha256": "a8477f185c8dfb31d799c7607fa1a183d762405353c8bc21f195ff2524ff8a74"
+    },
+    {
+      "stage": "S7.4 V2",
+      "freeze_id": "D3D-SIR-S7.4-MATHEMATICAL-INTERPRETATION-SOURCE-RESOLUTION-V2",
+      "status": "FROZEN_READY_FOR_S7.5",
+      "file_sha256": "0658d3c9949c19108ba5f8de17ba37966b5bd6bf41d9836f3ccc2ccf45c5183a"
+    },
+    {
+      "stage": "S7.5 V1",
+      "freeze_id": "D3D-SIR-S7.5-TYPED-RELATIONAL-ONTOLOGY-V1",
+      "status": "FROZEN_READY_FOR_S7.6",
+      "file_sha256": "2cd73e77e0734177c56df175e084a319ad5913fcf1038d0dc87f7507a8a86721"
+    },
+    {
+      "stage": "S7.5H V1",
+      "freeze_id": "D3D-SIR-S7.5H-PRIMITIVE-SPACE-AND-ONTOLOGY-HARDENING-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "dffdd834ecf40b0f22b4844040bfe0ab5dd2bebb4b73d517a67387f4718f43d9"
+    },
+    {
+      "stage": "S7.6R V2",
+      "freeze_id": "D3D-SIR-S7.6-ADMISSIBLE-UNIVERSE-HARDENED-V2",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "0cf779767940249fa515221f3fbd4bf2f7a93281c21cb63383b084504426fa59"
+    },
+    {
+      "stage": "S7.7R V2",
+      "freeze_id": "D3D-SIR-S7.7-ONE-SEED-PRIMARY-SEARCH-AND-EXPLORED-FRONTIER-V2",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "576b1087b8fd767c631ad65cc1123f4e1ff40be7816b46dfe4fe77b7aafd47e2"
+    },
+    {
+      "stage": "S7.8 V1",
+      "freeze_id": "D3D-SIR-S7.8-UTILITY-AND-QUALIFICATION-RULES-V1",
+      "status": "FROZEN_READY_FOR_S7.9",
+      "file_sha256": "1d12f78d165c09b77b4b853053e60a9a87784da2aaa2b38c4b882bb575d398e0"
+    },
+    {
+      "stage": "S7.9 V1",
+      "freeze_id": "D3D-SIR-S7.9-DEVELOPMENT-SELECTION-AND-PREEXTERNAL-FREEZE-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "966f9628dceb501e9f102d9ba3f74e0bfed3dddee7f25a58df47732eef3d553b"
+    }
+  ],
+  "n_authoritative": 11,
+  "s7_9_manifest_recomputation": {
+    "n": 45,
+    "matched": 45,
+    "mismatched": []
+  },
+  "pre_external_freeze": {
+    "file_sha256": "e196286eb4c60e349733f460d353b07deeb84d8842a3ecb3feea0c954ffc275b",
+    "recorded_in_s7_9_freeze": "e196286eb4c60e349733f460d353b07deeb84d8842a3ecb3feea0c954ffc275b",
+    "matches_s7_9_freeze": true,
+    "frozen_utc": "2026-09-05T20:32:08.992754+00:00",
+    "n_substantive_entries": 13,
+    "n_mismatched": 0,
+    "entries": [
+      {
+        "entry": "SELECTED_REPRESENTATION.json",
+        "expected": "800ac414aa16bbad1599a8512fcb8b2c4c9cf1e0adebdb8f9a314a78bb900337",
+        "observed": "800ac414aa16bbad1599a8512fcb8b2c4c9cf1e0adebdb8f9a314a78bb900337",
+        "match": true
+      },
+      {
+        "entry": "utility_elimination_ledger.csv",
+        "expected": "487707b9e7f92baaa7086700a71275c5f1184e7cba187ea311d3e7adc4154836",
+        "observed": "487707b9e7f92baaa7086700a71275c5f1184e7cba187ea311d3e7adc4154836",
+        "match": true
+      },
+      {
+        "entry": "utility_survivor_sets.csv",
+        "expected": "14d7394bd60e18709005e128a84a2680f2e1cd39021262ccb27a1686a45c85de",
+        "observed": "14d7394bd60e18709005e128a84a2680f2e1cd39021262ccb27a1686a45c85de",
+        "match": true
+      },
+      {
+        "entry": "RELATIONAL_ESTIMATOR_CONFIG.json",
+        "expected": "c35ddb25a0cb619c824d50517a8a7a02679093b8cdad792fe46be8b3331025e3",
+        "observed": "c35ddb25a0cb619c824d50517a8a7a02679093b8cdad792fe46be8b3331025e3",
+        "match": true
+      },
+      {
+        "entry": "BASELINE_SPECIFICATION_COMPLETION_PREVALUE.json",
+        "expected": "fd05fcc0f4d0e5e95a26315006be1531d4f6bcc5d7697914b5daaf3593a1ba3f",
+        "observed": "fd05fcc0f4d0e5e95a26315006be1531d4f6bcc5d7697914b5daaf3593a1ba3f",
+        "match": true
+      },
+      {
+        "entry": "BASELINE_B3_CONFIG.json",
+        "expected": "c72c049e63389dab181347c8adf2f5b649ceed13b395d5ed542da4c4cc01f2e3",
+        "observed": "c72c049e63389dab181347c8adf2f5b649ceed13b395d5ed542da4c4cc01f2e3",
+        "match": true
+      },
+      {
+        "entry": "BASELINE_B0_CONFIG.json",
+        "expected": "356485d5a6d52d0a94a9d373e2bc0d276c0f9707bbb970e18fd79080fce72440",
+        "observed": "356485d5a6d52d0a94a9d373e2bc0d276c0f9707bbb970e18fd79080fce72440",
+        "match": true
+      },
+      {
+        "entry": "BASELINE_B1_CONFIG.json",
+        "expected": "a2b7b8f07d1de649497ac08259288fb0700d5f35cc2409980661144b0d2e79a4",
+        "observed": "a2b7b8f07d1de649497ac08259288fb0700d5f35cc2409980661144b0d2e79a4",
+        "match": true
+      },
+      {
+        "entry": "BASELINE_B1A_CONFIG.json",
+        "expected": "fcc049444e233b2ea6f3304e69739202a04b3387dec936d8576658b446a42da1",
+        "observed": "fcc049444e233b2ea6f3304e69739202a04b3387dec936d8576658b446a42da1",
+        "match": true
+      },
+      {
+        "entry": "BASELINE_B2_CONFIG.json",
+        "expected": "d9abeaaa4e767b43e31fd57bb1dbb0c48c33584b81131395cadaabff88c4c0f0",
+        "observed": "d9abeaaa4e767b43e31fd57bb1dbb0c48c33584b81131395cadaabff88c4c0f0",
+        "match": true
+      },
+      {
+        "entry": "BASELINE_B3_CONFIG.json",
+        "expected": "c72c049e63389dab181347c8adf2f5b649ceed13b395d5ed542da4c4cc01f2e3",
+        "observed": "c72c049e63389dab181347c8adf2f5b649ceed13b395d5ed542da4c4cc01f2e3",
+        "match": true
+      },
+      {
+        "entry": "BASELINE_H0_CONFIG.json",
+        "expected": "40182fd53373b80ff26d5aae8f0eb760abc8da0af82b420630b882ac625ac76f",
+        "observed": "40182fd53373b80ff26d5aae8f0eb760abc8da0af82b420630b882ac625ac76f",
+        "match": true
+      },
+      {
+        "entry": "U_REC_OPERATIONAL_V1.json",
+        "expected": "d5d9de60db57416f94806d7c1d135d42731459185a3a0fa2b48c406784b65f85",
+        "observed": "d5d9de60db57416f94806d7c1d135d42731459185a3a0fa2b48c406784b65f85",
+        "match": true
+      }
+    ],
+    "verdict": "PRE_EXTERNAL_FREEZE_VERIFIED"
+  },
+  "canonical_parse": {
+    "parser": "parenthesis-depth-aware split at depth 0",
+    "naive_split_used_operationally": false,
+    "parsed_atom_count": 12,
+    "expected_atom_count": 12,
+    "canonical_serialization_matches": true,
+    "matches_s7_9_artifact": true,
+    "registry_checksum": "162845/162845",
+    "passed": true
+  },
+  "immutability": {
+    "target": "density",
+    "support_id_unchanged": true,
+    "support_size": 12,
+    "lock_sha256": "c7c6a36b86766f3cfaf1411dae5395a2c2d42844369f3eadaa88dbd8556d04d0",
+    "estimator": "DEVELOPMENT_RELATION_OLS_V1",
+    "B2_alpha": 1.0,
+    "B2_predictors": 78,
+    "B3_sklearn": "1.9.0",
+    "B3_random_state": 2026090502,
+    "H0_alpha": 1.0,
+    "H0_predictors": 70,
+    "external_n": 42,
+    "external_earlier": 24,
+    "external_later": 18,
+    "two_seed": [
+      "DECLARED_OPTIONAL",
+      "NOT_EXECUTED"
+    ],
+    "installed_sklearn": "1.9.0"
+  },
+  "s7_11_predeclaration": {
+    "sha256": "da24fbe38141f0c77f74ae3a87f6002c8263b8d3cc9aed35696dbad98a40c4c3",
+    "declared_utc": "2026-09-05T22:47:11.395345+00:00",
+    "n_sensitivities": 4
+  },
+  "external_inference_policy": {
+    "sha256": "812920c4edecd844c8ba8d2bf69f766bfd414e5ec036119fc27f46a10a341142",
+    "frozen_utc": "2026-09-05T22:47:11.395345+00:00"
+  },
+  "drift": [],
+  "verdict": "PREFLIGHT_PASSED",
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "sklearn": "1.9.0",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

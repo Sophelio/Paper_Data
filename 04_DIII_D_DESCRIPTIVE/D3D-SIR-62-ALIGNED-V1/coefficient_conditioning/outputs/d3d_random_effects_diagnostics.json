@@ -1,0 +1,39 @@
+{
+  "coefficients": {
+    "d[pcdiamag3]/d[kappa]": {
+      "mu": 0.24521793692617108,
+      "tau2": 0.0,
+      "status": "WITHIN_DISCHARGE_UNCERTAINTY_DOMINATES"
+    },
+    "d[kappa]/d[t]": {
+      "mu": 0.8970050287912411,
+      "tau2": 0.16966895506568255,
+      "status": "BETWEEN_DISCHARGE_VARIATION_RESOLVED"
+    },
+    "r[q95]/r[kappa]": {
+      "mu": -0.01025447253102932,
+      "tau2": 2.0717299594890256e-05,
+      "status": "WITHIN_DISCHARGE_UNCERTAINTY_DOMINATES"
+    },
+    "d[pcdiamag3]/d[betan]": {
+      "mu": 0.9250570490871793,
+      "tau2": 0.06819464075791758,
+      "status": "BETWEEN_DISCHARGE_VARIATION_PARTIALLY_RESOLVED"
+    },
+    "d[kappa]/d[betan]": {
+      "mu": -0.897881167318979,
+      "tau2": 0.2608841546813202,
+      "status": "BETWEEN_DISCHARGE_VARIATION_RESOLVED"
+    },
+    "d[betan]/d[t]": {
+      "mu": 0.04981701254210351,
+      "tau2": 0.21137396542710565,
+      "status": "BETWEEN_DISCHARGE_VARIATION_RESOLVED"
+    },
+    "d[li]/d[betan]": {
+      "mu": -0.005941864449774143,
+      "tau2": 7.547889779128287e-05,
+      "status": "BETWEEN_DISCHARGE_VARIATION_RESOLVED"
+    }
+  }
+}

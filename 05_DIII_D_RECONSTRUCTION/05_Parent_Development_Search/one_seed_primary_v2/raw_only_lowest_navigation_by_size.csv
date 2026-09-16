@@ -1,0 +1,13 @@
+support_size,lane,support_id,J_search,ancestor_family_composition,n_raw_only_path_supports_of_this_size,is_B2,is_final
+1,RAW_ONLY,ID(prmtan_neped),0.4996494828058219,density,7,False,False
+2,RAW_ONLY,ID(pcdiamag3)|ID(prmtan_neped),0.3775345125483849,density+magnetics,6,False,False
+3,RAW_ONLY,ID(ece39)|ID(pcdiamag3)|ID(prmtan_neped),0.3123265731648716,density+ece_te_profile+magnetics,5,False,False
+4,RAW_ONLY,ID(ece39)|ID(fs03da)|ID(pcdiamag3)|ID(prmtan_neped),0.2849194942876694,density+ece_te_profile+filterscope_dalpha+magnetics,4,False,False
+5,RAW_ONLY,ID(ece38)|ID(ece39)|ID(fs03da)|ID(pcdiamag3)|ID(prmtan_neped),0.2786138985497092,density+ece_te_profile+filterscope_dalpha+magnetics,4,False,False
+6,RAW_ONLY,ID(ece39)|ID(fs03da)|ID(gasa)|ID(gasd)|ID(pcdiamag3)|ID(prmtan_neped),0.2618756678288212,density+ece_te_profile+filterscope_dalpha+gas_injection+magnetics,4,False,False
+7,RAW_ONLY,ID(bt)|ID(ece38)|ID(ece39)|ID(fs03da)|ID(ip)|ID(pcdiamag3)|ID(prmtan_neped),0.2369233148213075,density+ece_te_profile+filterscope_dalpha+magnetics,4,False,False
+8,RAW_ONLY,ID(bt)|ID(ece39)|ID(fs03da)|ID(gasa)|ID(gasd)|ID(ip)|ID(pcdiamag3)|ID(prmtan_neped),0.2243687188538624,density+ece_te_profile+filterscope_dalpha+gas_injection+magnetics,4,False,False
+9,RAW_ONLY,ID(bt)|ID(ece39)|ID(fs03da)|ID(gasa)|ID(gasd)|ID(ip)|ID(pcdiamag3)|ID(pinj)|ID(prmtan_neped),0.2213001144169559,density+ece_te_profile+filterscope_dalpha+gas_injection+magnetics+neutral_beams,4,False,False
+10,RAW_ONLY,ID(bt)|ID(ece39)|ID(fs03da)|ID(fs04)|ID(gasa)|ID(gasd)|ID(ip)|ID(pcdiamag3)|ID(pinj)|ID(prmtan_neped),0.2204122802701182,density+ece_te_profile+filterscope_dalpha+gas_injection+magnetics+neutral_beams,4,False,False
+11,RAW_ONLY,ID(bt)|ID(ece39)|ID(fs03da)|ID(fs04)|ID(gasa)|ID(gasc)|ID(gasd)|ID(ip)|ID(pcdiamag3)|ID(pinj)|ID(prmtan_neped),0.2201153548588509,density+ece_te_profile+filterscope_dalpha+gas_injection+magnetics+neutral_beams,2,False,False
+12,RAW_ONLY,ID(bt)|ID(ece39)|ID(fs03da)|ID(fs04)|ID(gasa)|ID(gasc)|ID(gasd)|ID(ip)|ID(pcdiamag3)|ID(pinj)|ID(prmtan_neped)|ID(tinj),0.2199701731121365,density+ece_te_profile+filterscope_dalpha+gas_injection+magnetics+neutral_beams,2,False,False

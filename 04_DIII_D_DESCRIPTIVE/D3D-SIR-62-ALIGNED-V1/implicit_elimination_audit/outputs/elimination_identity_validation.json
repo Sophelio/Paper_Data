@@ -1,0 +1,6 @@
+{
+  "max_identity_error": 7.896461262646426e-15,
+  "pass": true,
+  "explicit_error_identity_max": 1.314765540882945e-08,
+  "formula": "epsilon = A*y - B = y - yhat"
+}

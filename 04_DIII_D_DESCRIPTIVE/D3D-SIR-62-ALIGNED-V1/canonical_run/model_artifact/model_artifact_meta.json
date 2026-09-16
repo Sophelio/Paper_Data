@@ -1,0 +1,24 @@
+{
+  "canonical_run_id": "D3D-SIR-62-ALIGNED-V1",
+  "artifact_status": "HISTORICAL_ORIGINAL",
+  "original_path": "D:\\sir-web\\RESULTS\\output.pcdiamag3.psir",
+  "sha256": "ebb8cbbb9f604dbeeee01d71546c334dc192bbbc592d63bdb200af7aeb23c7e8",
+  "equation_key": "1_8*",
+  "n_realizations": 62,
+  "coeff_shape": [
+    62,
+    8
+  ],
+  "samples_per_realization": 1000,
+  "term_order_psir": [
+    "intercept",
+    "d[pcdiamag3]/d[kappa]",
+    "d[kappa]/d[t]",
+    "r[q95]/r[kappa]",
+    "d[pcdiamag3]/d[betan]",
+    "d[kappa]/d[betan]",
+    "d[betan]/d[t]",
+    "d[li]/d[betan]"
+  ],
+  "note": "Byte-copied from RESULTS/output.pcdiamag3.psir; not modified."
+}

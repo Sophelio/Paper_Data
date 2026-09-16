@@ -1,0 +1,224 @@
+{
+  "freeze_id": "D3D-SIR-S7.7-ONE-SEED-PRIMARY-SEARCH-AND-EXPLORED-FRONTIER-V2",
+  "status": "FROZEN_WITH_QUALIFICATIONS",
+  "supersedes_for_primary_use": {
+    "freeze_id": "D3D-SIR-S7.7-FROZEN-SEARCH-POLICY-AND-EXPLORED-FRONTIER-V1",
+    "status": "BLOCKED_SEARCH_BUDGET",
+    "role": "PRESERVED_AS_AUDIT_HISTORY",
+    "preserved": "HISTORICAL_S7_7_V1_BYTE_FOR_BYTE_UNCHANGED"
+  },
+  "timestamp_utc": "2026-09-05T00:32:58.417436+00:00",
+  "sigma_rec_id": "SIGMA_REC_ONE_SEED_PRIMARY_V2",
+  "frontier_id": "AHAT_REC_DENSITY_ONE_SEED_V2",
+  "qualifications": [
+    "ECE ancestry appears in 85.4% of retained-path supports and 100% of the lowest-navigation-score supports AFTER search opportunity was balanced (seed share 30.7%, against an atom-ancestry share of 84.2%). The fairness condition is on OPPORTUNITY and it was met; what the performance-guided expansion then did with that balanced opportunity is an empirical development-search outcome, recorded as found and NOT rebalanced.",
+    "The primary search is one-seed: broad in scientific opportunity, shallower in multi-start depth. Reduced protection against greedy-start sensitivity was accepted prospectively. A two-seed search remains available only as a separately labelled search-depth sensitivity analysis and may never replace this primary frontier.",
+    "Ahat_rec covers 3.19e-33% of the unconstrained size-1..12 support space. The remainder is ADMISSIBLE_UNSEARCHED and carries no negative finding of any kind."
+  ],
+  "parent_verification_sha256": "b5ba1d33222f11db5bf5454d25762b9c6f78635e9ef5336a25eaf95729f1a171",
+  "pre_search_contract_sha256": "1b8df4c0672686be21665c00aaf4fc8f36ab9e53646f983fcd2f9b253fd7c10f",
+  "search_policy_v1_sha256": "a97e690e414da7a0ace4c70ab56e7d5851eb73f940d98e9f2a7add7f33d4b265",
+  "search_policy_v2_sha256": "2049cf999dd99c0a1c5aa7f3539a7caaedbae8171d42678ea4cedef93734a255",
+  "search_policy_frozen_utc": "2026-09-05T00:17:10.479649+00:00",
+  "first_density_access_utc": "2026-09-05T00:27:42.757620+00:00",
+  "policy_diff": {
+    "SEEDS_PER_STRATUM": "2 -> 1",
+    "raw_only_lane_seeds": "2 -> 1 per C0 family"
+  },
+  "policy_diff_verdict": "ONLY_SEED_MULTIPLICITY_CHANGED",
+  "budget": {
+    "projected_max": 188736,
+    "actual_total_proposals": 188142,
+    "unique_multivariate": 152067,
+    "allowance": 300000,
+    "verdict": "SEARCH_BUDGET_RUNTIME_OK"
+  },
+  "atoms_scored": 10778,
+  "atoms_rank_deficient": 0,
+  "n_active_strata": 127,
+  "shortlist_by_constructor": {
+    "C0": 66,
+    "C1": 59,
+    "C2": 96,
+    "C3": 96,
+    "C5": 39,
+    "C6": 96,
+    "C7": 96
+  },
+  "seeds_main": 127,
+  "seeds_raw_only": 7,
+  "Ahat_rec_cardinality": 162845,
+  "supports_by_size": {
+    "1": 10778,
+    "2": 8126,
+    "3": 12462,
+    "4": 14376,
+    "5": 14423,
+    "6": 14366,
+    "7": 14568,
+    "8": 14507,
+    "9": 14784,
+    "10": 14855,
+    "11": 14857,
+    "12": 14743
+  },
+  "lowest_navigation_score_by_size": [
+    {
+      "m": 1,
+      "J_search": 0.4801024362475679,
+      "support_id": "RATIO(ece16,cerqtit10)"
+    },
+    {
+      "m": 2,
+      "J_search": 0.3389601630216251,
+      "support_id": "ID(pcdiamag3)|RATIO(prmtan_neped,ece22)"
+    },
+    {
+      "m": 3,
+      "J_search": 0.2555021598228232,
+      "support_id": "ID(pcdiamag3)|PROD(ip,prmtan_neped)|PROD(prmtan_neped,ece39)"
+    },
+    {
+      "m": 4,
+      "J_search": 0.224900116054429,
+      "support_id": "ID(pcdiamag3)|PROD(ece37,ece39)|RATIO(prmtan_neped,ece22)|RECIP(cerqtit10)"
+    },
+    {
+      "m": 5,
+      "J_search": 0.2058802756762617,
+      "support_id": "ID(pcdiamag3)|PROD(ip,prmtan_neped)|PROD(prmtan_neped,ece39)|RATIO(ip,ece22)|RATIO(prmtan_neped,cerqtit10)"
+    },
+    {
+      "m": 6,
+      "J_search": 0.2012188987011559,
+      "support_id": "ID(pcdiamag3)|PROD(fs03da,cerqtit11)|PROD(ip,prmtan_neped)|PROD(prmtan_neped,ece39)|RATIO(ip,ece22)|RATIO(prmtan_neped,cerqtit10)"
+    },
+    {
+      "m": 7,
+      "J_search": 0.1921771205745306,
+      "support_id": "ID(pcdiamag3)|PROD(fs03da,cerqtit11)|PROD(gasa,ece1)|PROD(ip,prmtan_neped)|PROD(prmtan_neped,ece39)|RATIO(ip,ece22)|RECIP(cerqtit10)"
+    },
+    {
+      "m": 8,
+      "J_search": 0.1860241031694649,
+      "support_id": "ID(pcdiamag3)|PROD(fs03da,cerqtit11)|PROD(gasa,ece1)|PROD(ip,prmtan_neped)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,ece39)|RATIO(ip,ece22)|RECIP(cerqtit10)"
+    },
+    {
+      "m": 9,
+      "J_search": 0.1822197035351098,
+      "support_id": "ID(pcdiamag3)|PROD(fs03da,cerqtit11)|PROD(gasa,ece1)|PROD(ip,prmtan_neped)|PROD(prmtan_neped,ece39)|PROD(prmtan_neped,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RATIO(prmtan_neped,cerqtit10)"
+    },
+    {
+      "m": 10,
+      "J_search": 0.1758757752276368,
+      "support_id": "ID(pcdiamag3)|PROD(bt,bt)|PROD(fs03da,cerqtit11)|PROD(gasa,ece1)|PROD(ip,prmtan_neped)|PROD(prmtan_neped,ece39)|PROD(prmtan_neped,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RATIO(prmtan_neped,cerqtit10)"
+    },
+    {
+      "m": 11,
+      "J_search": 0.1689629262075367,
+      "support_id": "ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(cerqtit10)|RECIP(prmtan_neped)"
+    },
+    {
+      "m": 12,
+      "J_search": 0.1662815155877082,
+      "support_id": "ID(pcdiamag3)|ID(prmtan_neped)|PROD(bt,cerqtit6)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(cerqtit10)|RECIP(prmtan_neped)"
+    }
+  ],
+  "ece_after_balanced_opportunity": {
+    "family": "ece_te_profile",
+    "share_of_P_hard": 0.4714285714285714,
+    "atom_ancestry_share": 0.841992948598998,
+    "shortlist_share": 0.4197080291970803,
+    "seed_share": 0.30708661417322836,
+    "explored_support_share": 0.9584635696521232,
+    "retained_path_share": 0.8544973544973545,
+    "lowest_J_support_share": 1.0,
+    "opportunity_was_balanced": true,
+    "still_dominant_after_balanced_opportunity": true,
+    "reading": "the fairness condition is on SEARCH OPPORTUNITY, which was met: ECE's seed share is far below its atom-ancestry share. What the performance-guided expansion then did with that balanced opportunity is an empirical development-search outcome and is reported as found.",
+    "rebalanced_after_seeing_it": false
+  },
+  "two_seed_sensitivity": [
+    "DECLARED_OPTIONAL",
+    "NOT_EXECUTED"
+  ],
+  "access": {
+    "development_shots": 20,
+    "predictor_signals": 70,
+    "target": "density (development)",
+    "external_signal_values": 0,
+    "external_target_values": 0,
+    "baselines_run": 0,
+    "verdict": "FIREWALL_INTACT"
+  },
+  "unchanged": {
+    "A_rec": true,
+    "G_rec": true,
+    "P_hard_70": true,
+    "C0_C8": true,
+    "denominator_rule": true,
+    "support_bound_1_12": true,
+    "T_REC_V1": true,
+    "SEARCH_PROXY_OLS_V1": true,
+    "J_search": true,
+    "strata_definitions": true,
+    "Phi_set": true
+  },
+  "acceptance_checks": "43/43",
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "n_artifacts": 41,
+  "n_markdown": 5,
+  "all_artifact_hashes": {
+    "AHAT_REC_V2.json": "b09080826da5c73cd603db8ab8f45b1e4dd58e6defe587008e5c56e506aa8161",
+    "atomic_navigation_scores.csv": "2e5c8ea2076102215e525deca1f78ddce5bec1e3e3afa88f132de2264a3584ea",
+    "atomic_per_cell_nrmse.npz": "c3ad3fe41ba3f310acf6015a48a2fc173277092d0849873413d27daa7cee5ed8",
+    "constructor_audit.csv": "6d87519c7e0c8fb3dbb129c7ea449554c4e6c852ead25632a1141ade7a61d7ea",
+    "constructor_shortlist.csv": "57dbe5c8e80cc9257463f7e24863b23dd361542d43fe5df6d712d60d2ccb012e",
+    "EXPLORED_FRONTIER_SUMMARY.md": "14582d7e646e1c2e7f753230ee07179e0c578876ea8d98164430c176f79ba441",
+    "explored_per_cell_nrmse.npz": "e7d4ffe1c8cec3328bfe130b978e9ab529fb917975607adee91690456afdb099",
+    "explored_support_registry.csv": "a2c253d0a1f6f6a0bf7a27f664f7bdee233d2cb29d12482b9a612944bc0d7a6e",
+    "lowest_navigation_score_by_size.csv": "9c6da86815138a68a14c085b12af6b1c088668a5f4eea20e6e38f4f4e80e4e51",
+    "manifests/ACCESS_AUDIT.json": "92386e76371e8c705a291eafef48e3ddd44e2f1173783b83f06fab6bd2fcfdee",
+    "manifests/DATA_ACCESS_LOG.csv": "ac1f54cb2ac1adcfbc496ec14476ed668612ee217be3ac9847647946d083ce1c",
+    "manifests/HISTORICAL_S7_7_V1_RECORD.json": "e38670702ce894f3f91abc5225af20af067988ab87e4aac1a73576a10e742426",
+    "manifests/HISTORICAL_V1_PRESERVATION.json": "559d81c9e7bc6e9811a22f3be0e777f0c5cf10fd632d93b9040538f39be595f4",
+    "manifests/PARENT_FREEZE_VERIFICATION.json": "b5ba1d33222f11db5bf5454d25762b9c6f78635e9ef5336a25eaf95729f1a171",
+    "manifests/POLICY_FREEZE_V2.json": "f1a6a0083eb4b8ee300d7e050a877bb834d8fdb0b7b50ec9f95ccc837c60c5eb",
+    "manifests/PRE_SEARCH_CONTRACT_CARRY_FORWARD.json": "cf67e0732634424bca5f752261c46f54c62146f72423e46c76c845cd97ee65cd",
+    "manifests/PROXY_EQUIVALENCE.json": "027c215bc422ec81fb18f591bcc10b5273c350efb6f8dba4d033951f6d5ec3de",
+    "manifests/SEARCH_BUDGET_RUNTIME_AUDIT.json": "a0f614c520626dc4371523a248b190db4927c696ed25ea681f58f749b0de7c6e",
+    "manifests/SEARCH_POLICY_DIFF.json": "48487371447c562ad81b3e034bc15f14fb97fee22d44d9e71f23279dc234c1a6",
+    "manifests/SEARCHED_UNSEARCHED_BOUNDARY.json": "ae549a1f83a7ab5d9d3bd63fd059b707ee00fdebcdf5f8d15023d450241632c6",
+    "multiplicity_audit.csv": "7ef60d0999286c15737dd644c8351bc0578701dce5d4c2daa7c43cd219da95f4",
+    "MULTIPLICITY_CONTROL_AUDIT.md": "c468571dc548b4c2d421cb9cabd549fde2ca021ef26b5c66efc9566796dfb48a",
+    "proxy_equivalence_check.csv": "fc450b27b22d6a1e07a611e2f0e674411ef76bd89338264857c7a2750b247a9a",
+    "raw_only_lowest_navigation_by_size.csv": "7757acb1ecb3658326165db1ec831f6cc2a3789b301b0ea44183707eb9c3b750",
+    "raw_only_search_paths.csv": "afc3f2d38335d3ea35ffc941e71a8152a39c41ca4765c00f2f5186279a9dcaef",
+    "README.md": "a836891dc2afe636d963d27323ebd2502bffb1e4efdb72d8cad75383bbf0ec0f",
+    "S7_7R_SEARCH_POLICY_AND_FRONTIER_AUDIT_REPORT.md": "d82cb615c0d3c4a15be65f01c065ee3246accb313ae6c5d6e56285cda421c7ba",
+    "S7_7R_SEARCH_POLICY_AND_FRONTIER_FINAL.md": "6637b0679dba2a77f57aeccdadfc1d531802010b44541b5a691d1ccde70acebc",
+    "scripts/s7_7r_a_policy.py": "6598bcc154016196ae0a600cf9517e6a4f1194cc45872efcb82557a6ea780686",
+    "scripts/s7_7r_b_search.py": "4e89934f8ebcb7491e724b54953cc324662480c17823eeef9df8fa34eb388a5e",
+    "scripts/s7_7r_c_frontier.py": "0464d1c91bbba468069671ec80d6bab051f62e0bb24f8eea7c607b9ba2202af9",
+    "SEARCH_BUDGET_PREFLIGHT_V2.json": "7db8ca16710117b9a9514bc7fdc087533d992fe34c99130168cf08be2d7f1108",
+    "search_candidate_evaluations.csv": "fa20b7c420b8b64e68e586c72be58f47f856d98facb32aff62f615f0a7d17e09",
+    "SEARCH_POLICY_PREVALUE_V2.json": "2049cf999dd99c0a1c5aa7f3539a7caaedbae8171d42678ea4cedef93734a255",
+    "search_proposal_provenance.csv": "905866f857e8a6fe39217b50935730afbd9966bc672ea77c33035d86d7cd462e",
+    "search_retained_paths.csv": "c8feafd8a156e1a640e780f0a8a4986f0178924decacba0fa3a85faa01c09498",
+    "search_seed_registry.csv": "16f2bb6100d5f178aeb3ce84bd5edcfe3380804dc0e86d36da0cd4a6a326ad91",
+    "search_strata.csv": "267c44449eba26bf4ed45c7f808977ed20c3744a53542e478f6dd5ad4a89e249",
+    "SIGMA_REC_V2.json": "13d2cf08e362b5c2a55f2c952d6a0a7869b1cdb2c0ca6c55185de0a49c0a362f",
+    "two_seed_sensitivity_declaration.json": "12ababc5797c3cd7de136395d013b0c86347039a024c0b520b947589ef833255",
+    "unsearched_boundary_summary.csv": "30f59798d11723651e7846d2eca5ba2ddd0380409ed5d856c9a71de56ffb1709"
+  },
+  "self_referential_excluded": [
+    "S7_7R_ACCEPTANCE_CHECKS.json",
+    "S7_7R_FREEZE.json"
+  ],
+  "next_stage": "S7.8 (Utility qualification over Ahat_rec) - NOT AUTHORISED"
+}

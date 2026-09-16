@@ -1,0 +1,84 @@
+{
+  "policy_id": "EPOCH2_RANGE_SUPPORT_POLICY_V1",
+  "frozen_utc": "2026-09-06T04:02:06.709084+00:00",
+  "inherits": "K_REC_V2 P-RANGE-SUPPORT and V-RANGE, unchanged",
+  "qualification_threshold_tau": 1.0,
+  "qualification_threshold_is_contractual_and_unchanged": true,
+  "no_global_prefilter_over_all_62": true,
+  "A_training_admissibility": {
+    "rule": "a coordinate may enter the Epoch-2 search for fold k only if E(c,s,b) <= 0.50 on EVERY D_train(k) discharge/block, using D_train predictors alone",
+    "tau_train": 0.5,
+    "is_a_search_side_requirement_not_a_contract_change": true,
+    "authorised_by": "E2.0 section 11A - 'candidates may enter the search only if they satisfy the prospectively frozen training-domain requirement'",
+    "interpretation": "on the training discharges a coordinate may leave its calibration hull by at most HALF a calibration range, leaving a further half range of headroom before the contractual qualification threshold at tau = 1",
+    "why_stricter_than_tau": "a coordinate admitted at exactly tau on training has no headroom and is near-certain to breach tau on unseen discharges; the headroom is what makes held-out applicability attainable at all",
+    "chosen_on": "interpretability and basis adequacy, target-blind",
+    "not_chosen_by_maximising_a_pass_probability": true,
+    "per_fold_basis_size": {
+      "min": 2217,
+      "max": 2352,
+      "per_fold": [
+        2258,
+        2217,
+        2238,
+        2253,
+        2238,
+        2352
+      ],
+      "smallest_constructor_family": 5
+    },
+    "all_seven_constructor_families_survive_in_every_fold": true
+  },
+  "B_heldout_qualification": {
+    "rule": "after the support is frozen and hashed, apply P-RANGE at tau = 1.0 to every D_test(k) discharge/block",
+    "support_predicate": "conjunction - EVERY coordinate must pass on EVERY held-out block",
+    "failure_status": "RANGE_SUPPORT_NOT_APPLICABLE",
+    "on_failure_forbidden": [
+      "reselect another support",
+      "delete the block",
+      "delete the discharge",
+      "loosen tau",
+      "clip the coordinate",
+      "re-run the fold search"
+    ],
+    "on_failure_required": "record the status; the fold does not qualify for full-domain success; report it"
+  },
+  "inner_geometry": {
+    "blocks": {
+      "A": [
+        [
+          0.0,
+          0.4
+        ],
+        [
+          0.4,
+          0.5
+        ]
+      ],
+      "B": [
+        [
+          0.0,
+          0.6
+        ],
+        [
+          0.6,
+          0.7
+        ]
+      ],
+      "C": [
+        [
+          0.0,
+          0.8
+        ],
+        [
+          0.8,
+          0.9
+        ]
+      ]
+    },
+    "unchanged_from_epoch1": true,
+    "new_temporal_windows": false,
+    "local_coefficients": "discharge x block, calibration-only, as in Epoch 1",
+    "support_shared_across_outer_training_discharges": true
+  }
+}

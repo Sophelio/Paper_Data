@@ -1,0 +1,31 @@
+{
+  "freeze_id": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-V1",
+  "target": "vsurf",
+  "rules_applied": {
+    "R1_target_itself": 1,
+    "R2_alias": 0,
+    "R3_definitional_descendant": 0,
+    "R4_verified_ancestry": 0,
+    "R5_unresolved_ancestry_fail_closed": 15,
+    "R6_coordinate_closure": "DEFERRED_TO_S7.5",
+    "SIBLING_PRIMARY_EXCLUSION": 0
+  },
+  "correlation_used_as_ancestry": false,
+  "provenance_relaxed_variant": false,
+  "efit_recovery_attempted": false,
+  "exclusion_census": {
+    "n_initial": 95,
+    "target_itself": 1,
+    "duplicate_or_alias": 0,
+    "definitional_descendant": 0,
+    "verified_target_ancestry": 0,
+    "unresolved_target_ancestry": 15,
+    "sibling_exclusion": 0,
+    "other_frozen_P_rec_reason": 0,
+    "surviving_primary": 79
+  },
+  "sibling_sensitivity": "NOT_APPLICABLE",
+  "sibling_set": [],
+  "n_predictors_primary": 79,
+  "n_predictors_sibling_sensitivity": 79
+}

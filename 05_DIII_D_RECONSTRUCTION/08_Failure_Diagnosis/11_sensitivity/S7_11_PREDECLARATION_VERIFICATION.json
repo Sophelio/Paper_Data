@@ -1,0 +1,225 @@
+{
+  "verification_id": "S7_11_ENTRY_VERIFICATION_V1",
+  "generated_utc": "2026-09-05T23:40:21.516962+00:00",
+  "lineage": [
+    {
+      "stage": "S7.1",
+      "freeze_id": "D3D-SIR-S7.1-OBSERVATIONAL-OBJECT-FINAL-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "be4807c65cdcf330244f2d80f0007f8f0448208b56ff3095f19fbdcf3097600f"
+    },
+    {
+      "stage": "S7.2 V1",
+      "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V1",
+      "status": "FROZEN_READY_FOR_S7.3",
+      "file_sha256": "5e65d87825024d2e62b0db8fab8add518f364110e41f3a63f61571c80cc3102f"
+    },
+    {
+      "stage": "S7.2 V2",
+      "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V2",
+      "status": "FROZEN_READY_FOR_S7.3",
+      "file_sha256": "ecd15ef9e833e0b25feb42cdbcf30c67634f1949f4e50b08546f38bb61e7faab"
+    },
+    {
+      "stage": "S7.3R V2",
+      "freeze_id": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-SOURCE-RESOLUTION-V2",
+      "status": "FROZEN_READY_TO_RETRY_S7.4",
+      "file_sha256": "a8477f185c8dfb31d799c7607fa1a183d762405353c8bc21f195ff2524ff8a74"
+    },
+    {
+      "stage": "S7.4 V2",
+      "freeze_id": "D3D-SIR-S7.4-MATHEMATICAL-INTERPRETATION-SOURCE-RESOLUTION-V2",
+      "status": "FROZEN_READY_FOR_S7.5",
+      "file_sha256": "0658d3c9949c19108ba5f8de17ba37966b5bd6bf41d9836f3ccc2ccf45c5183a"
+    },
+    {
+      "stage": "S7.5 V1",
+      "freeze_id": "D3D-SIR-S7.5-TYPED-RELATIONAL-ONTOLOGY-V1",
+      "status": "FROZEN_READY_FOR_S7.6",
+      "file_sha256": "2cd73e77e0734177c56df175e084a319ad5913fcf1038d0dc87f7507a8a86721"
+    },
+    {
+      "stage": "S7.5H V1",
+      "freeze_id": "D3D-SIR-S7.5H-PRIMITIVE-SPACE-AND-ONTOLOGY-HARDENING-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "dffdd834ecf40b0f22b4844040bfe0ab5dd2bebb4b73d517a67387f4718f43d9"
+    },
+    {
+      "stage": "S7.6R V2",
+      "freeze_id": "D3D-SIR-S7.6-ADMISSIBLE-UNIVERSE-HARDENED-V2",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "0cf779767940249fa515221f3fbd4bf2f7a93281c21cb63383b084504426fa59"
+    },
+    {
+      "stage": "S7.7R V2",
+      "freeze_id": "D3D-SIR-S7.7-ONE-SEED-PRIMARY-SEARCH-AND-EXPLORED-FRONTIER-V2",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "576b1087b8fd767c631ad65cc1123f4e1ff40be7816b46dfe4fe77b7aafd47e2"
+    },
+    {
+      "stage": "S7.8 V1",
+      "freeze_id": "D3D-SIR-S7.8-UTILITY-AND-QUALIFICATION-RULES-V1",
+      "status": "FROZEN_READY_FOR_S7.9",
+      "file_sha256": "1d12f78d165c09b77b4b853053e60a9a87784da2aaa2b38c4b882bb575d398e0"
+    },
+    {
+      "stage": "S7.9 V1",
+      "freeze_id": "D3D-SIR-S7.9-DEVELOPMENT-SELECTION-AND-PREEXTERNAL-FREEZE-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "966f9628dceb501e9f102d9ba3f74e0bfed3dddee7f25a58df47732eef3d553b"
+    },
+    {
+      "stage": "S7.10 V1",
+      "freeze_id": "D3D-SIR-S7.10-EXTERNAL-VALIDATION-AND-GATE-EVALUATION-V1",
+      "status": "PRIMARY_EXTERNAL_GATE_FAILURE",
+      "file_sha256": "8ea2062f0fc38fbf24e3b9d6477cace1d0fcd9a54e746e66c6e428d01437db97"
+    }
+  ],
+  "n_authoritative": 12,
+  "s7_10_manifest_recomputation": {
+    "n": 31,
+    "matched": 31,
+    "mismatched": []
+  },
+  "s7_9_manifest_recomputation": {
+    "n": 45,
+    "matched": 45,
+    "mismatched": []
+  },
+  "predeclaration": {
+    "file_sha256": "da24fbe38141f0c77f74ae3a87f6002c8263b8d3cc9aed35696dbad98a40c4c3",
+    "prefix_matches_expected": true,
+    "declared_utc": "2026-09-05T22:47:11.395345+00:00",
+    "first_external_value_access_utc": "2026-09-05T22:48:51.998142+00:00",
+    "predates_first_external_access": true,
+    "seconds_before_first_external_access": 100.603,
+    "executed_in_S7_10": false,
+    "authorised_sensitivities": [
+      "PRIMARY_MINUS_PRMTAN_NEPED_ANCESTRY",
+      "PRMTAN_NEPED_ONLY",
+      "SUPPORT_FAMILY_EXTERNAL_SENSITIVITY",
+      "TWO_SEED_SEARCH_DEPTH_SENSITIVITY"
+    ],
+    "support_family": {
+      "n_declared": 217,
+      "n_recovered": 217,
+      "support_ids_sha256_declared": "d33bf2234899341f23e0f57a2ad668751bed367bf386921961c1d78c9365e7a7",
+      "support_ids_sha256_recomputed": "d33bf2234899341f23e0f57a2ad668751bed367bf386921961c1d78c9365e7a7",
+      "matches": true,
+      "all_within_Ahat_rec": true,
+      "top_k_subset": false,
+      "external_result_based_selection": false
+    },
+    "minus_prmtan": {
+      "removed": [
+        "ID(prmtan_neped)",
+        "PROD(prmtan_neped,prmtan_neped)",
+        "RATIO(ece21,prmtan_neped)",
+        "RATIO(fs03da,prmtan_neped)",
+        "RECIP(prmtan_neped)"
+      ],
+      "n_removed": 5,
+      "resulting_support": [
+        "ID(cerqtit6)",
+        "ID(pcdiamag3)",
+        "PROD(ece37,ece39)",
+        "PROD(gasa,gasa)",
+        "PROD(pinj,cerqrott6)",
+        "RATIO(ip,ece22)",
+        "RECIP(cerqtit10)"
+      ],
+      "resulting_support_size": 7,
+      "independently_recomputed_removed": [
+        "ID(prmtan_neped)",
+        "PROD(prmtan_neped,prmtan_neped)",
+        "RATIO(ece21,prmtan_neped)",
+        "RATIO(fs03da,prmtan_neped)",
+        "RECIP(prmtan_neped)"
+      ],
+      "independently_recomputed_kept": [
+        "ID(cerqtit6)",
+        "ID(pcdiamag3)",
+        "PROD(ece37,ece39)",
+        "PROD(gasa,gasa)",
+        "PROD(pinj,cerqrott6)",
+        "RATIO(ip,ece22)",
+        "RECIP(cerqtit10)"
+      ],
+      "agrees_with_predeclaration": true
+    },
+    "prmtan_only": [
+      "ID(prmtan_neped)"
+    ],
+    "two_seed": [
+      "DECLARED_OPTIONAL",
+      "NOT_EXECUTED"
+    ]
+  },
+  "primary_result_invariant": {
+    "PRIMARY_S7_10_RESULT_IMMUTABLE": true,
+    "primary_support": "ID(cerqtit6)|ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(cerqtit10)|RECIP(prmtan_neped)",
+    "primary_support_size": 12,
+    "C_dev_star_changed": false,
+    "PRIMARY_EXTERNAL_RESULT": "NO_QUALIFIED_NONTRIVIAL_STRUCTURAL_TRANSFER",
+    "V3": "FAIL",
+    "V6": "FAIL",
+    "Delta_0": -0.18009502685176143,
+    "Delta_1": 0.5320905620084037,
+    "omega_rec_supported_claim_domain": "EMPTY",
+    "stage_status_S7_10": "PRIMARY_EXTERNAL_GATE_FAILURE",
+    "gate_results_S7_10": {
+      "V1": "PASS",
+      "V2": "PASS",
+      "V3": "FAIL",
+      "V4": "PASS",
+      "V5": "PASS",
+      "V6": "FAIL",
+      "V7": "PASS",
+      "V8": "PASS",
+      "V9": "PENDING_S7.11",
+      "V10": "PASS"
+    },
+    "external_cohort": {
+      "n": 42,
+      "earlier": 24,
+      "later": 18
+    },
+    "baselines": {
+      "B2_alpha": 1.0,
+      "B2_predictors": 78,
+      "B3_sklearn": "1.9.0",
+      "B3_random_state": 2026090502,
+      "H0_alpha": 1.0,
+      "H0_predictors": 70
+    },
+    "pre_external_model_freeze_utc": "2026-09-05T20:32:08.992754+00:00",
+    "pre_external_model_freeze_sha256": "e196286eb4c60e349733f460d353b07deeb84d8842a3ecb3feea0c954ffc275b",
+    "no_S7_11_output_may_modify_these_fields": true
+  },
+  "v9_scope": {
+    "inherited_definition": "no result depends catastrophically on one discharge, one temporal block, or one numerical realization",
+    "source": "S7.2 V1 UTILITY_AND_QUALIFICATION_POLICY.md, carried into V_REC_OPERATIONAL_V1",
+    "mandatory": false,
+    "owner_stage": "S7.11",
+    "components": [
+      "DISCHARGE",
+      "TEMPORAL_BLOCK",
+      "NUMERICAL_REALIZATION"
+    ],
+    "components_frozen_before_external_access": true,
+    "note": "the three V9 components were frozen in S7.2 V1, long before any external value existed. Executing them is executing an already-frozen gate definition, not broadening the S7.11 predeclaration, which covers the three interpretation sensitivities separately.",
+    "numerical_realization_ids_of_C_dev_star": [
+      "NONE"
+    ],
+    "C_dev_star_contains_derivative_coordinate": false
+  },
+  "drift": [],
+  "verdict": "ZERO_SUBSTANTIVE_DRIFT",
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "sklearn": "1.9.0",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

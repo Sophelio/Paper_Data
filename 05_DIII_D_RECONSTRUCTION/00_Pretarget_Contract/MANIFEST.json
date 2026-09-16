@@ -1,0 +1,50 @@
+{
+  "record_id": "S7_STAGE_MANIFEST_V1",
+  "generated_utc": "2026-09-08T00:51:17.508741+00:00",
+  "stage_id": "S7.2",
+  "title": "Reconstruction contract (target-blind skeleton)",
+  "directory": "02_reconstruction_contract",
+  "scientific_task_id": "q_rec",
+  "claim_branch": "QREC-B1",
+  "claim_branch_role": "ORIGIN",
+  "parent_claim_branch": null,
+  "operational_epoch": 1,
+  "revision_level": "NONE",
+  "branch": "q_rec",
+  "status": "CANONICAL_SUPERSEDED_BY_S7.2C",
+  "sir_architecture_mapping": [
+    "K_claim",
+    "K_op"
+  ],
+  "scientific_question": "What contract governs the reconstruction claim, before any target is chosen?",
+  "operation": "Froze q, the information-boundary rules, admissibility classes, construction bounds, knowledge policy, utility, validation geometry and intended domain.",
+  "verdict": "FROZEN_READY_FOR_S7.3 - contract skeleton frozen with no target selected.",
+  "parent_stages": [
+    "S7.1"
+  ],
+  "child_stages": [
+    "S7.2C",
+    "S7.3"
+  ],
+  "key_numbers": {
+    "development": 20,
+    "external": 42,
+    "blocks": 3
+  },
+  "notes": "Cohort partition deterministic and target-blind. External cohort sealed until S7.10.",
+  "governing_freeze": {
+    "path": "S7_2_FREEZE.json",
+    "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-V1",
+    "sha256": "5e65d87825024d2e62b0db8fab8add518f364110e41f3a63f61571c80cc3102f",
+    "authoritative": true,
+    "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+  },
+  "executables": [
+    "correction_v1/scripts/build_s7_2c.py",
+    "scripts/build_contract_and_freeze.py",
+    "scripts/build_partition_and_validation.py",
+    "scripts/verify_s7_1_input.py"
+  ],
+  "n_files": 53,
+  "indexes_not_replaces": true
+}

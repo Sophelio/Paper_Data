@@ -1,0 +1,45 @@
+{
+  "canonical_run_id": "D3D-SIR-62-ALIGNED-V1",
+  "artifact_status": "HISTORICAL_ORIGINAL",
+  "feature_export_directory": "FEATURE_EXPORTS/pcdiamag3_none_2026-07-17_05-21-18PM_CDT_raw_final_paper_normalized",
+  "feature_export_manifest_sha256": "c70dac99847cc63b87f4de0362dca8bbcfd05049b17c331112fd687353c217c0",
+  "target_column": "[d[pcdiamag3]/d[t]]",
+  "feature_columns_psir_order": [
+    "[d[pcdiamag3]/d[kappa]]",
+    "[d[kappa]/d[t]]",
+    "[r[q95]/r[kappa]]",
+    "[d[pcdiamag3]/d[betan]]",
+    "[d[kappa]/d[betan]]",
+    "[d[betan]/d[t]]",
+    "[d[li]/d[betan]]"
+  ],
+  "feature_columns_semantic_order": [
+    "[d[pcdiamag3]/d[kappa]]",
+    "[d[pcdiamag3]/d[betan]]",
+    "[d[kappa]/d[betan]]",
+    "[d[li]/d[betan]]",
+    "[r[q95]/r[kappa]]",
+    "[d[betan]/d[t]]",
+    "[d[kappa]/d[t]]"
+  ],
+  "intercept_included": true,
+  "row_ordering": "sample_index 0..999 as stored in each parquet / psir timing",
+  "discharge_ordering": "realization_index = order of filenames in historical psir (shot ascending in export sort when regenerated)",
+  "realization_index_convention": "0..61 matching model.filenames order for HISTORICAL_ORIGINAL",
+  "sample_index_convention": "0..999 along aligned TARGET_N grid",
+  "finite_row_mask": "all 1000 rows finite in canonical export; prepare_discharge_reconstruction_data drops nonfinite",
+  "expected_shape_features_per_discharge": [
+    1000,
+    7
+  ],
+  "expected_shape_target_per_discharge": [
+    1000
+  ],
+  "standardization_state": "export columns are z-scored per discharge (manifest normalization=zscore); target mean~0 std~1",
+  "fitting_method": "numpy.linalg.lstsq on [1|X] for metadata; historical predictions from psir 1_8* coeffs",
+  "solver_implementation": "numpy.linalg.lstsq(..., rcond=None)",
+  "numerical_tolerance_rmse": 1e-12,
+  "model_artifact_sha256": "ebb8cbbb9f604dbeeee01d71546c334dc192bbbc592d63bdb200af7aeb23c7e8",
+  "array_hash_representation": "numpy.ascontiguousarray(arr, dtype=float64).tobytes() then SHA-256",
+  "coefficients_are": "HISTORICAL_ORIGINAL"
+}

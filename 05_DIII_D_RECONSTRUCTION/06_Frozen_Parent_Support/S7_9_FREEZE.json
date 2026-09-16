@@ -1,0 +1,196 @@
+{
+  "freeze_id": "D3D-SIR-S7.9-DEVELOPMENT-SELECTION-AND-PREEXTERNAL-FREEZE-V1",
+  "status": "FROZEN_WITH_QUALIFICATIONS",
+  "timestamp_utc": "2026-09-05T20:32:09.546065+00:00",
+  "stage": "S7.9 - development selection and pre-external freeze",
+  "parent_freeze_id": "D3D-SIR-S7.8-UTILITY-AND-QUALIFICATION-RULES-V1",
+  "selection_domain": "AHAT_REC_DENSITY_ONE_SEED_V2",
+  "selection_domain_cardinality": 162845,
+  "global_optimality_claim": false,
+  "C_dev_star": "ID(cerqtit6)|ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(cerqtit10)|RECIP(prmtan_neped)",
+  "C_dev_star_size": 12,
+  "survivor_sets": {
+    "E0": 162845,
+    "E1": 1055,
+    "E2": 1,
+    "E3": 1,
+    "E4": 1,
+    "E5": 1
+  },
+  "binding_rank": 2,
+  "development_utility_quantities": {
+    "FIT": 0.16639756507550676,
+    "FIT_best_in_E0": 0.16628151489421725,
+    "FIT_gap_to_best": 0.0001160501812895176,
+    "SE_delta_vs_best": 0.00024981376112339254,
+    "delta_equiv_vs_best": 0.01,
+    "BLOCK_WORST": 0.19425169937312603,
+    "b_star": "A",
+    "SHOT_P90": 0.21141211638847987,
+    "ACTIVE_TERMS": 12,
+    "support_size": 12,
+    "ACTIVE_TERMS_equals_support_size": true,
+    "COND_MEDIAN": 1.9917544203843867,
+    "COND_P90": 2.173041735453102,
+    "COND_MAX": 2.2596409414020897,
+    "n_infinite_conditioning_cells": 0,
+    "n_degenerate_sd_cells": 0,
+    "BOOT_SELECTION_FREQ": 0.093,
+    "FOLD_SELECTION_FREQ": 0.3333333333333333
+  },
+  "qualifications": [
+    "Selection stability is LOW and is reported as found, not rescued: the 1000-replicate discharge bootstrap produced 217 distinct Rank-4 winners and C_dev_star was selected in 9.3 percent of replicates; it won 1 of the 3 block-omission perturbations (FOLD_SELECTION_FREQ 0.333). The frozen policy attaches no pass/fail threshold to support stability, so this does not alter the selection - but it materially qualifies how strongly the specific coordinate support may be interpreted.",
+    "Rank 5 was NON-BINDING by construction: the original E4 contained exactly one candidate, so BOOT_SELECTION_FREQ and FOLD_SELECTION_FREQ are diagnostic quantities here rather than criteria that could change the outcome. The selection was already determined at Rank 2.",
+    "Ranks 3, 4 and 5 were all non-binding: E2 resolved to a singleton under the exact SHOT_P90 minimum. The binding criterion was Rank 2.",
+    "C_dev_star is NOT the Rank-1 fit-best candidate. FIT_best = 0.1662815 belongs to a different size-12 support; C_dev_star has FIT = 0.1663976, inside the frozen practical-equivalence set. This is the lexicographic utility working as designed, not an anomaly.",
+    "Every candidate in E1 had block A as its worst temporal block (1055/1055). Block A has the shortest calibration window; the finding is recorded and carried to S7.11 sensitivity rather than acted on.",
+    "The selected support contains prmtan_neped, a density-family primitive. It is certified_independent_of_target by the frozen S7.3R information boundary and every coordinate carries TRANSITIVE_FROM_TARGET_INDEPENDENT_BOUNDARY, so V1 is not compromised; it is flagged because a density-family predictor for a density target will attract reader scrutiny and should be addressed explicitly at S7.12.",
+    "The selected support contains the uncalibrated primitive pcdiamag3. Coefficients involving it have no certified physical-dimensional interpretation. This is an interpretation qualification, not a selection exclusion."
+  ],
+  "interpretation_flags": {
+    "contains_uncalibrated_primitive": true,
+    "uncalibrated_primitives": [
+      "pcdiamag3"
+    ],
+    "UNCALIBRATED_SIGNAL": true,
+    "uncalibrated_consequence": "coefficients involving the uncalibrated primitive have no certified physical-dimensional interpretation",
+    "support_rejected_for_uncalibrated": false,
+    "contains_C6": false,
+    "contains_C7": false,
+    "c6_c7_treated_as_surprising_or_repaired": false,
+    "contains_ece_ancestry": true,
+    "ece_penalty_applied": false,
+    "any_aliasing_flag": true,
+    "any_upsample_flag": true,
+    "partial_map_status": [
+      "DOMAIN_DENOMINATOR_LEVEL_NONZERO"
+    ],
+    "all_primary_not_sensitivity": true
+  },
+  "development_representation_lock": {
+    "sha256": "c7c6a36b86766f3cfaf1411dae5395a2c2d42844369f3eadaa88dbd8556d04d0",
+    "locked_utc": "2026-09-05T20:22:16.534197+00:00",
+    "precedes_baseline_tuning": true
+  },
+  "pre_external_model_freeze_sha256": "e196286eb4c60e349733f460d353b07deeb84d8842a3ecb3feea0c954ffc275b",
+  "pre_external_frozen_utc": "2026-09-05T20:32:08.992754+00:00",
+  "pre_external_reverification_mismatches": 0,
+  "baselines": {
+    "B0_CALIBRATION_MEAN_V1": {
+      "status": "FROZEN_NOT_RUN",
+      "selected_alpha": null
+    },
+    "B1_PERSISTENCE_V1": {
+      "status": "FROZEN_NOT_RUN",
+      "selected_alpha": null
+    },
+    "B1A_AR1": {
+      "status": "FROZEN_NOT_RUN",
+      "selected_alpha": null
+    },
+    "B2_RAW_RIDGE": {
+      "status": "FROZEN_NOT_RUN",
+      "selected_alpha": 1.0
+    },
+    "B3_RAW_HIST_GRADIENT_BOOSTING": {
+      "status": "FROZEN_NOT_RUN",
+      "selected_alpha": null
+    },
+    "H0_RAW_HARDENED": {
+      "status": "FROZEN_NOT_RUN",
+      "selected_alpha": 1.0
+    }
+  },
+  "v2_evidence_status": "V2_EVIDENCE_COMPLETE",
+  "access": {
+    "development_discharges": 20,
+    "external_predictor_reads": 0,
+    "external_target_reads": 0,
+    "external_model_evaluations": 0,
+    "external_derived_statistics": 0,
+    "external_cohort_state": "SEALED",
+    "baselines_run": 0,
+    "verdict": "FIREWALL_INTACT"
+  },
+  "search_boundary": {
+    "selected_within": "AHAT_REC_DENSITY_ONE_SEED_V2",
+    "global_optimality_claim": false,
+    "unsearched_status": "ADMISSIBLE_UNSEARCHED"
+  },
+  "two_seed_sensitivity": [
+    "DECLARED_OPTIONAL",
+    "NOT_EXECUTED"
+  ],
+  "acceptance_checks": "54/54",
+  "acceptance_failed": [],
+  "n_artifacts": 45,
+  "n_markdown": 6,
+  "markdown_files": [
+    "BASELINE_CONFIGURATION_FREEZE.md",
+    "PRE_EXTERNAL_FREEZE.md",
+    "README.md",
+    "S7_9_DEVELOPMENT_SELECTION_AND_FREEZE_FINAL.md",
+    "S7_9_DEVELOPMENT_SELECTION_AUDIT_REPORT.md",
+    "SELECTED_REPRESENTATION.md"
+  ],
+  "all_artifact_hashes": {
+    "BASELINE_B0_CONFIG.json": "356485d5a6d52d0a94a9d373e2bc0d276c0f9707bbb970e18fd79080fce72440",
+    "BASELINE_B1_CONFIG.json": "a2b7b8f07d1de649497ac08259288fb0700d5f35cc2409980661144b0d2e79a4",
+    "BASELINE_B1A_CONFIG.json": "fcc049444e233b2ea6f3304e69739202a04b3387dec936d8576658b446a42da1",
+    "baseline_b2_alpha_tuning.csv": "30597f59ee48a981cfb67929b9a2a4a2537ed3885e2ef4a1b3d234761d58fbcd",
+    "BASELINE_B2_CONFIG.json": "d9abeaaa4e767b43e31fd57bb1dbb0c48c33584b81131395cadaabff88c4c0f0",
+    "BASELINE_B3_CONFIG.json": "c72c049e63389dab181347c8adf2f5b649ceed13b395d5ed542da4c4cc01f2e3",
+    "BASELINE_CONFIGURATION_FREEZE.md": "6bc015250907030ec1e23b5512de73e7cb4f9cff55b9ca67b4bf7c8e09ec3df1",
+    "BASELINE_CONFIGURATION_MANIFEST.json": "9d0950ba8213b33bde36c515785ed6e799454a400af682d5f89c6a49b630cf26",
+    "baseline_h0_alpha_tuning.csv": "011f9ec5f429f9df920df1386661e8c009afc1a5835a53ef965b7342d32fe2e1",
+    "BASELINE_H0_CONFIG.json": "40182fd53373b80ff26d5aae8f0eb760abc8da0af82b420630b882ac625ac76f",
+    "BASELINE_SPECIFICATION_COMPLETION_PREVALUE.json": "fd05fcc0f4d0e5e95a26315006be1531d4f6bcc5d7697914b5daaf3593a1ba3f",
+    "bootstrap_coordinate_participation.csv": "d26598d9bc741c530f96c7b342c07e06e6c6889782480de5bf4da9e703acab2f",
+    "bootstrap_selection_frequency.csv": "f6c9b976a620bf655afe462435cf9fe6861cad6d86d8814e4046a4c2d717433b",
+    "DEVELOPMENT_REPRESENTATION_LOCK.json": "cbd25fb69049444d92907b60cce5ddb25dfa2ce3b34b67f5c497fecfa732d6d1",
+    "fold_selection_frequency.csv": "9db505ade32780cec61e079f0cec5ea86ffdc7594703bbb37bce18e8367e0ddf",
+    "manifests/COORDINATE_LEVEL_BOOTSTRAP_PARTICIPATION.json": "f709a61caef1b814ab708f25ad76aeda61945c3d8c4104a75fa037fca9ac8e7f",
+    "manifests/DEVELOPMENT_ACCESS_LOG.json": "f8592f0709c16f58fb160c1966f37cce1454a3c7b6f8ab57a58da0a7f1615b23",
+    "manifests/PARENT_BASELINE_SPECIFICATION_AUDIT.json": "de899a5f0630fefc5f80274c8b71faa5c832f47f4e05c7b48f46ef6d451dbcbe",
+    "manifests/PARENT_FREEZE_VERIFICATION.json": "ff6bb1dd720b0acb901006992c1ecadfdc9238e716c55780c80e0152551b62a3",
+    "manifests/RANK12_SUMMARY.json": "075db0216e48254c003c6ea60db961e34c73b5830b48a86dd9663d76e3abf231",
+    "manifests/RANK345_SUMMARY.json": "ca6409e2ccad791556e7c679f57e81d3727bc25f8eac701f10a14c9ad7c2f687",
+    "manifests/V2_DEVELOPMENT_ONLY_DISCOVERY_EVIDENCE.json": "288f960923caf3d78308bf9edda6d87a6bddefd8a6e1785bb9bea15438d298e6",
+    "PRE_EXTERNAL_FREEZE.md": "20ad9e062c9265b4f5ef404883b8523f630776e24d87679b7582c99d6b885d33",
+    "PRE_EXTERNAL_MODEL_FREEZE.json": "e196286eb4c60e349733f460d353b07deeb84d8842a3ecb3feea0c954ffc275b",
+    "README.md": "c30fd24d178a6cd8bd0562afb2fff7a5227cfe5aea2bf2f446ced05a4eb87d30",
+    "RELATIONAL_ESTIMATOR_CONFIG.json": "c35ddb25a0cb619c824d50517a8a7a02679093b8cdad792fe46be8b3331025e3",
+    "S7_9_DEVELOPMENT_SELECTION_AND_FREEZE_FINAL.md": "c7d010f5770d24b5f830a3ba35f40fc586e4789f0c8b3f193228a172a2459542",
+    "S7_9_DEVELOPMENT_SELECTION_AUDIT_REPORT.md": "4ccb3ba178b0fdc3c1dff20ff9a921e260def404eb3e35a5de844fad97174d80",
+    "scripts/s7_9_a_verify.py": "7b4e74483b1db9bf1e425067ca546ae1c4f10d677a0ed20bb8e162d8ae789a99",
+    "scripts/s7_9_b_ranks12.py": "ebc49f4bdfb3aef793606975d140a3d577bf93c9dc96342afb62eb28372677b5",
+    "scripts/s7_9_coords.py": "664747fe079fe20a37b8350be730e4d9fdeb4d3f413f164f9a7e3d323dc17f6f",
+    "scripts/s7_9_d_rank345.py": "49ba43bef422349dc5ed75a50c0fc28ddcc24c377d5237f65e1145784226a9cd",
+    "scripts/s7_9_e_select_and_lock.py": "839069fe8bd030780242ac9747f40702adfcead81684226878f845c8b41b2451",
+    "scripts/s7_9_f_baselines.py": "2c1541e6781f752b38af2abc400bedbfb68e55a109bf467169fb80a98c77d74d",
+    "scripts/s7_9_g_freeze.py": "72ee1ade811a17b3868498ae989011279227a5927e86195ff0fa9766d833c2a9",
+    "scripts/s7_9_h_coord_stability.py": "0b304eeea71d38cbb8525a24fa4490bdd7ef5e351350b2957b8f446c4ad16b3b",
+    "SELECTED_REPRESENTATION.json": "800ac414aa16bbad1599a8512fcb8b2c4c9cf1e0adebdb8f9a314a78bb900337",
+    "SELECTED_REPRESENTATION.md": "87b84d9ac9ac11cd761a9098885233e82892cc8dfa4046b258da07e6b1da4bd8",
+    "utility_elimination_ledger.csv": "487707b9e7f92baaa7086700a71275c5f1184e7cba187ea311d3e7adc4154836",
+    "utility_rank_1_fit.csv": "f93ed7ff44609e42957002c48e316f4e0458b4a77780f025dd6269e8bbc50802",
+    "utility_rank_2_stability.csv": "a68ecae04b5ae5dd49a4bb09ce77614dfbffa7be2dd2215474dff4fb1ccf5b2a",
+    "utility_rank_3_parsimony.csv": "9c3a6e4e03e3a48e429aea7dd03a8e6a31c1be622306b9fb210e0f1a280ac10c",
+    "utility_rank_4_conditioning.csv": "b36206a96da9b8c08ccb43905eff08d62fee48d3dde754f360453134b8b05e0a",
+    "utility_rank_5_support_stability.csv": "45316049cd6dddf176cc0da89754f694a4dc01c658fc24e23638edcfd067d0d2",
+    "utility_survivor_sets.csv": "14d7394bd60e18709005e128a84a2680f2e1cd39021262ccb27a1686a45c85de"
+  },
+  "self_referential_excluded": [
+    "S7_9_ACCEPTANCE_CHECKS.json",
+    "S7_9_FREEZE.json"
+  ],
+  "hash_method": "sha256 over raw file bytes; self-referential and scratch files excluded",
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "sklearn": "1.9.0",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "next_stage": "S7.10 (external evaluation) - NOT AUTHORISED"
+}

@@ -1,0 +1,27 @@
+{
+  "record_id": "K2_TARGET_BLIND_FIREWALL_V1",
+  "frozen_utc": "2026-09-06T02:49:44.653123+00:00",
+  "target_reads": 0,
+  "model_error_reads": 0,
+  "residual_reads": 0,
+  "V3_label_reads": 0,
+  "support_family_outcome_label_reads": 0,
+  "permitted": [
+    "predictor signal values",
+    "coordinate values",
+    "frozen coordinate definitions",
+    "frozen block geometry",
+    "coordinate identities of the 217 fixed supports"
+  ],
+  "forbidden_during_rule_construction": [
+    "density target values",
+    "NRMSE",
+    "residuals",
+    "V3-style pass/fail labels",
+    "S7.11 70/143 partition",
+    "any reconstruction outcome"
+  ],
+  "historical_motivation_permitted_and_recorded": true,
+  "motivation_is_not_validation": true,
+  "asserted_in_code": true
+}

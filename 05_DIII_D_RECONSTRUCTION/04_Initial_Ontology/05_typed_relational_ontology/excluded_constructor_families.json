@@ -1,0 +1,125 @@
+{
+  "semantics": {
+    "GENERAL_FRAMEWORK_PERMITS": "the SIR framework in general admits the construction",
+    "TASK_ONTOLOGY_EXCLUDES": "excluded for this task by K_rec or I_rec",
+    "PRIMARY_ONTOLOGY_EXCLUDES": "excluded from this finite primary grammar; not a claim of scientific meaninglessness",
+    "SENSITIVITY_ONLY": "constructible, but only as S7.11 qualification evidence"
+  },
+  "excluded": [
+    {
+      "family": "target or target history",
+      "status": "TASK_ONTOLOGY_EXCLUDES",
+      "reason": "the target may not appear on the explanatory side; persistence is a baseline, not a coordinate"
+    },
+    {
+      "family": "lags",
+      "status": "PRIMARY_ONTOLOGY_EXCLUDES",
+      "reason": "the task is contemporaneous reconstruction"
+    },
+    {
+      "family": "lead values",
+      "status": "TASK_ONTOLOGY_EXCLUDES",
+      "reason": "would make the task forecasting"
+    },
+    {
+      "family": "second and higher temporal derivatives",
+      "status": "PRIMARY_ONTOLOGY_EXCLUDES",
+      "reason": "frozen decision H-D; source cadence cannot support them"
+    },
+    {
+      "family": "integrals / cumulative histories",
+      "status": "PRIMARY_ONTOLOGY_EXCLUDES",
+      "reason": "introduces unbounded memory outside the declared contemporaneous information set"
+    },
+    {
+      "family": "logarithms",
+      "status": "PRIMARY_ONTOLOGY_EXCLUDES",
+      "reason": "argument must be dimensionless; no scientific motivation declared"
+    },
+    {
+      "family": "exponentials",
+      "status": "PRIMARY_ONTOLOGY_EXCLUDES",
+      "reason": "same"
+    },
+    {
+      "family": "trigonometric functions",
+      "status": "PRIMARY_ONTOLOGY_EXCLUDES",
+      "reason": "same"
+    },
+    {
+      "family": "arbitrary powers beyond square via self-product",
+      "status": "PRIMARY_ONTOLOGY_EXCLUDES",
+      "reason": "depth and interpretability bound"
+    },
+    {
+      "family": "triple and higher products",
+      "status": "PRIMARY_ONTOLOGY_EXCLUDES",
+      "reason": "frozen arity bound of 2"
+    },
+    {
+      "family": "recursive products / ratios",
+      "status": "PRIMARY_ONTOLOGY_EXCLUDES",
+      "reason": "frozen maximum constructor depth of 1"
+    },
+    {
+      "family": "reference-shifted phase derivative",
+      "status": "PRIMARY_ONTOLOGY_EXCLUDES",
+      "reason": "a distinct construction from the canonical phase derivative; requires separate explicit qualification"
+    },
+    {
+      "family": "bounded / sensitivity-centered phase derivative",
+      "status": "PRIMARY_ONTOLOGY_EXCLUDES",
+      "reason": "same"
+    },
+    {
+      "family": "spatial derivatives",
+      "status": "TASK_ONTOLOGY_EXCLUDES",
+      "reason": "no channel geometry is documented in the frozen object"
+    },
+    {
+      "family": "channel-index derivatives",
+      "status": "TASK_ONTOLOGY_EXCLUDES",
+      "reason": "channel index is a label, not a spatial coordinate"
+    },
+    {
+      "family": "learned embeddings",
+      "status": "PRIMARY_ONTOLOGY_EXCLUDES",
+      "reason": "not interpretable; would be a fitted transform"
+    },
+    {
+      "family": "PCA coordinates",
+      "status": "PRIMARY_ONTOLOGY_EXCLUDES",
+      "reason": "fitted transform subject to the leakage firewall"
+    },
+    {
+      "family": "neural representations",
+      "status": "PRIMARY_ONTOLOGY_EXCLUDES",
+      "reason": "same"
+    },
+    {
+      "family": "event labels",
+      "status": "TASK_ONTOLOGY_EXCLUDES",
+      "reason": "none exist in the frozen object"
+    },
+    {
+      "family": "equilibrium quantities removed by I_rec",
+      "status": "TASK_ONTOLOGY_EXCLUDES",
+      "reason": "fail-closed unresolved ancestry"
+    },
+    {
+      "family": "vsurf",
+      "status": "TASK_ONTOLOGY_EXCLUDES",
+      "reason": "PRIMARY_NUMERICAL_SUPPORT_FAIL at S7.3R"
+    },
+    {
+      "family": "cross-discharge coordinates",
+      "status": "TASK_ONTOLOGY_EXCLUDES",
+      "reason": "discharges are separate realizations; concatenation forbidden"
+    },
+    {
+      "family": "pairwise sum / difference",
+      "status": "PRIMARY_ONTOLOGY_EXCLUDES",
+      "reason": "ALGEBRAIC REDUNDANCY: the primary relation template is affine-linear in the selected coordinates, so x_i+x_j and x_i-x_j are already representable by including x_i and x_j with appropriate coefficients. Adding them would enlarge the candidate set without enlarging the span of the relation family. This is an ontology-level redundancy decision, NOT a performance result. Dimensional compatibility rules for sums remain part of the general type system."
+    }
+  ]
+}

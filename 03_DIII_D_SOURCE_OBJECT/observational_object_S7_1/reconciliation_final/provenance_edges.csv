@@ -1,0 +1,14 @@
+parent,child,dependency_type,evidence,evidence_class,confidence,notes
+native_diagnostics,upstream_fetch_and_resample,acquired_by,external convention,UNRESOLVED,low,acquisition chain not present locally
+native_diagnostics,efit_equilibrium_reconstruction,constrains,external convention,UNRESOLVED,low,EFIT inputs not documented locally
+efit_equilibrium_reconstruction,upstream_fetch_and_resample,produces,group coherence + EFIT named in 2/15 descriptions,STRONGLY_INFERRED,medium,15 equilibrium outputs
+upstream_fetch_and_resample,resampled_archive_v6,resampled_to,shot_*_metadata.json method/category/lengths,CODE_VERIFIED,high,operation documented per signal per discharge
+upstream_fetch_and_resample,units_registry,supplies_units,registry provenance field,LOCAL_DOCUMENTED,medium,source tree absent locally
+resampled_archive_v6,reference_provider_95,loaded_by,diiid_sir_data_provider.py,CODE_VERIFIED,high,
+resampled_archive_v6,dalia_backend_loader,loaded_by,dalia data_provider.py,CODE_VERIFIED,high,95/95; 12 numerical spot checks exact
+resampled_archive_v6,full_provider_common_grid,gridded_by,diiid_elm_data_provider.py L140-167,CODE_VERIFIED,high,coarsest requested native dt
+resampled_archive_v6,paper_provider_8,restricted_by,Paper provider ALLOWED_SIGNALS,CODE_VERIFIED,high,"historical subset, not O"
+paper_provider_8,paper_grid_1000,gridded_by,TARGET_N=1000 linspace,CODE_VERIFIED,high,"dt 4.08-6.03 ms, discharge-specific"
+paper_grid_1000,numerical_realizations,realized_as,spline_processor / KalmanProcessor,LOCAL_DOCUMENTED,high,
+numerical_realizations,within_discharge_zscore,normalised_by,provenance ledger,CODE_VERIFIED,high,"ddof=0, per discharge"
+within_discharge_zscore,dfl_feature_export,exported_as,SIR_to_dFL provider,CODE_VERIFIED,high,"derived features, target-conditioned"

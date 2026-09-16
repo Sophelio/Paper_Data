@@ -1,0 +1,147 @@
+{
+  "record_id": "E2_0A_VERIFICATION_V1",
+  "generated_utc": "2026-09-06T04:42:47.861735+00:00",
+  "parent_manifests": {
+    "S7.K2": {
+      "n": 29,
+      "matched": 29,
+      "mismatched": [],
+      "freeze_file": "S7_K2_FREEZE.json",
+      "freeze_sha256": "198fa046c7eb2650efcb910f02922752b8204477f8930300e6abf24163193459"
+    },
+    "S7.E2.0": {
+      "n": 22,
+      "matched": 22,
+      "mismatched": [],
+      "freeze_file": "E2_0_FREEZE.json",
+      "freeze_sha256": "89af08c32468f0c9fc97046db47affa09a2cc864759e4b28374ddd5baa3842e6"
+    }
+  },
+  "inherited_unchanged": {
+    "K_REC_V2_sha256": "4fe95d45c6d6f9e0d66918cdc4cc7347276a915363b4a29501c2084d4f506407",
+    "K_REC_V2_matches_K2_freeze": true,
+    "tau": 1.0,
+    "revision_class": "MINIMAL_P_ONLY",
+    "U_rec": "UNCHANGED",
+    "V3": "Delta_0 <= -0.01 AND Delta_1 <= -0.01",
+    "V6_threshold": 0.01,
+    "baselines": [
+      "B0 calibration mean",
+      "B1 persistence",
+      "B1A AR(1)",
+      "B2 raw ridge",
+      "B3 raw HGBR",
+      "H0 hardened raw ridge"
+    ],
+    "budget_per_fold": 300000,
+    "budget_total": 1800000,
+    "clean_demo_delta1": -0.05,
+    "stop_rule_final_attempt": true,
+    "claim_type": "CROSS_DISCHARGE_QUALIFIED_RECONSTRUCTION_WITHIN_THE_FROZEN_62_DISCHARGE_OBSERVATIONAL_OBJECT",
+    "e2_0_tau_train_historical": 0.5,
+    "S7_12_exists": false,
+    "epoch2_result_exists": false
+  },
+  "fold_check": {
+    "matches_frozen_parent": true,
+    "sizes": {
+      "0": 11,
+      "1": 11,
+      "2": 10,
+      "3": 10,
+      "4": 10,
+      "5": 10
+    },
+    "every_discharge_once": true,
+    "n_discharges": 62,
+    "repartitioned": false,
+    "new_seed": false,
+    "optimised": false,
+    "source_sha256": "61431d67c090d3bf98f08294ce101d4133628aeee5476f7d99398aa68f008c86"
+  },
+  "candidate_basis": {
+    "n_full_domain": 3451,
+    "expected_from_K2_freeze": 3451,
+    "matches_K2_freeze": true,
+    "expected_constant": 3451,
+    "matches_expected_constant": true,
+    "constructor_counts": {
+      "C0": 51,
+      "C1": 18,
+      "C2": 1488,
+      "C3": 382,
+      "C5": 8,
+      "C6": 965,
+      "C7": 539
+    },
+    "constructor_counts_expected": {
+      "C0": 51,
+      "C1": 18,
+      "C2": 1488,
+      "C3": 382,
+      "C5": 8,
+      "C6": 965,
+      "C7": 539
+    },
+    "constructor_counts_match": true,
+    "atomic_universe": 10778,
+    "cells": 186,
+    "tau": 1.0,
+    "recomputed_or_reused": "recomputed from the K2 frozen score matrix under tau=1",
+    "different_ontology_generated": false,
+    "coordinate_ids_sha256": "1d22aeac2e5fa116e2dc44606b4da8e9466a1189f75af4fe1d75989b3c3e5852"
+  },
+  "closure_property": {
+    "claim": "any support assembled solely from C_E2_FULL_DOMAIN is FULL_DOMAIN_RANGE_SUPPORTED by construction",
+    "why": "the support predicate is the conjunction of coordinate predicates over the same cells; a conjunction of all-true is true",
+    "verified_empirically": [
+      {
+        "support_size": 1,
+        "n_draws": 2000,
+        "fraction_full_domain": 1.0,
+        "all_full_domain": true
+      },
+      {
+        "support_size": 2,
+        "n_draws": 2000,
+        "fraction_full_domain": 1.0,
+        "all_full_domain": true
+      },
+      {
+        "support_size": 5,
+        "n_draws": 2000,
+        "fraction_full_domain": 1.0,
+        "all_full_domain": true
+      },
+      {
+        "support_size": 8,
+        "n_draws": 2000,
+        "fraction_full_domain": 1.0,
+        "all_full_domain": true
+      },
+      {
+        "support_size": 12,
+        "n_draws": 2000,
+        "fraction_full_domain": 1.0,
+        "all_full_domain": true
+      }
+    ],
+    "all_sizes_pass": true,
+    "adversarial_control": {
+      "construction": "11 full-domain coordinates plus 1 non-full-domain coordinate",
+      "n_draws": 2000,
+      "fraction_full_domain": 0.0,
+      "expected": 0.0,
+      "control_behaves_as_expected": true,
+      "purpose": "shows the check is not vacuous - adding a single unsupported coordinate always breaks the support"
+    }
+  },
+  "drift": [],
+  "verdict": "VERIFIED",
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

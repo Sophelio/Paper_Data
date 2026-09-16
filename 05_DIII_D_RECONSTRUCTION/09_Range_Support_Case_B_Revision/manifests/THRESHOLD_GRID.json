@@ -1,0 +1,22 @@
+{
+  "record_id": "RANGE_SUPPORT_THRESHOLD_GRID_V1",
+  "frozen_utc": "2026-09-06T02:51:57.877411+00:00",
+  "frozen_before_any_applicability_count_was_inspected": true,
+  "tau_grid": [
+    0.0,
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    5.0,
+    10.0
+  ],
+  "rationale": "a compact grid of simple dimensionless values spanning strict interpolation (0) to an order of magnitude of permitted extrapolation (10); no six-significant-figure thresholds are admissible",
+  "selection_basis_forbidden": [
+    "reconstruction outcome",
+    "V3",
+    "NRMSE",
+    "the S7.11 70/143 partition",
+    "whether the Epoch-1 blocks are flagged"
+  ]
+}

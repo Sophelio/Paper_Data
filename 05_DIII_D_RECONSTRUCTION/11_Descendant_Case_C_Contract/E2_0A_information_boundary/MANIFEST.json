@@ -1,0 +1,49 @@
+{
+  "record_id": "S7_STAGE_MANIFEST_V1",
+  "generated_utc": "2026-09-08T00:51:17.508741+00:00",
+  "stage_id": "S7.E2.0A",
+  "title": "Predictor-side admissibility reconciliation",
+  "directory": "E2_0A_predictor_admissibility_reconciliation",
+  "scientific_task_id": "q_rec",
+  "claim_branch": "QREC-B2",
+  "claim_branch_role": "MEMBER",
+  "parent_claim_branch": "QREC-B1",
+  "operational_epoch": 2,
+  "revision_level": "OPERATIONAL_CONTRACT",
+  "branch": "q_rec",
+  "status": "CANONICAL_AUTHORITATIVE_FOR_EPOCH2",
+  "sir_architecture_mapping": [
+    "K_op",
+    "delta",
+    "rho"
+  ],
+  "scientific_question": "Is predictor-side blinding consistent with the finite-object claim actually being made?",
+  "operation": "Confirmed the mismatch on contract-internal grounds; retired tau_train with no replacement; single threshold tau = 1 retained.",
+  "verdict": "FROZEN_READY_FOR_EPOCH2_SEARCH. Principle: PREDICTOR_QUALIFIED, TARGET_CROSS_FITTED, RECONSTRUCTION.",
+  "parent_stages": [
+    "S7.E2.0",
+    "S7.K2"
+  ],
+  "child_stages": [
+    "S7.E2.1"
+  ],
+  "key_numbers": {
+    "tau": 1.0,
+    "tau_train": "RETIRED",
+    "C_E2_FULL_DOMAIN": 3451
+  },
+  "notes": "A versioned Case-B correction WITHIN the pending epoch, made before any Epoch-2 search executed; it does not advance the operational epoch. The information boundary is transition-specific: observations admissible for applicability need not be admissible for relation selection. A clarification of I_rec, not a redefinition.",
+  "governing_freeze": {
+    "path": "E2_0A_FREEZE.json",
+    "freeze_id": "D3D-SIR-S7.E2.0A-PREDICTOR-SIDE-ADMISSIBILITY-RECONCILIATION-V1",
+    "sha256": "d0b956b8ca4d086f296bc647a14cc9e267b8fe6e67e05c79b172346024ddd81e",
+    "authoritative": true,
+    "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+  },
+  "executables": [
+    "scripts/e2_0a_a_verify.py",
+    "scripts/e2_0a_b_protocol.py"
+  ],
+  "n_files": 18,
+  "indexes_not_replaces": true
+}

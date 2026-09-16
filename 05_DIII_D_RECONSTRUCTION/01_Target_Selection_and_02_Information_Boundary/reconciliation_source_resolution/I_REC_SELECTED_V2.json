@@ -1,0 +1,34 @@
+{
+  "freeze_id": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-SOURCE-RESOLUTION-V2",
+  "target": "density",
+  "supersedes": "I_REC_SELECTED.json (S7.3 V1)",
+  "exclusion_census": {
+    "n_initial": 95,
+    "target_itself": 1,
+    "duplicate_or_alias": 0,
+    "definitional_descendant": 0,
+    "verified_target_ancestry": 0,
+    "unresolved_target_ancestry": 15,
+    "sibling_exclusion": 0,
+    "numerical_support_exclusion": 1,
+    "surviving_primary": 78
+  },
+  "rules_applied": {
+    "R1_target_itself": 1,
+    "R2_alias": 0,
+    "R3_definitional": 0,
+    "R4_verified_ancestry": 0,
+    "R5_unresolved_ancestry_fail_closed": 15,
+    "SIBLING_PRIMARY_EXCLUSION": 0,
+    "PRIMARY_NUMERICAL_SUPPORT_FAIL": 1,
+    "R6_coordinate_closure": "DEFERRED_TO_S7.5"
+  },
+  "numerical_support_removed": [
+    "vsurf"
+  ],
+  "correlation_used_as_ancestry": false,
+  "provenance_relaxed_variant": false,
+  "efit_recovery_attempted": false,
+  "cohort_restricted": false,
+  "n_predictors_primary": 78
+}

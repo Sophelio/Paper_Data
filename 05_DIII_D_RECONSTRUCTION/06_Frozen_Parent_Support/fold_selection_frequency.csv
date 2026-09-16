@@ -1,0 +1,4 @@
+perturbation,winner_support_id,E1,E2,E3,E4,winner_is_C_dev_star
+omit_A,"ID(pcdiamag3)|ID(prmtan_neped)|LEVEL_RATE(pinj_33r|ip)|PROD(fs03da,cerqtit11)|PROD(gasa,ece1)|PROD(ip,prmtan_neped)|PROD(prmtan_neped,ece39)|RATIO(ece25,ece39)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(bt)|RECIP(cerqtit10)",941,1,1,1,False
+omit_B,"ID(cerqtit6)|ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(cerqtit10)|RECIP(prmtan_neped)",455,1,1,1,True
+omit_C,"ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(prmtan_neped,cerqtit6)|PROD(prmtan_neped,ece39)|RATIO(cerqrott12,cerqtit10)|RATIO(cerqtit8,ece22)|RATIO(ip,bt)|RATIO(ip,ece22)|RATIO(pinj_33r,cerqtit10)|RATIO(prmtan_neped,cerqtit10)|RECIP(bt)",1243,1,1,1,False

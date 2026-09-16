@@ -1,0 +1,43 @@
+{
+ "record_id": "SIR_MANUSCRIPT_INVENTORY_V1",
+ "generated_utc": "2026-09-16T03:29:12.122730+00:00",
+ "manuscript_artifact": "01_MANUSCRIPT_SNAPSHOT\\main_manuscript\\SIR_paper_2026-09-02.pdf",
+ "sha256": "94ccf533b841fe39a0468735eb2dbc31a80cceba70b094bcaa480a4029ea7b70",
+ "pages": 64,
+ "tex_source_found": false,
+ "supplement_tex_source_found": false,
+ "releasepending_placeholders_found": 0,
+ "parse_status": "PARTIAL_PDF_TEXT_LAYER_ONLY",
+ "parse_limitation": "No TeX exists for the main manuscript or the Supplement anywhere under D:/SIR_paper. Sections, figure environments, \\includegraphics calls, table environments and \\releasepending placeholders therefore could not be extracted. Everything below was read from the PDF text layer.",
+ "staleness_evidence": {
+  "REL10": 16,
+  "141 relational": 4,
+  "cross-fitted": 0,
+  "3451_or_3,451": 0,
+  "releasepending": 0,
+  "reading": "reports the RETIRED I_p reconstruction branch; predates all five current main-text figure assets"
+ },
+ "structure_from_text_layer": {
+  "results_sections": [
+   "1.1 From Scientific Objects to Qualified Representations",
+   "1.2 Object-adapted Coordinates",
+   "1.3 Controlled Studies",
+   "1.4 Conventional Model Identification",
+   "1.5 Multimodal Plasma Observations"
+  ],
+  "discussion": true,
+  "methods": true,
+  "supplementary_notes": [
+   "S1 Formal structure",
+   "S2 Observational objects",
+   "S3 Computational construction and search",
+   "S4 Trajectory-relational coordinates",
+   "S5 Representational equivalence",
+   "S6 Controlled-study analyses",
+   "S7 DIII-D construction, fitting and validation",
+   "S8 Provenance and prospective search"
+  ],
+  "note": "Main text and Supplement are ONE PDF; there is no separate Supplement document."
+ },
+ "figure_allow_list_derivation": "Derived from on-disk assets and verified by tracing each candidate script's declared output STEM, because \\includegraphics could not be parsed. See 06_PAPER_FIGURES_ONLY/README.md."
+}

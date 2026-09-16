@@ -1,0 +1,41 @@
+{
+  "record_id": "S7_STAGE_MANIFEST_V1",
+  "generated_utc": "2026-09-08T00:51:17.508741+00:00",
+  "stage_id": "S7.5",
+  "title": "Typed relational ontology",
+  "directory": "05_typed_relational_ontology",
+  "scientific_task_id": "q_rec",
+  "claim_branch": "QREC-B1",
+  "claim_branch_role": "MEMBER",
+  "parent_claim_branch": null,
+  "operational_epoch": 1,
+  "revision_level": "NONE",
+  "branch": "q_rec",
+  "status": "CANONICAL_SUPERSEDED_BY_S7.5H",
+  "sir_architecture_mapping": [
+    "G_q"
+  ],
+  "scientific_question": "What grammar of representations may be constructed?",
+  "operation": "Typed constructors, signatures and admissibility predicates.",
+  "verdict": "Ontology frozen.",
+  "parent_stages": [
+    "S7.4V2"
+  ],
+  "child_stages": [
+    "S7.5H"
+  ],
+  "key_numbers": {},
+  "notes": "G_rec is a grammar, not a feature library and not the universe.",
+  "governing_freeze": {
+    "path": "S7_5_FREEZE.json",
+    "freeze_id": "D3D-SIR-S7.5-TYPED-RELATIONAL-ONTOLOGY-V1",
+    "sha256": "2cd73e77e0734177c56df175e084a319ad5913fcf1038d0dc87f7507a8a86721",
+    "authoritative": true,
+    "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+  },
+  "executables": [
+    "scripts/s7_5_build_g_rec.py"
+  ],
+  "n_files": 24,
+  "indexes_not_replaces": true
+}

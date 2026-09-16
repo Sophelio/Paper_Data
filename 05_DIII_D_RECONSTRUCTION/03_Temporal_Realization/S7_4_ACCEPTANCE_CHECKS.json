@@ -1,0 +1,33 @@
+{
+  "checks": {
+    "all_parent_freezes_verified": true,
+    "selected_target_remains_vsurf": true,
+    "I_rec_unchanged": true,
+    "predictor_count_79": true,
+    "families_7": true,
+    "external_cohort_42": true,
+    "no_external_value_opened": true,
+    "no_development_value_opened": true,
+    "vsurf_temporal_semantics_explicitly_reconciled": true,
+    "three_cadences_distinguished": true,
+    "no_super_resolution_conflict_absent_or_stage_stops": true,
+    "X_rec_not_silently_redefined": true,
+    "no_product_generated": true,
+    "no_ratio_generated": true,
+    "no_derivative_generated": true,
+    "no_phase_derivative_generated": true,
+    "no_G_rec": true,
+    "no_regression": true,
+    "no_baseline": true,
+    "no_external_outcome": true,
+    "target_not_reranked": true,
+    "target_not_changed": true,
+    "markdown_within_limit": true,
+    "s7_5_not_started": true
+  },
+  "passed": "24/24",
+  "all_passed": true,
+  "stage_outcome": "TARGET_TEMPORAL_RESOLUTION_RECONCILIATION_REQUIRED",
+  "note": "X_rec was NOT instantiated. Section 4 is a mandatory precondition and it did not pass, so the acceptance items concerning X_rec structure are not applicable and are not claimed.",
+  "evaluated_utc": "2026-09-03T03:35:34.041368+00:00"
+}

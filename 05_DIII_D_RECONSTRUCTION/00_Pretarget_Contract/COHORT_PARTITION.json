@@ -1,0 +1,174 @@
+{
+  "policy_id": "S7.2-COHORT-PARTITION-V1",
+  "generated_utc": "2026-09-02T21:26:57.056042+00:00",
+  "target_blind": true,
+  "inputs_used": [
+    "shot identifiers",
+    "operational period membership",
+    "processing era"
+  ],
+  "signal_values_used": false,
+  "target_values_used": false,
+  "method": "deterministic stratified selection; no randomness, no seed",
+  "rule": "within each period, sorted ascending, select i % 3 == 1",
+  "era_split_shot": 189646,
+  "period_gap": 2000,
+  "n_total": 62,
+  "development": {
+    "n": 20,
+    "by_era": {
+      "earlier": 11,
+      "later": 9
+    },
+    "by_period": {
+      "2": 3,
+      "3": 4,
+      "4": 1,
+      "5": 3,
+      "6": 2,
+      "7": 7
+    },
+    "shot_ids": [
+      "160715",
+      "160720",
+      "161138",
+      "165022",
+      "165028",
+      "165042",
+      "165861",
+      "170396",
+      "187017",
+      "187020",
+      "187024",
+      "189647",
+      "189651",
+      "195264",
+      "195267",
+      "195273",
+      "195638",
+      "195647",
+      "195650",
+      "195655"
+    ]
+  },
+  "external": {
+    "n": 42,
+    "by_era": {
+      "earlier": 24,
+      "later": 18
+    },
+    "by_period": {
+      "1": 1,
+      "2": 7,
+      "3": 9,
+      "4": 2,
+      "5": 5,
+      "6": 4,
+      "7": 14
+    },
+    "shot_ids": [
+      "155537",
+      "159310",
+      "160717",
+      "160719",
+      "160721",
+      "161136",
+      "161145",
+      "161414",
+      "165017",
+      "165026",
+      "165027",
+      "165029",
+      "165031",
+      "165043",
+      "165860",
+      "165955",
+      "165965",
+      "170394",
+      "170411",
+      "186997",
+      "187018",
+      "187019",
+      "187021",
+      "187022",
+      "189646",
+      "189649",
+      "189650",
+      "189652",
+      "195261",
+      "195265",
+      "195266",
+      "195268",
+      "195269",
+      "195274",
+      "195626",
+      "195642",
+      "195645",
+      "195648",
+      "195649",
+      "195651",
+      "195652",
+      "195659"
+    ]
+  },
+  "development_fraction": 0.3226,
+  "periods": {
+    "1": {
+      "first": 155537,
+      "last": 155537,
+      "n": 1,
+      "era": "earlier",
+      "n_development": 0,
+      "n_external": 1
+    },
+    "2": {
+      "first": 159310,
+      "last": 161414,
+      "n": 10,
+      "era": "earlier",
+      "n_development": 3,
+      "n_external": 7
+    },
+    "3": {
+      "first": 165017,
+      "last": 165965,
+      "n": 13,
+      "era": "earlier",
+      "n_development": 4,
+      "n_external": 9
+    },
+    "4": {
+      "first": 170394,
+      "last": 170411,
+      "n": 3,
+      "era": "earlier",
+      "n_development": 1,
+      "n_external": 2
+    },
+    "5": {
+      "first": 186997,
+      "last": 187024,
+      "n": 8,
+      "era": "earlier",
+      "n_development": 3,
+      "n_external": 5
+    },
+    "6": {
+      "first": 189646,
+      "last": 189652,
+      "n": 6,
+      "era": "later",
+      "n_development": 2,
+      "n_external": 4
+    },
+    "7": {
+      "first": 195261,
+      "last": 195659,
+      "n": 21,
+      "era": "later",
+      "n_development": 7,
+      "n_external": 14
+    }
+  },
+  "singleton_period_note": "Period 1 holds one discharge (155537) and cannot be split. It is assigned to the external cohort so that the external cohort -- where the generalisation claim is tested -- covers all seven periods. Development covers six."
+}

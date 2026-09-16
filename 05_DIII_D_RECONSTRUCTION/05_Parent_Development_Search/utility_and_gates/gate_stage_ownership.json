@@ -1,0 +1,119 @@
+{
+  "policy_id": "GATE_STAGE_OWNERSHIP_V1",
+  "generated_utc": "2026-09-05T08:07:46.430834+00:00",
+  "allowed_states_at_s7_8": [
+    "PROTOCOL_VERIFIED",
+    "PENDING_S7.9",
+    "PENDING_S7.10",
+    "PENDING_S7.11"
+  ],
+  "forbidden_states_at_s7_8": [
+    "PASS",
+    "PASS_WITH_QUALIFICATION",
+    "FAIL",
+    "NOT_APPLICABLE"
+  ],
+  "no_external_gate_marked_pass": true,
+  "final_gate_resolution_states": [
+    "PASS",
+    "PASS_WITH_QUALIFICATION",
+    "FAIL",
+    "NOT_APPLICABLE"
+  ],
+  "stage_division_preserved_from_s7_2": {
+    "S7.9": "instantiated utility computation on development",
+    "S7.10": "qualification-gate evaluation",
+    "S7.11": "sensitivity",
+    "S7.12": "Q_rec*"
+  },
+  "s7_9_not_moved_into_s7_8": true,
+  "gates": [
+    {
+      "gate": "V1",
+      "name": "information boundary",
+      "mandatory": true,
+      "stage_owner": "S7.3 established the boundary; final gate table at S7.12",
+      "current_status": "PROTOCOL_VERIFIED"
+    },
+    {
+      "gate": "V2",
+      "name": "development-only discovery",
+      "mandatory": true,
+      "stage_owner": "S7.9 freeze",
+      "current_status": "PENDING_S7.9"
+    },
+    {
+      "gate": "V3",
+      "name": "nontrivial skill vs B0/B1",
+      "mandatory": true,
+      "stage_owner": "S7.10",
+      "current_status": "PENDING_S7.10"
+    },
+    {
+      "gate": "V4",
+      "name": "fair raw comparison vs B2/B3",
+      "mandatory": true,
+      "stage_owner": "S7.10",
+      "current_status": "PENDING_S7.10"
+    },
+    {
+      "gate": "V5",
+      "name": "external structural transfer",
+      "mandatory": true,
+      "stage_owner": "S7.10, conditioned on the S7.9 freeze",
+      "current_status": "PENDING_S7.10"
+    },
+    {
+      "gate": "V6",
+      "name": "processing-era robustness",
+      "mandatory": true,
+      "stage_owner": "S7.10",
+      "current_status": "PENDING_S7.10"
+    },
+    {
+      "gate": "V7",
+      "name": "common support",
+      "mandatory": true,
+      "stage_owner": "protocol check S7.8; empirical comparison S7.10",
+      "current_status": "PROTOCOL_VERIFIED"
+    },
+    {
+      "gate": "V8",
+      "name": "discharge-level inference",
+      "mandatory": true,
+      "stage_owner": "protocol frozen S7.8; evaluated downstream",
+      "current_status": "PROTOCOL_VERIFIED"
+    },
+    {
+      "gate": "V9",
+      "name": "sensitivity",
+      "mandatory": false,
+      "stage_owner": "S7.11",
+      "current_status": "PENDING_S7.11"
+    },
+    {
+      "gate": "V10",
+      "name": "numerical provenance",
+      "mandatory": true,
+      "stage_owner": "lineage auditable S7.8; final qualification downstream",
+      "current_status": "PROTOCOL_VERIFIED"
+    }
+  ],
+  "evaluable_before_s7_10": [
+    "V1",
+    "V2",
+    "V7",
+    "V8",
+    "V10"
+  ],
+  "not_evaluable_before_s7_10": [
+    "V3",
+    "V4",
+    "V5",
+    "V6"
+  ],
+  "not_evaluable_before_s7_11": [
+    "V9"
+  ],
+  "reason_not_evaluable": "these gates require the sealed external cohort or executed baselines, neither of which S7.8 may open or run"
+}

@@ -1,0 +1,79 @@
+signal,mathematical_type_block,archived_dt_ms,source_supported_dt_min_ms,source_supported_dt_max_ms,n_shots_upstream_upsampled,upstream_upsampled_flag,aliasing_flag,derivative_qualification,level_admissible,derivative_admissible_primary,high_frequency_claim_supported
+bt,X_mag,1.0,0.0499887037895813,0.4999999999999999,0,False,True,ALIASING_RISK on derivatives,True,True,False
+ip,X_mag,1.0,0.0499887037895813,0.4999593727147152,0,False,True,ALIASING_RISK on derivatives,True,True,False
+pcbcoil,X_mag,0.9999999974752428,0.049991799752228,0.2500127818618758,0,False,False,standard,True,True,True
+pcdiamag3,X_mag,0.9999999974752428,0.049991799752228,0.2500127818618758,0,False,False,standard,True,True,True
+prmtan_neped,X_density_aux,10.0,4.378430226038927,13.267605633802816,3,True,True,NUMERICAL_SENSITIVITY_ONLY (upstream-upsampled),True,False,False
+prmtan_teped,X_density_aux,10.0,4.535163253044634,14.186746987951809,3,True,True,NUMERICAL_SENSITIVITY_ONLY (upstream-upsampled),True,False,False
+fs04,X_fs,0.02,0.0199999048751486,0.0499999017672079,9,True,False,NUMERICAL_SENSITIVITY_ONLY (upstream-upsampled),True,False,True
+fs03da,X_fs,0.02,0.0199999048751486,0.0499999017672079,9,True,False,NUMERICAL_SENSITIVITY_ONLY (upstream-upsampled),True,False,True
+fs04da,X_fs,0.02,0.0199999048751486,0.0499999017672079,9,True,False,NUMERICAL_SENSITIVITY_ONLY (upstream-upsampled),True,False,True
+fs05da,X_fs,0.02,0.0199999048751486,0.0499999017672079,9,True,False,NUMERICAL_SENSITIVITY_ONLY (upstream-upsampled),True,False,True
+gasa,X_gas,2.0,0.0499805774957917,0.5,0,False,False,standard,True,True,True
+gasb,X_gas,2.0,0.0499805774957917,0.5,0,False,False,standard,True,True,True
+gasc,X_gas,2.0,0.0499805774957917,0.5,0,False,False,standard,True,True,True
+gasd,X_gas,2.0,0.0499805774957917,0.5,0,False,False,standard,True,True,True
+pinj,X_NBI,0.1,0.0999976218787158,0.1,0,False,False,standard,True,True,True
+pinj_15l,X_NBI,0.1,0.0999976218787158,0.1,0,False,False,standard,True,True,True
+pinj_15r,X_NBI,0.1,0.0999976218787158,0.1,0,False,False,standard,True,True,True
+pinj_21l,X_NBI,0.1,0.0999976218787158,0.1,0,False,False,standard,True,True,True
+pinj_21r,X_NBI,0.1,0.0999976218787158,0.1,0,False,False,standard,True,True,True
+pinj_30l,X_NBI,0.1,0.0999976218787158,0.1,0,False,False,standard,True,True,True
+pinj_30r,X_NBI,0.1,0.0999976218787158,0.1,0,False,False,standard,True,True,True
+pinj_33l,X_NBI,0.1,0.0999976218787158,0.1,0,False,False,standard,True,True,True
+pinj_33r,X_NBI,0.1,0.0999976218787158,0.1,0,False,False,standard,True,True,True
+tinj,X_NBI,0.1,0.0999976218787158,0.1,0,False,False,standard,True,True,True
+ece1,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece2,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece3,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece4,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece5,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece6,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece7,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece8,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece9,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece10,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece11,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece12,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece13,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece14,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece15,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece16,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece17,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece18,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece19,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece20,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece21,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece22,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece23,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece24,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece25,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece26,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece27,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece28,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece29,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece30,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece31,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece32,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece33,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece34,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece35,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece36,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece37,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece38,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece39,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+ece40,X_ECE,0.2,0.1999904875148632,0.2,0,False,False,standard,True,True,True
+cerqrott3,X_CER_v,10.0,4.994179278230501,10.0,0,False,True,ALIASING_RISK on derivatives,True,True,False
+cerqrott6,X_CER_v,10.0,4.994179278230501,9.98003992015968,0,False,True,ALIASING_RISK on derivatives,True,True,False
+cerqrott8,X_CER_v,10.0,4.990366088631984,9.973614775725594,0,False,True,ALIASING_RISK on derivatives,True,True,False
+cerqrott10,X_CER_v,10.0,4.990366088631984,9.973614775725594,0,False,True,ALIASING_RISK on derivatives,True,True,False
+cerqrott11,X_CER_v,10.0,4.990366088631984,9.973614775725594,0,False,True,ALIASING_RISK on derivatives,True,True,False
+cerqrott12,X_CER_v,10.0,4.990366088631984,9.973614775725594,0,False,True,ALIASING_RISK on derivatives,True,True,False
+cerqrott13,X_CER_v,10.0,4.990366088631984,9.973614775725594,0,False,True,ALIASING_RISK on derivatives,True,True,False
+cerqtit3,X_CER_Ti,10.0,4.994179278230501,10.0,0,False,True,ALIASING_RISK on derivatives,True,True,False
+cerqtit6,X_CER_Ti,10.0,4.994179278230501,9.98003992015968,0,False,True,ALIASING_RISK on derivatives,True,True,False
+cerqtit8,X_CER_Ti,10.0,4.990366088631984,9.973614775725594,0,False,True,ALIASING_RISK on derivatives,True,True,False
+cerqtit10,X_CER_Ti,10.0,4.990366088631984,9.973614775725594,0,False,True,ALIASING_RISK on derivatives,True,True,False
+cerqtit11,X_CER_Ti,10.0,4.990366088631984,9.973614775725594,0,False,True,ALIASING_RISK on derivatives,True,True,False
+cerqtit12,X_CER_Ti,10.0,4.990366088631984,9.973614775725594,0,False,True,ALIASING_RISK on derivatives,True,True,False
+cerqtit13,X_CER_Ti,10.0,4.990366088631984,9.973614775725594,0,False,True,ALIASING_RISK on derivatives,True,True,False

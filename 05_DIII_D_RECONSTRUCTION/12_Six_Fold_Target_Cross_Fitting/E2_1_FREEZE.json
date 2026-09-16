@@ -1,0 +1,181 @@
+{
+  "freeze_id": "D3D-SIR-S7.E2.1-CROSSFITTED-DISCOVERY-AND-QUALIFICATION-V1",
+  "status": "QUALIFIED_POSITIVE_RECONSTRUCTION_FORMAL_PASS",
+  "timestamp_utc": "2026-09-06T05:24:38.201504+00:00",
+  "execution_protocol": "E2_0A_PROTOCOL",
+  "contract": "K_REC_V2",
+  "claim_type": "CROSS_DISCHARGE_QUALIFIED_RECONSTRUCTION_WITHIN_THE_FROZEN_62_DISCHARGE_OBSERVATIONAL_OBJECT",
+  "principle": "PREDICTOR_QUALIFIED_TARGET_CROSS_FITTED_RECONSTRUCTION",
+  "FORMAL": "FORMAL_PASS",
+  "CLEAN": "CLEAN_DEMO_NOT_MET",
+  "V3": {
+    "Delta_0": -0.764488716015979,
+    "Delta_1": -0.027307619479192535,
+    "pass": true
+  },
+  "V6": "PASS_WITH_QUALIFICATION",
+  "V_RANGE": "PASS",
+  "gate_table": {
+    "V_RANGE": "PASS",
+    "V3": "PASS",
+    "V6": "PASS_WITH_QUALIFICATION",
+    "V1": "INHERITED_PASS",
+    "V2": "PASS",
+    "V4": "PASS",
+    "V5": "PASS",
+    "V7": "PASS",
+    "V8": "PASS",
+    "V10": "INHERITED_PASS"
+  },
+  "method_summaries": {
+    "REL": {
+      "mean": 0.18911466503138652,
+      "median": 0.1514612356828322,
+      "p90": 0.29590270276661684,
+      "max": 0.91988453225983,
+      "earlier_mean": 0.21533350276088603,
+      "later_mean": 0.15512728278944277
+    },
+    "B0": {
+      "mean": 0.9536033810473656,
+      "median": 0.9365107148819909,
+      "p90": 1.2999216347783897,
+      "max": 1.7027787494803033,
+      "earlier_mean": 0.9170266847761074,
+      "later_mean": 1.0010176169545526
+    },
+    "B1": {
+      "mean": 0.21642228451057907,
+      "median": 0.17436254458180817,
+      "p90": 0.42607101808019227,
+      "max": 0.6186178248216773,
+      "earlier_mean": 0.20771977688323165,
+      "later_mean": 0.22770331291639984
+    },
+    "B1A": {
+      "mean": 0.356254034308349,
+      "median": 0.3329431591365517,
+      "p90": 0.5656915503195548,
+      "max": 0.8776916672658365,
+      "earlier_mean": 0.3398290167408911,
+      "later_mean": 0.377545723747646
+    },
+    "B2": {
+      "mean": 0.28514639554746146,
+      "median": 0.1972070932150879,
+      "p90": 0.6517372760204422,
+      "max": 1.256006521899823,
+      "earlier_mean": 0.2749413571078915,
+      "later_mean": 0.2983751490802374
+    },
+    "B3": {
+      "mean": 0.34637782828479585,
+      "median": 0.19597670654307187,
+      "p90": 0.8279141065777071,
+      "max": 2.1109070645030856,
+      "earlier_mean": 0.4063293802624391,
+      "later_mean": 0.2686628534989623
+    },
+    "H0": {
+      "mean": 0.284248857671867,
+      "median": 0.1914474724954019,
+      "p90": 0.6500456865749545,
+      "max": 1.2323499826771365,
+      "earlier_mean": 0.2738236543992747,
+      "later_mean": 0.29776301006226435
+    }
+  },
+  "support_freezes": {
+    "fold_0": "4654cd92613002c10ee9d97a480ae6a04dd9682d34fa802ef630d3d60258c8ac",
+    "fold_1": "c3206098d6177f64aeac55049feda714d904d155d39e382db3b4cc9683136adb",
+    "fold_2": "08fd3481eeea2e70375c7c346c02b32195501349da0250dbe900a2910e35781d",
+    "fold_3": "e69c6efc20b77d1cd2b1cb87d167621fa8be08b597e3cff805b4360a3839c44a",
+    "fold_4": "688791d4cb56a0ee96019a96ff99d7a66bd1027a41e65b91f4fe7364d4dc94af",
+    "fold_5": "358854514ab519b94437227dc2ab8fe4c2a435ccbc2c355c1cdc8afc88ecf1be"
+  },
+  "support_stability": {
+    "mean_pairwise_jaccard": 0.28524448375841566,
+    "any_two_identical": false,
+    "coordinates_in_all_six": [
+      "ID(pcdiamag3)",
+      "RATIO(ece21,cerqtit10)"
+    ]
+  },
+  "EPOCH2_IS_FINAL_QREC_ATTEMPT": true,
+  "search": {
+    "total_proposals": 765758,
+    "budget_total": 1800000,
+    "per_fold": [
+      127657,
+      127665,
+      127643,
+      127440,
+      127764,
+      127589
+    ]
+  },
+  "acceptance_checks": "38/38",
+  "acceptance_failed": [],
+  "n_artifacts": 39,
+  "n_markdown": 6,
+  "markdown_files": [
+    "E2_1_AUDIT_REPORT.md",
+    "E2_1_CLAIM_BOUNDARY.md",
+    "E2_1_FINAL_RESULT.md",
+    "E2_1_MANUSCRIPT_RESULT.md",
+    "E2_1_SUPPORT_STABILITY.md",
+    "README.md"
+  ],
+  "all_artifact_hashes": {
+    "baseline_results.csv": "d837fbcfba03ab8aeb0b14732b1bd1212995cc64024e9626fc45cb4d28e1b8c6",
+    "constructor_recurrence.csv": "80324b0a8f588f186038e26eeecded4d1cdb2157af7cb3e51d2b0a8eb7be8967",
+    "coordinate_recurrence.csv": "fec7a9d9c4b8383840dbed19c51b9e1dcdb9dfe00afedea594cfa65d6df9f38f",
+    "E2_1_ACCESS_AUDIT.json": "d1d37754606e8e32ca9819e698e4ec127ed9aef2db18fa75f61327ed1deea443",
+    "E2_1_AUDIT_REPORT.md": "3bb94e3f825a013ee9821c79359c6e4f44fc68c6473947147c816b036783886a",
+    "E2_1_CLAIM_BOUNDARY.md": "1d22c6c69b966398da6f24a7adce7fbe435dfc6c00553e401769c8e169466b2e",
+    "E2_1_CROSSFITTED_METRICS.json": "c2adaabc1ca9e46dc68890893f5235c4645da6136fef62fea583c6f74f384410",
+    "E2_1_FINAL_RESULT.md": "0dc2aa31db92ed2db8932a6d138fe5333aea655a27c0bfa225a18cf6bf53f58b",
+    "E2_1_GATE_TABLE.json": "dcb911fdc316ece7fe1a08d0d83985469ec8274438ea0683d30816d690982c7a",
+    "E2_1_MANUSCRIPT_RESULT.md": "dee7e1fc08cc1e56e9bc180c58fd92886cacd0d9421608179a05b93fb7b5c4d8",
+    "E2_1_RESULT.json": "beff3124035eaac5788ae68654a5cf32310702431dde465e93361a361e887971",
+    "E2_1_SUPPORT_FREEZES.json": "a80373fd6fcf74f412ac60330c39c151b747b11e0b955b841e46509bbe19de87",
+    "E2_1_SUPPORT_STABILITY.md": "e474cbe28bb13eb545ea091757e44ef3a88fc43244450b08a46b1e5330251f68",
+    "fold_development_metrics.csv": "14d83da24d0662ca312e06fec3f420deda116cde891dff20584e1aceb8f5ee6f",
+    "fold_selected_supports.csv": "d2e8100efdd7a6b33de3c2af20ee53c9a50c6f61fceaf60c153672071d1997df",
+    "folds/fold_0_identities.json": "fc712648c1810b49903a8d344acf670136c8b0b46fb5b73699084fc3c291707e",
+    "folds/fold_0_result.json": "c94ff14b36a918c25f776b643200547dad2f0eb9df13a5aab21c346dd85aa637",
+    "folds/fold_1_identities.json": "6ed51dbec50f6a4358a05eeb7552e30d58d18590a2cd0300c26581c855ddfcab",
+    "folds/fold_1_result.json": "65dc9eae229e5ba58509f890a5dd711452eff9f2286f26e55a02014b649ce09b",
+    "folds/fold_2_identities.json": "50f61ee91f95293ca4744fef33d5271fb102e20b61554430808ef132730dd35a",
+    "folds/fold_2_result.json": "97edc3f8570b6b8ea855fed5031e7db50d36c9db6f89db8b05d29fce9c869f09",
+    "folds/fold_3_identities.json": "cfe436ddfce86b36eb22bdcb5ab3a454bd7443cb85cf2f096b8618b36b63f643",
+    "folds/fold_3_result.json": "70d8cde215068b16646818c41d379d16a5eeada3dcb8871cbfbe9094afca4b76",
+    "folds/fold_4_identities.json": "315007d123534ef67ec11ff7215e3039f61645b34582f04381fbdf873caa93a9",
+    "folds/fold_4_result.json": "4ae84b5abd522c1b49d02a1c5161c7530c3f39aaed7963c98fd32432721c8fbe",
+    "folds/fold_5_identities.json": "6c257ac78953d58f193a9f294c70e4d1cd23d2159f0ac58e3a0f32090d422954",
+    "folds/fold_5_result.json": "bc3cbd795e9cccd5f6345e942d0e28625157752009c64484499dec074bacf5f5",
+    "heldout_block_results.csv": "d611123364093c387f561ee2525587ef60f6a0039c9452b898af68321c385a9a",
+    "heldout_discharge_results.csv": "6a932a4792ac4d5e69d002856106563dd4e143039e090f95a336a09a6954657c",
+    "manifests/C_E2_FULL_DOMAIN.csv": "c5d2a415ebf17974f3273b44a03f1b643c08eaa5f1222ff615fce51770448855",
+    "manifests/E2_1_PRESEARCH.json": "4ff73d1f51a45b53d2b11e939b2476e7ee1a1e7012a571a21b99aae017864fb7",
+    "manifests/search_budget_audit.csv": "1e84d59befd62f2ebcca17df39bed2de1e1f0401ba866badef09046ef5595493",
+    "manifests/vrange_integrity.csv": "58cab5e1a669cd2e3d25e8bc6637b900f8dff4c1045b38483b9035d85955c206",
+    "README.md": "1002d2ad890c9e13897a7d199d4977f257f2b09ada84577e2e153d9b55f0b192",
+    "scripts/e2_1_a_verify.py": "a534729ea4b3d32f40d736b9cf0185c076eacc65ef6f47701cd95887a9ddfcd1",
+    "scripts/e2_1_b_run.py": "07d36abae88e0ea6b7aa11c9d084b646acee7351377d58fdf996b04819b68ffd",
+    "scripts/e2_1_c_aggregate.py": "e00dc763eee597c477b85c8ce5f6e0e4a1a4d77696a340f69cab44de7376a14d",
+    "scripts/e2_1_engine.py": "16485d1d69aa60ef9697eb385fa47166aef9fe75ef998614a670ecbbc0424e19",
+    "support_recurrence.csv": "f68cfacd973f76f50741145b64c193f04ba04db1783a0d1041d6e16a2a82d8f9"
+  },
+  "self_referential_excluded": [
+    "E2_1_ACCEPTANCE_CHECKS.json",
+    "E2_1_FREEZE.json"
+  ],
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "next_stage": "none authorised; S7.12 remains paused"
+}

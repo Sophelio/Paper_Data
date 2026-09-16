@@ -1,0 +1,71 @@
+{
+  "manifest_id": "S7_8_CARRY_FORWARD_V1",
+  "generated_utc": "2026-09-05T08:07:46.430834+00:00",
+  "acted_on_in_s7_8": false,
+  "c6_c7": {
+    "finding": "C6 + C7 supplied 56.38 percent of admissible atoms (C6 35.03, C7 21.35) and had substantial seed opportunity (C6 27.6 percent, C7 15.7 percent of seeds)",
+    "admissible_atoms": {
+      "C6": 3776,
+      "C7": 2301
+    },
+    "explored_participation_share": {
+      "C6": 0.5108723018821579,
+      "C7": 0.3684116798182321
+    },
+    "retained_participation": {
+      "C6": 0.046296296296296294,
+      "C7": 0.026455026455026454
+    },
+    "lowest_J_support_participation": "neither appears in the lowest-J support at any size 1..12",
+    "declaration": "NO_CONSTRUCTOR_FAMILY_PRUNING",
+    "c6_c7_removed_from_ahat_rec": false,
+    "if_utility_eliminates_them": "report that later; it is an outcome, not a rule",
+    "if_a_c6_c7_candidate_survives": "accept it",
+    "reason": "this is exactly why navigation and utility are separate"
+  },
+  "ece_dominance": {
+    "seed_opportunity_share": 0.30708661417322836,
+    "atom_ancestry_share": 0.841992948598998,
+    "retained_path_share": 0.8544973544973545,
+    "lowest_navigation_support_share": 1.0,
+    "opportunity_was_balanced": true,
+    "penalty_introduced": false,
+    "family_quota_introduced": false,
+    "diversity_bonus_introduced": false,
+    "family_balancing_in_u_rec": false,
+    "reading": "the search opportunity correction has already done its job; utility now evaluates the found representations as they are"
+  },
+  "uncalibrated_primitives": {
+    "signals": [
+      "pcbcoil",
+      "pcdiamag3"
+    ],
+    "provenance": "S7.1 records both as uncalibrated digitiser output for which no unit exists",
+    "status_in_ahat_rec": "VALID if already present; NOT REMOVED",
+    "carried_label": "UNCALIBRATED_SIGNAL",
+    "consequence": "if a selected representation contains one, its fitted coefficient has no certified physical-dimensional interpretation",
+    "is_selection_exclusion": false,
+    "is_interpretation_qualification": true
+  },
+  "search_depth_sensitivity": {
+    "id": "TWO_SEED_SEARCH_DEPTH_SENSITIVITY",
+    "status": [
+      "DECLARED_OPTIONAL",
+      "NOT_EXECUTED"
+    ],
+    "executed_in_s7_8": false,
+    "outcome_trigger_defined": false,
+    "may_be_executed_later_as": "a separately labelled S7.11 sensitivity, regardless of whether the primary result is good or bad",
+    "may_replace_the_one_seed_primary_frontier": false
+  },
+  "search_boundary": {
+    "selection_domain": "AHAT_REC_DENSITY_ONE_SEED_V2",
+    "global_optimality_claim": false,
+    "explored_fraction_of_size_1_12_space": "3.19e-33 percent",
+    "unsearched_admissible_combinations": "approximately 5.1e39",
+    "unsearched_status": "ADMISSIBLE_UNSEARCHED",
+    "negative_conclusion_attached_to_unsearched": false,
+    "final_candidate_means": "selected from the frozen explored frontier",
+    "final_candidate_does_not_mean": "best representation in A_rec"
+  }
+}

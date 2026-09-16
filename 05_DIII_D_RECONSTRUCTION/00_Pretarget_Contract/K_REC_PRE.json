@@ -1,0 +1,261 @@
+{
+  "contract_id": "K_REC_PRE_V1",
+  "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V1",
+  "parent_freeze_id": "D3D-SIR-S7.1-OBSERVATIONAL-OBJECT-FINAL-V1",
+  "generated_utc": "2026-09-02T22:25:17.872749+00:00",
+  "formal_tuple": "K_rec = (q, I, P, B, H, U, V, Omega)",
+  "note": "Explicit incompleteness is a feature. Components that depend on a target cannot be instantiated before S7.3 selects one, and pretending otherwise would hide a decision.",
+  "q_rec": {
+    "status": "FROZEN",
+    "task_class": "CONTINUOUS_RECONSTRUCTION",
+    "statement": "reconstruct one observed scalar plasma or state quantity from the other task-admissible contemporaneous observations",
+    "transfer_type": "STRUCTURAL_TRANSFER_WITH_LOCAL_CALIBRATION",
+    "is_not": [
+      "ELM detection",
+      "event classification",
+      "forecasting",
+      "causal inference",
+      "control",
+      "zero-shot coefficient transfer",
+      "universal plasma equation discovery"
+    ],
+    "target_selected": false,
+    "target_selection": "DEFERRED_TO_S7.3",
+    "artifacts": [
+      "RECONSTRUCTION_TASK_DEFINITION.md",
+      "RELATION_AND_TRANSFER_POLICY.md"
+    ]
+  },
+  "I_rec": {
+    "policy_status": "FROZEN",
+    "instantiated_signal_set": "DEFERRED_TO_S7.3",
+    "coordinate_closure": "DEFERRED_TO_S7.5",
+    "exclusion_rules": [
+      "the target itself",
+      "exact duplicates and aliases of the target",
+      "quantities whose definition contains the target",
+      "quantities with verified upstream dependence on the target",
+      "quantities with UNRESOLVED ancestry relative to the target (fail-closed)",
+      "downstream coordinates of anything excluded (transitive)"
+    ],
+    "fail_closed": true,
+    "correlation_is_ancestry": false,
+    "sibling_rule": "primary boundary excludes same-family siblings; full-boundary variant is a declared sensitivity",
+    "artifacts": [
+      "INFORMATION_BOUNDARY_POLICY.md",
+      "leakage_matrix.csv"
+    ]
+  },
+  "P_rec": {
+    "invariant_rules_status": "FROZEN",
+    "target_specific_provenance_closure": "DEFERRED_TO_S7.3",
+    "instantiated_over_ontology": "DEFERRED_TO_S7.6",
+    "classes": [
+      "A provenance",
+      "B information-boundary compliance",
+      "C dimensional",
+      "D numerical support",
+      "E denominator/singularity",
+      "F temporal resolution",
+      "G semantic",
+      "H leakage"
+    ],
+    "unit_canonicalisation": "FROZEN",
+    "numerical_resolution_rule": "FROZEN",
+    "artifacts": [
+      "ADMISSIBILITY_POLICY.md",
+      "UNIT_AND_TYPE_POLICY.md",
+      "NUMERICAL_RESOLUTION_POLICY.md"
+    ]
+  },
+  "B_rec": {
+    "constructor_depth_rules_status": "FROZEN",
+    "surviving_candidate_count": "DEFERRED_TO_S7.5/S7.6",
+    "explored_frontier": "DEFERRED_TO_S7.7",
+    "max_temporal_derivative_order": 1,
+    "max_relational_depth": 1,
+    "max_product_arity": 2,
+    "representation_size_range": [
+      1,
+      12
+    ],
+    "transcendental_library": "none unless scientifically motivated",
+    "artifacts": [
+      "SEARCH_BOUND_POLICY.md"
+    ]
+  },
+  "H_rec": {
+    "status": "FROZEN",
+    "allowed_uses": [
+      "admit or reject a constructor",
+      "assign type",
+      "identify known dependency",
+      "prioritise a search family"
+    ],
+    "forbidden_use": "knowledge may not count as validation evidence",
+    "seeding_firewall": {
+      "q_desc_support_may_seed": false,
+      "retired_q_rec_support_may_seed": false,
+      "dfl_export_may_seed": false,
+      "dfl_features_as_primitives": false
+    },
+    "artifacts": [
+      "KNOWLEDGE_POLICY.md"
+    ]
+  },
+  "U_rec": {
+    "status": "FROZEN",
+    "structure": "lexicographic",
+    "criteria_in_order": [
+      "primary fit quality",
+      "generalization/stability",
+      "parsimony",
+      "conditioning",
+      "support stability"
+    ],
+    "practical_equivalence": {
+      "one_standard_error_rule": true,
+      "practical_equivalence_floor_calibration_normalized_rmse": 0.01,
+      "declared_before_search": true
+    },
+    "fabricated_error_weights": false,
+    "instantiated_computation": "DEFERRED_TO_S7.9",
+    "artifacts": [
+      "UTILITY_AND_QUALIFICATION_POLICY.md"
+    ]
+  },
+  "V_rec": {
+    "protocol_status": "FROZEN",
+    "gate_evaluation": "DEFERRED_TO_S7.10",
+    "validation_geometry": {
+      "type": "rolling-origin, expanding calibration, disjoint protected blocks",
+      "blocks": [
+        {
+          "block": "A",
+          "calibration": [
+            0.0,
+            0.4
+          ],
+          "protected": [
+            0.4,
+            0.5
+          ]
+        },
+        {
+          "block": "B",
+          "calibration": [
+            0.0,
+            0.6
+          ],
+          "protected": [
+            0.6,
+            0.7
+          ]
+        },
+        {
+          "block": "C",
+          "calibration": [
+            0.0,
+            0.8
+          ],
+          "protected": [
+            0.8,
+            0.9
+          ]
+        }
+      ],
+      "feasibility": "FEASIBLE_AT_ALL_CANDIDATE_CADENCES",
+      "chosen_without_target_values": true
+    },
+    "baselines": [
+      "B0 calibration mean",
+      "B1 persistence",
+      "B2 raw ridge linear",
+      "B3 HistGradientBoostingRegressor"
+    ],
+    "gates": {
+      "V1": "information boundary",
+      "V2": "development-only discovery",
+      "V3": "nontrivial skill",
+      "V4": "raw-coordinate comparison",
+      "V5": "external structural transfer",
+      "V6": "processing-era robustness",
+      "V7": "common support",
+      "V8": "discharge-level inference",
+      "V9": "sensitivity",
+      "V10": "numerical provenance"
+    },
+    "mandatory_gates": [
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6",
+      "V7",
+      "V8",
+      "V10"
+    ],
+    "inferential_unit": "discharge",
+    "bootstrap_replicates": 10000,
+    "artifacts": [
+      "VALIDATION_PROTOCOL.md",
+      "BASELINE_PROTOCOL.md",
+      "STATISTICAL_INFERENCE_PLAN.md",
+      "PREPROCESSING_AND_LEAKAGE_POLICY.md"
+    ]
+  },
+  "Omega_rec": {
+    "candidate_status": "FROZEN",
+    "candidate": "the frozen 62-discharge DIII-D observational object D3D-SIR-S7.1-OBSERVATIONAL-OBJECT-FINAL-V1",
+    "final_status": "DEFERRED_TO_S7.10/S7.12",
+    "cohort_partition": {
+      "status": "FROZEN",
+      "development": 20,
+      "external": 42,
+      "deterministic": true,
+      "seed": null,
+      "target_blind": true
+    },
+    "out_of_scope": [
+      "all DIII-D",
+      "all operating regimes",
+      "unseen devices",
+      "prospective control",
+      "forecasting",
+      "causal structure",
+      "native high-frequency physics",
+      "diagnostic bandwidth",
+      "universal plasma relations"
+    ],
+    "artifacts": [
+      "DOMAIN_AND_CLAIM_BOUNDARY.md",
+      "CLAIM_BOUNDARY.md",
+      "COHORT_PARTITION_POLICY.md",
+      "EXTERNAL_COHORT_FIREWALL.md"
+    ]
+  },
+  "component_status_summary": {
+    "q_rec": "FROZEN",
+    "I_rec": "PARTIALLY_FROZEN",
+    "P_rec": "PARTIALLY_FROZEN",
+    "B_rec": "PARTIALLY_FROZEN",
+    "H_rec": "FROZEN",
+    "U_rec": "FROZEN",
+    "V_rec": "PARTIALLY_FROZEN",
+    "Omega_rec": "PARTIALLY_FROZEN"
+  },
+  "gate": {
+    "target_selected": false,
+    "targets_ranked": false,
+    "sir_run": false,
+    "regression_run": false,
+    "coordinates_generated": false,
+    "G_rec_constructed": false,
+    "A_rec_enumerated": false,
+    "Ahat_rec_searched": false,
+    "performance_inspected": false,
+    "external_signal_values_inspected": false,
+    "s7_3_started": false
+  }
+}

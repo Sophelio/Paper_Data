@@ -1,0 +1,395 @@
+{
+  "first_external_value_access_utc": "2026-09-05T22:48:51.998142+00:00",
+  "pre_external_model_freeze_utc": "2026-09-05T20:32:08.992754+00:00",
+  "ordering_strict": true,
+  "n_external_discharges_opened": 42,
+  "n_development_discharges_opened": 0,
+  "reads": [
+    {
+      "stage": "S7.10",
+      "shot_id": "155537",
+      "cohort": "external",
+      "era": "earlier",
+      "predictor_signals_read": 78,
+      "target_values_read": 728,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "159310",
+      "cohort": "external",
+      "era": "earlier",
+      "predictor_signals_read": 78,
+      "target_values_read": 673,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "160717",
+      "cohort": "external",
+      "era": "earlier",
+      "predictor_signals_read": 78,
+      "target_values_read": 728,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "160719",
+      "cohort": "external",
+      "era": "earlier",
+      "predictor_signals_read": 78,
+      "target_values_read": 729,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "160721",
+      "cohort": "external",
+      "era": "earlier",
+      "predictor_signals_read": 78,
+      "target_values_read": 729,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "161136",
+      "cohort": "external",
+      "era": "earlier",
+      "predictor_signals_read": 78,
+      "target_values_read": 380,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "161145",
+      "cohort": "external",
+      "era": "earlier",
+      "predictor_signals_read": 78,
+      "target_values_read": 380,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "161414",
+      "cohort": "external",
+      "era": "earlier",
+      "predictor_signals_read": 78,
+      "target_values_read": 833,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "165017",
+      "cohort": "external",
+      "era": "earlier",
+      "predictor_signals_read": 78,
+      "target_values_read": 723,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "165026",
+      "cohort": "external",
+      "era": "earlier",
+      "predictor_signals_read": 78,
+      "target_values_read": 717,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "165027",
+      "cohort": "external",
+      "era": "earlier",
+      "predictor_signals_read": 78,
+      "target_values_read": 732,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "165029",
+      "cohort": "external",
+      "era": "earlier",
+      "predictor_signals_read": 78,
+      "target_values_read": 668,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "165031",
+      "cohort": "external",
+      "era": "earlier",
+      "predictor_signals_read": 78,
+      "target_values_read": 667,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "165043",
+      "cohort": "external",
+      "era": "earlier",
+      "predictor_signals_read": 78,
+      "target_values_read": 732,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "165860",
+      "cohort": "external",
+      "era": "earlier",
+      "predictor_signals_read": 78,
+      "target_values_read": 732,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "165955",
+      "cohort": "external",
+      "era": "earlier",
+      "predictor_signals_read": 78,
+      "target_values_read": 734,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "165965",
+      "cohort": "external",
+      "era": "earlier",
+      "predictor_signals_read": 78,
+      "target_values_read": 610,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "170394",
+      "cohort": "external",
+      "era": "earlier",
+      "predictor_signals_read": 78,
+      "target_values_read": 331,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "170411",
+      "cohort": "external",
+      "era": "earlier",
+      "predictor_signals_read": 78,
+      "target_values_read": 325,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "186997",
+      "cohort": "external",
+      "era": "earlier",
+      "predictor_signals_read": 78,
+      "target_values_read": 618,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "187018",
+      "cohort": "external",
+      "era": "earlier",
+      "predictor_signals_read": 78,
+      "target_values_read": 500,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "187019",
+      "cohort": "external",
+      "era": "earlier",
+      "predictor_signals_read": 78,
+      "target_values_read": 568,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "187021",
+      "cohort": "external",
+      "era": "earlier",
+      "predictor_signals_read": 78,
+      "target_values_read": 499,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "187022",
+      "cohort": "external",
+      "era": "earlier",
+      "predictor_signals_read": 78,
+      "target_values_read": 570,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "189646",
+      "cohort": "external",
+      "era": "later",
+      "predictor_signals_read": 78,
+      "target_values_read": 589,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "189649",
+      "cohort": "external",
+      "era": "later",
+      "predictor_signals_read": 78,
+      "target_values_read": 604,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "189650",
+      "cohort": "external",
+      "era": "later",
+      "predictor_signals_read": 78,
+      "target_values_read": 591,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "189652",
+      "cohort": "external",
+      "era": "later",
+      "predictor_signals_read": 78,
+      "target_values_read": 644,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "195261",
+      "cohort": "external",
+      "era": "later",
+      "predictor_signals_read": 78,
+      "target_values_read": 790,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "195265",
+      "cohort": "external",
+      "era": "later",
+      "predictor_signals_read": 78,
+      "target_values_read": 766,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "195266",
+      "cohort": "external",
+      "era": "later",
+      "predictor_signals_read": 78,
+      "target_values_read": 773,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "195268",
+      "cohort": "external",
+      "era": "later",
+      "predictor_signals_read": 78,
+      "target_values_read": 779,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "195269",
+      "cohort": "external",
+      "era": "later",
+      "predictor_signals_read": 78,
+      "target_values_read": 781,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "195274",
+      "cohort": "external",
+      "era": "later",
+      "predictor_signals_read": 78,
+      "target_values_read": 751,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "195626",
+      "cohort": "external",
+      "era": "later",
+      "predictor_signals_read": 78,
+      "target_values_read": 760,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "195642",
+      "cohort": "external",
+      "era": "later",
+      "predictor_signals_read": 78,
+      "target_values_read": 700,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "195645",
+      "cohort": "external",
+      "era": "later",
+      "predictor_signals_read": 78,
+      "target_values_read": 699,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "195648",
+      "cohort": "external",
+      "era": "later",
+      "predictor_signals_read": 78,
+      "target_values_read": 672,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "195649",
+      "cohort": "external",
+      "era": "later",
+      "predictor_signals_read": 78,
+      "target_values_read": 711,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "195651",
+      "cohort": "external",
+      "era": "later",
+      "predictor_signals_read": 78,
+      "target_values_read": 721,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "195652",
+      "cohort": "external",
+      "era": "later",
+      "predictor_signals_read": 78,
+      "target_values_read": 709,
+      "reason": "frozen external validation"
+    },
+    {
+      "stage": "S7.10",
+      "shot_id": "195659",
+      "cohort": "external",
+      "era": "later",
+      "predictor_signals_read": 78,
+      "target_values_read": 380,
+      "reason": "frozen external validation"
+    }
+  ],
+  "runtime_seconds": 39.0,
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "sklearn": "1.9.0",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

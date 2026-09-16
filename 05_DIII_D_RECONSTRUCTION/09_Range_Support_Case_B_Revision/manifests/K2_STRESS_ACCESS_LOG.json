@@ -1,0 +1,13 @@
+{
+  "generated_utc": "2026-09-06T02:50:58.773186+00:00",
+  "target_reads": 0,
+  "model_error_reads": 0,
+  "residual_reads": 0,
+  "V3_label_reads": 0,
+  "support_family_outcome_label_reads": 0,
+  "target_signal_opened": false,
+  "verdict": "TARGET_BLIND",
+  "n_atoms": 10778,
+  "n_cells": 186,
+  "runtime_seconds": 14.8
+}

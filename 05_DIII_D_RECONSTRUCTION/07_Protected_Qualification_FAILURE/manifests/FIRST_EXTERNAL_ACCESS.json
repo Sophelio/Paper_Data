@@ -1,0 +1,7 @@
+{
+  "pre_external_model_freeze_utc": "2026-09-05T20:32:08.992754+00:00",
+  "first_external_value_access_utc": "2026-09-05T22:48:51.998142+00:00",
+  "ordering_strict": true,
+  "cohort": "the 42 frozen external discharges",
+  "development_shots_touched_here": 0
+}

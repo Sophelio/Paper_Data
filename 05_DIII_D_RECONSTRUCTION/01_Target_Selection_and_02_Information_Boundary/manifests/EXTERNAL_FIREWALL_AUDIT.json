@@ -1,0 +1,32 @@
+{
+  "audited_utc": "2026-09-03T00:39:04.952145+00:00",
+  "development_list_source": "frozen COHORT_PARTITION.json",
+  "development_list_matches_expected": true,
+  "n_unique_value_bearing_shots_read": 20,
+  "value_bearing_shots_read": [
+    "160715",
+    "160720",
+    "161138",
+    "165022",
+    "165028",
+    "165042",
+    "165861",
+    "170396",
+    "187017",
+    "187020",
+    "187024",
+    "189647",
+    "189651",
+    "195264",
+    "195267",
+    "195273",
+    "195638",
+    "195647",
+    "195650",
+    "195655"
+  ],
+  "n_external_value_bearing_shots_read": 0,
+  "external_shots_read": [],
+  "external_ids_known_but_unopened": 42,
+  "verdict": "FIREWALL_INTACT"
+}

@@ -1,0 +1,8 @@
+feature,display_name,max_abs_diff,median_max_abs_diff,min_corr,status
+d[betan]/d[t],dot beta_N,0.0,0.0,0.9999999999999998,EXACTLY_REPRODUCED
+d[kappa]/d[betan],D_betaN kappa,0.0,0.0,0.9999999999999998,EXACTLY_REPRODUCED
+d[kappa]/d[t],dot kappa,0.0,0.0,0.9999999999999998,EXACTLY_REPRODUCED
+d[li]/d[betan],D_betaN l_i,0.0,0.0,0.9999999999999998,EXACTLY_REPRODUCED
+d[pcdiamag3]/d[betan],D_betaN W_dia,0.0,0.0,0.9999999999999998,EXACTLY_REPRODUCED
+d[pcdiamag3]/d[kappa],D_kappa W_dia,0.0,0.0,0.9999999999999998,EXACTLY_REPRODUCED
+r[q95]/r[kappa],q95 / kappa,0.0,0.0,0.9999999999999998,EXACTLY_REPRODUCED

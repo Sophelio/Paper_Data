@@ -1,0 +1,21 @@
+{
+  "file": "../PRE_SEARCH_CONTRACT_COMPLETION.json",
+  "sha256": "1b8df4c0672686be21665c00aaf4fc8f36ab9e53646f983fcd2f9b253fd7c10f",
+  "expected_prefix": "1b8df4c0",
+  "hash_verified_unchanged": true,
+  "regenerated": false,
+  "modified": false,
+  "S_PERS_V1": {
+    "present": true,
+    "status": "REQUIRED_REPORTING",
+    "used_for_search": false,
+    "replaces_NRMSE": false,
+    "changes_V3": false
+  },
+  "B1A_AR1": {
+    "present": true,
+    "status": "DIAGNOSTIC_BASELINE",
+    "run_here": false
+  },
+  "neither_run": true
+}

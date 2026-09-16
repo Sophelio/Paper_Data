@@ -1,0 +1,82 @@
+{
+  "freeze_id": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-SOURCE-RESOLUTION-V2",
+  "status": "FROZEN_READY_TO_RETRY_S7.4",
+  "timestamp_utc": "2026-09-03T04:37:36.695475+00:00",
+  "supersedes": {
+    "s7_3_v1": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-V1",
+    "unblocks": "D3D-SIR-S7.4-MATHEMATICAL-INTERPRETATION-V1"
+  },
+  "parent_verification_sha256": "7890d50a9840ea8a1c46330686591be0189b4113aa15b3ce52dd4cf429752ade",
+  "source_cadence_audit_sha256": "02508c03fed1515ff889b84cbe685dcdc7788f2ab38063d00afc414c0eeab760",
+  "source_cadence_summary_sha256": "671249497f296051fe5058c7b8bbb4a38f1718af21256f9a1a6fc71c49d252ca",
+  "numerical_admissibility_sha256": "d39ae964186905a1fd39ef4d824ad8def6ad08db3168b179e080d115adcc535c",
+  "corrected_boundaries_sha256": "dea9c115a9ef917e19652cd7bc48997f7ec299b42c9776dd6c6849a4a859e76f",
+  "corrected_feasibility_sha256": "38be66a15149a3a1b41eef2f4e9e79c6b1a6bc9ca2e284f59fd882283e3960e5",
+  "corrected_ranking_sha256": "61f24071416cafdb74561cc005cc4e370166f6402caf0aa6b802c41f5adf849c",
+  "target_selection_result_v2_sha256": "20209dbc5d905725bd7005eee251a6c30bb3ed09ca568d897f8f528345de7bab",
+  "I_REC_SELECTED_V2_sha256": "b340f44eac22c3f3a2596f4275be17164b68ba53b496203d416d42438fabe5c7",
+  "O_REC_SELECTED_V2_sha256": "96c5551186d3a6dfd8e7efb8f065e9767188a2b5051ca2865c3fefa7affd1e25",
+  "selected_target": "density",
+  "previous_target": "vsurf",
+  "n_candidates": 64,
+  "n_eligible": 61,
+  "n_primary_predictors": 78,
+  "exclusion_census": {
+    "n_initial": 95,
+    "target_itself": 1,
+    "duplicate_or_alias": 0,
+    "definitional_descendant": 0,
+    "verified_target_ancestry": 0,
+    "unresolved_target_ancestry": 15,
+    "sibling_exclusion": 0,
+    "numerical_support_exclusion": 1,
+    "surviving_primary": 78
+  },
+  "primary_analysis_cadence": {
+    "rule": "no finer than the coarsest SOURCE-SUPPORTED cadence among admitted quantities, per discharge",
+    "fixed_across_cohort": false,
+    "dt_min_ms": 5.8533333333333335,
+    "dt_max_ms": 14.186746987951807,
+    "dt_max_development": 14.144144144144144,
+    "binding_families": [
+      "cer_rotation_ti",
+      "density"
+    ],
+    "discharge_specific": true
+  },
+  "upsample_count_correction": {
+    "historical": 16,
+    "recomputed": 22
+  },
+  "environment": {
+    "python": "3.13.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "all_artifact_hashes": {
+    "candidate_grid_requirements.csv": "01b20fa90374c59d1fa4655fc87ff24e9c0155580012637ab4ed7ef721fb3950",
+    "corrected_development_nrmse_scale_audit.csv": "2268357ef98621f289d6e3599f3bfa531e3bab9e7abc55d832cb5f7a78261933",
+    "CORRECTED_INFORMATION_BOUNDARY.md": "9af5d58752c0c6f98207744da6f1e766fe4ea98f9fbdf3ab90f45e4ae89489d6",
+    "corrected_selected_target_boundary.csv": "6fe56c6b824abe2d49329f6fe99e973eb3188901df7a4e7bf0397229d0929256",
+    "corrected_selected_target_exclusions.csv": "413a550c6112ae1d53913ea9d4729b4490f82842f554c947d6046613e540216f",
+    "corrected_target_boundary_summary.csv": "dea9c115a9ef917e19652cd7bc48997f7ec299b42c9776dd6c6849a4a859e76f",
+    "corrected_target_eligibility_matrix.csv": "8c02f9376fae7c3e5a507a4af3dca978cc1fbc80edc7346d2de32322379fb833",
+    "corrected_target_feasibility.csv": "38be66a15149a3a1b41eef2f4e9e79c6b1a6bc9ca2e284f59fd882283e3960e5",
+    "corrected_target_ranking.csv": "61f24071416cafdb74561cc005cc4e370166f6402caf0aa6b802c41f5adf849c",
+    "CORRECTED_TARGET_SELECTION.md": "e1cd3d6264c422b2198ed47b7d747fa52ca6b9f4f70efea5e69a4925892b8ca2",
+    "I_REC_SELECTED_V2.json": "b340f44eac22c3f3a2596f4275be17164b68ba53b496203d416d42438fabe5c7",
+    "manifests/PARENT_FREEZE_VERIFICATION.json": "7890d50a9840ea8a1c46330686591be0189b4113aa15b3ce52dd4cf429752ade",
+    "manifests/UPSAMPLE_COUNT_CORRECTION.json": "c196f45a3d89b4841f88efca972736eae2b05346bd716ed425bb800e48753b7d",
+    "numerical_admissibility_by_signal.csv": "d39ae964186905a1fd39ef4d824ad8def6ad08db3168b179e080d115adcc535c",
+    "O_REC_SELECTED_V2.json": "96c5551186d3a6dfd8e7efb8f065e9767188a2b5051ca2865c3fefa7affd1e25",
+    "README.md": "3a5c6faa227fdd8eeaa09dbac9ebcda02657c10c4c3c9c455f895be14a0d0d40",
+    "S7_3R_TEMPORAL_ADMISSIBILITY_AUDIT_REPORT.md": "fe1baa1c515d73e35c263101b69fe243cf124142e3d841604b151d5ad43775c0",
+    "S7_3R_TEMPORAL_ADMISSIBILITY_FINAL.md": "39224a810cb4735c607135dba0ff5fe9f492d336891a52d3c74ffacf3f73edb1",
+    "scripts/s7_3r_reconcile.py": "f550c67893ba152028aa53fa88a80e28829f93da238d503025610d37c925c4ec",
+    "source_supported_signal_cadence.csv": "02508c03fed1515ff889b84cbe685dcdc7788f2ab38063d00afc414c0eeab760",
+    "source_supported_signal_summary.csv": "671249497f296051fe5058c7b8bbb4a38f1718af21256f9a1a6fc71c49d252ca",
+    "TARGET_SELECTION_RESULT_V2.json": "20209dbc5d905725bd7005eee251a6c30bb3ed09ca568d897f8f528345de7bab"
+  },
+  "n_artifacts": 22,
+  "acceptance_checks": "31/31",
+  "next_stage": "S7.4 retry - pending human review"
+}

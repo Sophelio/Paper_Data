@@ -1,0 +1,23 @@
+node_id,node_type,identity,evidence,status
+equilibrium_reconstruction,reconstruction_code_family,UNRESOLVED,"no reconstruction code, settings, or run record in any local tree",LINEAGE_UNRESOLVED
+magnetic_probes,presumed_reconstruction_input,NOT_PRESENT_AS_ARCHIVED_SIGNAL,standard equilibrium-reconstruction inputs (external convention); NOT verified for this pipeline,LINEAGE_UNRESOLVED
+flux_loops,presumed_reconstruction_input,NOT_PRESENT_AS_ARCHIVED_SIGNAL,standard equilibrium-reconstruction inputs (external convention); NOT verified for this pipeline,LINEAGE_UNRESOLVED
+coil_currents,presumed_reconstruction_input,NOT_PRESENT_AS_ARCHIVED_SIGNAL,standard equilibrium-reconstruction inputs (external convention); NOT verified for this pipeline,LINEAGE_UNRESOLVED
+measured_plasma_current,presumed_reconstruction_input,possibly ip / bt,standard equilibrium-reconstruction inputs (external convention); NOT verified for this pipeline,LINEAGE_UNRESOLVED
+toroidal_field,presumed_reconstruction_input,possibly ip / bt,standard equilibrium-reconstruction inputs (external convention); NOT verified for this pipeline,LINEAGE_UNRESOLVED
+kinetic_profiles,presumed_reconstruction_input,NOT_PRESENT_AS_ARCHIVED_SIGNAL,standard equilibrium-reconstruction inputs (external convention); NOT verified for this pipeline,LINEAGE_UNRESOLVED
+aminor,equilibrium_output,aminor,provider group label,LINEAGE_PARTIAL
+area,equilibrium_output,area,provider group label,LINEAGE_PARTIAL
+betan,equilibrium_output,betan,provider group label,LINEAGE_PARTIAL
+kappa,equilibrium_output,kappa,provider group label,LINEAGE_PARTIAL
+li,equilibrium_output,li,provider group label,LINEAGE_PARTIAL
+q95,equilibrium_output,q95,provider group label,LINEAGE_PARTIAL
+volume,equilibrium_output,volume,provider group label,LINEAGE_PARTIAL
+drsep,equilibrium_output,drsep,provider group label,LINEAGE_PARTIAL
+tritop,equilibrium_output,tritop,provider group label,LINEAGE_PARTIAL
+tribot,equilibrium_output,tribot,provider group label,LINEAGE_PARTIAL
+rmaxis,equilibrium_output,rmaxis,provider group label,LINEAGE_PARTIAL
+zmaxis,equilibrium_output,zmaxis,provider group label,LINEAGE_PARTIAL
+rsurf,equilibrium_output,rsurf,provider group label,LINEAGE_PARTIAL
+zsurf,equilibrium_output,zsurf,provider group label,LINEAGE_PARTIAL
+zcur,equilibrium_output,zcur,provider group label,LINEAGE_PARTIAL

@@ -1,0 +1,8 @@
+{
+  "n_target_containing_features": 2,
+  "features": [
+    "d[pcdiamag3]/d[kappa]",
+    "d[pcdiamag3]/d[betan]"
+  ],
+  "affine_verified": true
+}

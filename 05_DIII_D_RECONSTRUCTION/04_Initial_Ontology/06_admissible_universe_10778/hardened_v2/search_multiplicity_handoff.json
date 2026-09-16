@@ -1,0 +1,19 @@
+{
+  "requirement_id": "SEARCH_POLICY_MULTIPLICITY_CONTROL_REQUIRED",
+  "owner_stage": "S7.7",
+  "solved_here": false,
+  "coordinates_deleted_to_address_it": 0,
+  "weights_assigned_here": false,
+  "statement": "S7.5H established that target-blind pairwise compression only modestly reduced ECE channel multiplicity (share 0.513 -> 0.471). That multiplicity propagates into the atomic universe. S7.7 should prevent a scientific family with many channels from receiving disproportionate exploration merely because it contributes more atomic coordinates.",
+  "evidence_from_this_stage": {
+    "n_atoms": 10778,
+    "n_atoms_with_an_ECE_ancestor": 9075,
+    "ece_ancestor_share_of_atomic_universe": 0.841992948598998,
+    "ece_share_of_P_hard": 0.4714285714285714,
+    "level_denominators_surviving": 39,
+    "of_which_ECE": 33,
+    "why_it_concentrates": "the surviving LEVEL denominators are overwhelmingly ECE channels, because electron temperature is strictly positive and smooth on a calibration block, so it satisfies the no-sign-change and margin conditions that fluctuating diagnostics fail. C3, C5 and C7 therefore inherit an even stronger ECE concentration than the primitive basis has."
+  },
+  "principle": "ADMISSIBLE != PRIORITIZED",
+  "not_an_admissibility_defect": true
+}

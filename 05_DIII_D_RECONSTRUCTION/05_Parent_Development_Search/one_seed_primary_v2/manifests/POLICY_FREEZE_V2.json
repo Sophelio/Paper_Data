@@ -1,0 +1,12 @@
+{
+  "file": "SEARCH_POLICY_PREVALUE_V2.json",
+  "sha256": "2049cf999dd99c0a1c5aa7f3539a7caaedbae8171d42678ea4cedef93734a255",
+  "frozen_utc": "2026-09-05T00:17:10.479649+00:00",
+  "parent_v1_policy_sha256": "a97e690e414da7a0ace4c70ab56e7d5851eb73f940d98e9f2a7add7f33d4b265",
+  "pre_search_contract_sha256": "1b8df4c0672686be21665c00aaf4fc8f36ab9e53646f983fcd2f9b253fd7c10f",
+  "diff_verdict": "ONLY_SEED_MULTIPLICITY_CHANGED",
+  "frozen_before_any_density_value_opened": true,
+  "stage_a_opens_no_archive": true,
+  "ordering_is_structural": "stage A contains no data-loading code path; the search stage verifies this hash before opening anything",
+  "on_mismatch": "SEARCH_POLICY_CONTAMINATED"
+}

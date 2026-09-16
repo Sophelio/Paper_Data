@@ -1,0 +1,16 @@
+{
+  "baseline_id": "B1_PERSISTENCE_V1",
+  "role": "MANDATORY_V3",
+  "definition": "predict the final target value immediately before the protected block, held constant over the protected block",
+  "operational": "the last calibration sample of each block",
+  "hyperparameters": {},
+  "n_hyperparameters": 0,
+  "tuned_on_development": false,
+  "target": "density",
+  "geometry": "identical calibration intervals and protected samples as every comparator",
+  "preprocessing": "calibration-fitted only; sd<=0 divisor 1.0; no epsilon",
+  "metric": "NRMSE = RMSE(protected)/std(y_calibration, ddof=0)",
+  "development_discharges": 20,
+  "external_evaluation": "S7.10",
+  "run_in_S7_9": false
+}

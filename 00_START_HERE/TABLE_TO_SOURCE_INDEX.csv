@@ -1,0 +1,6 @@
+table,source,run_id,status,notes
+Supplement S7 Table S4 (observational roles),03_DIII_D_SOURCE_OBJECT/observational_object_S7_1/reconciliation_final/FINAL_SIGNAL_INVENTORY.csv,D3D-SIR-S7.1-OBSERVATIONAL-OBJECT-FINAL-V1,VERIFIED,"Signal inventory with group, semantic type, provenance status."
+Lorenz benchmark summary table,02_CONTROLLED_STUDIES/01_Lorenz_Generator_Containment/tables/benchmark_summary.tex,SIR-LORENZ-BENCHMARK,VERIFIED,TeX table fragment plus the JSON results it is built from.
+Lorenz task-conditioning summary table,02_CONTROLLED_STUDIES/02_Lorenz_Representation_Discovery/tables/benchmark_summary.tex,SIR-LORENZ-TASK-CONDITIONING,VERIFIED,
+q_desc coefficient summary,04_DIII_D_DESCRIPTIVE/D3D-SIR-62-ALIGNED-V1/canonical_run/d3d_coefficient_summary.csv,D3D-SIR-62-ALIGNED-V1,VERIFIED,Per-term mean/median/quantiles across the 62 discharge fits.
+Coefficient classification (5 robust / 2 uncertainty-dominated),04_DIII_D_DESCRIPTIVE/D3D-SIR-62-ALIGNED-V1/coefficient_conditioning/Correction_audit/tables/corrected_coefficient_classification.csv,D3D-SIR-62-COEFFICIENT-CONDITIONING-CORRECTION-V1,VERIFIED,

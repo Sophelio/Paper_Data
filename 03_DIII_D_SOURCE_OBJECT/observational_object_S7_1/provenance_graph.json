@@ -1,0 +1,2362 @@
+{
+  "nodes": [
+    {
+      "node_id": "aminor",
+      "node_type": "stored_series",
+      "category": "equilibrium_shape",
+      "direct_or_derived": "EQUILIBRIUM_DERIVED",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "area",
+      "node_type": "stored_series",
+      "category": "equilibrium_shape",
+      "direct_or_derived": "EQUILIBRIUM_DERIVED",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "betan",
+      "node_type": "stored_series",
+      "category": "equilibrium_shape",
+      "direct_or_derived": "EQUILIBRIUM_DERIVED",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "bt",
+      "node_type": "stored_series",
+      "category": "magnetics",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "cerqrott10",
+      "node_type": "stored_series",
+      "category": "cer_rotation_ti",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "cerqrott11",
+      "node_type": "stored_series",
+      "category": "cer_rotation_ti",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "cerqrott12",
+      "node_type": "stored_series",
+      "category": "cer_rotation_ti",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "cerqrott13",
+      "node_type": "stored_series",
+      "category": "cer_rotation_ti",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "cerqrott3",
+      "node_type": "stored_series",
+      "category": "cer_rotation_ti",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "cerqrott6",
+      "node_type": "stored_series",
+      "category": "cer_rotation_ti",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "cerqrott8",
+      "node_type": "stored_series",
+      "category": "cer_rotation_ti",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "cerqtit10",
+      "node_type": "stored_series",
+      "category": "cer_rotation_ti",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "cerqtit11",
+      "node_type": "stored_series",
+      "category": "cer_rotation_ti",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "cerqtit12",
+      "node_type": "stored_series",
+      "category": "cer_rotation_ti",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "cerqtit13",
+      "node_type": "stored_series",
+      "category": "cer_rotation_ti",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "cerqtit3",
+      "node_type": "stored_series",
+      "category": "cer_rotation_ti",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "cerqtit6",
+      "node_type": "stored_series",
+      "category": "cer_rotation_ti",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "cerqtit8",
+      "node_type": "stored_series",
+      "category": "cer_rotation_ti",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "density",
+      "node_type": "stored_series",
+      "category": "density",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "drsep",
+      "node_type": "stored_series",
+      "category": "equilibrium_shape",
+      "direct_or_derived": "EQUILIBRIUM_DERIVED",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece1",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece10",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece11",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece12",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece13",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece14",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece15",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece16",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece17",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece18",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece19",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece2",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece20",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece21",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece22",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece23",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece24",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece25",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece26",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece27",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece28",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece29",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece3",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece30",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece31",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece32",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece33",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece34",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece35",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece36",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece37",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece38",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece39",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece4",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece40",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece5",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece6",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece7",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece8",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "ece9",
+      "node_type": "stored_series",
+      "category": "ece_te_profile",
+      "direct_or_derived": "DIAGNOSTIC_RECONSTRUCTION",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "fs03da",
+      "node_type": "stored_series",
+      "category": "filterscope_dalpha",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "fs04",
+      "node_type": "stored_series",
+      "category": "filterscope_dalpha",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "fs04da",
+      "node_type": "stored_series",
+      "category": "filterscope_dalpha",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "fs05da",
+      "node_type": "stored_series",
+      "category": "filterscope_dalpha",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "gasa",
+      "node_type": "stored_series",
+      "category": "gas_injection",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "gasb",
+      "node_type": "stored_series",
+      "category": "gas_injection",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "gasc",
+      "node_type": "stored_series",
+      "category": "gas_injection",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "gasd",
+      "node_type": "stored_series",
+      "category": "gas_injection",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "ip",
+      "node_type": "stored_series",
+      "category": "magnetics",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "kappa",
+      "node_type": "stored_series",
+      "category": "equilibrium_shape",
+      "direct_or_derived": "EQUILIBRIUM_DERIVED",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "li",
+      "node_type": "stored_series",
+      "category": "equilibrium_shape",
+      "direct_or_derived": "EQUILIBRIUM_DERIVED",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "pcbcoil",
+      "node_type": "stored_series",
+      "category": "magnetics",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "pcdiamag3",
+      "node_type": "stored_series",
+      "category": "magnetics",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "pinj",
+      "node_type": "stored_series",
+      "category": "neutral_beams",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "pinj_15l",
+      "node_type": "stored_series",
+      "category": "neutral_beams",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "pinj_15r",
+      "node_type": "stored_series",
+      "category": "neutral_beams",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "pinj_21l",
+      "node_type": "stored_series",
+      "category": "neutral_beams",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "pinj_21r",
+      "node_type": "stored_series",
+      "category": "neutral_beams",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "pinj_30l",
+      "node_type": "stored_series",
+      "category": "neutral_beams",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "pinj_30r",
+      "node_type": "stored_series",
+      "category": "neutral_beams",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "pinj_33l",
+      "node_type": "stored_series",
+      "category": "neutral_beams",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "pinj_33r",
+      "node_type": "stored_series",
+      "category": "neutral_beams",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "prmtan_neped",
+      "node_type": "stored_series",
+      "category": "density",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "prmtan_teped",
+      "node_type": "stored_series",
+      "category": "density",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "q95",
+      "node_type": "stored_series",
+      "category": "equilibrium_shape",
+      "direct_or_derived": "EQUILIBRIUM_DERIVED",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "rmaxis",
+      "node_type": "stored_series",
+      "category": "equilibrium_shape",
+      "direct_or_derived": "EQUILIBRIUM_DERIVED",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "rsurf",
+      "node_type": "stored_series",
+      "category": "equilibrium_shape",
+      "direct_or_derived": "EQUILIBRIUM_DERIVED",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "tinj",
+      "node_type": "stored_series",
+      "category": "neutral_beams",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "tribot",
+      "node_type": "stored_series",
+      "category": "equilibrium_shape",
+      "direct_or_derived": "EQUILIBRIUM_DERIVED",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "tritop",
+      "node_type": "stored_series",
+      "category": "equilibrium_shape",
+      "direct_or_derived": "EQUILIBRIUM_DERIVED",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "volume",
+      "node_type": "stored_series",
+      "category": "equilibrium_shape",
+      "direct_or_derived": "EQUILIBRIUM_DERIVED",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "vsurf",
+      "node_type": "stored_series",
+      "category": "magnetics",
+      "direct_or_derived": "UNKNOWN",
+      "evidence_class": "UNRESOLVED"
+    },
+    {
+      "node_id": "zcur",
+      "node_type": "stored_series",
+      "category": "equilibrium_shape",
+      "direct_or_derived": "EQUILIBRIUM_DERIVED",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "zmaxis",
+      "node_type": "stored_series",
+      "category": "equilibrium_shape",
+      "direct_or_derived": "EQUILIBRIUM_DERIVED",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "zsurf",
+      "node_type": "stored_series",
+      "category": "equilibrium_shape",
+      "direct_or_derived": "EQUILIBRIUM_DERIVED",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "upstream_resample",
+      "node_type": "preprocessing_operation",
+      "category": "pipeline",
+      "direct_or_derived": "N/A",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "provider_clean",
+      "node_type": "preprocessing_operation",
+      "category": "pipeline",
+      "direct_or_derived": "N/A",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "common_grid",
+      "node_type": "preprocessing_operation",
+      "category": "pipeline",
+      "direct_or_derived": "N/A",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "block_average_or_interp",
+      "node_type": "preprocessing_operation",
+      "category": "pipeline",
+      "direct_or_derived": "N/A",
+      "evidence_class": "LOCAL_LINEAGE_EVIDENCE"
+    },
+    {
+      "node_id": "equilibrium_reconstruction",
+      "node_type": "equilibrium_reconstruction",
+      "category": "equilibrium_shape",
+      "direct_or_derived": "N/A",
+      "evidence_class": "UNRESOLVED"
+    }
+  ],
+  "edges": [
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "aminor",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "aminor",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "area",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "area",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "betan",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "betan",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "bt",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "bt",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "cerqrott10",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "cerqrott10",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "cerqrott11",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "cerqrott11",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "cerqrott12",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "cerqrott12",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "cerqrott13",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "cerqrott13",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "cerqrott3",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "cerqrott3",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "cerqrott6",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "cerqrott6",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "cerqrott8",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "cerqrott8",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "cerqtit10",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "cerqtit10",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "cerqtit11",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "cerqtit11",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "cerqtit12",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "cerqtit12",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "cerqtit13",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "cerqtit13",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "cerqtit3",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "cerqtit3",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "cerqtit6",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "cerqtit6",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "cerqtit8",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "cerqtit8",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "density",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "density",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "drsep",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "drsep",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece1",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece1",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece10",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece10",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece11",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece11",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece12",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece12",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece13",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece13",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece14",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece14",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece15",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece15",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece16",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece16",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece17",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece17",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece18",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece18",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece19",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece19",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece2",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece2",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece20",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece20",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece21",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece21",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece22",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece22",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece23",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece23",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece24",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece24",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece25",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece25",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece26",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece26",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece27",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece27",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece28",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece28",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece29",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece29",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece3",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece3",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece30",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece30",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece31",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece31",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece32",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece32",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece33",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece33",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece34",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece34",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece35",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece35",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece36",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece36",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece37",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece37",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece38",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece38",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece39",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece39",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece4",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece4",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece40",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece40",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece5",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece5",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece6",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece6",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece7",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece7",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece8",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece8",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ece9",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ece9",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "fs03da",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "fs03da",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "fs04",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "fs04",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "fs04da",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "fs04da",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "fs05da",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "fs05da",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "gasa",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "gasa",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "gasb",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "gasb",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "gasc",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "gasc",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "gasd",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "gasd",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "ip",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "ip",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "kappa",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "kappa",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "li",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "li",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "pcbcoil",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "pcbcoil",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "pcdiamag3",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "pcdiamag3",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "pinj",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "pinj",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "pinj_15l",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "pinj_15l",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "pinj_15r",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "pinj_15r",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "pinj_21l",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "pinj_21l",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "pinj_21r",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "pinj_21r",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "pinj_30l",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "pinj_30l",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "pinj_30r",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "pinj_30r",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "pinj_33l",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "pinj_33l",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "pinj_33r",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "pinj_33r",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "prmtan_neped",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "prmtan_neped",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "prmtan_teped",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "prmtan_teped",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "q95",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "q95",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "rmaxis",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "rmaxis",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "rsurf",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "rsurf",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "tinj",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "tinj",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "tribot",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "tribot",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "tritop",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "tritop",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "volume",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "volume",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "vsurf",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "vsurf",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "zcur",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "zcur",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "zmaxis",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "zmaxis",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "upstream_resample",
+      "child_id": "zsurf",
+      "dependency_type": "produced_by",
+      "evidence_source": "shot metadata json records per-signal resample method/category",
+      "confidence": "DOCUMENTED",
+      "notes": "generator script itself is UNRESOLVED"
+    },
+    {
+      "parent_id": "zsurf",
+      "child_id": "provider_clean",
+      "dependency_type": "consumed_by",
+      "evidence_source": "provider _load_signal",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "provider_clean",
+      "child_id": "common_grid",
+      "dependency_type": "pipeline_stage",
+      "evidence_source": "provider fetch_data",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "common_grid",
+      "child_id": "block_average_or_interp",
+      "dependency_type": "pipeline_stage",
+      "evidence_source": "provider fetch_data",
+      "confidence": "CODE_VERIFIED",
+      "notes": ""
+    },
+    {
+      "parent_id": "equilibrium_reconstruction",
+      "child_id": "aminor",
+      "dependency_type": "reconstructed_from",
+      "evidence_source": "provider docstring group label 'Equilibrium / shape'",
+      "confidence": "STRONGLY_INFERRED",
+      "notes": "the reconstruction code and its inputs are not present in any local tree"
+    },
+    {
+      "parent_id": "equilibrium_reconstruction",
+      "child_id": "area",
+      "dependency_type": "reconstructed_from",
+      "evidence_source": "provider docstring group label 'Equilibrium / shape'",
+      "confidence": "STRONGLY_INFERRED",
+      "notes": "the reconstruction code and its inputs are not present in any local tree"
+    },
+    {
+      "parent_id": "equilibrium_reconstruction",
+      "child_id": "betan",
+      "dependency_type": "reconstructed_from",
+      "evidence_source": "provider docstring group label 'Equilibrium / shape'",
+      "confidence": "STRONGLY_INFERRED",
+      "notes": "the reconstruction code and its inputs are not present in any local tree"
+    },
+    {
+      "parent_id": "equilibrium_reconstruction",
+      "child_id": "drsep",
+      "dependency_type": "reconstructed_from",
+      "evidence_source": "provider docstring group label 'Equilibrium / shape'",
+      "confidence": "STRONGLY_INFERRED",
+      "notes": "the reconstruction code and its inputs are not present in any local tree"
+    },
+    {
+      "parent_id": "equilibrium_reconstruction",
+      "child_id": "kappa",
+      "dependency_type": "reconstructed_from",
+      "evidence_source": "provider docstring group label 'Equilibrium / shape'",
+      "confidence": "STRONGLY_INFERRED",
+      "notes": "the reconstruction code and its inputs are not present in any local tree"
+    },
+    {
+      "parent_id": "equilibrium_reconstruction",
+      "child_id": "li",
+      "dependency_type": "reconstructed_from",
+      "evidence_source": "provider docstring group label 'Equilibrium / shape'",
+      "confidence": "STRONGLY_INFERRED",
+      "notes": "the reconstruction code and its inputs are not present in any local tree"
+    },
+    {
+      "parent_id": "equilibrium_reconstruction",
+      "child_id": "q95",
+      "dependency_type": "reconstructed_from",
+      "evidence_source": "provider docstring group label 'Equilibrium / shape'",
+      "confidence": "STRONGLY_INFERRED",
+      "notes": "the reconstruction code and its inputs are not present in any local tree"
+    },
+    {
+      "parent_id": "equilibrium_reconstruction",
+      "child_id": "rmaxis",
+      "dependency_type": "reconstructed_from",
+      "evidence_source": "provider docstring group label 'Equilibrium / shape'",
+      "confidence": "STRONGLY_INFERRED",
+      "notes": "the reconstruction code and its inputs are not present in any local tree"
+    },
+    {
+      "parent_id": "equilibrium_reconstruction",
+      "child_id": "rsurf",
+      "dependency_type": "reconstructed_from",
+      "evidence_source": "provider docstring group label 'Equilibrium / shape'",
+      "confidence": "STRONGLY_INFERRED",
+      "notes": "the reconstruction code and its inputs are not present in any local tree"
+    },
+    {
+      "parent_id": "equilibrium_reconstruction",
+      "child_id": "tribot",
+      "dependency_type": "reconstructed_from",
+      "evidence_source": "provider docstring group label 'Equilibrium / shape'",
+      "confidence": "STRONGLY_INFERRED",
+      "notes": "the reconstruction code and its inputs are not present in any local tree"
+    },
+    {
+      "parent_id": "equilibrium_reconstruction",
+      "child_id": "tritop",
+      "dependency_type": "reconstructed_from",
+      "evidence_source": "provider docstring group label 'Equilibrium / shape'",
+      "confidence": "STRONGLY_INFERRED",
+      "notes": "the reconstruction code and its inputs are not present in any local tree"
+    },
+    {
+      "parent_id": "equilibrium_reconstruction",
+      "child_id": "volume",
+      "dependency_type": "reconstructed_from",
+      "evidence_source": "provider docstring group label 'Equilibrium / shape'",
+      "confidence": "STRONGLY_INFERRED",
+      "notes": "the reconstruction code and its inputs are not present in any local tree"
+    },
+    {
+      "parent_id": "equilibrium_reconstruction",
+      "child_id": "zcur",
+      "dependency_type": "reconstructed_from",
+      "evidence_source": "provider docstring group label 'Equilibrium / shape'",
+      "confidence": "STRONGLY_INFERRED",
+      "notes": "the reconstruction code and its inputs are not present in any local tree"
+    },
+    {
+      "parent_id": "equilibrium_reconstruction",
+      "child_id": "zmaxis",
+      "dependency_type": "reconstructed_from",
+      "evidence_source": "provider docstring group label 'Equilibrium / shape'",
+      "confidence": "STRONGLY_INFERRED",
+      "notes": "the reconstruction code and its inputs are not present in any local tree"
+    },
+    {
+      "parent_id": "equilibrium_reconstruction",
+      "child_id": "zsurf",
+      "dependency_type": "reconstructed_from",
+      "evidence_source": "provider docstring group label 'Equilibrium / shape'",
+      "confidence": "STRONGLY_INFERRED",
+      "notes": "the reconstruction code and its inputs are not present in any local tree"
+    }
+  ]
+}

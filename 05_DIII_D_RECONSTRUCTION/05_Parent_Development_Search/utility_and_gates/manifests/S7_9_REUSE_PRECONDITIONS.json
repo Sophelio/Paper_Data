@@ -1,0 +1,22 @@
+{
+  "manifest_id": "S7_9_ARRAY_REUSE_PRECONDITIONS_V1",
+  "generated_utc": "2026-09-05T08:07:46.430834+00:00",
+  "source": "S7.8 instruction section 8",
+  "rule": "S7.9 may reuse the S7.7R per-cell NRMSE arrays ONLY after verifying all five preconditions; otherwise it must recompute",
+  "preconditions": [
+    "artifact hashes match the S7.7R recorded manifest",
+    "estimator equivalence: DEVELOPMENT_RELATION_OLS_V1 == SEARCH_PROXY_OLS_V1 for the fit criterion",
+    "metric equivalence: NRMSE definition, scale and ddof unchanged",
+    "support identity: canonical support_id set matches Ahat_rec exactly",
+    "block identity: the 60 cells match the frozen development cohort and block windows"
+  ],
+  "s7_8_verification": {
+    "hashes": "41/41 S7.7R artifacts reproduce byte-for-byte",
+    "estimator_equivalence": "SEARCH_PROXY_OLS_V1 is algebraically identical to DEVELOPMENT_RELATION_OLS_V1 for the fit criterion; S7.7R measured max relative deviation 1.72e-13 against numpy.linalg.lstsq",
+    "metric_equivalence": "NRMSE definition, calibration scale and ddof=0 unchanged from S7.2C",
+    "support_identity": "162845 unique canonical support_ids, sizes 1..12, matching the S7.7R histogram exactly",
+    "block_identity": "60 cells over the 20 frozen development discharges and blocks A/B/C"
+  },
+  "s7_9_must_re_verify_at_execution_time": true,
+  "semantic_caveat": "reuse is a NUMERICAL convenience only; J_search remains a navigation score and FIT remains a utility criterion, even where the numbers coincide"
+}

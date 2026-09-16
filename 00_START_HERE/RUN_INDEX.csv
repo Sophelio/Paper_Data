@@ -1,0 +1,15 @@
+run_id,task,status,description,package_path,supports
+D3D-SIR-62-ALIGNED-V1,q_desc,CANONICAL,Canonical 62-discharge aligned descriptive run,04_DIII_D_DESCRIPTIVE/D3D-SIR-62-ALIGNED-V1/canonical_run,Results 1.5; Supplement S7.1-S7.4; Figure 6 panels a-b
+D3D-SIR-62-COEFFICIENT-CONDITIONING-CORRECTION-V1,q_desc,CANONICAL,Corrected coefficient conditioning and identifiability audit; supersedes D3D-SIR-62-COEFFICIENT-CONDITIONING-V1,04_DIII_D_DESCRIPTIVE/D3D-SIR-62-ALIGNED-V1/coefficient_conditioning/Correction_audit,Supplement S7.7; Supplementary Figure S1
+D3D-SIR-62-COEFFICIENT-CONDITIONING-V1,q_desc,SUPERSEDED,Original conditioning audit; carried the retired verdict D3D-COEFFICIENT-FAMILY-RESOLVED and mislabelled profile-ML as REML,04_DIII_D_DESCRIPTIVE/D3D-SIR-62-ALIGNED-V1/coefficient_conditioning,Supplement S7.7 (documents its correction)
+D3D-SIR-62-IMPLICIT-CLOSURE-CONDITIONING-V1,q_desc,CANONICAL,Implicit elimination and denominator conditioning,04_DIII_D_DESCRIPTIVE/D3D-SIR-62-ALIGNED-V1/implicit_elimination_audit,Supplement S7.6
+D3D-SIR-S7.1-OBSERVATIONAL-OBJECT-FINAL-V1,shared,CANONICAL,Frozen 62-discharge / 95-quantity object,03_DIII_D_SOURCE_OBJECT/observational_object_S7_1,Supplement S7.1
+D3D-SIR-S7.9-DEVELOPMENT-SELECTION-AND-PREEXTERNAL-FREEZE-V1,q_rec,CANONICAL,Parent development selection and pre-external freeze,05_DIII_D_RECONSTRUCTION/06_Frozen_Parent_Support,Supplement S7
+D3D-SIR-S7.10-EXTERNAL-VALIDATION-AND-GATE-EVALUATION-V1,q_rec,CANONICAL_NEGATIVE_RESULT,Parent protected qualification FAILURE,05_DIII_D_RECONSTRUCTION/07_Protected_Qualification_FAILURE,Supplement S7 (absent from the staged manuscript)
+D3D-SIR-S7.R1-OPERATIONAL-STATE-RECONCILIATION-V1,q_rec,CANONICAL,Operational-state explanation tested and REFUTED,05_DIII_D_RECONSTRUCTION/08_Failure_Diagnosis/R1_operational_state,Supplement S7
+D3D-SIR-S7.K2-OBSERVATIONAL-RANGE-SUPPORT-CONTRACT-V1,q_rec,CANONICAL,"Case-B operational-contract revision; 10,778 -> 3,451 atoms at tau = 1",05_DIII_D_RECONSTRUCTION/09_Range_Support_Case_B_Revision,Supplement S7
+D3D-SIR-S7.E2.1-CROSSFITTED-DISCOVERY-AND-QUALIFICATION-V1,q_rec,CANONICAL_PRIMARY_RESULT,Six-fold target-cross-fitted discovery and qualification,05_DIII_D_RECONSTRUCTION/12_Six_Fold_Target_Cross_Fitting,Supplement S7; Figure 6 panels c-d
+D3D-SIR-S7.12-QUALIFIED-RECONSTRUCTION-RESULT-V1,q_rec,CANONICAL_FINAL,"Q_rec*, branch closure",05_DIII_D_RECONSTRUCTION/17_Applicability_and_Final_Claim/S7_12_final,Supplement S7
+D3D-FIG6-QREC-RETIREMENT-V1,q_rec (retired),RETIRED,Retirement of the I_p reconstruction branch for target-provenance leakage and no skill over persistence,10_REFERENCED_HISTORICAL_LINEAGE/failed_parent_branches/retired_Ip_branch,The staged manuscript still reports this retired branch
+SIR-LORENZ-BENCHMARK,controlled,CANONICAL,Lorenz fixed-representation containment,02_CONTROLLED_STUDIES/01_Lorenz_Generator_Containment,"Results 1.3, 1.4; Supplement S6"
+SIR-LORENZ-TASK-CONDITIONING,controlled,CANONICAL,Partially observed Lorenz representation discovery and task conditioning,02_CONTROLLED_STUDIES/02_Lorenz_Representation_Discovery,"Results 1.3, 1.4; Figure 5; Supplement S6"

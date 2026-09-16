@@ -1,0 +1,25 @@
+{
+  "record_id": "E2_0A_FIREWALL_V1",
+  "frozen_utc": "2026-09-06T04:42:47.861735+00:00",
+  "target_reads": 0,
+  "model_error_reads": 0,
+  "residual_reads": 0,
+  "epoch1_performance_reads_for_decision": 0,
+  "epoch2_performance_reads": 0,
+  "permitted": [
+    "predictor values",
+    "K2 applicability artifacts",
+    "fold metadata",
+    "frozen contract and protocol artifacts"
+  ],
+  "amendment_must_be_justified_on": [
+    "claim semantics",
+    "information-boundary logic",
+    "K2 applicability semantics"
+  ],
+  "amendment_may_not_be_justified_on": [
+    "improving the probability of success"
+  ],
+  "e2_0_feasibility_estimate_role": "HISTORICAL_CONTEXT_ONLY_NOT_JUSTIFICATION",
+  "asserted_in_code": true
+}

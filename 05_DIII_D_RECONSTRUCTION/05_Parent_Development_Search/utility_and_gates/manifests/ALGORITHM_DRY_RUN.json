@@ -1,0 +1,111 @@
+{
+  "dry_run_id": "S7_8_ALGORITHM_DRY_RUN_V1",
+  "generated_utc": "2026-09-05T08:01:36.633065+00:00",
+  "purpose": "prove the frozen S7.9 algorithm is implementable and deterministic",
+  "fixture": {
+    "synthetic": true,
+    "seed": 20260908,
+    "n_candidates": 400,
+    "shape": [
+      400,
+      20,
+      3
+    ],
+    "reason": "S7.8 may not execute utility over Ahat_rec; a synthetic fixture of the correct shape exercises every code path without computing any real utility quantity"
+  },
+  "ahat_rec_nrmse_values_read": false,
+  "candidate_selected": false,
+  "checks": {
+    "block_worst_paired_identity": {
+      "claim": "mean_s d_s(A,B) == BLOCK_WORST(A) - BLOCK_WORST(B)",
+      "max_abs_deviation_over_all_pairs": 2.671474153004283e-16,
+      "example_lhs": -0.023643169520886527,
+      "example_rhs": -0.023643169520886465,
+      "holds": true,
+      "consequence": "the section-11 fallback to a 0.01-only floor is NOT required"
+    },
+    "worst_block_tie_break": {
+      "all_blocks_tied_case_selects": "A",
+      "rule": "numpy.argmax returns the first maximum, which is block A under the canonical order A<B<C",
+      "deterministic": true
+    },
+    "rank1": {
+      "best_in_E_fit": true,
+      "E_fit_size": 4,
+      "n_candidates": 400,
+      "is_top_k": false,
+      "floor_binding_when_se_smaller": true
+    },
+    "determinism": {
+      "two_identical_runs_agree": true,
+      "survivor_sizes": {
+        "E1": 4,
+        "E2": 1,
+        "E3": 1,
+        "E4": 1
+      },
+      "winner_is_unique": true,
+      "monotone_nesting": true
+    },
+    "bootstrap_weighting": {
+      "unit_weights_reproduce_plain_fit": true,
+      "note": "integer multiplicities are the only mechanism by which a replicate enters any aggregation"
+    },
+    "bootstrap_stream": {
+      "seed": 2026090501,
+      "replicates": 1000,
+      "reproducible": true,
+      "first_replicate_multiset_head": [
+        15,
+        17,
+        14,
+        0,
+        0,
+        14,
+        18,
+        15
+      ],
+      "mean_distinct_discharges_per_replicate": 12.862
+    },
+    "fold_perturbation": {
+      "omit_A": {
+        "cells": 40,
+        "E4_size": 1,
+        "winner": "SYN00063"
+      },
+      "omit_B": {
+        "cells": 40,
+        "E4_size": 1,
+        "winner": "SYN00357"
+      },
+      "omit_C": {
+        "cells": 40,
+        "E4_size": 1,
+        "winner": "SYN00217"
+      }
+    },
+    "conditioning": {
+      "kappa_from_svd": 1.51035816017617,
+      "normal_equation_kappa_squared": 2.2811817720107475,
+      "ratio_confirms_squaring": 1.0000000000000009,
+      "svd_rule_is_the_frozen_one": true,
+      "zero_column_gives_infinite_kappa": false,
+      "singleton_support_kappa": 1.0,
+      "singleton_log10_kappa": 0.0
+    },
+    "canonical_parse": {
+      "rows": 162845,
+      "depth_aware_reproduces_support_size": true,
+      "naive_split_mismatch_rows": 116608,
+      "naive_split_mismatch_fraction": 0.7160674260800147,
+      "note": "identity check only; no NRMSE value of the frontier was read"
+    }
+  },
+  "verdict": "ALGORITHM_EXECUTABLE_AND_DETERMINISTIC",
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

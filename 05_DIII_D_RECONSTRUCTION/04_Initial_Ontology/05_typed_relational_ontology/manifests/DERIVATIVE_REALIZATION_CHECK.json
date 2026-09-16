@@ -1,0 +1,43 @@
+{
+  "rule": "second-order finite difference with respect to physical time t",
+  "reference_implementation": "numpy.gradient(x, t, edge_order=2)",
+  "numpy_version": "2.5.2",
+  "grids_tested_ms": [
+    5.853,
+    6.824,
+    14.187
+  ],
+  "per_grid": [
+    {
+      "dt_ms": 5.853,
+      "max_interior_abs_error": 4.567605999694635e-05,
+      "n_samples": 400
+    },
+    {
+      "dt_ms": 6.824,
+      "max_interior_abs_error": 6.208852079758742e-05,
+      "n_samples": 400
+    },
+    {
+      "dt_ms": 14.187,
+      "max_interior_abs_error": 0.00026834763810690276,
+      "n_samples": 400
+    }
+  ],
+  "observed_convergence_ratios": [
+    3.999972059931178,
+    3.999981459803801
+  ],
+  "expected_ratio_for_second_order": 4.0,
+  "second_order_confirmed": true,
+  "nonuniform_grid_max_interior_error": 0.00012216565714973093,
+  "nonuniform_note": "np.gradient accepts a non-uniform t vector but is only first-order there. Not relied upon: each T_s is UNIFORM within its own discharge; only dt differs BETWEEN discharges, which is the second-order case tested above.",
+  "reproducible_on_discharge_specific_grid": true,
+  "uses_actual_T_s_values": true,
+  "assumed_global_dt": false,
+  "fitted_smoothing_parameter": false,
+  "target_values_involved": false,
+  "cross_discharge_stencil": false,
+  "synthetic_data_only": true,
+  "observational_values_touched": 0
+}

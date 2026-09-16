@@ -1,0 +1,37 @@
+{
+  "record_id": "OPERATIONAL_STATE_RULE_V1",
+  "generated_utc": "2026-09-06T01:05:20.911744+00:00",
+  "STATE_RULE_FROZEN": false,
+  "STATE_IDENTIFICATION_GATE": "FAIL",
+  "reason": "no simple, physically interpretable, predictor-defined operational-state distinction separates the Epoch-1 catastrophic blocks from ordinary operation. The only block-level quantity that does separate them is the block-relative excursion ratio gasa_pro_max / gasa_cal_max, which is NOT an operational state: its value depends on where the frozen validation-block boundary falls relative to an actuator transition, not on the operational condition of the discharge.",
+  "primary_1D_audit": {
+    "quantity": "gasa protected-block maximum (V or Torr*L/s - see provenance defect)",
+    "development_range": [
+      -0.0184719774145496,
+      7.505603903295197
+    ],
+    "external_range": [
+      -0.0183066921791705,
+      7.98209762188744
+    ],
+    "development_covers_external_range": true,
+    "clean_isolated_high_command_group": false,
+    "largest_gap_is_interior_to_development": true,
+    "catastrophic_blocks_are_extreme_in_this_quantity": false
+  },
+  "fallback_multivariate_audit": {
+    "executed": true,
+    "is_the_single_permitted_fallback": true,
+    "separates_catastrophic_blocks": false,
+    "two_cluster_partition_places_them_with": "25 development + 50 external blocks",
+    "nn_distance_percentiles": [
+      0.9841269841269841,
+      0.9365079365079365
+    ],
+    "counterexample": "187018, an external discharge whose actuator blocks are FURTHER from development than 187022/B, reconstructs normally"
+  },
+  "no_shot_id_rule": true,
+  "no_error_based_threshold": true,
+  "no_supervised_classifier": true,
+  "target_blind": true
+}

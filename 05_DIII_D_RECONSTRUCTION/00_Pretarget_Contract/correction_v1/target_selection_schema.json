@@ -1,0 +1,69 @@
+{
+  "schema_id": "S7.2C-TARGET-SELECTION-V2",
+  "supersedes": "S7.2-TARGET-ELIGIBILITY-V1 (selection step only; eligibility criteria unchanged)",
+  "applied_at": "S7.3",
+  "deterministic": true,
+  "produces_ranking_at_S7_2C": false,
+  "stage_1_eligibility": {
+    "note": "every eligibility criterion is applied independently first; only candidates passing ALL of them are ranked",
+    "criteria_unchanged_from_v1": true,
+    "thresholds": {
+      "min_admissible_predictors_after_closure": 10,
+      "min_median_robust_relative_variation": 0.05,
+      "min_distinct_values_fraction": 0.1,
+      "max_identically_zero_development_discharges": 0
+    },
+    "retired_thresholds": [
+      "min_coefficient_of_variation_development"
+    ]
+  },
+  "stage_2_lexicographic_ranking": [
+    {
+      "level": 1,
+      "key": "target_side_major_flags",
+      "direction": "fewer_is_better",
+      "definition": "count of MAJOR provenance or numerical flags attaching to the TARGET ITSELF",
+      "excludes": "flags on predictors that I_rec later removes"
+    },
+    {
+      "level": 2,
+      "key": "n_provenance_certified_predictors_surviving_I_rec",
+      "direction": "more_is_better"
+    },
+    {
+      "level": 3,
+      "key": "n_distinct_signal_families_surviving_I_rec",
+      "direction": "more_is_better"
+    },
+    {
+      "level": 4,
+      "key": "rrv_margin",
+      "direction": "larger_is_better",
+      "definition": "RRV_dev - 0.05"
+    },
+    {
+      "level": 5,
+      "key": "signal_index",
+      "direction": "lower_is_better",
+      "definition": "position in FINAL_SIGNAL_INVENTORY.csv; guarantees a unique winner"
+    }
+  ],
+  "forbidden_inputs": [
+    "any reconstruction model or its output",
+    "any baseline performance",
+    "correlation between target and any predictor",
+    "any external-cohort information",
+    "any development performance"
+  ],
+  "outcome": "the top-ranked eligible candidate IS the primary target",
+  "human_review_may": [
+    "verify the rule was applied correctly",
+    "identify a previously unknown scientific or provenance defect"
+  ],
+  "human_review_may_not": [
+    "choose a lower-ranked target because it seems more interesting",
+    "choose a lower-ranked target because it appears easier to reconstruct",
+    "inspect model performance before the target is frozen"
+  ],
+  "defect_procedure": "if the top-ranked candidate has a genuine newly discovered defect, freeze the defect in the ledger and re-apply the identical rule to the remaining eligible set"
+}

@@ -1,0 +1,8 @@
+tau,n_supports,n_full_domain_supports,frac_full_domain_supports,C_dev_star_full_domain
+0.0,217,0,0.0,False
+0.25,217,0,0.0,False
+0.5,217,0,0.0,False
+1.0,217,0,0.0,False
+2.0,217,13,0.059907834101382486,False
+5.0,217,28,0.12903225806451613,False
+10.0,217,30,0.1382488479262673,False

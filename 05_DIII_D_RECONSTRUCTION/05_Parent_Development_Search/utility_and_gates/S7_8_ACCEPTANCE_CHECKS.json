@@ -1,0 +1,202 @@
+{
+  "acceptance_id": "S7_8_ACCEPTANCE_CHECKS_V1",
+  "generated_utc": "2026-09-05T08:08:27.104229+00:00",
+  "n_checks": 48,
+  "n_passed": 48,
+  "result": "48/48",
+  "failed": [],
+  "checks": [
+    {
+      "check": "all parent freezes verified",
+      "passed": true
+    },
+    {
+      "check": "S7.7R primary frontier authoritative",
+      "passed": true
+    },
+    {
+      "check": "Ahat_rec == 162845 supports",
+      "passed": true
+    },
+    {
+      "check": "singleton == 10778 and multivariate == 152067",
+      "passed": true
+    },
+    {
+      "check": "support sizes == 1..12",
+      "passed": true
+    },
+    {
+      "check": "external values accessed = 0",
+      "passed": true
+    },
+    {
+      "check": "no baseline run",
+      "passed": true
+    },
+    {
+      "check": "no C* selected",
+      "passed": true
+    },
+    {
+      "check": "S7.2C practical-equivalence correction authoritative",
+      "passed": true
+    },
+    {
+      "check": "NRMSE units explicit",
+      "passed": true
+    },
+    {
+      "check": "delta_equiv = max(SE_delta,0.01)",
+      "passed": true
+    },
+    {
+      "check": "SE_delta uses paired development-discharge differences",
+      "passed": true
+    },
+    {
+      "check": "primary estimator frozen as OLS",
+      "passed": true
+    },
+    {
+      "check": "intercept fitted",
+      "passed": true
+    },
+    {
+      "check": "per-discharge/block local coefficients",
+      "passed": true
+    },
+    {
+      "check": "utility ordering unchanged",
+      "passed": true
+    },
+    {
+      "check": "no weighted utility",
+      "passed": true
+    },
+    {
+      "check": "Rank-1 algorithm frozen",
+      "passed": true
+    },
+    {
+      "check": "Rank-2 algorithm frozen",
+      "passed": true
+    },
+    {
+      "check": "Rank-2 fallback resolved without a new threshold",
+      "passed": true
+    },
+    {
+      "check": "Rank-3 algorithm frozen",
+      "passed": true
+    },
+    {
+      "check": "Rank-4 condition-number calculation frozen",
+      "passed": true
+    },
+    {
+      "check": "Rank-5 resampling protocol frozen",
+      "passed": true
+    },
+    {
+      "check": "bootstrap seed/count frozen",
+      "passed": true
+    },
+    {
+      "check": "fold perturbations frozen",
+      "passed": true
+    },
+    {
+      "check": "no stability pass/fail threshold",
+      "passed": true
+    },
+    {
+      "check": "S7.9 deterministic selection algorithm frozen",
+      "passed": true
+    },
+    {
+      "check": "C6/C7 not pruned",
+      "passed": true
+    },
+    {
+      "check": "ECE not penalized",
+      "passed": true
+    },
+    {
+      "check": "uncalibrated primitives not silently removed",
+      "passed": true
+    },
+    {
+      "check": "V1-V10 stage ownership explicit",
+      "passed": true
+    },
+    {
+      "check": "V3 not evaluated",
+      "passed": true
+    },
+    {
+      "check": "V4 not evaluated",
+      "passed": true
+    },
+    {
+      "check": "V5 not evaluated",
+      "passed": true
+    },
+    {
+      "check": "V6 uses external 24/18",
+      "passed": true
+    },
+    {
+      "check": "V9 remains non-mandatory",
+      "passed": true
+    },
+    {
+      "check": "no external gate marked PASS",
+      "passed": true
+    },
+    {
+      "check": "baselines defined but not run",
+      "passed": true
+    },
+    {
+      "check": "S_pers not used for selection",
+      "passed": true
+    },
+    {
+      "check": "two-seed sensitivity not executed",
+      "passed": true
+    },
+    {
+      "check": "no global-optimum claim",
+      "passed": true
+    },
+    {
+      "check": "A_rec minus Ahat_rec remains admissible-unsearched",
+      "passed": true
+    },
+    {
+      "check": "no outcome-based utility revision",
+      "passed": true
+    },
+    {
+      "check": "canonical parse checksum verified",
+      "passed": true
+    },
+    {
+      "check": "algorithm proven executable and deterministic",
+      "passed": true
+    },
+    {
+      "check": "stage semantics preserved: S7.9 not moved into S7.8",
+      "passed": true
+    },
+    {
+      "check": "Markdown files <= 20",
+      "passed": true
+    },
+    {
+      "check": "S7.9 not started",
+      "passed": true
+    }
+  ]
+}

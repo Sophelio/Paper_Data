@@ -1,0 +1,208 @@
+parent_id,child_id,dependency_type,evidence_source,confidence,notes
+upstream_resample,aminor,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+aminor,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,area,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+area,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,betan,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+betan,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,bt,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+bt,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,cerqrott10,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+cerqrott10,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,cerqrott11,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+cerqrott11,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,cerqrott12,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+cerqrott12,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,cerqrott13,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+cerqrott13,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,cerqrott3,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+cerqrott3,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,cerqrott6,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+cerqrott6,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,cerqrott8,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+cerqrott8,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,cerqtit10,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+cerqtit10,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,cerqtit11,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+cerqtit11,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,cerqtit12,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+cerqtit12,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,cerqtit13,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+cerqtit13,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,cerqtit3,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+cerqtit3,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,cerqtit6,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+cerqtit6,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,cerqtit8,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+cerqtit8,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,density,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+density,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,drsep,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+drsep,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece1,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece1,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece10,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece10,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece11,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece11,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece12,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece12,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece13,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece13,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece14,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece14,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece15,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece15,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece16,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece16,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece17,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece17,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece18,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece18,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece19,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece19,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece2,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece2,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece20,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece20,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece21,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece21,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece22,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece22,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece23,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece23,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece24,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece24,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece25,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece25,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece26,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece26,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece27,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece27,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece28,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece28,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece29,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece29,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece3,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece3,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece30,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece30,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece31,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece31,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece32,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece32,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece33,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece33,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece34,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece34,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece35,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece35,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece36,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece36,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece37,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece37,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece38,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece38,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece39,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece39,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece4,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece4,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece40,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece40,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece5,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece5,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece6,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece6,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece7,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece7,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece8,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece8,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ece9,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ece9,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,fs03da,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+fs03da,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,fs04,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+fs04,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,fs04da,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+fs04da,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,fs05da,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+fs05da,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,gasa,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+gasa,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,gasb,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+gasb,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,gasc,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+gasc,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,gasd,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+gasd,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,ip,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+ip,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,kappa,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+kappa,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,li,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+li,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,pcbcoil,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+pcbcoil,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,pcdiamag3,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+pcdiamag3,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,pinj,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+pinj,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,pinj_15l,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+pinj_15l,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,pinj_15r,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+pinj_15r,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,pinj_21l,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+pinj_21l,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,pinj_21r,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+pinj_21r,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,pinj_30l,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+pinj_30l,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,pinj_30r,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+pinj_30r,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,pinj_33l,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+pinj_33l,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,pinj_33r,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+pinj_33r,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,prmtan_neped,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+prmtan_neped,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,prmtan_teped,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+prmtan_teped,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,q95,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+q95,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,rmaxis,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+rmaxis,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,rsurf,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+rsurf,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,tinj,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+tinj,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,tribot,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+tribot,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,tritop,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+tritop,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,volume,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+volume,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,vsurf,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+vsurf,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,zcur,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+zcur,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,zmaxis,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+zmaxis,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+upstream_resample,zsurf,produced_by,shot metadata json records per-signal resample method/category,DOCUMENTED,generator script itself is UNRESOLVED
+zsurf,provider_clean,consumed_by,provider _load_signal,CODE_VERIFIED,
+provider_clean,common_grid,pipeline_stage,provider fetch_data,CODE_VERIFIED,
+common_grid,block_average_or_interp,pipeline_stage,provider fetch_data,CODE_VERIFIED,
+equilibrium_reconstruction,aminor,reconstructed_from,provider docstring group label 'Equilibrium / shape',STRONGLY_INFERRED,the reconstruction code and its inputs are not present in any local tree
+equilibrium_reconstruction,area,reconstructed_from,provider docstring group label 'Equilibrium / shape',STRONGLY_INFERRED,the reconstruction code and its inputs are not present in any local tree
+equilibrium_reconstruction,betan,reconstructed_from,provider docstring group label 'Equilibrium / shape',STRONGLY_INFERRED,the reconstruction code and its inputs are not present in any local tree
+equilibrium_reconstruction,drsep,reconstructed_from,provider docstring group label 'Equilibrium / shape',STRONGLY_INFERRED,the reconstruction code and its inputs are not present in any local tree
+equilibrium_reconstruction,kappa,reconstructed_from,provider docstring group label 'Equilibrium / shape',STRONGLY_INFERRED,the reconstruction code and its inputs are not present in any local tree
+equilibrium_reconstruction,li,reconstructed_from,provider docstring group label 'Equilibrium / shape',STRONGLY_INFERRED,the reconstruction code and its inputs are not present in any local tree
+equilibrium_reconstruction,q95,reconstructed_from,provider docstring group label 'Equilibrium / shape',STRONGLY_INFERRED,the reconstruction code and its inputs are not present in any local tree
+equilibrium_reconstruction,rmaxis,reconstructed_from,provider docstring group label 'Equilibrium / shape',STRONGLY_INFERRED,the reconstruction code and its inputs are not present in any local tree
+equilibrium_reconstruction,rsurf,reconstructed_from,provider docstring group label 'Equilibrium / shape',STRONGLY_INFERRED,the reconstruction code and its inputs are not present in any local tree
+equilibrium_reconstruction,tribot,reconstructed_from,provider docstring group label 'Equilibrium / shape',STRONGLY_INFERRED,the reconstruction code and its inputs are not present in any local tree
+equilibrium_reconstruction,tritop,reconstructed_from,provider docstring group label 'Equilibrium / shape',STRONGLY_INFERRED,the reconstruction code and its inputs are not present in any local tree
+equilibrium_reconstruction,volume,reconstructed_from,provider docstring group label 'Equilibrium / shape',STRONGLY_INFERRED,the reconstruction code and its inputs are not present in any local tree
+equilibrium_reconstruction,zcur,reconstructed_from,provider docstring group label 'Equilibrium / shape',STRONGLY_INFERRED,the reconstruction code and its inputs are not present in any local tree
+equilibrium_reconstruction,zmaxis,reconstructed_from,provider docstring group label 'Equilibrium / shape',STRONGLY_INFERRED,the reconstruction code and its inputs are not present in any local tree
+equilibrium_reconstruction,zsurf,reconstructed_from,provider docstring group label 'Equilibrium / shape',STRONGLY_INFERRED,the reconstruction code and its inputs are not present in any local tree

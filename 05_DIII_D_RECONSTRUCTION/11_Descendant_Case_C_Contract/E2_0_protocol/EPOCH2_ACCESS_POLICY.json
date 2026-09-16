@@ -1,0 +1,81 @@
+{
+  "policy_id": "EPOCH2_ACCESS_POLICY_V1",
+  "frozen_utc": "2026-09-06T04:02:06.709084+00:00",
+  "principle": "every discharge receives qualification predictions only from a relational support discovered without that discharge participating in support discovery",
+  "per_outer_fold_ordering": [
+    {
+      "step": 1,
+      "action": "verify fold identities and hashes",
+      "opens": "metadata only"
+    },
+    {
+      "step": 2,
+      "action": "construct D_train candidate basis under the training-domain range-support requirement",
+      "opens": "D_train PREDICTOR values only",
+      "forbidden": "D_test predictors, all target values"
+    },
+    {
+      "step": 3,
+      "action": "run a fresh one-seed search",
+      "opens": "D_train predictor and D_train TARGET values",
+      "forbidden": "any D_test value of any kind"
+    },
+    {
+      "step": 4,
+      "action": "execute the frozen U_rec selection",
+      "opens": "D_train only"
+    },
+    {
+      "step": 5,
+      "action": "write the selected support",
+      "opens": "nothing"
+    },
+    {
+      "step": 6,
+      "action": "HASH the selected support",
+      "note": "THE SUPPORT MAY NEVER CHANGE AFTER THIS STEP"
+    },
+    {
+      "step": 7,
+      "action": "freeze estimator and baseline configurations",
+      "opens": "D_train only"
+    },
+    {
+      "step": 8,
+      "action": "permit D_test PREDICTOR access",
+      "opens": "D_test predictors"
+    },
+    {
+      "step": 9,
+      "action": "evaluate V-RANGE on D_test",
+      "opens": "D_test predictors"
+    },
+    {
+      "step": 10,
+      "action": "permit D_test local CALIBRATION target access",
+      "opens": "D_test calibration-interval targets only"
+    },
+    {
+      "step": 11,
+      "action": "fit local coefficients and baselines",
+      "opens": "D_test calibration targets"
+    },
+    {
+      "step": 12,
+      "action": "open D_test PROTECTED targets",
+      "opens": "D_test protected targets"
+    },
+    {
+      "step": 13,
+      "action": "score",
+      "opens": "nothing new"
+    }
+  ],
+  "held_out_predictor_ranges_may_influence_search": false,
+  "held_out_targets_may_influence_support_discovery": false,
+  "why_held_out_predictors_are_excluded_from_search": "filtering candidates by D_test predictor ranges would let the held-out fold shape which coordinates are even considered, destroying genuine held-out support transfer",
+  "support_frozen_before_any_held_out_predictor_access": true,
+  "protected_targets_last": true,
+  "machine_auditable": true,
+  "required_audit_artifact_per_fold": "an access log recording, per step, what was opened"
+}

@@ -1,0 +1,187 @@
+SIR_IMPLEMENTATION_STATUS = MCP_NATIVE_PRIMITIVES_PLUS_AUDITED_CONTRACT_HARNESS
+
+scoring candidates — CLEAN object
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+    sigma=0.0 seed=None: 17 candidates
+
+scoring candidates — NOISY object (worst case over envelope)
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+    sigma=0.0 seed=None: 17 candidates
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+    sigma=0.005 seed=11: 17 candidates
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+    sigma=0.005 seed=12: 17 candidates
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+    sigma=0.005 seed=13: 17 candidates
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.05) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+    sigma=0.01 seed=11: 17 candidates
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+    sigma=0.01 seed=12: 17 candidates
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+    sigma=0.01 seed=13: 17 candidates
+
+q_accuracy: C_all  (38 coords, 38 features, 32 terms)
+   utility=1.3216e-05 +/- 3e-07   cond=8.4e+16
+   equivalent set (1): ['C_all']
+
+q_compact: C0+Q_pair  (12 coords, 12 features, 12 terms)
+   utility=3.3256e-05 +/- 1.8e-07   cond=2.68e+12
+   equivalent set (4): ['C0+Q_pair', 'C0+Q_all', 'C0+Q_pair+RS_pair', 'C_all']
+   margin=0.001 (from practical_floor)
+
+q_robust: C_all  (38 coords, 38 features, 32 terms)
+   utility=2.2903 +/- 0.031   cond=8.4e+16
+   equivalent set (1): ['C_all']
+   margin=0.0309 (from SE)
+
+equivalence-floor sensitivity (development only):
+  q_compact   floor=1e-05 -> C_all                (|equiv|=1)
+  q_robust    floor=1e-05 -> C_all                (|equiv|=1)
+  q_compact   floor=1e-04 -> C0+Q_pair            (|equiv|=4)
+  q_robust    floor=1e-04 -> C_all                (|equiv|=1)
+  q_compact   floor=1e-03 -> C0+Q_pair            (|equiv|=4)
+  q_robust    floor=1e-03 -> C_all                (|equiv|=1)
+  q_compact   floor=1e-02 -> C0+Q_pair            (|equiv|=4)
+  q_robust    floor=1e-02 -> C_all                (|equiv|=1)
+  q_compact   floor=1e-01 -> C0+Q_pair            (|equiv|=4)
+  q_robust    floor=1e-01 -> C_all                (|equiv|=1)
+
+froze 12 files into PRECONFIRMATION_FREEZE.json

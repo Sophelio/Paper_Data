@@ -1,0 +1,19 @@
+{
+  "universe_id": "C_REC_ATOM_V1",
+  "n_atoms": 6034,
+  "by_constructor": {
+    "C3": 3266,
+    "C2": 2628,
+    "C0": 74,
+    "C1": 66
+  },
+  "symbolic_before_admissibility": {
+    "C3": 5700,
+    "C4": 4830,
+    "C2": 2926,
+    "C0": 78,
+    "C1": 70
+  },
+  "sensitivity_only_registry": "sensitivity_only_coordinate_registry.csv",
+  "atoms_file": "primary_atomic_coordinate_universe.csv"
+}

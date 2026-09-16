@@ -1,0 +1,53 @@
+{
+  "record_id": "BASELINE_SPECIFICATION_COMPLETION_PREVALUE_V1",
+  "status": "PROSPECTIVE_SPECIFICATION_COMPLETION",
+  "not_an_outcome_response": true,
+  "frozen_utc": "2026-09-05T20:24:27.065074+00:00",
+  "frozen_before_any_alpha_was_evaluated": true,
+  "is_baseline_family_selection": false,
+  "is_implementation_completion_of_a_frozen_family": true,
+  "rule_id": "RIDGE_ALPHA_SELECTION_V1",
+  "applies_to": [
+    "B2",
+    "H0_RAW_HARDENED"
+  ],
+  "independent_selection_per_baseline": true,
+  "preprocessing": "predictors standardized from the CALIBRATION interval only; sd<=0 divisor 1.0; no epsilon",
+  "intercept": {
+    "fitted": true,
+    "penalized": false
+  },
+  "alpha_grid": [
+    0,
+    1e-08,
+    1e-07,
+    1e-06,
+    1e-05,
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1,
+    10,
+    100,
+    1000,
+    10000,
+    100000,
+    1000000
+  ],
+  "alpha_zero_interpretation": "unregularized affine linear regression via the numerically stable lstsq solver",
+  "evaluation": [
+    "frozen 20 development discharges",
+    "same A/B/C rolling validation geometry",
+    "fit separately per discharge/block",
+    "frozen NRMSE = RMSE(protected)/std(y_calibration, ddof=0)",
+    "aggregate within discharge over blocks, then over discharges"
+  ],
+  "selection": "minimum mean development NRMSE",
+  "tie_break": "SMALLER alpha",
+  "one_se_enlargement": false,
+  "preference_for_stronger_regularization": false,
+  "external_information_used": false,
+  "development_only": true,
+  "lock_sha256_at_time_of_freezing": "c7c6a36b86766f3cfaf1411dae5395a2c2d42844369f3eadaa88dbd8556d04d0"
+}

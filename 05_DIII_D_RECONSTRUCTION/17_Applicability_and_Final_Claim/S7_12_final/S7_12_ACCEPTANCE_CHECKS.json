@@ -1,0 +1,161 @@
+{
+  "record_id": "S7_12_ACCEPTANCE_CHECKS_V1",
+  "generated_utc": "2026-09-07T04:58:19.214183+00:00",
+  "checks": [
+    {
+      "check": "all parents reproduce",
+      "pass": true
+    },
+    {
+      "check": "E2.1 result unchanged",
+      "pass": true
+    },
+    {
+      "check": "E2.2 frozen before S7.12",
+      "pass": true
+    },
+    {
+      "check": "E2.2 cannot change the formal verdict",
+      "pass": true
+    },
+    {
+      "check": "Q_REC_STATUS exact",
+      "pass": true
+    },
+    {
+      "check": "CLEAN_DEMO_STATUS exact",
+      "pass": true
+    },
+    {
+      "check": "Delta_0 exact",
+      "pass": true
+    },
+    {
+      "check": "Delta_1 exact",
+      "pass": true
+    },
+    {
+      "check": "V3 exact",
+      "pass": true
+    },
+    {
+      "check": "V6 exact",
+      "pass": true
+    },
+    {
+      "check": "V-RANGE exact",
+      "pass": true
+    },
+    {
+      "check": "era asymmetry carried",
+      "pass": true
+    },
+    {
+      "check": "raw-baseline margins carried",
+      "pass": true
+    },
+    {
+      "check": "persistence margin described as modest",
+      "pass": true
+    },
+    {
+      "check": "six supports retained",
+      "pass": true
+    },
+    {
+      "check": "support non-uniqueness explicit",
+      "pass": true
+    },
+    {
+      "check": "no canonical-equation claim",
+      "pass": true
+    },
+    {
+      "check": "predictor-side full-object qualification explicit",
+      "pass": true
+    },
+    {
+      "check": "target-cross-fitted guarantee explicit",
+      "pass": true
+    },
+    {
+      "check": "no external-validation wording",
+      "pass": true
+    },
+    {
+      "check": "tau interpretation exact",
+      "pass": true
+    },
+    {
+      "check": "information-boundary clarification included",
+      "pass": true
+    },
+    {
+      "check": "Epoch-1 negative preserved",
+      "pass": true
+    },
+    {
+      "check": "R1 refutation preserved",
+      "pass": true
+    },
+    {
+      "check": "K2 revision preserved",
+      "pass": true
+    },
+    {
+      "check": "E2.0A reconciliation preserved",
+      "pass": true
+    },
+    {
+      "check": "no causal claim that K2 alone caused the improvement",
+      "pass": true
+    },
+    {
+      "check": "coefficient qualifications preserved",
+      "pass": true
+    },
+    {
+      "check": "pcdiamag3 qualification preserved",
+      "pass": true
+    },
+    {
+      "check": "no new search during S7.12",
+      "pass": true
+    },
+    {
+      "check": "no new gate",
+      "pass": true
+    },
+    {
+      "check": "no threshold movement",
+      "pass": true
+    },
+    {
+      "check": "no Epoch 3",
+      "pass": true
+    },
+    {
+      "check": "q_desc untouched",
+      "pass": true
+    },
+    {
+      "check": "Q_REC_BRANCH_CLOSED",
+      "pass": true
+    },
+    {
+      "check": "Markdown within limits",
+      "pass": true
+    }
+  ],
+  "n_pass": 36,
+  "n_total": 36,
+  "failed": [],
+  "markdown": {
+    "S7_12": 6,
+    "limit": 8,
+    "E2_2": 3,
+    "E2_2_limit": 6,
+    "combined": 9,
+    "combined_limit": 14
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "generated_utc": "2026-09-05T20:19:28.459220+00:00",
+  "rank_3": {
+    "E2": 1,
+    "E3": 1,
+    "selected_minimum_support_size": 12,
+    "ACTIVE_TERMS": {
+      "ID(cerqtit6)|ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(cerqtit10)|RECIP(prmtan_neped)": 12
+    },
+    "active_terms_equals_support_size_for_all_survivors": true,
+    "RANK3_ACTIVE_TERMS_NONBINDING": true,
+    "magnitude_threshold": null,
+    "p_value_pruning": false,
+    "intercept_counted": false
+  },
+  "rank_4": {
+    "E3": 1,
+    "E4": 1,
+    "method": "singular values of the calibration-standardized design, intercept excluded",
+    "normal_equation_condition_number_used": false,
+    "cutoff_introduced": false,
+    "summaries": [
+      {
+        "support_id": "ID(cerqtit6)|ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(cerqtit10)|RECIP(prmtan_neped)",
+        "support_size": 12,
+        "COND_MEDIAN": 1.9917544203843867,
+        "COND_P90": 2.173041735453102,
+        "COND_MAX": 2.2596409414020897,
+        "n_infinite_cells": 0,
+        "in_E4": true
+      }
+    ],
+    "n_infinite_cells_total": 0
+  },
+  "rank_5": {
+    "replicates": 1000,
+    "seed": 2026090501,
+    "resampled_unit": "development discharge",
+    "blocks_resampled": false,
+    "unique_rank4_bootstrap_winners": 217,
+    "winner_distribution_top": [
+      {
+        "support_id": "ID(cerqtit6)|ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(cerqtit10)|RECIP(prmtan_neped)",
+        "frequency": 0.093
+      },
+      {
+        "support_id": "ID(pcdiamag3)|PROD(fs03da,cerqtit11)|PROD(gasa,gasa)|PROD(ip,prmtan_neped)|PROD(pinj,ece36)|PROD(prmtan_neped,ece39)|RATIO(ece25,ece39)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RATIO(pinj,bt)|RECIP(bt)|RECIP(cerqtit10)",
+        "frequency": 0.055
+      },
+      {
+        "support_id": "ID(pcdiamag3)|PROD(ece37,ece39)|PROD(gasa,cerqtit6)|PROD(gasa,ece1)|PROD(ip,prmtan_neped)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,ece39)|PROD(prmtan_neped,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(gasa,ece6)|RATIO(ip,bt)|RATIO(ip,ece22)",
+        "frequency": 0.052
+      },
+      {
+        "support_id": "ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(prmtan_neped,cerqtit6)|PROD(prmtan_neped,ece39)|RATIO(cerqrott12,cerqtit10)|RATIO(cerqtit8,ip)|RATIO(ip,bt)|RATIO(ip,ece22)|RATIO(pinj_33r,cerqtit10)|RATIO(prmtan_neped,cerqtit10)|RECIP(bt)",
+        "frequency": 0.039
+      },
+      {
+        "support_id": "ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,cerqtit6)|PROD(prmtan_neped,cerqtit6)|PROD(prmtan_neped,ece39)|RATIO(cerqrott12,cerqtit10)|RATIO(ip,bt)|RATIO(ip,ece22)|RATIO(pinj_33r,cerqtit10)|RATIO(prmtan_neped,cerqtit10)|RECIP(bt)",
+        "frequency": 0.034
+      },
+      {
+        "support_id": "ID(pcdiamag3)|PROD(ece37,ece39)|PROD(gasa,ece1)|PROD(ip,prmtan_neped)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,ece39)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(gasa,ece6)|RATIO(ip,bt)|RATIO(ip,ece22)",
+        "frequency": 0.03
+      },
+      {
+        "support_id": "ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(bt,ece39)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(cerqtit10)|RECIP(prmtan_neped)",
+        "frequency": 0.03
+      },
+      {
+        "support_id": "ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,ece1)|PROD(prmtan_neped,cerqtit6)|PROD(prmtan_neped,ece39)|RATIO(cerqrott12,cerqtit10)|RATIO(ip,bt)|RATIO(ip,ece22)|RATIO(pinj_33r,cerqtit10)|RATIO(prmtan_neped,cerqtit10)|RECIP(bt)",
+        "frequency": 0.023
+      },
+      {
+        "support_id": "ID(pcdiamag3)|PROD(fs03da,cerqtit11)|PROD(gasa,ece1)|PROD(ip,prmtan_neped)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,ece39)|RATIO(ece25,ece39)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RATIO(pinj,ece37)|RECIP(bt)|RECIP(cerqtit10)",
+        "frequency": 0.022
+      },
+      {
+        "support_id": "ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(bt)|RECIP(cerqtit10)|RECIP(prmtan_neped)",
+        "frequency": 0.02
+      }
+    ],
+    "fold_perturbations": {
+      "omit_A": {
+        "winner": "ID(pcdiamag3)|ID(prmtan_neped)|LEVEL_RATE(pinj_33r|ip)|PROD(fs03da,cerqtit11)|PROD(gasa,ece1)|PROD(ip,prmtan_neped)|PROD(prmtan_neped,ece39)|RATIO(ece25,ece39)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(bt)|RECIP(cerqtit10)",
+        "winner_idx": 148456,
+        "E1": 941,
+        "E2": 1,
+        "E3": 1,
+        "E4": 1
+      },
+      "omit_B": {
+        "winner": "ID(cerqtit6)|ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(cerqtit10)|RECIP(prmtan_neped)",
+        "winner_idx": 148103,
+        "E1": 455,
+        "E2": 1,
+        "E3": 1,
+        "E4": 1
+      },
+      "omit_C": {
+        "winner": "ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(prmtan_neped,cerqtit6)|PROD(prmtan_neped,ece39)|RATIO(cerqrott12,cerqtit10)|RATIO(cerqtit8,ece22)|RATIO(ip,bt)|RATIO(ip,ece22)|RATIO(pinj_33r,cerqtit10)|RATIO(prmtan_neped,cerqtit10)|RECIP(bt)",
+        "winner_idx": 148307,
+        "E1": 1243,
+        "E2": 1,
+        "E3": 1,
+        "E4": 1
+      }
+    },
+    "BOOT_SELECTION_FREQ": {
+      "ID(cerqtit6)|ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(cerqtit10)|RECIP(prmtan_neped)": 0.093
+    },
+    "FOLD_SELECTION_FREQ": {
+      "ID(cerqtit6)|ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(cerqtit10)|RECIP(prmtan_neped)": 0.3333333333333333
+    },
+    "pass_fail_threshold": null,
+    "replicate_survivor_sizes": {
+      "E1": {
+        "min": 1,
+        "max": 4336,
+        "mean": 522.4
+      },
+      "E2": {
+        "min": 1,
+        "max": 1,
+        "mean": 1.0
+      },
+      "E3": {
+        "min": 1,
+        "max": 1
+      },
+      "E4": {
+        "min": 1,
+        "max": 1
+      }
+    },
+    "runtime_seconds": 21.0,
+    "conditioning_memoized_candidates": 1,
+    "active_terms_memoized_candidates": 1
+  },
+  "reproducibility": {
+    "rng_stream_identical_on_reseed": true,
+    "independent_recheck_replicates": 11,
+    "recheck_winners_identical": true,
+    "winners_sha256": "918166f25a519fe9049898e87035964f5bf00c78e8b6ed77393b905a777a9ef5"
+  },
+  "E5": 1,
+  "C_dev_star": "ID(cerqtit6)|ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(cerqtit10)|RECIP(prmtan_neped)",
+  "C_dev_star_index": 148103
+}

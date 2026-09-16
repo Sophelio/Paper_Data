@@ -1,0 +1,87 @@
+{
+  "lock_id": "DEVELOPMENT_REPRESENTATION_LOCK_V1",
+  "locked_utc": "2026-09-05T20:22:16.534197+00:00",
+  "purpose": "fix the selected representation BEFORE any development-side baseline hyperparameter selection, so baseline behaviour cannot feed back into representation selection",
+  "selected_support_id": "ID(cerqtit6)|ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(cerqtit10)|RECIP(prmtan_neped)",
+  "selected_support_size": 12,
+  "canonical_coordinate_ids": [
+    "ID(cerqtit6)",
+    "ID(pcdiamag3)",
+    "ID(prmtan_neped)",
+    "PROD(ece37,ece39)",
+    "PROD(gasa,gasa)",
+    "PROD(pinj,cerqrott6)",
+    "PROD(prmtan_neped,prmtan_neped)",
+    "RATIO(ece21,prmtan_neped)",
+    "RATIO(fs03da,prmtan_neped)",
+    "RATIO(ip,ece22)",
+    "RECIP(cerqtit10)",
+    "RECIP(prmtan_neped)"
+  ],
+  "target": "density",
+  "estimator_id": "DEVELOPMENT_RELATION_OLS_V1",
+  "preprocessing": "calibration-only standardization; sd<=0 divisor 1.0; no epsilon",
+  "validation_block_geometry": {
+    "A": {
+      "calibration": [
+        0.0,
+        0.4
+      ],
+      "evaluation": [
+        0.4,
+        0.5
+      ]
+    },
+    "B": {
+      "calibration": [
+        0.0,
+        0.6
+      ],
+      "evaluation": [
+        0.6,
+        0.7
+      ]
+    },
+    "C": {
+      "calibration": [
+        0.0,
+        0.8
+      ],
+      "evaluation": [
+        0.8,
+        0.9
+      ]
+    },
+    "protection_model": "BLOCK_LOCAL_PROTECTION"
+  },
+  "utility_policy_id": "U_REC_OPERATIONAL_V1",
+  "selection_provenance": {
+    "E0": 162845,
+    "E1": 1055,
+    "E2": 1,
+    "E3": 1,
+    "E4": 1,
+    "E5": 1,
+    "binding_rank": 2,
+    "binding_criterion": "Rank 2 SHOT_P90 exact minimum among BLOCK_WORST-equivalent survivors",
+    "ranks_3_4_5_non_binding_because_E2_was_a_singleton": true,
+    "selected_within": "AHAT_REC_DENSITY_ONE_SEED_V2",
+    "global_optimality_claim": false
+  },
+  "artifact_hashes": {
+    "SELECTED_REPRESENTATION.json": "800ac414aa16bbad1599a8512fcb8b2c4c9cf1e0adebdb8f9a314a78bb900337",
+    "RELATIONAL_ESTIMATOR_CONFIG.json": "c35ddb25a0cb619c824d50517a8a7a02679093b8cdad792fe46be8b3331025e3",
+    "utility_elimination_ledger.csv": "487707b9e7f92baaa7086700a71275c5f1184e7cba187ea311d3e7adc4154836",
+    "utility_survivor_sets.csv": "14d7394bd60e18709005e128a84a2680f2e1cd39021262ccb27a1686a45c85de"
+  },
+  "support_may_change_after_this_lock": false,
+  "baseline_tuning_permitted_after_this_lock": true,
+  "no_baseline_had_been_fitted_before_this_lock": true,
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "lock_sha256": "c7c6a36b86766f3cfaf1411dae5395a2c2d42844369f3eadaa88dbd8556d04d0"
+}

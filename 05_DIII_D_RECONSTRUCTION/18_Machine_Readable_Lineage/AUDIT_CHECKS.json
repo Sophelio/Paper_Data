@@ -1,0 +1,203 @@
+{
+  "record_id": "S7_AUTOMATED_AUDIT_V1",
+  "generated_utc": "2026-09-09T21:23:03.929355+00:00",
+  "verdict": "S7_AUDIT_PASS",
+  "n_pass": 38,
+  "n_findings": 0,
+  "findings": [],
+  "passes": [
+    {
+      "level": "PASS",
+      "id": "structure/top_level",
+      "msg": "all 17 required top-level files present"
+    },
+    {
+      "level": "PASS",
+      "id": "structure/stages",
+      "msg": "all 21 canonical stages expose MANIFEST.json and index.html"
+    },
+    {
+      "level": "PASS",
+      "id": "freeze/all_stages",
+      "msg": "527/527 frozen artifacts across all canonical stages reproduce byte-for-byte"
+    },
+    {
+      "level": "PASS",
+      "id": "freeze/S7.1",
+      "msg": "9/9 S7.1 named hashes reproduce (7 file-byte, 2 DataFrame-content)"
+    },
+    {
+      "level": "PASS",
+      "id": "numbers/object",
+      "msg": "62 discharges, 95 signals"
+    },
+    {
+      "level": "PASS",
+      "id": "numbers/boundary",
+      "msg": "78 admissible predictors, target `density`, 17 excluded"
+    },
+    {
+      "level": "PASS",
+      "id": "numbers/target_excluded",
+      "msg": "the target is excluded from the explanatory boundary"
+    },
+    {
+      "level": "PASS",
+      "id": "numbers/universe",
+      "msg": "10,778 admissible atoms"
+    },
+    {
+      "level": "PASS",
+      "id": "numbers/frontier",
+      "msg": "Epoch-1 explored frontier 162,845 supports"
+    },
+    {
+      "level": "PASS",
+      "id": "numbers/K2_policy",
+      "msg": "tau = 1, no epsilon, degenerate case an explicit status, target-blind"
+    },
+    {
+      "level": "PASS",
+      "id": "numbers/qualified_basis",
+      "msg": "C_E2_FULL_DOMAIN: 3,451 atoms, exact constructor counts, hash matches E2.0A"
+    },
+    {
+      "level": "PASS",
+      "id": "numbers/folds",
+      "msg": "six deterministic folds over 62 discharges; assignment reproduces from the declared target-blind rule"
+    },
+    {
+      "level": "PASS",
+      "id": "numbers/E2.1_V3",
+      "msg": "62 out-of-fold discharges; Delta_0 -0.764489, Delta_1 -0.027308 recomputed from the per-discharge table; V3 PASS"
+    },
+    {
+      "level": "PASS",
+      "id": "numbers/E2.1_era",
+      "msg": "era split reproduces: earlier n=35 +0.0076 (practical tie), later n=27 -0.0726 (material improvement)"
+    },
+    {
+      "level": "PASS",
+      "id": "numbers/V_RANGE",
+      "msg": "V-RANGE: 2,232 held-out checks, 0 failures"
+    },
+    {
+      "level": "PASS",
+      "id": "numbers/no_discharge_above_1",
+      "msg": "no held-out discharge exceeds NRMSE 1.0"
+    },
+    {
+      "level": "PASS",
+      "id": "numbers/support_non_uniqueness",
+      "msg": "six supports, all size 12, none identical, mean pairwise Jaccard 0.285244"
+    },
+    {
+      "level": "PASS",
+      "id": "numbers/support_hashes",
+      "msg": "every fold support id hashes to its recorded sha256"
+    },
+    {
+      "level": "PASS",
+      "id": "numbers/qdesc_pooled_rmse",
+      "msg": "q_desc pooled RMSE 0.05758467247445343 from discharge-specific coefficients"
+    },
+    {
+      "level": "PASS",
+      "id": "closure/branch",
+      "msg": "q_rec branch closed; FORMAL_PASS and CLEAN_DEMO_NOT_MET carried separately"
+    },
+    {
+      "level": "PASS",
+      "id": "closure/descriptive_status",
+      "msg": "E2.2 frozen after E2.1 and flagged descriptive-only, non-validating, non-canonical"
+    },
+    {
+      "level": "PASS",
+      "id": "closure/stage_graph",
+      "msg": "stage dependency graph is closed over 21 canonical stages"
+    },
+    {
+      "level": "PASS",
+      "id": "language/agent_authorship",
+      "msg": "no machine-authorship attribution anywhere in canonical S7"
+    },
+    {
+      "level": "PASS",
+      "id": "language/retired_claims",
+      "msg": "no retired verdict or retired-branch identifier is presented as active"
+    },
+    {
+      "level": "PASS",
+      "id": "semantics/no_external_validation_claim",
+      "msg": "no active document describes Epoch 2 or QREC-B2 as external or untouched validation"
+    },
+    {
+      "level": "PASS",
+      "id": "semantics/K2_case_B",
+      "msg": "S7.K2 classified as Case B, MINIMAL_P_ONLY, operational epoch advanced inside QREC-B1, no descendant branch created"
+    },
+    {
+      "level": "PASS",
+      "id": "semantics/V_RANGE_not_V_q_change",
+      "msg": "V-RANGE is presented as an operational qualification check of the revised P_rec, not as a change to the claim-defining V_rec"
+    },
+    {
+      "level": "PASS",
+      "id": "semantics/descendant_branch",
+      "msg": "the cross-fitted Epoch-2 result is classified as descendant claim branch QREC-B2, constituted at S7.E2.0 with parent QREC-B1"
+    },
+    {
+      "level": "PASS",
+      "id": "semantics/same_task",
+      "msg": "q_rec is the same scientific task across every claim branch and epoch; no new q was required"
+    },
+    {
+      "level": "PASS",
+      "id": "semantics/vsurf_not_new_q",
+      "msg": "vsurf -> density is classified as a Case-A correction of the target INSTANCE; task and claim branch unchanged"
+    },
+    {
+      "level": "PASS",
+      "id": "semantics/no_overbroad_rule",
+      "msg": "no active document asserts that every material change creates a new q, nor that every reconciliation is automatically same-branch"
+    },
+    {
+      "level": "PASS",
+      "id": "semantics/lineage_closure",
+      "msg": "branch lineage closure is internally consistent, and the frozen closure fields were not modified"
+    },
+    {
+      "level": "PASS",
+      "id": "semantics/epoch_vs_version",
+      "msg": "contract version change is distinguished from operational-epoch advance; S7.K2 is the sole epoch advance, S7.2C / S7.7R / S7.E2.0A are versioned corrections, QREC-B2 has one branch-local epoch"
+    },
+    {
+      "level": "PASS",
+      "id": "semantics/Omega_star_not_claim_core",
+      "msg": "Omega_rec (intended claim domain) is unchanged and V_rec is the sole claim-defining revision; Omega*_rec is recorded as part of Q*_q, not of K_q^claim"
+    },
+    {
+      "level": "PASS",
+      "id": "semantics/B1_failure_wording",
+      "msg": "QREC-B1 is described as a negative qualification outcome, never as a positive qualified result"
+    },
+    {
+      "level": "PASS",
+      "id": "semantics/integrity_claims",
+      "msg": "the semantics pass asserts zero frozen-artifact edits, zero reruns and zero changed results, consistent with the freeze sweep above"
+    },
+    {
+      "level": "PASS",
+      "id": "html/links",
+      "msg": "every link in every generated page resolves locally; no external dependency"
+    },
+    {
+      "level": "PASS",
+      "id": "figures/provenance",
+      "msg": "all 5 figures declare a source artifact and an existing script"
+    }
+  ],
+  "environment": {
+    "python": "3.13.5"
+  }
+}

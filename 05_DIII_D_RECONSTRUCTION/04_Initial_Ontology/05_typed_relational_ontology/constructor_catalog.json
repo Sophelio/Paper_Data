@@ -1,0 +1,121 @@
+{
+  "catalogue_id": "LAMBDA_REC_V1",
+  "max_constructor_depth": 1,
+  "constructors_operate_on": "PRIMITIVES ONLY; no constructor may consume another depth-1 constructed coordinate",
+  "families": [
+    {
+      "id": "C0",
+      "name": "primitive_level",
+      "symbol": "ID(x_i)",
+      "depth": 0,
+      "arity": 1,
+      "signature": "ID(signal_id)",
+      "type_rule": "output type, unit, provenance, temporal and flag metadata are inherited unchanged",
+      "operand_eligibility": "all 78 primitives, including the two UNCALIBRATED_SIGNAL levels",
+      "n_eligible_operands": 78,
+      "notes": "a representation containing only C0 coordinates is an admissible special case, so the raw-coordinate comparator is NESTED INSIDE the SIR ontology"
+    },
+    {
+      "id": "C1",
+      "name": "first_temporal_derivative",
+      "symbol": "d x_i / dt",
+      "depth": 1,
+      "arity": 1,
+      "signature": "DOT(signal_id)",
+      "type_rule": "[x_i] -> [x_i] / s",
+      "derivative_parameter": "physical time t in seconds",
+      "derivative_wrt_tau": "FORBIDDEN",
+      "numerical_realization": "FD2_PHYSICAL_TIME_V1",
+      "operand_eligibility": "primitives that are neither uncalibrated nor NUMERICAL_SENSITIVITY_ONLY",
+      "n_eligible_operands": 70,
+      "sensitivity_only_operands": [
+        "fs03da",
+        "fs04",
+        "fs04da",
+        "fs05da",
+        "prmtan_neped",
+        "prmtan_teped"
+      ],
+      "notes": "second derivatives are excluded; no derivative of the target is an explanatory coordinate"
+    },
+    {
+      "id": "C2",
+      "name": "pairwise_product",
+      "symbol": "x_i x_j",
+      "depth": 1,
+      "arity": 2,
+      "signature": "PROD(i,j) with i <= j by frozen inventory index",
+      "type_rule": "[x_i x_j] = [x_i][x_j]",
+      "commutative": true,
+      "self_product_allowed": true,
+      "operands_need_identical_dimensions": false,
+      "operand_eligibility": "dimensionally typed primitives only (uncalibrated excluded)",
+      "n_eligible_operands": 76,
+      "notes": "canonical ordering i <= j prevents S7.6 instantiating PROD(i,j) and PROD(j,i) as distinct coordinates; the output carries the compound dimension explicitly"
+    },
+    {
+      "id": "C3",
+      "name": "pairwise_ratio",
+      "symbol": "x_i / x_j",
+      "depth": 1,
+      "arity": 2,
+      "signature": "RATIO(i,j), i != j",
+      "type_rule": "[x_i / x_j] = [x_i] / [x_j]",
+      "directional": true,
+      "partial_map": true,
+      "mathematical_domain": "x_j != 0",
+      "domain_predicate": "DOMAIN_DENOMINATOR_NONZERO",
+      "self_ratio_excluded": "x_i / x_i is the trivial constant 1",
+      "operand_eligibility": "dimensionally typed primitives only",
+      "n_eligible_operands": 76,
+      "prohibited_modifications": [
+        "denominator shift",
+        "additive epsilon",
+        "clipping",
+        "bounded reciprocal transform"
+      ],
+      "notes": "those modifications are DIFFERENT coordinate constructions and were not frozen as primary constructors. Numerical support and conditioning of instantiated ratios are handled in S7.6 and S7.11 WITHOUT changing the symbolic coordinate."
+    },
+    {
+      "id": "C4",
+      "name": "trajectory_relational_derivative",
+      "symbol": "D_g^t f = (df/dt) / (dg/dt)",
+      "manuscript_terminology": "trajectory-relational derivative; abbreviated 'phase derivative'",
+      "depth": 1,
+      "arity": 2,
+      "signature": "PHASE(i|j) meaning D_{x_j} x_i",
+      "type_rule": "[D_g f] = [f] / [g]  (time dimensions cancel)",
+      "directional": true,
+      "partial_map": true,
+      "mathematical_domain": "dg/dt != 0",
+      "domain_predicate": "DOMAIN_DENOMINATOR_RATE_NONZERO",
+      "self_excluded": "D_f f is the trivial constant 1 where defined",
+      "operand_eligibility": "both operands must be eligible for PRIMARY temporal differentiation",
+      "n_eligible_operands": 70,
+      "numerical_realization": "FD2_PHYSICAL_TIME_V1",
+      "does_NOT_imply": [
+        "f = F(g)",
+        "causality",
+        "oscillatory phase",
+        "a global functional dependency"
+      ],
+      "prohibited_variants": [
+        "reference-shifted phase derivative",
+        "bounded phase derivative",
+        "sensitivity-centered phase derivative"
+      ],
+      "notes": "those variants are related but distinct constructions and require separate explicit qualification if ever studied"
+    }
+  ],
+  "symbolic_upper_bounds": {
+    "note": "symbolic upper bounds for audit. NO coordinate instance is enumerated here; instantiation belongs to S7.6.",
+    "C0_primitive_level": 78,
+    "C1_first_temporal_derivative_primary": 70,
+    "C1_first_temporal_derivative_sensitivity_only": 6,
+    "C2_pairwise_product_incl_self": 2926,
+    "C3_pairwise_ratio_directional": 5700,
+    "C4_trajectory_relational_derivative_directional": 4830,
+    "primary_total": 13604,
+    "sensitivity_only_total": 6
+  }
+}

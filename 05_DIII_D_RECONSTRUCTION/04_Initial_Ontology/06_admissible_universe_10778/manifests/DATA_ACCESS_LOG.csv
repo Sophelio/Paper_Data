@@ -1,0 +1,21 @@
+stage,shot_id,development_or_external,predictor_signals_read,target_values_read,reason,timestamp
+S7.6B,160715,development,78,0,"atomic coordinate admissibility (classes D,E) on calibration intervals",2026-09-04T06:07:52.549341+00:00
+S7.6B,160720,development,78,0,"atomic coordinate admissibility (classes D,E) on calibration intervals",2026-09-04T06:07:52.717406+00:00
+S7.6B,161138,development,78,0,"atomic coordinate admissibility (classes D,E) on calibration intervals",2026-09-04T06:07:52.879226+00:00
+S7.6B,165022,development,78,0,"atomic coordinate admissibility (classes D,E) on calibration intervals",2026-09-04T06:07:53.035832+00:00
+S7.6B,165028,development,78,0,"atomic coordinate admissibility (classes D,E) on calibration intervals",2026-09-04T06:07:53.182546+00:00
+S7.6B,165042,development,78,0,"atomic coordinate admissibility (classes D,E) on calibration intervals",2026-09-04T06:07:53.361141+00:00
+S7.6B,165861,development,78,0,"atomic coordinate admissibility (classes D,E) on calibration intervals",2026-09-04T06:07:53.602436+00:00
+S7.6B,170396,development,78,0,"atomic coordinate admissibility (classes D,E) on calibration intervals",2026-09-04T06:07:53.747044+00:00
+S7.6B,187017,development,78,0,"atomic coordinate admissibility (classes D,E) on calibration intervals",2026-09-04T06:07:53.936247+00:00
+S7.6B,187020,development,78,0,"atomic coordinate admissibility (classes D,E) on calibration intervals",2026-09-04T06:07:54.155100+00:00
+S7.6B,187024,development,78,0,"atomic coordinate admissibility (classes D,E) on calibration intervals",2026-09-04T06:07:54.373954+00:00
+S7.6B,189647,development,78,0,"atomic coordinate admissibility (classes D,E) on calibration intervals",2026-09-04T06:07:54.539573+00:00
+S7.6B,189651,development,78,0,"atomic coordinate admissibility (classes D,E) on calibration intervals",2026-09-04T06:07:54.690235+00:00
+S7.6B,195264,development,78,0,"atomic coordinate admissibility (classes D,E) on calibration intervals",2026-09-04T06:07:54.915000+00:00
+S7.6B,195267,development,78,0,"atomic coordinate admissibility (classes D,E) on calibration intervals",2026-09-04T06:07:55.171000+00:00
+S7.6B,195273,development,78,0,"atomic coordinate admissibility (classes D,E) on calibration intervals",2026-09-04T06:07:55.356396+00:00
+S7.6B,195638,development,78,0,"atomic coordinate admissibility (classes D,E) on calibration intervals",2026-09-04T06:07:55.526657+00:00
+S7.6B,195647,development,78,0,"atomic coordinate admissibility (classes D,E) on calibration intervals",2026-09-04T06:07:55.688168+00:00
+S7.6B,195650,development,78,0,"atomic coordinate admissibility (classes D,E) on calibration intervals",2026-09-04T06:07:55.851973+00:00
+S7.6B,195655,development,78,0,"atomic coordinate admissibility (classes D,E) on calibration intervals",2026-09-04T06:07:56.023330+00:00

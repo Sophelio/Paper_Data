@@ -1,0 +1,90 @@
+{
+  "record_id": "SEARCH_BUDGET_BLOCK_V1",
+  "verdict": "SEARCH_BUDGET_REQUIRES_HUMAN_REVIEW",
+  "stage_outcome": "BLOCKED_SEARCH_BUDGET",
+  "evaluated_utc": "2026-09-05T00:04:47.060991+00:00",
+  "computed_from": "METADATA_ONLY",
+  "density_values_opened": 0,
+  "external_values_opened": 0,
+  "why": "Section 16 requires the deterministic policy's projected candidate support evaluations to be computed from metadata before any target value is opened, and requires an unconditional STOP if the projection exceeds MAX_SUPPORT_EVALUATIONS = 300,000. The frozen policy of sections 12-15 projects 363,900 evaluations at maximum and 346,484 at a strict lower bound. Both exceed the budget.",
+  "arithmetic": {
+    "active_strata": 127,
+    "strata_represented_in_shortlist": 127,
+    "seeds_main_lane": 252,
+    "seeds_raw_only_lane": 14,
+    "growth_steps_per_seed": 11,
+    "main_lane_max": "252 seeds x 11 steps x 127 proposals = 352044",
+    "raw_lane_max": "14 seeds x 11 steps x 7 proposals = 1078",
+    "atomic_scoring": 10778,
+    "total_max": 363900,
+    "total_strict_lower_bound": 346484,
+    "budget": 300000,
+    "overrun_max": 63900,
+    "overrun_strict_minimum": 46484
+  },
+  "not_a_bound_artifact": "the STRICT LOWER BOUND also overruns, by 46,484. The lower bound assumes the most favourable possible stratum exhaustion, namely that at proposal time for size m every one of the m-1 atoms already in the support has exhausted a distinct stratum. No execution of this policy can come in under 300,000.",
+  "what_was_not_done": [
+    "the policy was NOT truncated",
+    "the policy was NOT changed to fit the budget",
+    "no seed count, cap, stratum or support bound was adjusted",
+    "no admissible coordinate was pruned",
+    "no density value was opened",
+    "no atom was scored"
+  ],
+  "remedies_computed_not_chosen": [
+    {
+      "option": "SEEDS_PER_STRATUM = 1",
+      "lever": "section 14 seed rule",
+      "seeds_main": 127,
+      "seeds_raw_only": 7,
+      "max_projected": 188736,
+      "strict_lower_bound": 179962,
+      "fits_300000": true,
+      "cost": "none to coverage: every stratum still receives a starting path, but only one instead of two, so a stratum whose best atom leads into a poor basin has no second independent start"
+    },
+    {
+      "option": "SEEDS_PER_STRATUM = 2",
+      "lever": "section 14 seed rule",
+      "seeds_main": 252,
+      "seeds_raw_only": 14,
+      "max_projected": 363900,
+      "strict_lower_bound": 346484,
+      "fits_300000": false,
+      "cost": "this is the frozen policy"
+    },
+    {
+      "option": "raise MAX_SUPPORT_EVALUATIONS to >= 363,900",
+      "lever": "section 16 computational budget",
+      "seeds_main": 252,
+      "seeds_raw_only": 14,
+      "max_projected": 363900,
+      "strict_lower_bound": 346484,
+      "fits_300000": false,
+      "cost": "no change to search semantics at all; purely a larger computational allowance. Must be re-frozen prospectively, before any density value is opened."
+    }
+  ],
+  "non_levers": [
+    {
+      "candidate": "lower MAX_ATOMS_PER_CONSTRUCTOR_FOR_EXPANSION below 96",
+      "why_it_does_not_help": "proposals per growth step equal the number of STRATA represented in the shortlist, not the number of shortlisted atoms. Round 1 of the round-robin already gives every stratum one slot, so any cap at or above 35 (the largest per-constructor stratum count) yields the same 127 proposals per step. A cap below a constructor's stratum count would instead trip the section 13 STOP.",
+      "usable_lever": false
+    },
+    {
+      "candidate": "reduce the support bound below 12",
+      "why_it_does_not_help": "forbidden by section 0; B_rec is frozen",
+      "usable_lever": false
+    },
+    {
+      "candidate": "deduplicate supports reached by multiple paths",
+      "why_it_does_not_help": "section 18 deduplication governs the REGISTRY, not the number of proxy evaluations proposed. More importantly, which supports coincide across paths depends on target-dependent greedy choices, so a dedup-based projection is not computable from metadata and cannot certify the budget BEFORE target access, which is exactly what section 16 requires.",
+      "usable_lever": false
+    },
+    {
+      "candidate": "prune strata, atoms, or constructor families",
+      "why_it_does_not_help": "would delete admissible coordinates to fit a computational allowance, inverting ADMISSIBLE != PRIORITIZED and contradicting section 5's explicit prohibition",
+      "usable_lever": false
+    }
+  ],
+  "decision_belongs_to": "human review",
+  "constraint_on_any_remedy": "whichever remedy is chosen must be re-frozen PROSPECTIVELY, before any density value is opened, and the new SEARCH_POLICY_PREVALUE hash recorded. Adjusting the budget or the policy after target outcomes are seen is forbidden by sections 13 and 16 and would make the stage SEARCH_POLICY_CONTAMINATED."
+}

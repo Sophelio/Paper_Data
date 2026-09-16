@@ -1,0 +1,7 @@
+fold,fold_support_sha256,n_shared,jaccard,shared_coordinates
+0,4654cd92613002c10ee9d97a480ae6a04dd9682d34fa802ef630d3d60258c8ac,4,0.2,"ID(pcdiamag3)|RATIO(ece21,cerqtit10)|RATIO(fs03da,cerqtit3)|RECIP(cerqtit10)"
+1,c3206098d6177f64aeac55049feda714d904d155d39e382db3b4cc9683136adb,8,0.5,"ID(pcdiamag3)|PROD(ece37,ece39)|RATIO(ece21,cerqtit10)|RATIO(fs03da,cerqtit3)|RATIO(ip,ece39)|RATIO(prmtan_neped,ece38)|RATIO(tinj,ece20)|RECIP(cerqtit10)"
+2,08fd3481eeea2e70375c7c346c02b32195501349da0250dbe900a2910e35781d,4,0.2,"ID(pcdiamag3)|RATIO(ece21,cerqtit10)|RATIO(ip,ece39)|RATIO(tinj,ece20)"
+3,e69c6efc20b77d1cd2b1cb87d167621fa8be08b597e3cff805b4360a3839c44a,6,0.3333333333333333,"ID(pcdiamag3)|PROD(ece37,ece39)|RATIO(ece21,cerqtit10)|RATIO(pinj_33r,cerqtit10)|RATIO(tinj,ece20)|RECIP(cerqtit10)"
+4,688791d4cb56a0ee96019a96ff99d7a66bd1027a41e65b91f4fe7364d4dc94af,8,0.5,"ID(pcdiamag3)|PROD(ece37,ece39)|RATIO(ece21,cerqtit10)|RATIO(fs03da,cerqtit3)|RATIO(ip,ece39)|RATIO(pinj_33r,cerqtit10)|RATIO(tinj,ece20)|RECIP(cerqtit10)"
+5,358854514ab519b94437227dc2ab8fe4c2a435ccbc2c355c1cdc8afc88ecf1be,3,0.14285714285714285,"ID(pcdiamag3)|RATIO(ece21,cerqtit10)|RATIO(tinj,ece20)"

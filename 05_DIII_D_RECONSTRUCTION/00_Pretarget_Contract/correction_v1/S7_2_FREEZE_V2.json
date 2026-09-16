@@ -1,0 +1,71 @@
+{
+  "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V2",
+  "timestamp_utc": "2026-09-02T23:24:43.641244+00:00",
+  "supersedes_freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V1",
+  "parent_s7_1_freeze_id": "D3D-SIR-S7.1-OBSERVATIONAL-OBJECT-FINAL-V1",
+  "v1_freeze_file_sha256": "5e65d87825024d2e62b0db8fab8add518f364110e41f3a63f61571c80cc3102f",
+  "v1_K_REC_PRE_sha256": "7bcc35aff40c8e9ec18301b2adb1071aeffffeecc950f97f3ed9e496d32ace28",
+  "v1_verification_sha256": "ca736c4695ced27c0cb6507b4962dbc6b46fb272ba602578430cdcab6de8bd86",
+  "correction_report_sha256": "30bca5850bbda93c811ca9b8b90997349f9496ad6d664ef8cc08bc07c15ed13d",
+  "contract_v2_md_sha256": "c7a5be8a44750730503928816875be8e9ee1e22299eeef78d9b3652cd87970f8",
+  "decision_ledger_sha256": "97b91014e3b66f5ade6373e49482cfe5f36077ca6f224d5841c3e140f6c30351",
+  "target_selection_rule_md_sha256": "2b988067b3f87f32ec075ce16c855e243282eb7f769f4577afd62d083387d1de",
+  "K_REC_PRE_V2_sha256": "100b2a1cfc19bb97d7b7dbb8c874052ea1567d281205c86a82521733a9356a17",
+  "target_selection_schema_sha256": "09341740a1db8104b449578d7d154fa7b100a3b0aa981eef3c0d540eb56ee3d2",
+  "metric_and_gate_definitions_sha256": "18efb0db67ae0f0d6f36a7dff7e262374af831c157c7cf84ab982dc0991d5ccb",
+  "superseded_clauses_sha256": "5a0202342b1bb2331bcf177e2b74b9f3598fae10522eedf241cbe20e7c7982ee",
+  "environment": {
+    "python": "3.13.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "hash_method": "sha256 over raw file bytes; self-referential files excluded by construction",
+  "self_referential_excluded": [
+    "S7_2C_ACCEPTANCE_CHECKS.json",
+    "S7_2_ACCEPTANCE_CHECKS.json",
+    "S7_2_FREEZE.json",
+    "S7_2_FREEZE_V2.json"
+  ],
+  "all_artifact_hashes": {
+    "K_REC_PRE_V2.json": "100b2a1cfc19bb97d7b7dbb8c874052ea1567d281205c86a82521733a9356a17",
+    "manifests/SUPERSEDED_CLAUSES.csv": "5a0202342b1bb2331bcf177e2b74b9f3598fae10522eedf241cbe20e7c7982ee",
+    "manifests/V1_FREEZE_VERIFICATION.json": "ca736c4695ced27c0cb6507b4962dbc6b46fb272ba602578430cdcab6de8bd86",
+    "metric_and_gate_definitions.json": "18efb0db67ae0f0d6f36a7dff7e262374af831c157c7cf84ab982dc0991d5ccb",
+    "S7_2C_CONTRACT_V2.md": "c7a5be8a44750730503928816875be8e9ee1e22299eeef78d9b3652cd87970f8",
+    "S7_2C_CORRECTION_REPORT.md": "30bca5850bbda93c811ca9b8b90997349f9496ad6d664ef8cc08bc07c15ed13d",
+    "S7_2C_DECISION_LEDGER.md": "97b91014e3b66f5ade6373e49482cfe5f36077ca6f224d5841c3e140f6c30351",
+    "scripts/build_s7_2c.py": "c2ab5887353b945c51cca02e9c6deaabbf14fdb2e83e9a2be97df795e1fefb76",
+    "TARGET_SELECTION_RULE.md": "2b988067b3f87f32ec075ce16c855e243282eb7f769f4577afd62d083387d1de",
+    "target_selection_schema.json": "09341740a1db8104b449578d7d154fa7b100a3b0aa981eef3c0d540eb56ee3d2"
+  },
+  "n_artifacts": 10,
+  "n_superseded_clauses": 9,
+  "acceptance_checks": "24/24",
+  "n_markdown_files": 4,
+  "component_status": {
+    "q_rec": "FROZEN",
+    "I_rec": "PARTIALLY_FROZEN",
+    "P_rec": "PARTIALLY_FROZEN",
+    "B_rec": "PARTIALLY_FROZEN",
+    "H_rec": "FROZEN",
+    "U_rec": "FROZEN",
+    "V_rec": "PARTIALLY_FROZEN",
+    "Omega_rec": "PARTIALLY_FROZEN"
+  },
+  "gate": {
+    "target_selected": false,
+    "targets_ranked": false,
+    "sir_run": false,
+    "regression_run": false,
+    "coordinates_generated": false,
+    "G_rec_constructed": false,
+    "A_rec_enumerated": false,
+    "Ahat_rec_searched": false,
+    "performance_inspected": false,
+    "external_signal_values_inspected": false,
+    "s7_3_started": false,
+    "signal_values_inspected": false,
+    "s7_2c_ranked_targets": false
+  },
+  "status": "FROZEN_READY_FOR_S7.3",
+  "next_stage": "S7.3 - NOT AUTHORISED"
+}

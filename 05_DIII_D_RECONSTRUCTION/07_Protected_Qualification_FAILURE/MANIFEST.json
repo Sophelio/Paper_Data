@@ -1,0 +1,54 @@
+{
+  "record_id": "S7_STAGE_MANIFEST_V1",
+  "generated_utc": "2026-09-08T00:51:17.508741+00:00",
+  "stage_id": "S7.10",
+  "title": "External qualification - EPOCH 1 FAILURE",
+  "directory": "10_external_validation",
+  "scientific_task_id": "q_rec",
+  "claim_branch": "QREC-B1",
+  "claim_branch_role": "MEMBER",
+  "parent_claim_branch": null,
+  "operational_epoch": 1,
+  "revision_level": "NONE",
+  "branch": "q_rec",
+  "status": "CANONICAL_NEGATIVE_RESULT",
+  "sir_architecture_mapping": [
+    "Q_q",
+    "delta"
+  ],
+  "scientific_question": "Does the frozen representation qualify on the sealed external cohort?",
+  "operation": "42 sealed external discharges opened for the first time; the frozen model and six baselines evaluated; gates applied.",
+  "verdict": "PRIMARY_EXTERNAL_GATE_FAILURE. NO_QUALIFIED_NONTRIVIAL_STRUCTURAL_TRANSFER. V3 FAIL, V6 FAIL, Omega_rec EMPTY.",
+  "parent_stages": [
+    "S7.9"
+  ],
+  "child_stages": [
+    "S7.11"
+  ],
+  "key_numbers": {
+    "REL_mean": 0.7423647781201324,
+    "B1_mean": 0.21027421611172853,
+    "Delta_0": -0.18009502685176143,
+    "Delta_1": 0.5320905620084037,
+    "shot_187019": 11.952633,
+    "shot_187022": 11.766572,
+    "n_above_1": 2
+  },
+  "notes": "This negative result is scientific evidence and is preserved prominently. Nothing was repaired after the outcome was seen.",
+  "governing_freeze": {
+    "path": "S7_10_FREEZE.json",
+    "freeze_id": "D3D-SIR-S7.10-EXTERNAL-VALIDATION-AND-GATE-EVALUATION-V1",
+    "sha256": "8ea2062f0fc38fbf24e3b9d6477cace1d0fcd9a54e746e66c6e428d01437db97",
+    "authoritative": true,
+    "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+  },
+  "executables": [
+    "scripts/s7_10_a_preflight.py",
+    "scripts/s7_10_b_external_eval.py",
+    "scripts/s7_10_c_inference.py",
+    "scripts/s7_10_d_failure_diagnostic.py",
+    "scripts/s7_10_e_freeze.py"
+  ],
+  "n_files": 35,
+  "indexes_not_replaces": true
+}

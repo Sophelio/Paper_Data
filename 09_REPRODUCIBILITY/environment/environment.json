@@ -1,0 +1,17 @@
+{
+ "record_id": "SIR_ENVIRONMENT_V1",
+ "captured_utc": "2026-09-16T03:29:12.122730+00:00",
+ "python": "3.13.5",
+ "executable": "D:\\SIR_paper\\.venv_lorenz_benchmark\\Scripts\\python.exe",
+ "platform": "Windows-11-10.0.26200-SP0",
+ "packages": {
+  "numpy": "2.5.2",
+  "pandas": "3.0.5",
+  "scipy": "1.18.1",
+  "matplotlib": "3.11.1",
+  "sklearn": "1.9.0",
+  "pyarrow": "25.0.1",
+  "pypdf": "6.16.2"
+ },
+ "note": "Captured from the working virtual environment at D:/SIR_paper/.venv_lorenz_benchmark. No environment.yml or requirements.txt existed in the repository; this file and requirements_frozen.txt were generated, not copied."
+}

@@ -1,0 +1,303 @@
+{
+  "status": "PROTECTED_CONFIRMATION",
+  "generator": {
+    "module": "D:\\SIR_paper\\Lorenz\\Lorenz_attractor.py",
+    "function": "generate_lorenz",
+    "sha256": "b09e093cd5273609fa55eb06de485b37357d7ade4f67e4a2bc5c3363bc7fb663",
+    "reused": true
+  },
+  "parameters": {
+    "sigma": 10.0,
+    "rho": 28.0,
+    "beta": 2.6666666666666665
+  },
+  "seed": 20260827904,
+  "seed_trajectory": {
+    "x0": [
+      -3.1,
+      2.7,
+      19.4
+    ],
+    "dt": 0.001,
+    "tmax": 900.0,
+    "burn_in": 40.0
+  },
+  "distinct_from_development": {
+    "development_seed": 20260827,
+    "development_seed_traj_x0": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "development_seed_traj_tmax": 400.0,
+    "min_initial_state_distance_to_development": 0.6763422678890086,
+    "separation_threshold": 0.5,
+    "violations": []
+  },
+  "trajectories": [
+    {
+      "id": "conf_000",
+      "x0": [
+        -5.478317489154054,
+        0.1737635031267289,
+        30.50021430947399
+      ],
+      "n_samples": 2401,
+      "sha256": "176713cfdd1bf43cf8e8695f3391f1639e2f640302315e59207517df823918ea",
+      "min_distance_to_development_x0": 1.529633656815244
+    },
+    {
+      "id": "conf_001",
+      "x0": [
+        -2.7961983348123183,
+        -2.856860316624023,
+        20.138949366901144
+      ],
+      "n_samples": 2401,
+      "sha256": "c421c31bdb1d96bb369d876bf00f3952e6df20e43a79b427741e4691e2b001d7",
+      "min_distance_to_development_x0": 2.479889748908279
+    },
+    {
+      "id": "conf_002",
+      "x0": [
+        -10.862274331465098,
+        -10.928350904573561,
+        29.991078749943924
+      ],
+      "n_samples": 2401,
+      "sha256": "f0123c553a568d0e96f85f2df8649e070f23950a57cb876efe30a1bfd8723027",
+      "min_distance_to_development_x0": 3.7683521624938843
+    },
+    {
+      "id": "conf_003",
+      "x0": [
+        9.240234577007952,
+        4.899539263313627,
+        32.62271659733537
+      ],
+      "n_samples": 2401,
+      "sha256": "b189be58ab61f1eac24ee63cf81adc9fbef4108effac207e33e037b1c993641a",
+      "min_distance_to_development_x0": 4.47236910277569
+    },
+    {
+      "id": "conf_004",
+      "x0": [
+        6.271484155837302,
+        9.719432713830104,
+        17.35295810813585
+      ],
+      "n_samples": 2401,
+      "sha256": "ae251b1efce6108c87ebddd3d1542a0ae0d5c46830ba7b275bcedd73094dddb3",
+      "min_distance_to_development_x0": 3.0270186818600138
+    },
+    {
+      "id": "conf_005",
+      "x0": [
+        11.025745259821438,
+        15.474107623557332,
+        24.245859259888423
+      ],
+      "n_samples": 2401,
+      "sha256": "3ece56e6cb86bc8c1b5306f12168ae3d11a95b7f7710fccd7fd0cb121bc703a3",
+      "min_distance_to_development_x0": 2.504103969265333
+    },
+    {
+      "id": "conf_006",
+      "x0": [
+        -5.678957068944182,
+        -9.071996142825837,
+        16.63138143979404
+      ],
+      "n_samples": 2401,
+      "sha256": "a3a210cd61c393c27f95481682150f0d72cbb9b8f61e57b350c4bae5bb674142",
+      "min_distance_to_development_x0": 1.0907710782938365
+    },
+    {
+      "id": "conf_007",
+      "x0": [
+        -4.1080470138777905,
+        1.1165770554575145,
+        29.159955194842546
+      ],
+      "n_samples": 2401,
+      "sha256": "0145c2702d73565d5fcc337769dc41e66d31b336c83dd142954614eb4c786711",
+      "min_distance_to_development_x0": 2.2532565071346364
+    },
+    {
+      "id": "conf_008",
+      "x0": [
+        -10.901959950153087,
+        -14.670645637283176,
+        25.055688486214184
+      ],
+      "n_samples": 2401,
+      "sha256": "71261dd13e37154948f2d6337086bd2538bb7dc553e554d9a635edd54b518060",
+      "min_distance_to_development_x0": 2.305811615229891
+    },
+    {
+      "id": "conf_009",
+      "x0": [
+        -4.834028781346416,
+        -7.453751850167654,
+        16.50461153221532
+      ],
+      "n_samples": 2401,
+      "sha256": "5ce410255c342c4172c81013953bfe8ffb43f0e9f751f6643d75f2127ee4aa5a",
+      "min_distance_to_development_x0": 0.6763422678890086
+    },
+    {
+      "id": "conf_010",
+      "x0": [
+        -11.146708920194508,
+        -1.906363810352788,
+        38.579538292826335
+      ],
+      "n_samples": 2401,
+      "sha256": "d42d7c608459e37e2f8a9be0f5836f9b8a457fc2af7ee81514ef2ddd14eb342c",
+      "min_distance_to_development_x0": 10.008563163319064
+    },
+    {
+      "id": "conf_011",
+      "x0": [
+        10.537961411186076,
+        3.85923700849915,
+        36.01404121777287
+      ],
+      "n_samples": 2401,
+      "sha256": "9d5d2fb17cb557afac6bb7863997d5436539e4bfbbb0adbd42b952c00f9b6f30",
+      "min_distance_to_development_x0": 3.0561396847231728
+    },
+    {
+      "id": "conf_012",
+      "x0": [
+        -5.953200802700778,
+        -10.537267790276502,
+        12.845938090789701
+      ],
+      "n_samples": 2401,
+      "sha256": "45963d96a038e8a53beaba2dd9150313aeaa7d16f063e149b9a29d9253ff8cb7",
+      "min_distance_to_development_x0": 2.59778640784762
+    },
+    {
+      "id": "conf_013",
+      "x0": [
+        -2.5436283218225726,
+        0.3538690561622987,
+        25.422366832909713
+      ],
+      "n_samples": 2401,
+      "sha256": "b795451a270577cd12cee26abeeda1a5d778b338a3cc7f13cff7f7d89714f4ec",
+      "min_distance_to_development_x0": 1.9836075143987841
+    },
+    {
+      "id": "conf_014",
+      "x0": [
+        -2.034928830061547,
+        0.9246230447450953,
+        25.22916849652686
+      ],
+      "n_samples": 2401,
+      "sha256": "007e6f20f6b6f324809f45ea21961cef9201481009d6a5f497781bd90e0f1654",
+      "min_distance_to_development_x0": 1.6659871886698463
+    },
+    {
+      "id": "conf_015",
+      "x0": [
+        7.067368018175982,
+        11.826521424367453,
+        15.554749638684743
+      ],
+      "n_samples": 2401,
+      "sha256": "7268cada774582c50a08ab9feb0a47fbf51c4688ecd6da7dc462e8ed2bc112a2",
+      "min_distance_to_development_x0": 3.683625183902645
+    },
+    {
+      "id": "conf_016",
+      "x0": [
+        4.939621519727725,
+        2.3893371830620374,
+        26.65812933933588
+      ],
+      "n_samples": 2401,
+      "sha256": "b69e1b2186c910f151b6d7ce9440abbc871c43281dc73acc36c80bbf64f780d4",
+      "min_distance_to_development_x0": 5.602862487821423
+    },
+    {
+      "id": "conf_017",
+      "x0": [
+        -11.161862515640415,
+        -16.172251654830895,
+        23.548427784593
+      ],
+      "n_samples": 2401,
+      "sha256": "04ddf66ac13b8e974b0c2db12bb2d94cd482c394aacb26293327d878fd7f4670",
+      "min_distance_to_development_x0": 1.8715863779928932
+    },
+    {
+      "id": "conf_018",
+      "x0": [
+        -2.0526414469853864,
+        -3.444969272042837,
+        15.117505119937343
+      ],
+      "n_samples": 2401,
+      "sha256": "99306b42d4880cc4ac5bf12f543c688cbf9d217e88e3d68ebd017b13f5de27ce",
+      "min_distance_to_development_x0": 2.7260828522957166
+    },
+    {
+      "id": "conf_019",
+      "x0": [
+        -1.2017907544044149,
+        -1.8629657311448335,
+        13.941038485923423
+      ],
+      "n_samples": 2401,
+      "sha256": "cb747db12a391ebfbf157242d1850268cb1fc6b030224cf16cc07debab1c1632",
+      "min_distance_to_development_x0": 0.9004379622123211
+    },
+    {
+      "id": "conf_020",
+      "x0": [
+        -2.443221944201666,
+        -4.480732763495329,
+        9.958714987580004
+      ],
+      "n_samples": 2401,
+      "sha256": "4ff980ce730bfdc4e05460428d7f240fa3b89709be8bb81eb38bdd896c5fe3c0",
+      "min_distance_to_development_x0": 1.60424174919784
+    },
+    {
+      "id": "conf_021",
+      "x0": [
+        -7.507533499933446,
+        -4.035108992417397,
+        30.023809676087563
+      ],
+      "n_samples": 2401,
+      "sha256": "148ef350937ad7a1a3cf6e79ab892bbd12047d69d0f5759acc1c4d3a93693250",
+      "min_distance_to_development_x0": 2.6300699068607356
+    },
+    {
+      "id": "conf_022",
+      "x0": [
+        -11.95205248154632,
+        -9.250325502039502,
+        34.22678554397546
+      ],
+      "n_samples": 2401,
+      "sha256": "84018fbafa75ccf25c457675c07f5a98873997964b467d07f2c41fc2bcaf73c3",
+      "min_distance_to_development_x0": 7.266330376184479
+    },
+    {
+      "id": "conf_023",
+      "x0": [
+        -5.832659346890512,
+        -9.585654321842604,
+        15.67624940206647
+      ],
+      "n_samples": 2401,
+      "sha256": "8330c20b03ce7fa120666e83637f4805049cf0ce56c6c900094fdcc9b060825d",
+      "min_distance_to_development_x0": 1.1975734696604774
+    }
+  ]
+}

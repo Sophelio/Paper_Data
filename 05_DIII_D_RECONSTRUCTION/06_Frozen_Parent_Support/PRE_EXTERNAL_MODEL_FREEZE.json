@@ -1,0 +1,312 @@
+{
+  "package_id": "PRE_EXTERNAL_MODEL_FREEZE_V1",
+  "purpose": "the object S7.10 must verify BEFORE opening any external value",
+  "frozen_utc": "2026-09-05T20:32:08.992754+00:00",
+  "A_target": {
+    "target": "density",
+    "source_freeze": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-SOURCE-RESOLUTION-V2"
+  },
+  "B_selected_representation": {
+    "support_id": "ID(cerqtit6)|ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(cerqtit10)|RECIP(prmtan_neped)",
+    "support_size": 12,
+    "atom_list": [
+      "ID(cerqtit6)",
+      "ID(pcdiamag3)",
+      "ID(prmtan_neped)",
+      "PROD(ece37,ece39)",
+      "PROD(gasa,gasa)",
+      "PROD(pinj,cerqrott6)",
+      "PROD(prmtan_neped,prmtan_neped)",
+      "RATIO(ece21,prmtan_neped)",
+      "RATIO(fs03da,prmtan_neped)",
+      "RATIO(ip,ece22)",
+      "RECIP(cerqtit10)",
+      "RECIP(prmtan_neped)"
+    ],
+    "coordinate_definitions_sha256": "800ac414aa16bbad1599a8512fcb8b2c4c9cf1e0adebdb8f9a314a78bb900337",
+    "canonical_parse_rule": "split on pipes at parenthesis depth 0 only"
+  },
+  "C_lineage": {
+    "G_rec": "G_REC_DENSITY_HARDENED_V2",
+    "A_rec": "A_REC_DENSITY_HARDENED_V2",
+    "Sigma_rec": "SIGMA_REC_ONE_SEED_PRIMARY_V2",
+    "Ahat_rec": "AHAT_REC_DENSITY_ONE_SEED_V2",
+    "Ahat_rec_cardinality": 162845,
+    "parent_freezes": [
+      "D3D-SIR-S7.1-OBSERVATIONAL-OBJECT-FINAL-V1",
+      "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V1",
+      "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V2",
+      "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-SOURCE-RESOLUTION-V2",
+      "D3D-SIR-S7.4-MATHEMATICAL-INTERPRETATION-SOURCE-RESOLUTION-V2",
+      "D3D-SIR-S7.5-TYPED-RELATIONAL-ONTOLOGY-V1",
+      "D3D-SIR-S7.5H-PRIMITIVE-SPACE-AND-ONTOLOGY-HARDENING-V1",
+      "D3D-SIR-S7.6-ADMISSIBLE-UNIVERSE-HARDENED-V2",
+      "D3D-SIR-S7.7-ONE-SEED-PRIMARY-SEARCH-AND-EXPLORED-FRONTIER-V2",
+      "D3D-SIR-S7.8-UTILITY-AND-QUALIFICATION-RULES-V1"
+    ]
+  },
+  "D_utility": {
+    "utility_id": "U_REC_OPERATIONAL_V1",
+    "utility_policy_sha256": "d5d9de60db57416f94806d7c1d135d42731459185a3a0fa2b48c406784b65f85",
+    "survivor_sets": {
+      "E0": 162845,
+      "E1": 1055,
+      "E2": 1,
+      "E3": 1,
+      "E4": 1,
+      "E5": 1
+    },
+    "elimination_ledger_sha256": "487707b9e7f92baaa7086700a71275c5f1184e7cba187ea311d3e7adc4154836",
+    "survivor_sets_sha256": "14d7394bd60e18709005e128a84a2680f2e1cd39021262ccb27a1686a45c85de"
+  },
+  "E_estimator": {
+    "estimator_id": "DEVELOPMENT_RELATION_OLS_V1",
+    "config_sha256": "c35ddb25a0cb619c824d50517a8a7a02679093b8cdad792fe46be8b3331025e3",
+    "global_coefficients_exist": false,
+    "what_transfers": [
+      "support identity",
+      "coordinate definitions",
+      "numerical construction rules",
+      "estimator class and procedure"
+    ]
+  },
+  "F_preprocessing": {
+    "rule": "calibration-only means and standard deviations, ddof=0",
+    "zero_sd_rule": "divisor is exactly 1.0",
+    "epsilon": null,
+    "applied_unchanged_to_protected_rows": true
+  },
+  "G_validation_geometry": {
+    "A": {
+      "calibration": [
+        0.0,
+        0.4
+      ],
+      "evaluation": [
+        0.4,
+        0.5
+      ]
+    },
+    "B": {
+      "calibration": [
+        0.0,
+        0.6
+      ],
+      "evaluation": [
+        0.6,
+        0.7
+      ]
+    },
+    "C": {
+      "calibration": [
+        0.0,
+        0.8
+      ],
+      "evaluation": [
+        0.8,
+        0.9
+      ]
+    },
+    "protection_model": "BLOCK_LOCAL_PROTECTION"
+  },
+  "H_denominator_and_domain_rules": {
+    "nrmse_denominator": "std(y_calibration_{s,b}, ddof=0)",
+    "zero_scale_behaviour": "INVALID_FOR_NORMALIZED_SCORING",
+    "epsilon_added": false,
+    "domain_predicates": [
+      "DOMAIN_DENOMINATOR_LEVEL_NONZERO"
+    ],
+    "ratio_denominator_rule": "inherited from S7.6R, unchanged"
+  },
+  "I_interpretation_flags": {
+    "contains_uncalibrated_primitive": true,
+    "uncalibrated_primitives": [
+      "pcdiamag3"
+    ],
+    "UNCALIBRATED_SIGNAL": true,
+    "uncalibrated_consequence": "coefficients involving the uncalibrated primitive have no certified physical-dimensional interpretation",
+    "support_rejected_for_uncalibrated": false,
+    "contains_C6": false,
+    "contains_C7": false,
+    "c6_c7_treated_as_surprising_or_repaired": false,
+    "contains_ece_ancestry": true,
+    "ece_penalty_applied": false,
+    "any_aliasing_flag": true,
+    "any_upsample_flag": true,
+    "partial_map_status": [
+      "DOMAIN_DENOMINATOR_LEVEL_NONZERO"
+    ],
+    "all_primary_not_sensitivity": true
+  },
+  "J_baseline_configurations": {
+    "B0_CALIBRATION_MEAN_V1": {
+      "file": "BASELINE_B0_CONFIG.json",
+      "role": "MANDATORY_V3",
+      "status": "FROZEN_NOT_RUN",
+      "sha256": "356485d5a6d52d0a94a9d373e2bc0d276c0f9707bbb970e18fd79080fce72440",
+      "tuned_on_development": false,
+      "selected_alpha": null
+    },
+    "B1_PERSISTENCE_V1": {
+      "file": "BASELINE_B1_CONFIG.json",
+      "role": "MANDATORY_V3",
+      "status": "FROZEN_NOT_RUN",
+      "sha256": "a2b7b8f07d1de649497ac08259288fb0700d5f35cc2409980661144b0d2e79a4",
+      "tuned_on_development": false,
+      "selected_alpha": null
+    },
+    "B1A_AR1": {
+      "file": "BASELINE_B1A_CONFIG.json",
+      "role": "DIAGNOSTIC",
+      "status": "FROZEN_NOT_RUN",
+      "sha256": "fcc049444e233b2ea6f3304e69739202a04b3387dec936d8576658b446a42da1",
+      "tuned_on_development": false,
+      "selected_alpha": null
+    },
+    "B2_RAW_RIDGE": {
+      "file": "BASELINE_B2_CONFIG.json",
+      "role": "MANDATORY_V4",
+      "status": "FROZEN_NOT_RUN",
+      "sha256": "d9abeaaa4e767b43e31fd57bb1dbb0c48c33584b81131395cadaabff88c4c0f0",
+      "tuned_on_development": true,
+      "selected_alpha": 1.0
+    },
+    "B3_RAW_HIST_GRADIENT_BOOSTING": {
+      "file": "BASELINE_B3_CONFIG.json",
+      "role": "MANDATORY_V4",
+      "status": "FROZEN_NOT_RUN",
+      "sha256": "c72c049e63389dab181347c8adf2f5b649ceed13b395d5ed542da4c4cc01f2e3",
+      "tuned_on_development": false,
+      "selected_alpha": null
+    },
+    "H0_RAW_HARDENED": {
+      "file": "BASELINE_H0_CONFIG.json",
+      "role": "DIAGNOSTIC_ABLATION",
+      "status": "FROZEN_NOT_RUN",
+      "sha256": "40182fd53373b80ff26d5aae8f0eb760abc8da0af82b420630b882ac625ac76f",
+      "tuned_on_development": true,
+      "selected_alpha": 1.0
+    }
+  },
+  "K_selected_alphas": {
+    "B2_RAW_RIDGE": 1.0,
+    "H0_RAW_HARDENED": 1.0,
+    "rule": "RIDGE_ALPHA_SELECTION_V1",
+    "prevalue_sha256": "fd05fcc0f4d0e5e95a26315006be1531d4f6bcc5d7697914b5daaf3593a1ba3f"
+  },
+  "L_B3_configuration": {
+    "sklearn_version": "1.9.0",
+    "config_sha256": "c72c049e63389dab181347c8adf2f5b649ceed13b395d5ed542da4c4cc01f2e3",
+    "random_state": 2026090502,
+    "departure_from_defaults": [
+      "random_state fixed for determinism"
+    ]
+  },
+  "M_S_pers": {
+    "metric_id": "S_PERS_V1",
+    "definition": "S_pers(M,s,b) = 1 - MSE(M,s,b) / MSE(B1_persistence,s,b)",
+    "discharge_level": "S_pers(M,s) = 1 - mean_b MSE(M,s,b) / mean_b MSE(B1,s,b), provided the denominator is nonzero",
+    "zero_denominator_behaviour": {
+      "condition": "MSE(B1_persistence,s,b) == 0",
+      "value": "UNDEFINED_ZERO_PERSISTENCE_ERROR",
+      "epsilon_permitted": false,
+      "note": "no epsilon, no floor, no substitution"
+    },
+    "used_for_selection": false,
+    "status": "REQUIRED_REPORTING at S7.10"
+  },
+  "N_external_cohort": {
+    "n": 42,
+    "earlier": 24,
+    "later": 18,
+    "shot_ids": [
+      "155537",
+      "159310",
+      "160717",
+      "160719",
+      "160721",
+      "161136",
+      "161145",
+      "161414",
+      "165017",
+      "165026",
+      "165027",
+      "165029",
+      "165031",
+      "165043",
+      "165860",
+      "165955",
+      "165965",
+      "170394",
+      "170411",
+      "186997",
+      "187018",
+      "187019",
+      "187021",
+      "187022",
+      "189646",
+      "189649",
+      "189650",
+      "189652",
+      "195261",
+      "195265",
+      "195266",
+      "195268",
+      "195269",
+      "195274",
+      "195626",
+      "195642",
+      "195645",
+      "195648",
+      "195649",
+      "195651",
+      "195652",
+      "195659"
+    ],
+    "partition_policy_id": "S7.2-COHORT-PARTITION-V1",
+    "metadata_only": true,
+    "value_bearing_data_opened": 0,
+    "state": "SEALED"
+  },
+  "O_statistical_inference_protocol": {
+    "reference": "S7.2 STATISTICAL_INFERENCE_PLAN.md",
+    "inferential_unit": "discharge",
+    "gate_bootstrap_replicates": 10000,
+    "V3_pass_condition": "Delta_0 <= -0.01 AND Delta_1 <= -0.01",
+    "V6_external_counts": {
+      "earlier": 24,
+      "later": 18
+    }
+  },
+  "P_two_seed_sensitivity": {
+    "id": "TWO_SEED_SEARCH_DEPTH_SENSITIVITY",
+    "status": [
+      "DECLARED_OPTIONAL",
+      "NOT_EXECUTED"
+    ],
+    "outcome_trigger_defined": false
+  },
+  "Q_global_optimality_claim": false,
+  "R_external_value_reads": 0,
+  "development_representation_lock_sha256": "c7c6a36b86766f3cfaf1411dae5395a2c2d42844369f3eadaa88dbd8556d04d0",
+  "development_selection_quantities": {
+    "FIT": 0.16639756507550676,
+    "FIT_best_in_E0": 0.16628151489421725,
+    "FIT_gap_to_best": 0.0001160501812895176,
+    "SE_delta_vs_best": 0.00024981376112339254,
+    "delta_equiv_vs_best": 0.01,
+    "BLOCK_WORST": 0.19425169937312603,
+    "b_star": "A",
+    "SHOT_P90": 0.21141211638847987,
+    "ACTIVE_TERMS": 12,
+    "support_size": 12,
+    "ACTIVE_TERMS_equals_support_size": true,
+    "COND_MEDIAN": 1.9917544203843867,
+    "COND_P90": 2.173041735453102,
+    "COND_MAX": 2.2596409414020897,
+    "n_infinite_conditioning_cells": 0,
+    "n_degenerate_sd_cells": 0,
+    "BOOT_SELECTION_FREQ": 0.093,
+    "FOLD_SELECTION_FREQ": 0.3333333333333333
+  }
+}

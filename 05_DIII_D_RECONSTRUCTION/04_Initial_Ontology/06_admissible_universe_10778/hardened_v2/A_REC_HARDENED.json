@@ -1,0 +1,131 @@
+{
+  "universe_id": "A_REC_DENSITY_HARDENED_V2",
+  "freeze_id": "D3D-SIR-S7.6-ADMISSIBLE-UNIVERSE-HARDENED-V2",
+  "supersedes_for_primary_use": "A_REC_DENSITY_V1",
+  "superseded_universe_status": "HISTORICAL_SUPERSEDED / PRESERVED_AS_AUDIT_HISTORY",
+  "parent_ontology": {
+    "id": "G_REC_DENSITY_HARDENED_V2",
+    "version": "2.0.0",
+    "freeze_id": "D3D-SIR-S7.5H-PRIMITIVE-SPACE-AND-ONTOLOGY-HARDENING-V1"
+  },
+  "target": "density",
+  "target_canonical_unit": "m^-3",
+  "target_forbidden_as_coordinate": true,
+  "formal_definition": "S_rec^H = { C subset C_rec_hard^atom : 1 <= |C| <= 12 and Phi_set(C) = PASS };  A_rec^H = { (C, T_REC_V1) : C in S_rec^H }",
+  "R_rec": "T_REC_V1 for every C (affine-linear in the constructed coordinates, intercept allowed and not counted toward |C|, shared support identity across discharges, discharge-specific coefficients)",
+  "C_rec_hard_atom": {
+    "universe_id": "C_REC_HARD_ATOM_V2",
+    "parent_ontology": "G_REC_DENSITY_HARDENED_V2",
+    "ontology_version": "2.0.0",
+    "primitive_basis_size": 70,
+    "n_atoms": 10778,
+    "by_constructor": {
+      "C0": 66,
+      "C1": 59,
+      "C2": 2080,
+      "C3": 2457,
+      "C4": 0,
+      "C5": 39,
+      "C6": 3776,
+      "C7": 2301,
+      "C8": 0
+    },
+    "symbolic_before_admissibility": {
+      "C0": 70,
+      "C1": 63,
+      "C2": 2346,
+      "C3": 4556,
+      "C4": 3906,
+      "C5": 68,
+      "C6": 4284,
+      "C7": 4284,
+      "C8": 4284
+    },
+    "symbolic_total": 23861,
+    "overall_survival_rate": 0.45169942584133105,
+    "atoms_file": "primary_atomic_coordinate_universe.csv",
+    "sensitivity_only_registry": "sensitivity_only_coordinate_registry.csv",
+    "regenerated_from_scratch": true,
+    "imported_from_S7_6_V1": false
+  },
+  "Phi_set": {
+    "constraint_id": "PHI_SET_H_V2",
+    "applies_to": "A_REC_DENSITY_HARDENED_V2",
+    "constraints": [
+      {
+        "id": "size",
+        "rule": "1 <= |C| <= 12",
+        "source": "frozen B_rec, unchanged"
+      },
+      {
+        "id": "no_duplicates",
+        "rule": "no duplicate coordinate IDs in C"
+      },
+      {
+        "id": "atoms_only",
+        "rule": "every coordinate in C belongs to C_rec_hard^atom"
+      },
+      {
+        "id": "no_sensitivity_only",
+        "rule": "no SENSITIVITY_ONLY_CONSTRUCTOR_OUTPUT coordinate in C"
+      },
+      {
+        "id": "phi_dependency",
+        "rule": "C must NOT contain the COMPLETE membership of any frozen exact linear dependency group",
+        "n_groups_attempted": 400,
+        "n_groups_binding": 0,
+        "n_groups_vacuous": 400,
+        "binding_note": "every re-derived group is VACUOUS in this universe: each contains at least one inadmissible member, so no admissible support can contain a complete exact set. The predicate is well defined and retained; it currently excludes nothing.",
+        "neither_representation_privileged": true
+      },
+      {
+        "id": "no_target",
+        "rule": "the target never appears in C"
+      }
+    ],
+    "explicitly_not_imposed": [
+      "must contain a phase derivative",
+      "must contain multiple families",
+      "must include raw levels",
+      "must include a partial map",
+      "any search heuristic, weight, ranking or preference"
+    ]
+  },
+  "representation": {
+    "is_finite": true,
+    "materialized_support_by_support": false,
+    "factorized_representation_is_exact": true,
+    "why": "the atomic coordinate set together with the set-level predicates is a complete finite representation of A_rec^H. Enumerating every C is unnecessary and astronomically large.",
+    "unconstrained_subset_count_1_to_12": 5104404168895027321786009089789794586067,
+    "note": "this count ignores Phi_set and is reported only to show why materialisation was not attempted"
+  },
+  "explored_subset": "S7.7 explores only a subset Ahat_rec",
+  "search_priority_assigned": false,
+  "coordinates_ranked": false,
+  "estimator_run": false,
+  "models_fitted": 0,
+  "baselines_run": 0,
+  "target_values_accessed": 0,
+  "external_values_accessed": 0,
+  "external_partial_map_rule": {
+    "same_rule_applies": true,
+    "on_failure": [
+      "do NOT shift or regularize",
+      "do NOT replace the coordinate",
+      "do NOT refit the support",
+      "record the representation as NOT_APPLICABLE on that discharge/block"
+    ],
+    "outcome_decided_by": "the downstream qualification stage, not S7.6"
+  },
+  "raw_hardened_ablation": {
+    "id": "H0_RAW_HARDENED",
+    "status": "FROZEN_NOT_RUN",
+    "run_here": false,
+    "used_in_admissibility": false
+  },
+  "B2": {
+    "modified": false,
+    "run_here": false,
+    "used_in_admissibility": false
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "record_id": "Q_REC_BRANCH_CLOSURE_V1",
+  "generated_utc": "2026-09-07T04:58:19.214183+00:00",
+  "Q_REC_BRANCH_CLOSED": true,
+  "NO_FURTHER_DISCOVERY_EPOCH_AUTHORIZED": true,
+  "EPOCH2_IS_FINAL_QREC_ATTEMPT": true,
+  "final_status": "Q_REC_FINAL_QUALIFIED_POSITIVE_RESULT",
+  "subsidiary": [
+    "FORMAL_PASS",
+    "CLEAN_DEMO_NOT_MET",
+    "NON_UNIQUE_RELATIONAL_SUPPORTS",
+    "BRANCH_CLOSED"
+  ],
+  "not_done_in_S7_12": {
+    "new_search": false,
+    "new_gate": false,
+    "threshold_moved": false,
+    "support_rescued": false,
+    "budget_increased": false,
+    "additional_seeds": false,
+    "folds_changed": false,
+    "discharges_deleted": 0,
+    "blocks_deleted": 0,
+    "baseline_altered": false,
+    "utility_altered": false,
+    "model_fit": false,
+    "metric_recomputed": false,
+    "epoch_3": false,
+    "S7_13": false
+  },
+  "q_desc_branch": "UNTOUCHED",
+  "parent_artifacts_modified": 0,
+  "epoch_1_negative_preserved": true
+}

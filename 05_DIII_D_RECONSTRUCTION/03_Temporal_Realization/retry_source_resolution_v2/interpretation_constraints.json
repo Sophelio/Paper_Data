@@ -1,0 +1,44 @@
+{
+  "assumptions_made": [
+    "the record is a finite ensemble of discrete sampled trajectories",
+    "discharge is the realization index",
+    "predictor and target values at the same grid index are contemporaneous"
+  ],
+  "assumptions_explicitly_NOT_made": {
+    "differentiability_assumed": false,
+    "smoothness_C1_assumed": false,
+    "ode_solution_assumed": false,
+    "markov_assumed": false,
+    "complete_physical_state_assumed": false,
+    "latent_state_inferred": false,
+    "dynamical_closure_assumed": false,
+    "causal_interpretation": false,
+    "channel_index_is_spatial_coordinate": false,
+    "cross_discharge_concatenation_permitted": false,
+    "iid_pooling_of_discharges": false
+  },
+  "three_level_distinction": {
+    "A_observational_sampled_trajectory": "x_s(t_{s,k}), y_s(t_{s,k}) - the finite task-level samples carried by O_rec; this is what the study possesses",
+    "B_numerical_realization": "any smoother, interpolant, finite-difference rule or derivative estimator later applied to construct a coordinate; a declared analyst choice, not a property of the data",
+    "C_latent_physical_trajectory": "not observed directly and not assumed exactly recoverable",
+    "consequence": "a later derivative-valued coordinate is a constructor acting through a declared numerical realization of a sampled trajectory, NOT evidence that the samples possess an exact classical derivative"
+  },
+  "target_handling": {
+    "target_in_X_pred": false,
+    "target_history_in_X_pred": false,
+    "lagged_target_permitted": false,
+    "dy_dt_constructed": false,
+    "persistence_is_a_baseline_not_a_coordinate": true
+  },
+  "units": {
+    "X_rec_defined_in_canonical_scientific_units": true,
+    "X_rec_defined_in_z_scored_coordinates": false,
+    "standardization_is_a_fitted_transform_subject_to_leakage_firewall": true
+  },
+  "support": {
+    "common_support_within_discharge_required": true,
+    "all_methods_score_identical_samples_within_discharge": true,
+    "mask_defined_from": "observational and numerical support only, never reconstruction performance",
+    "gate_V7_dependency": true
+  }
+}

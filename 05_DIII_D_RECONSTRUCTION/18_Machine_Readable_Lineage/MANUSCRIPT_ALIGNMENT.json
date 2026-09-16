@@ -1,0 +1,336 @@
+{
+  "record_id": "S7_MANUSCRIPT_ALIGNMENT_V1",
+  "generated_utc": "2026-09-08T00:51:17.716812+00:00",
+  "manuscript_artifact_audited": {
+    "path": "draft/SIR_paper.pdf",
+    "pages": 64,
+    "modified": "2026-09-02T10:45",
+    "sha256": "94ccf533b841fe39a0468735eb2dbc31a80cceba70b094bcaa480a4029ea7b70",
+    "rechecked_at_semantics_pass": "UNCHANGED",
+    "latex_source_found": false
+  },
+  "current_manuscript_architecture": {
+    "source": "finalized Results 1.1 semantics",
+    "expressed_by_S7_documentation": true,
+    "expressed_by_shipped_pdf": false,
+    "note": "The S7 documentation layer uses the current architecture. The shipped PDF has not been regenerated to match, so the findings below stand against the artifact, not the architecture."
+  },
+  "manuscript": {
+    "path": "draft/SIR_paper.pdf",
+    "pages": 64,
+    "modified": "2026-09-02T10:45",
+    "latex_source_found": false
+  },
+  "manuscript_edited_by_this_audit": false,
+  "headline_finding": "The manuscript's q_rec result (Results 1.5, Fig. 4b, Supplementary S7.8) is the branch this repository retired on 2026-09-02 for target-provenance leakage and for having no skill over a persistence baseline.",
+  "architecture_finding": "The shipped Results 1.1 carries the flat 8-tuple contract with no claim-core / operational-epoch distinction and no defect/reconciliation machinery; a text search finds zero occurrences of the current vocabulary.",
+  "retirement": {
+    "retired_branch": "q_rec target I_p, 141 coordinates, 7 development / 55 external, REL10 / REL141 / RAW10",
+    "retirement_id": "D3D-FIG6-QREC-RETIREMENT-V1",
+    "retired_utc": "2026-09-02T04:48:03Z",
+    "records": [
+      "DIIID_example/fig6data/RETIREMENT_RECORD.json",
+      "DIIID_example/Figure6_qualification_audit/FIGURE6_QUALIFICATION_AUDIT_REPORT.md",
+      "S7/_legacy_reference/LEGACY_QREC_STATUS.md"
+    ],
+    "grounds": [
+      {
+        "id": "PROVENANCE_LEAKAGE",
+        "detail": "6/10 REL10 and 4/10 RAW10 features carry upstream I_p dependence; q95 is essentially shape*a^2*Bt/I_p (median |corr| 0.945 with 1/I_p, 7.3% residual scatter, I_p recovered at median R^2 0.79)."
+      },
+      {
+        "id": "NO_SKILL_OVER_TRIVIAL_BASELINE",
+        "detail": "persistence median normalised RMSE 0.0685 beats REL141 0.1137, REL10 0.1257 and RAW10 0.1821; var(eval)/var(calib) median 0.0032."
+      }
+    ],
+    "canonical_replacement": "S7 q_rec density branch, freeze D3D-SIR-S7.12-QUALIFIED-RECONSTRUCTION-RESULT-V1"
+  },
+  "statements": [
+    {
+      "id": "1.1-a",
+      "section": "Results 1.1",
+      "statement": "K_q = (q, I_q, P_q, B_q, H_q, U_q, V_q, Omega_q) as one flat tuple",
+      "classification": "SEMANTICALLY_INCONSISTENT",
+      "proposed_correction": "Split into K_q^(e) = (K_q^claim, K_q^op,(e)) with K^claim = (q, I_q, U_q, V_q, Omega_q) and K^op,(e) = (P_q, B_q, H_q)."
+    },
+    {
+      "id": "1.1-b",
+      "section": "Results 1.1",
+      "statement": "data reserved for final validation must not influence the revised ontology or search policy",
+      "classification": "SEMANTICALLY_INCONSISTENT",
+      "proposed_correction": "Replace with the protected-evidence rule: inspected evaluation evidence becomes development evidence for the revised epoch; a later qualification must use new protected evidence, a valid cross-fitted design, or an explicitly narrowed claim."
+    },
+    {
+      "id": "1.1-c",
+      "section": "Results 1.1",
+      "statement": "Sigma_q = SearchPolicy(G_q, K_q); ontology != universe != frontier != policy",
+      "classification": "SUPPORTED_CURRENT",
+      "proposed_correction": "None. S7 instantiates the distinction: G_q (S7.5H) != A_q 10778 (S7.6R) != Ahat_q 162845 (S7.7R) != Sigma_q."
+    },
+    {
+      "id": "1.1-d",
+      "section": "Results 1.1",
+      "statement": "a construction absent from the explored frontier is not thereby shown inadmissible, inferior or nonexistent",
+      "classification": "SUPPORTED_CURRENT",
+      "proposed_correction": "None. S7.9 records global_optimality_claim=false, unsearched_status=ADMISSIBLE_UNSEARCHED."
+    },
+    {
+      "id": "1.1-e",
+      "section": "Results 1.1",
+      "statement": "no audit/reconciliation machinery (delta, rho, j_min)",
+      "classification": "MISSING_FROM_MANUSCRIPT",
+      "proposed_correction": "Add. S7.R1 is the concrete instance: earliest_invalidated_stage = NONE_OF_THE_INSTANTIATED_OBJECTS; K_REC_REVISION_REQUIRED = true; minimal component P_rec."
+    },
+    {
+      "id": "1.1-f",
+      "section": "Results 1.1",
+      "statement": "no scientific-task / claim-branch / operational-epoch hierarchy",
+      "classification": "MISSING_FROM_MANUSCRIPT",
+      "proposed_correction": "Add. Without it the q_rec lineage cannot be stated: S7 has one task, two claim branches (QREC-B1, QREC-B2) and three operational epochs."
+    },
+    {
+      "id": "1.1-g",
+      "section": "Results 1.1",
+      "statement": "no descendant-claim-branch disposition",
+      "classification": "MISSING_FROM_MANUSCRIPT",
+      "proposed_correction": "Add. It is what the Epoch-1 to Epoch-2 transition actually is: a material narrowing of V_q after protected evidence was spent, producing a provenance-linked descendant branch under an unchanged q."
+    },
+    {
+      "id": "1.1-h",
+      "section": "Results 1.1",
+      "statement": "I_q and V_q are not clearly separated, and evidence roles are treated as global per datum",
+      "classification": "SEMANTICALLY_INCONSISTENT",
+      "proposed_correction": "Separate them: I_q = what information is epistemically admissible; V_q = what evidentiary role it may play. Roles are variable- and transition-specific; S7's predictor-side applicability versus target-side discovery is the worked example."
+    },
+    {
+      "id": "desc-1",
+      "section": "Results 1.5 / S7.1",
+      "statement": "62 discharges, eight admitted quantities",
+      "classification": "SUPPORTED_CURRENT",
+      "proposed_correction": "None."
+    },
+    {
+      "id": "desc-2",
+      "section": "Results 1.5 / S7.3",
+      "statement": "seven-coordinate descriptive support",
+      "classification": "SUPPORTED_CURRENT",
+      "proposed_correction": "None; verified against d3d_discharge_coefficients.csv."
+    },
+    {
+      "id": "desc-3",
+      "section": "Results 1.5 / S7.4",
+      "statement": "pooled RMSE 5.76e-2 with discharge-specific coefficients",
+      "classification": "SUPPORTED_CURRENT",
+      "proposed_correction": "None; recomputed 0.05758467247445299 vs frozen 0.05758467247445343."
+    },
+    {
+      "id": "desc-4",
+      "section": "S7.3",
+      "statement": "cohort-mean coefficients summarize, do not define",
+      "classification": "SUPPORTED_CURRENT",
+      "proposed_correction": "None; mean-vector RMSE 0.4125238316."
+    },
+    {
+      "id": "desc-5",
+      "section": "S7.6",
+      "statement": "target-containing implicit closure, not a predictor",
+      "classification": "SUPPORTED_CURRENT",
+      "proposed_correction": "None; verdict D3D-IMPLICIT-CLOSURE-EXPLICITLY-ILL-CONDITIONED."
+    },
+    {
+      "id": "desc-6",
+      "section": "S7.7",
+      "statement": "mixed coefficient identifiability: 5 resolved, 2 uncertainty-dominated, 2 of 5 robust directions",
+      "classification": "SUPPORTED_CURRENT",
+      "proposed_correction": "None; verdict D3D-MIXED-COEFFICIENT-IDENTIFIABILITY; rank-6 0.7993 / 0.03103; REML primary with ML sensitivity."
+    },
+    {
+      "id": "desc-7",
+      "section": "S7.5",
+      "statement": "spline and RTS variants provisional until tied to a frozen manifest",
+      "classification": "UNVERIFIED",
+      "proposed_correction": "Still correct as written; the variants remain untied to a frozen run manifest. Keep the provisional wording or drop the variants."
+    },
+    {
+      "id": "desc-8",
+      "section": "S7.2",
+      "statement": "the canonical analysis does not use a fixed 20 ms grid",
+      "classification": "SUPPORTED_CURRENT",
+      "proposed_correction": "None; 1000 aligned samples per discharge."
+    },
+    {
+      "id": "rec-1",
+      "section": "Results 1.5 / S7.8",
+      "statement": "the designated target was I_p",
+      "classification": "STALE_SUPERSEDED",
+      "proposed_correction": "Canonical q_rec target is `density`."
+    },
+    {
+      "id": "rec-2",
+      "section": "Results 1.5 / S7.8",
+      "statement": "explored frontier of 141 relational coordinates",
+      "classification": "STALE_SUPERSEDED",
+      "proposed_correction": "Admissible universe 10778 atoms; Epoch-1 frontier 162845 supports; Epoch-2 qualified basis 3451 atoms."
+    },
+    {
+      "id": "rec-3",
+      "section": "Results 1.5 / S7.8",
+      "statement": "seven development discharges, frozen, then 55 external discharges",
+      "classification": "STALE_SUPERSEDED",
+      "proposed_correction": "Epoch 1: 20 development / 42 external. Epoch 2: six discharge-grouped folds over all 62."
+    },
+    {
+      "id": "rec-4",
+      "section": "Results 1.5 / Fig 4b / S7.8",
+      "statement": "pooled RMSE 0.126 REL10 / 0.114 REL141 / 0.182 RAW10",
+      "classification": "STALE_SUPERSEDED",
+      "proposed_correction": "Retired for leakage and for being beaten by persistence (0.0685). Replace with the Epoch-2 table."
+    },
+    {
+      "id": "rec-5",
+      "section": "Results 1.5 / Fig 4b",
+      "statement": "lower error on 46 of 55 external discharges",
+      "classification": "STALE_SUPERSEDED",
+      "proposed_correction": "Replace with 32 wins / 5 ties / 25 losses against persistence over 62 out-of-fold discharges."
+    },
+    {
+      "id": "rec-6",
+      "section": "Results 1.5 / S7.8",
+      "statement": "effective degrees of freedom 99 -> 10.6",
+      "classification": "UNVERIFIED",
+      "proposed_correction": "Never reproduced from primary artifacts; belongs to the retired branch. Remove."
+    },
+    {
+      "id": "rec-7",
+      "section": "Fig 4b title",
+      "statement": "Compact Representation With External Structural Transfer",
+      "classification": "STALE_SUPERSEDED",
+      "proposed_correction": "The frozen verdict for the corrected branch is NO_QUALIFIED_NONTRIVIAL_STRUCTURAL_TRANSFER (S7.10). The Epoch-2 claim is target-cross-fitted reconstruction over a predictor-qualified finite object."
+    },
+    {
+      "id": "rec-8",
+      "section": "Results 1.5",
+      "statement": "utility survives structural transfer to discharges excluded from selection",
+      "classification": "STALE_SUPERSEDED",
+      "proposed_correction": "Replace with the Epoch-2 statement and attach both qualifications."
+    },
+    {
+      "id": "rec-9",
+      "section": "Fig 4b",
+      "statement": "93% Nominal Reduction; Support Selected on 7 Development Discharges",
+      "classification": "STALE_SUPERSEDED",
+      "proposed_correction": "Remove."
+    },
+    {
+      "id": "rec-10",
+      "section": "S7.8",
+      "statement": "I_p and its descendants excluded before structural search",
+      "classification": "SEMANTICALLY_INCONSISTENT",
+      "proposed_correction": "The principle is retained and is correct; in the archive it was NOT achieved for I_p, which is why the branch was retired. For `density` it is achieved: 17 of 95 quantities excluded, including all 15 EFIT quantities fail-closed."
+    },
+    {
+      "id": "rec-11",
+      "section": "Results 1.5 / S7",
+      "statement": "the Epoch-1 to Epoch-2 iterative arc",
+      "classification": "MISSING_FROM_MANUSCRIPT",
+      "proposed_correction": "Add; it is the strongest methodological content the DIII-D example yields."
+    },
+    {
+      "id": "m-1",
+      "section": "Methods",
+      "statement": "DIII-D reconstruction paragraphs referring to I_p",
+      "classification": "STALE_SUPERSEDED",
+      "proposed_correction": "Retarget to `density` and the cross-fitted design."
+    },
+    {
+      "id": "m-2",
+      "section": "Methods / S1 / S3",
+      "statement": "any statement that all post-evaluation operational change creates a new scientific branch",
+      "classification": "SEMANTICALLY_INCONSISTENT",
+      "proposed_correction": "Replace with the operational-epoch rule. The blanket form occurs in 1.1-b."
+    },
+    {
+      "id": "m-3",
+      "section": "S8",
+      "statement": "provenance-preserving ontology refinement",
+      "classification": "SUPPORTED_BUT_WORDING_NEEDS_UPDATE",
+      "proposed_correction": "Frame refinement as advancing an operational epoch; cite S7.K2 as the worked example."
+    }
+  ],
+  "summary": {
+    "SEMANTICALLY_INCONSISTENT": 5,
+    "SUPPORTED_CURRENT": 9,
+    "MISSING_FROM_MANUSCRIPT": 4,
+    "UNVERIFIED": 2,
+    "STALE_SUPERSEDED": 9,
+    "SUPPORTED_BUT_WORDING_NEEDS_UPDATE": 1
+  },
+  "replacement_numbers": {
+    "target": "density",
+    "n_discharges": 62,
+    "n_predictors": 78,
+    "admissible_atoms": 10778,
+    "qualified_basis": 3451,
+    "tau": 1.0,
+    "n_folds": 6,
+    "design": "target cross-fitted, discharge grouped",
+    "Delta_0": -0.764489,
+    "Delta_1": -0.027308,
+    "REL": {
+      "mean": 0.1891,
+      "median": 0.1515,
+      "p90": 0.2959,
+      "max": 0.9199
+    },
+    "vs_raw_ridge_78": -0.096,
+    "vs_raw_histgb_78": -0.1573,
+    "vs_hardened_ridge_70": -0.0951,
+    "vs_persistence_WTL": [
+      32,
+      5,
+      25
+    ],
+    "era_earlier": {
+      "n": 35,
+      "Delta_1": 0.0076,
+      "direction": "PRACTICAL_TIE"
+    },
+    "era_later": {
+      "n": 27,
+      "Delta_1": -0.0726,
+      "direction": "MATERIAL_IMPROVEMENT"
+    },
+    "V3": "PASS",
+    "V6": "PASS_WITH_QUALIFICATION",
+    "V_RANGE": {
+      "result": "PASS",
+      "checks": 2232,
+      "failures": 0
+    },
+    "tiers": [
+      "FORMAL_PASS",
+      "CLEAN_DEMO_NOT_MET"
+    ],
+    "supports": {
+      "n": 6,
+      "size": 12,
+      "any_identical": false,
+      "mean_jaccard": 0.285
+    }
+  },
+  "briefing_discrepancy": {
+    "expected": "about 41% of samples with |A| < 1e-4",
+    "frozen_value": 0.002355,
+    "artifact": "Implicit_elimination_and_denominator_conditioning/outputs/eliminated_A_summary.json",
+    "likely_origin": "0.4125238316 is the cohort-mean-vector pooled RMSE",
+    "confirmed_instead": {
+      "min_abs_A": 2.6428213717455407e-07,
+      "shiftval_range": [
+        14.643161791053483,
+        24.2426158353731
+      ],
+      "elimination_identity_max_error": 7.896461262646426e-15
+    },
+    "manuscript_affected": false
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "policy_id": "STABILITY_METRIC_POLICY_V1",
+  "generated_utc": "2026-09-05T08:07:46.430834+00:00",
+  "parent_wording": "generalization / stability: aggregated across development discharges and all three predeclared temporal blocks",
+  "parent_machine_readable_definition": {
+    "source": "K_REC_PRE_V2.json U_rec.criteria_in_order",
+    "content": "criterion NAME only; no stronger machine-readable operational definition exists",
+    "conflict_found": false,
+    "conflict_check_note": "the section-11 operationalization was compared against the only machine-readable parent (K_REC_PRE_V2 U_rec) and against UTILITY_AND_QUALIFICATION_POLICY.md; the parent constrains the criterion name, its rank and its data scope, all of which are honoured; no override occurred"
+  },
+  "applies_within": "E_fit (the Rank-1 practical-equivalence set)",
+  "no_weighted_score": true,
+  "block_worst": {
+    "symbol": "BLOCK_WORST(C)",
+    "definition": "max over b in {A,B,C} of (mean_s NRMSE_{s,b}(C))",
+    "aggregation_order": "discharges first, then the maximum over blocks",
+    "worst_block": {
+      "symbol": "b_star(C)",
+      "definition": "argmax_b (mean_s NRMSE_{s,b}(C))",
+      "tie_break": "earliest block in the canonical order A < B < C",
+      "identity": "BLOCK_WORST(C) = mean_s NRMSE_{s, b_star(C)}(C)"
+    },
+    "equivalence": {
+      "rule": "delta = max(SE_delta_worst, 0.01)",
+      "paired_difference": "d_s(A,B) = NRMSE_{s, b_star(A)}(A) - NRMSE_{s, b_star(B)}(B); each candidate contributes its OWN worst block",
+      "se": "SE_delta_worst = sd(d_s, ddof=1) / sqrt(20)",
+      "coherence_proof": "mean_s d_s(A,B) = BLOCK_WORST(A) - BLOCK_WORST(B) exactly, so the paired discharge-level differences average to precisely the candidate-level quantity being compared; the SE is therefore the standard error OF THAT difference and introduces no discretion",
+      "requires_discretion": false,
+      "fallback_rule": {
+        "described_in": "S7.8 instruction section 11",
+        "content": "use the fixed absolute 0.01 NRMSE floor only, and record the qualification",
+        "status": "NOT_REQUIRED",
+        "reason": "a mathematically coherent paired-SE definition WAS implementable without discretion, because b_star(C) is determined by the frozen formula and its A<B<C tie-break; the fallback is therefore not invoked"
+      },
+      "new_tunable_threshold_introduced": false
+    }
+  },
+  "shot_p90": {
+    "symbol": "SHOT_P90(C)",
+    "definition": "90th percentile over the 20 values NRMSE_s(C)",
+    "estimator": "numpy.percentile(v, 90, method='linear')",
+    "estimator_frozen_because": "percentile estimators differ between conventions; the library default is fixed here so the quantity is reproducible, not chosen to favour any outcome",
+    "n": 20,
+    "interpolation_note": "for n=20 the linear method interpolates between the 18th and 19th order statistics at index 0.9*19 = 17.1",
+    "epsilon_or_tolerance": null,
+    "minimized": "deterministically, after the BLOCK_WORST equivalence restriction"
+  },
+  "rank_2_order": [
+    "minimize BLOCK_WORST",
+    "among candidates practically equivalent on BLOCK_WORST, minimize SHOT_P90 exactly"
+  ],
+  "exact_minimum_semantics": "the SHOT_P90 step takes the exact argmin; ties are retained in full and resolved by later ranks, never by a new tolerance",
+  "execution_stage": "S7.9",
+  "selection_domain": "AHAT_REC_DENSITY_ONE_SEED_V2",
+  "selection_domain_cardinality": 162845,
+  "global_optimality_claim": false,
+  "domain_reading": "every quantity defined here is evaluated over the frozen explored frontier Ahat_rec only; A_rec minus Ahat_rec remains ADMISSIBLE_UNSEARCHED and carries no negative finding"
+}

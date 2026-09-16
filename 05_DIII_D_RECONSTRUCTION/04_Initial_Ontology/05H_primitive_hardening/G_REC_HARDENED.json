@@ -1,0 +1,96 @@
+{
+  "ontology_id": "G_REC_DENSITY_HARDENED_V2",
+  "version": "2.0.0",
+  "freeze_id": "D3D-SIR-S7.5H-PRIMITIVE-SPACE-AND-ONTOLOGY-HARDENING-V1",
+  "generated_utc": "2026-09-04T22:28:28.804413+00:00",
+  "formal_definition": "G_rec^H = Gamma_H(X_rec, O_rec, K_rec; Lambda_rec^H, T_rec)",
+  "supersedes_for_primary_search": "G_REC_DENSITY_V1",
+  "superseded_ontology_status": {
+    "id": "G_REC_DENSITY_V1",
+    "status": [
+      "SUPERSEDED_FOR_PRIMARY_SEARCH",
+      "PRESERVED_AS_EXTENDED_SENSITIVITY_ONTOLOGY"
+    ],
+    "preserved_unmodified": true,
+    "primitive_count": 78,
+    "available_for": "S7.11 sensitivity analysis"
+  },
+  "parent_X_rec_id": "X_REC_DENSITY_V2",
+  "parent_K_rec_id": "K_REC_PRE_V2",
+  "target": "density",
+  "target_canonical_unit": "m^-3",
+  "target_forbidden_as_coordinate": true,
+  "target_history_forbidden": true,
+  "primitive_basis": {
+    "P_full": 78,
+    "P_hard": 70,
+    "P_deferred": 8,
+    "hardened_registry": "primitive_basis_hardened.csv",
+    "deferred_registry": "primitive_basis_deferred.csv",
+    "deferred_status": "REDUNDANCY_DEFERRED",
+    "deferred_is_not": [
+      "SCIENTIFICALLY_INADMISSIBLE",
+      "TARGET_IRRELEVANT",
+      "INFORMATION_FREE"
+    ],
+    "selection_was_target_blind": true
+  },
+  "Lambda_rec_H": [
+    "C0",
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "C8"
+  ],
+  "max_constructor_depth": 1,
+  "operand_counts": {
+    "M": 70,
+    "Mt": 68,
+    "Md": 63
+  },
+  "symbolic_upper_bounds": {
+    "C0": 70,
+    "C1": 63,
+    "C2": 2346,
+    "C3": 4556,
+    "C4": 3906,
+    "C5": 68,
+    "C6": 4284,
+    "C7": 4284,
+    "C8": 4284
+  },
+  "symbolic_primary_total": 23861,
+  "constructor_catalogue": "constructor_catalog_hardened.json",
+  "type_rules": "constructor_type_rules_hardened.json",
+  "coordinate_signature_schema": "coordinate_signature_schema_hardened.json",
+  "excluded_families": "excluded_constructor_families_hardened.json",
+  "numerical_realization": "FD2_PHYSICAL_TIME_V1 (unchanged)",
+  "relation_template": "T_REC_V1 (unchanged)",
+  "exact_dependency_constraints": {
+    "DEP_NBI_POWER_SUM": "PRESERVED. pinj and all eight per-beam components remain in P_hard; neither form is privileged. Exact dependency remains a REPRESENTATION-SET-level constraint handled in S7.6.",
+    "aggregate_in_P_hard": true,
+    "n_components_in_P_hard": 8
+  },
+  "unchanged_from_parents": {
+    "target": true,
+    "support_size_bound": [
+      1,
+      12
+    ],
+    "shared_support_semantics": true,
+    "discharge_specific_coefficients": true,
+    "intercept_rule": true,
+    "target_exclusion": true,
+    "provenance_rules": true,
+    "external_cohort": 42,
+    "validation_geometry": true
+  },
+  "A_rec_enumerated": false,
+  "search_priority_assigned": false,
+  "target_values_accessed": 0,
+  "external_values_accessed": 0
+}

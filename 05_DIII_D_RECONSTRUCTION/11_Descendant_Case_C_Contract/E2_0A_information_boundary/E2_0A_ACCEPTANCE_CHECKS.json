@@ -1,0 +1,150 @@
+{
+  "acceptance_id": "E2_0A_ACCEPTANCE_CHECKS_V1",
+  "generated_utc": "2026-09-06T04:47:45.692687+00:00",
+  "n_checks": 35,
+  "n_passed": 35,
+  "result": "35/35",
+  "failed": [],
+  "checks": [
+    {
+      "check": "S7.K2 parent reproduces",
+      "passed": true
+    },
+    {
+      "check": "S7.E2.0 parent reproduces",
+      "passed": true
+    },
+    {
+      "check": "no parent file modified",
+      "passed": true
+    },
+    {
+      "check": "K_REC_V2 unchanged",
+      "passed": true
+    },
+    {
+      "check": "tau remains exactly 1",
+      "passed": true
+    },
+    {
+      "check": "tau_train retired",
+      "passed": true
+    },
+    {
+      "check": "no replacement training-only threshold created",
+      "passed": true
+    },
+    {
+      "check": "claim type unchanged",
+      "passed": true
+    },
+    {
+      "check": "six folds unchanged exactly",
+      "passed": true
+    },
+    {
+      "check": "all 62 predictors permitted for P-RANGE",
+      "passed": true
+    },
+    {
+      "check": "all held-out targets remain excluded from support discovery",
+      "passed": true
+    },
+    {
+      "check": "common candidate basis exactly matches K2 full-domain result",
+      "passed": true
+    },
+    {
+      "check": "candidate basis count = 3451",
+      "passed": true
+    },
+    {
+      "check": "constructor counts match K2",
+      "passed": true
+    },
+    {
+      "check": "closure property verified",
+      "passed": true
+    },
+    {
+      "check": "A_rec itself not rewritten",
+      "passed": true
+    },
+    {
+      "check": "U_rec unchanged",
+      "passed": true
+    },
+    {
+      "check": "V3 unchanged",
+      "passed": true
+    },
+    {
+      "check": "V6 unchanged",
+      "passed": true
+    },
+    {
+      "check": "baselines unchanged",
+      "passed": true
+    },
+    {
+      "check": "search budget unchanged",
+      "passed": true
+    },
+    {
+      "check": "stop rule unchanged",
+      "passed": true
+    },
+    {
+      "check": "CLEAN_DEMO_PASS unchanged",
+      "passed": true
+    },
+    {
+      "check": "target_reads = 0",
+      "passed": true
+    },
+    {
+      "check": "model_error_reads = 0",
+      "passed": true
+    },
+    {
+      "check": "no support selected",
+      "passed": true
+    },
+    {
+      "check": "no model fitted",
+      "passed": true
+    },
+    {
+      "check": "Epoch 2 not started",
+      "passed": true
+    },
+    {
+      "check": "S7.12 not started",
+      "passed": true
+    },
+    {
+      "check": "transition-specific information-flow interpretation written",
+      "passed": true
+    },
+    {
+      "check": "no inductive/future-discharge claim introduced",
+      "passed": true
+    },
+    {
+      "check": "historical E2.0 feasibility table preserved",
+      "passed": true
+    },
+    {
+      "check": "amendment justification does not cite improved success odds as its basis",
+      "passed": true
+    },
+    {
+      "check": "epistemic cost of the relaxation recorded explicitly",
+      "passed": true
+    },
+    {
+      "check": "Markdown count <= 20",
+      "passed": true
+    }
+  ]
+}

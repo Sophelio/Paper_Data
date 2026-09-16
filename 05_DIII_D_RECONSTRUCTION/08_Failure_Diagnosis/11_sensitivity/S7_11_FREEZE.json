@@ -1,0 +1,142 @@
+{
+  "freeze_id": "D3D-SIR-S7.11-SENSITIVITY-AND-FAILURE-INTERPRETATION-V1",
+  "status": "FROZEN_WITH_QUALIFICATIONS",
+  "timestamp_utc": "2026-09-05T23:50:49.762818+00:00",
+  "parent_freeze_id": "D3D-SIR-S7.10-EXTERNAL-VALIDATION-AND-GATE-EVALUATION-V1",
+  "PRIMARY_EXTERNAL_VERDICT_IMMUTABLE": "NO_QUALIFIED_NONTRIVIAL_STRUCTURAL_TRANSFER",
+  "S7_11_VERDICT": "S7_11_DEVELOPMENT_EQUIVALENCE_DOES_NOT_IDENTIFY_EXTERNAL_ROBUSTNESS__CANONICAL_REPRESENTATIVE_EXTERNALLY_FRAGILE__PRIMARY_FAILURE_UNCHANGED",
+  "V9": "FAIL",
+  "final_gate_table": {
+    "V1": "PASS",
+    "V2": "PASS",
+    "V3": "FAIL",
+    "V4": "PASS",
+    "V5": "PASS",
+    "V6": "FAIL",
+    "V7": "PASS",
+    "V8": "PASS",
+    "V10": "PASS",
+    "V9": "FAIL"
+  },
+  "mandatory_gates_failed": [
+    "V3",
+    "V6"
+  ],
+  "support_family": {
+    "n": 217,
+    "n_full_domain": 213,
+    "n_not_full_domain": 4,
+    "V3_STYLE_PASS": 70,
+    "V3_STYLE_PASS_fraction": 0.3286384976525822,
+    "C_dev_star_percentile_mean_nrmse": 86.3849765258216
+  },
+  "prmtan_sensitivities": [
+    {
+      "sensitivity": "PRIMARY_MINUS_PRMTAN_NEPED_ANCESTRY",
+      "support_size": 7,
+      "mean_nrmse": 0.8351184110332609,
+      "median_nrmse": 0.1764497970035971,
+      "Delta_0": -0.0873413939386329,
+      "Delta_1": 0.6248441949215324,
+      "V3_STYLE_PASS": false
+    },
+    {
+      "sensitivity": "PRMTAN_NEPED_ONLY",
+      "support_size": 1,
+      "mean_nrmse": 0.4631741682045934,
+      "median_nrmse": 0.4660059694354572,
+      "Delta_0": -0.4592856367673003,
+      "Delta_1": 0.2528999520928648,
+      "V3_STYLE_PASS": false
+    }
+  ],
+  "qualifications": [
+    "The primary S7.10 external verdict is UNCHANGED and immutable: NO_QUALIFIED_NONTRIVIAL_STRUCTURAL_TRANSFER, V3 FAIL, V6 FAIL, Omega_rec EMPTY.",
+    "The development-equivalent family is HETEROGENEOUS externally: 70 of 213 full-domain supports satisfy the V3-style criterion. The negative result is therefore NOT a uniform property of the family - but neither is any member strong: no support beats persistence by more than 0.0287 NRMSE and the family median Delta_1 is -0.0004, i.e. parity with the trivial baseline.",
+    "C_dev_star is an externally FRAGILE representative: 86.4th percentile of external mean NRMSE within its own family, while carrying the HIGHEST development bootstrap selection frequency of any member (0.093). Development selection frequency and external error are essentially uncorrelated (Spearman -0.09).",
+    "V3-style outcome tracks the catastrophic tail, not typical accuracy: 0 of 70 passers have any discharge above NRMSE 1, against 93 of 143 failures. 186 of 213 supports have a median NRMSE below the persistence median while only 107 have a mean below it.",
+    "V9 resolves FAIL (non-mandatory) on the TEMPORAL_BLOCK component: omitting block B alone flips the V3-style verdict from FAIL to PASS, by a narrow margin (Delta_1 = -0.0114 against -0.01). The DISCHARGE component is clean: 0 of 42, independently re-verified. The NUMERICAL_REALIZATION component was never prospectively instantiated and no robustness may be inferred from its absence.",
+    "Neither prmtan_neped sensitivity passes. Removing all five prmtan-ancestry coordinates makes the external mean WORSE (0.835 vs 0.742); ID(prmtan_neped) alone has a better mean (0.463) but a much worse median (0.466 vs 0.170). The relational construction adds substantial typical-case accuracy over the same-family diagnostic alone, and neither reaches nontrivial skill.",
+    "The era asymmetry is family-wide, not canonical-specific: 206 of 213 supports meet the later-era threshold and only 7 of 213 meet the earlier-era threshold. Reported as diagnosis; Omega_rec is NOT narrowed.",
+    "PROD(gasa,gasa) appears in 0 of 70 V3-style passers and 67 of 143 failures - the strongest failure association of any coordinate in the required participation table. It was NOT removed, clipped, winsorized or gated, and no removal test was run."
+  ],
+  "governance": {
+    "S7_10_ARTIFACTS_REWRITTEN": 0,
+    "S7_7_REOPENED": false,
+    "S7_8_REOPENED": false,
+    "S7_9_REOPENED": false,
+    "S7_10_REOPENED": false,
+    "C_dev_star_CHANGED": false,
+    "EXTERNAL_MODEL_RESELECTED": false,
+    "DISCHARGES_DELETED": 0,
+    "ERA_DROPPED": false,
+    "METRIC_CHANGED": false,
+    "THRESHOLD_CHANGED": false,
+    "SEARCH_RERUN": false,
+    "TWO_SEED_EXECUTED": false,
+    "S7_11_PREDECLARATION_CHANGED": false,
+    "GASA_PRODUCT_REMOVED": false,
+    "RANGE_GATE_ADDED": false,
+    "CLIPPING_OR_WINSORIZATION": false,
+    "POST_HOC_GASA_REMOVAL_TEST_RUN": false
+  },
+  "future_contract_recommendation": {
+    "id": "OBSERVATIONAL_RANGE_SUPPORT_ADMISSIBILITY",
+    "status": "PROSPECTIVE_CONTRACT_RECOMMENDATION",
+    "content": "mathematical domain support is not observational range support. x^2 is defined for every finite x, yet a calibration-supported relation involving x^2 becomes numerically unsupported when x moves far outside the calibration region. A future SIR contract should consider prospective range-support admissibility for rapidly amplifying nonlinear total-map constructors - products and powers - in addition to the existing denominator guard.",
+    "operationalized_in_this_study": false,
+    "added_to_P_rec_retrospectively": false
+  },
+  "acceptance_checks": "39/39",
+  "acceptance_failed": [],
+  "n_artifacts": 26,
+  "n_markdown": 6,
+  "markdown_files": [
+    "PRMTAN_NEPED_SENSITIVITY.md",
+    "README.md",
+    "S7_11_SENSITIVITY_AND_INTERPRETATION_FINAL.md",
+    "S7_11_SENSITIVITY_AUDIT_REPORT.md",
+    "SUPPORT_FAMILY_SENSITIVITY.md",
+    "V9_SENSITIVITY_RESULT.md"
+  ],
+  "all_artifact_hashes": {
+    "block_omission_sensitivity.csv": "953832d27e0c259b8596955feeb46aa28df8b209fd5a14fcddf342fa019abe09",
+    "discharge_sensitivity_summary.csv": "e0b39a1959422b039056a862d48147cbe717c4c5b5ebcecf7dfe7d81ac48a90e",
+    "manifests/FAMILY_RUN.json": "d4e9df0dbc2c8e7a103dda3d85d4a1c6fa6a85e2c248197742e1a543d17bb1a5",
+    "manifests/S7_11_RUN_MANIFEST.json": "166b9e5362d7e85d7234a25ce8273760166107e43349719dc8ab9e014fd7ac39",
+    "PRMTAN_NEPED_SENSITIVITY.md": "5abbccc48bef3d12310aea94db0e2351889cfdc51f3b0f6ee0a9ce5c895630fe",
+    "prmtan_sensitivity_metrics.csv": "6923ed9aa763ca9baa07d8954ae89b8d45663fbe3437f4c76ec8da97223470e4",
+    "README.md": "45ca8eb4e7bdfe1f93d1950f377575c808942927bf4708bb25fb58495e432147",
+    "S7_11_GATE_RESULTS.json": "c322ef508dab9b4b916314631980c49e3f904c63c68d794c24401e948b10de0b",
+    "S7_11_PREDECLARATION_VERIFICATION.json": "36a0e36054ed2b587df742aad6d1c21146ee12343eb1cd81765555f5cc80f5ec",
+    "S7_11_QUALIFICATIONS.json": "5f69c3b69f4382f06bc3148ce37c0758ed9170fc3baabe589a4743289c5c827f",
+    "S7_11_SENSITIVITY_AND_INTERPRETATION_FINAL.md": "e38b8fc55a1bd57c8b8f561b187a2fd5e51ddda2bc24fac6b1ab3afa09d12842",
+    "S7_11_SENSITIVITY_AUDIT_REPORT.md": "aff4cef3ed0c86d58a60ed272e14a800d595a4bc59803ae473f173009bd9d91f",
+    "S7_11_SUPPORT_FAMILY_V3_SUMMARY.json": "262d3d7a7334a95f7c6b22d3c1b412596a3ab7f58f956ae26bf3bef655b06a0e",
+    "S7_11_VERDICT.json": "e0e191e4b2919ac971f61538bccaf8a13e5fee028dc660825cbaebd585a3111a",
+    "scripts/s7_11_a_verify.py": "f336ea36048f261f217ce93099c98a6d848b181310a41b8080a207d6c397f9b1",
+    "scripts/s7_11_b_family.py": "02559a553b7ad54bc6cdca582a21bdd34fd0900b4a07dc1dad434be656e57fff",
+    "scripts/s7_11_c_v9.py": "3e6e72ecd2506f91f94aebf6ad96e159503bf9043b22eb8a95304bdd685fb780",
+    "scripts/s7_11_d_freeze.py": "0eebab5937a35099e74772f9109924a3cf625bd4cd8a4d8b758f09ecff48986c",
+    "support_family_applicability.csv": "69041bfda74b93b7d641d4d515c5576f53e09aa69f02e25243e2ac06ee24924a",
+    "support_family_coordinate_summary.csv": "d0eda2f33f9895df8fa289624cb65e26e67d821d04538cdaa25dd1fb19114133",
+    "support_family_distributions.csv": "04ecb70119f3d5b79c46de314683540e8d855af731e549cf0f542432089b7745",
+    "support_family_external_metrics.csv": "d8bf4bdf152743951e831dd0a10f4c388eaeb83eae3a665741f5b37d3f995a5b",
+    "SUPPORT_FAMILY_SENSITIVITY.md": "2c14a2d6687708c9a966410e6dde044ec29377dabde9c36288fdb38fafa2cf2c",
+    "support_family_v3_results.csv": "ddecacbd81c05c7f0a4bfefc8b56a542267e4cf5203f273eecd2103c7b682685",
+    "V9_RESULT.json": "fa50566ce986c3bf6fe5db5ef84cb92a42517bcc94a036ccc8686b7646589eab",
+    "V9_SENSITIVITY_RESULT.md": "7721dd7493c6eb834060f110a5be3ce5e512e33c0952a5802d27debdba0c63d4"
+  },
+  "self_referential_excluded": [
+    "S7_11_ACCEPTANCE_CHECKS.json",
+    "S7_11_FREEZE.json"
+  ],
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "sklearn": "1.9.0",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "next_stage": "S7.12 (qualified result assembly) - NOT AUTHORISED"
+}

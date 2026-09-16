@@ -1,0 +1,95 @@
+{
+  "protocol_id": "S7.2-VALIDATION-GEOMETRY-V1",
+  "generated_utc": "2026-09-02T21:26:57.071337+00:00",
+  "geometry": "rolling-origin, expanding calibration, disjoint protected blocks",
+  "normalised_time": "tau in [0,1] over each discharge's common support",
+  "windows": [
+    {
+      "block": "A",
+      "calibration": [
+        0.0,
+        0.4
+      ],
+      "protected": [
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "block": "B",
+      "calibration": [
+        0.0,
+        0.6
+      ],
+      "protected": [
+        0.6,
+        0.7
+      ]
+    },
+    {
+      "block": "C",
+      "calibration": [
+        0.0,
+        0.8
+      ],
+      "protected": [
+        0.8,
+        0.9
+      ]
+    }
+  ],
+  "n_blocks_per_discharge": 3,
+  "target_values_used_to_choose_windows": false,
+  "signal_values_used_to_choose_windows": false,
+  "predeclared_minima": {
+    "min_protected_samples": 10,
+    "min_calibration_samples": 30
+  },
+  "feasibility_by_candidate_grid": [
+    {
+      "grid_dt_ms": 0.02,
+      "all_discharges_all_blocks_feasible": true,
+      "min_protected_samples_observed": 18750,
+      "min_calibration_samples_observed": 75000
+    },
+    {
+      "grid_dt_ms": 0.1,
+      "all_discharges_all_blocks_feasible": true,
+      "min_protected_samples_observed": 3750,
+      "min_calibration_samples_observed": 15000
+    },
+    {
+      "grid_dt_ms": 0.2,
+      "all_discharges_all_blocks_feasible": true,
+      "min_protected_samples_observed": 1875,
+      "min_calibration_samples_observed": 7500
+    },
+    {
+      "grid_dt_ms": 1.0,
+      "all_discharges_all_blocks_feasible": true,
+      "min_protected_samples_observed": 375,
+      "min_calibration_samples_observed": 1500
+    },
+    {
+      "grid_dt_ms": 2.0,
+      "all_discharges_all_blocks_feasible": true,
+      "min_protected_samples_observed": 187,
+      "min_calibration_samples_observed": 750
+    },
+    {
+      "grid_dt_ms": 10.0,
+      "all_discharges_all_blocks_feasible": true,
+      "min_protected_samples_observed": 37,
+      "min_calibration_samples_observed": 150
+    },
+    {
+      "grid_dt_ms": 20.0,
+      "all_discharges_all_blocks_feasible": true,
+      "min_protected_samples_observed": 18,
+      "min_calibration_samples_observed": 75
+    }
+  ],
+  "worst_case_grid_feasible": true,
+  "verdict": "FEASIBLE_AT_ALL_CANDIDATE_CADENCES",
+  "note": "Feasibility is audited at every native cadence present in the object, because the analysis grid is set by the coarsest family admitted for a given target under the numerical-resolution policy. The 20 ms case is the worst case and bounds all others."
+}

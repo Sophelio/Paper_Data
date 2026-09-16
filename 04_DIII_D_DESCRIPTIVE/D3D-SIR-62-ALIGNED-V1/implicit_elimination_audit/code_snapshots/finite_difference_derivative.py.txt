@@ -1,0 +1,15 @@
+# original_path: submodules/Archaieus/src/Archaieus/sir/utils/transforms.py
+# lines: 305-313
+# sha256: 3287584fe9b8757b974fce256e8f4773d37f4583bb1a1afdc5c5a07823d5c8ec
+# git_commit: aefd942ea111f7bd24d1d86cafb954639aff3fb1
+# historical_match_status: CODE_PRESENT_MATCHES_ARTIFACT_CONSTRUCTION
+
+    def derivative(self, x, dt=1):
+
+        def do_deriv(some_x):
+            dx       = np.zeros_like(some_x, dtype=np.float64)
+            # central difference  
+            dx[1:-1] = 0.5 * (some_x[2:] - some_x[:-2]) / dt
+            # boundary conditions
+            dx[0]    = (some_x[1] - some_x[0]) / dt
+            dx[-1]   = (some_x[-1] - some_x[-2]) / dt

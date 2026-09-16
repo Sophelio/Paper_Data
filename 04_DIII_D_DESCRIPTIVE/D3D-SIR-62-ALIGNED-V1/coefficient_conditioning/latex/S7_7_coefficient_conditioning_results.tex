@@ -1,0 +1,45 @@
+\subsection{Coefficient conditioning and identifiability conditional on the selected support}
+\label{subsec:d3d-coefficient-conditioning}
+
+Conditional on the frozen seven-coordinate support of the canonical
+DIII-D reconstruction package (\texttt{D3D-SIR-62-ALIGNED-V1}), we assessed whether the
+discharge-specific coefficients are numerically identifiable and whether
+cross-discharge coefficient variation exceeds within-discharge estimation
+uncertainty. The analysis uses the historical calibrated equation key
+\texttt{1\_8*} and the exact evaluated $1000\times 7$ design matrices.
+Feature ordering is tracked separately as source-matrix order and manuscript
+display order; coefficients are never silently permuted.
+
+Least-squares reproduction of the canonical discharge-specific fits recovers
+pooled RMSE $0.05758467$ (reference
+$0.05758467$). Applying the cohort-mean coefficient
+vector recovers pooled RMSE $0.41252383$.
+Median spectral condition number of the seven-column feature matrix is
+$41.3$; at relative singular-value tolerances $10^{-12}$ through
+$10^{-6}$, rank deficiency is rare
+(0 discharges with
+rank~$<7$ at $\tau=10^{-6}$).
+
+Pearson correlations and variance-inflation factors identify locally collinear
+pairs, while the weakest right singular vectors localize compensating
+directions. Truncated singular-value refits separate coefficient movement from
+reconstruction change: low RMSE does not imply coefficient uniqueness when
+near-null directions are present.
+
+Because the series are temporally dependent, coefficient uncertainty is
+estimated by a circular moving-block bootstrap ($B=1000$
+primary replicates per discharge; short/long block sensitivities with
+$B=300$). Comparing observed
+between-discharge coefficient variance with average within-discharge bootstrap
+variance, and fitting a heteroscedastic Gaussian random-effects model for each
+coefficient, yields
+4 coefficients with resolved
+between-discharge variation and
+2 dominated by within-discharge
+uncertainty. A multivariate difference-covariance analysis finds
+5 positive resolved directions in
+coefficient space.
+
+Overall audit verdict: \textbf{D3D-COEFFICIENT-FAMILY-RESOLVED}.
+This conclusion is conditional on the selected support and does not establish
+unique structural selection, predictive generalization, or causal mechanism.

@@ -1,0 +1,117 @@
+{
+  "catalogue_id": "LAMBDA_REC_H_V1",
+  "families": {
+    "Lambda_rec_H": [
+      "C0",
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8"
+    ],
+    "max_constructor_depth": 1,
+    "C0": {
+      "name": "primitive_level",
+      "symbol": "x_i",
+      "arity": 1
+    },
+    "C1": {
+      "name": "first_temporal_derivative",
+      "symbol": "dx_i/dt",
+      "arity": 1
+    },
+    "C2": {
+      "name": "level_level_product",
+      "symbol": "x_i x_j",
+      "arity": 2,
+      "symmetric": true,
+      "self_allowed": true,
+      "signature": "PROD(i,j) with i<=j"
+    },
+    "C3": {
+      "name": "level_level_ratio",
+      "symbol": "x_i / x_j",
+      "arity": 2,
+      "directional": true,
+      "signature": "RATIO(i,j)"
+    },
+    "C4": {
+      "name": "trajectory_relational_derivative",
+      "symbol": "(dx_i/dt)/(dx_j/dt)",
+      "arity": 2,
+      "directional": true,
+      "signature": "PHASE(i|j)"
+    },
+    "C5": {
+      "name": "unary_reciprocal",
+      "symbol": "1/x_i",
+      "arity": 1,
+      "signature": "RECIP(i)",
+      "semantics": "inverse observational scale"
+    },
+    "C6": {
+      "name": "level_rate_interaction",
+      "symbol": "x_i (dx_j/dt)",
+      "arity": 2,
+      "role_directional": true,
+      "signature": "LEVEL_RATE(i|j)",
+      "semantics": "the level of one observed quantity weighted by the instantaneous rate of another",
+      "self_allowed": true,
+      "note": "NOT collapsed with LEVEL_RATE(j|i): the semantic roles differ and the quantities are not generally equal"
+    },
+    "C7": {
+      "name": "rate_over_level",
+      "symbol": "(dx_i/dt)/x_j",
+      "arity": 2,
+      "directional": true,
+      "signature": "RATE_OVER_LEVEL(i|j)",
+      "semantics": "rate of one observed quantity relative to the level scale of another",
+      "self_allowed": true,
+      "special_case_i_eq_j": "fractional temporal rate; a logarithmic rate where defined; unit s^-1"
+    },
+    "C8": {
+      "name": "level_over_rate",
+      "symbol": "x_i/(dx_j/dt)",
+      "arity": 2,
+      "directional": true,
+      "signature": "LEVEL_OVER_RATE(i|j)",
+      "semantics": "an observed level relative to another quantity's rate",
+      "self_allowed": true,
+      "special_case_i_eq_j": "local characteristic-timescale coordinate; unit s"
+    },
+    "C6_C8_are_not_depth_2": "C6-C8 are PRIMITIVE-PAIR constructors with an internal declared rate operator. They do NOT consume C1 coordinate objects recursively.",
+    "derivative_realization": "FD2_PHYSICAL_TIME_V1 (unchanged)"
+  },
+  "max_constructor_depth": 1,
+  "constructors_operate_on": "PRIMITIVES ONLY. C6-C8 are primitive-pair constructors with an INTERNAL declared rate operator; they do NOT consume C1 coordinate objects recursively and are NOT depth 2.",
+  "not_primary": [
+    "derivative of a product",
+    "product of two constructed ratios",
+    "ratio of phase derivatives",
+    "phase derivative of a product",
+    "recursive reciprocal",
+    "products of products",
+    "second derivative",
+    "any depth > 1 construction"
+  ],
+  "operand_counts": {
+    "M": 70,
+    "Mt": 68,
+    "Md": 63
+  },
+  "symbolic_upper_bounds": {
+    "C0": 70,
+    "C1": 63,
+    "C2": 2346,
+    "C3": 4556,
+    "C4": 3906,
+    "C5": 68,
+    "C6": 4284,
+    "C7": 4284,
+    "C8": 4284
+  },
+  "symbolic_primary_total": 23861
+}

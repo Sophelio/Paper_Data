@@ -1,0 +1,7 @@
+coordinate_id,constructor,operands,primitive_ancestors,depth,output_dimension,unit_expression,primary_or_sensitivity,reason,examined_by,in_primary_A_rec
+DOT(prmtan_neped),C1,prmtan_neped,prmtan_neped,1,(m^-3) T^-1,m^-3/s,SENSITIVITY_ONLY_CONSTRUCTOR_OUTPUT,operand is UPSTREAM_UPSAMPLED; derivative reports the interpolant,S7.11,False
+DOT(prmtan_teped),C1,prmtan_teped,prmtan_teped,1,(eV) T^-1,eV/s,SENSITIVITY_ONLY_CONSTRUCTOR_OUTPUT,operand is UPSTREAM_UPSAMPLED; derivative reports the interpolant,S7.11,False
+DOT(fs04),C1,fs04,fs04,1,(ph sr^-1 m^-2 s^-1) T^-1,ph/(sr m^2 s)/s,SENSITIVITY_ONLY_CONSTRUCTOR_OUTPUT,operand is UPSTREAM_UPSAMPLED; derivative reports the interpolant,S7.11,False
+DOT(fs03da),C1,fs03da,fs03da,1,(ph sr^-1 m^-2 s^-1) T^-1,ph/(sr m^2 s)/s,SENSITIVITY_ONLY_CONSTRUCTOR_OUTPUT,operand is UPSTREAM_UPSAMPLED; derivative reports the interpolant,S7.11,False
+DOT(fs04da),C1,fs04da,fs04da,1,(ph sr^-1 m^-2 s^-1) T^-1,ph/(sr m^2 s)/s,SENSITIVITY_ONLY_CONSTRUCTOR_OUTPUT,operand is UPSTREAM_UPSAMPLED; derivative reports the interpolant,S7.11,False
+DOT(fs05da),C1,fs05da,fs05da,1,(ph sr^-1 m^-2 s^-1) T^-1,ph/(sr m^2 s)/s,SENSITIVITY_ONLY_CONSTRUCTOR_OUTPUT,operand is UPSTREAM_UPSAMPLED; derivative reports the interpolant,S7.11,False

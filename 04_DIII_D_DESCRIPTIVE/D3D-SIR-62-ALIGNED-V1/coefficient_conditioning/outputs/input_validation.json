@@ -1,0 +1,38 @@
+{
+  "canonical_run_id": "D3D-SIR-62-ALIGNED-V1",
+  "audit_run_id": "D3D-SIR-62-COEFFICIENT-CONDITIONING-V1",
+  "n_discharges": 62,
+  "realization_index_ok": true,
+  "n_samples_per_discharge": 1000,
+  "n_features": 7,
+  "source_matrix_order": [
+    "d[pcdiamag3]/d[kappa]",
+    "d[kappa]/d[t]",
+    "r[q95]/r[kappa]",
+    "d[pcdiamag3]/d[betan]",
+    "d[kappa]/d[betan]",
+    "d[betan]/d[t]",
+    "d[li]/d[betan]"
+  ],
+  "manuscript_display_order": [
+    "D_kappa W_dia",
+    "D_betaN W_dia",
+    "D_betaN kappa",
+    "D_betaN l_i",
+    "q95 / kappa",
+    "dot beta_N",
+    "dot kappa"
+  ],
+  "maximum_absolute_coefficient_difference": 2.220446049250313e-16,
+  "maximum_relative_coefficient_difference": 1.0771126064039738e-16,
+  "maximum_prediction_difference": 4.107825191113079e-15,
+  "maximum_residual_difference": 4.107825191113079e-15,
+  "reproduced_pooled_rmse": 0.05758467247445343,
+  "reference_pooled_rmse": 0.05758467247445343,
+  "delta_pooled_rmse": 0.0,
+  "reproduced_mean_vector_rmse": 0.4125238315775986,
+  "reference_mean_vector_rmse": 0.4125238315775986,
+  "delta_mean_vector_rmse": 0.0,
+  "rmse_acceptance_tolerance": 1e-08,
+  "pass": true
+}

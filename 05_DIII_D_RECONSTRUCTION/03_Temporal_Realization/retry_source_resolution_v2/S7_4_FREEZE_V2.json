@@ -1,0 +1,50 @@
+{
+  "freeze_id": "D3D-SIR-S7.4-MATHEMATICAL-INTERPRETATION-SOURCE-RESOLUTION-V2",
+  "status": "FROZEN_READY_FOR_S7.5",
+  "timestamp_utc": "2026-09-03T05:48:06.230381+00:00",
+  "X_rec_instantiated": true,
+  "supersedes": "D3D-SIR-S7.4-MATHEMATICAL-INTERPRETATION-V1 (stopped at temporal gate; preserved unmodified)",
+  "authoritative_boundary": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-SOURCE-RESOLUTION-V2",
+  "parent_verification_sha256": "ec878f4dbbfc853e3882dfdb76c95b3859c4919357d038dff9accb2ade21ac5b",
+  "temporal_gate_sha256": "e6b4248734d2154f12ac56f8341a6aa6a00a5f306d23dfff309b82229f0e02c0",
+  "X_REC_sha256": "9c16e9b25754b3528afa7a7dcb224d67c05f0521e326c5026781134c41f569b9",
+  "typed_blocks_sha256": "219d6ec3d41c4a5f0dbacdca389f22cc3f2c00b056c6a80dd21dc3b52aed693a",
+  "trajectory_index_sha256": "988c3babef230b3e2707f0e353b239af5c2d0a30db0b4bbbdb80704602a2aadd",
+  "temporal_semantics_sha256": "5807545623c1ddc576b22fb1ff69611fd38deebfb6759f118b8af59a122fdc5f",
+  "dependency_edges_sha256": "a9df37af85558799dbe3471b88bfb371a3276eea34ce4f985a25fc666757c111",
+  "temporal_resolution_types_sha256": "877d693c9371b8f73c4ee18e35e4d5c21944959839fb0b6aea99fc3d4a75f98f",
+  "interpretation_constraints_sha256": "6452007cb8b84542b469300b4ab512c4d525c0acc6631d7dc58e14d80829777c",
+  "target": "density",
+  "n_predictors": 78,
+  "n_realizations": 62,
+  "n_broad_families": 7,
+  "n_type_blocks": 8,
+  "delta_t_ms_range": [
+    5.8533333333333335,
+    14.186746987951809
+  ],
+  "environment": {
+    "python": "3.13.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "all_artifact_hashes": {
+    "interpretation_constraints.json": "6452007cb8b84542b469300b4ab512c4d525c0acc6631d7dc58e14d80829777c",
+    "manifests/PARENT_FREEZE_VERIFICATION_V2.json": "ec878f4dbbfc853e3882dfdb76c95b3859c4919357d038dff9accb2ade21ac5b",
+    "manifests/TEMPORAL_GATE_VERIFICATION_V2.json": "e6b4248734d2154f12ac56f8341a6aa6a00a5f306d23dfff309b82229f0e02c0",
+    "predictor_dependency_edges.csv": "a9df37af85558799dbe3471b88bfb371a3276eea34ce4f985a25fc666757c111",
+    "README.md": "11e9b826b56c8947cf342b7e28ae7d95aaed94135358862f435ecd198e3544a0",
+    "S7_4_MATHEMATICAL_INTERPRETATION_AUDIT_REPORT.md": "e1b8d8fa340d627e7cac5a1484b28a664e7de10fda1e53d29a5c202b76ddd491",
+    "S7_4_MATHEMATICAL_INTERPRETATION_FINAL.md": "031e06b06c3c4e822ff458b209de86c46742b9967716b8513f85bd4357a0e94f",
+    "scripts/s7_4_build_x_rec.py": "0bd8342c1cc0ed1a37dec43d6f4bde4c797047f9f07f9160412c1ec944312bf3",
+    "temporal_resolution_types.csv": "877d693c9371b8f73c4ee18e35e4d5c21944959839fb0b6aea99fc3d4a75f98f",
+    "temporal_semantics.json": "5807545623c1ddc576b22fb1ff69611fd38deebfb6759f118b8af59a122fdc5f",
+    "TEMPORAL_SEMANTICS.md": "ce3a13c17ed00fd9b2f7b4ea4635bdf860bcaaa404b63c1b8de65028a1697028",
+    "trajectory_index.csv": "988c3babef230b3e2707f0e353b239af5c2d0a30db0b4bbbdb80704602a2aadd",
+    "typed_signal_blocks.csv": "219d6ec3d41c4a5f0dbacdca389f22cc3f2c00b056c6a80dd21dc3b52aed693a",
+    "X_REC.json": "9c16e9b25754b3528afa7a7dcb224d67c05f0521e326c5026781134c41f569b9",
+    "X_REC_DEFINITION.md": "334f6999fe9376e113aefea8de5c70e6a184ad98b6a5a0923e81c90c2b0f5adb"
+  },
+  "n_artifacts": 15,
+  "acceptance_checks": "44/44",
+  "next_stage": "S7.5 (typed relational ontology G_rec) - NOT AUTHORISED"
+}

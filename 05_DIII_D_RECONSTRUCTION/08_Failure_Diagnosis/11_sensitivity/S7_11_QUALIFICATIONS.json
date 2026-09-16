@@ -1,0 +1,24 @@
+{
+  "record_id": "S7_11_QUALIFICATIONS_V1",
+  "carried_unchanged": {
+    "BOOT_SELECTION_FREQ_C_dev_star": 0.093,
+    "n_development_bootstrap_winners": 217,
+    "representative_of_equivalence_class_only": true,
+    "no_unique_support_claim": true,
+    "no_global_optimality_claim": true,
+    "prmtan_neped": "a same-family observable whose provenance is certified independent of the target signal under the frozen information boundary; this does NOT establish physical or statistical independence from line-averaged density",
+    "pcdiamag3": "UNCALIBRATED_SIGNAL; its fitted coefficient has no certified physical-dimensional interpretation",
+    "omega_rec_supported_claim_domain": "EMPTY",
+    "C_dev_star_unchanged": true
+  },
+  "sharpened_by_S7_11": {
+    "exact_support_identifiability": "ABSENT - development selection frequency does not predict external behaviour",
+    "relational_ingredient_stability": "PRESENT in development (pcdiamag3 in 100% of winners) and reported here per coordinate, but ingredient stability does not confer external robustness",
+    "external_utility_of_the_support_family": "HETEROGENEOUS and marginal: 32.9% V3-style pass, none by more than 0.0287",
+    "three_concepts_kept_distinct": true
+  },
+  "pcdiamag3_family_recurrence": {
+    "share_of_217_supports": 1.0,
+    "physical_coefficient_meaning_inferred": false
+  }
+}

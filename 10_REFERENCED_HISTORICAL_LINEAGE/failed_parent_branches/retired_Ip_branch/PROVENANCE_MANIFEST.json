@@ -1,0 +1,56 @@
+{
+  "package": "fig6data",
+  "generated_utc": "2026-09-02T04:48:03.050343+00:00",
+  "status": "PARTIAL - Audit A complete, Audits B-L outstanding",
+  "audits_complete": [
+    "D3D-FIG6-PROVENANCE-AUDIT-V1",
+    "D3D-FIG6-CORRECTED-UNIVERSE-PROBE-V1"
+  ],
+  "audits_outstanding": [
+    "q_desc reproduction",
+    "numerical-realization stability",
+    "coefficient conditioning/TSVD",
+    "individual coefficient qualification",
+    "multivariate eigenspectrum + matched null",
+    "implicit elimination",
+    "RAW10 fairness",
+    "common support",
+    "paired 55-discharge statistics",
+    "effective DoF"
+  ],
+  "canonical_tree": "D:/sir-web/Paper Examples/Relational Coordinates for Multimodal Plasma Observations/",
+  "files": {
+    "qrec_corrected_universe_probe.csv": {
+      "sha256": "8979e49b265a3242",
+      "bytes": 4061
+    },
+    "qrec_ip_from_q95_inversion.csv": {
+      "sha256": "32e4f80a5fc527b8",
+      "bytes": 3086
+    },
+    "qrec_provenance_dag.csv": {
+      "sha256": "476308019410634a",
+      "bytes": 1698
+    },
+    "qrec_provenance_dependence_by_shot.csv": {
+      "sha256": "b8967cc4db7c4813",
+      "bytes": 17160
+    },
+    "qrec_provenance_verdicts.csv": {
+      "sha256": "7098ef73fc84c889",
+      "bytes": 2335
+    },
+    "qrec_support_admissibility.csv": {
+      "sha256": "7f44c1420956b7e7",
+      "bytes": 734
+    },
+    "qrec_trivial_baselines.csv": {
+      "sha256": "d74088e7f85419b7",
+      "bytes": 4283
+    },
+    "RETIREMENT_RECORD.json": {
+      "sha256": "06274ed9bd1f4d36",
+      "bytes": 2227
+    }
+  }
+}

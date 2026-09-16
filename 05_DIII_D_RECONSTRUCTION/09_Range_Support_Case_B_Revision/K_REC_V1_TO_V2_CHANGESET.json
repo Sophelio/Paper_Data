@@ -1,0 +1,45 @@
+{
+  "changeset_id": "K_REC_V1_TO_V2_CHANGESET_V1",
+  "generated_utc": "2026-09-06T02:59:57.816714+00:00",
+  "parent": "K_REC_V1",
+  "child": "K_REC_V2",
+  "parent_overwritten": false,
+  "revision_class": "MINIMAL_P_ONLY",
+  "changes": [
+    {
+      "component": "P_rec",
+      "type": "ADDITION",
+      "id": "P-RANGE-SUPPORT",
+      "normative": true,
+      "motivated_by": "S7.R1 localization; Epoch-1 Q_rec^(1) diagnostics",
+      "validated_by": "NOT VALIDATED - prospective condition only"
+    },
+    {
+      "component": "V_rec",
+      "type": "CONSEQUENTIAL_ADDITION",
+      "id": "V-RANGE",
+      "normative": true,
+      "note": "operationalizes P-RANGE-SUPPORT coverage; adds no performance gate"
+    },
+    {
+      "component": "H_rec",
+      "type": "LEDGER_EXTENSION",
+      "normative": false
+    }
+  ],
+  "unchanged": [
+    "q_rec",
+    "I_rec",
+    "B_rec",
+    "U_rec",
+    "Omega_rec"
+  ],
+  "gas_signal_provenance": {
+    "resolution": "GAS_SIGNAL_UNIT_RESOLVED_COMMAND_VOLTAGE",
+    "affects_a_normative_K_component": false,
+    "record_class": "FUTURE_EPOCH_SUPERSEDING_PROVENANCE_RECORD",
+    "epoch1_files_edited": 0
+  },
+  "additional_normative_component_required": false,
+  "classification": "MINIMAL_P_ONLY (R1 prediction VERIFIED, not assumed)"
+}

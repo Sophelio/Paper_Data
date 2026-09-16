@@ -1,0 +1,19 @@
+{
+  "generated_utc": "2026-09-06T00:57:28.755375+00:00",
+  "target_reads": 0,
+  "model_error_reads": 0,
+  "predictor_signal_reads": 372,
+  "signals_read": [
+    "gasa",
+    "gasb",
+    "gasc",
+    "gasd",
+    "pinj",
+    "tinj"
+  ],
+  "target_signal_opened": false,
+  "nrmse_or_residual_opened": false,
+  "failure_labels_opened": false,
+  "support_family_labels_opened": false,
+  "verdict": "TARGET_BLIND"
+}

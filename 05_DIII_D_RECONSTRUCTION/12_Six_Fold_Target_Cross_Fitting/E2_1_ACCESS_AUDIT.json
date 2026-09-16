@@ -1,0 +1,224 @@
+{
+  "record_id": "E2_1_ACCESS_AUDIT_V1",
+  "generated_utc": "2026-09-06T05:19:48.877702+00:00",
+  "ledger": [
+    {
+      "utc": "2026-09-06T05:07:13.276516+00:00",
+      "action": "OPEN_CALIBRATION_TARGETS",
+      "n_shots": 51
+    },
+    {
+      "utc": "2026-09-06T05:07:13.276535+00:00",
+      "action": "OPEN_PROTECTED_TARGETS",
+      "n_shots": 51
+    },
+    {
+      "utc": "2026-09-06T05:09:08.208218+00:00",
+      "action": "SUPPORT_HASHED",
+      "fold": 0,
+      "sha256": "4654cd92613002c10ee9d97a480ae6a04dd9682d34fa802ef630d3d60258c8ac"
+    },
+    {
+      "utc": "2026-09-06T05:09:08.208472+00:00",
+      "action": "OPEN_CALIBRATION_TARGETS",
+      "n_shots": 11
+    },
+    {
+      "utc": "2026-09-06T05:09:08.208478+00:00",
+      "action": "HELDOUT_CALIBRATION_OPENED",
+      "fold": 0
+    },
+    {
+      "utc": "2026-09-06T05:09:08.208482+00:00",
+      "action": "OPEN_PROTECTED_TARGETS",
+      "n_shots": 11
+    },
+    {
+      "utc": "2026-09-06T05:09:08.208485+00:00",
+      "action": "HELDOUT_PROTECTED_OPENED_LAST",
+      "fold": 0
+    },
+    {
+      "utc": "2026-09-06T05:09:17.657470+00:00",
+      "action": "OPEN_CALIBRATION_TARGETS",
+      "n_shots": 51
+    },
+    {
+      "utc": "2026-09-06T05:09:17.657494+00:00",
+      "action": "OPEN_PROTECTED_TARGETS",
+      "n_shots": 51
+    },
+    {
+      "utc": "2026-09-06T05:11:17.028819+00:00",
+      "action": "SUPPORT_HASHED",
+      "fold": 1,
+      "sha256": "c3206098d6177f64aeac55049feda714d904d155d39e382db3b4cc9683136adb"
+    },
+    {
+      "utc": "2026-09-06T05:11:17.029013+00:00",
+      "action": "OPEN_CALIBRATION_TARGETS",
+      "n_shots": 11
+    },
+    {
+      "utc": "2026-09-06T05:11:17.029016+00:00",
+      "action": "HELDOUT_CALIBRATION_OPENED",
+      "fold": 1
+    },
+    {
+      "utc": "2026-09-06T05:11:17.029019+00:00",
+      "action": "OPEN_PROTECTED_TARGETS",
+      "n_shots": 11
+    },
+    {
+      "utc": "2026-09-06T05:11:17.029021+00:00",
+      "action": "HELDOUT_PROTECTED_OPENED_LAST",
+      "fold": 1
+    },
+    {
+      "utc": "2026-09-06T05:11:21.206556+00:00",
+      "action": "OPEN_CALIBRATION_TARGETS",
+      "n_shots": 52
+    },
+    {
+      "utc": "2026-09-06T05:11:21.206572+00:00",
+      "action": "OPEN_PROTECTED_TARGETS",
+      "n_shots": 52
+    },
+    {
+      "utc": "2026-09-06T05:13:16.171522+00:00",
+      "action": "SUPPORT_HASHED",
+      "fold": 2,
+      "sha256": "08fd3481eeea2e70375c7c346c02b32195501349da0250dbe900a2910e35781d"
+    },
+    {
+      "utc": "2026-09-06T05:13:16.171688+00:00",
+      "action": "OPEN_CALIBRATION_TARGETS",
+      "n_shots": 10
+    },
+    {
+      "utc": "2026-09-06T05:13:16.171692+00:00",
+      "action": "HELDOUT_CALIBRATION_OPENED",
+      "fold": 2
+    },
+    {
+      "utc": "2026-09-06T05:13:16.171695+00:00",
+      "action": "OPEN_PROTECTED_TARGETS",
+      "n_shots": 10
+    },
+    {
+      "utc": "2026-09-06T05:13:16.171696+00:00",
+      "action": "HELDOUT_PROTECTED_OPENED_LAST",
+      "fold": 2
+    },
+    {
+      "utc": "2026-09-06T05:13:20.104685+00:00",
+      "action": "OPEN_CALIBRATION_TARGETS",
+      "n_shots": 52
+    },
+    {
+      "utc": "2026-09-06T05:13:20.104702+00:00",
+      "action": "OPEN_PROTECTED_TARGETS",
+      "n_shots": 52
+    },
+    {
+      "utc": "2026-09-06T05:15:22.927017+00:00",
+      "action": "SUPPORT_HASHED",
+      "fold": 3,
+      "sha256": "e69c6efc20b77d1cd2b1cb87d167621fa8be08b597e3cff805b4360a3839c44a"
+    },
+    {
+      "utc": "2026-09-06T05:15:22.927419+00:00",
+      "action": "OPEN_CALIBRATION_TARGETS",
+      "n_shots": 10
+    },
+    {
+      "utc": "2026-09-06T05:15:22.927429+00:00",
+      "action": "HELDOUT_CALIBRATION_OPENED",
+      "fold": 3
+    },
+    {
+      "utc": "2026-09-06T05:15:22.927433+00:00",
+      "action": "OPEN_PROTECTED_TARGETS",
+      "n_shots": 10
+    },
+    {
+      "utc": "2026-09-06T05:15:22.927436+00:00",
+      "action": "HELDOUT_PROTECTED_OPENED_LAST",
+      "fold": 3
+    },
+    {
+      "utc": "2026-09-06T05:15:27.248964+00:00",
+      "action": "OPEN_CALIBRATION_TARGETS",
+      "n_shots": 52
+    },
+    {
+      "utc": "2026-09-06T05:15:27.248988+00:00",
+      "action": "OPEN_PROTECTED_TARGETS",
+      "n_shots": 52
+    },
+    {
+      "utc": "2026-09-06T05:17:37.537015+00:00",
+      "action": "SUPPORT_HASHED",
+      "fold": 4,
+      "sha256": "688791d4cb56a0ee96019a96ff99d7a66bd1027a41e65b91f4fe7364d4dc94af"
+    },
+    {
+      "utc": "2026-09-06T05:17:37.537273+00:00",
+      "action": "OPEN_CALIBRATION_TARGETS",
+      "n_shots": 10
+    },
+    {
+      "utc": "2026-09-06T05:17:37.537276+00:00",
+      "action": "HELDOUT_CALIBRATION_OPENED",
+      "fold": 4
+    },
+    {
+      "utc": "2026-09-06T05:17:37.537281+00:00",
+      "action": "OPEN_PROTECTED_TARGETS",
+      "n_shots": 10
+    },
+    {
+      "utc": "2026-09-06T05:17:37.537283+00:00",
+      "action": "HELDOUT_PROTECTED_OPENED_LAST",
+      "fold": 4
+    },
+    {
+      "utc": "2026-09-06T05:17:42.227641+00:00",
+      "action": "OPEN_CALIBRATION_TARGETS",
+      "n_shots": 52
+    },
+    {
+      "utc": "2026-09-06T05:17:42.227660+00:00",
+      "action": "OPEN_PROTECTED_TARGETS",
+      "n_shots": 52
+    },
+    {
+      "utc": "2026-09-06T05:19:44.716741+00:00",
+      "action": "SUPPORT_HASHED",
+      "fold": 5,
+      "sha256": "358854514ab519b94437227dc2ab8fe4c2a435ccbc2c355c1cdc8afc88ecf1be"
+    },
+    {
+      "utc": "2026-09-06T05:19:44.716962+00:00",
+      "action": "OPEN_CALIBRATION_TARGETS",
+      "n_shots": 10
+    },
+    {
+      "utc": "2026-09-06T05:19:44.716966+00:00",
+      "action": "HELDOUT_CALIBRATION_OPENED",
+      "fold": 5
+    },
+    {
+      "utc": "2026-09-06T05:19:44.716969+00:00",
+      "action": "OPEN_PROTECTED_TARGETS",
+      "n_shots": 10
+    },
+    {
+      "utc": "2026-09-06T05:19:44.716972+00:00",
+      "action": "HELDOUT_PROTECTED_OPENED_LAST",
+      "fold": 5
+    }
+  ],
+  "support_hash_precedes_heldout_target_access": true,
+  "total_runtime_seconds": 755.6
+}

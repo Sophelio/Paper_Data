@@ -1,0 +1,19 @@
+{
+  "generated_utc": "2026-09-05T23:42:03.977160+00:00",
+  "n_supports": 217,
+  "n_full_domain": 213,
+  "n_extras": 2,
+  "distinct_atoms_realised": 91,
+  "level_denominators_in_play": 10,
+  "rate_denominators_in_play": 0,
+  "runtime_seconds": 7.6,
+  "b0_b1_reused_from_S7_10": true,
+  "b0_b1_hash_verified": true,
+  "common_support_rule": "each support aggregates over its own eligible blocks and B0/B1 are aggregated over the SAME blocks, so every paired comparison is common-support",
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

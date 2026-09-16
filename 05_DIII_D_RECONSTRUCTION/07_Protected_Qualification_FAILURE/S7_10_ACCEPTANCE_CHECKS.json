@@ -1,0 +1,239 @@
+{
+  "acceptance_id": "S7_10_ACCEPTANCE_CHECKS_V1",
+  "generated_utc": "2026-09-05T22:59:39.903621+00:00",
+  "n_checks": 57,
+  "n_passed": 57,
+  "result": "57/57",
+  "failed": [],
+  "note": "acceptance checks measure STAGE EXECUTION INTEGRITY, not scientific success. The scientific verdict is reported separately and is a mandatory-gate failure.",
+  "checks": [
+    {
+      "check": "all parents verified",
+      "passed": true
+    },
+    {
+      "check": "PRE_EXTERNAL_MODEL_FREEZE verified with zero mismatch",
+      "passed": true
+    },
+    {
+      "check": "freeze timestamp before first external value access",
+      "passed": true
+    },
+    {
+      "check": "canonical support parse verified",
+      "passed": true
+    },
+    {
+      "check": "C_dev_star unchanged",
+      "passed": true
+    },
+    {
+      "check": "all six baseline configs unchanged",
+      "passed": true
+    },
+    {
+      "check": "external inference implementation frozen before first external value",
+      "passed": true
+    },
+    {
+      "check": "S7.11 sensitivity declaration frozen before first external value",
+      "passed": true
+    },
+    {
+      "check": "first external access timestamp recorded",
+      "passed": true
+    },
+    {
+      "check": "exactly 42 frozen external discharges addressed",
+      "passed": true
+    },
+    {
+      "check": "24 earlier / 18 later verified",
+      "passed": true
+    },
+    {
+      "check": "no development decision changed after external access",
+      "passed": true
+    },
+    {
+      "check": "block-local protection enforced",
+      "passed": true
+    },
+    {
+      "check": "relational coefficients local to discharge/block",
+      "passed": true
+    },
+    {
+      "check": "no global coefficients used",
+      "passed": true
+    },
+    {
+      "check": "external denominator/domain rule enforced",
+      "passed": true
+    },
+    {
+      "check": "no denominator repair",
+      "passed": true
+    },
+    {
+      "check": "B0 evaluated as frozen",
+      "passed": true
+    },
+    {
+      "check": "B1 evaluated as frozen",
+      "passed": true
+    },
+    {
+      "check": "B1A evaluated as frozen",
+      "passed": true
+    },
+    {
+      "check": "B2 alpha remains 1",
+      "passed": true
+    },
+    {
+      "check": "B2 uses 78 predictors",
+      "passed": true
+    },
+    {
+      "check": "B3 exact frozen config",
+      "passed": true
+    },
+    {
+      "check": "H0 alpha remains 1",
+      "passed": true
+    },
+    {
+      "check": "H0 uses 70 predictors",
+      "passed": true
+    },
+    {
+      "check": "no external tuning",
+      "passed": true
+    },
+    {
+      "check": "common-support audit complete",
+      "passed": true
+    },
+    {
+      "check": "V7 empirically evaluated",
+      "passed": true
+    },
+    {
+      "check": "NRMSE uses calibration sd, ddof=0",
+      "passed": true
+    },
+    {
+      "check": "no epsilon",
+      "passed": true
+    },
+    {
+      "check": "discharge-level aggregation precedes inference",
+      "passed": true
+    },
+    {
+      "check": "S_pers reported",
+      "passed": true
+    },
+    {
+      "check": "Delta_0 computed exactly",
+      "passed": true
+    },
+    {
+      "check": "Delta_1 computed exactly",
+      "passed": true
+    },
+    {
+      "check": "V3 threshold unchanged",
+      "passed": true
+    },
+    {
+      "check": "CI does not determine V3",
+      "passed": true
+    },
+    {
+      "check": ">=10000 paired bootstrap replicates",
+      "passed": true
+    },
+    {
+      "check": "bootstrap seed frozen pre-value",
+      "passed": true
+    },
+    {
+      "check": "win/tie/loss complete",
+      "passed": true
+    },
+    {
+      "check": "LODO complete",
+      "passed": true
+    },
+    {
+      "check": "B2/B3 comparison reported regardless of outcome",
+      "passed": true
+    },
+    {
+      "check": "V4 tests fairness, not victory",
+      "passed": true
+    },
+    {
+      "check": "V5 freeze-before-external evidence verified",
+      "passed": true
+    },
+    {
+      "check": "V6 uses 24/18",
+      "passed": true
+    },
+    {
+      "check": "V6 does not average away materially adverse era",
+      "passed": true
+    },
+    {
+      "check": "V1 language distinguishes provenance from physical independence",
+      "passed": true
+    },
+    {
+      "check": "pcdiamag3 interpretation qualification carried",
+      "passed": true
+    },
+    {
+      "check": "support instability 0.093 carried",
+      "passed": true
+    },
+    {
+      "check": "no unique-support claim",
+      "passed": true
+    },
+    {
+      "check": "no global-optimality claim",
+      "passed": true
+    },
+    {
+      "check": "V9 remains pending",
+      "passed": true
+    },
+    {
+      "check": "S7.11 sensitivities NOT executed",
+      "passed": true
+    },
+    {
+      "check": "two-seed sensitivity NOT executed",
+      "passed": true
+    },
+    {
+      "check": "no repair after external outcomes",
+      "passed": true
+    },
+    {
+      "check": "mandatory failure not obscured",
+      "passed": true
+    },
+    {
+      "check": "Markdown files <= 20",
+      "passed": true
+    },
+    {
+      "check": "S7.11 not started",
+      "passed": true
+    }
+  ]
+}

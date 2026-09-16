@@ -1,0 +1,62 @@
+{
+  "record_id": "MULTIVARIATE_ACTUATOR_FALLBACK_V1",
+  "generated_utc": "2026-09-06T00:58:57.828593+00:00",
+  "is_the_single_permitted_fallback": true,
+  "features": [
+    "gasa_pro_max",
+    "gasa_pro_median",
+    "gasb_pro_max",
+    "gasb_pro_median",
+    "gasc_pro_max",
+    "gasc_pro_median",
+    "gasd_pro_max",
+    "gasd_pro_median",
+    "pinj_pro_max",
+    "pinj_pro_median",
+    "tinj_pro_max",
+    "tinj_pro_median"
+  ],
+  "feature_type": "actuator LEVEL summaries only (no block-relative ratios)",
+  "methods_used": [
+    "standardization",
+    "PCA (visualization)",
+    "deterministic two-cluster split on sign(PC1)",
+    "nearest-neighbour distance to development"
+  ],
+  "supervised_classifier_used": false,
+  "hyperparameter_search": false,
+  "outcome_guided_thresholding": false,
+  "pca_explained_variance_ratio_first4": [
+    0.3400736372826512,
+    0.22125212358551372,
+    0.1616625151882394,
+    0.09080046036296689
+  ],
+  "catastrophic_blocks": [
+    {
+      "shot_id": "187019",
+      "block": "B",
+      "pc1": -1.6428949588062631,
+      "pc2": -0.7953962711766126,
+      "cluster_pc1_sign": 0,
+      "nn_distance_to_development": 3.8407062769250837
+    },
+    {
+      "shot_id": "187022",
+      "block": "B",
+      "pc1": -1.6919877722472343,
+      "pc2": 0.21717631783356114,
+      "cluster_pc1_sign": 0,
+      "nn_distance_to_development": 2.6411407245260112
+    }
+  ],
+  "catastrophic_nn_percentile_among_external": [
+    0.9841269841269841,
+    0.9365079365079365
+  ],
+  "cluster_sizes": [
+    75,
+    111
+  ],
+  "separates_catastrophic_blocks": false
+}

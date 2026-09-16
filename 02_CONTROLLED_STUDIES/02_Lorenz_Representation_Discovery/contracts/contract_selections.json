@@ -1,0 +1,454 @@
+{
+  "q_accuracy": {
+    "contract": {
+      "name": "q_accuracy",
+      "question": "minimum clean reconstruction error",
+      "information_boundary": {
+        "stencil": "centered_5point",
+        "half_width": 2,
+        "derivative_scheme": "centered_5point",
+        "drop_edges": 2
+      },
+      "candidate_space": "candidate_registry.registry()",
+      "relation_families": [
+        "identity",
+        "poly2",
+        "poly3"
+      ],
+      "utility": "min_mean_cv_rmse",
+      "validation": {
+        "scheme": "GroupKFold",
+        "n_folds": 6,
+        "group": "trajectory",
+        "noise_envelope": [
+          0.0
+        ]
+      },
+      "support": "48 exposed development trajectories",
+      "equivalence": {
+        "practical_equivalence_abs": 0.001,
+        "target_scale_sigma_z": 9.04
+      },
+      "lexicographic": []
+    },
+    "scientific_object": {
+      "name": "O_clean",
+      "D_channels": [
+        "x",
+        "y",
+        "z"
+      ],
+      "Omega_obs": "48 development trajectories, t in [0,12.0], dt=0.005",
+      "S_sampling": {
+        "dt": 0.005,
+        "stencil": "centered_5point",
+        "half_width": 2,
+        "group": "trajectory"
+      },
+      "E_uncertainty": {
+        "kind": "numerical",
+        "sigma_relative": 0.0,
+        "applied_before_coordinates": true,
+        "note": "noise added to x,y before differentiation, smoothing, quotient and phase construction, and normalisation"
+      },
+      "Pi_provenance": {
+        "generator": "D:/SIR_paper/Lorenz/Lorenz_attractor.py::generate_lorenz",
+        "sigma": 10.0,
+        "rho": 28.0,
+        "beta": 2.6666666666666665,
+        "integrator": "DOP853",
+        "coordinate_provenance": {
+          "raw": "LOCAL_REFERENCE (stencil lags; MCP exposes no lag operator)",
+          "rate": "MCP_NATIVE_EQUIVALENT (data_processing dx/dy) + LOCAL_REFERENCE stencil",
+          "curvature": "LOCAL_REFERENCE (higher-order stencil)",
+          "product": "MCP_NATIVE_EQUIVALENT (order>=2 search terms)",
+          "quotient": "MCP_NATIVE_EQUIVALENT (data_processing quotients / xPhaseder)",
+          "ca_ratio": "LOCAL_REFERENCE (Archaieus-verified)",
+          "reference_shifted": "LOCAL_REFERENCE (Archaieus-verified; block absent from the Lorenz project)",
+          "sensitivity_centered": "LOCAL_REFERENCE (Archaieus-verified; block absent from the Lorenz project)"
+        }
+      },
+      "A_admissibility": {
+        "observed": [
+          "x",
+          "y"
+        ],
+        "target": "z",
+        "forbidden": [
+          "z",
+          "dz",
+          "d2z"
+        ],
+        "retrospective_history": true
+      }
+    },
+    "admissibility_violations": [],
+    "selected_candidate": "C_all",
+    "coordinates": [
+      "x[k-2]",
+      "x[k-1]",
+      "x",
+      "x[k+1]",
+      "x[k+2]",
+      "y[k-2]",
+      "y[k-1]",
+      "y",
+      "y[k+1]",
+      "y[k+2]",
+      "dx",
+      "dy",
+      "d2x",
+      "d2y",
+      "x*y",
+      "x*x",
+      "y*y",
+      "x*dy",
+      "y*dx",
+      "dx*dy",
+      "x*dx",
+      "y*dy",
+      "Q[dy|x]",
+      "Q[y|x]",
+      "Q[dy|dx]",
+      "Q[dx|dy]",
+      "CA[dy|x]",
+      "RS[dy|x]",
+      "SC[dy|x]",
+      "CA[y|x]",
+      "RS[y|x]",
+      "SC[y|x]",
+      "CA[dy|dx]",
+      "RS[dy|dx]",
+      "SC[dy|dx]",
+      "CA[dx|dy]",
+      "RS[dx|dy]",
+      "SC[dx|dy]"
+    ],
+    "relation_family": "identity",
+    "n_coordinates": 38,
+    "n_features": 38,
+    "n_terms": 32.0,
+    "condition_number": 8.402176197324653e+16,
+    "coverage": 0.10971123143134805,
+    "mean_cv_utility": 1.3216488669956407e-05,
+    "se_cv_utility": 3.018414226174604e-07,
+    "fold_rmse": [
+      1.3189580852420695e-05,
+      1.3555039700284059e-05,
+      1.3554028479081072e-05,
+      1.4239297396377234e-05,
+      1.2207204763005885e-05,
+      1.2553780828569496e-05
+    ],
+    "fold_stability": 6.749379393978838e-07,
+    "selection_info": {
+      "rule": "min mean_rmse",
+      "best_by_utility": "C_all",
+      "equivalent_set": [
+        "C_all"
+      ],
+      "threshold": 1.3216488669956407e-05
+    }
+  },
+  "q_compact": {
+    "contract": {
+      "name": "q_compact",
+      "question": "simplest well-conditioned accuracy-equivalent representation",
+      "information_boundary": {
+        "stencil": "centered_5point",
+        "half_width": 2,
+        "derivative_scheme": "centered_5point",
+        "drop_edges": 2
+      },
+      "candidate_space": "candidate_registry.registry()",
+      "relation_families": [
+        "identity",
+        "poly2",
+        "poly3"
+      ],
+      "utility": "min_mean_cv_rmse",
+      "validation": {
+        "scheme": "GroupKFold",
+        "n_folds": 6,
+        "group": "trajectory",
+        "noise_envelope": [
+          0.0
+        ]
+      },
+      "support": "48 exposed development trajectories",
+      "equivalence": {
+        "practical_equivalence_abs": 0.001,
+        "target_scale_sigma_z": 9.04
+      },
+      "lexicographic": [
+        "n_coordinates",
+        "n_terms",
+        "condition_number",
+        "fold_stability"
+      ]
+    },
+    "scientific_object": {
+      "name": "O_clean",
+      "D_channels": [
+        "x",
+        "y",
+        "z"
+      ],
+      "Omega_obs": "48 development trajectories, t in [0,12.0], dt=0.005",
+      "S_sampling": {
+        "dt": 0.005,
+        "stencil": "centered_5point",
+        "half_width": 2,
+        "group": "trajectory"
+      },
+      "E_uncertainty": {
+        "kind": "numerical",
+        "sigma_relative": 0.0,
+        "applied_before_coordinates": true,
+        "note": "noise added to x,y before differentiation, smoothing, quotient and phase construction, and normalisation"
+      },
+      "Pi_provenance": {
+        "generator": "D:/SIR_paper/Lorenz/Lorenz_attractor.py::generate_lorenz",
+        "sigma": 10.0,
+        "rho": 28.0,
+        "beta": 2.6666666666666665,
+        "integrator": "DOP853",
+        "coordinate_provenance": {
+          "raw": "LOCAL_REFERENCE (stencil lags; MCP exposes no lag operator)",
+          "rate": "MCP_NATIVE_EQUIVALENT (data_processing dx/dy) + LOCAL_REFERENCE stencil",
+          "curvature": "LOCAL_REFERENCE (higher-order stencil)",
+          "product": "MCP_NATIVE_EQUIVALENT (order>=2 search terms)",
+          "quotient": "MCP_NATIVE_EQUIVALENT (data_processing quotients / xPhaseder)",
+          "ca_ratio": "LOCAL_REFERENCE (Archaieus-verified)",
+          "reference_shifted": "LOCAL_REFERENCE (Archaieus-verified; block absent from the Lorenz project)",
+          "sensitivity_centered": "LOCAL_REFERENCE (Archaieus-verified; block absent from the Lorenz project)"
+        }
+      },
+      "A_admissibility": {
+        "observed": [
+          "x",
+          "y"
+        ],
+        "target": "z",
+        "forbidden": [
+          "z",
+          "dz",
+          "d2z"
+        ],
+        "retrospective_history": true
+      }
+    },
+    "admissibility_violations": [],
+    "selected_candidate": "C0+Q_pair",
+    "coordinates": [
+      "x[k-2]",
+      "x[k-1]",
+      "x",
+      "x[k+1]",
+      "x[k+2]",
+      "y[k-2]",
+      "y[k-1]",
+      "y",
+      "y[k+1]",
+      "y[k+2]",
+      "Q[dy|x]",
+      "Q[y|x]"
+    ],
+    "relation_family": "identity",
+    "n_coordinates": 12,
+    "n_features": 12,
+    "n_terms": 12.0,
+    "condition_number": 2678156988129.6387,
+    "coverage": 0.11831007913369429,
+    "mean_cv_utility": 3.3256449025099005e-05,
+    "se_cv_utility": 1.8374299396589582e-07,
+    "fold_rmse": [
+      3.236776067923791e-05,
+      3.33760024544443e-05,
+      3.3656947148703994e-05,
+      3.3421922759431105e-05,
+      3.337157157463302e-05,
+      3.334448953414371e-05
+    ],
+    "fold_stability": 4.1086182489707667e-07,
+    "selection_info": {
+      "rule": "one-SE-or-practical-floor, then lexicographic ['n_coordinates', 'n_terms', 'condition_number', 'fold_stability']",
+      "best_by_utility": "C_all",
+      "se_best": 3.018414226174604e-07,
+      "practical_floor": 0.001,
+      "margin_used": 0.001,
+      "margin_source": "practical_floor",
+      "threshold": 0.0010132164886699564,
+      "equivalent_set": [
+        "C0+Q_pair",
+        "C0+Q_all",
+        "C0+Q_pair+RS_pair",
+        "C_all"
+      ],
+      "n_equivalent": 4
+    }
+  },
+  "q_robust": {
+    "contract": {
+      "name": "q_robust",
+      "question": "representation that remains useful under observational uncertainty",
+      "information_boundary": {
+        "stencil": "centered_5point",
+        "half_width": 2,
+        "derivative_scheme": "centered_5point",
+        "drop_edges": 2
+      },
+      "candidate_space": "candidate_registry.registry()",
+      "relation_families": [
+        "identity",
+        "poly2",
+        "poly3"
+      ],
+      "utility": "min_mean_worstcase_cv_nrmse_over_noise_envelope",
+      "validation": {
+        "scheme": "GroupKFold",
+        "n_folds": 6,
+        "group": "trajectory",
+        "noise_envelope": [
+          0.0,
+          0.005,
+          0.01
+        ]
+      },
+      "support": "48 exposed development trajectories",
+      "equivalence": {
+        "practical_equivalence_abs": 0.001,
+        "target_scale_sigma_z": 9.04
+      },
+      "lexicographic": [
+        "n_coordinates",
+        "n_terms",
+        "condition_number",
+        "fold_stability"
+      ]
+    },
+    "scientific_object": {
+      "name": "O_noisy",
+      "D_channels": [
+        "x",
+        "y",
+        "z"
+      ],
+      "Omega_obs": "48 development trajectories, t in [0,12.0], dt=0.005",
+      "S_sampling": {
+        "dt": 0.005,
+        "stencil": "centered_5point",
+        "half_width": 2,
+        "group": "trajectory"
+      },
+      "E_uncertainty": {
+        "kind": "observational_gaussian",
+        "sigma_relative": 0.01,
+        "applied_before_coordinates": true,
+        "note": "noise added to x,y before differentiation, smoothing, quotient and phase construction, and normalisation"
+      },
+      "Pi_provenance": {
+        "generator": "D:/SIR_paper/Lorenz/Lorenz_attractor.py::generate_lorenz",
+        "sigma": 10.0,
+        "rho": 28.0,
+        "beta": 2.6666666666666665,
+        "integrator": "DOP853",
+        "coordinate_provenance": {
+          "raw": "LOCAL_REFERENCE (stencil lags; MCP exposes no lag operator)",
+          "rate": "MCP_NATIVE_EQUIVALENT (data_processing dx/dy) + LOCAL_REFERENCE stencil",
+          "curvature": "LOCAL_REFERENCE (higher-order stencil)",
+          "product": "MCP_NATIVE_EQUIVALENT (order>=2 search terms)",
+          "quotient": "MCP_NATIVE_EQUIVALENT (data_processing quotients / xPhaseder)",
+          "ca_ratio": "LOCAL_REFERENCE (Archaieus-verified)",
+          "reference_shifted": "LOCAL_REFERENCE (Archaieus-verified; block absent from the Lorenz project)",
+          "sensitivity_centered": "LOCAL_REFERENCE (Archaieus-verified; block absent from the Lorenz project)"
+        }
+      },
+      "A_admissibility": {
+        "observed": [
+          "x",
+          "y"
+        ],
+        "target": "z",
+        "forbidden": [
+          "z",
+          "dz",
+          "d2z"
+        ],
+        "retrospective_history": true
+      }
+    },
+    "admissibility_violations": [],
+    "selected_candidate": "C_all",
+    "coordinates": [
+      "x[k-2]",
+      "x[k-1]",
+      "x",
+      "x[k+1]",
+      "x[k+2]",
+      "y[k-2]",
+      "y[k-1]",
+      "y",
+      "y[k+1]",
+      "y[k+2]",
+      "dx",
+      "dy",
+      "d2x",
+      "d2y",
+      "x*y",
+      "x*x",
+      "y*y",
+      "x*dy",
+      "y*dx",
+      "dx*dy",
+      "x*dx",
+      "y*dy",
+      "Q[dy|x]",
+      "Q[y|x]",
+      "Q[dy|dx]",
+      "Q[dx|dy]",
+      "CA[dy|x]",
+      "RS[dy|x]",
+      "SC[dy|x]",
+      "CA[y|x]",
+      "RS[y|x]",
+      "SC[y|x]",
+      "CA[dy|dx]",
+      "RS[dy|dx]",
+      "SC[dy|dx]",
+      "CA[dx|dy]",
+      "RS[dx|dy]",
+      "SC[dx|dy]"
+    ],
+    "relation_family": "identity",
+    "n_coordinates": 38,
+    "n_features": 38,
+    "n_terms": 32.0,
+    "condition_number": 8.402176197324653e+16,
+    "coverage": 0.10971123143134805,
+    "mean_cv_utility": 2.290343804638082,
+    "se_cv_utility": 0.03092099342801169,
+    "fold_rmse": [
+      2.2383729474344327,
+      2.3076543975477906,
+      2.3328847324546906,
+      2.3616513380000184,
+      2.339216446542953,
+      2.16228296584861
+    ],
+    "fold_stability": 0.06914144323685838,
+    "selection_info": {
+      "rule": "one-SE-or-practical-floor, then lexicographic ['n_coordinates', 'n_terms', 'condition_number', 'fold_stability']",
+      "best_by_utility": "C_all",
+      "se_best": 0.03092099342801169,
+      "practical_floor": 0.001,
+      "margin_used": 0.03092099342801169,
+      "margin_source": "SE",
+      "threshold": 2.3212647980660934,
+      "equivalent_set": [
+        "C_all"
+      ],
+      "n_equivalent": 1
+    }
+  }
+}

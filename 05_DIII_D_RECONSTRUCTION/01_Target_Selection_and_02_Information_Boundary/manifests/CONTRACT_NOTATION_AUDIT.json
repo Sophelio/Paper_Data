@@ -1,0 +1,36 @@
+{
+  "check": "practical equivalence must be in calibration-normalized (NRMSE) units, not raw physical-unit RMSE",
+  "explicitly_encodes_raw_rmse_in_equivalence_rule": false,
+  "evidence": [
+    {
+      "field": "practical_equivalence.rule",
+      "value": "A and B practically equivalent iff |RMSE_A - RMSE_B| <= delta_equiv",
+      "reading": "uses the bare token 'RMSE'; ambiguous IN ISOLATION"
+    },
+    {
+      "field": "primary_metric.symbol / name",
+      "value": "NRMSE_{s,b} / calibration-normalized RMSE",
+      "reading": "the contract's primary metric IS the normalized one"
+    },
+    {
+      "field": "primary_metric.floor_interpretation",
+      "value": "the 0.01 practical floor is 1% of the calibration target standard-deviation scale",
+      "reading": "0.01 == 1% of the calibration sd-scale, which is only true in NRMSE units"
+    },
+    {
+      "field": "gate_V3.pass_condition",
+      "value": "Delta_0 <= -0.01 AND Delta_1 <= -0.01",
+      "reading": "the same 0.01 magnitude is applied to differences of NRMSE, confirming the unit"
+    },
+    {
+      "field": "primary_metric.also_reported",
+      "value": "raw RMSE in the target physical unit",
+      "reading": "raw RMSE appears ONLY as a secondary report, never in the equivalence rule"
+    }
+  ],
+  "verdict": "PASS_WITH_NOTATIONAL_NOTE",
+  "note": "The contract does NOT explicitly encode raw RMSE for practical equivalence, so the STOP condition does not apply. Four independent fields fix the unit as NRMSE. The single loose token is the bare 'RMSE' inside practical_equivalence.rule, which is shorthand within an already-fixed metric context. This is recorded here rather than silently reinterpreted.",
+  "recommended_v3_editorial_fix": "rewrite practical_equivalence.rule as '|NRMSE_A - NRMSE_B| <= delta_equiv' at the next contract revision; purely notational, changes no semantics",
+  "material_to_s7_3": false,
+  "material_to_s7_3_reason": "no model is fitted in S7.3, so the practical-equivalence rule is not exercised at this stage at all"
+}

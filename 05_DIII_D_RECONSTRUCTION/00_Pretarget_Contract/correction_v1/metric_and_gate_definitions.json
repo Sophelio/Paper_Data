@@ -1,0 +1,136 @@
+{
+  "primary_metric": {
+    "name": "calibration-normalized RMSE",
+    "symbol": "NRMSE_{s,b}",
+    "definition": "RMSE(y_protected_{s,b}, yhat_protected_{s,b}) / scale_{s,b}",
+    "scale_definition": "scale_{s,b} = std(y_calibration_{s,b}, ddof=0)",
+    "ddof": 0,
+    "scale_uses": "CALIBRATION target values only",
+    "protected_statistics_in_scale": false,
+    "zero_scale_behaviour": "INVALID_FOR_NORMALIZED_SCORING",
+    "epsilon_added": false,
+    "epsilon_note": "no outcome-tuned epsilon; a zero-scale block is declared invalid rather than rescued",
+    "also_reported": "raw RMSE in the target physical unit",
+    "s7_3_requirement": "development target feasibility must report whether any zero-scale calibration block exists; the primary target must have valid normalized scoring across all required development blocks",
+    "floor_interpretation": "the 0.01 practical floor is 1% of the calibration target standard-deviation scale"
+  },
+  "practical_equivalence": {
+    "delta_equiv": "max(SE_delta, 0.01)",
+    "rule": "A and B practically equivalent iff |RMSE_A - RMSE_B| <= delta_equiv",
+    "reading": "within one SE OR within the 0.01 practical floor",
+    "floor": 0.01,
+    "se_definition": {
+      "step_1": "aggregate the three validation blocks within each DEVELOPMENT discharge",
+      "step_2": "compute the paired candidate difference per development discharge",
+      "step_3": "SE_delta = standard error of that paired discharge-level difference across the 20 development discharges",
+      "n": 20,
+      "unit": "development discharge"
+    },
+    "supersedes": "V1 conjunction (AND), which made the floor inoperative exactly when SE was small",
+    "computed_in_this_run": false
+  },
+  "robust_relative_variation": {
+    "symbol": "RRV",
+    "per_discharge": "RRV_s = 1.4826 * MAD(y_s) / RMS(y_s)",
+    "MAD": "median(|y - median(y)|)",
+    "RMS": "sqrt(mean(y^2))",
+    "zero_rms_behaviour": "RRV_s = 0",
+    "target_level_score": "RRV_dev = median_s(RRV_s) over the 20 frozen development discharges",
+    "floor": 0.05,
+    "threshold_name": "min_median_robust_relative_variation",
+    "retires": "min_coefficient_of_variation_development",
+    "rationale": "ordinary CV = sd/|mean| is undefined or explosive for near-zero means and meaningless for sign-changing trajectories; RRV is zero-safe and scale-relative",
+    "computed_in_this_run": false
+  },
+  "gate_V3": {
+    "per_discharge": "NRMSE_method,s = mean over blocks A,B,C of NRMSE_method,s,b",
+    "per_baseline": "Delta_j = mean over EXTERNAL discharges s of (NRMSE_REL,s - NRMSE_Bj,s)",
+    "pass_condition": "Delta_0 <= -0.01 AND Delta_1 <= -0.01",
+    "baselines_in_gate": [
+      "B0 calibration mean",
+      "B1 persistence"
+    ],
+    "confidence_intervals_are_thresholds": false,
+    "ci_role": "reported, not used as a significance threshold for V3",
+    "also_reported": [
+      "median paired difference",
+      "wins/ties/losses",
+      "95% paired discharge-bootstrap CI",
+      "block-specific values"
+    ],
+    "computed_in_this_run": false
+  },
+  "gate_V6": {
+    "applies_to": "EXTERNAL cohort",
+    "external_counts": {
+      "earlier": 24,
+      "later": 18,
+      "total": 42
+    },
+    "parent_object_counts_for_reference": {
+      "earlier": 35,
+      "later": 27,
+      "total": 62
+    },
+    "v1_defect": "V6 referred to 35/27, which are parent-object counts, not the external cohort the gate operates on",
+    "outcomes": {
+      "PASS": "pooled V3 passes and the practical direction is non-adverse in both eras",
+      "PASS_WITH_QUALIFICATION": "pooled V3 passes, but one era is practically tied relative to a trivial baseline; report and narrow the interpretation",
+      "FAIL_FOR_FULL_DOMAIN": "pooled V3 passes only because one era dominates while the other is materially worse than B0 or B1 by more than 0.01"
+    },
+    "fail_for_full_domain_consequence": "does not erase the result; the final Omega_rec claim must be narrowed rather than averaged across the processing discontinuity",
+    "computed_in_this_run": false
+  },
+  "validation_geometry": {
+    "unchanged_from_v1": true,
+    "blocks": [
+      {
+        "block": "A",
+        "calibration": [
+          0.0,
+          0.4
+        ],
+        "evaluation": [
+          0.4,
+          0.5
+        ]
+      },
+      {
+        "block": "B",
+        "calibration": [
+          0.0,
+          0.6
+        ],
+        "evaluation": [
+          0.6,
+          0.7
+        ]
+      },
+      {
+        "block": "C",
+        "calibration": [
+          0.0,
+          0.8
+        ],
+        "evaluation": [
+          0.8,
+          0.9
+        ]
+      }
+    ],
+    "protection_model": "BLOCK_LOCAL_PROTECTION",
+    "semantics": "sequential / prequential",
+    "sequence": [
+      "STEP A: fit on [0,0.40); score A on [0.40,0.50); freeze the A score",
+      "only after A scoring is irrevocably complete may those target values act as ordinary historical calibration observations",
+      "STEP B: fit on [0,0.60); score B on [0.60,0.70); freeze the B score",
+      "STEP C: fit on [0,0.80); score C on [0.80,0.90)"
+    ],
+    "a_target_value_may_never_influence": [
+      "its own evaluation block's fit",
+      "an earlier evaluation block",
+      "target, ontology, support or hyperparameter choices that are supposed to be frozen"
+    ],
+    "external_cohort": "remains GLOBALLY SEALED before S7.10; block-local protection governs only within-discharge rolling-origin sequencing"
+  }
+}

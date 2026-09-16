@@ -1,0 +1,29 @@
+node,kind,parents,verdict,formula
+pcdiamag3,raw_signal,,TARGET_INDEPENDENT,stored energy from diamagnetic flux
+pinj,raw_signal,,TARGET_INDEPENDENT,injected beam power
+density,raw_signal,,TARGET_INDEPENDENT,line-averaged electron density
+ip,raw_signal,,TARGET,plasma current (THE TARGET)
+betan,raw_signal,I_p,TARGET_DEPENDENT,beta_N = beta_t * a * B_t / I_p
+q95,raw_signal,I_p,TARGET_DEPENDENT,q95 ~ 5 a^2 B_t / (R I_p) * shape factor
+li,raw_signal,I_p,PROVENANCE_UNRESOLVED,internal inductance from the current profile; EFIT is constrained by measured I_p
+kappa,raw_signal,I_p,PROVENANCE_UNRESOLVED,elongation of the reconstructed boundary; EFIT is constrained by measured I_p
+REL10:PROD_pcdiamag3_q95,coordinate,pcdiamag3;q95,TARGET_DEPENDENT,
+REL10:L_q95,coordinate,q95,TARGET_DEPENDENT,
+REL10:CU_pcdiamag3,coordinate,pcdiamag3,ADMISSIBLE,
+REL10:L_density,coordinate,density,ADMISSIBLE,
+REL10:PROD_pcdiamag3_density,coordinate,pcdiamag3;density,ADMISSIBLE,
+REL10:L_pcdiamag3,coordinate,pcdiamag3,ADMISSIBLE,
+REL10:PROD_q95_li,coordinate,q95;li,TARGET_DEPENDENT,
+REL10:CU_li,coordinate,li,TARGET_DEPENDENT,
+REL10:CU_q95,coordinate,q95,TARGET_DEPENDENT,
+REL10:L_kappa,coordinate,kappa,TARGET_DEPENDENT,
+RAW10:Z_q95,coordinate,q95,TARGET_DEPENDENT,
+RAW10:L_q95,coordinate,q95,TARGET_DEPENDENT,
+RAW10:Z_density,coordinate,density,ADMISSIBLE,
+RAW10:L_density,coordinate,density,ADMISSIBLE,
+RAW10:L_pcdiamag3,coordinate,pcdiamag3,ADMISSIBLE,
+RAW10:Z_pcdiamag3,coordinate,pcdiamag3,ADMISSIBLE,
+RAW10:Z_pinj,coordinate,pinj,ADMISSIBLE,
+RAW10:L_pinj,coordinate,pinj,ADMISSIBLE,
+RAW10:Z_kappa,coordinate,kappa,TARGET_DEPENDENT,
+RAW10:L_kappa,coordinate,kappa,TARGET_DEPENDENT,

@@ -1,0 +1,39 @@
+{
+  "constraint_id": "PHI_SET_V1",
+  "constraints": [
+    {
+      "id": "size",
+      "rule": "1 <= |C| <= 12",
+      "source": "frozen B_rec"
+    },
+    {
+      "id": "no_duplicates",
+      "rule": "no duplicate coordinate IDs in C"
+    },
+    {
+      "id": "atoms_only",
+      "rule": "every coordinate in C belongs to C_rec^atom"
+    },
+    {
+      "id": "no_sensitivity_only",
+      "rule": "no SENSITIVITY_ONLY_CONSTRUCTOR_OUTPUT coordinate in C"
+    },
+    {
+      "id": "phi_dependency",
+      "rule": "C must NOT contain the COMPLETE membership of any frozen exact linear dependency group",
+      "n_groups_binding": 0,
+      "n_groups_attempted": 197,
+      "note": "a support may contain the aggregate and SOME components; it may not contain the aggregate and ALL eight component restatements in the same linear context. Neither form is privileged a priori."
+    },
+    {
+      "id": "no_target",
+      "rule": "the target never appears in C"
+    }
+  ],
+  "explicitly_not_imposed": [
+    "must contain a phase derivative",
+    "must contain multiple families",
+    "must include raw levels",
+    "any search heuristic or preference"
+  ]
+}

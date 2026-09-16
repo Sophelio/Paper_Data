@@ -1,0 +1,95 @@
+{
+  "diff_id": "SEARCH_POLICY_DIFF_V1_TO_V2",
+  "n_fields_compared": 149,
+  "n_changed": 6,
+  "n_added": 16,
+  "n_removed": 0,
+  "substantive_change": {
+    "SEEDS_PER_STRATUM": "2 -> 1",
+    "raw_only_lane_seeds": "2 -> 1 per C0 family"
+  },
+  "unchanged_and_verified": {
+    "MAX_SUPPORT_EVALUATIONS": 300000,
+    "MAX_ATOMS_PER_CONSTRUCTOR_FOR_EXPANSION": 96,
+    "support_size_range": [
+      1,
+      12
+    ],
+    "atoms_scored_univariately": 10778,
+    "n_active_strata": 127,
+    "signatures": {
+      "C0": "(family_i)",
+      "C1": "(family_i)",
+      "C5": "(family_i)",
+      "C2": "unordered sorted pair {family_i, family_j}",
+      "C3": "(numerator_family | denominator_family)",
+      "C6": "(level_family | rate_family)",
+      "C7": "(rate_family | denominator_level_family)"
+    },
+    "SEARCH_PROXY_OLS_V1": "SEARCH_PROXY_OLS_V1",
+    "J_search": "J_search(C) = mean over 20 development discharges of NRMSE_s(C), where NRMSE_s(C) = mean_b NRMSE_{s,b}(C) over blocks A, B, C",
+    "greedy_proposal_rule": "at each step, EVERY active stratum represented in the expansion shortlist proposes exactly one atom: its highest within-stratum-ranked shortlisted atom not already in the support",
+    "Phi_set": true
+  },
+  "changed_fields": [
+    {
+      "field": "frozen_utc",
+      "v1": "2026-09-04T23:59:29.337658+00:00",
+      "v2": "2026-09-05T00:17:10.479649+00:00",
+      "authorised": true
+    },
+    {
+      "field": "policy_id",
+      "v1": "SIGMA_REC_PREVALUE_V1",
+      "v2": "SIGMA_REC_PREVALUE_V2_ONE_SEED",
+      "authorised": true
+    },
+    {
+      "field": "s14_greedy_search.n_seeds_projected",
+      "v1": 252,
+      "v2": 127,
+      "authorised": true
+    },
+    {
+      "field": "s14_greedy_search.seeds",
+      "v1": "top 2 atoms by within-stratum rank per active stratum (or the single atom if only one exists)",
+      "v2": "top 1 atom by within-stratum rank per active stratum",
+      "authorised": true
+    },
+    {
+      "field": "s15_raw_only_lane.n_seeds_projected",
+      "v1": 14,
+      "v2": 7,
+      "authorised": true
+    },
+    {
+      "field": "s15_raw_only_lane.seeds",
+      "v1": "top two C0 atoms per nonempty scientific family",
+      "v2": "top one C0 atom per nonempty scientific family",
+      "authorised": true
+    }
+  ],
+  "added_fields": [
+    "SEEDS_PER_STRATUM",
+    "parent_policy_sha256",
+    "s14_greedy_search.seed_rank_deficient_handling",
+    "s6_primary_vs_sensitivity.ONE_SEED_SEARCH",
+    "s6_primary_vs_sensitivity.TWO_SEED_SEARCH",
+    "s6_primary_vs_sensitivity.a_future_two_seed_analysis.may",
+    "s6_primary_vs_sensitivity.a_future_two_seed_analysis.may_not",
+    "s6_primary_vs_sensitivity.a_future_two_seed_analysis.must",
+    "s6_primary_vs_sensitivity.decided_by",
+    "s6_primary_vs_sensitivity.outcome_trigger_defined",
+    "s6_primary_vs_sensitivity.outcome_trigger_forbidden_example",
+    "s6_primary_vs_sensitivity.price_accepted_prospectively",
+    "s6_primary_vs_sensitivity.reason",
+    "s6_primary_vs_sensitivity.recorded_before_density_access",
+    "supersedes",
+    "supersedes_for_primary_use"
+  ],
+  "removed_fields": [],
+  "unauthorised_changes": [],
+  "verdict": "ONLY_SEED_MULTIPLICITY_CHANGED",
+  "v1_policy_sha256": "a97e690e414da7a0ace4c70ab56e7d5851eb73f940d98e9f2a7add7f33d4b265",
+  "v2_policy_sha256": "2049cf999dd99c0a1c5aa7f3539a7caaedbae8171d42678ea4cedef93734a255"
+}

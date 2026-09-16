@@ -1,0 +1,94 @@
+{
+  "original_positive_directions": 5,
+  "observed_eigenvalues": [
+    0.777009926843375,
+    0.0028948136028654823,
+    0.0008894032184988565,
+    0.00014906717138560077,
+    5.0969747836125036e-05,
+    -0.00043406840576473054,
+    -0.1752745117228193
+  ],
+  "n_robustly_resolved_directions": 2,
+  "robust_direction_indices_1based": [
+    1,
+    3
+  ],
+  "direction_status": [
+    {
+      "eigenvalue_index": 1,
+      "observed_eigenvalue": 0.777009926843375,
+      "boot_q025": 0.5776758936439427,
+      "boot_q975": 0.921825019154189,
+      "null_q95": 0.13310821562806383,
+      "status": "ROBUSTLY_RESOLVED_DIRECTION"
+    },
+    {
+      "eigenvalue_index": 2,
+      "observed_eigenvalue": 0.0028948136028654823,
+      "boot_q025": 0.0013040355343090539,
+      "boot_q975": 0.004780020444888691,
+      "null_q95": 0.01566659174646174,
+      "status": "POSITIVE_POINT_ESTIMATE_ONLY"
+    },
+    {
+      "eigenvalue_index": 3,
+      "observed_eigenvalue": 0.0008894032184988565,
+      "boot_q025": 0.0003603867471880679,
+      "boot_q975": 0.0014524855792688405,
+      "null_q95": 0.0005816071891541179,
+      "status": "ROBUSTLY_RESOLVED_DIRECTION"
+    },
+    {
+      "eigenvalue_index": 4,
+      "observed_eigenvalue": 0.00014906717138560077,
+      "boot_q025": -4.312249222760267e-06,
+      "boot_q975": 0.0004096485642465896,
+      "null_q95": 0.00011126450472793882,
+      "status": "POSITIVE_POINT_ESTIMATE_ONLY"
+    },
+    {
+      "eigenvalue_index": 5,
+      "observed_eigenvalue": 5.0969747836125036e-05,
+      "boot_q025": -0.0003179457823381436,
+      "boot_q975": 7.831837868740392e-05,
+      "null_q95": -1.3264765175247547e-05,
+      "status": "POSITIVE_POINT_ESTIMATE_ONLY"
+    },
+    {
+      "eigenvalue_index": 6,
+      "observed_eigenvalue": -0.00043406840576473054,
+      "boot_q025": -0.0007402078834756948,
+      "boot_q975": -0.000281853447748127,
+      "null_q95": -0.0001500193913357042,
+      "status": "NOT_RESOLVED"
+    },
+    {
+      "eigenvalue_index": 7,
+      "observed_eigenvalue": -0.1752745117228193,
+      "boot_q025": -0.22292376875526668,
+      "boot_q975": -0.13832664879968498,
+      "null_q95": -0.0006508986941612969,
+      "status": "NOT_RESOLVED"
+    }
+  ],
+  "subspace_stability": {
+    "n_directions": 2,
+    "median_principal_angles_deg": [
+      1.5823026543634462,
+      20.191697061003428
+    ],
+    "q95_max_principal_angle_deg": 38.08768262919187
+  },
+  "eigen_bootstrap_replicates": 5000,
+  "null_replicates": 5000,
+  "null_q95_by_index": [
+    0.13310821562806383,
+    0.01566659174646174,
+    0.0005816071891541179,
+    0.00011126450472793882,
+    -1.3264765175247547e-05,
+    -0.0001500193913357042,
+    -0.0006508986941612969
+  ]
+}

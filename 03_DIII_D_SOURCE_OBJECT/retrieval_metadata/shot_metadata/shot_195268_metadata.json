@@ -1,0 +1,572 @@
+{
+  "aminor": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 296,
+    "resampled_length": 298
+  },
+  "area": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 296,
+    "resampled_length": 298
+  },
+  "betan": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 296,
+    "resampled_length": 298
+  },
+  "bt": {
+    "method": "decimate_with_antialiasing",
+    "category": "smooth_high_snr",
+    "original_length": 121600,
+    "resampled_length": 6400
+  },
+  "cerqrott10": {
+    "method": "cubic_spline_simple",
+    "category": "slow_varying",
+    "original_length": 841,
+    "resampled_length": 538
+  },
+  "cerqrott11": {
+    "method": "cubic_spline_simple",
+    "category": "slow_varying",
+    "original_length": 841,
+    "resampled_length": 538
+  },
+  "cerqrott12": {
+    "method": "cubic_spline_simple",
+    "category": "slow_varying",
+    "original_length": 841,
+    "resampled_length": 538
+  },
+  "cerqrott13": {
+    "method": "cubic_spline_simple",
+    "category": "slow_varying",
+    "original_length": 841,
+    "resampled_length": 538
+  },
+  "cerqrott3": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 876,
+    "resampled_length": 536
+  },
+  "cerqrott6": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 876,
+    "resampled_length": 536
+  },
+  "cerqrott8": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 841,
+    "resampled_length": 538
+  },
+  "cerqtit10": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 841,
+    "resampled_length": 538
+  },
+  "cerqtit11": {
+    "method": "cubic_spline_simple",
+    "category": "slow_varying",
+    "original_length": 841,
+    "resampled_length": 538
+  },
+  "cerqtit12": {
+    "method": "cubic_spline_simple",
+    "category": "slow_varying",
+    "original_length": 841,
+    "resampled_length": 538
+  },
+  "cerqtit13": {
+    "method": "cubic_spline_simple",
+    "category": "slow_varying",
+    "original_length": 841,
+    "resampled_length": 538
+  },
+  "cerqtit3": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 876,
+    "resampled_length": 536
+  },
+  "cerqtit6": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 876,
+    "resampled_length": 536
+  },
+  "cerqtit8": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 841,
+    "resampled_length": 538
+  },
+  "density": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 5960,
+    "resampled_length": 5959
+  },
+  "drsep": {
+    "method": "pchip_careful",
+    "category": "fast_transient",
+    "original_length": 296,
+    "resampled_length": 298
+  },
+  "ece1": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece2": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece3": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece4": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece5": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece6": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece7": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece8": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece9": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece10": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece11": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece12": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece13": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece14": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece15": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece16": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece17": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece18": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece19": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece20": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece21": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece22": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece23": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece24": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece25": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece26": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece27": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece28": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece29": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece30": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece31": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece32": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece33": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece34": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece35": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece36": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece37": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece38": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece39": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "ece40": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 30401,
+    "resampled_length": 30400
+  },
+  "fs03da": {
+    "method": "pchip_no_smoothing",
+    "category": "noisy",
+    "original_length": 304001,
+    "resampled_length": 304000
+  },
+  "fs04": {
+    "method": "cubic_spline_simple",
+    "category": "slow_varying",
+    "original_length": 304001,
+    "resampled_length": 304000
+  },
+  "fs04da": {
+    "method": "cubic_spline_simple",
+    "category": "slow_varying",
+    "original_length": 304001,
+    "resampled_length": 304000
+  },
+  "fs05da": {
+    "method": "pchip_careful",
+    "category": "fast_transient",
+    "original_length": 304001,
+    "resampled_length": 304000
+  },
+  "gasa": {
+    "method": "decimate_with_antialiasing",
+    "category": "smooth_high_snr",
+    "original_length": 121600,
+    "resampled_length": 3040
+  },
+  "gasb": {
+    "method": "decimate_with_antialiasing",
+    "category": "fast_transient",
+    "original_length": 121600,
+    "resampled_length": 3040
+  },
+  "gasc": {
+    "method": "decimate_with_antialiasing",
+    "category": "fast_transient",
+    "original_length": 121600,
+    "resampled_length": 3040
+  },
+  "gasd": {
+    "method": "decimate_with_antialiasing",
+    "category": "noisy",
+    "original_length": 121600,
+    "resampled_length": 3040
+  },
+  "ip": {
+    "method": "decimate_with_antialiasing",
+    "category": "smooth_high_snr",
+    "original_length": 121600,
+    "resampled_length": 6400
+  },
+  "kappa": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 296,
+    "resampled_length": 298
+  },
+  "li": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 296,
+    "resampled_length": 298
+  },
+  "pcbcoil": {
+    "method": "decimate_with_antialiasing",
+    "category": "smooth_high_snr",
+    "original_length": 121601,
+    "resampled_length": 6081
+  },
+  "pcdiamag3": {
+    "method": "decimate_with_antialiasing",
+    "category": "smooth_high_snr",
+    "original_length": 121601,
+    "resampled_length": 6081
+  },
+  "pinj": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 60801,
+    "resampled_length": 60800
+  },
+  "pinj_15l": {
+    "method": "pchip_careful",
+    "category": "fast_transient",
+    "original_length": 60801,
+    "resampled_length": 60800
+  },
+  "pinj_15r": {
+    "method": "pchip_careful",
+    "category": "fast_transient",
+    "original_length": 60801,
+    "resampled_length": 60800
+  },
+  "pinj_21l": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 60801,
+    "resampled_length": 60800
+  },
+  "pinj_21r": {
+    "method": "pchip_careful",
+    "category": "fast_transient",
+    "original_length": 60801,
+    "resampled_length": 60800
+  },
+  "pinj_30l": {
+    "method": "pchip_careful",
+    "category": "fast_transient",
+    "original_length": 60801,
+    "resampled_length": 60800
+  },
+  "pinj_30r": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 60801,
+    "resampled_length": 60800
+  },
+  "pinj_33l": {
+    "method": "pchip_careful",
+    "category": "fast_transient",
+    "original_length": 60801,
+    "resampled_length": 60800
+  },
+  "pinj_33r": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 60801,
+    "resampled_length": 60800
+  },
+  "prmtan_neped": {
+    "method": "pchip_careful",
+    "category": "fast_transient",
+    "original_length": 910,
+    "resampled_length": 578
+  },
+  "prmtan_teped": {
+    "method": "cubic_spline_simple",
+    "category": "slow_varying",
+    "original_length": 841,
+    "resampled_length": 578
+  },
+  "q95": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 296,
+    "resampled_length": 298
+  },
+  "rmaxis": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 296,
+    "resampled_length": 298
+  },
+  "rsurf": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 296,
+    "resampled_length": 298
+  },
+  "tinj": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 60801,
+    "resampled_length": 60800
+  },
+  "tribot": {
+    "method": "pchip_careful",
+    "category": "fast_transient",
+    "original_length": 296,
+    "resampled_length": 298
+  },
+  "tritop": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 296,
+    "resampled_length": 298
+  },
+  "volume": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 296,
+    "resampled_length": 298
+  },
+  "vsurf": {
+    "method": "cubic_spline",
+    "category": "smooth_high_snr",
+    "original_length": 296,
+    "resampled_length": 298
+  },
+  "zcur": {
+    "method": "pchip_no_smoothing",
+    "category": "noisy",
+    "original_length": 296,
+    "resampled_length": 298
+  },
+  "zmaxis": {
+    "method": "cubic_spline_simple",
+    "category": "slow_varying",
+    "original_length": 296,
+    "resampled_length": 298
+  },
+  "zsurf": {
+    "method": "cubic_spline_simple",
+    "category": "slow_varying",
+    "original_length": 296,
+    "resampled_length": 298
+  }
+}

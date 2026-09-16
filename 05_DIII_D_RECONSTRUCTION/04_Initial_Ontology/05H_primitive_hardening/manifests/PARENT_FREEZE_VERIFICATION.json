@@ -1,0 +1,82 @@
+{
+  "s7_1": {
+    "freeze_id": "D3D-SIR-S7.1-OBSERVATIONAL-OBJECT-FINAL-V1",
+    "n_verified": 9
+  },
+  "s7_2_v1": {
+    "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V1",
+    "status": "FROZEN_READY_FOR_S7.3",
+    "n_verified": 35
+  },
+  "s7_2_v2": {
+    "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V2",
+    "status": "FROZEN_READY_FOR_S7.3",
+    "n_verified": 10
+  },
+  "s7_3_v1": {
+    "freeze_id": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-V1",
+    "status": "FROZEN_READY_FOR_S7.4",
+    "n_verified": 33
+  },
+  "s7_4_v1": {
+    "freeze_id": "D3D-SIR-S7.4-MATHEMATICAL-INTERPRETATION-V1",
+    "status": "TARGET_TEMPORAL_RESOLUTION_RECONCILIATION_REQUIRED",
+    "n_verified": 7
+  },
+  "s7_3r_v2": {
+    "freeze_id": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-SOURCE-RESOLUTION-V2",
+    "status": "FROZEN_READY_TO_RETRY_S7.4",
+    "n_verified": 22
+  },
+  "s7_4_v2": {
+    "freeze_id": "D3D-SIR-S7.4-MATHEMATICAL-INTERPRETATION-SOURCE-RESOLUTION-V2",
+    "status": "FROZEN_READY_FOR_S7.5",
+    "n_verified": 15
+  },
+  "s7_5": {
+    "freeze_id": "D3D-SIR-S7.5-TYPED-RELATIONAL-ONTOLOGY-V1",
+    "status": "FROZEN_READY_FOR_S7.6",
+    "n_verified": 20
+  },
+  "verified_utc": "2026-09-04T22:19:49.044936+00:00",
+  "substantive_checks": {
+    "target_is_density": true,
+    "target_canonical_unit_m3": true,
+    "full_predictor_space_78": true,
+    "X_rec_instantiated": true,
+    "G_rec_v1_exists": true,
+    "G_rec_v1_primitive_count_78": true,
+    "G_rec_v1_families_C0_C4": true,
+    "G_rec_v1_symbolic_13604": true,
+    "external_cohort_42_sealed": true,
+    "no_s7_6_freeze_exists": false
+  },
+  "stage_sequence_conflict": {
+    "stage_instruction_asserted": "S7.6 HAS NOT STARTED",
+    "repository_state": "S7.6 V1 EXISTS AND IS FROZEN",
+    "s7_6_freeze_id": "D3D-SIR-S7.6-ADMISSIBLE-UNIVERSE-V1",
+    "s7_6_status": "FROZEN_READY_FOR_S7.7",
+    "s7_6_built_on_ontology": "G_REC_DENSITY_V1 (full 78-primitive)",
+    "s7_6_n_atoms": 6034,
+    "contamination_analysis": {
+      "s7_6_target_values_accessed": 0,
+      "s7_6_external_values_accessed": 0,
+      "s7_6_fitted_any_model": false,
+      "s7_6_computed_target_correlation": false,
+      "conclusion": "S7.6 V1 read development PREDICTOR values only; it accessed zero target values and zero external values, fitted nothing and computed no predictor-target statistic. No target-derived information can therefore leak into S7.5H."
+    },
+    "discretion_analysis": {
+      "concern": "knowledge of the S7.6 V1 outcome could in principle bias S7.5H choices",
+      "mitigation": "every S7.5H decision is fully specified by the stage instruction: redundancy thresholds (0.99/0.97/0.95/54 cells), the C0-C8 constructor catalogue, and the deterministic representative rule. The only judgement is redundancy-group SEMANTICS, which is decided strictly from frozen metadata (same quantity, same dimension, repeated-channel series) and is independent of any S7.6 result.",
+      "residual_risk": "LOW_AND_RECORDED"
+    },
+    "resolution": "PROCEED_AND_SUPERSEDE",
+    "s7_6_v1_downstream_status": "SUPERSEDED_FOR_PRIMARY_SEARCH_PENDING_RERUN_ON_HARDENED_ONTOLOGY",
+    "s7_6_v1_preserved_unmodified": true,
+    "rationale": "The stage premise is factually incorrect about the repository, but its INTENT is unaffected: harden the ontology before the PRIMARY admissible universe is fixed. S7.6 V1 is preserved as history, exactly as S7.3 V1 and S7.4 V1 were, and must be re-run on G_REC_DENSITY_HARDENED_V2 if S7.5H succeeds.",
+    "human_review_flag": true
+  },
+  "n_drift": 0,
+  "drift": [],
+  "verdict": "PARENTS_VERIFIED_WITH_STAGE_SEQUENCE_CONFLICT"
+}

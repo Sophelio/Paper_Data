@@ -1,0 +1,140 @@
+{
+  "n_pairs_audited": 828,
+  "n_stably_near_redundant_pairs": 9,
+  "P_full": 78,
+  "P_hard": 70,
+  "P_deferred": 8,
+  "by_group": {
+    "X_CER_Ti": {
+      "n_members": 7,
+      "n_representatives": 7,
+      "n_deferred": 0,
+      "n_redundant_pairs": 0
+    },
+    "X_CER_v": {
+      "n_members": 7,
+      "n_representatives": 7,
+      "n_deferred": 0,
+      "n_redundant_pairs": 0
+    },
+    "X_ECE": {
+      "n_members": 40,
+      "n_representatives": 33,
+      "n_deferred": 7,
+      "n_redundant_pairs": 8
+    },
+    "X_fs": {
+      "n_members": 4,
+      "n_representatives": 3,
+      "n_deferred": 1,
+      "n_redundant_pairs": 1
+    }
+  },
+  "family_census": [
+    {
+      "family": "cer_rotation_ti",
+      "n_before": 14,
+      "n_after": 14,
+      "share_before": 0.1794871794871795,
+      "share_after": 0.2,
+      "n_deferred": 0
+    },
+    {
+      "family": "density",
+      "n_before": 2,
+      "n_after": 2,
+      "share_before": 0.02564102564102564,
+      "share_after": 0.02857142857142857,
+      "n_deferred": 0
+    },
+    {
+      "family": "ece_te_profile",
+      "n_before": 40,
+      "n_after": 33,
+      "share_before": 0.5128205128205128,
+      "share_after": 0.4714285714285714,
+      "n_deferred": 7
+    },
+    {
+      "family": "filterscope_dalpha",
+      "n_before": 4,
+      "n_after": 3,
+      "share_before": 0.05128205128205128,
+      "share_after": 0.04285714285714286,
+      "n_deferred": 1
+    },
+    {
+      "family": "gas_injection",
+      "n_before": 4,
+      "n_after": 4,
+      "share_before": 0.05128205128205128,
+      "share_after": 0.05714285714285714,
+      "n_deferred": 0
+    },
+    {
+      "family": "magnetics",
+      "n_before": 4,
+      "n_after": 4,
+      "share_before": 0.05128205128205128,
+      "share_after": 0.05714285714285714,
+      "n_deferred": 0
+    },
+    {
+      "family": "neutral_beams",
+      "n_before": 10,
+      "n_after": 10,
+      "share_before": 0.1282051282051282,
+      "share_after": 0.14285714285714285,
+      "n_deferred": 0
+    }
+  ],
+  "effective_rank_audit": [
+    {
+      "semantic_group_id": "X_CER_Ti",
+      "n_members": 7,
+      "n_representatives_selected": 7,
+      "median_rank_95pct": 2.0,
+      "median_rank_99pct": 3.5,
+      "n_cells": 60,
+      "role": "AUDIT_ONLY_NEVER_SELECTION"
+    },
+    {
+      "semantic_group_id": "X_CER_v",
+      "n_members": 7,
+      "n_representatives_selected": 7,
+      "median_rank_95pct": 3.0,
+      "median_rank_99pct": 4.0,
+      "n_cells": 60,
+      "role": "AUDIT_ONLY_NEVER_SELECTION"
+    },
+    {
+      "semantic_group_id": "X_ECE",
+      "n_members": 40,
+      "n_representatives_selected": 33,
+      "median_rank_95pct": 3.0,
+      "median_rank_99pct": 7.0,
+      "n_cells": 60,
+      "role": "AUDIT_ONLY_NEVER_SELECTION"
+    },
+    {
+      "semantic_group_id": "X_fs",
+      "n_members": 4,
+      "n_representatives_selected": 3,
+      "median_rank_95pct": 2.0,
+      "median_rank_99pct": 3.0,
+      "n_cells": 60,
+      "role": "AUDIT_ONLY_NEVER_SELECTION"
+    }
+  ],
+  "thresholds_used": {
+    "n_valid_cells_min": 54,
+    "R_med_min": 0.99,
+    "R_10_min": 0.97,
+    "sign_consistency_min": 0.95,
+    "frozen": true,
+    "may_be_altered_after_seeing_counts": false,
+    "absolute_correlation_rationale": "two measurements related by a stable sign flip and affine scaling are representationally redundant for the downstream affine relation family",
+    "sign_consistency_rationale": "a pair whose relation changes sign among discharges is not one stable observational direction"
+  },
+  "thresholds_unchanged_after_value_access": true
+}

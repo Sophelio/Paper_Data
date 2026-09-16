@@ -1,0 +1,28 @@
+{
+  "record_id": "S7_11_VERDICT_V1",
+  "generated_utc": "2026-09-05T23:50:49.716342+00:00",
+  "PRIMARY_S7_10_RESULT_IMMUTABLE": true,
+  "PRIMARY_EXTERNAL_RESULT": "NO_QUALIFIED_NONTRIVIAL_STRUCTURAL_TRANSFER",
+  "V3": "FAIL",
+  "V6": "FAIL",
+  "omega_rec_supported_claim_domain": "EMPTY",
+  "C_dev_star": "ID(cerqtit6)|ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(cerqtit10)|RECIP(prmtan_neped)",
+  "C_dev_star_changed": false,
+  "S7_11_VERDICT": "S7_11_DEVELOPMENT_EQUIVALENCE_DOES_NOT_IDENTIFY_EXTERNAL_ROBUSTNESS__CANONICAL_REPRESENTATIVE_EXTERNALLY_FRAGILE__PRIMARY_FAILURE_UNCHANGED",
+  "what_kind_of_negative_result": [
+    "NOT a uniform family failure: 70 of 213 full-domain development-equivalent supports satisfy the V3-style criterion, so the negative result is not a property of the whole development-equivalent family.",
+    "NOT a strong family success either: no member beats persistence by more than 0.0287 NRMSE and the family median Delta_1 is -0.0004, i.e. parity with persistence. The family straddles the trivial baseline.",
+    "The canonical representative is externally fragile: C_dev_star sits at the 86.4th percentile of external mean NRMSE within its own family while having had the HIGHEST development bootstrap selection frequency of any member.",
+    "Development equivalence carried essentially no information about external robustness: Spearman correlation between development selection frequency and external mean NRMSE is -0.09.",
+    "The V3-style outcome tracks the presence of a catastrophic extrapolation tail rather than typical-case accuracy.",
+    "V9 resolves FAIL on the temporal-block component: omitting block B alone flips the V3-style verdict. The discharge component is clean (0 of 42)."
+  ],
+  "does_not_authorise": [
+    "replacing C_dev_star",
+    "promoting any sensitivity support",
+    "narrowing Omega_rec",
+    "any structural-transfer claim",
+    "removing PROD(gasa,gasa)",
+    "any range gate"
+  ]
+}

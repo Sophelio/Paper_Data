@@ -1,0 +1,7 @@
+fold,ID(ece39),ID(pcdiamag3),LEVEL_RATE(cerqrott12|ece35),LEVEL_RATE(cerqrott12|ece36),"PROD(cerqtit8,cerqtit8)","PROD(ece37,ece39)","PROD(fs04,cerqrott8)","PROD(ip,ece39)","PROD(ip,gasc)","PROD(pinj,cerqrott6)","PROD(pinj,ece36)","PROD(prmtan_neped,cerqtit6)","PROD(prmtan_neped,gasc)","PROD(prmtan_neped,pinj_30l)",RATE_OVER_LEVEL(cerqrott3|prmtan_neped),RATE_OVER_LEVEL(ip|ece39),"RATIO(cerqrott12,cerqtit10)","RATIO(ece21,cerqtit10)","RATIO(ece39,bt)","RATIO(fs03da,cerqtit3)","RATIO(ip,bt)","RATIO(ip,cerqtit10)","RATIO(ip,ece39)","RATIO(pinj,bt)","RATIO(pinj_33r,cerqtit10)","RATIO(pinj_33r,prmtan_neped)","RATIO(prmtan_neped,cerqtit3)","RATIO(prmtan_neped,ece38)","RATIO(tinj,ece20)",RECIP(bt),RECIP(cerqtit10),RECIP(cerqtit11),RECIP(ece1),RECIP(ece38),RECIP(ece39)
+0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,1,1,0,0,0,0,0,1,0,0,0,1,1,1,1,1
+1,0,1,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,1,0,1,0,0,1,0,0,1,0,1,1,0,1,0,0,0,0
+2,1,1,0,0,0,0,1,0,0,0,1,0,0,0,0,0,1,1,0,0,1,1,1,0,0,0,1,0,1,1,0,0,0,0,0
+3,0,1,0,0,0,1,0,0,0,0,0,1,0,1,1,1,0,1,0,0,0,0,0,0,1,0,1,0,1,1,1,0,0,0,0
+4,0,1,1,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0,0,1,1,1,0,1,0,1,0,1,0,0,0,0
+5,0,1,0,1,0,0,1,1,0,0,1,1,0,0,0,0,0,1,0,0,1,1,0,0,0,0,1,0,1,1,0,0,0,0,0

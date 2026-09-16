@@ -1,0 +1,47 @@
+{
+  "record_id": "S7_STAGE_MANIFEST_V1",
+  "generated_utc": "2026-09-08T00:51:17.508741+00:00",
+  "stage_id": "S7.5H",
+  "title": "Primitive space and ontology hardening",
+  "directory": "05H_primitive_space_and_ontology_hardening",
+  "scientific_task_id": "q_rec",
+  "claim_branch": "QREC-B1",
+  "claim_branch_role": "MEMBER",
+  "parent_claim_branch": null,
+  "operational_epoch": 1,
+  "revision_level": "INSTANTIATION",
+  "branch": "q_rec",
+  "status": "CANONICAL",
+  "sir_architecture_mapping": [
+    "G_q"
+  ],
+  "scientific_question": "Which primitives and constructors survive hardening?",
+  "operation": "70-primitive hardened basis; 9 constructor families C0-C8; 23,861 symbolic coordinates.",
+  "verdict": "G_REC_DENSITY_HARDENED_V2 v2.0.0 frozen, 48/48 acceptance.",
+  "parent_stages": [
+    "S7.5"
+  ],
+  "child_stages": [
+    "S7.6R"
+  ],
+  "key_numbers": {
+    "n_primitives": 70,
+    "n_symbolic": 23861,
+    "families": 9
+  },
+  "notes": "Derivative eligibility declared per primitive (63 of 70).",
+  "governing_freeze": {
+    "path": "S7_5H_FREEZE.json",
+    "freeze_id": "D3D-SIR-S7.5H-PRIMITIVE-SPACE-AND-ONTOLOGY-HARDENING-V1",
+    "sha256": "dffdd834ecf40b0f22b4844040bfe0ab5dd2bebb4b73d517a67387f4718f43d9",
+    "authoritative": true,
+    "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+  },
+  "executables": [
+    "scripts/s7_5h_a_policy.py",
+    "scripts/s7_5h_b_redundancy.py",
+    "scripts/s7_5h_c_ontology.py"
+  ],
+  "n_files": 34,
+  "indexes_not_replaces": true
+}

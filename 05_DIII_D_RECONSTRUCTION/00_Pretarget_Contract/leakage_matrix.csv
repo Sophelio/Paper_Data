@@ -1,0 +1,26 @@
+operation,target_calibration_allowed,target_validation_allowed,target_external_allowed_before_S7_10,reason
+fit relation coefficients,ALLOWED,NO,ALLOWED (calibration interval only),this is what local calibration means
+compute development utility,NO,ALLOWED,NO,development validation blocks are the selection signal
+final protected scoring,NO,NO,ALLOWED AT S7.10 ONLY,the result itself
+feature / coordinate construction,NO,NO,NO,would embed the target in its own predictors
+ontology generation,NO,NO,NO,ontology must be target-independent
+target-specific predictor normalization outside calibration,NO,NO,NO,leaks protected statistics into predictors
+smoothing-parameter selection using protected intervals,NO,NO,NO,leaks protected structure
+choosing protected intervals,NO,NO,NO,intervals fixed by VALIDATION_PROTOCOL.md before any target
+choosing the target,NO,"ALLOWED (dev only, eligibility criteria 6/9/10)",NO,external must not influence target choice
+selecting the coordinate support,NO,ALLOWED (dev only),NO,support frozen before external evaluation
+determining common support from target VALUES,NO,NO,NO,"support is a temporal fact, not a value fact"
+determining scoreable region from target TIMESTAMPS,ALLOWED,ALLOWED,ALLOWED,timestamps carry no target information
+estimating predictor mean / std / scaler,ALLOWED,calibration-fitted only,ALLOWED (calibration only),fitted transforms must come from calibration data
+estimating clipping thresholds,ALLOWED,calibration-fitted only,ALLOWED (calibration only),same
+estimating imputation parameters,ALLOWED,calibration-fitted only,ALLOWED (calibration only),same
+selecting regularization hyperparameters,NO,ALLOWED (dev only),NO,frozen before external evaluation
+fitting dimensional-reduction maps,ALLOWED,calibration-fitted only,ALLOWED (calibration only),same
+whole-discharge z-scoring including protected target,NO,NO,NO,FORBIDDEN for primary evaluation - statistics would include protected target values
+using predictor values inside the protected block,ALLOWED,ALLOWED,ALLOWED,contemporaneous reconstruction; predictors are observed
+using target values inside the protected block,NO,NO,NO,this is the quantity being reconstructed
+inspecting external signal values before S7.10,NO,NO,NO,external cohort sealed - EXTERNAL_COHORT_FIREWALL.md
+inspecting external shot IDs and S7.1 metadata,ALLOWED,ALLOWED,ALLOWED,metadata is not outcome information
+using q_desc support to seed q_rec,NO,NO,NO,different task contract - KNOWLEDGE_POLICY.md firewall
+using retired q_rec support,NO,NO,NO,retired for provenance and triviality failures
+using dFL derived features as primitives,NO,NO,NO,target-conditioned derived export; O is the 95 archived quantities

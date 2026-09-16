@@ -1,0 +1,77 @@
+{
+  "manifest_id": "BASELINE_CONFIGURATION_MANIFEST_V1",
+  "generated_utc": "2026-09-05T20:24:35.604601+00:00",
+  "written_after_lock": true,
+  "lock_sha256": "c7c6a36b86766f3cfaf1411dae5395a2c2d42844369f3eadaa88dbd8556d04d0",
+  "prevalue_sha256": "fd05fcc0f4d0e5e95a26315006be1531d4f6bcc5d7697914b5daaf3593a1ba3f",
+  "baselines": {
+    "B0_CALIBRATION_MEAN_V1": {
+      "file": "BASELINE_B0_CONFIG.json",
+      "role": "MANDATORY_V3",
+      "status": "FROZEN_NOT_RUN",
+      "sha256": "356485d5a6d52d0a94a9d373e2bc0d276c0f9707bbb970e18fd79080fce72440",
+      "tuned_on_development": false,
+      "selected_alpha": null
+    },
+    "B1_PERSISTENCE_V1": {
+      "file": "BASELINE_B1_CONFIG.json",
+      "role": "MANDATORY_V3",
+      "status": "FROZEN_NOT_RUN",
+      "sha256": "a2b7b8f07d1de649497ac08259288fb0700d5f35cc2409980661144b0d2e79a4",
+      "tuned_on_development": false,
+      "selected_alpha": null
+    },
+    "B1A_AR1": {
+      "file": "BASELINE_B1A_CONFIG.json",
+      "role": "DIAGNOSTIC",
+      "status": "FROZEN_NOT_RUN",
+      "sha256": "fcc049444e233b2ea6f3304e69739202a04b3387dec936d8576658b446a42da1",
+      "tuned_on_development": false,
+      "selected_alpha": null
+    },
+    "B2_RAW_RIDGE": {
+      "file": "BASELINE_B2_CONFIG.json",
+      "role": "MANDATORY_V4",
+      "status": "FROZEN_NOT_RUN",
+      "sha256": "d9abeaaa4e767b43e31fd57bb1dbb0c48c33584b81131395cadaabff88c4c0f0",
+      "tuned_on_development": true,
+      "selected_alpha": 1.0
+    },
+    "B3_RAW_HIST_GRADIENT_BOOSTING": {
+      "file": "BASELINE_B3_CONFIG.json",
+      "role": "MANDATORY_V4",
+      "status": "FROZEN_NOT_RUN",
+      "sha256": "c72c049e63389dab181347c8adf2f5b649ceed13b395d5ed542da4c4cc01f2e3",
+      "tuned_on_development": false,
+      "selected_alpha": null
+    },
+    "H0_RAW_HARDENED": {
+      "file": "BASELINE_H0_CONFIG.json",
+      "role": "DIAGNOSTIC_ABLATION",
+      "status": "FROZEN_NOT_RUN",
+      "sha256": "40182fd53373b80ff26d5aae8f0eb760abc8da0af82b420630b882ac625ac76f",
+      "tuned_on_development": true,
+      "selected_alpha": 1.0
+    }
+  },
+  "all_frozen": true,
+  "all_run": false,
+  "external_evaluation_stage": "S7.10",
+  "no_baseline_result_compared_to_relational_representation_in_S7_9": true,
+  "no_baseline_outcome_influenced_representation_selection": true,
+  "ordering_guarantee": "DEVELOPMENT_REPRESENTATION_LOCK was written and hashed before the first alpha was evaluated; the selected support cannot change",
+  "S_pers": {
+    "metric_id": "S_PERS_V1",
+    "carried_unchanged": true,
+    "used_for_selection": false,
+    "used_to_reopen_any_utility_rank": false,
+    "status": "REQUIRED_REPORTING at S7.10"
+  },
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "sklearn": "1.9.0",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

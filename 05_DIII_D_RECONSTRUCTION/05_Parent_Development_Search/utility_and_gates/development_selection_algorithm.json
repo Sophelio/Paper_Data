@@ -1,0 +1,126 @@
+{
+  "algorithm_id": "DEVELOPMENT_SELECTION_ALGORITHM_V1",
+  "generated_utc": "2026-09-05T08:07:46.430834+00:00",
+  "owner_stage": "S7.9",
+  "executed_in_s7_8": false,
+  "input": {
+    "frontier": "AHAT_REC_DENSITY_ONE_SEED_V2",
+    "cardinality": 162845,
+    "per_cell_nrmse": [
+      "07_search_policy_and_frontier/one_seed_primary_v2/explored_per_cell_nrmse.npz",
+      "07_search_policy_and_frontier/one_seed_primary_v2/atomic_per_cell_nrmse.npz"
+    ],
+    "registry": "07_search_policy_and_frontier/one_seed_primary_v2/explored_support_registry.csv"
+  },
+  "output": {
+    "one_deterministic_development_selected_candidate": true,
+    "full_survivor_sets_at_every_rank": true,
+    "elimination_ledger": true
+  },
+  "stages": [
+    {
+      "set": "E0",
+      "content": "Ahat_rec",
+      "size": 162845
+    },
+    {
+      "set": "E1",
+      "rank": 1,
+      "criterion": "primary fit quality",
+      "rule": "C in E1 iff |FIT(C) - FIT_best| <= max(SE_delta(C, best), 0.01)",
+      "note": "practical-equivalence set, NOT a top-K truncation"
+    },
+    {
+      "set": "E2",
+      "rank": 2,
+      "criterion": "development generalization / stability",
+      "rule": "within E1: BLOCK_WORST practical-equivalence restriction, then exact argmin of SHOT_P90"
+    },
+    {
+      "set": "E3",
+      "rank": 3,
+      "criterion": "parsimony",
+      "rule": "within E2: exact argmin of |C|, then exact argmin of ACTIVE_TERMS(C)"
+    },
+    {
+      "set": "E4",
+      "rank": 4,
+      "criterion": "conditioning",
+      "rule": "within E3: exact argmin of COND_MEDIAN, then COND_P90, then COND_MAX"
+    },
+    {
+      "set": "E5",
+      "rank": 5,
+      "criterion": "support stability",
+      "rule": "within E4: max BOOT_SELECTION_FREQ, then max FOLD_SELECTION_FREQ, then canonical support ID"
+    }
+  ],
+  "parsimony_definition": {
+    "first": "|C|, the number of scientific coordinates, from registry support_size",
+    "second": "ACTIVE_TERMS(C)",
+    "active_terms": {
+      "definition": "the number of explanatory columns whose OLS coefficient is not exactly zero under ordinary floating arithmetic",
+      "magnitude_threshold": null,
+      "significance_or_p_value_pruning": false,
+      "intercept_counted": false,
+      "aggregation_rule": {
+        "OR-05": "a column is ACTIVE for C iff its coefficient is not exactly 0.0 in at least one of the 60 calibration fits; ACTIVE_TERMS(C) is the count of active columns",
+        "rationale": "coefficients are discharge/block local, so the criterion needs a candidate-level integer; the union rule is the conservative reading (a term counts as used if it is used anywhere) and requires no threshold",
+        "outcome_independent": true
+      },
+      "expected_behaviour": "under full-rank OLS an exactly-zero coefficient essentially never occurs, so ACTIVE_TERMS(C) = |C| and the second parsimony subcriterion is non-binding, exactly as the parent anticipates"
+    }
+  },
+  "canonical_tie_break": {
+    "rule": "lexicographic ascending byte order of the canonical support_id",
+    "role": "FINAL deterministic tie-break at every rank",
+    "sufficient": "support_ids are unique across Ahat_rec, so the tie-break always resolves to exactly one candidate"
+  },
+  "elimination_ledger_schema": {
+    "one_row_per_eliminated_candidate": true,
+    "columns": [
+      "support_id",
+      "support_size",
+      "rank_eliminated",
+      "criterion",
+      "reason",
+      "comparison_quantity",
+      "candidate_value",
+      "reference_value",
+      "threshold_applied"
+    ],
+    "surviving_candidates_recorded_separately_per_rank": true
+  },
+  "determinism": {
+    "sources_of_randomness": [
+      "the Rank-5 discharge bootstrap only"
+    ],
+    "seed": 2026090501,
+    "all_other_steps": "deterministic given the frozen inputs",
+    "reproducibility_requirement": "identical inputs must yield an identical selected candidate"
+  },
+  "preconditions_before_reusing_s7_7r_arrays": {
+    "source": "S7.8 instruction section 8",
+    "required_verifications": [
+      "artifact hashes match the S7.7R recorded manifest",
+      "estimator equivalence: DEVELOPMENT_RELATION_OLS_V1 == SEARCH_PROXY_OLS_V1 for the fit criterion",
+      "metric equivalence: NRMSE definition, scale and ddof unchanged",
+      "support identity: canonical support_id set matches Ahat_rec exactly",
+      "block identity: the 60 cells match the frozen development cohort and block windows"
+    ],
+    "otherwise": "recompute from source",
+    "s7_8_status": "all five verified in S7.8; S7.9 must re-verify at execution time"
+  },
+  "forbidden_in_execution": [
+    "selecting a candidate before the ranks are computed in order",
+    "introducing a tolerance not defined in this algorithm",
+    "reordering the ranks",
+    "pruning a constructor family",
+    "penalizing ECE ancestry",
+    "removing uncalibrated primitives"
+  ],
+  "selection_domain": "AHAT_REC_DENSITY_ONE_SEED_V2",
+  "selection_domain_cardinality": 162845,
+  "global_optimality_claim": false,
+  "domain_reading": "every quantity defined here is evaluated over the frozen explored frontier Ahat_rec only; A_rec minus Ahat_rec remains ADMISSIBLE_UNSEARCHED and carries no negative finding"
+}

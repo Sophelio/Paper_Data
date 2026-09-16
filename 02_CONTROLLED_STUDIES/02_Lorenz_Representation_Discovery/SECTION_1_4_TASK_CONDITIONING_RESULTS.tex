@@ -1,0 +1,48 @@
+% Section 1.4 — task-conditioned relational discovery (Lorenz).
+% Populated from audited artifacts on 2026-08-27. ~300 words of main text.
+% Numbers trace to tables/confirmation_results.csv, tables/contract_selections.csv
+% and sir_mcp/containment/mcp_containment.json.
+% NOT inserted into the manuscript automatically.
+
+\subsection{Conventional Model Classes Are Nested Within Relational Discovery}
+\label{sec:task-conditioning}
+
+In the conventional workflow examined here, PySINDy solves a model-identification
+problem after much of the scientific problem formulation has been supplied. SIR
+makes that problem formulation---the scientific object, information boundary,
+admissible coordinates, relational families, utility and validation
+requirements---an explicit computational object that participates in discovery.
+
+Restricted to the conventional problem, the two coincide. Given the full Lorenz
+state and exact derivatives, a SIR contract executed natively through the SIR
+engine recovers the generator with exact support in all three equations
+($\dot x=10.000y-10.000x$, $\dot y=27.998x-0.999y-1.000xz$,
+$\dot z=-2.667z+1.000xy$; maximum coefficient deviation $\approx2\times10^{-3}$).
+
+The contracts separate when the same object is interrogated differently. We
+reconstruct a withheld coordinate $z$ from $x$ and $y$ within a common
+five-point retrospective information set, over $17$ declared admissible
+representations, using PySINDy's sequentially thresholded least squares as the
+relation solver throughout, with selection on $48$ development trajectories and
+evaluation on $24$ never-seen ones. An accuracy contract selects the full
+admissible set ($38$ coordinates, confirmation $\mathrm{RMSE}=1.35\times10^{-5}$).
+A compactness contract---identical object, identical information, identical
+solver, differing only in declared objective---selects $12$ coordinates
+($3.26\times10^{-5}$) from a four-member accuracy-equivalent set, improving
+conditioning from $8.4\times10^{16}$ to $2.7\times10^{12}$. When the object is
+extended to carry an observational-uncertainty model, the selection reverts to
+the full set, because the compact representation is noise-fragile: under $1\%$
+observational noise it degrades to $5.12$ while the full set degrades to $2.25$.
+A conventional degree-2 polynomial baseline on the same raw stencil reaches
+$2.27$ (clean) and $3.00$ (noisy); an unchanged multilayer perceptron improves
+from $0.289$ to $0.018$ on clean data with the compact representation, but that
+advantage does not survive noise.
+
+The contribution is not numerical inexpressibility of competing software.
+PySINDy can consume SIR-generated coordinates, can serve as a solver inside a SIR
+contract, and---as we verify with an independent wrapper implementing the same
+declared selection logic---can reproduce the task-selection outcome when the
+scientific contract is built around it. The contribution is that representation
+and qualification become part of the computational discovery problem: there is
+no task-independent best representation here, and which one is preferred is
+determined by the declared objective and the stated observational uncertainty.

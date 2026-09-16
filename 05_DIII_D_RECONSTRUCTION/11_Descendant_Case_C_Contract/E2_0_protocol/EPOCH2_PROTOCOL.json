@@ -1,0 +1,62 @@
+{
+  "protocol_id": "EPOCH2_PROTOCOL_V1",
+  "frozen_utc": "2026-09-06T04:02:06.709084+00:00",
+  "parent_contract": "K_REC_V2",
+  "parent_contract_sha256": "4fe95d45c6d6f9e0d66918cdc4cc7347276a915363b4a29501c2084d4f506407",
+  "architecture": "DISCHARGE_GROUPED_CROSS_FITTED_DISCOVERY_AND_QUALIFICATION",
+  "claim_type": "CROSS_DISCHARGE_QUALIFIED_RECONSTRUCTION_WITHIN_THE_FROZEN_62_DISCHARGE_OBSERVATIONAL_OBJECT",
+  "why_no_new_external_cohort": "the former 42-discharge external cohort is no longer sealed: its target values were opened in S7.10 and it informed the R1/K2 diagnosis. Carving a fresh 'never seen' cohort out of the same 62 discharges would be fabrication, because every discharge has now contributed to the contract-learning process. Cross-fitting is the honest architecture: it does not claim virgin data, it claims that no discharge's own target informed the support used to reconstruct it",
+  "n_outer_folds": 6,
+  "fold_sizes": {
+    "0": 11,
+    "1": 11,
+    "2": 10,
+    "3": 10,
+    "4": 10,
+    "5": 10
+  },
+  "fold_algorithm": {
+    "algorithm_id": "E2_OUTER_FOLD_ASSIGNMENT_V1",
+    "steps": [
+      "1. take the 62 discharges of the frozen observational object",
+      "2. sort by (processing_era in the fixed order [earlier, later], then discharge id ascending)",
+      "3. assign outer_fold = position mod 6"
+    ],
+    "deterministic": true,
+    "random_seed": null,
+    "uses_randomness": false,
+    "trial_and_selection": false,
+    "n_partitions_generated": 1,
+    "note": "exactly one partition is generated. No alternative partition was produced, scored or compared, so no partition could have been chosen for its appearance",
+    "balancing_variable": "processing_era",
+    "balancing_mechanism": "systematic assignment within an era-sorted ordering distributes each era across folds by construction; no balance search is performed and no balance criterion is optimised",
+    "target_blind": true,
+    "performance_blind": true
+  },
+  "every_discharge_held_out_exactly_once": true,
+  "outer_statistical_unit": "discharge",
+  "row_level_random_split": false,
+  "block_level_split_across_roles": false,
+  "access_policy": "EPOCH2_ACCESS_POLICY_V1",
+  "range_support_policy": "EPOCH2_RANGE_SUPPORT_POLICY_V1",
+  "search_budget": "EPOCH2_SEARCH_BUDGET_V1",
+  "qualification_policy": "EPOCH2_QUALIFICATION_POLICY_V1",
+  "EPOCH2_IS_FINAL_QREC_ATTEMPT": true,
+  "stop_rule": {
+    "if_epoch2_fails": [
+      "do not revise K_rec again for this paper",
+      "do not add another threshold",
+      "do not change the split",
+      "do not remove shots",
+      "do not launch Discovery Epoch 3"
+    ],
+    "then": "close q_rec as a qualified iterative case study and use q_desc as the positive DIII-D headline result"
+  },
+  "forbidden_claims": [
+    "virgin external validation",
+    "untouched external cohort",
+    "zero-shot transfer",
+    "prospective clinical-style confirmation",
+    "universal DIII-D generalization"
+  ]
+}

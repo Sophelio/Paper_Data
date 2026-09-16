@@ -1,0 +1,86 @@
+{
+  "correction_audit_id": "D3D-SIR-62-COEFFICIENT-CONDITIONING-CORRECTION-V1",
+  "original_audit_id": "D3D-SIR-62-COEFFICIENT-CONDITIONING-V1",
+  "canonical_run_id": "D3D-SIR-62-ALIGNED-V1",
+  "created_utc": "2026-08-05T19:54:45Z",
+  "n_discharges": 62,
+  "n_samples_per_discharge": 1000,
+  "n_features": 7,
+  "source_matrix_order": [
+    "d[pcdiamag3]/d[kappa]",
+    "d[kappa]/d[t]",
+    "r[q95]/r[kappa]",
+    "d[pcdiamag3]/d[betan]",
+    "d[kappa]/d[betan]",
+    "d[betan]/d[t]",
+    "d[li]/d[betan]"
+  ],
+  "manuscript_display_order": [
+    "D_kappa W_dia",
+    "D_betaN W_dia",
+    "D_betaN kappa",
+    "D_betaN l_i",
+    "q95 / kappa",
+    "dot beta_N",
+    "dot kappa"
+  ],
+  "original_audit_pooled_rmse": 0.05758467247445343,
+  "original_audit_mean_vector_rmse": 0.4125238315775986,
+  "original_bootstrap_primary": 1000,
+  "original_bootstrap_sensitivity": 300,
+  "original_median_condition_number": 41.3202464096063,
+  "original_max_condition_number": 71.31667876056015,
+  "original_rank_counts": [
+    {
+      "tolerance": 1e-12,
+      "n_full_rank_7": 62,
+      "n_rank_lt_7": 0
+    },
+    {
+      "tolerance": 1e-10,
+      "n_full_rank_7": 62,
+      "n_rank_lt_7": 0
+    },
+    {
+      "tolerance": 1e-08,
+      "n_full_rank_7": 62,
+      "n_rank_lt_7": 0
+    },
+    {
+      "tolerance": 1e-06,
+      "n_full_rank_7": 62,
+      "n_rank_lt_7": 0
+    }
+  ],
+  "maximum_absolute_coefficient_difference": 2.220446049250313e-16,
+  "reproduced_pooled_rmse": 0.05758467247445343,
+  "reference_pooled_rmse": 0.05758467247445343,
+  "reproduced_mean_vector_rmse": 0.4125238315775986,
+  "reference_mean_vector_rmse": 0.4125238315775986,
+  "delta_pooled_rmse": 0.0,
+  "delta_mean_vector_rmse": 0.0,
+  "pass": true,
+  "input_file_sha256": {
+    "audit_config": "f3584a03ecd04caea35d447540ef110330bd56aa793da736008359e87fa03f80",
+    "audit_manifest": "ecf61922b92ef0de315899939cf608dcc06ee70f721a5e5a3702080bb4a37ac9",
+    "summary": "73dfd90dc8079628f1945d652c6eb431457ded75abbfb8094a767273b7ea7ff6",
+    "input_validation": "64abe7972c104f308802896aaf9a95f708681ec99eccda007d1bd8250ab61d45",
+    "boot_primary": "2caedc91cccb768028e58ea4036898b7a1dafecf4b9223e5709b27e85b1a8169",
+    "boot_sens": "a85fd58969e073b647a8dab8dff49c4a281eeec58685d4824c75fe9eb61ecfca",
+    "mv_npz": "2c96a31f70bf7f21a97f5255783101c42ea4513c3e21c6d4904e6526460af1a5",
+    "cond": "326a5c3049af5945047fc7948d890aad798276bc66bf741fda77f8656a3440c4",
+    "sing": "e7350713aad1090d8d2effff94a12d9e2ff5c52c2e92deeefc3b851199f78afb",
+    "trunc": "7305a151502250905f2c66b2a0b22b6ccbe785faded1540f438ddbcc3d0e1182",
+    "boot_sum": "6af6837692963a1fa8cd5867100aa04f6b78b75fe07a57f7c64c06a2cf70ddd4",
+    "boot_block_sens": "ecf694fd0b2a2ed8edff45243e43e9d19bf32fb51889fb1037c046b1b77d4291",
+    "boot_cov": "1177c1cd63f87a38aadd8548fc777925a235d7a607bd68417afc3d8905995884",
+    "het": "74cdc318078e5561dc9e0eea349e9d2708c84a937216c4bae40c48c82641d9dd",
+    "mv_evec": "6522d8549d3d2e84742d59cfe578d47a6e8e67ce34f5a99e009a0867633c8d70",
+    "blocks": "8b6b76170535cc99bef0a23c4a1a2ad5a20b5e6403f8f3020aad4be894c8596d",
+    "vif": "2cc0236dbc293c3308b05802c4160f270af1a1f6b3567a7712a9da7858416520",
+    "near": "d1faa026d2897c4d83bf3741dbbb5215bab989853a05c06478aa751d5500c377",
+    "report": "caa2b787886f3f9e660ec8978d1babcbd4b04ba5e28ccbd216634a894188b47c",
+    "utils": "6d3344d2fb1c969671d5ed0374fa47d907d02247be51125fc82de949f59413d3",
+    "driver": "eac52fde73f278aaa1d431da71f3d1bbf5e6f6c2051cc18104a172a84619df6c"
+  }
+}

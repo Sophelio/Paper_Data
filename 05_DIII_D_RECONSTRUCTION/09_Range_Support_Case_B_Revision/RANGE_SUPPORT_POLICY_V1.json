@@ -1,0 +1,88 @@
+{
+  "policy_id": "RANGE_SUPPORT_POLICY_V1",
+  "frozen_utc": "2026-09-06T02:59:57.816714+00:00",
+  "status": "PROSPECTIVE_CONTRACT_CONDITION",
+  "frozen_before_any_epoch1_identity_was_joined": true,
+  "concept": "OBSERVATIONAL_RANGE_SUPPORT",
+  "metric": {
+    "id": "E_RANGE_HULL_EXCESS_OVER_CALIBRATION_RANGE_V1",
+    "equation": "E(c,s,b) = max_{z in c_app} max(L - z, 0, z - U) / (U - L), where L = min(c_cal), U = max(c_cal)",
+    "equivalent_closed_form": "E = max(L - min(c_app), 0, max(c_app) - U) / (U - L) - only the calibration and application extrema are needed",
+    "reads_as": "how far beyond the calibration hull the application values reach, measured in units of the calibration range itself",
+    "dimensionless": true,
+    "unit_scale_invariant": true,
+    "sign_symmetric": true,
+    "epsilon": null,
+    "selected_over": "E_RMS (hull excess over calibration RMS)",
+    "selection_basis": "frozen desiderata D6 (constructor-generic) and D10 (auditable)",
+    "constructor_p90_spread_ratio": {
+      "selected_R1": 4.319545187343122,
+      "rejected_R2": 35.14656163953512
+    }
+  },
+  "threshold": {
+    "tau": 1.0,
+    "grid_frozen_before_counts": true,
+    "grid": [
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      5.0,
+      10.0
+    ],
+    "grid_sha256": "98951146f6ff13a5ef702c622b589d35a42ca4244ef0448a1e83987bfa382a8f",
+    "interpretation": "application values may extend no farther beyond the calibration hull than ONE FULL CALIBRATION RANGE",
+    "tau_0_would_mean": "strict interpolation only",
+    "why_not_0": "destructive - only 9 of 10,778 atoms retain full-domain support",
+    "why_not_2_or_more": "progressively weaker interpretation; tau=1 is the unique grid value with a one-sentence reading and it sits inside a broad monotone stability region",
+    "significant_figures": 1
+  },
+  "degenerate_calibration": {
+    "condition": "U - L = 0 (the coordinate is constant on the calibration interval)",
+    "if_all_application_values_equal_that_constant": "E = 0, supported",
+    "otherwise": "RANGE_SUPPORT_DEGENERATE_CALIBRATION - an explicit status, NOT a pass",
+    "epsilon_substituted": false,
+    "observed_rate": {
+      "cells": 263,
+      "of": 2004708,
+      "fraction": 0.00013119117597176248
+    }
+  },
+  "coordinate_level_rule": {
+    "predicate": "RANGE_SUPPORT_PASS(c,s,b) iff E(c,s,b) <= tau and not degenerate",
+    "failure_status": "RANGE_SUPPORT_NOT_APPLICABLE",
+    "semantics": "LOCAL to the (coordinate, calibration interval, application interval) triple",
+    "is_global_inadmissibility": false
+  },
+  "support_level_rule": {
+    "predicate": "RANGE_SUPPORT_PASS(C,s,b) iff EVERY coordinate c_j in C passes on that block",
+    "conservative_all_coordinate": true,
+    "averaging_permitted": false,
+    "support_level_cancellation_permitted": false,
+    "auditable_quantity": "max_j E(c_j,s,b), the support's worst-coordinate score",
+    "failing_coordinate_must_remain_identifiable": true
+  },
+  "relationship_to_denominator_admissibility": {
+    "separate_condition": true,
+    "denominator_rule": "DENOMINATOR_ADMISSIBILITY_PRIMARY_V1 - unchanged",
+    "not_collapsed": "denominator stability asks whether the coordinate map is DEFINED; range support asks whether the FITTED RELATION is empirically supported where it is applied"
+  },
+  "three_admissibility_notions_kept_distinct": [
+    "SYMBOLIC_ADMISSIBILITY",
+    "MATHEMATICAL_DOMAIN_ADMISSIBILITY",
+    "OBSERVATIONAL_RANGE_APPLICABILITY"
+  ],
+  "forbidden_remedies": [
+    "epsilon",
+    "clipping",
+    "winsorization",
+    "rescaling",
+    "coordinate replacement",
+    "target-conditioned rescue"
+  ],
+  "target_blind": true,
+  "model_error_blind": true,
+  "epoch1_outcome_used_in_construction": false
+}

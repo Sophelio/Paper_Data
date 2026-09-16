@@ -1,0 +1,16 @@
+{
+  "check_id": "SEARCH_PROXY_OLS_V1_EQUIVALENCE",
+  "method": "partitioned (Frisch-Waugh) normal equations on the centred calibration design; algebraically identical to numpy.linalg.lstsq on [1, Z] for a full-rank design",
+  "reference": "numpy.linalg.lstsq(..., rcond=None) on the explicit [1, Z] design, recomputed independently",
+  "n_samples": 48,
+  "support_sizes_tested": [
+    2,
+    5,
+    9,
+    12
+  ],
+  "max_relative_deviation": 1.7176192738513556e-13,
+  "tolerance": 1e-09,
+  "passes": true,
+  "rank_deficiency_rule": "eigenvalues of the centred Gram matrix; sqrt(min/max) <= max(n_prot, m+1)*eps -> J_search = +infinity and SEARCH_PROXY_RANK_DEFICIENT; NEVER inadmissibility"
+}

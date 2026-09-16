@@ -1,0 +1,48 @@
+{
+  "record_id": "S7_STAGE_MANIFEST_V1",
+  "generated_utc": "2026-09-08T00:51:17.508741+00:00",
+  "stage_id": "S7.3V2",
+  "title": "Target and boundary, source-resolved",
+  "directory": "03_target_feasibility_and_boundary/reconciliation_source_resolution",
+  "scientific_task_id": "q_rec",
+  "claim_branch": "QREC-B1",
+  "claim_branch_role": "MEMBER",
+  "parent_claim_branch": null,
+  "operational_epoch": 1,
+  "revision_level": "INSTANTIATION",
+  "branch": "q_rec",
+  "status": "CANONICAL",
+  "sir_architecture_mapping": [
+    "K_claim",
+    "O_q",
+    "delta",
+    "rho"
+  ],
+  "scientific_question": "Which target survives source-supported cadence, and which 78 predictors are admissible?",
+  "operation": "Corrected target boundary; 95 quantities reduced to the target plus 78 admissible explanatory predictors.",
+  "verdict": "Target INSTANCE y* = density (line-averaged), selected by applying the frozen task rules correctly. 78 predictors admitted, 17 excluded (1 target itself, 1 cadence failure, 15 fail-closed unresolved EFIT ancestry).",
+  "parent_stages": [
+    "S7.3"
+  ],
+  "child_stages": [
+    "S7.4V2"
+  ],
+  "key_numbers": {
+    "n_predictors": 78,
+    "n_excluded": 17,
+    "target": "density"
+  },
+  "notes": "Case A. The contract already required source-supported temporal resolution; the first instantiation (vsurf) violated it, and applying the SAME rule correctly selected density. The scientific task q_rec and the claim branch are unchanged - only the target INSTANCE was corrected. The 15 EFIT quantities excluded fail-closed are exactly the class that contaminated the retired I_p branch.",
+  "governing_freeze": {
+    "path": "S7_3_FREEZE_V2.json",
+    "freeze_id": "D3D-SIR-S7.3-TARGET-FEASIBILITY-SOURCE-RESOLUTION-V2",
+    "sha256": "a8477f185c8dfb31d799c7607fa1a183d762405353c8bc21f195ff2524ff8a74",
+    "authoritative": true,
+    "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+  },
+  "executables": [
+    "scripts/s7_3r_reconcile.py"
+  ],
+  "n_files": 26,
+  "indexes_not_replaces": true
+}

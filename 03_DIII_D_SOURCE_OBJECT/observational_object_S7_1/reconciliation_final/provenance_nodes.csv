@@ -1,0 +1,14 @@
+node_id,node_type,evidence_class,notes
+native_diagnostics,acquisition,UNRESOLVED,native DIII-D diagnostic acquisition; not present locally
+upstream_fetch_and_resample,transformation,DOCUMENTED_OPERATION_CODE_ABSENT,per-signal method/category/lengths recorded for all 5890 pairs; generator code absent
+efit_equilibrium_reconstruction,reconstruction,STRONGLY_INFERRED,EFIT named in aminor/area descriptions; settings and inputs absent
+resampled_archive_v6,archive,CODE_VERIFIED,"62 shots x 95 signals, native per-signal ms time axes"
+units_registry,metadata,LOCAL_DOCUMENTED,SIGNAL_UNITS.json; upstream source tree absent
+reference_provider_95,loader,CODE_VERIFIED,"diiid_sir_data_provider.py, frozen manifest"
+dalia_backend_loader,loader,CODE_VERIFIED,"dalia project 36a4813a-23b1-4c9f-abc3-592f98b4abe2 v164, 95/95 catalog"
+full_provider_common_grid,grid,CODE_VERIFIED,grids to coarsest requested native dt (~20 ms with equilibrium)
+paper_provider_8,restriction,CODE_VERIFIED,"8-signal historical search surface, TARGET_N=1000"
+paper_grid_1000,grid,CODE_VERIFIED,1000-point linspace on intersection window; dt 4.08-6.03 ms
+numerical_realizations,transformation,LOCAL_DOCUMENTED,none / spline k=5 s=0.1 / RTS R=1 Q=1e-4
+within_discharge_zscore,normalisation,CODE_VERIFIED,"ddof=0, per discharge, no pooled statistics"
+dfl_feature_export,derived_export,CODE_VERIFIED,parquet feature bundle with phaseders; target-conditioned

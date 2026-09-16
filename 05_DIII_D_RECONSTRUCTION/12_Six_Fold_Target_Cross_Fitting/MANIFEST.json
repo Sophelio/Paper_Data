@@ -1,0 +1,60 @@
+{
+  "record_id": "S7_STAGE_MANIFEST_V1",
+  "generated_utc": "2026-09-08T00:51:17.508741+00:00",
+  "stage_id": "S7.E2.1",
+  "title": "Cross-fitted discovery and qualification - EPOCH 2 PASS",
+  "directory": "E2_1_crossfitted_discovery_and_qualification",
+  "scientific_task_id": "q_rec",
+  "claim_branch": "QREC-B2",
+  "claim_branch_role": "MEMBER",
+  "parent_claim_branch": "QREC-B1",
+  "operational_epoch": 2,
+  "revision_level": "NONE",
+  "branch": "q_rec",
+  "status": "CANONICAL_PRIMARY_RESULT",
+  "sir_architecture_mapping": [
+    "Sigma_q",
+    "Ahat_q",
+    "CR",
+    "Q_q"
+  ],
+  "scientific_question": "Under the revised operational contract, does relational discovery qualify?",
+  "operation": "Six fresh searches over the 3,451-coordinate qualified basis, one frozen policy, one non-interactive run; each support hashed before any held-out target was opened.",
+  "verdict": "QUALIFIED_POSITIVE_RECONSTRUCTION_FORMAL_PASS. FORMAL_PASS and, separately, CLEAN_DEMO_NOT_MET.",
+  "parent_stages": [
+    "S7.E2.0A"
+  ],
+  "child_stages": [
+    "S7.E2.2",
+    "S7.12"
+  ],
+  "key_numbers": {
+    "Delta_0": -0.764489,
+    "Delta_1": -0.027308,
+    "REL_mean": 0.1891,
+    "REL_max": 0.9199,
+    "V3": "PASS",
+    "V6": "PASS_WITH_QUALIFICATION",
+    "V_RANGE_checks": 2232,
+    "V_RANGE_failures": 0,
+    "proposals": 765758,
+    "n_supports": 6,
+    "mean_jaccard": 0.285
+  },
+  "notes": "Six folds produced six different size-12 supports, none identical. Stable utility, non-unique relational supports.",
+  "governing_freeze": {
+    "path": "E2_1_FREEZE.json",
+    "freeze_id": "D3D-SIR-S7.E2.1-CROSSFITTED-DISCOVERY-AND-QUALIFICATION-V1",
+    "sha256": "25300460534ea0ff2708374c0c491343ed930018b604e2a499a58163be71f53d",
+    "authoritative": true,
+    "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+  },
+  "executables": [
+    "scripts/e2_1_a_verify.py",
+    "scripts/e2_1_b_run.py",
+    "scripts/e2_1_c_aggregate.py",
+    "scripts/e2_1_engine.py"
+  ],
+  "n_files": 44,
+  "indexes_not_replaces": true
+}

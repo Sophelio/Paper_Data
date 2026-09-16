@@ -1,0 +1,36 @@
+{
+  "frozen_at_1.0": {
+    "shift_multiplier": 1.0,
+    "pooled_implicit_rmse": 0.05758467247445344,
+    "pooled_explicit_rmse": 187.2273661101626,
+    "median_abs_A": 0.029684634521966957,
+    "min_abs_A": 2.6428213717455407e-07,
+    "frac_abs_A_lt_1e-2": 0.1934032258064516,
+    "frac_abs_A_lt_1e-1": 0.9256451612903226,
+    "n_nonfinite_coords": 0,
+    "coverage_coord_finite": 1.0
+  },
+  "frozen_at_0.99": {
+    "shift_multiplier": 0.99,
+    "pooled_implicit_rmse": 0.05979758852262024,
+    "pooled_explicit_rmse": 34.62313777391944,
+    "median_abs_A": 0.027299938925206657,
+    "min_abs_A": 9.283569963880467e-07,
+    "frac_abs_A_lt_1e-2": 0.21408064516129033,
+    "frac_abs_A_lt_1e-1": 0.9365161290322581,
+    "n_nonfinite_coords": 0,
+    "coverage_coord_finite": 1.0
+  },
+  "frozen_at_1.01": {
+    "shift_multiplier": 1.01,
+    "pooled_implicit_rmse": 0.05853535084865369,
+    "pooled_explicit_rmse": 33.63286541671442,
+    "median_abs_A": 0.03437853127906271,
+    "min_abs_A": 4.368555986844491e-06,
+    "frac_abs_A_lt_1e-2": 0.14793548387096775,
+    "frac_abs_A_lt_1e-1": 0.9118870967741936,
+    "n_nonfinite_coords": 0,
+    "coverage_coord_finite": 1.0
+  },
+  "note": "Perturbations applied to historical per-discharge shiftval; canonical mu/sigma retained for frozen-model branch."
+}

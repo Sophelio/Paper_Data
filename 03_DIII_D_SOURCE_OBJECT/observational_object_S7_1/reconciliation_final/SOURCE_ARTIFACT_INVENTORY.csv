@@ -1,0 +1,17 @@
+artifact,role,classification,notes,evidence_class
+D:\SIR_paper\DIIID_example\data\resampled_data_v6,62-shot resampled archive (.npz + metadata sidecars),PRIMARY_SOURCE,the observational object itself,CODE_VERIFIED
+D:\sir-web\providers\diiid_elm_data_provider.py,full 95-signal provider; authoritative signal-group docstring,PRIMARY_SOURCE,grids to coarsest requested native dt,CODE_VERIFIED
+D:\SIR_paper\DIIID_example\diiid_sir_data_provider.py,reference 95-signal provider + frozen signal manifest,MANIFEST,hard reference for what loads,CODE_VERIFIED
+dalia project 36a4813a-23b1-4c9f-abc3-592f98b4abe2 data_provider.py v164,"analysis-backend loading path, all 95 signals",BACKEND_INTERFACE,"catalog verified 95/95, order identical",CODE_VERIFIED
+D:\sir-web\Paper Examples\Relational Coordinates for Multimodal Plasma Observations\diiid_elm_data_provider.py,canonical Paper 8-signal provider (TARGET_N=1000),PRIMARY_SOURCE,"historical search surface, NOT O",CODE_VERIFIED
+D:\sir-web\Paper Examples\Relational Coordinates for Multimodal Plasma Observations\SIR_to_dFL_provider_on_ELM_shots_with_phaseders.py,"SIR->dFL feature-export provider (parquet, z-scored, phaseders)",DERIVED_DATA,"derived feature surface, NOT a signal inventory",CODE_VERIFIED
+D:\sir-web\FEATURE_EXPORTS\pcdiamag3_none_2026-07-13_03-08-23PM_CDT,dFL feature export bundle,SUMMARY_EXPORT,target-conditioned export; outside O,LOCAL_DOCUMENTED
+D:\sir-web\Paper Examples\Relational Coordinates for Multimodal Plasma Observations\canonical_d3d_62_shot_provenance\D3D_CANONICAL_DATA_AND_PREPROCESSING_PROVENANCE.md,449-line canonical provenance ledger,DOCUMENTATION,"cohort, alignment, normalisation, realizations",LOCAL_DOCUMENTED
+D:\sir-web\Paper Examples\Relational Coordinates for Multimodal Plasma Observations\canonical_d3d_62_shot_provenance\build_d3d_discharge_ledger.py,per-discharge ledger builder (TARGET_N=1000),DOCUMENTATION,independent reproduction of the Paper grid,CODE_VERIFIED
+D:\SIR_paper\DIIID_example\S7\SIGNAL_UNITS.json,"frozen units registry, 95 signals",MANIFEST,units recovered from upstream fetch metadata; generator and source tree NOT present locally,LOCAL_DOCUMENTED
+D:\SIR_paper\DIIID_example\data\resampled_data_v6\shot_*_metadata.json,per-signal resampling method/category/lengths (62 files),PRIMARY_SOURCE,the evidence base for component A,CODE_VERIFIED
+D:\SIR_paper\General\sir_representational_prism.py,manuscript visual-abstract figure generator,DOCUMENTATION,"places Admissibility under the task contract q, not O",LOCAL_DOCUMENTED
+D:\SIR_paper\DIIID_example\S7\01_observational_object,original S7.1 census artifacts,DOCUMENTATION,preserved unchanged apart from appended correction blocks,LOCAL_DOCUMENTED
+D:\SIR_paper\DIIID_example\S7\01_observational_object\reconciliation,S7.1R interim reconciliation,DOCUMENTATION,superseded by reconciliation_final,LOCAL_DOCUMENTED
+D:\SIR_paper\DIIID_example\S7\_legacy_reference\LEGACY_QREC_STATUS.md,retired q_rec firewall record,LEGACY_RESULT,not consulted for any S7.1 decision,LOCAL_DOCUMENTED
+smallELM_freq_v6_ZL_data/{shot}_metadata.json,upstream fetch metadata cited as the units source,UNKNOWN,NOT PRESENT LOCALLY; units not re-derivable here,UNRESOLVED

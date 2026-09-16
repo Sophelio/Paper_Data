@@ -1,0 +1,38 @@
+{
+  "checks": {
+    "v1_freeze_unchanged_and_preserved": true,
+    "no_signal_values_inspected": true,
+    "no_target_ranked_or_selected": true,
+    "no_external_values_accessed": true,
+    "practical_equivalence_uses_max_not_and": true,
+    "ordinary_cv_retired": true,
+    "robust_relative_variation_frozen": true,
+    "nrmse_denominator_explicitly_defined": true,
+    "ddof_fixed": true,
+    "zero_calibration_scale_behaviour_fixed": true,
+    "block_local_protection_clarified": true,
+    "validation_fractions_unchanged": true,
+    "deterministic_target_selection_rule_frozen": true,
+    "v3_aggregate_exactly_defined": true,
+    "v6_uses_external_counts_24_18": true,
+    "no_efit_recovery_campaign": true,
+    "no_provenance_relaxed_variant": true,
+    "no_class_override": true,
+    "no_derivative_or_support_expansion": true,
+    "parent_s7_1_historical_freeze_not_rewritten": true,
+    "markdown_output_within_limit": true,
+    "all_six_human_decisions_frozen": true,
+    "no_model_fitted": true,
+    "no_coordinate_generated": true
+  },
+  "passed": "24/24",
+  "all_passed": true,
+  "markdown_files_created": [
+    "S7_2C_CONTRACT_V2.md",
+    "S7_2C_CORRECTION_REPORT.md",
+    "S7_2C_DECISION_LEDGER.md",
+    "TARGET_SELECTION_RULE.md"
+  ],
+  "n_markdown_files": 4,
+  "evaluated_utc": "2026-09-02T23:24:43.640476+00:00"
+}

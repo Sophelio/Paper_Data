@@ -1,0 +1,21 @@
+stage,shot_id,development_or_external,predictor_signals_read,target_values_read,reason,timestamp
+S7.5H-B,160715,development,58,0,target-blind within-group redundancy audit on calibration intervals,2026-09-04T22:20:59.444226+00:00
+S7.5H-B,160720,development,58,0,target-blind within-group redundancy audit on calibration intervals,2026-09-04T22:20:59.558900+00:00
+S7.5H-B,161138,development,58,0,target-blind within-group redundancy audit on calibration intervals,2026-09-04T22:20:59.672918+00:00
+S7.5H-B,165022,development,58,0,target-blind within-group redundancy audit on calibration intervals,2026-09-04T22:20:59.785561+00:00
+S7.5H-B,165028,development,58,0,target-blind within-group redundancy audit on calibration intervals,2026-09-04T22:20:59.898167+00:00
+S7.5H-B,165042,development,58,0,target-blind within-group redundancy audit on calibration intervals,2026-09-04T22:21:00.008650+00:00
+S7.5H-B,165861,development,58,0,target-blind within-group redundancy audit on calibration intervals,2026-09-04T22:21:00.122152+00:00
+S7.5H-B,170396,development,58,0,target-blind within-group redundancy audit on calibration intervals,2026-09-04T22:21:00.235516+00:00
+S7.5H-B,187017,development,58,0,target-blind within-group redundancy audit on calibration intervals,2026-09-04T22:21:00.366983+00:00
+S7.5H-B,187020,development,58,0,target-blind within-group redundancy audit on calibration intervals,2026-09-04T22:21:00.497700+00:00
+S7.5H-B,187024,development,58,0,target-blind within-group redundancy audit on calibration intervals,2026-09-04T22:21:00.625900+00:00
+S7.5H-B,189647,development,58,0,target-blind within-group redundancy audit on calibration intervals,2026-09-04T22:21:00.741645+00:00
+S7.5H-B,189651,development,58,0,target-blind within-group redundancy audit on calibration intervals,2026-09-04T22:21:00.855937+00:00
+S7.5H-B,195264,development,58,0,target-blind within-group redundancy audit on calibration intervals,2026-09-04T22:21:00.985462+00:00
+S7.5H-B,195267,development,58,0,target-blind within-group redundancy audit on calibration intervals,2026-09-04T22:21:01.116117+00:00
+S7.5H-B,195273,development,58,0,target-blind within-group redundancy audit on calibration intervals,2026-09-04T22:21:01.253779+00:00
+S7.5H-B,195638,development,58,0,target-blind within-group redundancy audit on calibration intervals,2026-09-04T22:21:01.370847+00:00
+S7.5H-B,195647,development,58,0,target-blind within-group redundancy audit on calibration intervals,2026-09-04T22:21:01.488245+00:00
+S7.5H-B,195650,development,58,0,target-blind within-group redundancy audit on calibration intervals,2026-09-04T22:21:01.604312+00:00
+S7.5H-B,195655,development,58,0,target-blind within-group redundancy audit on calibration intervals,2026-09-04T22:21:01.718437+00:00

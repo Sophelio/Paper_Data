@@ -1,0 +1,20 @@
+{
+  "verified_utc": "2026-09-02T23:24:43.632418+00:00",
+  "v1_freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V1",
+  "v1_status": "FROZEN_READY_FOR_S7.3",
+  "v1_acceptance": "31/31",
+  "v1_freeze_file_sha256": "5e65d87825024d2e62b0db8fab8add518f364110e41f3a63f61571c80cc3102f",
+  "v1_acceptance_file_sha256": "491a83a05dcc6f8c84ce8a96517d410bbf39dc02c60b890d87e6801563eaf3f1",
+  "v1_K_REC_PRE_sha256": "7bcc35aff40c8e9ec18301b2adb1071aeffffeecc950f97f3ed9e496d32ace28",
+  "n_artifacts_in_v1_manifest": 37,
+  "n_verified": 35,
+  "n_drift": 0,
+  "drift": [],
+  "self_referential_excluded": [
+    "S7_2_ACCEPTANCE_CHECKS.json",
+    "S7_2_FREEZE.json"
+  ],
+  "self_reference_note": "V1's manifest was built before these files were written, so the hashes it records for them are necessarily stale. This is a construction defect in the V1 manifest, not drift in the artifacts. V2 excludes self-referential files explicitly.",
+  "v1_preserved_unmodified": true,
+  "verdict": "V1_INTACT"
+}

@@ -1,0 +1,128 @@
+search_stratum,constructor,family_signature,role_semantics,n_atoms,seeds_projected
+C0:CER,C0,CER,(family_i),14,2
+C0:DEN,C0,DEN,(family_i),2,2
+C0:ECE,C0,ECE,(family_i),33,2
+C0:FS,C0,FS,(family_i),3,2
+C0:GAS,C0,GAS,(family_i),4,2
+C0:MAG,C0,MAG,(family_i),4,2
+C0:NBI,C0,NBI,(family_i),6,2
+C1:CER,C1,CER,(family_i),14,2
+C1:ECE,C1,ECE,(family_i),33,2
+C1:GAS,C1,GAS,(family_i),4,2
+C1:MAG,C1,MAG,(family_i),2,2
+C1:NBI,C1,NBI,(family_i),6,2
+"C2:{CER,CER}",C2,"{CER,CER}","unordered {family_i, family_j}",105,2
+"C2:{CER,DEN}",C2,"{CER,DEN}","unordered {family_i, family_j}",28,2
+"C2:{CER,ECE}",C2,"{CER,ECE}","unordered {family_i, family_j}",462,2
+"C2:{CER,FS}",C2,"{CER,FS}","unordered {family_i, family_j}",42,2
+"C2:{CER,GAS}",C2,"{CER,GAS}","unordered {family_i, family_j}",56,2
+"C2:{CER,MAG}",C2,"{CER,MAG}","unordered {family_i, family_j}",28,2
+"C2:{CER,NBI}",C2,"{CER,NBI}","unordered {family_i, family_j}",84,2
+"C2:{DEN,DEN}",C2,"{DEN,DEN}","unordered {family_i, family_j}",3,2
+"C2:{DEN,ECE}",C2,"{DEN,ECE}","unordered {family_i, family_j}",66,2
+"C2:{DEN,FS}",C2,"{DEN,FS}","unordered {family_i, family_j}",6,2
+"C2:{DEN,GAS}",C2,"{DEN,GAS}","unordered {family_i, family_j}",8,2
+"C2:{DEN,MAG}",C2,"{DEN,MAG}","unordered {family_i, family_j}",4,2
+"C2:{DEN,NBI}",C2,"{DEN,NBI}","unordered {family_i, family_j}",12,2
+"C2:{ECE,ECE}",C2,"{ECE,ECE}","unordered {family_i, family_j}",561,2
+"C2:{ECE,FS}",C2,"{ECE,FS}","unordered {family_i, family_j}",99,2
+"C2:{ECE,GAS}",C2,"{ECE,GAS}","unordered {family_i, family_j}",132,2
+"C2:{ECE,MAG}",C2,"{ECE,MAG}","unordered {family_i, family_j}",66,2
+"C2:{ECE,NBI}",C2,"{ECE,NBI}","unordered {family_i, family_j}",198,2
+"C2:{FS,FS}",C2,"{FS,FS}","unordered {family_i, family_j}",6,2
+"C2:{FS,GAS}",C2,"{FS,GAS}","unordered {family_i, family_j}",12,2
+"C2:{FS,MAG}",C2,"{FS,MAG}","unordered {family_i, family_j}",6,2
+"C2:{FS,NBI}",C2,"{FS,NBI}","unordered {family_i, family_j}",18,2
+"C2:{GAS,GAS}",C2,"{GAS,GAS}","unordered {family_i, family_j}",10,2
+"C2:{GAS,MAG}",C2,"{GAS,MAG}","unordered {family_i, family_j}",8,2
+"C2:{GAS,NBI}",C2,"{GAS,NBI}","unordered {family_i, family_j}",24,2
+"C2:{MAG,MAG}",C2,"{MAG,MAG}","unordered {family_i, family_j}",3,2
+"C2:{MAG,NBI}",C2,"{MAG,NBI}","unordered {family_i, family_j}",12,2
+"C2:{NBI,NBI}",C2,"{NBI,NBI}","unordered {family_i, family_j}",21,2
+C3:CER|CER,C3,CER|CER,(numerator_family | denominator_family),39,2
+C3:CER|DEN,C3,CER|DEN,(numerator_family | denominator_family),14,2
+C3:CER|ECE,C3,CER|ECE,(numerator_family | denominator_family),462,2
+C3:CER|MAG,C3,CER|MAG,(numerator_family | denominator_family),28,2
+C3:DEN|CER,C3,DEN|CER,(numerator_family | denominator_family),6,2
+C3:DEN|DEN,C3,DEN|DEN,(numerator_family | denominator_family),1,1
+C3:DEN|ECE,C3,DEN|ECE,(numerator_family | denominator_family),66,2
+C3:DEN|MAG,C3,DEN|MAG,(numerator_family | denominator_family),4,2
+C3:ECE|CER,C3,ECE|CER,(numerator_family | denominator_family),99,2
+C3:ECE|DEN,C3,ECE|DEN,(numerator_family | denominator_family),33,2
+C3:ECE|ECE,C3,ECE|ECE,(numerator_family | denominator_family),1056,2
+C3:ECE|MAG,C3,ECE|MAG,(numerator_family | denominator_family),66,2
+C3:FS|CER,C3,FS|CER,(numerator_family | denominator_family),9,2
+C3:FS|DEN,C3,FS|DEN,(numerator_family | denominator_family),3,2
+C3:FS|ECE,C3,FS|ECE,(numerator_family | denominator_family),99,2
+C3:FS|MAG,C3,FS|MAG,(numerator_family | denominator_family),6,2
+C3:GAS|CER,C3,GAS|CER,(numerator_family | denominator_family),12,2
+C3:GAS|DEN,C3,GAS|DEN,(numerator_family | denominator_family),4,2
+C3:GAS|ECE,C3,GAS|ECE,(numerator_family | denominator_family),132,2
+C3:GAS|MAG,C3,GAS|MAG,(numerator_family | denominator_family),8,2
+C3:MAG|CER,C3,MAG|CER,(numerator_family | denominator_family),6,2
+C3:MAG|DEN,C3,MAG|DEN,(numerator_family | denominator_family),2,2
+C3:MAG|ECE,C3,MAG|ECE,(numerator_family | denominator_family),66,2
+C3:MAG|MAG,C3,MAG|MAG,(numerator_family | denominator_family),2,2
+C3:NBI|CER,C3,NBI|CER,(numerator_family | denominator_family),18,2
+C3:NBI|DEN,C3,NBI|DEN,(numerator_family | denominator_family),6,2
+C3:NBI|ECE,C3,NBI|ECE,(numerator_family | denominator_family),198,2
+C3:NBI|MAG,C3,NBI|MAG,(numerator_family | denominator_family),12,2
+C5:CER,C5,CER,(family_i),3,2
+C5:DEN,C5,DEN,(family_i),1,1
+C5:ECE,C5,ECE,(family_i),33,2
+C5:MAG,C5,MAG,(family_i),2,2
+C6:CER|CER,C6,CER|CER,(level_family | rate_family),196,2
+C6:CER|ECE,C6,CER|ECE,(level_family | rate_family),462,2
+C6:CER|GAS,C6,CER|GAS,(level_family | rate_family),56,2
+C6:CER|MAG,C6,CER|MAG,(level_family | rate_family),28,2
+C6:CER|NBI,C6,CER|NBI,(level_family | rate_family),84,2
+C6:DEN|CER,C6,DEN|CER,(level_family | rate_family),28,2
+C6:DEN|ECE,C6,DEN|ECE,(level_family | rate_family),66,2
+C6:DEN|GAS,C6,DEN|GAS,(level_family | rate_family),8,2
+C6:DEN|MAG,C6,DEN|MAG,(level_family | rate_family),4,2
+C6:DEN|NBI,C6,DEN|NBI,(level_family | rate_family),12,2
+C6:ECE|CER,C6,ECE|CER,(level_family | rate_family),462,2
+C6:ECE|ECE,C6,ECE|ECE,(level_family | rate_family),1089,2
+C6:ECE|GAS,C6,ECE|GAS,(level_family | rate_family),132,2
+C6:ECE|MAG,C6,ECE|MAG,(level_family | rate_family),66,2
+C6:ECE|NBI,C6,ECE|NBI,(level_family | rate_family),198,2
+C6:FS|CER,C6,FS|CER,(level_family | rate_family),42,2
+C6:FS|ECE,C6,FS|ECE,(level_family | rate_family),99,2
+C6:FS|GAS,C6,FS|GAS,(level_family | rate_family),12,2
+C6:FS|MAG,C6,FS|MAG,(level_family | rate_family),6,2
+C6:FS|NBI,C6,FS|NBI,(level_family | rate_family),18,2
+C6:GAS|CER,C6,GAS|CER,(level_family | rate_family),56,2
+C6:GAS|ECE,C6,GAS|ECE,(level_family | rate_family),132,2
+C6:GAS|GAS,C6,GAS|GAS,(level_family | rate_family),16,2
+C6:GAS|MAG,C6,GAS|MAG,(level_family | rate_family),8,2
+C6:GAS|NBI,C6,GAS|NBI,(level_family | rate_family),24,2
+C6:MAG|CER,C6,MAG|CER,(level_family | rate_family),28,2
+C6:MAG|ECE,C6,MAG|ECE,(level_family | rate_family),66,2
+C6:MAG|GAS,C6,MAG|GAS,(level_family | rate_family),8,2
+C6:MAG|MAG,C6,MAG|MAG,(level_family | rate_family),4,2
+C6:MAG|NBI,C6,MAG|NBI,(level_family | rate_family),12,2
+C6:NBI|CER,C6,NBI|CER,(level_family | rate_family),84,2
+C6:NBI|ECE,C6,NBI|ECE,(level_family | rate_family),198,2
+C6:NBI|GAS,C6,NBI|GAS,(level_family | rate_family),24,2
+C6:NBI|MAG,C6,NBI|MAG,(level_family | rate_family),12,2
+C6:NBI|NBI,C6,NBI|NBI,(level_family | rate_family),36,2
+C7:CER|CER,C7,CER|CER,(rate_family | denominator_level_family),42,2
+C7:CER|DEN,C7,CER|DEN,(rate_family | denominator_level_family),14,2
+C7:CER|ECE,C7,CER|ECE,(rate_family | denominator_level_family),462,2
+C7:CER|MAG,C7,CER|MAG,(rate_family | denominator_level_family),28,2
+C7:ECE|CER,C7,ECE|CER,(rate_family | denominator_level_family),99,2
+C7:ECE|DEN,C7,ECE|DEN,(rate_family | denominator_level_family),33,2
+C7:ECE|ECE,C7,ECE|ECE,(rate_family | denominator_level_family),1089,2
+C7:ECE|MAG,C7,ECE|MAG,(rate_family | denominator_level_family),66,2
+C7:GAS|CER,C7,GAS|CER,(rate_family | denominator_level_family),12,2
+C7:GAS|DEN,C7,GAS|DEN,(rate_family | denominator_level_family),4,2
+C7:GAS|ECE,C7,GAS|ECE,(rate_family | denominator_level_family),132,2
+C7:GAS|MAG,C7,GAS|MAG,(rate_family | denominator_level_family),8,2
+C7:MAG|CER,C7,MAG|CER,(rate_family | denominator_level_family),6,2
+C7:MAG|DEN,C7,MAG|DEN,(rate_family | denominator_level_family),2,2
+C7:MAG|ECE,C7,MAG|ECE,(rate_family | denominator_level_family),66,2
+C7:MAG|MAG,C7,MAG|MAG,(rate_family | denominator_level_family),4,2
+C7:NBI|CER,C7,NBI|CER,(rate_family | denominator_level_family),18,2
+C7:NBI|DEN,C7,NBI|DEN,(rate_family | denominator_level_family),6,2
+C7:NBI|ECE,C7,NBI|ECE,(rate_family | denominator_level_family),198,2
+C7:NBI|MAG,C7,NBI|MAG,(rate_family | denominator_level_family),12,2

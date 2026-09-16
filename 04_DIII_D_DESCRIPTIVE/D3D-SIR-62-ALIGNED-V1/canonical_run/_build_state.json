@@ -1,0 +1,54 @@
+{
+  "canonical_run_id": "D3D-SIR-62-ALIGNED-V1",
+  "artifact_status": "HISTORICAL_ORIGINAL",
+  "historical_model_found": true,
+  "pooled": {
+    "canonical_run_id": "D3D-SIR-62-ALIGNED-V1",
+    "n_discharges": 62,
+    "n_samples_total": 62000,
+    "pooled_mse": 0.0033159945039900746,
+    "pooled_rmse": 0.05758467247445343,
+    "pooled_mae": 0.03116503381195452,
+    "pooled_r2": 0.9966840054960099,
+    "median_discharge_rmse": 0.05009097618657054,
+    "q25_discharge_rmse": 0.042457823407753816,
+    "q75_discharge_rmse": 0.06110673518491552,
+    "median_error_shot": 165031,
+    "mean_vector_pooled_rmse": 0.4125238315775986,
+    "mean_vector_pooled_mse": 0.17017591161946294,
+    "reference_per_discharge_rmse": 0.05758467247445343,
+    "reference_mean_vector_rmse": 0.4125238315775986,
+    "delta_per_discharge_rmse": 0.0,
+    "delta_mean_vector_rmse": 0.0,
+    "equation_key": "1_8*",
+    "artifact_status": "HISTORICAL_ORIGINAL"
+  },
+  "file_hashes": {
+    "coefficients": "154e9812dbda2928b97d24eec75493a03a35517424a851c02cabc2257d12c0bb",
+    "predictions": "eaa701dca39fe4fc8fd5041bcdbd65eb84b068a7723d695313c4e8c122248ccb",
+    "metrics": "05eeb226d8cf23d2337895e14a7cafddf09a0d12152580dc517329af86cc316d",
+    "pooled": "3de7ce9281880041937e58edc3a54ca00f0ee375e7e2d4c7b01efec04aba3da1",
+    "model": "ebb8cbbb9f604dbeeee01d71546c334dc192bbbc592d63bdb200af7aeb23c7e8",
+    "coordinate_manifest": "851954b953a61a6b5ac83517e1f46f4f0dc97678c1ea8e33c163fd37858274db",
+    "design_manifest": "5351c35f84862f2bbfd9bdeda1d231a66ba6239ecdd519000904d01fa7af163c",
+    "coef_summary": "bee33878a776788c52659de7ae8b8f3b3f9bb732bbf04582eb6b0791bfef40b0",
+    "design_hashes": "7385ecd513cede70a25b5dd4138c01060cfd88f6f7bf758d27e5bfa05f6f0989"
+  },
+  "unresolved_items": [
+    "EXACT_SHIFT_VALUE_UNKNOWN for get_shiftval on the historical export-generating run",
+    "ORIGINAL structural-search checklist / data_processing list at discovery time PARTIALLY UNKNOWN",
+    "Whether discovery used pooled search then per-realization calibration: evidenced by 1_8 vs 1_8* but full UI settings at discovery UNKNOWN",
+    "Random seeds / n_starts for SUBOPTIMAL_SEARCH: UNKNOWN"
+  ],
+  "contradictions": [],
+  "not_claimed": [
+    "Full automatic rediscovery of the seven-term support from a blank library",
+    "Physical interpretation of coefficient heterogeneity",
+    "Out-of-sample predictive validation"
+  ],
+  "model_path": "D:\\sir-web\\Paper Examples\\Relational Coordinates for Multimodal Plasma Observations\\canonical_d3d_62_shot_run_v1\\model_artifact\\output.pcdiamag3.psir",
+  "repo_commit": "bc123d63b5e49d9c160808fdc97ba0442ce4bdd0",
+  "repo_dirty": true,
+  "archaieus_commit": "aefd942ea111f7bd24d1d86cafb954639aff3fb1",
+  "archaieus_dirty": true
+}

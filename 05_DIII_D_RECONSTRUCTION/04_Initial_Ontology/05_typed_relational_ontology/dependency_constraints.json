@@ -1,0 +1,30 @@
+{
+  "constraints": [
+    {
+      "dependency_group_id": "DEP_NBI_POWER_SUM",
+      "aggregate": "pinj",
+      "components": [
+        "pinj_15l",
+        "pinj_15r",
+        "pinj_21l",
+        "pinj_21r",
+        "pinj_30l",
+        "pinj_30r",
+        "pinj_33l",
+        "pinj_33r"
+      ],
+      "exact_relation": "pinj = sum(pinj_*)",
+      "relation_type": "EXACT_DETERMINISTIC_SUM",
+      "evidence_class": "LOCAL_DOCUMENTED",
+      "evidence": "S7.1 units registry: pinj is 'Total injected neutral beam power'; the per-beamline channels are its components. Confirmed by additivity in canonical units (S7.1R: per-beam W vs aggregate kW).",
+      "target_leakage": false,
+      "deleted_at_S7_5": false,
+      "rule": "a candidate representation containing the aggregate level AND all eight component levels is marked EXACT_LINEAR_REDUNDANCY_RISK",
+      "risk_label": "EXACT_LINEAR_REDUNDANCY_RISK",
+      "scope": "REPRESENTATION_LEVEL, not coordinate level - at depth 1 with arity <= 2 no single coordinate can carry the whole exact set, so the redundancy can only appear in a coordinate SET",
+      "operational_exclusion_belongs_to": "S7.6",
+      "principle": "deterministic restatements are not counted as independent scientific evidence"
+    }
+  ],
+  "invariant": "neither aggregate nor components are removed at S7.5"
+}

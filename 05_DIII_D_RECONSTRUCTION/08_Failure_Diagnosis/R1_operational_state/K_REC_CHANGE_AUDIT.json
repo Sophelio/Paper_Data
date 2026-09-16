@@ -1,0 +1,32 @@
+{
+  "record_id": "K_REC_CHANGE_AUDIT_V1",
+  "generated_utc": "2026-09-06T01:05:20.911744+00:00",
+  "question": "does K_rec require one pooled homogeneous operational domain?",
+  "answer": "the question is moot: the state hypothesis was refuted, so no state-indexed X_rec is needed and no K_rec change is required FOR THAT PURPOSE",
+  "separate_finding": "K_rec IS incomplete, but for a different reason",
+  "K_REC_REVISION_REQUIRED": true,
+  "revision_class": "MINIMAL_K_REC_REVISION_REQUIRED",
+  "components_that_would_change": {
+    "P_rec": {
+      "change": "add an OBSERVATIONAL RANGE-SUPPORT admissibility condition for total nonlinear constructors (products, powers), analogous to the existing DENOMINATOR_ADMISSIBILITY_PRIMARY_V1 for partial maps",
+      "justification": "mathematical domain support is not observational range support: x^2 is defined for every finite x, yet a calibration-fitted affine relation in x^2 is numerically unsupported when x leaves the calibration region",
+      "is_the_minimal_component": true
+    },
+    "V_rec": {
+      "change": "consequential only: a per-block applicability outcome analogous to RELATIONAL_REPRESENTATION_NOT_APPLICABLE would follow from the P_rec condition",
+      "is_the_minimal_component": false,
+      "note": "no independent V_rec defect was found; all ten gates behaved as frozen"
+    }
+  },
+  "components_unchanged": [
+    "I_rec",
+    "B_rec",
+    "H_rec",
+    "U_rec",
+    "Omega_rec",
+    "q_rec"
+  ],
+  "I_rec_already_admits_state_variables": true,
+  "not_applied_in_this_stage": true,
+  "belongs_to": "a future contract epoch, prospectively, before any new discovery"
+}

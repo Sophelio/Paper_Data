@@ -1,0 +1,48 @@
+{
+  "record_id": "S7_STAGE_MANIFEST_V1",
+  "generated_utc": "2026-09-08T00:51:17.508741+00:00",
+  "stage_id": "S7.R1",
+  "title": "Operational-state reconciliation - HYPOTHESIS REFUTED",
+  "directory": "R1_operational_state_reconciliation",
+  "scientific_task_id": "q_rec",
+  "claim_branch": "QREC-B1",
+  "claim_branch_role": "MEMBER",
+  "parent_claim_branch": null,
+  "operational_epoch": 1,
+  "revision_level": "NONE",
+  "branch": "q_rec",
+  "status": "CANONICAL",
+  "sir_architecture_mapping": [
+    "delta",
+    "rho",
+    "j_min"
+  ],
+  "scientific_question": "Did the development cohort pool distinct operational states?",
+  "operation": "The hypothesis was TESTED with target-blind predictor evidence and rejected.",
+  "verdict": "NO_CLEAN_OPERATIONAL_STATE_PARTITION. Hypothesis REFUTED. STOP_OPERATIONAL_STATE_ROUTE. earliest_invalidated_stage = NONE_OF_THE_INSTANTIATED_OBJECTS.",
+  "parent_stages": [
+    "S7.11"
+  ],
+  "child_stages": [
+    "S7.K2"
+  ],
+  "key_numbers": {
+    "K_REC_REVISION_REQUIRED": true,
+    "minimal_component": "P_rec"
+  },
+  "notes": "The pivot of the whole branch: every instantiated object satisfied the contract AS WRITTEN, so the defect lies in the operational admissibility contract, not in any constructed object.",
+  "governing_freeze": {
+    "path": "S7_R1_FREEZE.json",
+    "freeze_id": "D3D-SIR-S7.R1-OPERATIONAL-STATE-RECONCILIATION-V1",
+    "sha256": "ae6092a67a0e099a868876611f7aeca769edac062c4c6a878d6f6a22146ca226",
+    "authoritative": true,
+    "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+  },
+  "executables": [
+    "scripts/s7_r1_b_actuator_audit.py",
+    "scripts/s7_r1_c_fallback.py",
+    "scripts/s7_r1_d_reconcile_and_freeze.py"
+  ],
+  "n_files": 25,
+  "indexes_not_replaces": true
+}

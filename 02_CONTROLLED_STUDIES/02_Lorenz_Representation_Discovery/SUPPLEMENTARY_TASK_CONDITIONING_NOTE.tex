@@ -1,0 +1,71 @@
+% Supplementary note for the task-conditioning benchmark.
+
+\section{Supplementary: task-conditioned relational discovery on Lorenz}
+
+\subsection{Scientific object and information boundary}
+$O=(D,\Omega_{obs},S,E,\Pi,A)$ with $D=\{x,y\}$ explanatory and $z$ supervised
+only; $\Omega_{obs}$ a trajectory ensemble on $t\in[0,12]$, $\Delta t=0.005$;
+$S$ a centred five-point stencil with the trajectory as the statistical unit;
+$E$ either numerical (clean) or additive Gaussian on $x,y$ at
+$\sigma\in\{0,0.005,0.01\}$ times the development channel standard deviation,
+applied \emph{before} all differentiation, smoothing, quotient and phase
+construction; $\Pi$ the canonical generator at $\mathrm{rtol}=\mathrm{atol}=10^{-12}$;
+$A$ forbidding $z$, $\dot z$ and every $z$-derived quantity from the explanatory
+dependency graph. The information boundary
+$I_k=\{x_{k-2:k+2},y_{k-2:k+2}\}$ is shared by all methods; the primary raw
+comparator is the full ten-value stencil. This is retrospective reconstruction,
+never forecasting.
+
+\subsection{Candidate grammar}
+Seventeen declared representations: raw stencil; $+$rates; $+$rates and
+curvature; $+$products; $+$masked quotients ($\dot y|x$, $y|x$, the classical
+phase derivatives $D_x y$ and $D_y x$); $+$regularised (CA), reference-shifted
+(RS) and sensitivity-centered (SC) pairs; the full admissible set
+$\mathcal{C}_{\rm all}$ (38 coordinates); and degree-2 and degree-3 polynomial
+libraries over the raw stencil. Coordinate construction $C$ is kept distinct
+from the relation basis $R(C)$. RS and SC coordinates come from an
+implementation verified elementwise ($\mathrm{atol}=10^{-12}$) against the
+canonical Archaieus reference.
+
+\subsection{Contracts and qualification}
+$q_{\rm acc}$ minimises mean six-fold grouped cross-validated RMSE.
+$q_{\rm cmp}$ and $q_{\rm rob}$ first form an accuracy-equivalent set and then
+apply a lexicographic hierarchy: fewer coordinates, fewer active terms, better
+conditioning, greater fold stability. $q_{\rm rob}$ scores the worst case over
+the noise envelope. The equivalence threshold is
+$\mathrm{best}+\max(\mathrm{SE},\tau)$ with $\tau=10^{-3}$. The plain
+one-standard-error rule degenerates here ($\mathrm{SE}\approx3\times10^{-7}$,
+every equivalent set a singleton); $\tau$ ties equivalence to the object's own
+resolution ($\sigma_z\approx9.04$). The $q_{\rm cmp}$ selection is unchanged for
+$\tau\in[10^{-4},10^{-1}]$ and $q_{\rm rob}$ is unchanged at every $\tau$.
+
+\subsection{Estimator settings}
+PySINDy 2.1.0 STLSQ, $\alpha=0$, thresholds
+$\{10^{-4},10^{-3},10^{-2},5\times10^{-2},10^{-1},5\times10^{-1}\}$ chosen on
+development folds. STLSQ carries no intercept, so targets are centred on the
+training mean and the offset restored at prediction. Polynomial baselines use
+\texttt{PolynomialLibrary} at degrees 2 and 3 without bias. The MLP is
+scikit-learn \texttt{MLPRegressor}, hidden layers $(64,64)$, ReLU, Adam,
+early stopping on an internal split of the training data, five fixed seeds;
+input scaling fitted on development data only.
+
+\subsection{Negative and partial findings}
+(i) $q_{\rm rob}$ selected the same coordinates as $q_{\rm acc}$: observational
+uncertainty changed the qualification, not the representation.
+(ii) The MLP advantage does not survive $1\%$ noise ($0.803$, $0.842$, $0.839$
+across representations, within ${\sim}1.3$ standard errors).
+(iii) Under noise the conventional degree-2 polynomial baseline is within a
+factor $1.34$ of the expanded representation.
+(iv) The accuracy and robust contracts both selected an effectively
+rank-deficient representation, because neither penalises conditioning.
+(v) The one-standard-error rule required correction before it could express the
+compactness contract at all.
+
+\subsection{Implementation status}
+The SIR engine executed the containment contract natively. It does not yet expose
+discovery contracts, grouped held-out validation, declarable task utilities or
+qualified-model sets, so those were executed in an audited reference harness with
+PySINDy as the embedded relation solver. An independent wrapper---verified by
+static and dynamic tests not to import the harness---reimplements the same
+selection logic around PySINDy directly. Implementation status:
+\texttt{MCP\_NATIVE\_PRIMITIVES\_PLUS\_AUDITED\_CONTRACT\_HARNESS}.

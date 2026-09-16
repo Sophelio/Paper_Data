@@ -1,0 +1,24 @@
+{
+  "policy_id": "EPOCH2_SEARCH_BUDGET_V1",
+  "frozen_utc": "2026-09-06T04:02:06.709084+00:00",
+  "frozen_before_any_target_access": true,
+  "epoch1_frontier_reused_or_reranked": false,
+  "search_policy_family": "SIGMA_REC_ONE_SEED_PRIMARY_V2 (S7.7R), adapted mechanically",
+  "mechanical_adaptations_only": [
+    "the atomic basis is the fold-specific training-admissible set instead of all 10,778",
+    "strata are recomputed over that basis by the unchanged stratum definition"
+  ],
+  "seeds_per_stratum": 1,
+  "two_seed_in_primary_protocol": false,
+  "two_seed_status": "remains outside the primary study, as declared since S7.7R",
+  "support_size_bound": [
+    1,
+    12
+  ],
+  "shortlist_cap_per_constructor": 96,
+  "max_support_evaluations_per_fold": 300000,
+  "max_support_evaluations_total": 1800000,
+  "outcome_triggered_expansion": false,
+  "budget_may_be_raised_after_seeing_results": false,
+  "note": "the per-fold allowance equals Epoch 1's, over a basis roughly a fifth the size, so the budget is not the binding constraint"
+}

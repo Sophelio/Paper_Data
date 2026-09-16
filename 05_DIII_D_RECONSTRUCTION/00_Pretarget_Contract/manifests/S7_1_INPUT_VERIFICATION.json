@@ -1,0 +1,155 @@
+{
+  "verified_utc": "2026-09-02T21:25:44.381517+00:00",
+  "parent_freeze_id": "D3D-SIR-S7.1-OBSERVATIONAL-OBJECT-FINAL-V1",
+  "parent_status": "FROZEN_WITH_QUALIFICATIONS",
+  "parent_acceptance": "32/32",
+  "hash_method": "dual-rule: each artifact matched against the freeze under both raw-file-bytes and read_csv-round-trip; at least one must match. See module docstring -- the S7.1 freeze used a mixed method.",
+  "hashes": {
+    "signal_inventory_sha256": {
+      "file": "D:\\SIR_paper\\DIIID_example\\S7\\01_observational_object\\reconciliation_final\\FINAL_SIGNAL_INVENTORY.csv",
+      "expected_in_freeze": "60c6245da695bd897d62c82dd138c4c10cb8fb2387beeb71e5d547262d6eb39d",
+      "raw_file_bytes": "6506c6ba0c80cd8f322cff28e4054c8f66bdb358d1c0315ccfa29d839dd1c0fb",
+      "read_csv_round_trip": "60c6245da695bd897d62c82dd138c4c10cb8fb2387beeb71e5d547262d6eb39d",
+      "matched_rule": "read_csv_round_trip",
+      "match": true
+    },
+    "shot_inventory_sha256": {
+      "file": "D:\\SIR_paper\\DIIID_example\\S7\\01_observational_object\\reconciliation_final\\FINAL_SHOT_INVENTORY.csv",
+      "expected_in_freeze": "7d3c3ab1ab289ea2c7c038397ffb2524ae6dfd00813551dfe3efccf0a415cd8c",
+      "raw_file_bytes": "7d3c3ab1ab289ea2c7c038397ffb2524ae6dfd00813551dfe3efccf0a415cd8c",
+      "read_csv_round_trip": "7d3c3ab1ab289ea2c7c038397ffb2524ae6dfd00813551dfe3efccf0a415cd8c",
+      "matched_rule": "raw_file_bytes",
+      "match": true
+    },
+    "units_registry_sha256": {
+      "file": "D:\\SIR_paper\\DIIID_example\\S7\\SIGNAL_UNITS.json",
+      "expected_in_freeze": "b8b3cead0d1d23d8fc42a54824421472847c0744fb293b6fd2196ac93e598e72",
+      "raw_file_bytes": "b8b3cead0d1d23d8fc42a54824421472847c0744fb293b6fd2196ac93e598e72",
+      "read_csv_round_trip": null,
+      "matched_rule": "raw_file_bytes",
+      "match": true
+    },
+    "provenance_graph_sha256": {
+      "file": "D:\\SIR_paper\\DIIID_example\\S7\\01_observational_object\\reconciliation_final\\provenance_graph.json",
+      "expected_in_freeze": "aec053f80d951d37f2c1096158799b14112e84ca6db695e1a8fbdf2433d1b24c",
+      "raw_file_bytes": "aec053f80d951d37f2c1096158799b14112e84ca6db695e1a8fbdf2433d1b24c",
+      "read_csv_round_trip": null,
+      "matched_rule": "raw_file_bytes",
+      "match": true
+    },
+    "dalia_parity_sha256": {
+      "file": "D:\\SIR_paper\\DIIID_example\\S7\\01_observational_object\\reconciliation_final\\DALIA_SIGNAL_PARITY.csv",
+      "expected_in_freeze": "405856b6f1220a782dffac6202b1a91396e939a6a1db2991517a2f15a6706506",
+      "raw_file_bytes": "405856b6f1220a782dffac6202b1a91396e939a6a1db2991517a2f15a6706506",
+      "read_csv_round_trip": "405856b6f1220a782dffac6202b1a91396e939a6a1db2991517a2f15a6706506",
+      "matched_rule": "raw_file_bytes",
+      "match": true
+    },
+    "temporal_lineage_sha256": {
+      "file": "D:\\SIR_paper\\DIIID_example\\S7\\01_observational_object\\reconciliation_final\\FINAL_TEMPORAL_LINEAGE.csv",
+      "expected_in_freeze": "9bb6d09e365688ac8438376986f00009aa735af0cdfb6283c95ade7359e05a67",
+      "raw_file_bytes": "9bb6d09e365688ac8438376986f00009aa735af0cdfb6283c95ade7359e05a67",
+      "read_csv_round_trip": "7c80ddb6cb2309e5b8b5892b672e724a0b710dc2830dab76acb482bfb20507d0",
+      "matched_rule": "raw_file_bytes",
+      "match": true
+    },
+    "equilibrium_lineage_sha256": {
+      "file": "D:\\SIR_paper\\DIIID_example\\S7\\01_observational_object\\reconciliation_final\\equilibrium_lineage_status.csv",
+      "expected_in_freeze": "e7f6f8049ed4a214e8a60069cfe3fc68fc42bd06f604da968add207171573b56",
+      "raw_file_bytes": "e7f6f8049ed4a214e8a60069cfe3fc68fc42bd06f604da968add207171573b56",
+      "read_csv_round_trip": "e7f6f8049ed4a214e8a60069cfe3fc68fc42bd06f604da968add207171573b56",
+      "matched_rule": "raw_file_bytes",
+      "match": true
+    },
+    "source_inventory_sha256": {
+      "file": "D:\\SIR_paper\\DIIID_example\\S7\\01_observational_object\\reconciliation_final\\SOURCE_ARTIFACT_INVENTORY.csv",
+      "expected_in_freeze": "aa913025890d632ebab82ef65a5583e432c9eab0b6b7058ada0fe07471910754",
+      "raw_file_bytes": "aa913025890d632ebab82ef65a5583e432c9eab0b6b7058ada0fe07471910754",
+      "read_csv_round_trip": "aa913025890d632ebab82ef65a5583e432c9eab0b6b7058ada0fe07471910754",
+      "matched_rule": "raw_file_bytes",
+      "match": true
+    },
+    "quality_summary_sha256": {
+      "file": "D:\\SIR_paper\\DIIID_example\\S7\\01_observational_object\\reconciliation_final\\signal_quality_summary.csv",
+      "expected_in_freeze": "bd6953095c3ca67ab47451380d16f0c5f08259fba159c77aa9c721707412168e",
+      "raw_file_bytes": "af2b6745743fe74ebe49d01d069983b8d38fce3b4382fe946d070445b3c4bb6d",
+      "read_csv_round_trip": "bd6953095c3ca67ab47451380d16f0c5f08259fba159c77aa9c721707412168e",
+      "matched_rule": "read_csv_round_trip",
+      "match": true
+    }
+  },
+  "n_hashes_checked": 9,
+  "n_hash_drift": 0,
+  "drifted_keys": [],
+  "s7_1_freeze_defect": {
+    "found": true,
+    "severity": "MINOR (record-keeping, not data)",
+    "description": "The S7.1 freeze recorded hashes under two different rules. Artifacts built in memory were hashed as written to disk; FINAL_SIGNAL_INVENTORY.csv and signal_quality_summary.csv were re-read with pd.read_csv first, which reformats floats, so their recorded hashes do not equal the file bytes.",
+    "artifacts_under_round_trip_rule": [
+      "signal_inventory_sha256",
+      "quality_summary_sha256"
+    ],
+    "artifacts_under_raw_bytes_rule": [
+      "shot_inventory_sha256",
+      "units_registry_sha256",
+      "provenance_graph_sha256",
+      "dalia_parity_sha256",
+      "temporal_lineage_sha256",
+      "equilibrium_lineage_sha256",
+      "source_inventory_sha256"
+    ],
+    "data_integrity_impact": "NONE -- every file verifies under one of the two rules; no content changed",
+    "remedy": "S7.2 and later stages use canonical_raw_byte_hashes below as the single rule. The S7.1 freeze file is left unmodified."
+  },
+  "canonical_raw_byte_hashes": {
+    "signal_inventory_sha256": "6506c6ba0c80cd8f322cff28e4054c8f66bdb358d1c0315ccfa29d839dd1c0fb",
+    "shot_inventory_sha256": "7d3c3ab1ab289ea2c7c038397ffb2524ae6dfd00813551dfe3efccf0a415cd8c",
+    "units_registry_sha256": "b8b3cead0d1d23d8fc42a54824421472847c0744fb293b6fd2196ac93e598e72",
+    "provenance_graph_sha256": "aec053f80d951d37f2c1096158799b14112e84ca6db695e1a8fbdf2433d1b24c",
+    "dalia_parity_sha256": "405856b6f1220a782dffac6202b1a91396e939a6a1db2991517a2f15a6706506",
+    "temporal_lineage_sha256": "9bb6d09e365688ac8438376986f00009aa735af0cdfb6283c95ade7359e05a67",
+    "equilibrium_lineage_sha256": "e7f6f8049ed4a214e8a60069cfe3fc68fc42bd06f604da968add207171573b56",
+    "source_inventory_sha256": "aa913025890d632ebab82ef65a5583e432c9eab0b6b7058ada0fe07471910754",
+    "quality_summary_sha256": "af2b6745743fe74ebe49d01d069983b8d38fce3b4382fe946d070445b3c4bb6d"
+  },
+  "expectations": {
+    "n_signals_95": true,
+    "n_shots_62": true,
+    "n_pairs_5890": true,
+    "backend_accessible_95_of_95": true,
+    "unit_determinations_95_of_95": true,
+    "no_critical_s7_1_issues": true,
+    "parent_status_frozen": true,
+    "parent_acceptance_all_passed": true,
+    "equilibrium_15_lineage_partial": true,
+    "E_not_instantiated": true,
+    "no_target_encoded": true,
+    "all_supporting_files_present": true
+  },
+  "missing_supporting_files": [],
+  "object_summary": {
+    "n_discharges": 62,
+    "n_signals": 95,
+    "n_signal_discharge_pairs": 5890,
+    "backend_accessible": "95/95",
+    "units_with_physical_unit": 93,
+    "units_uncalibrated": 2,
+    "origin_classification": {
+      "DIAGNOSTIC_RECONSTRUCTION": 57,
+      "EQUILIBRIUM_DERIVED": 15,
+      "CONTROL_COMMAND_OR_ACTUATION": 14,
+      "DIRECT_MEASUREMENT": 9
+    },
+    "families": {
+      "ece_te_profile": 40,
+      "equilibrium_shape": 15,
+      "cer_rotation_ti": 14,
+      "neutral_beams": 10,
+      "magnetics": 5,
+      "filterscope_dalpha": 4,
+      "gas_injection": 4,
+      "density": 3
+    }
+  },
+  "verdict": "S7_1_INPUT_VERIFIED"
+}

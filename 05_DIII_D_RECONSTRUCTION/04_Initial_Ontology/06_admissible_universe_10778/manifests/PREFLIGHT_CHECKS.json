@@ -1,0 +1,43 @@
+{
+  "check_4_1_b2_nesting": {
+    "item": "B2 nesting language",
+    "true_statement": "the RAW COORDINATE REPRESENTATION FAMILY is nested in G_rec, because C0 primitive coordinates are admissible",
+    "not_generally_true": "the specific frozen B2 model is itself a member of A_rec",
+    "why": "B2 is Ridge on the SAME target-admissible primitive predictors with no constructed coordinates, i.e. potentially all 78 primitives. A_rec members obey m <= 12. A 78-primitive model is therefore not an m<=12 member of A_rec.",
+    "b2_uses_full_primitive_information_set": false,
+    "A_rec_support_bound_max": 12,
+    "claim_found_in_s7_5": "the raw-coordinate baseline B2 is nested inside the SIR ontology rather than being an external alternative",
+    "claim_is_executable": false,
+    "b2_modified": false,
+    "b2_restricted_to_12": false,
+    "corrected_wording": "Primitive-only representations are nested within the SIR ontology. B2 is the frozen full-information raw linear comparator using the same target-admissible primitive information.",
+    "fairness_claim": "SAME INFORMATION BOUNDARY, not necessarily identical support-size constraint",
+    "verdict": "DOCUMENTARY_ERRATUM_ONLY"
+  },
+  "check_4_2_derived_coordinate_wording": {
+    "item": "'eight primitives cannot enter derived coordinates'",
+    "inaccurate_statement": "eight primitives cannot enter derived coordinates",
+    "authoritative_rules": {
+      "pcbcoil, pcdiamag3": "C0 primary admissible; C1-C4 excluded",
+      "six UPSTREAM_UPSAMPLED": "C0 admissible; C1 derivative sensitivity-only; C2 product ADMISSIBLE; C3 ratio ADMISSIBLE; C4 phase derivative sensitivity-only"
+    },
+    "machine_readable_operand_counts": {
+      "C0": 78,
+      "C1": 70,
+      "C2": 76,
+      "C3": 76,
+      "C4": 70
+    },
+    "encodes_76_for_C2_C3_and_70_for_C1_C4": true,
+    "corrected_wording": "Two uncalibrated primitives cannot enter any primary derived coordinate. Six upstream-upsampled primitives remain eligible for products and ratios but not for primary derivative-based coordinates.",
+    "s7_5_reopened": false,
+    "verdict": "DOCUMENTARY_ERRATUM_ONLY"
+  },
+  "check_4_3_denominator_margin": {
+    "rule_file": "denominator_admissibility_rule.json",
+    "sha256": "6d4004eb3ae95067b2a01dddeb90226748cfee7097217d68ab5377ac50ed716d",
+    "frozen_before_stage_B": true,
+    "verdict": "PRE_ENUMERATION_CONTRACT_COMPLETION"
+  },
+  "evaluated_utc": "2026-09-04T06:02:48.217847+00:00"
+}

@@ -1,0 +1,159 @@
+{
+  "generated_utc": "2026-09-01T00:10:44.957065+00:00",
+  "builder": "D:\\SIR_paper\\Lorenz\\build_fig5data.py",
+  "outputs": {
+    "canonical_recovery.json": {
+      "scientific_meaning": "Full-state cubic identification: recovered vs true Lorenz coefficients.",
+      "upstream_sources": [
+        "D:\\SIR_paper\\Lorenz\\task_conditioning_benchmark\\sir_mcp\\containment\\mcp_containment.json"
+      ],
+      "generating_script": "build_fig5data.py::build_canonical",
+      "sha256": "59ae7d2e8c469a5f1a0b345e96d72153e5c7ad87043e84496dac654418bff57c",
+      "bytes": 2264,
+      "canonical_or_augmentation": "canonical",
+      "max_abs_coefficient_deviation": 0.0019999999999988916
+    },
+    "canonical_attractor.csv": {
+      "scientific_meaning": "Canonical Lorenz trajectory for the Panel-a attractor. DISPLAY-ONLY downsample (every 10th sample of dt=0.001).",
+      "upstream_sources": [
+        "D:\\SIR_paper\\Lorenz\\Lorenz_attractor.py"
+      ],
+      "generating_script": "build_fig5data.py::build_canonical",
+      "sha256": "67564c6acc0464f0164089ce59735b88c86ef9ab8e9c478acdf3dc80b66d8b26",
+      "bytes": 260367,
+      "canonical_or_augmentation": "regenerated_deterministic",
+      "integrator": "DOP853",
+      "rtol": 1e-12,
+      "atol": 1e-12,
+      "x0": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dt": 0.001,
+      "tmax": 40.0,
+      "display_only_downsample": 10,
+      "n_rows": 4001
+    },
+    "representation_landscape.csv": {
+      "scientific_meaning": "17 candidate representations x 2 regimes, DEVELOPMENT 6-fold grouped-CV. Search evidence only - not protected confirmation. NOTE coverage_selection_strided is the stride-8 selection subsample (~1/8 of native coverage), not the native retained fraction.",
+      "upstream_sources": [
+        "D:\\SIR_paper\\Lorenz\\task_conditioning_benchmark\\tables\\selection_stability.csv"
+      ],
+      "generating_script": "build_fig5data.py::build_landscape",
+      "sha256": "612afcf02fc1659d920902c38f5b5fc66764cabd41431198ed05dee9cecd974c",
+      "bytes": 8013,
+      "canonical_or_augmentation": "canonical",
+      "evidence_level": "development_grouped_CV",
+      "n_candidates": 17,
+      "cv_scheme": "GroupKFold(6) over 48 development trajectories",
+      "pareto_objectives": "minimise (n_coordinates, cv_rmse_mean)"
+    },
+    "confirmation_trajectory_rmse.csv": {
+      "scientific_meaning": "Per-trajectory RMSE on the 24 PROTECTED confirmation trajectories, 7 representations x 2 regimes, common sparse estimator (PySINDy STLSQ). CAVEAT: scored on each representation's NATIVE mask; coverage differs across representations (0.874-0.998). See noise_robustness_augmented.csv for a common-support comparison.",
+      "upstream_sources": [
+        "D:\\SIR_paper\\Lorenz\\task_conditioning_benchmark\\tables\\confirmation_per_trajectory.csv",
+        "D:\\SIR_paper\\Lorenz\\task_conditioning_benchmark\\tables\\confirmation_results.csv"
+      ],
+      "generating_script": "build_fig5data.py::build_confirmation",
+      "sha256": "ce1b5d4ef50b8135226ba14b88e0c2cffdc5c03039c286367d1a1b6fb027684c",
+      "bytes": 59329,
+      "canonical_or_augmentation": "canonical",
+      "evidence_level": "protected_confirmation",
+      "n_trajectories": 24,
+      "estimator": "pysindy.STLSQ",
+      "support_caveat": "native per-representation masks, coverage 0.874-0.998"
+    },
+    "noise_robustness.csv": {
+      "scientific_meaning": "CANONICAL noise evidence: only two levels (0 and 0.01) exist in the frozen benchmark, trajectory level, native support.",
+      "upstream_sources": [
+        "D:\\SIR_paper\\Lorenz\\task_conditioning_benchmark\\tables\\noise_robustness.csv",
+        "D:\\SIR_paper\\Lorenz\\fig5data\\confirmation_trajectory_rmse.csv"
+      ],
+      "generating_script": "build_fig5data.py::build_noise",
+      "sha256": "3c82ce0f508fd7c05dfa0f5dc70f3eff86b25d933340c23df3f0e94997919694",
+      "bytes": 39877,
+      "canonical_or_augmentation": "canonical",
+      "noise_levels": [
+        0.0,
+        0.01
+      ]
+    },
+    "noise_robustness_augmented.csv": {
+      "scientific_meaning": "AUGMENTATION: dense noise sweep, trajectory level, native AND common support. NOT part of the frozen canonical benchmark.",
+      "upstream_sources": [
+        "D:\\SIR_paper\\Lorenz\\task_conditioning_benchmark\\fig5_augmentation\\noise_sweep_trajectory_level.csv"
+      ],
+      "generating_script": "build_fig5data.py::build_noise",
+      "sha256": "aabd5ececbefa01dbaaa7e5957cf8e5684ba7707cca9a7dd0fada56f1a24e6d2",
+      "bytes": 776288,
+      "canonical_or_augmentation": "augmentation",
+      "augmentation_manifest": "D:\\SIR_paper\\Lorenz\\task_conditioning_benchmark\\fig5_augmentation\\AUGMENTATION_MANIFEST.json",
+      "noise_grid": "noise grid [0.0, 0.001, 0.002, 0.003, 0.004, 0.005, 0.006, 0.007, 0.008, 0.009, 0.01] (canonical was [0.0, 0.005, 0.01])",
+      "seed_namespace": 5000
+    },
+    "noise_robustness_summary.csv": {
+      "scientific_meaning": "AUGMENTATION: bootstrap summary of the dense sweep.",
+      "upstream_sources": [
+        "D:\\SIR_paper\\Lorenz\\task_conditioning_benchmark\\fig5_augmentation\\noise_sweep_trajectory_level.csv"
+      ],
+      "generating_script": "build_fig5data.py::build_noise",
+      "sha256": "56d680489d755eb8cc0952dda28f7bf53b87dab841ddfa5952fefbb5e9e986d5",
+      "bytes": 16957,
+      "canonical_or_augmentation": "augmentation",
+      "augmentation_manifest": "D:\\SIR_paper\\Lorenz\\task_conditioning_benchmark\\fig5_augmentation\\AUGMENTATION_MANIFEST.json",
+      "noise_grid": "noise grid [0.0, 0.001, 0.002, 0.003, 0.004, 0.005, 0.006, 0.007, 0.008, 0.009, 0.01] (canonical was [0.0, 0.005, 0.01])",
+      "seed_namespace": 5000
+    },
+    "selected_representations.json": {
+      "scientific_meaning": "Exact coordinate identities for each contract's selection, the accuracy-equivalent sets, and the three complexity definitions.",
+      "upstream_sources": [
+        "D:\\SIR_paper\\Lorenz\\task_conditioning_benchmark\\contracts\\contract_selections.json"
+      ],
+      "generating_script": "build_fig5data.py::build_selected",
+      "sha256": "a181ea23e487fa76088e5598bf69f71a6db513f9c81746cb1adb9788287b97f1",
+      "bytes": 4324,
+      "canonical_or_augmentation": "canonical"
+    }
+  },
+  "canonical_freeze": {
+    "n_files": 12,
+    "violations": [],
+    "sha256": "0549e149f25114e690cd5991150f9630f19f062cf972ef874f724e5d45a037ff"
+  },
+  "checkpoints": {
+    "C_all_cv_rmse": {
+      "expected": 1.32165e-05,
+      "tolerance": 1e-09
+    },
+    "C_all_n_coordinates": {
+      "expected": 38,
+      "tolerance": 0
+    },
+    "compact_cv_rmse": {
+      "expected": 3.32564e-05,
+      "tolerance": 1e-09
+    },
+    "compact_n_coordinates": {
+      "expected": 12,
+      "tolerance": 0
+    },
+    "poly2_cv_rmse": {
+      "expected": 2.22551,
+      "tolerance": 0.0001
+    },
+    "n_candidates": {
+      "expected": 17,
+      "tolerance": 0
+    },
+    "n_confirmation_trajectories": {
+      "expected": 24,
+      "tolerance": 0
+    },
+    "n_development_trajectories": {
+      "expected": 48,
+      "tolerance": 0
+    }
+  },
+  "checkpoint_failures": []
+}

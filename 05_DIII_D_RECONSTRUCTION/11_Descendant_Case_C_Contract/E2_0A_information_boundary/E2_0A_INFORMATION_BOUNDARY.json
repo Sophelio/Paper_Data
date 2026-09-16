@@ -1,0 +1,69 @@
+{
+  "record_id": "E2_0A_INFORMATION_BOUNDARY_V1",
+  "frozen_utc": "2026-09-06T04:47:45.692687+00:00",
+  "principle": "PREDICTOR_QUALIFIED_TARGET_CROSS_FITTED_RECONSTRUCTION",
+  "the_boundary_is_transition_specific": true,
+  "ROLE_A_predictor_side_admissibility": {
+    "what": "all admissible NON-TARGET predictor observations in the frozen 62-discharge object may instantiate P-RANGE-SUPPORT",
+    "why_admissible": "the intended domain Omega_rec IS the frozen 62-discharge object. Asking whether a coordinate is observationally applicable over that domain is answerable from that domain's predictor side; it is a property of the domain, not a peek at an unseen one",
+    "properties": [
+      "target-blind",
+      "error-blind",
+      "performance-blind"
+    ],
+    "governs": "P_rec applicability"
+  },
+  "ROLE_B_target_side_discovery": {
+    "what": "within outer fold k, held-out target values may not influence search, utility, support selection, estimator selection, or any relation-selection decision",
+    "only_influencing_targets": "D_train^(k)",
+    "governs": "the relational search and U_rec selection"
+  },
+  "epistemic_guarantee_actually_tested": "no discharge's OWN TARGET VALUES influenced the support used to reconstruct it",
+  "contract_internal_justification": [
+    {
+      "source": "S7.6R PARTIAL_MAP_ADMISSIBILITY.md, 'The external rule'",
+      "text": "the sibling partial-map condition - denominator admissibility - is explicitly an APPLICATION-TIME predicate: a selected support 'must satisfy the same rule on each external local-calibration block'. It was never required to be predictable from development data alone",
+      "implication": "P-RANGE, its sibling under the same partial-map semantics, is correctly evaluated over the intended domain rather than forecast from a training subset"
+    },
+    {
+      "source": "K_REC_V2 coverage_policy and A_rec_architecture_decision",
+      "text": "K2 recorded FULL_DOMAIN_RANGE_SUPPORT as 'feasible target-blindly' with evidence of 3,451 full-domain atoms computed over ALL 62 discharges, and reasoned that 'a search restricted to full-domain coordinates yields full-domain supports by construction'",
+      "implication": "K2's own architecture presumed a search over the full-object certified basis. E2.0's predictor-blinding contradicted the parent contract it was implementing"
+    }
+  ],
+  "I_q_notation_audit": {
+    "question": "does the existing I_rec definition already permit this arrangement?",
+    "finding": "YES - no notation revision is required",
+    "reasoning": "I_rec is defined as O_rec = I_rec(O): a VARIABLE-SET boundary whose six exclusion rules are all about ANCESTRY RELATIVE TO THE TARGET (the target itself, aliases, definitional descendants, verified upstream dependence, unresolved ancestry fail-closed, and transitive closure). I_rec never governed WHICH OBSERVATIONS of an admitted variable are available at WHICH STAGE. That is a different concept, and in Epoch 1 it already lived in P_rec (calibration-only preprocessing) and V_rec (block-local protection, external sealing) - not in I_rec. So the transition-specific arrangement is expressible under the existing components without redefining I_q",
+    "notation_change_required": false,
+    "manuscript_clarification_recommended": true,
+    "recommended_sentence": "The information boundary is transition-specific: observations admissible for coordinate construction or applicability need not be admissible for relation selection. In the reconstruction example, non-target observations across the finite scientific object determine range-support applicability, while held-out target values remain unavailable to support discovery.",
+    "why_a_clarification_is_still_worth_adding": "readers will naturally conflate I_q (which variables may enter) with the stage-wise availability of an admitted variable's observations (P_q / V_q). One sentence prevents that conflation without changing any definition"
+  },
+  "information_flow": [
+    "O_q --(all admissible predictor values)--> P-RANGE applicability",
+    "P-RANGE applicability --> C_E2_FULL_DOMAIN",
+    "C_E2_FULL_DOMAIN + D_train^(k) targets --> fold-k exploration / utility / selection",
+    "selection --> HASH(C_k*)",
+    "HASH(C_k*) + held-out CALIBRATION targets --> local coefficient estimation",
+    "local coefficients + held-out PROTECTED targets (LAST) --> qualification"
+  ],
+  "not_target_leakage": {
+    "statement": "using all 62 predictor values to instantiate P-RANGE is NOT target leakage under this frozen finite-object claim",
+    "because": "the target, density, remains unavailable to the held-out fold during support discovery. The admissibility calculation uses only non-target predictor values, frozen coordinate definitions, frozen block geometry and the frozen tau = 1",
+    "distinction": {
+      "PREDICTOR_SIDE_DOMAIN_KNOWLEDGE": "admissible under this claim",
+      "TARGET_SIDE_DISCOVERY_INFORMATION": "remains cross-fitted"
+    }
+  },
+  "what_this_does_NOT_buy": {
+    "forbidden_claims": [
+      "unknown-predictor-distribution transfer",
+      "fully inductive held-out predictor generalization",
+      "future-discharge applicability",
+      "untouched external validation"
+    ],
+    "permitted_description": "target-cross-fitted reconstruction over a predictor-qualified finite observational object",
+    "epistemic_cost_recorded_explicitly": "E2.0's stricter rule would have tested TWO things on held-out data: whether the target relationship transfers, AND whether the support's predictor geometry holds up on discharges whose ranges were never consulted. E2.0A tests only the first; the second is now satisfied by construction. A positive Epoch-2 result is therefore a WEAKER statement than E2.0 would have produced, and the claim boundary must say so"
+  }
+}

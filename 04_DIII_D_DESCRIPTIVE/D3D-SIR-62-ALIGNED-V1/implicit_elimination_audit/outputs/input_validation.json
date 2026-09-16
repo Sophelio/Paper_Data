@@ -1,0 +1,39 @@
+{
+  "audit_id": "D3D-SIR-62-IMPLICIT-CLOSURE-CONDITIONING-V1",
+  "canonical_run_id": "D3D-SIR-62-ALIGNED-V1",
+  "coefficient_correction_audit_id": "D3D-SIR-62-COEFFICIENT-CONDITIONING-CORRECTION-V1",
+  "n_discharges": 62,
+  "n_samples_per_discharge": 1000,
+  "n_features": 7,
+  "source_matrix_order": [
+    "d[pcdiamag3]/d[kappa]",
+    "d[kappa]/d[t]",
+    "r[q95]/r[kappa]",
+    "d[pcdiamag3]/d[betan]",
+    "d[kappa]/d[betan]",
+    "d[betan]/d[t]",
+    "d[li]/d[betan]"
+  ],
+  "manuscript_display_order": [
+    "D_kappa W_dia",
+    "D_betaN W_dia",
+    "D_betaN kappa",
+    "D_betaN l_i",
+    "q95 / kappa",
+    "dot beta_N",
+    "dot kappa"
+  ],
+  "historical_equation_key": "1_8*",
+  "maximum_absolute_coefficient_difference": 2.220446049250313e-16,
+  "reproduced_pooled_rmse": 0.05758467247445343,
+  "reproduced_mean_vector_rmse": 0.4125238315775986,
+  "pass": true,
+  "input_sha256": {
+    "canonical_manifest": "44fa7ff61ee770613933a89582d2ecc0f9334959bd448e67cb9cece977793851",
+    "coefficients": "154e9812dbda2928b97d24eec75493a03a35517424a851c02cabc2257d12c0bb",
+    "predictions": "eaa701dca39fe4fc8fd5041bcdbd65eb84b068a7723d695313c4e8c122248ccb",
+    "model": "ebb8cbbb9f604dbeeee01d71546c334dc192bbbc592d63bdb200af7aeb23c7e8",
+    "correction_summary": "c32cd8138df3907e7c881af79aec1431a94180416a89302f9d5872c54918da60"
+  },
+  "created_utc": "2026-08-05T20:58:27Z"
+}

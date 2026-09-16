@@ -1,0 +1,29 @@
+# original_path: submodules/Archaieus/src/Archaieus/sir/utils/transforms.py
+# lines: 218-240
+# sha256: 3287584fe9b8757b974fce256e8f4773d37f4583bb1a1afdc5c5a07823d5c8ec
+# git_commit: aefd942ea111f7bd24d1d86cafb954639aff3fb1
+# historical_match_status: CODE_PRESENT_MATCHES_ARTIFACT_CONSTRUCTION
+
+    def make_Quotients(self, VAR, VAR_keys, shift, add_inverse = False):
+        
+        X, X_keys = VAR, VAR_keys
+
+        quotients, q_names = [], [] 
+        idx                = np.arange(len(X))
+        idx_combs          = list(combinations(idx,2))
+        
+        for c in idx_combs:
+            # quotient
+            name_token = X_keys[c[0]]/X_keys[c[1]]
+            q_names.append(name_token)
+            i0,i1      = c
+            out        = (X[i0]+shift) / (X[i1]+shift)
+            quotients.append(out)
+
+            if add_inverse:
+                # inverse of quotient
+                name_token_inv = X_keys[c[1]]/X_keys[c[0]]
+                q_names.append(name_token_inv)
+                quotients.append(np.power(out,-1))
+        
+        return np.array(quotients), q_names

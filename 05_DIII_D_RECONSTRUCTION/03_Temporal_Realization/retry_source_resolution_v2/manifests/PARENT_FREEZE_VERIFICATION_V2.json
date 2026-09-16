@@ -1,0 +1,48 @@
+{
+  "s7_1": {
+    "freeze_id": "D3D-SIR-S7.1-OBSERVATIONAL-OBJECT-FINAL-V1",
+    "n_verified": 9
+  },
+  "s7_2_v1": {
+    "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V1",
+    "status": "FROZEN_READY_FOR_S7.3",
+    "n_verified": 35
+  },
+  "s7_2_v2": {
+    "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V2",
+    "status": "FROZEN_READY_FOR_S7.3",
+    "n_verified": 10
+  },
+  "s7_3_v1": {
+    "freeze_id": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-V1",
+    "status": "FROZEN_READY_FOR_S7.4",
+    "n_verified": 33
+  },
+  "s7_4_v1": {
+    "freeze_id": "D3D-SIR-S7.4-MATHEMATICAL-INTERPRETATION-V1",
+    "status": "TARGET_TEMPORAL_RESOLUTION_RECONCILIATION_REQUIRED",
+    "n_verified": 7
+  },
+  "s7_3r_v2": {
+    "freeze_id": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-SOURCE-RESOLUTION-V2",
+    "status": "FROZEN_READY_TO_RETRY_S7.4",
+    "n_verified": 22
+  },
+  "verified_utc": "2026-09-03T05:48:06.141819+00:00",
+  "authoritative_boundary": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-SOURCE-RESOLUTION-V2",
+  "substantive_checks": {
+    "corrected_target_is_density": true,
+    "canonical_target_unit_m3": true,
+    "corrected_predictors_78": true,
+    "broad_families_7": true,
+    "s7_3r_supersedes_s7_3_v1": true,
+    "vsurf_numerically_excluded": true,
+    "external_cohort_42_sealed": true,
+    "s7_4_v1_did_not_instantiate_X_rec": true,
+    "s7_4_v1_status_preserved": true,
+    "s7_3r_ready": true
+  },
+  "n_drift": 0,
+  "drift": [],
+  "verdict": "PARENTS_VERIFIED"
+}

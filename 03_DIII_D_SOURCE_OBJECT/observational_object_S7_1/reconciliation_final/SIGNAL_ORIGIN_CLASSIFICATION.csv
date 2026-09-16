@@ -1,0 +1,96 @@
+signal_id,signal_group,source_classification,origin_evidence_class,units,scientific_description,notes
+bt,magnetics,DIRECT_MEASUREMENT,STRONGLY_INFERRED,T,Toroidal magnetic field,"standard magnetic diagnostic with a documented physical unit; the local record does not document the sensor or compensation chain, so this remains inferred (U006)"
+ip,magnetics,DIRECT_MEASUREMENT,STRONGLY_INFERRED,A,Plasma current,"standard magnetic diagnostic with a documented physical unit; the local record does not document the sensor or compensation chain, so this remains inferred (U006)"
+pcbcoil,magnetics,DIRECT_MEASUREMENT,LOCAL_DOCUMENTED,,Plasma control B-coil signal (uncalibrated),"upstream units attribute is 'raw' -- uncalibrated digitiser output, i.e. an unprocessed sensor channel"
+pcdiamag3,magnetics,DIRECT_MEASUREMENT,LOCAL_DOCUMENTED,,Diamagnetic loop signal (uncalibrated),"upstream units attribute is 'raw' -- uncalibrated digitiser output, i.e. an unprocessed sensor channel"
+vsurf,magnetics,DIRECT_MEASUREMENT,STRONGLY_INFERRED,V,Surface loop voltage,"standard magnetic diagnostic with a documented physical unit; the local record does not document the sensor or compensation chain, so this remains inferred (U006)"
+aminor,equilibrium_shape,EQUILIBRIUM_DERIVED,LOCAL_DOCUMENTED,m,Plasma minor radius (EFIT),description names EFIT explicitly
+area,equilibrium_shape,EQUILIBRIUM_DERIVED,LOCAL_DOCUMENTED,m^2,Plasma poloidal cross-sectional area (EFIT),description names EFIT explicitly
+betan,equilibrium_shape,EQUILIBRIUM_DERIVED,STRONGLY_INFERRED,1,Normalised beta,"equilibrium reconstruction output; EFIT family inferred from group coherence with aminor/area, which name EFIT explicitly"
+drsep,equilibrium_shape,EQUILIBRIUM_DERIVED,STRONGLY_INFERRED,m,Separatrix-to-separatrix distance (upper/lower balance),"equilibrium reconstruction output; EFIT family inferred from group coherence with aminor/area, which name EFIT explicitly"
+kappa,equilibrium_shape,EQUILIBRIUM_DERIVED,STRONGLY_INFERRED,1,Plasma elongation,"equilibrium reconstruction output; EFIT family inferred from group coherence with aminor/area, which name EFIT explicitly"
+li,equilibrium_shape,EQUILIBRIUM_DERIVED,STRONGLY_INFERRED,1,Normalised internal inductance,"equilibrium reconstruction output; EFIT family inferred from group coherence with aminor/area, which name EFIT explicitly"
+q95,equilibrium_shape,EQUILIBRIUM_DERIVED,STRONGLY_INFERRED,1,Safety factor at the 95% flux surface,"equilibrium reconstruction output; EFIT family inferred from group coherence with aminor/area, which name EFIT explicitly"
+rmaxis,equilibrium_shape,EQUILIBRIUM_DERIVED,STRONGLY_INFERRED,m,Magnetic axis major radius,"equilibrium reconstruction output; EFIT family inferred from group coherence with aminor/area, which name EFIT explicitly"
+rsurf,equilibrium_shape,EQUILIBRIUM_DERIVED,STRONGLY_INFERRED,m,"Plasma boundary geometric centre, major radius","equilibrium reconstruction output; EFIT family inferred from group coherence with aminor/area, which name EFIT explicitly"
+tribot,equilibrium_shape,EQUILIBRIUM_DERIVED,STRONGLY_INFERRED,1,Bottom triangularity,"equilibrium reconstruction output; EFIT family inferred from group coherence with aminor/area, which name EFIT explicitly"
+tritop,equilibrium_shape,EQUILIBRIUM_DERIVED,STRONGLY_INFERRED,1,Top triangularity,"equilibrium reconstruction output; EFIT family inferred from group coherence with aminor/area, which name EFIT explicitly"
+volume,equilibrium_shape,EQUILIBRIUM_DERIVED,STRONGLY_INFERRED,m^3,Plasma volume,"equilibrium reconstruction output; EFIT family inferred from group coherence with aminor/area, which name EFIT explicitly"
+zcur,equilibrium_shape,EQUILIBRIUM_DERIVED,STRONGLY_INFERRED,m,Vertical position of the plasma current centroid,"equilibrium reconstruction output; EFIT family inferred from group coherence with aminor/area, which name EFIT explicitly"
+zmaxis,equilibrium_shape,EQUILIBRIUM_DERIVED,STRONGLY_INFERRED,m,Magnetic axis vertical position,"equilibrium reconstruction output; EFIT family inferred from group coherence with aminor/area, which name EFIT explicitly"
+zsurf,equilibrium_shape,EQUILIBRIUM_DERIVED,STRONGLY_INFERRED,m,"Plasma boundary geometric centre, vertical position","equilibrium reconstruction output; EFIT family inferred from group coherence with aminor/area, which name EFIT explicitly"
+density,density,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,cm^-3,Line-averaged electron density,"line-AVERAGED electron density: a line integral divided by a chord length, not a local measurement"
+prmtan_neped,density,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,m^-3,Pedestal electron density from tanh fit,pedestal parameter from an explicit tanh profile fit
+prmtan_teped,density,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,eV,Pedestal electron temperature from tanh fit,pedestal parameter from an explicit tanh profile fit
+fs04,filterscope_dalpha,DIRECT_MEASUREMENT,LOCAL_DOCUMENTED,ph/(sr cm^2 s),Filterscope D-alpha channel (fs04),"calibrated filterscope photon flux, ph/(sr cm^2 s); a calibrated radiometric measurement, not an inversion"
+fs03da,filterscope_dalpha,DIRECT_MEASUREMENT,LOCAL_DOCUMENTED,ph/(sr cm^2 s),Filterscope D-alpha channel (fs03da),"calibrated filterscope photon flux, ph/(sr cm^2 s); a calibrated radiometric measurement, not an inversion"
+fs04da,filterscope_dalpha,DIRECT_MEASUREMENT,LOCAL_DOCUMENTED,ph/(sr cm^2 s),Filterscope D-alpha channel (fs04da),"calibrated filterscope photon flux, ph/(sr cm^2 s); a calibrated radiometric measurement, not an inversion"
+fs05da,filterscope_dalpha,DIRECT_MEASUREMENT,LOCAL_DOCUMENTED,ph/(sr cm^2 s),Filterscope D-alpha channel (fs05da),"calibrated filterscope photon flux, ph/(sr cm^2 s); a calibrated radiometric measurement, not an inversion"
+gasa,gas_injection,CONTROL_COMMAND_OR_ACTUATION,LOCAL_DOCUMENTED,V,"Gas injection valve command, manifold A","gas injection valve COMMAND in volts -- an actuator command, not a plasma measurement"
+gasb,gas_injection,CONTROL_COMMAND_OR_ACTUATION,LOCAL_DOCUMENTED,V,"Gas injection valve command, manifold B","gas injection valve COMMAND in volts -- an actuator command, not a plasma measurement"
+gasc,gas_injection,CONTROL_COMMAND_OR_ACTUATION,LOCAL_DOCUMENTED,V,"Gas injection valve command, manifold C","gas injection valve COMMAND in volts -- an actuator command, not a plasma measurement"
+gasd,gas_injection,CONTROL_COMMAND_OR_ACTUATION,LOCAL_DOCUMENTED,V,"Gas injection valve command, manifold D","gas injection valve COMMAND in volts -- an actuator command, not a plasma measurement"
+pinj,neutral_beams,CONTROL_COMMAND_OR_ACTUATION,LOCAL_DOCUMENTED,kW,Total injected neutral beam power,neutral-beam actuation output (injected power / torque); actuator-side quantity rather than a plasma diagnostic
+pinj_15l,neutral_beams,CONTROL_COMMAND_OR_ACTUATION,LOCAL_DOCUMENTED,W,"Injected neutral beam power, beamline 15L",neutral-beam actuation output (injected power / torque); actuator-side quantity rather than a plasma diagnostic
+pinj_15r,neutral_beams,CONTROL_COMMAND_OR_ACTUATION,LOCAL_DOCUMENTED,W,"Injected neutral beam power, beamline 15R",neutral-beam actuation output (injected power / torque); actuator-side quantity rather than a plasma diagnostic
+pinj_21l,neutral_beams,CONTROL_COMMAND_OR_ACTUATION,LOCAL_DOCUMENTED,W,"Injected neutral beam power, beamline 21L",neutral-beam actuation output (injected power / torque); actuator-side quantity rather than a plasma diagnostic
+pinj_21r,neutral_beams,CONTROL_COMMAND_OR_ACTUATION,LOCAL_DOCUMENTED,W,"Injected neutral beam power, beamline 21R",neutral-beam actuation output (injected power / torque); actuator-side quantity rather than a plasma diagnostic
+pinj_30l,neutral_beams,CONTROL_COMMAND_OR_ACTUATION,LOCAL_DOCUMENTED,W,"Injected neutral beam power, beamline 30L",neutral-beam actuation output (injected power / torque); actuator-side quantity rather than a plasma diagnostic
+pinj_30r,neutral_beams,CONTROL_COMMAND_OR_ACTUATION,LOCAL_DOCUMENTED,W,"Injected neutral beam power, beamline 30R",neutral-beam actuation output (injected power / torque); actuator-side quantity rather than a plasma diagnostic
+pinj_33l,neutral_beams,CONTROL_COMMAND_OR_ACTUATION,LOCAL_DOCUMENTED,W,"Injected neutral beam power, beamline 33L",neutral-beam actuation output (injected power / torque); actuator-side quantity rather than a plasma diagnostic
+pinj_33r,neutral_beams,CONTROL_COMMAND_OR_ACTUATION,LOCAL_DOCUMENTED,W,"Injected neutral beam power, beamline 33R",neutral-beam actuation output (injected power / torque); actuator-side quantity rather than a plasma diagnostic
+tinj,neutral_beams,CONTROL_COMMAND_OR_ACTUATION,LOCAL_DOCUMENTED,N m,Injected neutral beam torque,neutral-beam actuation output (injected power / torque); actuator-side quantity rather than a plasma diagnostic
+ece1,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 1,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece2,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 2,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece3,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 3,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece4,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 4,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece5,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 5,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece6,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 6,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece7,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 7,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece8,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 8,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece9,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 9,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece10,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 10,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece11,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 11,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece12,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 12,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece13,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 13,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece14,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 14,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece15,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 15,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece16,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 16,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece17,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 17,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece18,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 18,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece19,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 19,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece20,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 20,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece21,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 21,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece22,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 22,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece23,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 23,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece24,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 24,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece25,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 25,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece26,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 26,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece27,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 27,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece28,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 28,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece29,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 29,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece30,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 30,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece31,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 31,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece32,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 32,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece33,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 33,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece34,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 34,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece35,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 35,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece36,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 36,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece37,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 37,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece38,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 38,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece39,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 39,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+ece40,ece_te_profile,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,keV,ECE radiometer channel 40,ECE radiometer electron temperature; requires calibration and an optically-thick emission assumption
+cerqrott3,cer_rotation_ti,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,km/s,"CER toroidal rotation velocity, channel 3",CER spectral fit product (rotation velocity / ion temperature)
+cerqrott6,cer_rotation_ti,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,km/s,"CER toroidal rotation velocity, channel 6",CER spectral fit product (rotation velocity / ion temperature)
+cerqrott8,cer_rotation_ti,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,km/s,"CER toroidal rotation velocity, channel 8",CER spectral fit product (rotation velocity / ion temperature)
+cerqrott10,cer_rotation_ti,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,km/s,"CER toroidal rotation velocity, channel 10",CER spectral fit product (rotation velocity / ion temperature)
+cerqrott11,cer_rotation_ti,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,km/s,"CER toroidal rotation velocity, channel 11",CER spectral fit product (rotation velocity / ion temperature)
+cerqrott12,cer_rotation_ti,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,km/s,"CER toroidal rotation velocity, channel 12",CER spectral fit product (rotation velocity / ion temperature)
+cerqrott13,cer_rotation_ti,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,km/s,"CER toroidal rotation velocity, channel 13",CER spectral fit product (rotation velocity / ion temperature)
+cerqtit3,cer_rotation_ti,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,eV,"CER ion temperature, channel 3",CER spectral fit product (rotation velocity / ion temperature)
+cerqtit6,cer_rotation_ti,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,eV,"CER ion temperature, channel 6",CER spectral fit product (rotation velocity / ion temperature)
+cerqtit8,cer_rotation_ti,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,eV,"CER ion temperature, channel 8",CER spectral fit product (rotation velocity / ion temperature)
+cerqtit10,cer_rotation_ti,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,eV,"CER ion temperature, channel 10",CER spectral fit product (rotation velocity / ion temperature)
+cerqtit11,cer_rotation_ti,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,eV,"CER ion temperature, channel 11",CER spectral fit product (rotation velocity / ion temperature)
+cerqtit12,cer_rotation_ti,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,eV,"CER ion temperature, channel 12",CER spectral fit product (rotation velocity / ion temperature)
+cerqtit13,cer_rotation_ti,DIAGNOSTIC_RECONSTRUCTION,LOCAL_DOCUMENTED,eV,"CER ion temperature, channel 13",CER spectral fit product (rotation velocity / ion temperature)

@@ -1,0 +1,96 @@
+signal_index,signal,class,physical_unit,units_status,family,description,candidate_class_pass,candidate_class_failure_reason,target_side_major_flags,target_side_major_flag_count
+1,bt,DIRECT_MEASUREMENT,T,resolved_partial,magnetics,Toroidal magnetic field,True,,U009|U010,2
+2,ip,DIRECT_MEASUREMENT,A,resolved_spelling,magnetics,Plasma current,True,,U009|U010,2
+3,pcbcoil,DIRECT_MEASUREMENT,,uncalibrated,magnetics,Plasma control B-coil signal (uncalibrated),False,uncalibrated raw digitiser output; no resolved physical unit,,0
+4,pcdiamag3,DIRECT_MEASUREMENT,,uncalibrated,magnetics,Diamagnetic loop signal (uncalibrated),False,uncalibrated raw digitiser output; no resolved physical unit,,0
+5,vsurf,DIRECT_MEASUREMENT,V,documented,magnetics,Surface loop voltage,True,,,0
+6,aminor,EQUILIBRIUM_DERIVED,m,documented,equilibrium_shape,Plasma minor radius (EFIT),False,class EQUILIBRIUM_DERIVED is normally excluded as primary target,U003,1
+7,area,EQUILIBRIUM_DERIVED,m^2,documented,equilibrium_shape,Plasma poloidal cross-sectional area (EFIT),False,class EQUILIBRIUM_DERIVED is normally excluded as primary target,U003,1
+8,betan,EQUILIBRIUM_DERIVED,1,dimensionless,equilibrium_shape,Normalised beta,False,class EQUILIBRIUM_DERIVED is normally excluded as primary target,U003,1
+9,drsep,EQUILIBRIUM_DERIVED,m,documented,equilibrium_shape,Separatrix-to-separatrix distance (upper/lower balance),False,class EQUILIBRIUM_DERIVED is normally excluded as primary target,U003,1
+10,kappa,EQUILIBRIUM_DERIVED,1,dimensionless,equilibrium_shape,Plasma elongation,False,class EQUILIBRIUM_DERIVED is normally excluded as primary target,U003,1
+11,li,EQUILIBRIUM_DERIVED,1,dimensionless,equilibrium_shape,Normalised internal inductance,False,class EQUILIBRIUM_DERIVED is normally excluded as primary target,U003,1
+12,q95,EQUILIBRIUM_DERIVED,1,dimensionless,equilibrium_shape,Safety factor at the 95% flux surface,False,class EQUILIBRIUM_DERIVED is normally excluded as primary target,U003,1
+13,rmaxis,EQUILIBRIUM_DERIVED,m,documented,equilibrium_shape,Magnetic axis major radius,False,class EQUILIBRIUM_DERIVED is normally excluded as primary target,U003,1
+14,rsurf,EQUILIBRIUM_DERIVED,m,documented,equilibrium_shape,"Plasma boundary geometric centre, major radius",False,class EQUILIBRIUM_DERIVED is normally excluded as primary target,U003,1
+15,tribot,EQUILIBRIUM_DERIVED,1,dimensionless,equilibrium_shape,Bottom triangularity,False,class EQUILIBRIUM_DERIVED is normally excluded as primary target,U003,1
+16,tritop,EQUILIBRIUM_DERIVED,1,dimensionless,equilibrium_shape,Top triangularity,False,class EQUILIBRIUM_DERIVED is normally excluded as primary target,U003,1
+17,volume,EQUILIBRIUM_DERIVED,m^3,documented,equilibrium_shape,Plasma volume,False,class EQUILIBRIUM_DERIVED is normally excluded as primary target,U003,1
+18,zcur,EQUILIBRIUM_DERIVED,m,documented,equilibrium_shape,Vertical position of the plasma current centroid,False,class EQUILIBRIUM_DERIVED is normally excluded as primary target,U003,1
+19,zmaxis,EQUILIBRIUM_DERIVED,m,documented,equilibrium_shape,Magnetic axis vertical position,False,class EQUILIBRIUM_DERIVED is normally excluded as primary target,U003,1
+20,zsurf,EQUILIBRIUM_DERIVED,m,documented,equilibrium_shape,"Plasma boundary geometric centre, vertical position",False,class EQUILIBRIUM_DERIVED is normally excluded as primary target,U003,1
+21,density,DIAGNOSTIC_RECONSTRUCTION,cm^-3,documented,density,Line-averaged electron density,True,,,0
+22,prmtan_neped,DIAGNOSTIC_RECONSTRUCTION,m^-3,documented,density,Pedestal electron density from tanh fit,True,,U009|U010,2
+23,prmtan_teped,DIAGNOSTIC_RECONSTRUCTION,eV,documented,density,Pedestal electron temperature from tanh fit,True,,U009|U010,2
+24,fs04,DIRECT_MEASUREMENT,ph/(sr cm^2 s),resolved_spelling,filterscope_dalpha,Filterscope D-alpha channel (fs04),True,,,0
+25,fs03da,DIRECT_MEASUREMENT,ph/(sr cm^2 s),resolved_spelling,filterscope_dalpha,Filterscope D-alpha channel (fs03da),True,,,0
+26,fs04da,DIRECT_MEASUREMENT,ph/(sr cm^2 s),resolved_spelling,filterscope_dalpha,Filterscope D-alpha channel (fs04da),True,,,0
+27,fs05da,DIRECT_MEASUREMENT,ph/(sr cm^2 s),resolved_spelling,filterscope_dalpha,Filterscope D-alpha channel (fs05da),True,,,0
+28,gasa,CONTROL_COMMAND_OR_ACTUATION,V,resolved_partial,gas_injection,"Gas injection valve command, manifold A",False,class CONTROL_COMMAND_OR_ACTUATION is normally excluded as primary target,,0
+29,gasb,CONTROL_COMMAND_OR_ACTUATION,V,resolved_partial,gas_injection,"Gas injection valve command, manifold B",False,class CONTROL_COMMAND_OR_ACTUATION is normally excluded as primary target,,0
+30,gasc,CONTROL_COMMAND_OR_ACTUATION,V,resolved_partial,gas_injection,"Gas injection valve command, manifold C",False,class CONTROL_COMMAND_OR_ACTUATION is normally excluded as primary target,,0
+31,gasd,CONTROL_COMMAND_OR_ACTUATION,V,documented,gas_injection,"Gas injection valve command, manifold D",False,class CONTROL_COMMAND_OR_ACTUATION is normally excluded as primary target,,0
+32,pinj,CONTROL_COMMAND_OR_ACTUATION,kW,documented,neutral_beams,Total injected neutral beam power,False,class CONTROL_COMMAND_OR_ACTUATION is normally excluded as primary target,,0
+33,pinj_15l,CONTROL_COMMAND_OR_ACTUATION,W,documented,neutral_beams,"Injected neutral beam power, beamline 15L",False,class CONTROL_COMMAND_OR_ACTUATION is normally excluded as primary target,,0
+34,pinj_15r,CONTROL_COMMAND_OR_ACTUATION,W,documented,neutral_beams,"Injected neutral beam power, beamline 15R",False,class CONTROL_COMMAND_OR_ACTUATION is normally excluded as primary target,,0
+35,pinj_21l,CONTROL_COMMAND_OR_ACTUATION,W,documented,neutral_beams,"Injected neutral beam power, beamline 21L",False,class CONTROL_COMMAND_OR_ACTUATION is normally excluded as primary target,,0
+36,pinj_21r,CONTROL_COMMAND_OR_ACTUATION,W,documented,neutral_beams,"Injected neutral beam power, beamline 21R",False,class CONTROL_COMMAND_OR_ACTUATION is normally excluded as primary target,,0
+37,pinj_30l,CONTROL_COMMAND_OR_ACTUATION,W,documented,neutral_beams,"Injected neutral beam power, beamline 30L",False,class CONTROL_COMMAND_OR_ACTUATION is normally excluded as primary target,,0
+38,pinj_30r,CONTROL_COMMAND_OR_ACTUATION,W,documented,neutral_beams,"Injected neutral beam power, beamline 30R",False,class CONTROL_COMMAND_OR_ACTUATION is normally excluded as primary target,,0
+39,pinj_33l,CONTROL_COMMAND_OR_ACTUATION,W,documented,neutral_beams,"Injected neutral beam power, beamline 33L",False,class CONTROL_COMMAND_OR_ACTUATION is normally excluded as primary target,,0
+40,pinj_33r,CONTROL_COMMAND_OR_ACTUATION,W,documented,neutral_beams,"Injected neutral beam power, beamline 33R",False,class CONTROL_COMMAND_OR_ACTUATION is normally excluded as primary target,,0
+41,tinj,CONTROL_COMMAND_OR_ACTUATION,N m,documented,neutral_beams,Injected neutral beam torque,False,class CONTROL_COMMAND_OR_ACTUATION is normally excluded as primary target,,0
+42,ece1,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 1,True,,,0
+43,ece2,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 2,True,,,0
+44,ece3,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 3,True,,,0
+45,ece4,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 4,True,,,0
+46,ece5,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 5,True,,,0
+47,ece6,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 6,True,,,0
+48,ece7,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 7,True,,,0
+49,ece8,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 8,True,,,0
+50,ece9,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 9,True,,,0
+51,ece10,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 10,True,,,0
+52,ece11,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 11,True,,,0
+53,ece12,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 12,True,,,0
+54,ece13,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 13,True,,,0
+55,ece14,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 14,True,,,0
+56,ece15,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 15,True,,,0
+57,ece16,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 16,True,,,0
+58,ece17,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 17,True,,,0
+59,ece18,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 18,True,,,0
+60,ece19,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 19,True,,,0
+61,ece20,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 20,True,,,0
+62,ece21,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 21,True,,,0
+63,ece22,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 22,True,,,0
+64,ece23,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 23,True,,,0
+65,ece24,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 24,True,,,0
+66,ece25,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 25,True,,,0
+67,ece26,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 26,True,,,0
+68,ece27,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 27,True,,,0
+69,ece28,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 28,True,,,0
+70,ece29,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 29,True,,,0
+71,ece30,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 30,True,,,0
+72,ece31,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 31,True,,,0
+73,ece32,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 32,True,,,0
+74,ece33,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 33,True,,,0
+75,ece34,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 34,True,,,0
+76,ece35,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 35,True,,,0
+77,ece36,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 36,True,,,0
+78,ece37,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 37,True,,,0
+79,ece38,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 38,True,,,0
+80,ece39,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 39,True,,,0
+81,ece40,DIAGNOSTIC_RECONSTRUCTION,keV,domain_authorized,ece_te_profile,ECE radiometer channel 40,True,,,0
+82,cerqrott3,DIAGNOSTIC_RECONSTRUCTION,km/s,documented,cer_rotation_ti,"CER toroidal rotation velocity, channel 3",True,,U010,1
+83,cerqrott6,DIAGNOSTIC_RECONSTRUCTION,km/s,documented,cer_rotation_ti,"CER toroidal rotation velocity, channel 6",True,,U010,1
+84,cerqrott8,DIAGNOSTIC_RECONSTRUCTION,km/s,documented,cer_rotation_ti,"CER toroidal rotation velocity, channel 8",True,,U010,1
+85,cerqrott10,DIAGNOSTIC_RECONSTRUCTION,km/s,documented,cer_rotation_ti,"CER toroidal rotation velocity, channel 10",True,,U010,1
+86,cerqrott11,DIAGNOSTIC_RECONSTRUCTION,km/s,documented,cer_rotation_ti,"CER toroidal rotation velocity, channel 11",True,,U010,1
+87,cerqrott12,DIAGNOSTIC_RECONSTRUCTION,km/s,documented,cer_rotation_ti,"CER toroidal rotation velocity, channel 12",True,,U010,1
+88,cerqrott13,DIAGNOSTIC_RECONSTRUCTION,km/s,documented,cer_rotation_ti,"CER toroidal rotation velocity, channel 13",True,,U010,1
+89,cerqtit3,DIAGNOSTIC_RECONSTRUCTION,eV,documented,cer_rotation_ti,"CER ion temperature, channel 3",True,,U010,1
+90,cerqtit6,DIAGNOSTIC_RECONSTRUCTION,eV,documented,cer_rotation_ti,"CER ion temperature, channel 6",True,,U010,1
+91,cerqtit8,DIAGNOSTIC_RECONSTRUCTION,eV,documented,cer_rotation_ti,"CER ion temperature, channel 8",True,,U010,1
+92,cerqtit10,DIAGNOSTIC_RECONSTRUCTION,eV,documented,cer_rotation_ti,"CER ion temperature, channel 10",True,,U010,1
+93,cerqtit11,DIAGNOSTIC_RECONSTRUCTION,eV,documented,cer_rotation_ti,"CER ion temperature, channel 11",True,,U010,1
+94,cerqtit12,DIAGNOSTIC_RECONSTRUCTION,eV,documented,cer_rotation_ti,"CER ion temperature, channel 12",True,,U010,1
+95,cerqtit13,DIAGNOSTIC_RECONSTRUCTION,eV,documented,cer_rotation_ti,"CER ion temperature, channel 13",True,,U010,1

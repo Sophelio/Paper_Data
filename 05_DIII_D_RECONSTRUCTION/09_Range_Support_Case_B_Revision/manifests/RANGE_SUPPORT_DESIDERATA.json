@@ -1,0 +1,35 @@
+{
+  "record_id": "RANGE_SUPPORT_DESIDERATA_V1",
+  "frozen_utc": "2026-09-06T02:49:44.653123+00:00",
+  "frozen_before_candidate_comparison": true,
+  "criteria": {
+    "D1_target_blind": "uses no target value",
+    "D2_model_error_blind": "uses no residual, NRMSE or qualification label",
+    "D3_dimensionless": "the score carries no physical unit",
+    "D4_unit_scale_invariant": "invariant under c -> k*c for any nonzero constant k",
+    "D5_sign_symmetric": "excursions below and above the calibration hull are treated alike",
+    "D6_constructor_generic": "defined identically for every constructor family",
+    "D7_local": "the reference support comes only from the relevant calibration interval",
+    "D8_application_aware": "assesses the values actually encountered on the application interval",
+    "D9_monotone": "greater departure from calibration support cannot improve the score",
+    "D10_auditable": "one equation and one short paragraph",
+    "D11_no_epsilon": "no epsilon patch anywhere",
+    "D12_degenerate_safe": "zero-range / zero-scale calibration receives an explicit status",
+    "D13_not_special_cased": "no reference to gasa, products or any Epoch-1 identity",
+    "D14_partial_application_semantics": "failure means the relation is not empirically supported on that block, not that the coordinate is globally meaningless"
+  },
+  "selection_basis_permitted": [
+    "mathematical desiderata",
+    "numerical stability",
+    "broad behaviour over the coordinate universe",
+    "interpretability",
+    "constructor neutrality"
+  ],
+  "selection_basis_forbidden": [
+    "whether 187019/B is flagged",
+    "whether 187022/B is flagged",
+    "whether C_dev_star would pass",
+    "whether V3 would improve",
+    "the S7.11 70/143 partition"
+  ]
+}

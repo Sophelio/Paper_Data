@@ -1,0 +1,6 @@
+internal_path,kind,size,bundled,reason,substitute
+D:\SIR_paper\DIIID_example\data\resampled_data_v6\*_resampled.npz,restricted DIII-D resampled archive,"1.1 GB, 62 files",no,redistribution not established,"RESTRICTED_SOURCE_INDEX.csv (SHA-256 per shot), per-shot metadata JSON, and every derived artifact"
+D:\sir-web\...\DIII-D reconstruction-frontier discovery study,retired I_p branch study,1.1 GB,no,belongs to the retired branch; bulk exploratory,10_REFERENCED_HISTORICAL_LINEAGE/failed_parent_branches
+D:\sir-web\...\DIII-D fixed-support Phase-RS conditioning probe,retired I_p branch study,797 MB,no,belongs to the retired branch,same
+D:\sir-web\...\DIII-D A-constrained reconstruction-frontier study,retired I_p branch study,769 MB,no,belongs to the retired branch,same
+D:\sir-web\...\Conditioning_repair,conditioning-aware repair audit,162 MB,no,not referenced by the staged manuscript; see ambiguous_artifacts.csv,none; include on request

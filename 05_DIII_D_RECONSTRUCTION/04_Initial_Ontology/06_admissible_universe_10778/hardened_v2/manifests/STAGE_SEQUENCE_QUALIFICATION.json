@@ -1,0 +1,13 @@
+{
+  "carried_from": "D3D-SIR-S7.5H-PRIMITIVE-SPACE-AND-ONTOLOGY-HARDENING-V1",
+  "statement": "Historical S7.6 V1 was completed on the superseded ontology and is preserved as audit history. The primary admissible universe is rebuilt here de novo from the hardened ontology.",
+  "explicitly_not_claimed": "S7.6 had never started.",
+  "why_no_contamination": {
+    "target_values": 0,
+    "external_values": 0,
+    "predictor_target_statistics": 0,
+    "models": 0
+  },
+  "residual_risk": "LOW_AND_RECORDED",
+  "v1_outcomes_used_for_v2_decisions": false
+}

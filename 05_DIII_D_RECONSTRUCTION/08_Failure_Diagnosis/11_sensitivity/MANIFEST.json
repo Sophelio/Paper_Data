@@ -1,0 +1,52 @@
+{
+  "record_id": "S7_STAGE_MANIFEST_V1",
+  "generated_utc": "2026-09-08T00:51:17.508741+00:00",
+  "stage_id": "S7.11",
+  "title": "Sensitivity and failure interpretation",
+  "directory": "11_sensitivity_and_interpretation",
+  "scientific_task_id": "q_rec",
+  "claim_branch": "QREC-B1",
+  "claim_branch_role": "MEMBER",
+  "parent_claim_branch": null,
+  "operational_epoch": 1,
+  "revision_level": "NONE",
+  "branch": "q_rec",
+  "status": "CANONICAL",
+  "sir_architecture_mapping": [
+    "delta"
+  ],
+  "scientific_question": "Was the failure specific to the selected support, or general?",
+  "operation": "Predeclared sensitivities executed: 217-member development-equivalent family, prmtan ablations, block and discharge omissions.",
+  "verdict": "Development equivalence does not identify external robustness; the canonical representative is externally fragile; the primary failure is unchanged. V9 FAIL.",
+  "parent_stages": [
+    "S7.10"
+  ],
+  "child_stages": [
+    "S7.R1"
+  ],
+  "key_numbers": {
+    "family": 217,
+    "full_domain": 213,
+    "V3_style_pass": 70,
+    "C_dev_star_rank": 184,
+    "best_Delta_1": -0.028742,
+    "gasa2_in_passers": 0,
+    "gasa2_in_failures": 67
+  },
+  "notes": "Sensitivity plan hashed 100.6 s before the first external access in S7.10. PRMTAN_NEPED_ONLY scores 0.4632 - direct evidence against target circularity.",
+  "governing_freeze": {
+    "path": "S7_11_FREEZE.json",
+    "freeze_id": "D3D-SIR-S7.11-SENSITIVITY-AND-FAILURE-INTERPRETATION-V1",
+    "sha256": "b93edac44994240e1fda4d6a0c8fa668cf712ac6a64b8d9fe63278e15c302e26",
+    "authoritative": true,
+    "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+  },
+  "executables": [
+    "scripts/s7_11_a_verify.py",
+    "scripts/s7_11_b_family.py",
+    "scripts/s7_11_c_v9.py",
+    "scripts/s7_11_d_freeze.py"
+  ],
+  "n_files": 30,
+  "indexes_not_replaces": true
+}

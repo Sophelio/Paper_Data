@@ -1,0 +1,123 @@
+{
+  "record_id": "Q_REC_GATE_TABLE_V1",
+  "generated_utc": "2026-09-07T04:58:19.214183+00:00",
+  "source": "E2_1_GATE_TABLE.json, carried unchanged",
+  "epoch_2_gates": {
+    "V_RANGE": {
+      "result": "PASS",
+      "expected_by_construction": true,
+      "n_checks": 2232,
+      "n_failures": 0
+    },
+    "V3": {
+      "Delta_0": -0.764488716015979,
+      "Delta_1": -0.027307619479192535,
+      "threshold": -0.01,
+      "result": "PASS",
+      "unchanged": true
+    },
+    "V6": {
+      "result": "PASS_WITH_QUALIFICATION",
+      "Delta_0_earlier": -0.7016931820152212,
+      "direction_0_earlier": "MATERIAL_IMPROVEMENT",
+      "Delta_1_earlier": 0.007613725877654367,
+      "direction_1_earlier": "PRACTICAL_TIE",
+      "Delta_0_later": -0.8458903341651096,
+      "direction_0_later": "MATERIAL_IMPROVEMENT",
+      "Delta_1_later": -0.07257603012695703,
+      "direction_1_later": "MATERIAL_IMPROVEMENT",
+      "pooled_V3_passed": true,
+      "era_counts": {
+        "earlier": 35,
+        "later": 27
+      }
+    },
+    "V1": {
+      "result": "INHERITED_PASS",
+      "note": "information boundary unchanged from Epoch 1"
+    },
+    "V2": {
+      "result": "PASS",
+      "note": "target cross-fitting: no discharge's own target informed its support"
+    },
+    "V4": {
+      "result": "PASS",
+      "note": "identical protected rows, no external tuning"
+    },
+    "V5": {
+      "result": "PASS",
+      "note": "support hashed before held-out target access, per fold"
+    },
+    "V7": {
+      "result": "PASS",
+      "note": "identical scored rows for all methods"
+    },
+    "V8": {
+      "result": "PASS",
+      "note": "discharge is the inference unit; n=62"
+    },
+    "V10": {
+      "result": "INHERITED_PASS",
+      "note": "numerical provenance unchanged; uncalibrated/aliasing flags carried"
+    }
+  },
+  "final_gate_table": {
+    "V_RANGE": "PASS",
+    "V3": "PASS",
+    "V6": "PASS_WITH_QUALIFICATION",
+    "V1": "INHERITED_PASS",
+    "V2": "PASS",
+    "V4": "PASS",
+    "V5": "PASS",
+    "V7": "PASS",
+    "V8": "PASS",
+    "V10": "INHERITED_PASS"
+  },
+  "mandatory_gates_failed": [],
+  "V3": {
+    "rule": "Delta_0 <= -0.01 AND Delta_1 <= -0.01",
+    "Delta_0": -0.764488716015979,
+    "Delta_1": -0.027307619479192535,
+    "result": "PASS"
+  },
+  "V6": {
+    "result": "PASS_WITH_QUALIFICATION",
+    "earlier": {
+      "n": 35,
+      "Delta_1": 0.007613725877654367,
+      "direction": "PRACTICAL_TIE"
+    },
+    "later": {
+      "n": 27,
+      "Delta_1": -0.07257603012695703,
+      "direction": "MATERIAL_IMPROVEMENT"
+    },
+    "note": "the pooled pass is carried by the later era; the earlier era is a practical tie. Both are reported."
+  },
+  "V_RANGE": {
+    "result": "PASS",
+    "tau": 1.0,
+    "checks": 2232,
+    "failures": 0,
+    "character": "APPLICABILITY_PROPERTY_NOT_A_PERFORMANCE_RESULT",
+    "pass_by_construction": true
+  },
+  "epoch_1_gate_table_preserved": {
+    "V1": "PASS",
+    "V2": "PASS",
+    "V3": "FAIL",
+    "V4": "PASS",
+    "V5": "PASS",
+    "V6": "FAIL",
+    "V7": "PASS",
+    "V8": "PASS",
+    "V10": "PASS",
+    "V9": "FAIL"
+  },
+  "tiers": {
+    "FORMAL": "FORMAL_PASS",
+    "CLEAN_DEMO": "CLEAN_DEMO_NOT_MET"
+  },
+  "no_new_gate_created": true,
+  "no_threshold_moved": true
+}

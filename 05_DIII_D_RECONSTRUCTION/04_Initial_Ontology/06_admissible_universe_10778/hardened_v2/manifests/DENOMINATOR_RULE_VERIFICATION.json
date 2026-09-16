@@ -1,0 +1,63 @@
+{
+  "rule_file": "../denominator_admissibility_rule.json",
+  "rule_id": "DENOMINATOR_ADMISSIBILITY_PRIMARY_V1",
+  "expected_sha256_prefix": "6d4004eb",
+  "sha256": "6d4004eb3ae95067b2a01dddeb90226748cfee7097217d68ab5377ac50ed716d",
+  "hash_verified_unchanged": true,
+  "reopened": false,
+  "threshold_changed": false,
+  "DENOMINATOR_MARGIN_PRIMARY": 0.05,
+  "scale_definition": "scale(d) = RMS(d) = sqrt(mean(d^2)) on one calibration block",
+  "margin_definition": "eta(d) = min(|d|) / RMS(d) on one calibration block",
+  "primary_conditions_all_required": [
+    "d is finite throughout the calibration block",
+    "d does NOT change sign within the calibration block",
+    "eta(d) >= 0.05"
+  ],
+  "no_regularisation_permitted": [
+    "denominator shift",
+    "additive epsilon",
+    "clipping",
+    "bounded reciprocal",
+    "piecewise branch repair"
+  ],
+  "application_scope_declared_here": {
+    "note": "The frozen rule text names C3 and C4 because those were the only partial maps in the superseded five-family grammar. The hardened grammar adds three more partial maps. The RULE IS UNCHANGED; only the set of families it is applied to grows with the catalogue. No threshold, scale, condition or regularisation policy is altered.",
+    "LEVEL_DENOMINATOR_STATUS": {
+      "denominator": "d = x_j (primitive level, canonical units)",
+      "used_by": [
+        "C3",
+        "C5",
+        "C7"
+      ],
+      "C5_note": "unary partial map, denominator is the operand itself"
+    },
+    "RATE_DENOMINATOR_STATUS": {
+      "denominator": "d = dx_j/dt from FD2_PHYSICAL_TIME_V1",
+      "used_by": [
+        "C4",
+        "C8"
+      ]
+    },
+    "no_denominator_gate": [
+      "C0",
+      "C1",
+      "C2",
+      "C6"
+    ]
+  },
+  "external_application_rule": {
+    "same_rule_applies": true,
+    "on_failure": [
+      "do NOT shift or regularize",
+      "do NOT replace the coordinate",
+      "do NOT refit the support",
+      "record the representation as NOT_APPLICABLE on that discharge/block"
+    ],
+    "outcome_decided_by": "the downstream qualification stage, not S7.6"
+  },
+  "sensitivity_values_remain_sensitivity_only": [
+    0.01,
+    0.1
+  ]
+}

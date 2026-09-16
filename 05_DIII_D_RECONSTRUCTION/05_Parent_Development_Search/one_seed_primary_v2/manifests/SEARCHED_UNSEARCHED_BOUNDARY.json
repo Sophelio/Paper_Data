@@ -1,0 +1,35 @@
+{
+  "record_id": "SEARCHED_UNSEARCHED_BOUNDARY_V2",
+  "all_atoms_scored": true,
+  "supports_by_size": {
+    "1": 10778,
+    "2": 8126,
+    "3": 12462,
+    "4": 14376,
+    "5": 14423,
+    "6": 14366,
+    "7": 14568,
+    "8": 14507,
+    "9": 14784,
+    "10": 14855,
+    "11": 14857,
+    "12": 14743
+  },
+  "Ahat_rec_cardinality": 162845,
+  "ADMISSIBLE_UNSEARCHED": {
+    "definition": "an admissible support never proposed",
+    "count": 5104404168895027321786009089789794423222,
+    "claim_made_about_it": "NONE"
+  },
+  "PROPOSED_BUT_SET_INADMISSIBLE": {
+    "count": 0,
+    "note": "outside Ahat_rec because already outside A_rec"
+  },
+  "invariant": "NOT SEARCHED != INADMISSIBLE",
+  "no_claim_about_unsearched_region": true,
+  "language_not_used": [
+    "global optimum",
+    "exhaustive search",
+    "complete search"
+  ]
+}

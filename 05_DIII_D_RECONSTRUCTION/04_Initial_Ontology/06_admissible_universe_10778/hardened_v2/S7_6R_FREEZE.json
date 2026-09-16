@@ -1,0 +1,128 @@
+{
+  "freeze_id": "D3D-SIR-S7.6-ADMISSIBLE-UNIVERSE-HARDENED-V2",
+  "status": "FROZEN_WITH_QUALIFICATIONS",
+  "universe_id": "A_REC_DENSITY_HARDENED_V2",
+  "timestamp_utc": "2026-09-04T23:02:49.673902+00:00",
+  "supersedes_for_primary_use": {
+    "freeze_id": "D3D-SIR-S7.6-ADMISSIBLE-UNIVERSE-V1",
+    "status_assigned": "HISTORICAL_SUPERSEDED",
+    "role": "NOT_A_PRIMARY_PARENT_FOR_ADMISSIBILITY_RESULTS",
+    "preserved_byte_for_byte": "HISTORICAL_S7_6_V1_BYTE_FOR_BYTE_UNCHANGED"
+  },
+  "parent_ontology": "G_REC_DENSITY_HARDENED_V2",
+  "parent_ontology_version": "2.0.0",
+  "parent_verification_sha256": "e9a638f9112321214f49d426c8a8de112442a517caa521134853f42505252eea",
+  "denominator_rule_sha256": "6d4004eb3ae95067b2a01dddeb90226748cfee7097217d68ab5377ac50ed716d",
+  "denominator_rule_reopened": false,
+  "qualifications": [
+    "ZERO_SURVIVING_PRIMARY_C4: no phase-derivative instance survives the unchanged rate-denominator gate. Reported as an admissibility result; the ontology and the gate are unchanged.",
+    "ZERO_SURVIVING_PRIMARY_C8: no level-over-rate instance survives the unchanged rate-denominator gate, by the same mechanism. Reported, not repaired.",
+    "ZERO_BINDING_EXACT_DEPENDENCY_GROUPS: all 400 re-derived groups are vacuous because four of the eight per-beam component coordinates are themselves class-D inadmissible. Phi_dependency is retained and well defined but currently excludes nothing.",
+    "SEARCH_POLICY_MULTIPLICITY_CONTROL_REQUIRED is carried to S7.7 unresolved, and the surviving level denominators are more strongly ECE-concentrated than the primitive basis is."
+  ],
+  "symbolic": {
+    "C0": 70,
+    "C1": 63,
+    "C2": 2346,
+    "C3": 4556,
+    "C4": 3906,
+    "C5": 68,
+    "C6": 4284,
+    "C7": 4284,
+    "C8": 4284
+  },
+  "symbolic_total": 23861,
+  "admissible": {
+    "C0": 66,
+    "C1": 59,
+    "C2": 2080,
+    "C3": 2457,
+    "C4": 0,
+    "C5": 39,
+    "C6": 3776,
+    "C7": 2301,
+    "C8": 0
+  },
+  "n_atoms": 10778,
+  "rejections_by_class": {
+    "E": 11989,
+    "D": 1094
+  },
+  "rejections_by_reason": {
+    "E_DENOM_SIGN_CHANGE": 10157,
+    "D_CONSTANT_ON_REQUIRED_CALIBRATION_BLOCK": 1094,
+    "E_DENOM_MARGIN_BELOW_ETA": 786,
+    "E_DENOM_ZERO_VALUE": 524,
+    "E_DENOM_RMS_ZERO": 522
+  },
+  "level_denominators": "39/68",
+  "rate_denominators": "0/63",
+  "dependency_groups": {
+    "attempted": 400,
+    "binding": 0,
+    "vacuous": 400
+  },
+  "support_bound": [
+    1,
+    12
+  ],
+  "relation_template": "T_REC_V1",
+  "numerical_realization": "FD2_PHYSICAL_TIME_V1",
+  "access": {
+    "development_shots": 20,
+    "predictor_signals": 70,
+    "target_values": 0,
+    "external_values": 0,
+    "verdict": "FIREWALL_INTACT"
+  },
+  "acceptance_checks": "49/49",
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "n_artifacts": 34,
+  "n_markdown": 5,
+  "all_artifact_hashes": {
+    "A_REC_HARDENED.json": "440643e9a77a53ff97b1ffd797f93792edb295073ac1b10573ad63db0a00d3c7",
+    "atomic_coordinate_universe.json": "80b6bf5ffb7ccadf42306f4565a92d86d732cd5903680e8198f96dbdffdc0ba0",
+    "atomic_family_composition.csv": "401317daeb5308ddccfb016b632a9bef3324d681dd2370bb798d0b32303a1015",
+    "constructor_survival_census.csv": "ec6412158977d15b5432c9300c009fdf15393d43556f4147347e009d9f0a4b11",
+    "coordinate_admissibility.csv": "7268d881cadc620850942d886b8d2edc00b61fec5a853e2700a653226db896d5",
+    "coordinate_registry_symbolic.csv": "575ff6eb607d2d2b026cceaa5bc5439ffdd0acac8c6c2ba273139f3dd6c57670",
+    "coordinate_rejection_log.csv": "912f92d13aa016a110778a9e6f8a9fba112bb24e73c5d04aab5b699db1528dd2",
+    "denominator_conditioning_audit.csv": "3e5b6c1081dfdc37e7a6f337418ffe7838d3d233fbf4e79006e36bb9e24a297f",
+    "exact_dependency_groups.csv": "fd599dd02ea05a188cd9658954dee946fbf616a85bc9b18062e3d2aa32169d02",
+    "exact_dependency_groups_attempted.csv": "1af89959958f3c4849cc06b0409558861276dd651fdad2202479ee1f4bb41f63",
+    "historical_v1_comparison.json": "183c2326e6f959014d84cbf65fb7b11c8b6494d196e599ee6aec4fca784d6509",
+    "manifests/ACCESS_AUDIT.json": "e9c700e2873ef39670d1438c9c6eefca122b8103980214b60413adebc3588370",
+    "manifests/DATA_ACCESS_LOG.csv": "5c1a37d507925cab12c087f1b1e94b3042877ace2761e4da30c01e15b6418949",
+    "manifests/DENOMINATOR_RULE_VERIFICATION.json": "71084c3c9677c14741f1558525cfd9f7ec09b2217067507ed3d5b9629db7ef5e",
+    "manifests/DEPENDENCY_DERIVATION.json": "7f2496d124f6d96282339506e7377c98828633178497c1dc5171f1e615fbff3e",
+    "manifests/HISTORICAL_S7_6_V1_RECORD.json": "8564964f94db669cd37121c5fb2c19d89d099f354c95de9a6863bd9e7fcb1eb7",
+    "manifests/HISTORICAL_V1_PRESERVATION.json": "4e7a74f30d31318bb891dbd07f7b6cc367ba870bdde3bc8ed1ef7a24c0f9ece0",
+    "manifests/PARENT_FREEZE_VERIFICATION.json": "e9a638f9112321214f49d426c8a8de112442a517caa521134853f42505252eea",
+    "manifests/STAGE_SEQUENCE_QUALIFICATION.json": "5064618c231cf56f07dd71b97bb9f8508b40fb6a82d31d3041355525e0f42cd3",
+    "manifests/UNIVERSE_SUMMARY.json": "fe476aff9603a443651af4777cae19529952e2fab680337e657ab03412831b7b",
+    "numerical_support_audit.csv": "d20d7324450e8e74dabdbcde9cb67391fc2b58fe830c2f3990e7eef0315e95d6",
+    "partial_map_admissibility.json": "a66f8f7640ef6459ec287fb897eb054cd85a3831e867bf0d15f42b8ab1d94cf8",
+    "PARTIAL_MAP_ADMISSIBILITY.md": "553a58ee35df56f52f77298455d533ce25683dffb71e860a9d385e95386eb2ab",
+    "primary_atomic_coordinate_universe.csv": "2933f11ad5699a89bb6519f6a809fb882b7a128683c577186cc43c5fab348f01",
+    "README.md": "0c35d9c2e24d112a6280818681598118b6ffeddf4ea568cfcf9cc74de98a4d67",
+    "representation_set_constraints.json": "68eeca075ed84c4aa4cb366504cfc08d39137f6b7dec4e6dcc42a65443f5e4d9",
+    "REPRESENTATION_SET_CONSTRAINTS.md": "14c2365a57c0d2fc319b5a4674d40a193bbc86b3b7d0788715d130814a0f49d1",
+    "S7_6R_ADMISSIBLE_UNIVERSE_AUDIT_REPORT.md": "6fd0a5af863e0337d740df43d45b29632ee18784a647a099d60c8b216216d664",
+    "S7_6R_ADMISSIBLE_UNIVERSE_FINAL.md": "21fdd282acc3395f1e72062c93d12595b83136e59642fc899f0c6b030dca0989",
+    "scripts/s7_6r_a_preflight.py": "0703a76f7e263e85f25a75a9acab9dfd6a76ad22fb2997594d8866f03b4b2a8e",
+    "scripts/s7_6r_b_universe.py": "cb0c2d76c55a43924154398f39839bbf1cbc3f663ccf30acd2c1afdc3c884b98",
+    "scripts/s7_6r_c_freeze.py": "07e98578c91db6bab6b8c3ff6209ec0bb216d08c91a129152d155e125bfc44d1",
+    "search_multiplicity_handoff.json": "ccac51a046347ae9efc05910ac25f2cb9cefb417de50b275bfec674e1f3d3b62",
+    "sensitivity_only_coordinate_registry.csv": "7855f197376e71314e59948d7169ccd23505ea6a26f17a100567be5029804712"
+  },
+  "self_referential_excluded": [
+    "S7_6R_ACCEPTANCE_CHECKS.json",
+    "S7_6R_FREEZE.json"
+  ],
+  "next_stage": "S7.7 (Search Policy and explored frontier Ahat_rec) - NOT AUTHORISED"
+}

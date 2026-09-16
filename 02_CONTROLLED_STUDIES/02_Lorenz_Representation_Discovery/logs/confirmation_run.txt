@@ -1,0 +1,31 @@
+freeze verified: 12 files unchanged
+
+confirmation trajectories: 24
+  [clean] STLSQ C0_matched       pooled_rmse=8.6065 coords=10 terms=10
+  [clean] STLSQ C0_poly2         pooled_rmse=2.2674 coords=10 terms=65
+  [clean] STLSQ C0_poly3         pooled_rmse=2.3169 coords=10 terms=285
+  [clean] STLSQ C_all            pooled_rmse=1.3533e-05 coords=38 terms=32
+  [clean] STLSQ C*_accuracy      pooled_rmse=1.3533e-05 coords=38 terms=32
+  [clean] STLSQ C*_compact       pooled_rmse=3.2583e-05 coords=12 terms=12
+  [clean] STLSQ C*_robust        pooled_rmse=1.3533e-05 coords=38 terms=32
+  [clean] MLP   C0_matched       rmse=0.28921 +/-0.0252 params=4929
+  [clean] MLP   C_all            rmse=0.045971 +/-0.00342 params=6721
+  [clean] MLP   C*_compact       rmse=0.018299 +/-0.00268 params=5057
+  [clean] MLP   C*_robust        rmse=0.045971 +/-0.00342 params=6721
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+D:\SIR_paper\.venv_lorenz_benchmark\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+  [noise_0.01] STLSQ C0_matched       pooled_rmse=8.6072 coords=10 terms=0
+  [noise_0.01] STLSQ C0_poly2         pooled_rmse=3.004 coords=10 terms=55
+  [noise_0.01] STLSQ C0_poly3         pooled_rmse=3.0042 coords=10 terms=280
+  [noise_0.01] STLSQ C_all            pooled_rmse=2.2451 coords=38 terms=38
+  [noise_0.01] STLSQ C*_accuracy      pooled_rmse=2.2451 coords=38 terms=38
+  [noise_0.01] STLSQ C*_compact       pooled_rmse=5.1196 coords=12 terms=9
+  [noise_0.01] STLSQ C*_robust        pooled_rmse=2.2451 coords=38 terms=38
+  [noise_0.01] MLP   C0_matched       rmse=0.83937 +/-0.0323 params=4929
+  [noise_0.01] MLP   C_all            rmse=0.84192 +/-0.0381 params=6721
+  [noise_0.01] MLP   C*_compact       rmse=0.8025 +/-0.0321 params=5057
+  [noise_0.01] MLP   C*_robust        rmse=0.84192 +/-0.0381 params=6721
+
+wrote tables/confirmation_results.csv

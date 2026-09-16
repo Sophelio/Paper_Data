@@ -1,0 +1,74 @@
+{
+  "component_level_typing_only": true,
+  "output_dimensions": {
+    "C0": "[x_i]",
+    "C1": "[x_i]/s",
+    "C2": "[x_i][x_j]",
+    "C3": "[x_i]/[x_j]",
+    "C4": "[x_i]/[x_j]",
+    "C5": "[x_i]^-1",
+    "C6": "[x_i][x_j]/s",
+    "C7": "[x_i]/([x_j] s)",
+    "C8": "s [x_i]/[x_j]"
+  },
+  "special_case_units": {
+    "C7_i_eq_j": "s^-1",
+    "C8_i_eq_j": "s"
+  },
+  "operand_eligibility": {
+    "C0": "any primitive in P_hard",
+    "C1": "P_dot",
+    "C2": "P_typed x P_typed (symmetric, self ok)",
+    "C3": "P_typed x P_typed, i != j",
+    "C4": "P_dot x P_dot, i != j",
+    "C5": "P_typed",
+    "C6": "level P_typed x rate P_dot, i may equal j",
+    "C7": "rate P_dot x level P_typed, i may equal j",
+    "C8": "level P_typed x rate P_dot, i may equal j"
+  },
+  "partial_map_predicates_symbolic_only": {
+    "C3": "x_j != 0",
+    "C4": "dx_j/dt != 0",
+    "C5": "x_i != 0",
+    "C7": "x_j != 0",
+    "C8": "dx_j/dt != 0",
+    "C6": "NONE - no denominator, no singularity predicate"
+  },
+  "numerical_domain_evaluation": "DEFERRED_TO_S7.6",
+  "no_regularisation": [
+    "epsilon",
+    "shift",
+    "clipping",
+    "bounded reciprocal",
+    "denominator repair"
+  ],
+  "uncalibrated": "C0 allowed; C1-C8 excluded",
+  "upstream_upsampled": "level use allowed (including as the LEVEL operand of C6/C7/C8); any constructor requiring THAT signal's derivative is NUMERICAL_SENSITIVITY_ONLY",
+  "aliasing_risk": "propagates from any operand; no high-frequency claim on a flagged coordinate",
+  "derivative_realization": "FD2_PHYSICAL_TIME_V1 (unchanged from S7.5)",
+  "temporal_propagation": {
+    "C0": "inherit the primitive's temporal metadata unchanged",
+    "C1": "inherit the source primitive's temporal-resolution qualification PLUS DERIVED_FROM_NUMERICAL_REALIZATION",
+    "C2": "limited by the COARSER provenance-supported temporal resolution of the two operands, within each discharge",
+    "C3": "limited by the COARSER provenance-supported temporal resolution of the two operands, within each discharge",
+    "C4": "limited by the COARSER derivative-source resolution of numerator and denominator",
+    "invariant": "no constructed coordinate may claim temporal information finer than either operand"
+  },
+  "provenance_propagation": {
+    "stored_per_coordinate": [
+      "constructor",
+      "ordered operands",
+      "primitive ancestors",
+      "input provenance classes",
+      "input units and types",
+      "temporal qualifications",
+      "transformation depth",
+      "target-independence status"
+    ],
+    "primitive_ancestors_recoverable_exactly": true,
+    "target_independence_is_transitive": true,
+    "invariant": "if any primitive ancestor is target-forbidden, the coordinate is forbidden",
+    "holds_automatically_because": "G_rec is generated from the already target-independent 78-primitive boundary; the invariant is encoded regardless"
+  },
+  "standardization_does_not_alter_type": true
+}

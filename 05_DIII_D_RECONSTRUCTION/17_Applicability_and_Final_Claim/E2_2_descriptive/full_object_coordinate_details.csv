@@ -1,0 +1,13 @@
+coordinate_id,constructor,search_stratum,primitive_ancestors,scientific_families,J_atomic_navigation,in_shortlist_round_robin
+ID(pcdiamag3),C0,C0:MAG,pcdiamag3,magnetics,0.538198171040617,5
+"PROD(ece37,ece39)",C2,"C2:{ECE,ECE}",ece37|ece39,ece_te_profile,0.8164280776819858,12
+"PROD(pinj,pinj_30l)",C2,"C2:{NBI,NBI}",pinj|pinj_30l,neutral_beams,0.5857393009062484,21
+"RATIO(ece21,cerqtit10)",C3,C3:ECE|CER,cerqtit10|ece21,cer_rotation_ti|ece_te_profile,0.443171726926824,8
+"RATIO(fs03da,cerqtit3)",C3,C3:FS|CER,cerqtit3|fs03da,cer_rotation_ti|filterscope_dalpha,0.7601787120598495,11
+"RATIO(gasc,cerqtit10)",C3,C3:GAS|CER,cerqtit10|gasc,cer_rotation_ti|gas_injection,0.7332635856758715,12
+"RATIO(gasc,cerqtit11)",C3,C3:GAS|CER,cerqtit11|gasc,cer_rotation_ti|gas_injection,0.7460778535757023,32
+"RATIO(ip,ece39)",C3,C3:MAG|ECE,ece39|ip,ece_te_profile|magnetics,0.6452675184875991,17
+"RATIO(pinj_33r,cerqtit10)",C3,C3:NBI|CER,cerqtit10|pinj_33r,cer_rotation_ti|neutral_beams,0.782113190880286,19
+"RATIO(prmtan_neped,ece38)",C3,C3:DEN|ECE,ece38|prmtan_neped,density|ece_te_profile,0.655953024056352,6
+"RATIO(tinj,ece20)",C3,C3:NBI|ECE,ece20|tinj,ece_te_profile|neutral_beams,0.6446429823808377,21
+RECIP(cerqtit10),C5,C5:CER,cerqtit10,cer_rotation_ti,0.5938493070748273,1

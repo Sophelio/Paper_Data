@@ -1,0 +1,21 @@
+{
+  "audit_id": "S7_8_ACCESS_AUDIT_V1",
+  "generated_utc": "2026-09-05T08:07:46.430834+00:00",
+  "external_signal_values_opened": 0,
+  "external_target_values_opened": 0,
+  "external_cohort_state": "SEALED",
+  "baselines_run": 0,
+  "search_rerun": false,
+  "ahat_rec_modified": false,
+  "a_rec_modified": false,
+  "g_rec_modified": false,
+  "two_seed_sensitivity_executed": false,
+  "c_star_selected": false,
+  "final_support_frozen": false,
+  "s7_9_started": false,
+  "development_values_read": {
+    "utility_computed_over_ahat_rec": false,
+    "note": "S7.8 read the frozen per-cell NRMSE arrays only for SHAPE, FINITENESS and IDENTITY verification; no FIT, BLOCK_WORST, SHOT_P90, conditioning or stability quantity was computed over Ahat_rec, and no ranking was performed"
+  },
+  "verdict": "FIREWALL_INTACT"
+}

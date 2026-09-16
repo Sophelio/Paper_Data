@@ -1,0 +1,431 @@
+{
+  "contract_id": "K_REC_PRE_V2",
+  "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V2",
+  "parent_freeze_id": "D3D-SIR-S7.1-OBSERVATIONAL-OBJECT-FINAL-V1",
+  "generated_utc": "2026-09-02T23:24:43.633956+00:00",
+  "formal_tuple": "K_rec = (q, I, P, B, H, U, V, Omega)",
+  "note": "Explicit incompleteness is a feature. Components that depend on a target cannot be instantiated before S7.3 selects one, and pretending otherwise would hide a decision.",
+  "q_rec": {
+    "status": "FROZEN",
+    "task_class": "CONTINUOUS_RECONSTRUCTION",
+    "statement": "reconstruct one observed scalar plasma or state quantity from the other task-admissible contemporaneous observations",
+    "transfer_type": "STRUCTURAL_TRANSFER_WITH_LOCAL_CALIBRATION",
+    "is_not": [
+      "ELM detection",
+      "event classification",
+      "forecasting",
+      "causal inference",
+      "control",
+      "zero-shot coefficient transfer",
+      "universal plasma equation discovery"
+    ],
+    "target_selected": false,
+    "target_selection": "DETERMINISTIC_RULE_FROZEN_APPLIED_AT_S7.3",
+    "artifacts": [
+      "RECONSTRUCTION_TASK_DEFINITION.md",
+      "RELATION_AND_TRANSFER_POLICY.md"
+    ],
+    "target_selection_schema": "target_selection_schema.json"
+  },
+  "I_rec": {
+    "policy_status": "FROZEN",
+    "instantiated_signal_set": "DEFERRED_TO_S7.3",
+    "coordinate_closure": "DEFERRED_TO_S7.5",
+    "exclusion_rules": [
+      "the target itself",
+      "exact duplicates and aliases of the target",
+      "quantities whose definition contains the target",
+      "quantities with verified upstream dependence on the target",
+      "quantities with UNRESOLVED ancestry relative to the target (fail-closed)",
+      "downstream coordinates of anything excluded (transitive)"
+    ],
+    "fail_closed": true,
+    "correlation_is_ancestry": false,
+    "sibling_rule": "primary boundary excludes same-family siblings; full-boundary variant is a declared sensitivity",
+    "artifacts": [
+      "INFORMATION_BOUNDARY_POLICY.md",
+      "leakage_matrix.csv"
+    ],
+    "provenance_relaxed_variant": {
+      "declared": false,
+      "reason": "frozen human decision H-B: the primary paper needs one clean, target-independent study; no rescue path built on partially resolved ancestry"
+    },
+    "efit_lineage_recovery_campaign": {
+      "undertaken": false,
+      "reason": "frozen human decision H-A; the fail-closed cost was accepted prospectively"
+    }
+  },
+  "P_rec": {
+    "invariant_rules_status": "FROZEN",
+    "target_specific_provenance_closure": "DEFERRED_TO_S7.3",
+    "instantiated_over_ontology": "DEFERRED_TO_S7.6",
+    "classes": [
+      "A provenance",
+      "B information-boundary compliance",
+      "C dimensional",
+      "D numerical support",
+      "E denominator/singularity",
+      "F temporal resolution",
+      "G semantic",
+      "H leakage"
+    ],
+    "unit_canonicalisation": "FROZEN",
+    "numerical_resolution_rule": "FROZEN",
+    "artifacts": [
+      "ADMISSIBILITY_POLICY.md",
+      "UNIT_AND_TYPE_POLICY.md",
+      "NUMERICAL_RESOLUTION_POLICY.md"
+    ]
+  },
+  "B_rec": {
+    "constructor_depth_rules_status": "FROZEN",
+    "surviving_candidate_count": "DEFERRED_TO_S7.5/S7.6",
+    "explored_frontier": "DEFERRED_TO_S7.7",
+    "max_temporal_derivative_order": 1,
+    "max_relational_depth": 1,
+    "max_product_arity": 2,
+    "representation_size_range": [
+      1,
+      12
+    ],
+    "transcendental_library": "none unless scientifically motivated",
+    "artifacts": [
+      "SEARCH_BOUND_POLICY.md"
+    ]
+  },
+  "H_rec": {
+    "status": "FROZEN",
+    "allowed_uses": [
+      "admit or reject a constructor",
+      "assign type",
+      "identify known dependency",
+      "prioritise a search family"
+    ],
+    "forbidden_use": "knowledge may not count as validation evidence",
+    "seeding_firewall": {
+      "q_desc_support_may_seed": false,
+      "retired_q_rec_support_may_seed": false,
+      "dfl_export_may_seed": false,
+      "dfl_features_as_primitives": false
+    },
+    "artifacts": [
+      "KNOWLEDGE_POLICY.md"
+    ]
+  },
+  "U_rec": {
+    "status": "FROZEN",
+    "structure": "lexicographic",
+    "criteria_in_order": [
+      "primary fit quality",
+      "generalization/stability",
+      "parsimony",
+      "conditioning",
+      "support stability"
+    ],
+    "practical_equivalence": {
+      "delta_equiv": "max(SE_delta, 0.01)",
+      "rule": "A and B practically equivalent iff |RMSE_A - RMSE_B| <= delta_equiv",
+      "reading": "within one SE OR within the 0.01 practical floor",
+      "floor": 0.01,
+      "se_definition": {
+        "step_1": "aggregate the three validation blocks within each DEVELOPMENT discharge",
+        "step_2": "compute the paired candidate difference per development discharge",
+        "step_3": "SE_delta = standard error of that paired discharge-level difference across the 20 development discharges",
+        "n": 20,
+        "unit": "development discharge"
+      },
+      "supersedes": "V1 conjunction (AND), which made the floor inoperative exactly when SE was small",
+      "computed_in_this_run": false
+    },
+    "fabricated_error_weights": false,
+    "instantiated_computation": "DEFERRED_TO_S7.9",
+    "artifacts": [
+      "UTILITY_AND_QUALIFICATION_POLICY.md"
+    ],
+    "primary_metric": {
+      "name": "calibration-normalized RMSE",
+      "symbol": "NRMSE_{s,b}",
+      "definition": "RMSE(y_protected_{s,b}, yhat_protected_{s,b}) / scale_{s,b}",
+      "scale_definition": "scale_{s,b} = std(y_calibration_{s,b}, ddof=0)",
+      "ddof": 0,
+      "scale_uses": "CALIBRATION target values only",
+      "protected_statistics_in_scale": false,
+      "zero_scale_behaviour": "INVALID_FOR_NORMALIZED_SCORING",
+      "epsilon_added": false,
+      "epsilon_note": "no outcome-tuned epsilon; a zero-scale block is declared invalid rather than rescued",
+      "also_reported": "raw RMSE in the target physical unit",
+      "s7_3_requirement": "development target feasibility must report whether any zero-scale calibration block exists; the primary target must have valid normalized scoring across all required development blocks",
+      "floor_interpretation": "the 0.01 practical floor is 1% of the calibration target standard-deviation scale"
+    }
+  },
+  "V_rec": {
+    "protocol_status": "FROZEN",
+    "gate_evaluation": "DEFERRED_TO_S7.10",
+    "validation_geometry": {
+      "unchanged_from_v1": true,
+      "blocks": [
+        {
+          "block": "A",
+          "calibration": [
+            0.0,
+            0.4
+          ],
+          "evaluation": [
+            0.4,
+            0.5
+          ]
+        },
+        {
+          "block": "B",
+          "calibration": [
+            0.0,
+            0.6
+          ],
+          "evaluation": [
+            0.6,
+            0.7
+          ]
+        },
+        {
+          "block": "C",
+          "calibration": [
+            0.0,
+            0.8
+          ],
+          "evaluation": [
+            0.8,
+            0.9
+          ]
+        }
+      ],
+      "protection_model": "BLOCK_LOCAL_PROTECTION",
+      "semantics": "sequential / prequential",
+      "sequence": [
+        "STEP A: fit on [0,0.40); score A on [0.40,0.50); freeze the A score",
+        "only after A scoring is irrevocably complete may those target values act as ordinary historical calibration observations",
+        "STEP B: fit on [0,0.60); score B on [0.60,0.70); freeze the B score",
+        "STEP C: fit on [0,0.80); score C on [0.80,0.90)"
+      ],
+      "a_target_value_may_never_influence": [
+        "its own evaluation block's fit",
+        "an earlier evaluation block",
+        "target, ontology, support or hyperparameter choices that are supposed to be frozen"
+      ],
+      "external_cohort": "remains GLOBALLY SEALED before S7.10; block-local protection governs only within-discharge rolling-origin sequencing"
+    },
+    "baselines": [
+      "B0 calibration mean",
+      "B1 persistence",
+      "B2 raw ridge linear",
+      "B3 HistGradientBoostingRegressor"
+    ],
+    "gates": {
+      "V1": "information boundary",
+      "V2": "development-only discovery",
+      "V3": "nontrivial skill",
+      "V4": "raw-coordinate comparison",
+      "V5": "external structural transfer",
+      "V6": "processing-era robustness",
+      "V7": "common support",
+      "V8": "discharge-level inference",
+      "V9": "sensitivity",
+      "V10": "numerical provenance"
+    },
+    "mandatory_gates": [
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6",
+      "V7",
+      "V8",
+      "V10"
+    ],
+    "inferential_unit": "discharge",
+    "bootstrap_replicates": 10000,
+    "artifacts": [
+      "VALIDATION_PROTOCOL.md",
+      "BASELINE_PROTOCOL.md",
+      "STATISTICAL_INFERENCE_PLAN.md",
+      "PREPROCESSING_AND_LEAKAGE_POLICY.md"
+    ],
+    "gate_V3_definition": {
+      "per_discharge": "NRMSE_method,s = mean over blocks A,B,C of NRMSE_method,s,b",
+      "per_baseline": "Delta_j = mean over EXTERNAL discharges s of (NRMSE_REL,s - NRMSE_Bj,s)",
+      "pass_condition": "Delta_0 <= -0.01 AND Delta_1 <= -0.01",
+      "baselines_in_gate": [
+        "B0 calibration mean",
+        "B1 persistence"
+      ],
+      "confidence_intervals_are_thresholds": false,
+      "ci_role": "reported, not used as a significance threshold for V3",
+      "also_reported": [
+        "median paired difference",
+        "wins/ties/losses",
+        "95% paired discharge-bootstrap CI",
+        "block-specific values"
+      ],
+      "computed_in_this_run": false
+    },
+    "gate_V6_definition": {
+      "applies_to": "EXTERNAL cohort",
+      "external_counts": {
+        "earlier": 24,
+        "later": 18,
+        "total": 42
+      },
+      "parent_object_counts_for_reference": {
+        "earlier": 35,
+        "later": 27,
+        "total": 62
+      },
+      "v1_defect": "V6 referred to 35/27, which are parent-object counts, not the external cohort the gate operates on",
+      "outcomes": {
+        "PASS": "pooled V3 passes and the practical direction is non-adverse in both eras",
+        "PASS_WITH_QUALIFICATION": "pooled V3 passes, but one era is practically tied relative to a trivial baseline; report and narrow the interpretation",
+        "FAIL_FOR_FULL_DOMAIN": "pooled V3 passes only because one era dominates while the other is materially worse than B0 or B1 by more than 0.01"
+      },
+      "fail_for_full_domain_consequence": "does not erase the result; the final Omega_rec claim must be narrowed rather than averaged across the processing discontinuity",
+      "computed_in_this_run": false
+    },
+    "primary_metric": {
+      "name": "calibration-normalized RMSE",
+      "symbol": "NRMSE_{s,b}",
+      "definition": "RMSE(y_protected_{s,b}, yhat_protected_{s,b}) / scale_{s,b}",
+      "scale_definition": "scale_{s,b} = std(y_calibration_{s,b}, ddof=0)",
+      "ddof": 0,
+      "scale_uses": "CALIBRATION target values only",
+      "protected_statistics_in_scale": false,
+      "zero_scale_behaviour": "INVALID_FOR_NORMALIZED_SCORING",
+      "epsilon_added": false,
+      "epsilon_note": "no outcome-tuned epsilon; a zero-scale block is declared invalid rather than rescued",
+      "also_reported": "raw RMSE in the target physical unit",
+      "s7_3_requirement": "development target feasibility must report whether any zero-scale calibration block exists; the primary target must have valid normalized scoring across all required development blocks",
+      "floor_interpretation": "the 0.01 practical floor is 1% of the calibration target standard-deviation scale"
+    }
+  },
+  "Omega_rec": {
+    "candidate_status": "FROZEN",
+    "candidate": "the frozen 62-discharge DIII-D observational object D3D-SIR-S7.1-OBSERVATIONAL-OBJECT-FINAL-V1",
+    "final_status": "DEFERRED_TO_S7.10/S7.12",
+    "cohort_partition": {
+      "status": "FROZEN",
+      "development": 20,
+      "external": 42,
+      "deterministic": true,
+      "seed": null,
+      "target_blind": true
+    },
+    "out_of_scope": [
+      "all DIII-D",
+      "all operating regimes",
+      "unseen devices",
+      "prospective control",
+      "forecasting",
+      "causal structure",
+      "native high-frequency physics",
+      "diagnostic bandwidth",
+      "universal plasma relations"
+    ],
+    "artifacts": [
+      "DOMAIN_AND_CLAIM_BOUNDARY.md",
+      "CLAIM_BOUNDARY.md",
+      "COHORT_PARTITION_POLICY.md",
+      "EXTERNAL_COHORT_FIREWALL.md"
+    ]
+  },
+  "component_status_summary": {
+    "q_rec": "FROZEN",
+    "I_rec": "PARTIALLY_FROZEN",
+    "P_rec": "PARTIALLY_FROZEN",
+    "B_rec": "PARTIALLY_FROZEN",
+    "H_rec": "FROZEN",
+    "U_rec": "FROZEN",
+    "V_rec": "PARTIALLY_FROZEN",
+    "Omega_rec": "PARTIALLY_FROZEN"
+  },
+  "gate": {
+    "target_selected": false,
+    "targets_ranked": false,
+    "sir_run": false,
+    "regression_run": false,
+    "coordinates_generated": false,
+    "G_rec_constructed": false,
+    "A_rec_enumerated": false,
+    "Ahat_rec_searched": false,
+    "performance_inspected": false,
+    "external_signal_values_inspected": false,
+    "s7_3_started": false,
+    "signal_values_inspected": false,
+    "s7_2c_ranked_targets": false
+  },
+  "supersedes_freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V1",
+  "inheritance": {
+    "mode": "INHERIT_V1_EXCEPT_NAMED_CLAUSES",
+    "superseded_clause_ids": [
+      "C-01",
+      "C-02",
+      "C-03",
+      "C-04",
+      "C-05",
+      "C-06",
+      "C-07",
+      "C-08",
+      "C-09"
+    ],
+    "clause_manifest": "manifests/SUPERSEDED_CLAUSES.csv",
+    "everything_else_binding": true
+  },
+  "robust_relative_variation": {
+    "symbol": "RRV",
+    "per_discharge": "RRV_s = 1.4826 * MAD(y_s) / RMS(y_s)",
+    "MAD": "median(|y - median(y)|)",
+    "RMS": "sqrt(mean(y^2))",
+    "zero_rms_behaviour": "RRV_s = 0",
+    "target_level_score": "RRV_dev = median_s(RRV_s) over the 20 frozen development discharges",
+    "floor": 0.05,
+    "threshold_name": "min_median_robust_relative_variation",
+    "retires": "min_coefficient_of_variation_development",
+    "rationale": "ordinary CV = sd/|mean| is undefined or explosive for near-zero means and meaningless for sign-changing trajectories; RRV is zero-safe and scale-relative",
+    "computed_in_this_run": false
+  },
+  "frozen_human_decisions": [
+    {
+      "id": "H-A",
+      "decision": "DO NOT undertake an EFIT-lineage recovery campaign for the primary study",
+      "reason": "the strict experiment may simply lose the 15 LINEAGE_PARTIAL equilibrium quantities under fail-closed provenance; that cost was accepted prospectively and keeps the primary study simpler and cleaner",
+      "status": "FROZEN"
+    },
+    {
+      "id": "H-B",
+      "decision": "DO NOT declare a PROVENANCE_RELAXED secondary variant",
+      "reason": "the primary paper needs one clean, target-independent reconstruction study; a rescue path built on partially resolved ancestry would undermine it",
+      "status": "FROZEN"
+    },
+    {
+      "id": "H-C",
+      "decision": "DO NOT override the frozen primary target classes",
+      "reason": "eligibility classes stand as frozen in V1",
+      "status": "FROZEN"
+    },
+    {
+      "id": "H-D",
+      "decision": "DO NOT promote second-order derivatives",
+      "reason": "source cadence cannot support them",
+      "status": "FROZEN"
+    },
+    {
+      "id": "H-E",
+      "decision": "DO NOT widen support beyond 12",
+      "reason": "calibration-sample economy on the worst admissible grid",
+      "status": "FROZEN"
+    },
+    {
+      "id": "H-F",
+      "decision": "DO NOT rewrite the S7.1 mixed-hash historical freeze; continue using the uniform canonical raw-byte hashes established by S7.2",
+      "reason": "the historical record stays as it was; the workaround is already in place and verified",
+      "status": "FROZEN"
+    }
+  ]
+}

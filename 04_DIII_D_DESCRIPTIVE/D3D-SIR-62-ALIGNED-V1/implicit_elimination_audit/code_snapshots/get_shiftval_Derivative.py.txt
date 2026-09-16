@@ -1,0 +1,19 @@
+# original_path: submodules/Archaieus/src/Archaieus/sir/consumer_function.py
+# lines: 114-126
+# sha256: 965fe8fb400b0150c56849a0b6da0b5b1fdf8adc0cc92c146ebb1ef947385d28
+# git_commit: aefd942ea111f7bd24d1d86cafb954639aff3fb1
+# historical_match_status: CODE_PRESENT_MATCHES_ARTIFACT_CONSTRUCTION
+
+def get_shiftval(x, dx, d2x, d3x, d4x, nmin, out_type):
+    
+    if out_type == 'Variable':
+        blob = np.vstack([x])
+        shiftval = abs(blob.min()) 
+        shiftval += nmin
+        del blob
+
+    elif out_type == 'Derivative':
+        blob = np.vstack([x,dx])
+        shiftval = abs(blob.min()) 
+        shiftval += nmin
+        del blob

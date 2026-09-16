@@ -1,0 +1,5 @@
+semantic_group_id,n_members,n_representatives_selected,median_rank_95pct,median_rank_99pct,n_cells,role
+X_CER_Ti,7,7,2.0,3.5,60,AUDIT_ONLY_NEVER_SELECTION
+X_CER_v,7,7,3.0,4.0,60,AUDIT_ONLY_NEVER_SELECTION
+X_ECE,40,33,3.0,7.0,60,AUDIT_ONLY_NEVER_SELECTION
+X_fs,4,3,2.0,3.0,60,AUDIT_ONLY_NEVER_SELECTION

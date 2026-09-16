@@ -1,0 +1,25 @@
+check,value
+correction_audit_id,D3D-SIR-62-COEFFICIENT-CONDITIONING-CORRECTION-V1
+original_audit_id,D3D-SIR-62-COEFFICIENT-CONDITIONING-V1
+canonical_run_id,D3D-SIR-62-ALIGNED-V1
+created_utc,2026-08-05T19:54:45Z
+n_discharges,62
+n_samples_per_discharge,1000
+n_features,7
+source_matrix_order,"['d[pcdiamag3]/d[kappa]', 'd[kappa]/d[t]', 'r[q95]/r[kappa]', 'd[pcdiamag3]/d[betan]', 'd[kappa]/d[betan]', 'd[betan]/d[t]', 'd[li]/d[betan]']"
+manuscript_display_order,"['D_kappa W_dia', 'D_betaN W_dia', 'D_betaN kappa', 'D_betaN l_i', 'q95 / kappa', 'dot beta_N', 'dot kappa']"
+original_audit_pooled_rmse,0.05758467247445343
+original_audit_mean_vector_rmse,0.4125238315775986
+original_bootstrap_primary,1000
+original_bootstrap_sensitivity,300
+original_median_condition_number,41.3202464096063
+original_max_condition_number,71.31667876056015
+original_rank_counts,"[{'tolerance': 1e-12, 'n_full_rank_7': 62, 'n_rank_lt_7': 0}, {'tolerance': 1e-10, 'n_full_rank_7': 62, 'n_rank_lt_7': 0}, {'tolerance': 1e-08, 'n_full_rank_7': 62, 'n_rank_lt_7': 0}, {'tolerance': 1e-06, 'n_full_rank_7': 62, 'n_rank_lt_7': 0}]"
+maximum_absolute_coefficient_difference,2.220446049250313e-16
+reproduced_pooled_rmse,0.05758467247445343
+reference_pooled_rmse,0.05758467247445343
+reproduced_mean_vector_rmse,0.4125238315775986
+reference_mean_vector_rmse,0.4125238315775986
+delta_pooled_rmse,0.0
+delta_mean_vector_rmse,0.0
+pass,True

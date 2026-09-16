@@ -1,0 +1,129 @@
+{
+  "experiment": "figure5_noise_augmentation",
+  "canonical_or_augmentation": "augmentation",
+  "NOT_the_canonical_benchmark": true,
+  "purpose": "denser noise grid + common-support evaluation for Figure 5",
+  "held_fixed_from_frozen_benchmark": [
+    "scientific object O and admissibility A",
+    "information boundary I_k (centred 5-point)",
+    "coordinate grammar and numerical realization",
+    "rho=0.1, kappa=1.0, pooled_rms, quotient mask quantile 0.05",
+    "the three frozen representations",
+    "PySINDy STLSQ and its threshold grid",
+    "fit on 48 development, score on 24 protected confirmation",
+    "noise applied to x,y BEFORE coordinate construction"
+  ],
+  "new_in_augmentation": [
+    "noise grid [0.0, 0.001, 0.002, 0.003, 0.004, 0.005, 0.006, 0.007, 0.008, 0.009, 0.01] (canonical was [0.0, 0.005, 0.01])",
+    "3 noise replicates per non-zero level",
+    "trajectory-level retention at every level/replicate",
+    "COMMON-SUPPORT evaluation in addition to native support"
+  ],
+  "seed_namespace": 5000,
+  "dev_seed_base": 5000,
+  "conf_seed_base": 5500,
+  "disjoint_from": {
+    "canonical_development": [
+      11,
+      12,
+      13
+    ],
+    "canonical_confirmation": [
+      901,
+      902,
+      903
+    ]
+  },
+  "representations": {
+    "C0_poly2": {
+      "n_coordinates": 10,
+      "n_features": 65,
+      "family": "poly2",
+      "coordinates": [
+        "x[k-2]",
+        "x[k-1]",
+        "x",
+        "x[k+1]",
+        "x[k+2]",
+        "y[k-2]",
+        "y[k-1]",
+        "y",
+        "y[k+1]",
+        "y[k+2]"
+      ]
+    },
+    "C_compact": {
+      "n_coordinates": 12,
+      "n_features": 12,
+      "family": "identity",
+      "coordinates": [
+        "x[k-2]",
+        "x[k-1]",
+        "x",
+        "x[k+1]",
+        "x[k+2]",
+        "y[k-2]",
+        "y[k-1]",
+        "y",
+        "y[k+1]",
+        "y[k+2]",
+        "Q[dy|x]",
+        "Q[y|x]"
+      ]
+    },
+    "C_all": {
+      "n_coordinates": 38,
+      "n_features": 38,
+      "family": "identity",
+      "coordinates": [
+        "x[k-2]",
+        "x[k-1]",
+        "x",
+        "x[k+1]",
+        "x[k+2]",
+        "y[k-2]",
+        "y[k-1]",
+        "y",
+        "y[k+1]",
+        "y[k+2]",
+        "dx",
+        "dy",
+        "d2x",
+        "d2y",
+        "x*y",
+        "x*x",
+        "y*y",
+        "x*dy",
+        "y*dx",
+        "dx*dy",
+        "x*dx",
+        "y*dy",
+        "Q[dy|x]",
+        "Q[y|x]",
+        "Q[dy|dx]",
+        "Q[dx|dy]",
+        "CA[dy|x]",
+        "RS[dy|x]",
+        "SC[dy|x]",
+        "CA[y|x]",
+        "RS[y|x]",
+        "SC[y|x]",
+        "CA[dy|dx]",
+        "RS[dy|dx]",
+        "SC[dy|dx]",
+        "CA[dx|dy]",
+        "RS[dx|dy]",
+        "SC[dx|dy]"
+      ]
+    }
+  },
+  "upstream_sources": {
+    "contract_selections": "D:\\SIR_paper\\Lorenz\\task_conditioning_benchmark\\contracts\\contract_selections.json",
+    "confirmation_trajectories": "D:\\SIR_paper\\Lorenz\\task_conditioning_benchmark\\shared\\confirmation",
+    "development_trajectories": "D:/SIR_paper/Lorenz/benchmark/shared/data/ensemble",
+    "coordinate_implementation": "D:\\SIR_paper\\Lorenz\\benchmark\\shared\\scripts\\features.py"
+  },
+  "output_rows": 4464,
+  "output_sha256": "423f0b46bf81f7348552dcc4853a3f991f72e3951f6535c2c1beb96f4a625938",
+  "runtime_seconds": 131.2
+}

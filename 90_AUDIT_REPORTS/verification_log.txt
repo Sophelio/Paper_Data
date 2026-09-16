@@ -1,0 +1,23 @@
+SIR Paper_Data verification
+2026-09-16T03:29:52.263007+00:00
+
+[PASS] structure/required                 all 22 required package files present
+[PASS] manifest/rows                      1587 records
+[PASS] manifest/present                   every manifest entry exists on disk
+[PASS] manifest/hashes                    all 1587 SHA-256 values reproduce
+[PASS] manifest/no_self_reference         no source path points inside Paper_Data
+[PASS] figures/allow_list                 only allow-listed figure folders present (6)
+[PASS] figures/readme                     every figure folder documents its provenance
+[PASS] figures/index                      8 figure/panel rows indexed
+[PASS] claims/artifacts_exist             every claim points at an artifact that exists
+[PASS] numbers/qdesc_pooled_rmse          recomputed 0.05758467247445299 from 62 per-discharge MSEs
+[PASS] numbers/qrec_delta1                62 out-of-fold discharges; Delta_1 = -0.027308 recomputed
+[PASS] numbers/qrec_supports              six size-12 supports, union 35, mean Jaccard 0.285244
+[PASS] numbers/parent_failure_preserved   parent qualification FAILURE preserved and unmodified
+[PASS] numbers/boundary                   78 of 95 quantities admitted as predictors
+[PASS] restricted/not_bundled             62 restricted archives indexed with SHA-256, none bundled
+[PASS] historical/marked                  every historical artifact is marked RETIRED or SUPERSEDED
+[PASS] historical/readme                  historical lineage documents what supersedes it
+
+17 passed, 0 warnings, 0 failures
+VERDICT: PASS

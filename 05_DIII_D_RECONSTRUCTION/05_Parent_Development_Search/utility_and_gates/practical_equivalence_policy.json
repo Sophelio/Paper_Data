@@ -1,0 +1,62 @@
+{
+  "policy_id": "PRACTICAL_EQUIVALENCE_OPERATIONAL_V1",
+  "generated_utc": "2026-09-05T08:07:46.430834+00:00",
+  "authoritative_source": "S7.2C correction clause C-01",
+  "authoritative_rule": {
+    "delta_equiv": "max(SE_delta, 0.01)",
+    "test": "A and B practically equivalent iff |NRMSE_A - NRMSE_B| <= delta_equiv",
+    "reading": "within one SE OR within the 0.01 practical floor",
+    "units": "CALIBRATION-NORMALIZED RMSE units",
+    "raw_rmse_interpretation": "FORBIDDEN"
+  },
+  "floor": {
+    "value": 0.01,
+    "immutable": true,
+    "interpretation": "1 percent of the calibration target standard-deviation scale",
+    "declared_before": "any search result existed (S7.2 V1, retained by S7.2C)",
+    "may_be_adjusted_after_seeing_results": false
+  },
+  "epsilon_added": false,
+  "se_delta": {
+    "step_1": "aggregate the three validation blocks within each development discharge",
+    "step_2": "compute the paired candidate difference per development discharge",
+    "step_3": "SE_delta = sd(delta_s, ddof=1) / sqrt(20)",
+    "delta_s": "delta_s = mean_b NRMSE_{A,s,b} - mean_b NRMSE_{B,s,b}",
+    "n": 20,
+    "ddof": 1,
+    "unit": "development discharge",
+    "pairing": "paired within discharge; both candidates scored on identical cells"
+  },
+  "superseded": {
+    "clause": "S7.2 V1 UTILITY_AND_QUALIFICATION_POLICY.md practical-equivalence conjunction",
+    "v1_wording": "practically equivalent iff within 1 SE AND within 0.01",
+    "status": "SUPERSEDED_BY_S7.2C_C01",
+    "defect": "the conjunction made the floor inoperative exactly when it was needed: a tiny SE stayed binding and the 0.01 floor never relaxed anything",
+    "must_not_be_used": true
+  },
+  "operational_resolutions": {
+    "OR-02": {
+      "question": "is the Rank-1 equivalence set a transitive class or a comparison against the best?",
+      "resolution": "E_fit is defined by pairwise comparison against the Rank-1 best candidate: C in E_fit iff |FIT(C) - FIT_best| <= max(SE_delta(C, best), 0.01)",
+      "authority": "S7.2 V1 lexicographic wording plus the section-10 instantiation; it is not a transitive equivalence class and must not be closed transitively",
+      "outcome_independent": true,
+      "best_is_always_member": "SE_delta(best,best) = 0 and |0| <= 0.01"
+    },
+    "OR-11": {
+      "question": "how is a non-finite candidate treated?",
+      "resolution": "FIT = +inf, excluded from E_fit; never re-labelled inadmissible",
+      "observed_count_in_frontier": 0
+    }
+  },
+  "not_taken": [
+    "top-K truncation",
+    "a tuned epsilon",
+    "a percentage-of-best tolerance",
+    "any post-hoc adjustment of the 0.01 floor"
+  ],
+  "execution_stage": "S7.9",
+  "selection_domain": "AHAT_REC_DENSITY_ONE_SEED_V2",
+  "selection_domain_cardinality": 162845,
+  "global_optimality_claim": false,
+  "domain_reading": "every quantity defined here is evaluated over the frozen explored frontier Ahat_rec only; A_rec minus Ahat_rec remains ADMISSIBLE_UNSEARCHED and carries no negative finding"
+}

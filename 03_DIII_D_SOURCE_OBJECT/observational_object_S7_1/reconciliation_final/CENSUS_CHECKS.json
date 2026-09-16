@@ -1,0 +1,32 @@
+{
+  "n_signals_in_archive": 95,
+  "n_signals_in_manifest": 95,
+  "census_equals_manifest": true,
+  "n_signals_common_to_all_shots": 95,
+  "all_95_in_all_62": true,
+  "n_shots": 62,
+  "no_duplicate_signal_ids": true,
+  "every_signal_has_group": true,
+  "every_signal_has_semantic_type": true,
+  "every_signal_has_provenance_status": true,
+  "every_signal_in_units_registry": true,
+  "group_counts": {
+    "ece_te_profile": 40,
+    "equilibrium_shape": 15,
+    "cer_rotation_ti": 14,
+    "neutral_beams": 10,
+    "magnetics": 5,
+    "filterscope_dalpha": 4,
+    "gas_injection": 4,
+    "density": 3
+  },
+  "origin_counts": {
+    "DIAGNOSTIC_RECONSTRUCTION": 57,
+    "EQUILIBRIUM_DERIVED": 15,
+    "CONTROL_COMMAND_OR_ACTUATION": 14,
+    "DIRECT_MEASUREMENT": 9
+  },
+  "units_registry_sha256": "b8b3cead0d1d23d8fc42a54824421472847c0744fb293b6fd2196ac93e598e72",
+  "signal_inventory_sha256": "6506c6ba0c80cd8f322cff28e4054c8f66bdb358d1c0315ccfa29d839dd1c0fb",
+  "shot_inventory_sha256": "7d3c3ab1ab289ea2c7c038397ffb2524ae6dfd00813551dfe3efccf0a415cd8c"
+}

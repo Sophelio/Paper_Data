@@ -1,0 +1,24 @@
+{
+  "sir_implementation_status": "MCP_NATIVE_PRIMITIVES_PLUS_AUDITED_CONTRACT_HARNESS",
+  "note": "The confirmation evaluator refuses to run if any hash below no longer matches.",
+  "selections": {
+    "q_accuracy": "C_all",
+    "q_compact": "C0+Q_pair",
+    "q_robust": "C_all"
+  },
+  "practical_equivalence_abs": 0.001,
+  "files": {
+    "benchmark_config.yaml": "c5a2a86cb6d3f621ee5aafb9c27219e4534fbe56e79ff5bf2b2c4a8a76dbfc26",
+    "scripts/engine.py": "c251ad096fb0ff487187973b7a2d6fa9bef4f099933b95de96c7d0d553c4af8f",
+    "scripts/run_contracts.py": "206f44770da613af1e56a3cb583ac908d804a95b1ff74ddda1c39560e8448bb6",
+    "contracts/contract_selections.json": "2b49896bb6edefa1540590603f2f57b1e9e621a2506b0816612a9d5b57a08412",
+    "shared/manifests/confirmation_lineage.json": "545338502a1999f56e87d89d204ece3fb3b791db476b3a4a0b610323fca58ae5",
+    "sir_contract/contract_runner.py": "56e9ce3f6f636f86a82e44c66923c58df616967f654c5b723561d906f6f23ef6",
+    "sir_contract/qualification.py": "2697163f9ddcbaf5ab69837d9ab9594ddfd37e5e16f5e96dbf2ef6d54c62bef7",
+    "sir_contract/validation.py": "aac141f33291bd8a16981550bb16941587a065a2df991292193125f568a63c22",
+    "sir_contract/candidate_registry.py": "eb15cc4ce37f4e42ac476ce850a7bed5b6aeb16c621c5d9066897363d1160101",
+    "sir_contract/scientific_object.py": "e795b16c27e928d62c5cff1f833bfe71c7188953b809fbe0ee35dd0db6143509",
+    "sir_contract/discovery_contract.py": "0771138eace4716bcacecdc295fae7d3f2b3147206adea9626260351aebac33f",
+    "pysindy/external_contract_wrapper/wrapper.py": "2ff4c59a8939c3de340c4de653f72f0a4fabecce3cf8ff69500c727d8c802b25"
+  }
+}

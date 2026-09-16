@@ -1,0 +1,161 @@
+{
+  "record_id": "E2_1_PRESEARCH_VERIFICATION_V1",
+  "generated_utc": "2026-09-06T05:02:07.352469+00:00",
+  "lineage": [
+    {
+      "stage": "S7.9",
+      "freeze_id": "D3D-SIR-S7.9-DEVELOPMENT-SELECTION-AND-PREEXTERNAL-FREEZE-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "966f9628dceb501e9f102d9ba3f74e0bfed3dddee7f25a58df47732eef3d553b"
+    },
+    {
+      "stage": "S7.10",
+      "freeze_id": "D3D-SIR-S7.10-EXTERNAL-VALIDATION-AND-GATE-EVALUATION-V1",
+      "status": "PRIMARY_EXTERNAL_GATE_FAILURE",
+      "file_sha256": "8ea2062f0fc38fbf24e3b9d6477cace1d0fcd9a54e746e66c6e428d01437db97"
+    },
+    {
+      "stage": "S7.11",
+      "freeze_id": "D3D-SIR-S7.11-SENSITIVITY-AND-FAILURE-INTERPRETATION-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "b93edac44994240e1fda4d6a0c8fa668cf712ac6a64b8d9fe63278e15c302e26"
+    },
+    {
+      "stage": "S7.R1",
+      "freeze_id": "D3D-SIR-S7.R1-OPERATIONAL-STATE-RECONCILIATION-V1",
+      "status": "NO_CLEAN_OPERATIONAL_STATE_PARTITION",
+      "file_sha256": "ae6092a67a0e099a868876611f7aeca769edac062c4c6a878d6f6a22146ca226"
+    },
+    {
+      "stage": "S7.K2",
+      "freeze_id": "D3D-SIR-S7.K2-OBSERVATIONAL-RANGE-SUPPORT-CONTRACT-V1",
+      "status": "FROZEN_READY_FOR_DISCOVERY_EPOCH_2",
+      "file_sha256": "198fa046c7eb2650efcb910f02922752b8204477f8930300e6abf24163193459"
+    },
+    {
+      "stage": "S7.E2.0",
+      "freeze_id": "D3D-SIR-S7.E2.0-DISCOVERY-EPOCH2-PROTOCOL-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "89af08c32468f0c9fc97046db47affa09a2cc864759e4b28374ddd5baa3842e6"
+    },
+    {
+      "stage": "S7.E2.0A",
+      "freeze_id": "D3D-SIR-S7.E2.0A-PREDICTOR-SIDE-ADMISSIBILITY-RECONCILIATION-V1",
+      "status": "FROZEN_READY_FOR_EPOCH2_SEARCH",
+      "file_sha256": "d0b956b8ca4d086f296bc647a14cc9e267b8fe6e67e05c79b172346024ddd81e"
+    }
+  ],
+  "parent_manifests": {
+    "S7.9": {
+      "n": 45,
+      "matched": 45,
+      "mismatched": []
+    },
+    "S7.10": {
+      "n": 31,
+      "matched": 31,
+      "mismatched": []
+    },
+    "S7.11": {
+      "n": 26,
+      "matched": 26,
+      "mismatched": []
+    },
+    "S7.R1": {
+      "n": 21,
+      "matched": 21,
+      "mismatched": []
+    },
+    "S7.K2": {
+      "n": 29,
+      "matched": 29,
+      "mismatched": []
+    },
+    "S7.E2.0": {
+      "n": 22,
+      "matched": 22,
+      "mismatched": []
+    },
+    "S7.E2.0A": {
+      "n": 14,
+      "matched": 14,
+      "mismatched": []
+    }
+  },
+  "pinned": {
+    "E2_0A_authoritative": true,
+    "E2_0_preserved": true,
+    "K_REC_V2_sha256": "4fe95d45c6d6f9e0d66918cdc4cc7347276a915363b4a29501c2084d4f506407",
+    "K_REC_V2_matches": true,
+    "range_support_policy_sha256": "a878841db39bc213fc2d8775ce465615d8bd66f26c32641d630e140583dc1863",
+    "E2_0A_protocol_sha256": "2c8b87cbbbed82d77852566d00d76387ba5b7728afe5e750772f8290914cb180",
+    "E2_0A_candidate_basis_sha256": "e10e2eb6ce9a9082df590e3eac1d17f75f6b09c15d45b6ea6bae039e21cde077",
+    "fold_assignment_sha256": "61431d67c090d3bf98f08294ce101d4133628aeee5476f7d99398aa68f008c86",
+    "U_rec_sha256": "d5d9de60db57416f94806d7c1d135d42731459185a3a0fa2b48c406784b65f85",
+    "tau": 1.0,
+    "tau_train": "RETIRED",
+    "V3": "Delta_0 <= -0.01 AND Delta_1 <= -0.01",
+    "V6_threshold": 0.01,
+    "budget_per_fold": 300000,
+    "budget_total": 1800000,
+    "seeds_per_stratum": 1,
+    "shortlist_cap": 96,
+    "support_bound": [
+      1,
+      12
+    ],
+    "stop_rule": true,
+    "clean_demo_delta1": -0.05,
+    "U_rec_ranks": [
+      "primary fit quality",
+      "development generalization / stability",
+      "parsimony",
+      "conditioning",
+      "support stability"
+    ]
+  },
+  "basis_verification": {
+    "n": 3451,
+    "expected": 3451,
+    "count_matches": true,
+    "constructor_counts": {
+      "C0": 51,
+      "C1": 18,
+      "C2": 1488,
+      "C3": 382,
+      "C5": 8,
+      "C6": 965,
+      "C7": 539
+    },
+    "constructor_expected": {
+      "C0": 51,
+      "C1": 18,
+      "C2": 1488,
+      "C3": 382,
+      "C5": 8,
+      "C6": 965,
+      "C7": 539
+    },
+    "constructor_matches": true,
+    "sha256": "1d22aeac2e5fa116e2dc44606b4da8e9466a1189f75af4fe1d75989b3c3e5852",
+    "sha256_expected": "1d22aeac2e5fa116e2dc44606b4da8e9466a1189f75af4fe1d75989b3c3e5852",
+    "sha256_matches": true,
+    "recomputed_independently_from_predictors": true,
+    "tau": 1.0
+  },
+  "global_predictor_access": {
+    "discharges_opened": 62,
+    "signals": 70,
+    "target_reads": 0,
+    "target_opened_in_this_stage": false,
+    "runtime_seconds": 15.3
+  },
+  "drift": [],
+  "verdict": "PRESEARCH_VERIFIED",
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

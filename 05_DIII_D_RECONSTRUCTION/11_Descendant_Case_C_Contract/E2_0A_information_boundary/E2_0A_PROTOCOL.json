@@ -1,0 +1,190 @@
+{
+  "protocol_id": "E2_0A_PROTOCOL",
+  "frozen_utc": "2026-09-06T04:47:45.692687+00:00",
+  "status": "AUTHORITATIVE_FOR_EPOCH2_EXECUTION",
+  "parent_protocol": "E2_0_PROTOCOL_V1",
+  "parent_protocol_status": "PRESERVED_AS_HISTORICAL_PARENT",
+  "parent_protocol_sha256": "f39c94707d8c28bccb48af39d8d4ff8579b4d5051dfdd35a80f5a10cf7ede284",
+  "parent_contract": "K_REC_V2",
+  "parent_contract_sha256": "4fe95d45c6d6f9e0d66918cdc4cc7347276a915363b4a29501c2084d4f506407",
+  "principle": "PREDICTOR_QUALIFIED_TARGET_CROSS_FITTED_RECONSTRUCTION",
+  "claim_type": "CROSS_DISCHARGE_QUALIFIED_RECONSTRUCTION_WITHIN_THE_FROZEN_62_DISCHARGE_OBSERVATIONAL_OBJECT",
+  "claim_type_changed": false,
+  "tau": {
+    "value": 1.0,
+    "unchanged": true,
+    "definition": "E(c) = max(L - min(c_app), 0, max(c_app) - U) / (U - L), with L = min(c_cal), U = max(c_cal)",
+    "interpretation": "distance outside the observed calibration hull, measured in units of the calibration-range width",
+    "reading_at_tau_1": "application values may extend beyond the calibration hull by no more than ONE COMPLETE calibration-range width",
+    "worked_example": {
+      "calibration_range": [
+        2,
+        6
+      ],
+      "width": 4,
+      "app_inside_2_6": 0.0,
+      "app_reaches_7": 0.25,
+      "app_reaches_8": 0.5,
+      "app_reaches_10": 1.0,
+      "app_reaches_11": "1.25 -> NOT APPLICABLE"
+    },
+    "tau_is_NOT": [
+      "a regression parameter",
+      "a regularisation parameter",
+      "a performance threshold",
+      "a learned constant",
+      "a physical constant",
+      "a confidence level",
+      "a train/test tuning knob"
+    ],
+    "tau_IS": "an observational-applicability bound in P_rec",
+    "degenerate_calibration_rule": "unchanged from K_REC_V2"
+  },
+  "tau_train": {
+    "status": "RETIRED",
+    "e2_0_value": 0.5,
+    "replaced_by_any_other_training_threshold": false,
+    "retirement_rationale": "CONCEPTUAL",
+    "rationale": "predictor-side support of the intended finite object may be instantiated using the predictor side of that object; a headroom margin was only needed under the stronger predictor-blinded reading E2.0 imported",
+    "NOT_retired_because_of_applicability_odds": true,
+    "e2_0_feasibility_table": "PRESERVED_HISTORICALLY, not deleted"
+  },
+  "candidate_basis": "C_E2_FULL_DOMAIN (3451 coordinates)",
+  "outer_folds": {
+    "n": 6,
+    "unchanged": true,
+    "source": "E2.0 outer_fold_assignment.csv",
+    "sha256": "61431d67c090d3bf98f08294ce101d4133628aeee5476f7d99398aa68f008c86",
+    "sizes": {
+      "0": 11,
+      "1": 11,
+      "2": 10,
+      "3": 10,
+      "4": 10,
+      "5": 10
+    },
+    "repartitioned": false,
+    "new_seed": false,
+    "optimised": false
+  },
+  "access_order": {
+    "GLOBAL_PRE_SEARCH": [
+      {
+        "step": 1,
+        "action": "verify O_q and K_REC_V2",
+        "opens": "metadata and hashes"
+      },
+      {
+        "step": 2,
+        "action": "open non-target predictor values for all 62 discharges",
+        "opens": "PREDICTORS ONLY"
+      },
+      {
+        "step": 3,
+        "action": "instantiate P-RANGE at tau = 1",
+        "opens": "nothing new"
+      },
+      {
+        "step": 4,
+        "action": "verify and load C_E2_FULL_DOMAIN = 3451",
+        "opens": "nothing new"
+      },
+      {
+        "step": 5,
+        "action": "HASH the common candidate basis",
+        "opens": "nothing"
+      }
+    ],
+    "no_target_value_opened_in_steps_1_to_5": true,
+    "PER_OUTER_FOLD": [
+      {
+        "step": 6,
+        "action": "expose D_train^(k) TARGETS"
+      },
+      {
+        "step": 7,
+        "action": "fresh fold-specific search over C_E2_FULL_DOMAIN"
+      },
+      {
+        "step": 8,
+        "action": "apply frozen U_rec"
+      },
+      {
+        "step": 9,
+        "action": "select C_k*"
+      },
+      {
+        "step": 10,
+        "action": "WRITE AND HASH C_k*",
+        "note": "the support may never change after this step"
+      },
+      {
+        "step": 11,
+        "action": "freeze estimators and baseline configurations"
+      },
+      {
+        "step": 12,
+        "action": "open D_test^(k) CALIBRATION targets"
+      },
+      {
+        "step": 13,
+        "action": "fit local coefficients and baseline calibration"
+      },
+      {
+        "step": 14,
+        "action": "open D_test^(k) PROTECTED targets LAST"
+      },
+      {
+        "step": 15,
+        "action": "score"
+      }
+    ],
+    "held_out_targets_may_never_cause": [
+      "support reselection",
+      "coordinate replacement",
+      "tau change",
+      "fold change",
+      "search extension"
+    ]
+  },
+  "V_RANGE": {
+    "deleted": false,
+    "expected_outcome": "PASS_BY_CONSTRUCTION for supports drawn only from C_E2_FULL_DOMAIN",
+    "must_still_be_recomputed_during_execution": true,
+    "remaining_role": "INTEGRITY_CHECK",
+    "on_unexpected_failure": {
+      "classification": "PROTOCOL_OR_IMPLEMENTATION_INCONSISTENCY",
+      "action": "STOP EXECUTION FOR AUDIT",
+      "must_not_be_classified_as": "ordinary scientific failure before checking lineage",
+      "because": "K2's closure property, verified again here, says combinations of full-domain coordinates are full-domain supports"
+    }
+  },
+  "unchanged_from_E2_0": {
+    "U_rec": "UNCHANGED",
+    "V3": "Delta_0 <= -0.01 AND Delta_1 <= -0.01",
+    "V6_threshold": 0.01,
+    "baselines": [
+      "B0 calibration mean",
+      "B1 persistence",
+      "B1A AR(1)",
+      "B2 raw ridge",
+      "B3 raw HGBR",
+      "H0 hardened raw ridge"
+    ],
+    "search_budget_per_fold": 300000,
+    "search_budget_total": 1800000,
+    "one_seed_policy": true,
+    "two_seed_in_primary": false,
+    "CLEAN_DEMO_PASS_delta1": -0.05,
+    "EPOCH2_IS_FINAL_QREC_ATTEMPT": true,
+    "support_stability_reporting": "unchanged",
+    "optional_all_data_descriptive_support": "unchanged",
+    "forbidden_claim_wording": "unchanged and not weakened"
+  },
+  "goal_shifting_guardrail": {
+    "scientific_goal_reinterpreted_as_future_discharge_generalization": false,
+    "headroom_added_for_a_hypothetical_unseen_predictor_distribution": false,
+    "tau_train_reintroduced_under_another_name": false,
+    "finite_object_claim_replaced_by_inductive_transfer_claim": false
+  }
+}

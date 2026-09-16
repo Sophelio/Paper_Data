@@ -1,0 +1,163 @@
+{
+  "acceptance_id": "E2_1_ACCEPTANCE_CHECKS_V1",
+  "generated_utc": "2026-09-06T05:24:38.201504+00:00",
+  "n_checks": 38,
+  "n_passed": 38,
+  "result": "38/38",
+  "failed": [],
+  "note": "acceptance measures EXECUTION INTEGRITY, not scientific success",
+  "checks": [
+    {
+      "check": "all parents reproduce",
+      "passed": true
+    },
+    {
+      "check": "E2.0A authoritative",
+      "passed": true
+    },
+    {
+      "check": "K_REC_V2 unchanged",
+      "passed": true
+    },
+    {
+      "check": "tau = 1",
+      "passed": true
+    },
+    {
+      "check": "no tau_train",
+      "passed": true
+    },
+    {
+      "check": "common basis = 3451",
+      "passed": true
+    },
+    {
+      "check": "constructor counts exact",
+      "passed": true
+    },
+    {
+      "check": "basis hash exact",
+      "passed": true
+    },
+    {
+      "check": "folds exact",
+      "passed": true
+    },
+    {
+      "check": "every discharge held out once",
+      "passed": true
+    },
+    {
+      "check": "target_reads = 0 before basis hash",
+      "passed": true
+    },
+    {
+      "check": "six fresh searches",
+      "passed": true
+    },
+    {
+      "check": "<=300k evaluations each",
+      "passed": true
+    },
+    {
+      "check": "<=1.8M total",
+      "passed": true
+    },
+    {
+      "check": "one-seed only",
+      "passed": true
+    },
+    {
+      "check": "Epoch-1 frontier not reused",
+      "passed": true
+    },
+    {
+      "check": "U_rec exact",
+      "passed": true
+    },
+    {
+      "check": "support hash precedes held-out target access for every fold",
+      "passed": true
+    },
+    {
+      "check": "support never changes after hash",
+      "passed": true
+    },
+    {
+      "check": "per-fold access log complete",
+      "passed": true
+    },
+    {
+      "check": "V-RANGE recomputed",
+      "passed": true
+    },
+    {
+      "check": "V-RANGE passed as expected by construction",
+      "passed": true
+    },
+    {
+      "check": "estimator policy exact",
+      "passed": true
+    },
+    {
+      "check": "all six baselines exact",
+      "passed": true
+    },
+    {
+      "check": "protected targets opened last",
+      "passed": true
+    },
+    {
+      "check": "62 out-of-fold discharge results",
+      "passed": true
+    },
+    {
+      "check": "in-fold results excluded from primary aggregation",
+      "passed": true
+    },
+    {
+      "check": "V3 exact",
+      "passed": true
+    },
+    {
+      "check": "V6 exact",
+      "passed": true
+    },
+    {
+      "check": "CLEAN_DEMO_PASS reported separately",
+      "passed": true
+    },
+    {
+      "check": "support-stability results descriptive only",
+      "passed": true
+    },
+    {
+      "check": "no new gate",
+      "passed": true
+    },
+    {
+      "check": "no support repair",
+      "passed": true
+    },
+    {
+      "check": "no shot/block deletion",
+      "passed": true
+    },
+    {
+      "check": "no outcome-triggered search expansion",
+      "passed": true
+    },
+    {
+      "check": "no two-seed rescue",
+      "passed": true
+    },
+    {
+      "check": "no all-data descriptive search",
+      "passed": true
+    },
+    {
+      "check": "Markdown <= 20",
+      "passed": true
+    }
+  ]
+}

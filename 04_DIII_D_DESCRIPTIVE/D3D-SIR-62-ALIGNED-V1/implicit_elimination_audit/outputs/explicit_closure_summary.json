@@ -1,0 +1,9 @@
+{
+  "coverage": 1.0,
+  "pooled_rmse": 187.2273661101626,
+  "implicit_pooled_rmse": 0.05758467247445343,
+  "spearman_logA_logAbsErr": -0.3725577252708052,
+  "spearman_p": 0.0,
+  "median_amplification": 33.68746213137521,
+  "q95_amplification": 392.08282553028533
+}

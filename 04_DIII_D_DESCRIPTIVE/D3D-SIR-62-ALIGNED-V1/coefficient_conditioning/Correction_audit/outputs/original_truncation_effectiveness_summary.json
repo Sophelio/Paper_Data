@@ -1,0 +1,7 @@
+{
+  "any_direction_removed_at_original_thresholds": false,
+  "all_discharges_retained_rank_7_at_all_original_thresholds": true,
+  "min_normalized_sigma_7": 0.014021965371626702,
+  "median_normalized_sigma_7": 0.024201253740739233,
+  "interpretation": "Original truncation thresholds retained rank 7 for every discharge; coefficient changes near machine precision reflect recomputation of the unchanged full-rank solution, not genuine singular-direction removal."
+}

@@ -1,0 +1,19 @@
+parent_id,child_id,dependency_type,evidence_source,confidence,notes
+equilibrium_reconstruction,aminor,reconstructed_from,provider docstring group 'Equilibrium / shape',STRONGLY_INFERRED,reconstruction identity unresolved
+measured_plasma_current,equilibrium_reconstruction,presumed_input,external convention only,UNRESOLVED,NOT verified for this pipeline
+magnetic_probes,equilibrium_reconstruction,presumed_input,external convention only,UNRESOLVED,NOT verified for this pipeline
+flux_loops,equilibrium_reconstruction,presumed_input,external convention only,UNRESOLVED,NOT verified for this pipeline
+equilibrium_reconstruction,area,reconstructed_from,provider docstring group 'Equilibrium / shape',STRONGLY_INFERRED,reconstruction identity unresolved
+equilibrium_reconstruction,betan,reconstructed_from,provider docstring group 'Equilibrium / shape',STRONGLY_INFERRED,reconstruction identity unresolved
+equilibrium_reconstruction,kappa,reconstructed_from,provider docstring group 'Equilibrium / shape',STRONGLY_INFERRED,reconstruction identity unresolved
+equilibrium_reconstruction,li,reconstructed_from,provider docstring group 'Equilibrium / shape',STRONGLY_INFERRED,reconstruction identity unresolved
+equilibrium_reconstruction,q95,reconstructed_from,provider docstring group 'Equilibrium / shape',STRONGLY_INFERRED,reconstruction identity unresolved
+equilibrium_reconstruction,volume,reconstructed_from,provider docstring group 'Equilibrium / shape',STRONGLY_INFERRED,reconstruction identity unresolved
+equilibrium_reconstruction,drsep,reconstructed_from,provider docstring group 'Equilibrium / shape',STRONGLY_INFERRED,reconstruction identity unresolved
+equilibrium_reconstruction,tritop,reconstructed_from,provider docstring group 'Equilibrium / shape',STRONGLY_INFERRED,reconstruction identity unresolved
+equilibrium_reconstruction,tribot,reconstructed_from,provider docstring group 'Equilibrium / shape',STRONGLY_INFERRED,reconstruction identity unresolved
+equilibrium_reconstruction,rmaxis,reconstructed_from,provider docstring group 'Equilibrium / shape',STRONGLY_INFERRED,reconstruction identity unresolved
+equilibrium_reconstruction,zmaxis,reconstructed_from,provider docstring group 'Equilibrium / shape',STRONGLY_INFERRED,reconstruction identity unresolved
+equilibrium_reconstruction,rsurf,reconstructed_from,provider docstring group 'Equilibrium / shape',STRONGLY_INFERRED,reconstruction identity unresolved
+equilibrium_reconstruction,zsurf,reconstructed_from,provider docstring group 'Equilibrium / shape',STRONGLY_INFERRED,reconstruction identity unresolved
+equilibrium_reconstruction,zcur,reconstructed_from,provider docstring group 'Equilibrium / shape',STRONGLY_INFERRED,reconstruction identity unresolved

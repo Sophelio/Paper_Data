@@ -1,0 +1,48 @@
+{
+  "record_id": "S7_STAGE_MANIFEST_V1",
+  "generated_utc": "2026-09-08T00:51:17.508741+00:00",
+  "stage_id": "S7.1",
+  "title": "Observational object and provenance",
+  "directory": "01_observational_object",
+  "scientific_task_id": "shared",
+  "claim_branch": null,
+  "claim_branch_role": "PRE_CONTRACT",
+  "parent_claim_branch": null,
+  "operational_epoch": null,
+  "revision_level": "NONE",
+  "branch": "shared",
+  "status": "CANONICAL",
+  "sir_architecture_mapping": [
+    "O"
+  ],
+  "scientific_question": "What finite scientific object was supplied to discovery?",
+  "operation": "Census of 62 DIII-D discharges and 95 quantities; provenance, units, temporal support and availability instantiated.",
+  "verdict": "FROZEN_WITH_QUALIFICATIONS - 62 discharges, 95 signals, 32/32 acceptance tests, 0 unresolved critical items.",
+  "parent_stages": [],
+  "child_stages": [
+    "S7.2"
+  ],
+  "key_numbers": {
+    "n_discharges": 62,
+    "n_signals": 95
+  },
+  "notes": "No target selected, no admissibility applied. A is ancillary observational information, not admissibility.",
+  "governing_freeze": {
+    "path": "reconciliation_final/S7_1_FINAL_FREEZE.json",
+    "freeze_id": "D3D-SIR-S7.1-OBSERVATIONAL-OBJECT-FINAL-V1",
+    "sha256": "be4807c65cdcf330244f2d80f0007f8f0448208b56ff3095f19fbdcf3097600f",
+    "authoritative": true,
+    "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+  },
+  "executables": [
+    "build_s7_1_census.py",
+    "finalize_s7_1.py",
+    "reconciliation/apply_addenda.py",
+    "reconciliation/build_s7_1r.py",
+    "reconciliation_final/s7_1r_final_census.py",
+    "reconciliation_final/s7_1r_final_freeze.py",
+    "reconciliation_final/s7_1r_final_units.py"
+  ],
+  "n_files": 79,
+  "indexes_not_replaces": true
+}

@@ -1,0 +1,115 @@
+{
+  "physical_time": {
+    "symbol": "t",
+    "unit": "seconds",
+    "role": "the independent parameter of the sampled trajectories and the ONLY parameter for any later scientific temporal or trajectory-relational derivative",
+    "per_discharge_support": "T_s, discharge-specific"
+  },
+  "normalized_validation_time": {
+    "symbol": "tau",
+    "definition": "tau_s(t) = (t - t_start_s) / (t_end_s - t_start_s)",
+    "range": [
+      0,
+      1
+    ],
+    "role": "EXISTS ONLY to specify the frozen calibration/evaluation block fractions; carries no scientific dimension",
+    "blocks": [
+      {
+        "block": "A",
+        "calibration": [
+          0.0,
+          0.4
+        ],
+        "evaluation": [
+          0.4,
+          0.5
+        ]
+      },
+      {
+        "block": "B",
+        "calibration": [
+          0.0,
+          0.6
+        ],
+        "evaluation": [
+          0.6,
+          0.7
+        ]
+      },
+      {
+        "block": "C",
+        "calibration": [
+          0.0,
+          0.8
+        ],
+        "evaluation": [
+          0.8,
+          0.9
+        ]
+      }
+    ]
+  },
+  "scientific_derivative_parameter": "physical_time_seconds",
+  "derivative_with_respect_to_tau_primary": "FORBIDDEN",
+  "reason": "discharge durations differ (3.780 - 5.360 s); differentiating with respect to tau would rescale derivative values differently across discharges and corrupt physical dimensions",
+  "grid": {
+    "discharge_specific": true,
+    "global_fixed_dt_required": false,
+    "common_coordinate_support_required": true,
+    "common_time_grid_across_discharges_required": false,
+    "delta_t_ms_min": 5.8533333333333335,
+    "delta_t_ms_median": 6.823895378364652,
+    "delta_t_ms_max": 14.186746987951809,
+    "N_s_min": 325,
+    "N_s_max": 833,
+    "why_coherent": [
+      "validation windows are specified in normalized time tau, so the block fractions are cadence-independent",
+      "coefficients are discharge-specific under the frozen structural-transfer contract",
+      "method comparisons use identical support WITHIN a discharge",
+      "gate V7 requires common scored samples per discharge, not identical timestamps across discharges"
+    ]
+  },
+  "source_supported_cadence_semantics": {
+    "symbol": "delta_t_src_hat(i,s)",
+    "definition": "archived_support(i,s) / (original_length(i,s) - 1)",
+    "name": "SOURCE-SUPPORTED AVERAGE CADENCE ESTIMATE",
+    "alternative_name": "PROVENANCE-SUPPORTED TEMPORAL-RESOLUTION ESTIMATE",
+    "is_exact_native_cadence": false,
+    "qualifications": [
+      "support/count based, not a local sampling interval",
+      "original timestamps are unavailable",
+      "nonuniform original sampling cannot be reconstructed from these metadata",
+      "the upstream generator remains unavailable (U001)",
+      "it is the finest temporal resolution justified by the presently certified archival-input provenance for the purposes of this study"
+    ],
+    "defensible_claim": "the primary analysis grid is no finer than the provenance-supported temporal-resolution estimate used by the frozen numerical-admissibility policy",
+    "claims_explicitly_NOT_made": [
+      "every analysis sample is an observation",
+      "every sample is source-supported",
+      "the grid recovers the exact native sampling of any diagnostic"
+    ]
+  },
+  "upsample_count_semantics": {
+    "n_upsampled_any_discharge": 22,
+    "criterion": "upstream-upsampled in AT LEAST ONE discharge",
+    "historical_count_16": {
+      "criterion": "per-signal MEDIAN length ratio > 1.01",
+      "why_different": "a median cannot detect a signal upsampled in only a minority of discharges; the two counts measure different things and are not contradictory",
+      "superseded_by": 22
+    },
+    "among_the_78_predictors": {
+      "n_upstream_upsampled": 6,
+      "signals": [
+        "fs03da",
+        "fs04",
+        "fs04da",
+        "fs05da",
+        "prmtan_neped",
+        "prmtan_teped"
+      ],
+      "admissible_as_levels": true,
+      "derivative_status": "NUMERICAL_SENSITIVITY_ONLY",
+      "handled_by": "S7.5"
+    }
+  }
+}

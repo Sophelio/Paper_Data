@@ -1,0 +1,47 @@
+{
+  "record_id": "S7_STAGE_MANIFEST_V1",
+  "generated_utc": "2026-09-08T00:51:17.508741+00:00",
+  "stage_id": "S7.8",
+  "title": "Utility and qualification rule operationalization",
+  "directory": "08_utility_and_qualification_rules",
+  "scientific_task_id": "q_rec",
+  "claim_branch": "QREC-B1",
+  "claim_branch_role": "MEMBER",
+  "parent_claim_branch": null,
+  "operational_epoch": 1,
+  "revision_level": "NONE",
+  "branch": "q_rec",
+  "status": "CANONICAL",
+  "sir_architecture_mapping": [
+    "K_claim"
+  ],
+  "scientific_question": "How exactly are candidates compared and qualified?",
+  "operation": "U_rec made executable: five lexicographic ranks with a frozen practical-equivalence rule. V_rec gates operationalized.",
+  "verdict": "FROZEN_READY_FOR_S7.9, 48/48 acceptance.",
+  "parent_stages": [
+    "S7.7R"
+  ],
+  "child_stages": [
+    "S7.9"
+  ],
+  "key_numbers": {
+    "ranks": 5,
+    "equivalence_floor": 0.01
+  },
+  "notes": "delta_equiv = max(SE_delta, 0.01). Floor immutable. No gate evaluated at this stage.",
+  "governing_freeze": {
+    "path": "S7_8_FREEZE.json",
+    "freeze_id": "D3D-SIR-S7.8-UTILITY-AND-QUALIFICATION-RULES-V1",
+    "sha256": "1d12f78d165c09b77b4b853053e60a9a87784da2aaa2b38c4b882bb575d398e0",
+    "authoritative": true,
+    "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+  },
+  "executables": [
+    "scripts/s7_8_a_verify_parents.py",
+    "scripts/s7_8_b_build_policies.py",
+    "scripts/s7_8_c_freeze.py",
+    "scripts/s7_8_d_algorithm_dryrun.py"
+  ],
+  "n_files": 30,
+  "indexes_not_replaces": true
+}

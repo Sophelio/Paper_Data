@@ -1,0 +1,81 @@
+{
+  "policy_id": "SUPPORT_STABILITY_POLICY_V1",
+  "generated_utc": "2026-09-05T08:07:46.430834+00:00",
+  "parent_wording": "support stability: survives development-shot resampling and fold perturbation",
+  "character": {
+    "type": "ANALYST_DEFINED_QUALIFICATION_PROCEDURE",
+    "required_label": "analyst-defined qualification procedure",
+    "is_observational_uncertainty": false,
+    "fabricated_error_weights": false,
+    "note": "E is not instantiated; this resampling describes selection stability, never measurement error"
+  },
+  "modifies_ahat_rec": false,
+  "reruns_search": false,
+  "discharge_bootstrap": {
+    "replicates": 1000,
+    "unit": "development discharge",
+    "n_per_replicate": 20,
+    "with_replacement": true,
+    "seed": 2026090501,
+    "generator": "numpy.random.default_rng(2026090501)",
+    "draw_order": "replicates drawn in sequence from a single generator stream; replicate r is the r-th draw",
+    "resampled_object": "discharge indices only; the three blocks are never resampled",
+    "weighting": "a resampled discharge multiset is applied as integer multiplicities in every discharge-level aggregation (FIT, BLOCK_WORST, SHOT_P90 and the 60-cell conditioning summaries)",
+    "per_replicate_procedure": [
+      "retain the same candidate frontier Ahat_rec",
+      "recompute utility Ranks 1 to 4 using the resampled discharge indices",
+      "identify the Rank-4 winner according to the frozen algorithm"
+    ],
+    "replicate_count_may_be_reduced_after_inspecting_outcomes": false
+  },
+  "fold_perturbation": {
+    "n_perturbations": 3,
+    "perturbations": [
+      "omit block A",
+      "omit block B",
+      "omit block C"
+    ],
+    "per_perturbation_procedure": [
+      "recompute utility Ranks 1 to 4 over the remaining two blocks",
+      "do not alter the search",
+      "do not alter support identities"
+    ],
+    "aggregation": {
+      "NRMSE_s": "mean over the two remaining blocks",
+      "BLOCK_WORST": "max over the two remaining blocks",
+      "cells_per_perturbation": 40
+    }
+  },
+  "scores": {
+    "evaluated_over": "the candidates surviving the original (unresampled) Ranks 1 to 4, i.e. E4",
+    "BOOT_SELECTION_FREQ": "fraction of the 1000 bootstrap replicates in which C is the Rank-4 winner",
+    "FOLD_SELECTION_FREQ": "fraction of the 3 block-omission perturbations in which C is the Rank-4 winner",
+    "rank_4_winner_definition": "the canonical-first element of E4 under that replicate or perturbation, i.e. the unique candidate the frozen Ranks 1 to 4 plus the canonical support-id tie-break resolve to"
+  },
+  "rank_5_order": [
+    "maximize BOOT_SELECTION_FREQ",
+    "maximize FOLD_SELECTION_FREQ",
+    "canonical support ID tie-break"
+  ],
+  "pass_fail_threshold": {
+    "introduced": false,
+    "statement": "support stability is a ranking/qualification quantity, not a gate"
+  },
+  "computation": {
+    "guidance": "vectorize over the frozen per-cell NRMSE arrays; Ranks 1 to 3 are pure functions of the 162845 x 60 NRMSE matrix and the registry support_size, so all 1000 replicates can be evaluated by weighted matrix reductions",
+    "conditioning_cost_control": "per-cell kappa is independent of the discharge resample, so kappa may be computed lazily and memoized for the candidates that reach Rank 4 in any replicate; this is an efficiency measure and changes no defined quantity",
+    "determinism_requirement": "identical inputs must yield identical E5 across runs and machines"
+  },
+  "distinct_from_gate_inference_bootstrap": {
+    "this_procedure": "1000 replicates, development-side Rank-5 support stability, S7.9",
+    "gate_inference_procedure": "at least 10000 replicates, paired discharge bootstrap for confidence intervals on gate comparisons, S7.10",
+    "source": "S7.2 STATISTICAL_INFERENCE_PLAN.md item 6; K_REC_PRE_V2 V_rec.bootstrap_replicates = 10000",
+    "conflict": false,
+    "reading": "different procedures with different purposes and different stages; neither replaces the other and the parent count is not modified"
+  },
+  "execution_stage": "S7.9",
+  "selection_domain": "AHAT_REC_DENSITY_ONE_SEED_V2",
+  "selection_domain_cardinality": 162845,
+  "global_optimality_claim": false,
+  "domain_reading": "every quantity defined here is evaluated over the frozen explored frontier Ahat_rec only; A_rec minus Ahat_rec remains ADMISSIBLE_UNSEARCHED and carries no negative finding"
+}

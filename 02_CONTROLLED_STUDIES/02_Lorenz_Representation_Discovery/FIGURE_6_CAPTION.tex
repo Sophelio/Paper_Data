@@ -1,0 +1,32 @@
+% Caption for the candidate sixth main-text figure.
+% Numbers trace to tables/confirmation_results.csv and
+% sir_mcp/containment/mcp_containment.json.
+
+\caption{\textbf{Conventional model classes are nested within relational
+discovery.}
+\textbf{a}, Problem formulation. In the conventional workflow the scientific
+choices---information boundary, admissible coordinates, relation family,
+utility and validation---are supplied upstream and the estimator identifies a
+model within them. SIR represents those choices as a scientific object $O$ and a
+discovery contract $K_q$, and searches over qualified coordinate--relation pairs
+$(C,R)$; PySINDy enters as one admissible relation solver $R_q(C)$ \emph{inside}
+that search rather than as an alternative to it.
+\textbf{b}, Containment. Restricted to the full-state Lorenz problem with exact
+derivatives, the SIR engine (executed natively through the SIR MCP) recovers the
+canonical generator with exact support in all three equations
+($\dot x=10y-10x$, $\dot y=27.998x-0.999y-1.000xz$, $\dot z=-2.667z+1.000xy$;
+maximum coefficient deviation $\approx 2\times10^{-3}$).
+\textbf{c}, One clean observational object, two contracts. Reconstructing the
+withheld coordinate $z$ from $x,y$ within a common five-point retrospective
+information set, the accuracy contract $q_{\mathrm{acc}}$ selects the full
+admissible set $C_{\mathrm{all}}$ (38 coordinates, 32 active terms) while the
+compact contract $q_{\mathrm{cmp}}$ selects a 12-coordinate representation whose
+confirmation error is a factor $\sim\!2$ larger but which is four orders of
+magnitude better conditioned. A conventional degree-2 polynomial fit on the same
+raw stencil is shown as a strong baseline. Bars are protected-confirmation RMSE
+on 24 previously unseen trajectories; the dashed line marks $\sigma_z$.
+\textbf{d}, Observational uncertainty. When the scientific object explicitly
+carries an observational-noise model, the robust contract selects the same
+coordinates as the accuracy contract: uncertainty changed the \emph{qualification}
+of the representation, not the representation itself, and all representations
+degrade sharply. Statistical unit is the trajectory throughout.}

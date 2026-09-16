@@ -1,0 +1,74 @@
+{
+  "record_id": "FIGURE_6_HANDOFF_V1",
+  "generated_utc": "2026-09-07T04:58:19.214183+00:00",
+  "status": "RECOMMENDATION_ONLY_FIGURE_NOT_CREATED",
+  "principle": "the main figure must stay readable; the S7 audit tree does not belong in it",
+  "panels_recommended": [
+    {
+      "panel": "A",
+      "content": "q_desc result (existing descriptive branch)",
+      "note": "unchanged by this stage"
+    },
+    {
+      "panel": "B",
+      "content": "the q_rec iterative arc as a compact schematic: discovery -> qualification failure -> contract refinement -> cross-fitted rediscovery -> qualified positive result",
+      "note": "this is the SIR mechanism and is the point of the panel"
+    },
+    {
+      "panel": "C",
+      "content": "Epoch-1 vs Epoch-2 held-out error distribution",
+      "key_numbers": {
+        "epoch1_max": 11.95,
+        "epoch2_max": 0.9199,
+        "epoch1_above_1": 2,
+        "epoch2_above_1": 0
+      },
+      "note": "a log or broken axis is needed; the tail is the story"
+    },
+    {
+      "panel": "D",
+      "content": "relational vs raw vs persistence paired margins",
+      "key_numbers": {
+        "vs_B1": -0.027307619479192535,
+        "vs_B2": -0.09603173051607497,
+        "vs_B3": -0.1572631632534094,
+        "vs_H0": -0.09513419264048038
+      },
+      "note": "shows the wide raw-coordinate margin and the modest persistence margin honestly, side by side"
+    }
+  ],
+  "optional_inset": {
+    "content": "the range-support concept - calibration hull, tau=1 band, an excursion outside it",
+    "note": "one small schematic; no data needed"
+  },
+  "coordinate_labels": {
+    "source": "C_E2_ALL_DESC",
+    "available": true,
+    "coordinates": [
+      "ID(pcdiamag3)",
+      "PROD(ece37,ece39)",
+      "PROD(pinj,pinj_30l)",
+      "RATIO(ece21,cerqtit10)",
+      "RATIO(fs03da,cerqtit3)",
+      "RATIO(gasc,cerqtit10)",
+      "RATIO(gasc,cerqtit11)",
+      "RATIO(ip,ece39)",
+      "RATIO(pinj_33r,cerqtit10)",
+      "RATIO(prmtan_neped,ece38)",
+      "RATIO(tinj,ece20)",
+      "RECIP(cerqtit10)"
+    ],
+    "label_required": "representative full-object descriptive relation",
+    "labels_forbidden": [
+      "validated DIII-D equation",
+      "canonical relation",
+      "universal relation"
+    ]
+  },
+  "do_not_include": [
+    "the full S7 stage tree",
+    "every gate",
+    "the audit mechanics",
+    "bootstrap frequency tables"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "generated_utc": "2026-09-06T03:53:06.773433+00:00",
+  "target_reads": 0,
+  "model_error_reads": 0,
+  "residual_reads": 0,
+  "epoch1_performance_reads_for_partition": 0,
+  "target_signal_opened": false,
+  "verdict": "TARGET_BLIND",
+  "runtime_seconds": 12.6,
+  "note": "coordinate values were opened ONLY to evaluate the frozen range-support predicate; the partition itself used processing_era and shot id alone"
+}

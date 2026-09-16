@@ -1,0 +1,48 @@
+\subsection{Coefficient conditioning and identifiability conditional on the selected support}
+\label{subsec:d3d-coefficient-conditioning}
+
+Conditional on the frozen seven-coordinate support of the canonical DIII-D
+reconstruction package (\texttt{D3D-SIR-62-ALIGNED-V1}), we assessed whether
+discharge-specific coefficients are numerically identifiable and whether
+cross-discharge coefficient variation exceeds within-discharge estimation
+uncertainty. Feature ordering is tracked separately as source-matrix order and
+manuscript display order.
+
+Least-squares reproduction of the canonical discharge-specific fits recovers
+pooled RMSE $0.05758467$. The cohort-mean coefficient
+vector recovers pooled RMSE $0.41252383$.
+All 62 design matrices have numerical rank~7 at relative singular-value
+tolerances from $10^{-12}$ through $10^{-6}$, with median spectral
+condition number $41.32$.
+
+Original relative truncation thresholds $\tau\le 10^{-6}$ removed no singular
+directions: the smallest normalized singular values satisfy
+$\sigma_7/\sigma_1\gtrsim 0.0140$.
+Meaningful fixed-rank truncation shows that removing the weakest direction
+produces a median relative coefficient-vector change of $0.799$ and a
+median absolute RMSE change of $0.031$. Thus reconstruction can remain
+comparatively stable while coefficients move substantially along weakly resolved
+directions. A ridge path on standardized features yields the same qualitative
+conclusion under continuous shrinkage.
+
+The original random-effects column labeled REML implemented profile maximum
+likelihood. Corrected analysis uses heteroscedastic restricted maximum
+likelihood with known discharge-specific block-bootstrap variances, profile
+intervals, short/long block sensitivity, and leave-one-discharge-out checks.
+Under these criteria, 5 coefficients are robustly resolved
+(dot kappa, D_betaN W_dia, D_betaN kappa, dot beta_N, D_betaN l_i), while 2 remain dominated by within-discharge
+uncertainty (D_kappa W_dia, q95 / kappa).
+
+A multivariate analysis of $\Sigma_B-\overline{\Sigma}_W$ originally counted
+5 positive eigenvalues.
+After a 5000-replicate discharge bootstrap and a
+matched no-between-discharge-variation null
+(5000 replicates), 2 directions remain robustly
+resolved. Positive point estimates alone are not treated as identified
+directions.
+
+Overall, discharge-specific reconstruction is stable, but coefficient
+identifiability is mixed: several coefficients and a lower-dimensional subset of
+coefficient-space directions are resolved after uncertainty correction, while
+others are not. This analysis does not test uniqueness of the selected support
+and does not establish mechanistic or causal interpretation.

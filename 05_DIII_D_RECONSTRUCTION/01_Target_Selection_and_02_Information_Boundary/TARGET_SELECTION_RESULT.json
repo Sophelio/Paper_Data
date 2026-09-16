@@ -1,0 +1,50 @@
+{
+  "freeze_id": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-V1",
+  "selected_utc": "2026-09-03T00:42:28.308985+00:00",
+  "primary_target": "vsurf",
+  "signal_index": 5,
+  "scientific_description": "Surface loop voltage",
+  "archived_unit": "V",
+  "canonical_unit": "V",
+  "origin_class": "DIRECT_MEASUREMENT",
+  "origin_evidence_class": "STRONGLY_INFERRED",
+  "family": "magnetics",
+  "native_dt_ms": 20.0,
+  "target_side_major_flags": "",
+  "target_side_major_flag_count": 0,
+  "selection": {
+    "rule": "S7.2C deterministic 5-level lexicographic",
+    "n_candidates": 64,
+    "n_eligible": 62,
+    "rank": 1,
+    "resolved_at_level": 4,
+    "runner_up": "density",
+    "keys": {
+      "L1_target_side_major_flags": 0,
+      "L2_certified_primary_predictors": 79,
+      "L3_distinct_surviving_families": 7,
+      "L4_rrv_margin": 0.1296513707346068,
+      "L5_frozen_signal_index": 5
+    },
+    "human_preference_used": false,
+    "model_or_performance_used": false,
+    "correlation_used": false
+  },
+  "feasibility": {
+    "target": "vsurf",
+    "canonical_unit": "V",
+    "grid_dt_ms": 20.0,
+    "rrv_dev_median": 0.1796513707346068,
+    "rrv_min": 0.105654034444171,
+    "rrv_max": 0.3610323426119194,
+    "rrv_margin": 0.1296513707346068,
+    "min_distinct_values_fraction": 1.0,
+    "median_distinct_values_fraction": 1.0,
+    "n_identically_zero_development_discharges": 0,
+    "n_valid_nrmse_blocks": 60,
+    "n_invalid_nrmse_blocks": 0,
+    "n_eras_present": 2,
+    "eras_present": "earlier|later"
+  },
+  "sanity_audit": "TARGET_SELECTION_CONFIRMED"
+}

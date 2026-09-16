@@ -1,0 +1,94 @@
+{
+  "record_id": "V2_DEVELOPMENT_ONLY_DISCOVERY_EVIDENCE_V1",
+  "gate": "V2",
+  "mandatory": true,
+  "generated_utc": "2026-09-05T20:32:08.992440+00:00",
+  "requirement": "target, ontology, support, estimator and thresholds chosen without external outcomes",
+  "evidence_chain": [
+    {
+      "decision": "target selection",
+      "fixed_at": "S7.3R V2",
+      "artifact": "S7_3_FREEZE_V2.json",
+      "external_outcomes_used": false,
+      "note": "density selected by the deterministic 5-level lexicographic rule frozen in S7.2C"
+    },
+    {
+      "decision": "ontology",
+      "fixed_at": "S7.5 / S7.5H",
+      "artifact": "G_REC_DENSITY_HARDENED_V2",
+      "external_outcomes_used": false
+    },
+    {
+      "decision": "admissible universe",
+      "fixed_at": "S7.6R",
+      "artifact": "A_REC_DENSITY_HARDENED_V2",
+      "external_outcomes_used": false
+    },
+    {
+      "decision": "search policy",
+      "fixed_at": "S7.7R",
+      "artifact": "SIGMA_REC_ONE_SEED_PRIMARY_V2",
+      "external_outcomes_used": false,
+      "note": "policy hash frozen before the first density value was opened"
+    },
+    {
+      "decision": "explored frontier",
+      "fixed_at": "S7.7R",
+      "artifact": "AHAT_REC_DENSITY_ONE_SEED_V2",
+      "external_outcomes_used": false
+    },
+    {
+      "decision": "utility rules and thresholds",
+      "fixed_at": "S7.8",
+      "artifact": "U_REC_OPERATIONAL_V1",
+      "external_outcomes_used": false,
+      "note": "0.01 floor inherited from S7.2 V1, predating every result"
+    },
+    {
+      "decision": "support selection",
+      "fixed_at": "S7.9",
+      "artifact": "SELECTED_REPRESENTATION.json",
+      "external_outcomes_used": false,
+      "note": "development discharges only; 20 of 62"
+    },
+    {
+      "decision": "estimator",
+      "fixed_at": "S7.8 policy, S7.9 instantiation",
+      "artifact": "DEVELOPMENT_RELATION_OLS_V1",
+      "external_outcomes_used": false
+    },
+    {
+      "decision": "baseline hyperparameters",
+      "fixed_at": "S7.9",
+      "artifact": "BASELINE_CONFIGURATION_MANIFEST.json",
+      "external_outcomes_used": false,
+      "note": "selected AFTER the representation lock, on development data only"
+    }
+  ],
+  "ordering_guarantee": {
+    "representation_locked_utc": "2026-09-05T20:22:16.534197+00:00",
+    "baseline_prevalue_frozen_utc": "2026-09-05T20:24:27.065074+00:00",
+    "baseline_manifest_utc": "2026-09-05T20:24:35.604601+00:00",
+    "lock_precedes_baseline_prevalue": true,
+    "prevalue_precedes_any_alpha_evaluation": true,
+    "support_changed_after_lock": false
+  },
+  "external_access": {
+    "external_predictor_reads": 0,
+    "external_target_reads": 0,
+    "external_model_evaluations": 0,
+    "external_derived_statistics": 0,
+    "external_cohort_state": "SEALED",
+    "external_metadata_read": [
+      "ids",
+      "processing era",
+      "counts",
+      "partition"
+    ],
+    "external_metadata_is_value_bearing": false
+  },
+  "status": "V2_EVIDENCE_COMPLETE",
+  "status_reason": "the S7.8 gate-state schema assigns V2 the status PENDING_S7.9 and reserves formal PASS/FAIL resolution for the S7.10 gate table; S7.9 therefore records evidence completeness, not a resolved gate",
+  "resolved_state_invented": false,
+  "final_gate_table": "S7.12"
+}

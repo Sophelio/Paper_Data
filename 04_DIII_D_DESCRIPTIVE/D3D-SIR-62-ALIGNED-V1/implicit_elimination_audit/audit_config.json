@@ -1,0 +1,48 @@
+{
+  "audit_id": "D3D-SIR-62-IMPLICIT-CLOSURE-CONDITIONING-V1",
+  "canonical_run_id": "D3D-SIR-62-ALIGNED-V1",
+  "coefficient_correction_audit_id": "D3D-SIR-62-COEFFICIENT-CONDITIONING-CORRECTION-V1",
+  "historical_equation_key": "1_8*",
+  "seed": 20260805,
+  "reference_pooled_rmse_discharge_specific": 0.05758467247445343,
+  "reference_pooled_rmse_cohort_mean": 0.4125238315775986,
+  "rmse_acceptance_tolerance": 1e-8,
+  "feature_reproduction_abs_tol": 1e-10,
+  "elimination_identity_tol": 1e-10,
+  "affine_second_diff_tol": 1e-10,
+  "n_discharges": 62,
+  "n_samples_per_discharge": 1000,
+  "n_features": 7,
+  "repo_relative_canonical_package": "Paper Examples/Relational Coordinates for Multimodal Plasma Observations/canonical_d3d_62_shot_run_v1",
+  "repo_relative_correction_audit": "Paper Examples/Relational Coordinates for Multimodal Plasma Observations/Coefficient_conditioning/Correction_audit",
+  "dx_channel_order": ["pinj", "ip", "density", "q95", "li", "kappa", "betan"],
+  "source_matrix_order_keys": [
+    "d[pcdiamag3]/d[kappa]",
+    "d[kappa]/d[t]",
+    "r[q95]/r[kappa]",
+    "d[pcdiamag3]/d[betan]",
+    "d[kappa]/d[betan]",
+    "d[betan]/d[t]",
+    "d[li]/d[betan]"
+  ],
+  "manuscript_display_order": [
+    {"key": "d[pcdiamag3]/d[kappa]", "display": "D_kappa W_dia", "csv_column": "coef_Dkappa_Wdia", "export_column": "[d[pcdiamag3]/d[kappa]]", "target_containing": true, "yphaseder_dx": "kappa"},
+    {"key": "d[pcdiamag3]/d[betan]", "display": "D_betaN W_dia", "csv_column": "coef_Dbetan_Wdia", "export_column": "[d[pcdiamag3]/d[betan]]", "target_containing": true, "yphaseder_dx": "betan"},
+    {"key": "d[kappa]/d[betan]", "display": "D_betaN kappa", "csv_column": "coef_Dbetan_kappa", "export_column": "[d[kappa]/d[betan]]", "target_containing": false},
+    {"key": "d[li]/d[betan]", "display": "D_betaN l_i", "csv_column": "coef_Dbetan_li", "export_column": "[d[li]/d[betan]]", "target_containing": false},
+    {"key": "r[q95]/r[kappa]", "display": "q95 / kappa", "csv_column": "coef_q95_over_kappa", "export_column": "[r[q95]/r[kappa]]", "target_containing": false},
+    {"key": "d[betan]/d[t]", "display": "dot beta_N", "csv_column": "coef_dot_betan", "export_column": "[d[betan]/d[t]]", "target_containing": false},
+    {"key": "d[kappa]/d[t]", "display": "dot kappa", "csv_column": "coef_dot_kappa", "export_column": "[d[kappa]/d[t]]", "target_containing": false}
+  ],
+  "A_absolute_thresholds": [1e-6, 1e-5, 1e-4, 1e-3, 1e-2, 5e-2, 1e-1],
+  "A_relative_thresholds": [1e-4, 1e-3, 1e-2, 5e-2, 1e-1, 2.5e-1],
+  "denominator_relative_thresholds": [1e-6, 1e-5, 1e-4, 1e-3, 1e-2, 5e-2, 1e-1],
+  "quantile_mask_fractions": [0.0, 0.001, 0.005, 0.01, 0.025, 0.05, 0.10],
+  "shift_multipliers": [0.0, 0.75, 0.90, 0.95, 0.99, 1.0, 1.01, 1.05, 1.10, 1.25],
+  "jacobian_perturbations": [1e-6, 1e-5, 1e-4],
+  "degeneracy_threshold_pairs": [
+    {"a_rel": 0.05, "b_rel": 0.05},
+    {"a_rel": 0.1, "b_rel": 0.1},
+    {"a_rel": 0.25, "b_rel": 0.25}
+  ]
+}

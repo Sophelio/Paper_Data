@@ -1,0 +1,33 @@
+{
+  "record_id": "OBSERVATIONAL_RANGE_SUPPORT_CONCEPT_V1",
+  "frozen_utc": "2026-09-06T02:49:44.653123+00:00",
+  "written_before_any_numerical_realization": true,
+  "definition": "For a coordinate c, a local calibration interval T_cal and an application interval T_app, let S_cal(c) be the empirical support of c on T_cal - the set of coordinate values actually observed during calibration. The coordinate remains MATHEMATICALLY defined outside S_cal(c), but its use inside a calibration-fitted relation is EMPIRICALLY UNSUPPORTED when its application values move sufficiently far beyond S_cal(c). Observational range support is therefore a property of the triple (coordinate, calibration interval, application interval) - never of the constructor type alone.",
+  "three_distinct_admissibility_notions": {
+    "SYMBOLIC_ADMISSIBILITY": "the coordinate is well formed in the ontology G_rec",
+    "MATHEMATICAL_DOMAIN_ADMISSIBILITY": "the coordinate map is defined on the observed inputs - the existing DENOMINATOR_ADMISSIBILITY_PRIMARY_V1 condition for partial maps",
+    "OBSERVATIONAL_RANGE_APPLICABILITY": "the calibration-fitted relation is empirically supported at the application values actually encountered - the NEW condition"
+  },
+  "must_not_be_collapsed_with_denominator_stability": true,
+  "why_they_are_different": "denominator stability asks whether the coordinate map is DEFINED; range support asks whether the FITTED RELATION is empirically supported where it is applied. A coordinate can be perfectly well defined everywhere - x^2 is - and still be unsupported. Conversely a denominator can be admissible on calibration and the ratio still leave its calibration range.",
+  "applies_generically_to": [
+    "C0 levels",
+    "C1 rates",
+    "C2 products",
+    "C3 ratios",
+    "C4 phase derivatives",
+    "C5 reciprocals",
+    "C6 level-rate products",
+    "C7 rate-over-level",
+    "C8 level-over-rate",
+    "future total nonlinear constructors"
+  ],
+  "not_special_cased_to": [
+    "gasa",
+    "gas actuators",
+    "self-products",
+    "the two Epoch-1 failing discharges",
+    "the two Epoch-1 failing blocks"
+  ],
+  "semantics_on_failure": "RANGE_SUPPORT_NOT_APPLICABLE on that block - a LOCAL partial-application status, never global inadmissibility"
+}

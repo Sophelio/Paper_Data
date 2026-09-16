@@ -1,0 +1,183 @@
+{
+  "object_id": "O_DIIID_S7_V1",
+  "generated_utc": "2026-09-02T06:00:14.107162+00:00",
+  "stage": "S7.1",
+  "manuscript_definition_source": "PARTIALLY_LOCATED \u2014 no prose artifact states the 6-tuple; the architecture is established from the manuscript's own visual-abstract figure generator (D:\\SIR_paper\\General\\sir_representational_prism.py). A prose definition in the current manuscript would supersede this and should still be sought before S7.2.",
+  "manuscript_definition_note": "S7.1 recorded this as NOT_LOCATED and read A as admissibility. S7.1R corrects that reading; see _s7_1_original_A_admissibility for the original block and reconciliation/O_COMPONENT_A_ADDENDUM.md for the evidence.",
+  "D_data_channels": {
+    "status": "INSTANTIATED",
+    "n_signals": 95,
+    "n_present_in_all_discharges": 95,
+    "categories": {
+      "ece_te_profile": 40,
+      "equilibrium_shape": 15,
+      "cer_rotation_ti": 14,
+      "neutral_beams": 10,
+      "magnetics": 5,
+      "filterscope_dalpha": 4,
+      "gas_injection": 4,
+      "density": 3
+    },
+    "historical_eight_subset": [
+      "betan",
+      "density",
+      "ip",
+      "kappa",
+      "li",
+      "pcdiamag3",
+      "pinj",
+      "q95"
+    ],
+    "note": "the historical eight are a subset of 95; O is not reduced to them at this stage"
+  },
+  "Omega_obs_observational_support": {
+    "status": "INSTANTIATED",
+    "device": "DIII-D",
+    "n_discharges": 62,
+    "discharge_ids": [
+      "155537",
+      "159310",
+      "160715",
+      "160717",
+      "160719",
+      "160720",
+      "160721",
+      "161136",
+      "161138",
+      "161145",
+      "161414",
+      "165017",
+      "165022",
+      "165026",
+      "165027",
+      "165028",
+      "165029",
+      "165031",
+      "165042",
+      "165043",
+      "165860",
+      "165861",
+      "165955",
+      "165965",
+      "170394",
+      "170396",
+      "170411",
+      "186997",
+      "187017",
+      "187018",
+      "187019",
+      "187020",
+      "187021",
+      "187022",
+      "187024",
+      "189646",
+      "189647",
+      "189649",
+      "189650",
+      "189651",
+      "189652",
+      "195261",
+      "195264",
+      "195265",
+      "195266",
+      "195267",
+      "195268",
+      "195269",
+      "195273",
+      "195274",
+      "195626",
+      "195638",
+      "195642",
+      "195645",
+      "195647",
+      "195648",
+      "195649",
+      "195650",
+      "195651",
+      "195652",
+      "195655",
+      "195659"
+    ],
+    "time_units": "milliseconds",
+    "per_signal_native_time_bases": true,
+    "date_range": "UNRESOLVED",
+    "operating_regimes": "NOT_DOCUMENTED",
+    "selection_criterion": "common-grid viability across all 95 signals (provenance doc 3.1); exact selection algorithm and parent population UNKNOWN"
+  },
+  "S_sampling_structure": {
+    "status": "INSTANTIATED",
+    "archive_level": "each signal carries its own <name>_times array",
+    "native_spacing_range": "~0.02 ms (filterscopes) to ~20 ms (equilibrium), per provider docstring",
+    "analysis_grid": "intersection window, linspace(t0,t1,TARGET_N=1000); grid dt varies 4.1-6.0 ms across discharges",
+    "grouping_unit": "discharge",
+    "note": "a fixed dt=0.020 s is NOT supported by the artifacts"
+  },
+  "E_uncertainty_model": {
+    "status": "NOT_INSTANTIATED",
+    "reason": "no per-signal uncertainty metadata exists in any local artifact (npz, metadata json, provider code, provenance doc section 6). An error model cannot be declared from the data as possessed."
+  },
+  "Pi_provenance": {
+    "status": "PARTIALLY_INSTANTIATED",
+    "documented": [
+      "provider cleaning (float64, finite drop, sort, dedupe)",
+      "common-window intersection and grid construction",
+      "block-average vs linear interpolation rule",
+      "three numerical realizations: none / spline(k=5,s=0.1) / RTS(R=1,Q=1e-4)",
+      "within-discharge z-score standardisation, ddof=0, no global mu/sigma"
+    ],
+    "unresolved": [
+      "the upstream resampling pipeline that produced resampled_data_v6 is not present in any local tree",
+      "the equilibrium reconstruction and its inputs/constraints",
+      "physical units for every signal"
+    ]
+  },
+  "gate": {
+    "target_selected": false,
+    "ontology_generated": false,
+    "coordinates_generated": false,
+    "regression_run": false
+  },
+  "_s7_1_original_A_admissibility": {
+    "status": "NOT_INSTANTIATED",
+    "reason": "admissibility is task-conditioned. No reconstruction target has been selected at S7.1, so no target-dependence classification has been or may be performed."
+  },
+  "A_ancillary_information": {
+    "status": "PARTIALLY_INSTANTIATED",
+    "reading": "ancillary observational information / annotations / metadata carried by the object; NOT a task-conditioned admissibility rule",
+    "corrected_by": "S7.1R",
+    "correction_basis": "The manuscript visual-abstract figure generator D:\\SIR_paper\\General\\sir_representational_prism.py draws the scientific object and the task contract as separate boxes and lists the contract's attributes as 'Admissibility / Information / Intended Use'. Admissibility therefore belongs to q, not to O.",
+    "evidence_class": "LOCAL_DOCUMENTED (figure source)",
+    "present": {
+      "per_signal_per_shot_records": 5890,
+      "fields": [
+        "resample_method",
+        "resample_category",
+        "original_length",
+        "resampled_length"
+      ],
+      "signal_group_membership": 95,
+      "cohort_provenance_flags": 62,
+      "shot_identifiers_and_induced_ordering": 62
+    },
+    "absent": [
+      "units",
+      "measurement uncertainty",
+      "calendar date",
+      "campaign identifier",
+      "operating regime labels",
+      "ELM or other event annotations",
+      "operator commentary"
+    ],
+    "inventory": "reconciliation/ancillary_metadata_inventory.csv",
+    "summary": "reconciliation/upstream_resampling_characterization.csv",
+    "addendum": "reconciliation/O_COMPONENT_A_ADDENDUM.md"
+  },
+  "admissibility_note": "Admissibility is an attribute of the task contract q, not of O. It will be instantiated when a task contract is defined. No task contract exists as of S7.1R.",
+  "s7_1r_corrections": {
+    "issue_1_A_reinterpreted": true,
+    "issue_2_units": "reconciliation/units_recovery_report.md",
+    "issue_3_equilibrium_lineage": "reconciliation/equilibrium_lineage_audit.md",
+    "issue_4_temporal_grid": "reconciliation/TEMPORAL_GRID_RECONCILIATION_REPORT.md",
+    "issue_5_u001": "recommend CRITICAL -> MAJOR (conditional)"
+  }
+}

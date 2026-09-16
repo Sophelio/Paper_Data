@@ -1,0 +1,19 @@
+{
+  "record_id": "TWO_SEED_SEARCH_DEPTH_SENSITIVITY",
+  "status": [
+    "DECLARED_OPTIONAL",
+    "NOT_EXECUTED"
+  ],
+  "purpose_if_undertaken": "test whether increasing multi-start depth materially changes conclusions",
+  "must_not": [
+    "replace the present primary one-seed frontier",
+    "retroactively become the primary result",
+    "convert a failed primary q_rec into a successful primary structural-transfer claim",
+    "rescue, redefine or retroactively optimize the primary result"
+  ],
+  "outcome_trigger_defined": false,
+  "forbidden_trigger_example": "'run if the primary result is bad'",
+  "if_later_authorised": "it is a search-depth sensitivity analysis REGARDLESS of the primary result, separately labelled",
+  "declared_before_density_access": true,
+  "declared_in": "SEARCH_POLICY_PREVALUE_V2.json section s6_primary_vs_sensitivity"
+}

@@ -1,0 +1,146 @@
+{
+  "acceptance_id": "E2_0_ACCEPTANCE_CHECKS_V1",
+  "generated_utc": "2026-09-06T04:02:06.709084+00:00",
+  "n_checks": 34,
+  "n_passed": 34,
+  "result": "34/34",
+  "failed": [],
+  "checks": [
+    {
+      "check": "all parents through S7.K2 verified",
+      "passed": true
+    },
+    {
+      "check": "K_REC_V2 exact",
+      "passed": true
+    },
+    {
+      "check": "no parent modified",
+      "passed": true
+    },
+    {
+      "check": "protocol target reads = 0",
+      "passed": true
+    },
+    {
+      "check": "protocol performance reads = 0",
+      "passed": true
+    },
+    {
+      "check": "six-fold discharge grouping resolved",
+      "passed": true
+    },
+    {
+      "check": "every discharge held out exactly once",
+      "passed": true
+    },
+    {
+      "check": "folds constructed from target-blind metadata only",
+      "passed": true
+    },
+    {
+      "check": "fold-generation algorithm frozen",
+      "passed": true
+    },
+    {
+      "check": "no performance-based partition choice",
+      "passed": true
+    },
+    {
+      "check": "held-out predictors excluded from search",
+      "passed": true
+    },
+    {
+      "check": "held-out targets excluded from support discovery",
+      "passed": true
+    },
+    {
+      "check": "training-domain P-RANGE rule exact",
+      "passed": true
+    },
+    {
+      "check": "held-out V-RANGE rule exact",
+      "passed": true
+    },
+    {
+      "check": "support freeze occurs before held-out predictor access",
+      "passed": true
+    },
+    {
+      "check": "local calibration-target access order explicit",
+      "passed": true
+    },
+    {
+      "check": "protected target access occurs last",
+      "passed": true
+    },
+    {
+      "check": "U_rec unchanged",
+      "passed": true
+    },
+    {
+      "check": "V3 unchanged",
+      "passed": true
+    },
+    {
+      "check": "V6 logic frozen",
+      "passed": true
+    },
+    {
+      "check": "baselines frozen",
+      "passed": true
+    },
+    {
+      "check": "discharge remains inference unit",
+      "passed": true
+    },
+    {
+      "check": "cross-fitted aggregation exact",
+      "passed": true
+    },
+    {
+      "check": "no Epoch-1 frontier reuse",
+      "passed": true
+    },
+    {
+      "check": "search budget frozen",
+      "passed": true
+    },
+    {
+      "check": "two-seed not primary",
+      "passed": true
+    },
+    {
+      "check": "support-stability reporting frozen",
+      "passed": true
+    },
+    {
+      "check": "optional all-data descriptive support decision frozen",
+      "passed": true
+    },
+    {
+      "check": "claim boundary frozen",
+      "passed": true
+    },
+    {
+      "check": "final-attempt stop rule frozen",
+      "passed": true
+    },
+    {
+      "check": "CLEAN_DEMO_PASS threshold frozen prospectively",
+      "passed": true
+    },
+    {
+      "check": "Discovery Epoch 2 not started",
+      "passed": true
+    },
+    {
+      "check": "S7.12 not started",
+      "passed": true
+    },
+    {
+      "check": "Markdown files <= 20",
+      "passed": true
+    }
+  ]
+}

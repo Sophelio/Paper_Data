@@ -1,0 +1,15 @@
+# Generated 2026-09-16 from the working virtual environment.
+# No environment.yml existed in the repository; this is a convenience export.
+name: sir-paper
+channels: [conda-forge]
+dependencies:
+  - python=3.13.5
+  - numpy=2.5.2
+  - pandas=3.0.5
+  - scipy=1.18.1
+  - matplotlib=3.11.1
+  - scikit-learn=1.9.0
+  - pyarrow=25.0.1
+  - pip
+  - pip:
+    - pypdf==6.16.2

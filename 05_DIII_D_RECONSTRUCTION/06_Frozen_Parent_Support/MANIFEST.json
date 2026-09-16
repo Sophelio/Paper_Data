@@ -1,0 +1,54 @@
+{
+  "record_id": "S7_STAGE_MANIFEST_V1",
+  "generated_utc": "2026-09-08T00:51:17.508741+00:00",
+  "stage_id": "S7.9",
+  "title": "Development selection and pre-external freeze",
+  "directory": "09_development_selection_and_freeze",
+  "scientific_task_id": "q_rec",
+  "claim_branch": "QREC-B1",
+  "claim_branch_role": "MEMBER",
+  "parent_claim_branch": null,
+  "operational_epoch": 1,
+  "revision_level": "NONE",
+  "branch": "q_rec",
+  "status": "CANONICAL",
+  "sir_architecture_mapping": [
+    "CR"
+  ],
+  "scientific_question": "Which representation does the frozen utility select on development evidence alone?",
+  "operation": "U_rec applied to the 162,845-support frontier; 12-coordinate support selected; model frozen before any external access.",
+  "verdict": "FROZEN_WITH_QUALIFICATIONS. C_dev_star selected at Rank 2; selection stability LOW and reported as found.",
+  "parent_stages": [
+    "S7.8"
+  ],
+  "child_stages": [
+    "S7.10"
+  ],
+  "key_numbers": {
+    "support_size": 12,
+    "E1": 1055,
+    "binding_rank": 2,
+    "bootstrap_selection_frequency": 0.093,
+    "distinct_bootstrap_winners": 217
+  },
+  "notes": "Firewall intact: 0 external predictor reads, 0 external target reads at freeze time.",
+  "governing_freeze": {
+    "path": "S7_9_FREEZE.json",
+    "freeze_id": "D3D-SIR-S7.9-DEVELOPMENT-SELECTION-AND-PREEXTERNAL-FREEZE-V1",
+    "sha256": "966f9628dceb501e9f102d9ba3f74e0bfed3dddee7f25a58df47732eef3d553b",
+    "authoritative": true,
+    "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+  },
+  "executables": [
+    "scripts/s7_9_a_verify.py",
+    "scripts/s7_9_b_ranks12.py",
+    "scripts/s7_9_coords.py",
+    "scripts/s7_9_d_rank345.py",
+    "scripts/s7_9_e_select_and_lock.py",
+    "scripts/s7_9_f_baselines.py",
+    "scripts/s7_9_g_freeze.py",
+    "scripts/s7_9_h_coord_stability.py"
+  ],
+  "n_files": 53,
+  "indexes_not_replaces": true
+}

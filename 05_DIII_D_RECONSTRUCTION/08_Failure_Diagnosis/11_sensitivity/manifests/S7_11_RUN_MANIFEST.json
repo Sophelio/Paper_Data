@@ -1,0 +1,19 @@
+{
+  "run_id": "S7_11_RUN_V1",
+  "generated_utc": "2026-09-05T23:50:49.718913+00:00",
+  "scripts": [
+    "s7_11_a_verify.py",
+    "s7_11_b_family.py",
+    "s7_11_c_v9.py",
+    "s7_11_d_freeze.py"
+  ],
+  "predeclaration_sha256": "da24fbe38141f0c77f74ae3a87f6002c8263b8d3cc9aed35696dbad98a40c4c3",
+  "n_supports_evaluated": 217,
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "sklearn": "1.9.0",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

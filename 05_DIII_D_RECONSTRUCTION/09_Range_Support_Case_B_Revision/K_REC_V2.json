@@ -1,0 +1,77 @@
+{
+  "contract_id": "K_REC_V2",
+  "parent_contract_id": "K_REC_V1 (D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V2)",
+  "frozen_utc": "2026-09-06T02:59:57.816714+00:00",
+  "revision_class": "MINIMAL_P_ONLY",
+  "parent_not_overwritten": true,
+  "provenance": "K_rec^(1) -> Discovery Epoch 1 -> Q_rec^(1) -> diagnostic evidence -> S7.R1 reconciliation -> missing condition localized to P_rec -> K_rec^(2)",
+  "components": {
+    "q_rec": {
+      "status": "UNCHANGED",
+      "note": "target remains density"
+    },
+    "I_rec": {
+      "status": "UNCHANGED",
+      "note": "information boundary unchanged; 78 target-admissible primitives"
+    },
+    "P_rec": {
+      "status": "REVISED",
+      "addition": "P-RANGE-SUPPORT (see below)"
+    },
+    "B_rec": {
+      "status": "UNCHANGED",
+      "note": "baseline ladder unchanged"
+    },
+    "H_rec": {
+      "status": "POLICY_UNCHANGED_LEDGER_EXTENDED",
+      "note": "knowledge ledger extended with R1 and K2 findings"
+    },
+    "U_rec": {
+      "status": "UNCHANGED",
+      "note": "utility ordering and practical-equivalence floor untouched; NOT relaxed to make Epoch 2 easier"
+    },
+    "V_rec": {
+      "status": "CONSEQUENTIAL_ONLY",
+      "addition": "V-RANGE (see below)"
+    },
+    "Omega_rec": {
+      "status": "UNCHANGED",
+      "note": "prospective intended domain unchanged; NOT outcome-narrowed"
+    }
+  },
+  "P_rec_v2_clause": {
+    "id": "P-RANGE-SUPPORT",
+    "text": "For any instantiated relation using coordinate c fitted on a local calibration interval and applied on an application interval, c is OBSERVATIONALLY RANGE-SUPPORTED on that block only if E(c) = max(L - min(c_app), 0, max(c_app) - U) / (U - L) <= tau, with L = min(c_cal), U = max(c_cal) and tau = 1. If U - L = 0 the coordinate is RANGE_SUPPORT_DEGENERATE_CALIBRATION unless every application value equals that constant, in which case E = 0. For a support C, every constituent coordinate must pass; the support score is max_j E(c_j) and the failing coordinate remains identifiable. Failure yields the local status RANGE_SUPPORT_NOT_APPLICABLE for that block. No epsilon, clipping, winsorization, rescaling, coordinate replacement or target-conditioned rescue is permitted. This condition is SEPARATE from and additional to DENOMINATOR_ADMISSIBILITY_PRIMARY_V1, which is unchanged.",
+    "policy_sha256": "a878841db39bc213fc2d8775ce465615d8bd66f26c32641d630e140583dc1863"
+  },
+  "V_rec_v2_clause": {
+    "id": "V-RANGE",
+    "text": "For any primary full-domain reconstruction claim, the selected representation must be observationally range-supported on EVERY qualification block in the intended domain. A support that is locally not applicable is reported as such; blocks are never deleted and the score is never silently computed on fewer blocks. Partial-domain supports may be inspected diagnostically but may not become the primary full-domain q_rec result.",
+    "is_an_applicability_coverage_gate": true,
+    "replaces_V3": false,
+    "replaces_V4": false,
+    "replaces_V5": false,
+    "replaces_V6": false,
+    "is_a_performance_gate": false,
+    "note": "V1-V10 semantics otherwise unchanged; no new performance threshold introduced"
+  },
+  "A_rec_architecture_decision": {
+    "options": [
+      "A_GLOBAL_FILTER",
+      "B_LOCAL_PARTIAL_APPLICABILITY"
+    ],
+    "chosen": "B_LOCAL_PARTIAL_APPLICABILITY",
+    "reason": "consistent with the existing SIR partial-map semantics, which already keep denominator-bearing coordinates in the ontology and localize failure. The admissible universe stays expressive; the SEARCH and QUALIFICATION carry the coverage requirement. This is also the sharper representation: because full-domain coordinates compose into full-domain supports automatically, a search restricted to full-domain coordinates over the intended domain yields full-domain supports by construction, with no need to erase anything from A_rec",
+    "A_rec_erases_locally_unsupported_coordinates": false
+  },
+  "coverage_policy": {
+    "primary_requirement": "FULL_DOMAIN_RANGE_SUPPORT",
+    "abstention_cannot_manufacture_success": true,
+    "feasible_target_blindly": true,
+    "evidence": {
+      "full_domain_atoms_at_tau_1": 3451,
+      "all_families_survive": true,
+      "available_size_12_supports": "~1e33"
+    }
+  }
+}

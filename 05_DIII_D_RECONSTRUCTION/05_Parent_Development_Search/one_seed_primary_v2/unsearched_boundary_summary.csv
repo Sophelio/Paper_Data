@@ -1,0 +1,10 @@
+quantity,value
+admissible atomic coordinates in C_rec_hard^atom,10778
+Ahat_rec size-1 supports (all atoms scored),10778
+unique multivariate supports scored,152067
+total unique supports in Ahat_rec,162845
+multivariate proposals made (incl. duplicates),177364
+proposals rejected by Phi_set before evaluation,0
+unconstrained admissible supports of size 1..12 (ignores Phi_set; shown only for scale),5104404168895027321786009089789794586067
+admissible supports NOT searched (ADMISSIBLE_UNSEARCHED),5104404168895027321786009089789794423222
+fraction of the size-1..12 support space actually scored,3.1902842057910897e-35

@@ -1,0 +1,29 @@
+{
+  "record_id": "RANGE_SUPPORT_METRIC_SELECTION_V1",
+  "generated_utc": "2026-09-06T02:51:57.877411+00:00",
+  "threshold_grid_sha256": "98951146f6ff13a5ef702c622b589d35a42ca4244ef0448a1e83987bfa382a8f",
+  "selected": "R1_excess_over_calibration_range",
+  "R3_evaluated": false,
+  "R3_not_needed_because": "neither R1 nor R2 is ill-defined over a large part of the universe: 263 of 2,004,708 coordinate-cells (0.013 percent) are degenerate-calibration under either",
+  "basis": "frozen desiderata D6 (constructor-generic) and D10 (auditable)",
+  "constructor_neutrality": {
+    "R1": {
+      "p90_min": 0.0322653006557728,
+      "p90_max": 0.1393714241658223,
+      "p90_ratio": 4.319545187343122,
+      "p99_min": 0.3759796315000332,
+      "p99_max": 1.839139507011194,
+      "p99_ratio": 4.891593461256508
+    },
+    "R2": {
+      "p90_min": 0.0292621539691334,
+      "p90_max": 1.0284640981817144,
+      "p90_ratio": 35.14656163953512,
+      "p99_min": 0.9035824617225536,
+      "p99_max": 12.136634027561843,
+      "p99_ratio": 13.431683926694468
+    }
+  },
+  "argument": "Both candidates satisfy D1-D5 and D7-D14. They separate on D6. Across the seven populated constructor families R1's p90 spans 0.0323-0.1394 (ratio 4.3) and its p99 spans 0.38-1.84 (ratio 4.9); R2's p90 spans 0.0293-1.0285 (ratio 35.1) and its p99 spans 0.90-12.14 (ratio 13.4). R2 systematically inflates rate-bearing families (C1, C6, C7) because dividing by calibration RMS penalises coordinates whose calibration mean sits near zero - a property of the constructor, not of range support. R1 divides by the calibration RANGE, which is the natural scale of the empirical support itself, and is therefore constructor-neutral by construction. R1 also has the cleaner one-sentence reading.",
+  "epoch1_outcome_used": false
+}

@@ -1,0 +1,1122 @@
+[
+  {
+    "relative_path": "audit_config.json",
+    "role": "CONFIGURATION",
+    "byte_size": 3018,
+    "sha256": "80f240c4f15c7e7e4ff625384d722182e3f5c20e560f5276ce98beb62406d078",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "CONFIGURATION"
+  },
+  {
+    "relative_path": "code_snapshots/finite_difference_derivative.py.txt",
+    "role": "CODE_SNAPSHOT",
+    "byte_size": 674,
+    "sha256": "1ab1cb0a3c3a071a636d9e763283a860e530bd541486104f26f86061f70bb12f",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "CODE_SNAPSHOT"
+  },
+  {
+    "relative_path": "code_snapshots/get_shiftval_Derivative.py.txt",
+    "role": "CODE_SNAPSHOT",
+    "byte_size": 661,
+    "sha256": "fa84b44e22ab9595c793aba093f37002eb099081264ace740073364676ff90a3",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "CODE_SNAPSHOT"
+  },
+  {
+    "relative_path": "code_snapshots/make_Quotients.py.txt",
+    "role": "CODE_SNAPSHOT",
+    "byte_size": 1122,
+    "sha256": "98e1ed72840cddac732081f0ef1cafa70335f40b2b4a1be3e7b7f442481de277",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "CODE_SNAPSHOT"
+  },
+  {
+    "relative_path": "code_snapshots/yPhaseder_and_quotients.py.txt",
+    "role": "CODE_SNAPSHOT",
+    "byte_size": 2113,
+    "sha256": "1b2734b80f42768472300f107dda5fd4fa701a2a22c304400132cf25cec9fb96",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "CODE_SNAPSHOT"
+  },
+  {
+    "relative_path": "D3D_EXACT_COORDINATE_IMPLICIT_ELIMINATION_AND_DENOMINATOR_CONDITIONING_AUDIT.md",
+    "role": "REPORT",
+    "byte_size": 6502,
+    "sha256": "03abc53b54d17693cafc3552ad32da2fa65e7905a3d0d3c02f11b3b6b450139a",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "REPORT"
+  },
+  {
+    "relative_path": "EXACT_COORDINATE_LINEAGE.md",
+    "role": "REPORT",
+    "byte_size": 1704,
+    "sha256": "ea7c9a2c0d6163b1d933f174bb2be5699cf8174e69d8ef364bba1e9e3921f50d",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "REPORT"
+  },
+  {
+    "relative_path": "exact_coordinate_lineage.py",
+    "role": "CODE",
+    "byte_size": 8670,
+    "sha256": "71b691a5a3a679d1509ff26bfb8fe764413df6adfbf09704c8194ab527994c3c",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "CODE"
+  },
+  {
+    "relative_path": "figures/denominator_crossing_map.pdf",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 21415,
+    "sha256": "ca5a4411d4c16ef5e188aa5076e859854d9d48448c2351a5ae92502d1f3987b4",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/denominator_crossing_map.png",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 152116,
+    "sha256": "edc177f7fa009ccd534e679ac6a917f01f32b33feed0f37b110cd917ee811037",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/denominator_crossing_map.svg",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 829927,
+    "sha256": "af94bf40bf9ef831e6137e8e08bfaaabb54306bc226e92caa10709c6d9607dd0",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/eliminated_A_by_discharge.pdf",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 18996,
+    "sha256": "1a0df37c73841dde1bd4f07b015a320e47d157bdacff6be28dc33d0633e4bfcf",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/eliminated_A_by_discharge.png",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 128781,
+    "sha256": "2eff703953ee89cc315e1f4123abb80448618173dc881969b2144437161edf04",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/eliminated_A_by_discharge.svg",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 69540,
+    "sha256": "2634222e3af8b4ae5ff1630f8a1c008a2eab7b9b49628925b96489d4b360acb2",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/eliminated_A_distribution.pdf",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 26200,
+    "sha256": "db6bab4fe3b7ed7147167afc9c901a1114353c6ab0085c5ccdb2c6c09e7d5701",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/eliminated_A_distribution.png",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 62160,
+    "sha256": "939ac6c4cb126db570ed99e8a5a93d52cd4e9afe73165237c35c0d8d81a76d5c",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/eliminated_A_distribution.svg",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 147629,
+    "sha256": "269aa4ad233a8ce3956a243707d5e316ede22fb232611ce52fab374c082118fc",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/exact_coordinate_reproduction.pdf",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 18624,
+    "sha256": "943ece24504719aa7193beb9b51fb3c005aaae6e4b1ad93f4f5319fb6ba3a77a",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/exact_coordinate_reproduction.png",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 48209,
+    "sha256": "1ea2e1c643f67e5cd10ff458cbefcc654aaa47daf160735d6727b5d2cfc44bac",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/exact_coordinate_reproduction.svg",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 90485,
+    "sha256": "24f2c6340ed89fe8b9ac7fc0f3acf1d1f82633b4afe86cbc509af96a10a839ea",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/explicit_coverage_error_curve.pdf",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 14767,
+    "sha256": "17e954c3952d5350c97e74157869b0bf5b5db94e76d3b9b84686189c534cc02d",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/explicit_coverage_error_curve.png",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 43621,
+    "sha256": "3835a082645a06343b9b0b7b67424d91c396228d8d0fb9836797bf207914790f",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/explicit_coverage_error_curve.svg",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 31177,
+    "sha256": "43c0d693cd20c591ffa0899b9e2ae352abc292493769256e56cecbc2a36fa45e",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/explicit_error_amplification.pdf",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 840571,
+    "sha256": "cfae6f748060a019d8d6304d4bb978764d71176603ca599ddc37dece58485a56",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/explicit_error_amplification.png",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 204410,
+    "sha256": "530a86c0551007fab65415a3009d4332eabd3056992be7f9d1629e9b686d3ac9",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/explicit_error_amplification.svg",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 9322645,
+    "sha256": "d6a25a9f3b38c78e005326e210d7541f1e9988cc3a53e1ece5ccd2cdd000d3c7",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/figure_manifest.csv",
+    "role": "MANIFEST",
+    "byte_size": 5164,
+    "sha256": "04f947a1a60b89784dba3b1e2ae0088b3ff2eca9d5f206c4f0e449ad557278d7",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "MANIFEST"
+  },
+  {
+    "relative_path": "figures/local_degeneracy_classification.pdf",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 23267,
+    "sha256": "b220552d732bbfe7c6b2d5671960500d65684f0fea1f7b72d35c53612b7220b6",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/local_degeneracy_classification.png",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 73813,
+    "sha256": "0d70a04cd6fdd81c6137bc7f64388e92b4c548c0939184c3ba667914410003b0",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/local_degeneracy_classification.svg",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 76144,
+    "sha256": "dd06f414dd2642b23259a89c39ea3dd15da59e5826ff89ac0c389c8422ec58b0",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/primitive_denominator_distributions.pdf",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 15339,
+    "sha256": "1a254a9ec855bafbd8863a373a0a91e40af9072e3f531b0fb3dcf502809b5c00",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/primitive_denominator_distributions.png",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 52045,
+    "sha256": "7234d755188b724f441812ef5a3aeab41848fee496b0687b444664c48041d351",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/primitive_denominator_distributions.svg",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 38929,
+    "sha256": "4eab40fc4c7b7bb5cb3e1a2338c1a9a5362c3ca50cc9a541b059b8ae7a1ba3ef",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/shift_sensitivity_frozen_model.pdf",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 16515,
+    "sha256": "02f955fb03d6771e94ff8f92b8b5a7a7091b18136ca9f36da8048ea5489320e7",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/shift_sensitivity_frozen_model.png",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 76198,
+    "sha256": "e4562a43ed2f37ce618c5dd0c2b146ea2d9e7781fd1f2abf3db3b839194686d8",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/shift_sensitivity_frozen_model.svg",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 43899,
+    "sha256": "d5f82216c7c846ef79594f4c9cad72147c7a3a6447760f71bba80b07e1b3b9dc",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/shift_sensitivity_refit.pdf",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 14418,
+    "sha256": "b3ebfa10454b99525f7c2b8249529a498f09d397ab2be481250fb083b655308b",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/shift_sensitivity_refit.png",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 59054,
+    "sha256": "3f82e03dc37775cf5787da00cfb3bf7f4596fbe3a8232ebb989a374ca30845b7",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/shift_sensitivity_refit.svg",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 31376,
+    "sha256": "9e7b7b1c0caf0495ce03821a692c0fce5251aab5a71e0c6b87ab9404ee957511",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/target_feedback_decomposition.pdf",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 15713,
+    "sha256": "561bd571a64d0b5cf704dc95cc37143aa69b6cfe55589dbcbb8374f5a5ad9b12",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/target_feedback_decomposition.png",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 51881,
+    "sha256": "ab949c9ab73ec79a5fd85b8ef09cd47131ab19247f824e6488a58a327a9afeb8",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/target_feedback_decomposition.svg",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 36649,
+    "sha256": "ac2feb591857addddf007f94220b8635c499ed8a8f99fab491831c5f9fccbbd2",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/time_unit_consistency.pdf",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 13116,
+    "sha256": "f104338519a31fe2601dde0a414ffeb9188aeaf9f1226ac3748611bb572c8335",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/time_unit_consistency.png",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 32863,
+    "sha256": "23bdfdc59a76e7fa10b343439d1d170cfd5f45cd8f4145f4731b46f47960636a",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "figures/time_unit_consistency.svg",
+    "role": "GENERATED_FIGURE",
+    "byte_size": 26903,
+    "sha256": "5e1b74af5204854bed74448f9d94d3b148f22c819ff74cadc65cb8089aefb808",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_FIGURE"
+  },
+  {
+    "relative_path": "generate_implicit_conditioning_figures.py",
+    "role": "CODE",
+    "byte_size": 8008,
+    "sha256": "ab3910a21a15508553331827b2570f54665bff248fa8818cbeafd8bf829fce55",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "CODE"
+  },
+  {
+    "relative_path": "implicit_elimination_utils.py",
+    "role": "CODE",
+    "byte_size": 7667,
+    "sha256": "d831cc2f0e9d65db2a03018860c5553a88d4c3e8a00492a3c18b8c2f6ec9c5fe",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "CODE"
+  },
+  {
+    "relative_path": "latex/S7_8_implicit_conditioning_figure_captions.tex",
+    "role": "LATEX",
+    "byte_size": 539,
+    "sha256": "8443b07f17059038b553672b9b3483b7443f0d8f67702a09bf31d261d3dedfe3",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "LATEX"
+  },
+  {
+    "relative_path": "latex/S7_8_implicit_conditioning_tables.tex",
+    "role": "LATEX",
+    "byte_size": 413,
+    "sha256": "7185a79f180d2fa807895f7d740502602e2063784901034e0b97e10fce8f0219",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "LATEX"
+  },
+  {
+    "relative_path": "latex/S7_8_implicit_elimination_and_denominator_conditioning.tex",
+    "role": "LATEX",
+    "byte_size": 2796,
+    "sha256": "be3a338d028b9d2ef71494c636ad44a2775ecb00c868538eb243529e66f95922",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "LATEX"
+  },
+  {
+    "relative_path": "logs/implicit_conditioning_audit.log",
+    "role": "LOG",
+    "byte_size": 566,
+    "sha256": "cdc82e0cf38519ccf268f5a518022ffce75cd5699b4df80c35a67465f4a99196",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "LOG"
+  },
+  {
+    "relative_path": "logs/input_validation.log",
+    "role": "LOG",
+    "byte_size": 1419,
+    "sha256": "ffeabaf436f46c07dd27e581eded1a0093cdf50f250dcce1fb37e87c49dc8958",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "LOG"
+  },
+  {
+    "relative_path": "logs/pytest.log",
+    "role": "LOG",
+    "byte_size": 208,
+    "sha256": "2a9f5978a8d7dad7d55e34a1276c7b8c60a9c7500f404b2e517e4fcf11beb38f",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "LOG"
+  },
+  {
+    "relative_path": "outputs/denominator_policy_sensitivity_summary.json",
+    "role": "GENERATED_DATA",
+    "byte_size": 1330,
+    "sha256": "3619ce6ef13dd70686fc290a46c76f7a7ec28176717d3f097c736d250e4bb968",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_DATA"
+  },
+  {
+    "relative_path": "outputs/eliminated_A_summary.json",
+    "role": "GENERATED_DATA",
+    "byte_size": 462,
+    "sha256": "43e1326d4d1662d31b7d810885be7cc7a783b2f6059f96b9da58e22551427df2",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_DATA"
+  },
+  {
+    "relative_path": "outputs/eliminated_relation_rows.parquet",
+    "role": "GENERATED_DATA",
+    "byte_size": 10449199,
+    "sha256": "0058f60923cc49e97debdecde8e1476589c069d9c41958cd47e1b75f277ababe",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_DATA"
+  },
+  {
+    "relative_path": "outputs/elimination_identity_validation.json",
+    "role": "GENERATED_DATA",
+    "byte_size": 171,
+    "sha256": "fa5481f458fd9b1ee9b17e29e73161cff757f572bf96f000738c5239f8ae225c",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_DATA"
+  },
+  {
+    "relative_path": "outputs/exact_coordinate_lineage.json",
+    "role": "GENERATED_DATA",
+    "byte_size": 16134,
+    "sha256": "1a0d88967695aaa76d8a5030f362a386cb0717e6e2602de5d97b8474bcd6e33b",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_DATA"
+  },
+  {
+    "relative_path": "outputs/explicit_closure_summary.json",
+    "role": "GENERATED_DATA",
+    "byte_size": 271,
+    "sha256": "247da569c80c2a364faa11c4f5219584a8ba98a9e012c6b6d0eda724a7d6df68",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_DATA"
+  },
+  {
+    "relative_path": "outputs/feature_reproduction.json",
+    "role": "GENERATED_DATA",
+    "byte_size": 1740,
+    "sha256": "21a833c12d78455c84e67c4e2b8f2ef9e488de912500ed7f56740a4a5eff7381",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_DATA"
+  },
+  {
+    "relative_path": "outputs/implicit_conditioning_summary.json",
+    "role": "GENERATED_DATA",
+    "byte_size": 7765,
+    "sha256": "1854aca7b392f8d5a3ff5f6bd94a8dcc14d473b125f9e739d028d2630b7d0903",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_DATA"
+  },
+  {
+    "relative_path": "outputs/input_validation.json",
+    "role": "GENERATED_DATA",
+    "byte_size": 1419,
+    "sha256": "ffeabaf436f46c07dd27e581eded1a0093cdf50f250dcce1fb37e87c49dc8958",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_DATA"
+  },
+  {
+    "relative_path": "outputs/local_degeneracy_summary.json",
+    "role": "GENERATED_DATA",
+    "byte_size": 33,
+    "sha256": "054c1fe87c7fee87510619bf8998c9f44901be191b75c508755574f1d9cc6bdf",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_DATA"
+  },
+  {
+    "relative_path": "outputs/primitive_denominator_summary.json",
+    "role": "GENERATED_DATA",
+    "byte_size": 72,
+    "sha256": "53c9efc36088edab4f6e22a13fcfeb2fef038ee4ffd990c06c283b03dca22283",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_DATA"
+  },
+  {
+    "relative_path": "outputs/shift_recovery_diagnostics.json",
+    "role": "GENERATED_DATA",
+    "byte_size": 346,
+    "sha256": "00c4bc498378d751a7545816d6420eeac3531200f7b8e80b5abce08465217b15",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_DATA"
+  },
+  {
+    "relative_path": "outputs/target_affine_coefficients.parquet",
+    "role": "GENERATED_DATA",
+    "byte_size": 4300488,
+    "sha256": "3130203ac31a6a6db918eeb457756b5a4340bfd995f9f7c187d018485bee3861",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_DATA"
+  },
+  {
+    "relative_path": "outputs/target_dependence.json",
+    "role": "GENERATED_DATA",
+    "byte_size": 151,
+    "sha256": "39b694f349604ec2eaa46573f3669e893658eec77b8ab85f42ae4158e36a3167",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_DATA"
+  },
+  {
+    "relative_path": "outputs/target_feedback_decomposition_summary.json",
+    "role": "GENERATED_DATA",
+    "byte_size": 379,
+    "sha256": "50d3551871575e103bffb8e413d5388a560276c99ddfa917b6519618d77a4283",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_DATA"
+  },
+  {
+    "relative_path": "outputs/target_jacobian_validation.json",
+    "role": "GENERATED_DATA",
+    "byte_size": 113,
+    "sha256": "6ceb9f092340f8e943620d57212105fac8f5b736d4101d014d29ca1b15060f86",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_DATA"
+  },
+  {
+    "relative_path": "outputs/time_unit_consistency.json",
+    "role": "GENERATED_DATA",
+    "byte_size": 419,
+    "sha256": "6d29497deb8d7533da0b928d96f0a530132f86092c7e8b09c269012831c15932",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_DATA"
+  },
+  {
+    "relative_path": "README.md",
+    "role": "REPORT",
+    "byte_size": 874,
+    "sha256": "09f8c84c02424c1eff757100bd31b581931f4cc2ea01613e301b451476c90f6a",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "REPORT"
+  },
+  {
+    "relative_path": "run_implicit_conditioning_audit.py",
+    "role": "CODE",
+    "byte_size": 56348,
+    "sha256": "37148d7a67c9c60d888b68b486f59b763efd391f1e5c9b2ba45e99ecfb65f56b",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "CODE"
+  },
+  {
+    "relative_path": "SHIFT_VALUE_RECOVERY.md",
+    "role": "REPORT",
+    "byte_size": 273,
+    "sha256": "cf27a898e4219e3617e6f41629aeb3d711204aeb4e73cb8f3efdac1e7b41c3d4",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "REPORT"
+  },
+  {
+    "relative_path": "symbolic/exact_elimination_derivation.md",
+    "role": "REPORT",
+    "byte_size": 345,
+    "sha256": "4936e78edd26b1892ace38d398281f138473876fe656b5837b45ef4ff2af888b",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "REPORT"
+  },
+  {
+    "relative_path": "symbolic/general_exact_elimination.tex",
+    "role": "LATEX",
+    "byte_size": 215,
+    "sha256": "44580c681e04ed76fe69704eed1a2ef4ed219bf19f46d8f4f750e73bb3d5fba7",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "LATEX"
+  },
+  {
+    "relative_path": "symbolic/general_exact_elimination.txt",
+    "role": "SYMBOLIC_DERIVATION",
+    "byte_size": 298,
+    "sha256": "22158e92c98984d789b04648de6dc31488159490b6073f610fccaa918b56f395",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "SYMBOLIC_DERIVATION"
+  },
+  {
+    "relative_path": "tables/A_zero_crossing_events.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 1108398,
+    "sha256": "9d4666f71fcd437603936b9abea3612ca47a24cd8a9638bdd20e7ce8aeac6da0",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tables/denominator_mask_sensitivity.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 581,
+    "sha256": "aea2e8c7c40dd572df9559b9a9ddb9ac18f6145afdffba8eca79b8900777a88b",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tables/eliminated_A_crossings.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 436418,
+    "sha256": "0018aa56e73e5cab349323541cb9face4360b67e283181855d52713b7986ccf9",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tables/eliminated_A_per_discharge.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 31017,
+    "sha256": "6b74e0b70d711f71fd837beccc044974b04f05e85793fcbd309d3a5c608b77ec",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tables/eliminated_A_threshold_fractions.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 13377,
+    "sha256": "495bf590b4015134a3b084012c2076d48268fc457437f4d9764d2823b848b1bc",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tables/exact_coordinate_lineage.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 7313,
+    "sha256": "c0fbca81b22a6045ee3c18c0b9c8424c1facec8094f640266bc5c68f156e97c0",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tables/explicit_closure_metrics_per_discharge.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 12972,
+    "sha256": "55d89734b9e051673c81b573375b679894a528261063e214cb49c99beea854ac",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tables/explicit_closure_quantile_mask_curve.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 640,
+    "sha256": "82b29a0d9fdbe1d2c7171c021f39b056501a4ce1dac3a230d10c68d667025470",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tables/explicit_closure_threshold_curve.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 1124,
+    "sha256": "05b148126bfc69cafb1d447a811abe324d135185ddb1afd3320895ebf5f27b98",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tables/feature_reproduction_per_discharge.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 40540,
+    "sha256": "0ee0982f835dd1fe47deaea63988ca971f33ce385aa050cdbf93f4e28d6c45ed",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tables/feature_reproduction_summary.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 608,
+    "sha256": "7336f5194e78c833d80dbf958ef82490260c37550613d855e5bf76691588ca41",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tables/input_validation.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 784,
+    "sha256": "ab6e5919158723b1f0eac8af7f957860ff36b744c713a8747513d97869aa8374",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tables/local_degeneracy_classification.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 31008,
+    "sha256": "c8751976a54b84af4cfddaa626026e6cac2862be0ea3829d06b5217c5bfd3f83",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tables/per_discharge_elimination_constants.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 10389,
+    "sha256": "2baa6de61630e583b0c155ea0fc6e5569bccca51aeccc8de87a06b378beeb39a",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tables/primitive_denominator_crossings.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 2,
+    "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tables/primitive_denominator_per_discharge.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 122293,
+    "sha256": "2effa45ca4ff1869e88d2dd1667168262d740a3ffec33454a14a17b763189614",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tables/primitive_denominator_threshold_fractions.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 25094,
+    "sha256": "c1f0a1623739baf75c03ae2acdb3f824debc680c8347cfcf70b0799d52527f61",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tables/recovered_shift_values.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 11987,
+    "sha256": "f846e79316a665c13b88914e06e26d67e7ffa419a79228f1ced698c404dda49d",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tables/residual_amplification_bins.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 2001,
+    "sha256": "cfab77a8f97d43d9378b83be864c5d2e4e86164acff580dd521d6768d9f8208a",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tables/shift_sensitivity_frozen_model.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 1468,
+    "sha256": "4c019f3f82cd3557c363a12a35523feda1c32b0a49dcd9d5b46b80bf43c84f4c",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tables/shift_sensitivity_refit.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 518,
+    "sha256": "a2fa13bff11cc1ed63ea2dda4fff4f9a77123c9131e8e395a7cc500af487ed82",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tables/target_dependence_summary.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 69767,
+    "sha256": "d181ab37f1ffa362619c7a5d070343369ee8cbd8b4f580e103f13a48d9ea709b",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tables/target_feedback_decomposition.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 7025,
+    "sha256": "fbed3490f7d958a633be1a9626ff72b9f33c5b357dded508466ed1e518014f62",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tables/target_jacobian_finite_difference_check.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 51232,
+    "sha256": "119e0311c3dc5dbc75daa135a39c56f7dbf549514fde4ad69ad82780fa4bf599",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tables/time_unit_consistency.csv",
+    "role": "GENERATED_TABLE",
+    "byte_size": 398,
+    "sha256": "df15de2695f6c9ea56aab51f234bf2700451e0c763aaf74e9b43e7a8ce83b20c",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "GENERATED_TABLE"
+  },
+  {
+    "relative_path": "tests/test_A_statistics.py",
+    "role": "TEST",
+    "byte_size": 465,
+    "sha256": "73f786e611abe9948a9577d324e1b45ed683c283e282a437fc657491b5687135",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "TEST"
+  },
+  {
+    "relative_path": "tests/test_coordinate_reproduction.py",
+    "role": "TEST",
+    "byte_size": 347,
+    "sha256": "d4716f5a31071127955438d32146b06b1a74343931d8f05b66c048eff9235a0a",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "TEST"
+  },
+  {
+    "relative_path": "tests/test_denominator_statistics.py",
+    "role": "TEST",
+    "byte_size": 367,
+    "sha256": "25ad96ba57e879dedba750ae37895f90ee87f6fe75412827a6cb1d62f538220e",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "TEST"
+  },
+  {
+    "relative_path": "tests/test_exact_elimination_identity.py",
+    "role": "TEST",
+    "byte_size": 569,
+    "sha256": "a6fdb520ea882d42ce5155ae82c44166fc12ca48da4fd0b3189e71a85a62a343",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "TEST"
+  },
+  {
+    "relative_path": "tests/test_explicit_error_identity.py",
+    "role": "TEST",
+    "byte_size": 792,
+    "sha256": "8308c28704af25b7f30d02062528f902ddd8363308f437d965c04c0163ff6a0f",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "TEST"
+  },
+  {
+    "relative_path": "tests/test_input_validation.py",
+    "role": "TEST",
+    "byte_size": 489,
+    "sha256": "084b716c9cc1161fdf150cfff3587d071492ef354002b8b85a42fe589f24924a",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "TEST"
+  },
+  {
+    "relative_path": "tests/test_shift_recovery.py",
+    "role": "TEST",
+    "byte_size": 462,
+    "sha256": "55695bbd30692c3c31c5b30e7785b58433fb2c8531764e451bec8a0703458f9c",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "TEST"
+  },
+  {
+    "relative_path": "tests/test_target_affine_dependence.py",
+    "role": "TEST",
+    "byte_size": 1068,
+    "sha256": "1b3623dcb2d79bc6e2be7aa24c8496aeebda2610aac38eed4fb32b4f82c3f7af",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "TEST"
+  },
+  {
+    "relative_path": "tests/test_time_unit_consistency.py",
+    "role": "TEST",
+    "byte_size": 618,
+    "sha256": "9d373902754f2f98110ca4cca34552ce4744009b6c74a886628d9e8828dd9c49",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "TEST"
+  },
+  {
+    "relative_path": "TIME_UNIT_AND_STANDARDIZATION_AUDIT.md",
+    "role": "REPORT",
+    "byte_size": 507,
+    "sha256": "9d29722a2285e68258bb6ed1df6d726e28b5d95fa3d51e49c3c0426223655b2f",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "REPORT"
+  },
+  {
+    "relative_path": "write_implicit_conditioning_report.py",
+    "role": "CODE",
+    "byte_size": 18169,
+    "sha256": "14e6cfd8a9b24cdbc9b0e39ab5dc50d00bb3e9c61ab3d395762bb419879d6269",
+    "created_utc": "2026-08-05T21:01:43Z",
+    "generator_script": "write_implicit_conditioning_report.py",
+    "input_dependencies": "D3D-SIR-62-ALIGNED-V1",
+    "status": "CODE"
+  }
+]

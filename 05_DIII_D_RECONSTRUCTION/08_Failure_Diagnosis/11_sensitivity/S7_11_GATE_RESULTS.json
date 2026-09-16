@@ -1,0 +1,42 @@
+{
+  "record_id": "S7_11_GATE_RESULTS_V1",
+  "generated_utc": "2026-09-05T23:50:49.716852+00:00",
+  "gates_unchanged_from_S7_10": {
+    "V1": "PASS",
+    "V2": "PASS",
+    "V3": "FAIL",
+    "V4": "PASS",
+    "V5": "PASS",
+    "V6": "FAIL",
+    "V7": "PASS",
+    "V8": "PASS",
+    "V10": "PASS"
+  },
+  "V9": {
+    "result": "FAIL",
+    "mandatory": false,
+    "components": {
+      "DISCHARGE": "NO_SINGLE_DISCHARGE_VERDICT_DEPENDENCE",
+      "TEMPORAL_BLOCK": "DIRECT_TEMPORAL_BLOCK_DEPENDENCE",
+      "NUMERICAL_REALIZATION": "NUMERICAL_REALIZATION_SENSITIVITY_NOT_INSTANTIATED"
+    },
+    "reasoning": "V9 asks whether the result depends catastrophically on one discharge, one temporal block, or one numerical realization. The discharge component is clean: 0 of 42 single-discharge omissions change the verdict. The temporal-block component is not: omitting block B alone flips the V3-style verdict from FAIL to PASS. Under the auditable criterion - verdict change on removal of one unit - that is direct dependence on one temporal block, so V9 resolves to FAIL. The numerical-realization component was never prospectively instantiated, so no robustness may be inferred for it either."
+  },
+  "mandatory_gates_failed": [
+    "V3",
+    "V6"
+  ],
+  "V9_changes_no_mandatory_gate": true,
+  "final_gate_table": {
+    "V1": "PASS",
+    "V2": "PASS",
+    "V3": "FAIL",
+    "V4": "PASS",
+    "V5": "PASS",
+    "V6": "FAIL",
+    "V7": "PASS",
+    "V8": "PASS",
+    "V10": "PASS",
+    "V9": "FAIL"
+  }
+}

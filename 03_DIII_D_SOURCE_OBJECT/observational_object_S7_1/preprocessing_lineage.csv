@@ -1,0 +1,7 @@
+stage,operation,implementation,evidence,confidence
+1,upstream_resample,"EXTERNAL, NOT IN ANY LOCAL TREE",metadata json records method/category only,DOCUMENTED_EFFECT_UNRESOLVED_CODE
+2,finite_clean_sort_dedupe,provider _load_signal,code,CODE_VERIFIED
+3,common_window_intersection,"t0=max(min t_i), t1=min(max t_i)",code + provenance doc 5.3,CODE_VERIFIED
+4,resample_to_grid,"linspace(t0,t1,1000); block-average if denser, else linear interp",code + provenance doc 5.3,CODE_VERIFIED
+5,numerical_realization,"none | spline(k=5,s=0.1) | RTS(R=1,Q=1e-4)",provenance doc section 8,DOCUMENTED
+6,standardization,"within-discharge z-score, ddof=0, no global mu/sigma",provenance doc section 7.1-7.2,CODE_VERIFIED

@@ -1,0 +1,226 @@
+{
+  "acceptance_id": "S7_9_ACCEPTANCE_CHECKS_V1",
+  "generated_utc": "2026-09-05T20:32:09.426034+00:00",
+  "n_checks": 54,
+  "n_passed": 54,
+  "result": "54/54",
+  "failed": [],
+  "checks": [
+    {
+      "check": "all parents verified",
+      "passed": true
+    },
+    {
+      "check": "external values read = 0",
+      "passed": true
+    },
+    {
+      "check": "five array-reuse conditions verified",
+      "passed": true
+    },
+    {
+      "check": "canonical depth-aware parser used",
+      "passed": true
+    },
+    {
+      "check": "support-size checksum 162845/162845",
+      "passed": true
+    },
+    {
+      "check": "no naive pipe parsing used operationally",
+      "passed": true
+    },
+    {
+      "check": "candidate matrix 162845 x 60 verified",
+      "passed": true
+    },
+    {
+      "check": "E0 exactly 162845",
+      "passed": true
+    },
+    {
+      "check": "Rank 1 executed exactly",
+      "passed": true
+    },
+    {
+      "check": "practical-equivalence floor unchanged 0.01",
+      "passed": true
+    },
+    {
+      "check": "paired SE uses discharge unit",
+      "passed": true
+    },
+    {
+      "check": "Rank 2 executed exactly",
+      "passed": true
+    },
+    {
+      "check": "worst-block paired SE used; fallback not invoked",
+      "passed": true
+    },
+    {
+      "check": "SHOT_P90 method='linear'",
+      "passed": true
+    },
+    {
+      "check": "Rank 3 executed exactly",
+      "passed": true
+    },
+    {
+      "check": "ACTIVE_TERMS union rule used",
+      "passed": true
+    },
+    {
+      "check": "no coefficient threshold",
+      "passed": true
+    },
+    {
+      "check": "Rank 4 uses SVD singular values",
+      "passed": true
+    },
+    {
+      "check": "no normal-equation condition number",
+      "passed": true
+    },
+    {
+      "check": "no conditioning cutoff",
+      "passed": true
+    },
+    {
+      "check": "Rank 5 uses exactly 1000 bootstrap replicates",
+      "passed": true
+    },
+    {
+      "check": "bootstrap seed 2026090501",
+      "passed": true
+    },
+    {
+      "check": "bootstrap resamples discharges, not time samples",
+      "passed": true
+    },
+    {
+      "check": "exactly 3 block omissions",
+      "passed": true
+    },
+    {
+      "check": "search not rerun inside perturbations",
+      "passed": true
+    },
+    {
+      "check": "one deterministic development support selected",
+      "passed": true
+    },
+    {
+      "check": "full elimination ledger written",
+      "passed": true
+    },
+    {
+      "check": "no global-optimum claim",
+      "passed": true
+    },
+    {
+      "check": "selected support interpretation flags recorded",
+      "passed": true
+    },
+    {
+      "check": "DEVELOPMENT_REPRESENTATION_LOCK written before baseline tuning",
+      "passed": true
+    },
+    {
+      "check": "selected support unchanged after lock",
+      "passed": true
+    },
+    {
+      "check": "parent baseline specifications audited",
+      "passed": true
+    },
+    {
+      "check": "B0 frozen",
+      "passed": true
+    },
+    {
+      "check": "B1 frozen",
+      "passed": true
+    },
+    {
+      "check": "B1A frozen",
+      "passed": true
+    },
+    {
+      "check": "B2 frozen",
+      "passed": true
+    },
+    {
+      "check": "B3 frozen",
+      "passed": true
+    },
+    {
+      "check": "H0 frozen",
+      "passed": true
+    },
+    {
+      "check": "B2 retains full target-admissible primitive information",
+      "passed": true
+    },
+    {
+      "check": "H0 uses hardened 70-level basis",
+      "passed": true
+    },
+    {
+      "check": "B2/H0 penalty rule frozen before tuning",
+      "passed": true
+    },
+    {
+      "check": "no baseline outcome used to change selected support",
+      "passed": true
+    },
+    {
+      "check": "no baseline scientific comparison reported",
+      "passed": true
+    },
+    {
+      "check": "S_pers not used for selection",
+      "passed": true
+    },
+    {
+      "check": "V2 evidence complete",
+      "passed": true
+    },
+    {
+      "check": "complete PRE_EXTERNAL_MODEL_FREEZE written and hashed",
+      "passed": true
+    },
+    {
+      "check": "pre-external manifest re-verifies",
+      "passed": true
+    },
+    {
+      "check": "external values remain 0 after freeze",
+      "passed": true
+    },
+    {
+      "check": "two-seed sensitivity NOT executed",
+      "passed": true
+    },
+    {
+      "check": "no C6/C7 pruning",
+      "passed": true
+    },
+    {
+      "check": "no ECE penalty",
+      "passed": true
+    },
+    {
+      "check": "bootstrap reproducibility verified",
+      "passed": true
+    },
+    {
+      "check": "Markdown files <= 20",
+      "passed": true
+    },
+    {
+      "check": "S7.10 not started",
+      "passed": true
+    }
+  ]
+}

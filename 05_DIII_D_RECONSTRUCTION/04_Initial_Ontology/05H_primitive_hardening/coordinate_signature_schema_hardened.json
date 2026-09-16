@@ -1,0 +1,47 @@
+{
+  "schema_id": "COORDINATE_SIGNATURE_H_V1",
+  "display_label_is_not_identity": true,
+  "canonicalization": {
+    "C0": "ID(i)",
+    "C1": "DOT(i)",
+    "C2": "PROD(i,j) with i <= j by frozen inventory index",
+    "C3": "RATIO(i,j), i != j",
+    "C4": "PHASE(i|j) meaning D_{x_j} x_i",
+    "C5": "RECIP(i)",
+    "C6": "LEVEL_RATE(i|j) meaning x_i * (dx_j/dt)",
+    "C7": "RATE_OVER_LEVEL(i|j) meaning (dx_i/dt) / x_j",
+    "C8": "LEVEL_OVER_RATE(i|j) meaning x_i / (dx_j/dt)"
+  },
+  "duplicate_prevention": {
+    "C2_symmetry": "PROD(i,j) == PROD(j,i) under canonical ordering",
+    "C6_not_collapsed": "LEVEL_RATE(i|j) != LEVEL_RATE(j|i): the semantic roles differ and x_i*dot{x}_j is not generally equal to x_j*dot{x}_i",
+    "C3_C4_C7_C8_directional": true,
+    "self_cases": {
+      "C2": "allowed (x_i^2)",
+      "C3": "RATIO(i,i) excluded, trivial constant 1",
+      "C4": "PHASE(i|i) excluded, trivial constant 1",
+      "C6": "allowed",
+      "C7": "allowed, fractional rate",
+      "C8": "allowed, characteristic timescale"
+    }
+  },
+  "fields": [
+    "coordinate_id",
+    "constructor_family",
+    "depth",
+    "ordered_operands",
+    "operand_roles",
+    "primitive_ancestors",
+    "output_scientific_type",
+    "output_dimension",
+    "output_unit_expression",
+    "temporal_resolution_rule",
+    "provenance_lineage",
+    "target_independence",
+    "primary_or_sensitivity",
+    "aliasing_flags",
+    "numerical_realization_id",
+    "domain_predicate",
+    "dependency_group_membership"
+  ]
+}

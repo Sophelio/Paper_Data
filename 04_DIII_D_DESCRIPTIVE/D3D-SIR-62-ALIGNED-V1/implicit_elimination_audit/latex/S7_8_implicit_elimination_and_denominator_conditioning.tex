@@ -1,0 +1,57 @@
+\subsection{Exact implicit elimination and denominator conditioning}
+\label{supp:d3d-implicit-conditioning}
+
+Conditional on the frozen seven-coordinate support of canonical run
+\texttt{D3D-SIR-62-ALIGNED-V1}, we recovered the exact historical
+construction of the selected coordinates and assessed the local well-posedness
+of the target-containing implicit closure.
+
+Historical sir~v1 Y-phaseders are
+\(z=(({\dot y}+s)/({\dot x}+s)-\mu)/\sigma\), with a single per-discharge
+shift \(s\) stored in the historical model artifact
+(\texttt{meanSTDinfo.consummer\_function[i].shiftval}). Across the 62
+discharges, \(s\) ranges from $14.6432$ to
+$24.2426$. Using these shifts and the stored pre-zscore
+means and standard deviations, all seven selected feature columns were
+reproduced with maximum absolute error $0$. The historical UI value of
+\texttt{nmin} remains unknown; the effective serialized shift values are
+known.
+
+The standardized regression is an implicit relation for the standardized
+target \(y\). Collecting coefficients of \(y\) yields
+\(A_j(t)\,y_j(t)=B_j(t)+\varepsilon_j(t)\) with
+\[
+A_j(t)=1-c_{\kappa,j}\alpha_{\kappa,j}(t)-c_{\beta,j}\alpha_{\beta,j}(t),
+\qquad
+\alpha=\frac{1}{\sigma(d+s)}.
+\]
+The identity \(\varepsilon_j=A_j y_j-B_j\) holds for all 62000 rows with
+maximum absolute error $7.896e-15$.
+
+Primitive implemented denominators are the shifted channels \(d+s\). The
+eliminated coefficient \(A\) has pooled minimum absolute value
+$2.643e-07$, first percentile $5.078e-04$ and
+median $2.968e-02$. A fraction
+$0.193$ of rows satisfy $|A|<10^{-2}$, and
+$5444$ sign crossings of \(A\) occur across the cohort.
+Where \(A\neq 0\), the zero-residual explicit closure \(y=B/A\) has pooled RMSE
+$187$ at coverage $1.000$, compared with
+implicit residual RMSE $0.057585$. Residual
+amplification \(1/|A|\) has median $33.7$ and
+95th percentile $392$.
+
+Modest multiplicative perturbations of the historical shifts (factors $0.99$
+and $1.01$) change the frozen-model implicit RMSE from $0.057585$ to
+$0.059798$ and $0.058535$, respectively. Standardized temporal derivatives
+are invariant under global time-unit rescaling, but additive shifts must be
+rescaled consistently to preserve shifted ratios.
+
+Overall, the implicit residual remains small, but the eliminated explicit
+target map is frequently ill conditioned. Local well-posedness of the
+implicit closure is therefore distinct from both reconstruction accuracy and
+coefficient identifiability. Support uniqueness and independent constraint
+content remain separate questions.
+
+Remaining DIII-D audits include incremental constraint-content and
+quotient-definition nulls, target-free and matched-complexity baselines,
+support stability, and held-out discharge transfer.

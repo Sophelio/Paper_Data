@@ -1,0 +1,39 @@
+{
+  "generated_utc": "2026-09-05T20:15:38.974670+00:00",
+  "E0": 162845,
+  "rank_1": {
+    "FIT_best": 0.16628151489421725,
+    "C_fit_best": "ID(pcdiamag3)|ID(prmtan_neped)|PROD(bt,cerqtit6)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(cerqtit10)|RECIP(prmtan_neped)",
+    "C_fit_best_size": 12,
+    "E1": 1055,
+    "FIT_min_E1": 0.16628151489421725,
+    "FIT_max_E1": 0.18070072184006372,
+    "SE_delta_min_E1": 5.405219272598711e-10,
+    "SE_delta_max_E1": 0.015111133012228871,
+    "admitted_within_floor": 1024,
+    "admitted_by_SE_beyond_floor": 31,
+    "floor": 0.01,
+    "floor_altered": false,
+    "transitive_closure": false,
+    "top_k": false
+  },
+  "rank_2": {
+    "E2": 1,
+    "block_worst_reference": "ID(pcdiamag3)|PROD(ece37,ece39)|PROD(fs03da,ece39)|PROD(gasa,gasa)|PROD(ip,prmtan_neped)|PROD(prmtan_neped,ece39)|RATIO(cerqrott12,cerqtit10)|RATIO(cerqtit6,ece22)|RATIO(cerqtit8,ece22)|RATIO(ip,bt)|RATIO(prmtan_neped,cerqtit10)|RECIP(bt)",
+    "block_worst_reference_value": 0.18398976661264896,
+    "BLOCK_WORST_min": 0.18398976661264896,
+    "BLOCK_WORST_max": 0.2427958957850933,
+    "block_worst_equivalent_count": 227,
+    "SHOT_P90_min": 0.21141211638847987,
+    "SHOT_P90_max_among_equivalent": 0.30942924122015636,
+    "b_star_counts": {
+      "A": 1055,
+      "B": 0,
+      "C": 0
+    },
+    "SE_delta_worst_used": true,
+    "floor_only_fallback_invoked": false,
+    "percentile_method": "linear",
+    "new_epsilon_introduced": false
+  }
+}

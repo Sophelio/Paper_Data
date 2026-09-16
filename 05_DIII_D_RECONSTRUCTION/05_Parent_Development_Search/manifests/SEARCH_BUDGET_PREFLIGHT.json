@@ -1,0 +1,64 @@
+{
+  "record_id": "SEARCH_BUDGET_PREFLIGHT_V1",
+  "computed_from": "METADATA_ONLY",
+  "no_density_value_opened": true,
+  "evaluated_utc": "2026-09-04T23:59:29.343778+00:00",
+  "search_policy_sha256": "a97e690e414da7a0ace4c70ab56e7d5851eb73f940d98e9f2a7add7f33d4b265",
+  "MAX_SUPPORT_EVALUATIONS": 300000,
+  "active_stratum_count": 127,
+  "strata_per_constructor": {
+    "C0": 7,
+    "C1": 5,
+    "C2": 28,
+    "C3": 28,
+    "C5": 4,
+    "C6": 35,
+    "C7": 20
+  },
+  "atoms_per_constructor": {
+    "C0": 66,
+    "C1": 59,
+    "C2": 2080,
+    "C3": 2457,
+    "C5": 39,
+    "C6": 3776,
+    "C7": 2301
+  },
+  "expansion_shortlist_count": {
+    "C0": 66,
+    "C1": 59,
+    "C2": 96,
+    "C3": 96,
+    "C5": 39,
+    "C6": 96,
+    "C7": 96
+  },
+  "expansion_shortlist_total": 548,
+  "strata_represented_in_shortlist": 127,
+  "every_nonempty_stratum_gets_a_slot": true,
+  "main_lane": {
+    "n_seeds": 252,
+    "growth_steps": 11,
+    "proposals_per_step_max": 127,
+    "evaluations_max": 352044,
+    "evaluations_strict_lower_bound": 335412
+  },
+  "raw_only_lane": {
+    "n_seeds": 14,
+    "growth_steps": 11,
+    "proposals_per_step_max": 7,
+    "evaluations_max": 1078,
+    "evaluations_strict_lower_bound": 294
+  },
+  "atomic_scoring_evaluations": 10778,
+  "max_projected_support_evaluations": 363900,
+  "strict_lower_bound_support_evaluations": 346484,
+  "within_budget_at_maximum": false,
+  "within_budget_even_at_strict_minimum": false,
+  "overrun_at_maximum": 63900,
+  "overrun_at_strict_minimum": 46484,
+  "verdict": "SEARCH_BUDGET_REQUIRES_HUMAN_REVIEW",
+  "policy_truncated_to_fit": false,
+  "policy_changed_to_fit": false,
+  "target_values_opened": 0
+}

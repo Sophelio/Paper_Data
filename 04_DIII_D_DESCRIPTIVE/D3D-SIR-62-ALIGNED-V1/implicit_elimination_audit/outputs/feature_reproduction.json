@@ -1,0 +1,62 @@
+{
+  "target_containing_reproduced": true,
+  "max_target_feature_reproduction_error": 0.0,
+  "per_feature": [
+    {
+      "feature": "d[betan]/d[t]",
+      "display_name": "dot beta_N",
+      "max_abs_diff": 0.0,
+      "median_max_abs_diff": 0.0,
+      "min_corr": 0.9999999999999998,
+      "status": "EXACTLY_REPRODUCED"
+    },
+    {
+      "feature": "d[kappa]/d[betan]",
+      "display_name": "D_betaN kappa",
+      "max_abs_diff": 0.0,
+      "median_max_abs_diff": 0.0,
+      "min_corr": 0.9999999999999998,
+      "status": "EXACTLY_REPRODUCED"
+    },
+    {
+      "feature": "d[kappa]/d[t]",
+      "display_name": "dot kappa",
+      "max_abs_diff": 0.0,
+      "median_max_abs_diff": 0.0,
+      "min_corr": 0.9999999999999998,
+      "status": "EXACTLY_REPRODUCED"
+    },
+    {
+      "feature": "d[li]/d[betan]",
+      "display_name": "D_betaN l_i",
+      "max_abs_diff": 0.0,
+      "median_max_abs_diff": 0.0,
+      "min_corr": 0.9999999999999998,
+      "status": "EXACTLY_REPRODUCED"
+    },
+    {
+      "feature": "d[pcdiamag3]/d[betan]",
+      "display_name": "D_betaN W_dia",
+      "max_abs_diff": 0.0,
+      "median_max_abs_diff": 0.0,
+      "min_corr": 0.9999999999999998,
+      "status": "EXACTLY_REPRODUCED"
+    },
+    {
+      "feature": "d[pcdiamag3]/d[kappa]",
+      "display_name": "D_kappa W_dia",
+      "max_abs_diff": 0.0,
+      "median_max_abs_diff": 0.0,
+      "min_corr": 0.9999999999999998,
+      "status": "EXACTLY_REPRODUCED"
+    },
+    {
+      "feature": "r[q95]/r[kappa]",
+      "display_name": "q95 / kappa",
+      "max_abs_diff": 0.0,
+      "median_max_abs_diff": 0.0,
+      "min_corr": 0.9999999999999998,
+      "status": "EXACTLY_REPRODUCED"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "canonical_run_id": "D3D-SIR-62-ALIGNED-V1",
+  "n_discharges": 62,
+  "n_samples_total": 62000,
+  "pooled_mse": 0.0033159945039900746,
+  "pooled_rmse": 0.05758467247445343,
+  "pooled_mae": 0.03116503381195452,
+  "pooled_r2": 0.9966840054960099,
+  "median_discharge_rmse": 0.05009097618657054,
+  "q25_discharge_rmse": 0.042457823407753816,
+  "q75_discharge_rmse": 0.06110673518491552,
+  "median_error_shot": 165031,
+  "mean_vector_pooled_rmse": 0.4125238315775986,
+  "mean_vector_pooled_mse": 0.17017591161946294,
+  "reference_per_discharge_rmse": 0.05758467247445343,
+  "reference_mean_vector_rmse": 0.4125238315775986,
+  "delta_per_discharge_rmse": 0.0,
+  "delta_mean_vector_rmse": 0.0,
+  "equation_key": "1_8*",
+  "artifact_status": "HISTORICAL_ORIGINAL"
+}

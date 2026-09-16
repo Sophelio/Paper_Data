@@ -1,0 +1,101 @@
+{
+  "audit_id": "MULTIPLICITY_OPPORTUNITY_AUDIT_V1",
+  "scope": "sections 22A and 22B only - the OPPORTUNITY side, which is computable from metadata",
+  "not_computable_here": {
+    "22C_seed_share_realised": "seeds are the top-2 atoms BY WITHIN-STRATUM RANK, which requires J_search",
+    "22D_explored_support_participation": "requires the search to run",
+    "22E_retained_path_participation": "requires the search to run"
+  },
+  "reason": "the stage is blocked before target access",
+  "by_family": [
+    {
+      "scientific_family": "ece_te_profile",
+      "n_primitives_in_P_hard": 33,
+      "n_admissible_atoms_with_this_ancestry": 9075,
+      "atom_ancestry_share": 0.841992948598998,
+      "family_code": "ECE",
+      "n_strata_touching_this_family": 39,
+      "stratum_share": 0.30708661417322836,
+      "projected_seeds_touching_this_family": 78,
+      "projected_seed_share": 0.30952380952380953,
+      "multiplicity_amplification_removed": 0.5324691390751884
+    },
+    {
+      "scientific_family": "cer_rotation_ti",
+      "n_primitives_in_P_hard": 14,
+      "n_admissible_atoms_with_this_ancestry": 3736,
+      "atom_ancestry_share": 0.346632028205604,
+      "family_code": "CER",
+      "n_strata_touching_this_family": 39,
+      "stratum_share": 0.30708661417322836,
+      "projected_seeds_touching_this_family": 78,
+      "projected_seed_share": 0.30952380952380953,
+      "multiplicity_amplification_removed": 0.03710821868179448
+    },
+    {
+      "scientific_family": "neutral_beams",
+      "n_primitives_in_P_hard": 10,
+      "n_admissible_atoms_with_this_ancestry": 1551,
+      "atom_ancestry_share": 0.14390424939691965,
+      "family_code": "NBI",
+      "n_strata_touching_this_family": 28,
+      "stratum_share": 0.2204724409448819,
+      "projected_seeds_touching_this_family": 56,
+      "projected_seed_share": 0.2222222222222222,
+      "multiplicity_amplification_removed": -0.07831797282530256
+    },
+    {
+      "scientific_family": "gas_injection",
+      "n_primitives_in_P_hard": 4,
+      "n_admissible_atoms_with_this_ancestry": 1046,
+      "atom_ancestry_share": 0.09704954537019855,
+      "family_code": "GAS",
+      "n_strata_touching_this_family": 28,
+      "stratum_share": 0.2204724409448819,
+      "projected_seeds_touching_this_family": 56,
+      "projected_seed_share": 0.2222222222222222,
+      "multiplicity_amplification_removed": -0.12517267685202366
+    },
+    {
+      "scientific_family": "magnetics",
+      "n_primitives_in_P_hard": 4,
+      "n_admissible_atoms_with_this_ancestry": 769,
+      "atom_ancestry_share": 0.07134904434960104,
+      "family_code": "MAG",
+      "n_strata_touching_this_family": 39,
+      "stratum_share": 0.30708661417322836,
+      "projected_seeds_touching_this_family": 78,
+      "projected_seed_share": 0.30952380952380953,
+      "multiplicity_amplification_removed": -0.2381747651742085
+    },
+    {
+      "scientific_family": "filterscope_dalpha",
+      "n_primitives_in_P_hard": 3,
+      "n_admissible_atoms_with_this_ancestry": 486,
+      "atom_ancestry_share": 0.0450918537762108,
+      "family_code": "FS",
+      "n_strata_touching_this_family": 17,
+      "stratum_share": 0.13385826771653545,
+      "projected_seeds_touching_this_family": 34,
+      "projected_seed_share": 0.1349206349206349,
+      "multiplicity_amplification_removed": -0.08982878114442411
+    },
+    {
+      "scientific_family": "density",
+      "n_primitives_in_P_hard": 2,
+      "n_admissible_atoms_with_this_ancestry": 446,
+      "atom_ancestry_share": 0.04138059009092596,
+      "family_code": "DEN",
+      "n_strata_touching_this_family": 29,
+      "stratum_share": 0.2283464566929134,
+      "projected_seeds_touching_this_family": 56,
+      "projected_seed_share": 0.2222222222222222,
+      "multiplicity_amplification_removed": -0.18084163213129625
+    }
+  ],
+  "headline": {
+    "ece_atom_ancestry_share": 0.841992948598998,
+    "ece_projected_seed_share": 0.30952380952380953,
+    "interpretation": "the stratified policy would have cut ECE's share of initial search opportunity well below its share of atomic multiplicity. That is the policy's purpose and it is demonstrable from metadata alone, independently of the block."
+  }
+}

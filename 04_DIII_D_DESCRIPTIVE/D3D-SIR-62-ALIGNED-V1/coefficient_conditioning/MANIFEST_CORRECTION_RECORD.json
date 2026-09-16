@@ -1,0 +1,9 @@
+{
+  "correction_audit_id": "D3D-SIR-62-COEFFICIENT-CONDITIONING-CORRECTION-V1",
+  "created_utc": "2026-08-05T19:54:47Z",
+  "action": "REMOVE_STALE_ACTIVE_ARTIFACT",
+  "artifact": "outputs/CONTRADICTION_REPORT.txt",
+  "archived_to": "Correction_audit/archived_artifacts/superseded_CONTRADICTION_REPORT.txt",
+  "sha256": "54a5706ad5fd889f88b8b68065c0921edeb1adbd47f84d4bae4751bb22b87f43",
+  "reason": "Stale artifact from an earlier failed mean-vector RMSE check that used the empirical mean of discharge coefficients instead of the canonical D3D_RELATION vector. Current input_validation.json reports pass=true with exact RMSE matches."
+}

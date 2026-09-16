@@ -1,0 +1,618 @@
+{
+  "record_id": "Q_REC_STAR_V1",
+  "generated_utc": "2026-09-07T04:58:19.214183+00:00",
+  "freeze_id": "D3D-SIR-S7.12-QUALIFIED-RECONSTRUCTION-RESULT-V1",
+  "Q_REC_STATUS": "QUALIFIED_POSITIVE_RECONSTRUCTION_FORMAL_PASS",
+  "CLEAN_DEMO_STATUS": "CLEAN_DEMO_NOT_MET",
+  "statuses_are_distinct_and_must_not_be_blurred": true,
+  "identity": {
+    "task_id": "q_rec",
+    "task": "block-local prequential reconstruction of a plasma observable from same-shot relational coordinates",
+    "target": "density (line-averaged)",
+    "observational_object": "FROZEN_62_DISCHARGE_DIIID_OBJECT",
+    "n_discharges": 62,
+    "blocks": {
+      "A": "cal [0,0.4] prot [0.4,0.5]",
+      "B": "cal [0,0.6] prot [0.6,0.7]",
+      "C": "cal [0,0.8] prot [0.8,0.9]"
+    },
+    "metric": "NRMSE_{s,b} = RMSE(protected) / std(y_calibration, ddof=0)",
+    "processing_eras": {
+      "earlier": 35,
+      "later": 27
+    }
+  },
+  "contract": {
+    "id": "K_REC_V2",
+    "sha256": "4fe95d45c6d6f9e0d66918cdc4cc7347276a915363b4a29501c2084d4f506407",
+    "revision_class": "MINIMAL_P_ONLY",
+    "revision_lineage_from_K_REC_V1": {
+      "changeset_sha256": "483a437bb24e288536ccf60ba3f78bfd77646fe64b923895fd9101e728c64637",
+      "component_revised": "P_rec",
+      "new_clause": "P-RANGE-SUPPORT",
+      "metric": "E_RANGE_HULL_EXCESS_OVER_CALIBRATION_RANGE_V1",
+      "tau": 1.0,
+      "tau_meaning": "application may extend beyond the calibration hull by no more than one complete calibration-range width",
+      "companion_gate": "V-RANGE",
+      "components_unchanged": null
+    }
+  },
+  "information": {
+    "I_rec": "frozen S7.3 information boundary, unchanged",
+    "predictor_qualified_finite_object_rule": "range-support applicability is instantiated from the non-target observations of the entire finite 62-discharge object",
+    "target_cross_fitted_rule": "no discharge's own target values were available to the search that selected the support under which that discharge is scored",
+    "transition_specific_boundary": {
+      "clarification": "observations admissible for coordinate construction or applicability need not be admissible for relation selection",
+      "is_a_clarification_not_a_new_definition_of_I_q": true,
+      "I_q_notation_change_required": false,
+      "precedent": "S7.6R PARTIAL_MAP_ADMISSIBILITY, an application-time predicate"
+    },
+    "not_target_leakage": true
+  },
+  "ontology_and_search": {
+    "G_rec": "typed relational ontology, constructors C0-C8, frozen S7.5/S7.5H",
+    "A_rec": "primary atomic coordinate universe, 10778 atoms",
+    "C_E2_FULL_DOMAIN": {
+      "n": 3451,
+      "of": 10778,
+      "sha256": "1d22aeac2e5fa116e2dc44606b4da8e9466a1189f75af4fe1d75989b3c3e5852",
+      "constructor_counts": {
+        "C0": 51,
+        "C1": 18,
+        "C2": 1488,
+        "C3": 382,
+        "C5": 8,
+        "C6": 965,
+        "C7": 539
+      },
+      "definition": "atoms satisfying P-RANGE-SUPPORT at tau=1 on every discharge-block cell of the object"
+    },
+    "search_policy": "SIGMA_REC_ONE_SEED_PRIMARY_V2",
+    "budget": {
+      "per_search": 300000,
+      "epoch2_total": 1800000,
+      "epoch2_used": 765758,
+      "per_fold_used": [
+        127657,
+        127665,
+        127643,
+        127440,
+        127764,
+        127589
+      ]
+    },
+    "explored_frontier": {
+      "epoch_2_per_fold_unique_supports": [
+        105548,
+        105112,
+        101183,
+        99632,
+        105365,
+        103940
+      ],
+      "epoch_2_E1_sizes": [
+        2639,
+        3065,
+        2933,
+        8502,
+        6907,
+        1898
+      ],
+      "epoch_1_selection_domain": 162845,
+      "descriptive_full_object_frontier": 102100
+    },
+    "global_optimality_claim": false,
+    "seeds_per_stratum": 1,
+    "second_seed": false
+  },
+  "utility": {
+    "id": "U_REC_OPERATIONAL_V1",
+    "unchanged": true,
+    "ranks": [
+      "fit",
+      "stability",
+      "parsimony",
+      "conditioning",
+      "support stability"
+    ],
+    "practical_equivalence": "delta_equiv = max(SE_delta, 0.01)",
+    "binding_rank_in_every_epoch2_fold": 2
+  },
+  "selected_representations": {
+    "structure": "a qualified cross-fitted representation family, NOT one uniquely identified (C*, R*)",
+    "family": "{(C_k*, R_k*)}_{k=1}^{6}",
+    "notation_note": "conceptual only; do NOT introduce this notation into the manuscript automatically - determine first whether prose suffices",
+    "n": 6,
+    "all_size": 12,
+    "any_two_identical": false,
+    "folds": [
+      {
+        "fold": 0,
+        "support_id": "ID(pcdiamag3)|PROD(prmtan_neped,cerqtit6)|RATIO(ece21,cerqtit10)|RATIO(ece39,bt)|RATIO(fs03da,cerqtit3)|RATIO(ip,bt)|RATIO(prmtan_neped,cerqtit3)|RECIP(cerqtit10)|RECIP(cerqtit11)|RECIP(ece1)|RECIP(ece38)|RECIP(ece39)",
+        "support_size": 12,
+        "sha256": "4654cd92613002c10ee9d97a480ae6a04dd9682d34fa802ef630d3d60258c8ac",
+        "coordinates": [
+          "ID(pcdiamag3)",
+          "PROD(prmtan_neped,cerqtit6)",
+          "RATIO(ece21,cerqtit10)",
+          "RATIO(ece39,bt)",
+          "RATIO(fs03da,cerqtit3)",
+          "RATIO(ip,bt)",
+          "RATIO(prmtan_neped,cerqtit3)",
+          "RECIP(cerqtit10)",
+          "RECIP(cerqtit11)",
+          "RECIP(ece1)",
+          "RECIP(ece38)",
+          "RECIP(ece39)"
+        ],
+        "n_train": 51,
+        "n_heldout": 11,
+        "dev_FIT": 0.1755889803364475,
+        "COND_MEDIAN": 2.1507373005736428,
+        "BOOT_SELECTION_FREQ": 0.121
+      },
+      {
+        "fold": 1,
+        "support_id": "ID(pcdiamag3)|PROD(cerqtit8,cerqtit8)|PROD(ece37,ece39)|PROD(ip,gasc)|PROD(pinj,cerqrott6)|RATIO(ece21,cerqtit10)|RATIO(fs03da,cerqtit3)|RATIO(ip,ece39)|RATIO(pinj_33r,prmtan_neped)|RATIO(prmtan_neped,ece38)|RATIO(tinj,ece20)|RECIP(cerqtit10)",
+        "support_size": 12,
+        "sha256": "c3206098d6177f64aeac55049feda714d904d155d39e382db3b4cc9683136adb",
+        "coordinates": [
+          "ID(pcdiamag3)",
+          "PROD(cerqtit8,cerqtit8)",
+          "PROD(ece37,ece39)",
+          "PROD(ip,gasc)",
+          "PROD(pinj,cerqrott6)",
+          "RATIO(ece21,cerqtit10)",
+          "RATIO(fs03da,cerqtit3)",
+          "RATIO(ip,ece39)",
+          "RATIO(pinj_33r,prmtan_neped)",
+          "RATIO(prmtan_neped,ece38)",
+          "RATIO(tinj,ece20)",
+          "RECIP(cerqtit10)"
+        ],
+        "n_train": 51,
+        "n_heldout": 11,
+        "dev_FIT": 0.1771527291007292,
+        "COND_MEDIAN": 1.7077068504367532,
+        "BOOT_SELECTION_FREQ": 0.007
+      },
+      {
+        "fold": 2,
+        "support_id": "ID(ece39)|ID(pcdiamag3)|PROD(fs04,cerqrott8)|PROD(pinj,ece36)|RATIO(cerqrott12,cerqtit10)|RATIO(ece21,cerqtit10)|RATIO(ip,bt)|RATIO(ip,cerqtit10)|RATIO(ip,ece39)|RATIO(prmtan_neped,cerqtit3)|RATIO(tinj,ece20)|RECIP(bt)",
+        "support_size": 12,
+        "sha256": "08fd3481eeea2e70375c7c346c02b32195501349da0250dbe900a2910e35781d",
+        "coordinates": [
+          "ID(ece39)",
+          "ID(pcdiamag3)",
+          "PROD(fs04,cerqrott8)",
+          "PROD(pinj,ece36)",
+          "RATIO(cerqrott12,cerqtit10)",
+          "RATIO(ece21,cerqtit10)",
+          "RATIO(ip,bt)",
+          "RATIO(ip,cerqtit10)",
+          "RATIO(ip,ece39)",
+          "RATIO(prmtan_neped,cerqtit3)",
+          "RATIO(tinj,ece20)",
+          "RECIP(bt)"
+        ],
+        "n_train": 52,
+        "n_heldout": 10,
+        "dev_FIT": 0.1785797938987061,
+        "COND_MEDIAN": 1.765567776803078,
+        "BOOT_SELECTION_FREQ": 0.009
+      },
+      {
+        "fold": 3,
+        "support_id": "ID(pcdiamag3)|PROD(ece37,ece39)|PROD(prmtan_neped,cerqtit6)|PROD(prmtan_neped,pinj_30l)|RATE_OVER_LEVEL(cerqrott3|prmtan_neped)|RATE_OVER_LEVEL(ip|ece39)|RATIO(ece21,cerqtit10)|RATIO(pinj_33r,cerqtit10)|RATIO(prmtan_neped,cerqtit3)|RATIO(tinj,ece20)|RECIP(bt)|RECIP(cerqtit10)",
+        "support_size": 12,
+        "sha256": "e69c6efc20b77d1cd2b1cb87d167621fa8be08b597e3cff805b4360a3839c44a",
+        "coordinates": [
+          "ID(pcdiamag3)",
+          "PROD(ece37,ece39)",
+          "PROD(prmtan_neped,cerqtit6)",
+          "PROD(prmtan_neped,pinj_30l)",
+          "RATE_OVER_LEVEL(cerqrott3|prmtan_neped)",
+          "RATE_OVER_LEVEL(ip|ece39)",
+          "RATIO(ece21,cerqtit10)",
+          "RATIO(pinj_33r,cerqtit10)",
+          "RATIO(prmtan_neped,cerqtit3)",
+          "RATIO(tinj,ece20)",
+          "RECIP(bt)",
+          "RECIP(cerqtit10)"
+        ],
+        "n_train": 52,
+        "n_heldout": 10,
+        "dev_FIT": 0.1747744844309268,
+        "COND_MEDIAN": 1.4431835813857412,
+        "BOOT_SELECTION_FREQ": 0.001
+      },
+      {
+        "fold": 4,
+        "support_id": "ID(pcdiamag3)|LEVEL_RATE(cerqrott12|ece35)|PROD(ece37,ece39)|PROD(prmtan_neped,gasc)|RATIO(ece21,cerqtit10)|RATIO(fs03da,cerqtit3)|RATIO(ip,ece39)|RATIO(pinj,bt)|RATIO(pinj_33r,cerqtit10)|RATIO(prmtan_neped,cerqtit3)|RATIO(tinj,ece20)|RECIP(cerqtit10)",
+        "support_size": 12,
+        "sha256": "688791d4cb56a0ee96019a96ff99d7a66bd1027a41e65b91f4fe7364d4dc94af",
+        "coordinates": [
+          "ID(pcdiamag3)",
+          "LEVEL_RATE(cerqrott12|ece35)",
+          "PROD(ece37,ece39)",
+          "PROD(prmtan_neped,gasc)",
+          "RATIO(ece21,cerqtit10)",
+          "RATIO(fs03da,cerqtit3)",
+          "RATIO(ip,ece39)",
+          "RATIO(pinj,bt)",
+          "RATIO(pinj_33r,cerqtit10)",
+          "RATIO(prmtan_neped,cerqtit3)",
+          "RATIO(tinj,ece20)",
+          "RECIP(cerqtit10)"
+        ],
+        "n_train": 52,
+        "n_heldout": 10,
+        "dev_FIT": 0.1624954959769256,
+        "COND_MEDIAN": 1.6598571476311303,
+        "BOOT_SELECTION_FREQ": 0.023
+      },
+      {
+        "fold": 5,
+        "support_id": "ID(pcdiamag3)|LEVEL_RATE(cerqrott12|ece36)|PROD(fs04,cerqrott8)|PROD(ip,ece39)|PROD(pinj,ece36)|PROD(prmtan_neped,cerqtit6)|RATIO(ece21,cerqtit10)|RATIO(ip,bt)|RATIO(ip,cerqtit10)|RATIO(prmtan_neped,cerqtit3)|RATIO(tinj,ece20)|RECIP(bt)",
+        "support_size": 12,
+        "sha256": "358854514ab519b94437227dc2ab8fe4c2a435ccbc2c355c1cdc8afc88ecf1be",
+        "coordinates": [
+          "ID(pcdiamag3)",
+          "LEVEL_RATE(cerqrott12|ece36)",
+          "PROD(fs04,cerqrott8)",
+          "PROD(ip,ece39)",
+          "PROD(pinj,ece36)",
+          "PROD(prmtan_neped,cerqtit6)",
+          "RATIO(ece21,cerqtit10)",
+          "RATIO(ip,bt)",
+          "RATIO(ip,cerqtit10)",
+          "RATIO(prmtan_neped,cerqtit3)",
+          "RATIO(tinj,ece20)",
+          "RECIP(bt)"
+        ],
+        "n_train": 52,
+        "n_heldout": 10,
+        "dev_FIT": 0.1653564880635706,
+        "COND_MEDIAN": 1.5664269202805423,
+        "BOOT_SELECTION_FREQ": 0.072
+      }
+    ],
+    "estimator": "DEVELOPMENT_RELATION_OLS_V1 - calibration-only standardization, fitted intercept, affine OLS, discharge/block-local coefficients, no global coefficients",
+    "descriptive_realization": {
+      "available": true,
+      "machine_name": "C_E2_ALL_DESC",
+      "support_id": "ID(pcdiamag3)|PROD(ece37,ece39)|PROD(pinj,pinj_30l)|RATIO(ece21,cerqtit10)|RATIO(fs03da,cerqtit3)|RATIO(gasc,cerqtit10)|RATIO(gasc,cerqtit11)|RATIO(ip,ece39)|RATIO(pinj_33r,cerqtit10)|RATIO(prmtan_neped,ece38)|RATIO(tinj,ece20)|RECIP(cerqtit10)",
+      "sha256": "e7935c35fd303be4fadff5637799b943f28a42c2b7944fc6d503b0dacd029645",
+      "size": 12,
+      "role": "REPRESENTATIVE_FULL_OBJECT_DESCRIPTIVE_REALIZATION",
+      "is_externally_validated": false,
+      "is_held_out": false,
+      "is_canonical": false,
+      "is_the_support_that_produced_the_cross_fitted_metric": false,
+      "selected_after_the_qualification_verdict_was_frozen": true,
+      "cannot_alter_the_qualified_outcome": true
+    }
+  },
+  "qualification": {
+    "protocol": "PREDICTOR_QUALIFIED_TARGET_CROSS_FITTED_RECONSTRUCTION",
+    "unit": "discharge",
+    "n": 62,
+    "out_of_fold": true,
+    "method_summaries": {
+      "REL": {
+        "mean": 0.18911466503138652,
+        "median": 0.1514612356828322,
+        "p90": 0.29590270276661684,
+        "max": 0.91988453225983,
+        "earlier_mean": 0.21533350276088603,
+        "later_mean": 0.15512728278944277
+      },
+      "B0": {
+        "mean": 0.9536033810473656,
+        "median": 0.9365107148819909,
+        "p90": 1.2999216347783897,
+        "max": 1.7027787494803033,
+        "earlier_mean": 0.9170266847761074,
+        "later_mean": 1.0010176169545526
+      },
+      "B1": {
+        "mean": 0.21642228451057907,
+        "median": 0.17436254458180817,
+        "p90": 0.42607101808019227,
+        "max": 0.6186178248216773,
+        "earlier_mean": 0.20771977688323165,
+        "later_mean": 0.22770331291639984
+      },
+      "B1A": {
+        "mean": 0.356254034308349,
+        "median": 0.3329431591365517,
+        "p90": 0.5656915503195548,
+        "max": 0.8776916672658365,
+        "earlier_mean": 0.3398290167408911,
+        "later_mean": 0.377545723747646
+      },
+      "B2": {
+        "mean": 0.28514639554746146,
+        "median": 0.1972070932150879,
+        "p90": 0.6517372760204422,
+        "max": 1.256006521899823,
+        "earlier_mean": 0.2749413571078915,
+        "later_mean": 0.2983751490802374
+      },
+      "B3": {
+        "mean": 0.34637782828479585,
+        "median": 0.19597670654307187,
+        "p90": 0.8279141065777071,
+        "max": 2.1109070645030856,
+        "earlier_mean": 0.4063293802624391,
+        "later_mean": 0.2686628534989623
+      },
+      "H0": {
+        "mean": 0.284248857671867,
+        "median": 0.1914474724954019,
+        "p90": 0.6500456865749545,
+        "max": 1.2323499826771365,
+        "earlier_mean": 0.2738236543992747,
+        "later_mean": 0.29776301006226435
+      }
+    },
+    "paired_differences": {
+      "B0": {
+        "mean_delta": -0.764488716015979,
+        "median_delta": -0.767320619784635,
+        "wins": 62,
+        "ties": 0,
+        "losses": 0,
+        "earlier_mean_delta": -0.7016931820152212,
+        "later_mean_delta": -0.8458903341651096
+      },
+      "B1": {
+        "mean_delta": -0.027307619479192535,
+        "median_delta": -0.012204355793874001,
+        "wins": 32,
+        "ties": 5,
+        "losses": 25,
+        "earlier_mean_delta": 0.007613725877654367,
+        "later_mean_delta": -0.07257603012695703
+      },
+      "B1A": {
+        "mean_delta": -0.16713936927696244,
+        "median_delta": -0.13333850256128424,
+        "wins": 55,
+        "ties": 2,
+        "losses": 5,
+        "earlier_mean_delta": -0.12449551398000518,
+        "later_mean_delta": -0.22241844095820332
+      },
+      "B2": {
+        "mean_delta": -0.09603173051607497,
+        "median_delta": -0.03070943443469261,
+        "wins": 39,
+        "ties": 7,
+        "losses": 16,
+        "earlier_mean_delta": -0.05960785434700547,
+        "later_mean_delta": -0.1432478662907947
+      },
+      "B3": {
+        "mean_delta": -0.1572631632534094,
+        "median_delta": -0.031226023791692155,
+        "wins": 37,
+        "ties": 4,
+        "losses": 21,
+        "earlier_mean_delta": -0.1909958775015531,
+        "later_mean_delta": -0.11353557070951953
+      },
+      "H0": {
+        "mean_delta": -0.09513419264048038,
+        "median_delta": -0.0330695241679185,
+        "wins": 37,
+        "ties": 7,
+        "losses": 18,
+        "earlier_mean_delta": -0.058490151638388645,
+        "later_mean_delta": -0.14263572727282153
+      }
+    },
+    "Delta_0": -0.764488716015979,
+    "Delta_1": -0.027307619479192535,
+    "vs_raw_representations": {
+      "B2_raw_ridge_78": -0.09603173051607497,
+      "B3_raw_histgb_78": -0.1572631632534094,
+      "H0_hardened_raw_ridge_70": -0.09513419264048038
+    },
+    "vs_persistence_record": {
+      "wins": 32,
+      "ties": 5,
+      "losses": 25
+    },
+    "era": {
+      "Delta_0_earlier": -0.7016931820152212,
+      "direction_0_earlier": "MATERIAL_IMPROVEMENT",
+      "Delta_1_earlier": 0.007613725877654367,
+      "direction_1_earlier": "PRACTICAL_TIE",
+      "Delta_0_later": -0.8458903341651096,
+      "direction_0_later": "MATERIAL_IMPROVEMENT",
+      "Delta_1_later": -0.07257603012695703,
+      "direction_1_later": "MATERIAL_IMPROVEMENT",
+      "outcome": "PASS_WITH_QUALIFICATION",
+      "pooled_V3_passed": true,
+      "era_counts": {
+        "earlier": 35,
+        "later": 27
+      }
+    },
+    "gate_table": {
+      "V_RANGE": "PASS",
+      "V3": "PASS",
+      "V6": "PASS_WITH_QUALIFICATION",
+      "V1": "INHERITED_PASS",
+      "V2": "PASS",
+      "V4": "PASS",
+      "V5": "PASS",
+      "V7": "PASS",
+      "V8": "PASS",
+      "V10": "INHERITED_PASS"
+    },
+    "V_RANGE": {
+      "result": "PASS",
+      "checks": 2232,
+      "failures": 0
+    },
+    "discharges_above_NRMSE_1": 0,
+    "worst_discharge": {
+      "shot": "187024",
+      "REL_nrmse": 0.91988453225983
+    },
+    "FORMAL": "FORMAL_PASS",
+    "CLEAN_DEMO": "CLEAN_DEMO_NOT_MET"
+  },
+  "support_interpretation": {
+    "non_unique_supports": true,
+    "canonical_equation": false,
+    "mean_pairwise_jaccard": 0.28524448375841566,
+    "distinct_coordinates_across_six": 35,
+    "coordinates_in_all_six": [
+      "ID(pcdiamag3)",
+      "RATIO(ece21,cerqtit10)"
+    ],
+    "seventh_independent_search_produced_a_seventh_distinct_support": true,
+    "principle": "observational adequacy does not imply unique mathematical representation"
+  },
+  "provenance": {
+    "S7.9": "Discovery Epoch 1 selected a development representation under K_REC_V1",
+    "S7.10": "frozen external qualification FAILED",
+    "S7.11": "provenance localized the failure to extreme extrapolation of PROD(gasa,gasa)",
+    "S7.R1": "an operational-state explanation was TESTED target-blindly and REFUTED",
+    "S7.K2": "minimal contract revision: a generic observational range-support predicate",
+    "S7.E2.0": "Epoch-2 protocol and six-fold resampling frozen; applicability risk disclosed prospectively",
+    "S7.E2.0A": "transition-specific information boundary clarified; tau_train retired",
+    "S7.E2.1": "fresh cross-fitted discovery under K_REC_V2 formally PASSED",
+    "S7.E2.2": "full-object descriptive representation frozen for exposition"
+  },
+  "epoch_1_to_epoch_2": {
+    "epoch1_mean": 0.7423647781201324,
+    "epoch2_mean": 0.18911466503138652,
+    "epoch1_max": 11.95,
+    "epoch2_max": 0.91988453225983,
+    "epoch1_discharges_above_1": 2,
+    "epoch2_discharges_above_1": 0,
+    "shot_187019": {
+      "epoch1": 11.95,
+      "epoch2": 0.297
+    },
+    "shot_187022": {
+      "epoch1": 11.77,
+      "epoch2": 0.436
+    },
+    "causal_language_policy": {
+      "permitted": "The revised range-support-qualified discovery procedure eliminated the catastrophic extrapolation tail observed in Epoch 1.",
+      "also_permitted": "The disappearance of the failure mode is consistent with the reconciliation having localized the relevant contract defect.",
+      "forbidden": "K2 proved the range-support rule caused the improvement.",
+      "reason": "too many things differ between Epoch 1 and Epoch 2 - the contract, the basis, the validation geometry and the supports all changed"
+    }
+  },
+  "limitations": {
+    "record_id": "Q_REC_LIMITATIONS_V1",
+    "generated_utc": "2026-09-07T04:58:19.214183+00:00",
+    "note": "these limitations are PART OF Q_rec*, not footnotes outside it",
+    "claim_boundary": {
+      "supported": "Within the predictor-qualified frozen 62-discharge observational object, relational supports discovered without a discharge's own target values reconstruct that discharge nontrivially relative to the frozen baselines.",
+      "not_supported": [
+        "virgin external validation",
+        "untouched external validation",
+        "unknown-predictor-distribution transfer",
+        "fully inductive predictor generalization",
+        "future-discharge applicability",
+        "zero-shot transfer",
+        "universal DIII-D relation",
+        "universal DIII-D generalization",
+        "cross-device generalization",
+        "unique physical equation",
+        "universal coefficient vector"
+      ]
+    },
+    "predictor_side_finite_object_qualification": {
+      "statement": "predictor-side applicability was instantiated from the non-target observations of the entire finite 62-discharge object",
+      "consequence": "Epoch 2 tests transfer of the TARGET RELATIONSHIP to withheld targets, not transfer of predictor geometry to genuinely unseen discharges",
+      "authority": "E2_0A_PROTOCOL, PREDICTOR_QUALIFIED_TARGET_CROSS_FITTED_RECONSTRUCTION"
+    },
+    "era_asymmetry": {
+      "earlier": {
+        "n": 35,
+        "Delta_1": 0.007613725877654367,
+        "direction": "PRACTICAL_TIE"
+      },
+      "later": {
+        "n": 27,
+        "Delta_1": -0.07257603012695703,
+        "direction": "MATERIAL_IMPROVEMENT"
+      },
+      "forbidden_statement": "both eras improve materially",
+      "required": "the pooled pass is carried by the later era"
+    },
+    "modest_persistence_margin": {
+      "Delta_1": -0.027307619479192535,
+      "median_delta": -0.012204355793874001,
+      "wins": 32,
+      "ties": 5,
+      "losses": 25,
+      "description": "MODEST",
+      "forbidden_headline": "SIR dramatically beats persistence",
+      "context": "persistence is a demanding baseline for a slowly varying target; the Epoch-1 sensitivity analysis found no support in the development-equivalent family beating persistence by more than 0.0287, which suggests the margin is a property of the object and task rather than of any one representation"
+    },
+    "clean_demo_not_met": {
+      "status": "CLEAN_DEMO_NOT_MET",
+      "criteria_missed": [
+        "Delta_1 <= -0.05 (achieved -0.027308)",
+        "material improvement vs B1 in BOTH eras"
+      ],
+      "criteria_met": [
+        "FORMAL_PASS",
+        "full cross-fitted range support",
+        "no discharge above NRMSE 1.0"
+      ],
+      "threshold_frozen_before_the_run": true,
+      "threshold_adjusted": false,
+      "tier_promoted_to_a_gate": false
+    },
+    "support_non_uniqueness": {
+      "n_supports": 6,
+      "all_size": 12,
+      "any_two_identical": false,
+      "mean_pairwise_jaccard": 0.28524448375841566,
+      "distinct_coordinates": 35,
+      "in_all_six": [
+        "ID(pcdiamag3)",
+        "RATIO(ece21,cerqtit10)"
+      ],
+      "seventh_search_E2_2": {
+        "identical_to_any_fold_support": false,
+        "mean_jaccard_with_folds": 0.31269841269841264
+      },
+      "conclusion": "STABLE_RECONSTRUCTION_UTILITY_WITH_NON_UNIQUE_RELATIONAL_SUPPORTS",
+      "canonical_equation_claim": false
+    },
+    "coefficient_qualifications": {
+      "locally_calibrated": "coefficients are calibrated per discharge and per block; support transfer does not imply coefficient transfer",
+      "universal_coefficient_vector": false,
+      "pcdiamag3": "UNCALIBRATED_SIGNAL; its fitted coefficient has no certified physical-dimensional interpretation",
+      "prmtan_neped": "a same-family observable whose provenance is certified independent of the target signal under the frozen information boundary; this does NOT establish physical or statistical independence from line-averaged density",
+      "gas_actuators": "gasa...gasd are actuator command voltages, not fueling rates",
+      "flagged_primitives_in_C_E2_ALL_DESC": [
+        "gasc",
+        "pcdiamag3",
+        "prmtan_neped"
+      ]
+    },
+    "search_boundary": {
+      "global_optimality_claim": false,
+      "proposals_epoch2": 765758,
+      "budget_epoch2": 1800000,
+      "unsearched_status": "ADMISSIBLE_UNSEARCHED"
+    }
+  },
+  "closure": {
+    "Q_REC_BRANCH_CLOSED": true,
+    "NO_FURTHER_DISCOVERY_EPOCH_AUTHORIZED": true,
+    "EPOCH2_IS_FINAL_QREC_ATTEMPT": true
+  }
+}

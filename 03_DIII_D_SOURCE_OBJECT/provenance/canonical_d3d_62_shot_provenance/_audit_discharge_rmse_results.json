@@ -1,0 +1,45 @@
+{
+  "export_pooled_rmse": 0.4125238315775986,
+  "per_shot_ols_pooled_rmse": 0.05758467247445343,
+  "sqrt_sir_mse_example": 0.05758463336689746,
+  "hashes": {
+    "discharge_validation.py": {
+      "path": "D:\\sir-web\\dash_app\\utils\\discharge_validation.py",
+      "sha256": "8153f0217ceb039e4d6fda1052a576669bb5217d3c56166420444f664dc3cc0a"
+    },
+    "provider": {
+      "path": "D:\\sir-web\\Paper Examples\\Relational Coordinates for Multimodal Plasma Observations\\diiid_elm_data_provider.py",
+      "sha256": "afc42723426bde480fa1fc0746fa6e85d653fe3d8fcf7c28564cb7a066dad5ff"
+    },
+    "summary_txt": {
+      "path": "D:\\sir-web\\figures\\d3d_discharge_validation_summary.txt",
+      "sha256": "63466d679d50d3bda410a01130fbd97c7938091af0a3adf1120662dce67bd34a"
+    },
+    "metrics_csv": {
+      "path": "D:\\sir-web\\figures\\d3d_discharge_validation_metrics.csv",
+      "sha256": "0166636dbd02d85957cb0745af1292a7e83f0f19a3d0f7feec4ae8cce0f3028a"
+    },
+    "manifest": {
+      "path": "D:\\sir-web\\FEATURE_EXPORTS\\pcdiamag3_none_2026-07-17_05-21-18PM_CDT_raw_final_paper_normalized\\manifest.json",
+      "sha256": "c70dac99847cc63b87f4de0362dca8bbcfd05049b17c331112fd687353c217c0"
+    },
+    "sample_parquet": {
+      "path": "D:\\sir-web\\FEATURE_EXPORTS\\pcdiamag3_none_2026-07-17_05-21-18PM_CDT_raw_final_paper_normalized\\shot_155537_resampled__model.parquet",
+      "sha256": "a78317e5e6a9cb39e310917cf03fbeba3ffcb2a395ee4b36b055e8f6f98b9c51"
+    }
+  },
+  "d3d_relation": {
+    "target_term": "d[pcdiamag3]/d[t]",
+    "intercept": -5.773e-19,
+    "terms": {
+      "d[pcdiamag3]/d[kappa]": 0.248,
+      "d[kappa]/d[t]": 0.8928,
+      "r[q95]/r[kappa]": -0.01062,
+      "d[pcdiamag3]/d[betan]": 1.075,
+      "d[kappa]/d[betan]": -1.07,
+      "d[betan]/d[t]": 0.05091,
+      "d[li]/d[betan]": -0.015
+    }
+  },
+  "n_files": 62
+}

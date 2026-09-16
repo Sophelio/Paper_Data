@@ -1,0 +1,174 @@
+{
+  "record_id": "V_REC_EXTERNAL_RESULTS_V1",
+  "generated_utc": "2026-09-05T22:51:05.752588+00:00",
+  "cohort": {
+    "n": 42,
+    "earlier": 24,
+    "later": 18,
+    "evaluable": 42,
+    "blocks_total": 126,
+    "blocks_eligible": 126
+  },
+  "method_means": {
+    "REL": 0.7423647781201324,
+    "B0": 0.9224598049718935,
+    "B1": 0.21027421611172853,
+    "B1A": 0.3504456748161989,
+    "B2": 0.2804062944532819,
+    "B3": 0.30596392629460667,
+    "H0": 0.2828003934507547
+  },
+  "method_medians": {
+    "REL": 0.16986162832793064,
+    "B0": 0.9100421626873159,
+    "B1": 0.17650089393078025,
+    "B1A": 0.3329431591365517,
+    "B2": 0.1893354388610517,
+    "B3": 0.18062686300617004,
+    "H0": 0.18464462438807194
+  },
+  "V3": {
+    "Delta_0": -0.18009502685176143,
+    "Delta_1": 0.5320905620084037,
+    "threshold": -0.01,
+    "pass": false,
+    "ci_role": "reported, not a significance threshold",
+    "lodo_cohorts_passing": 0,
+    "lodo_n": 42,
+    "verdict_flips_under_any_single_omission": false
+  },
+  "V6": {
+    "Delta_0_earlier": 0.2907794131889924,
+    "direction_0_earlier": "MATERIAL_ADVERSE",
+    "Delta_1_earlier": 0.9538968586776063,
+    "direction_1_earlier": "MATERIAL_ADVERSE",
+    "Delta_0_later": -0.8079276135727665,
+    "direction_0_later": "MATERIAL_IMPROVEMENT",
+    "Delta_1_later": -0.03031783355053282,
+    "direction_1_later": "MATERIAL_IMPROVEMENT",
+    "outcome": "FAIL",
+    "pooled_V3_passed": false,
+    "note": "the three-valued S7.2C outcome schema is conditioned on pooled V3 passing; pooled V3 failed, so V6 resolves to FAIL under the parent four-state gate vocabulary. V6 may not rescue V3. Era results are reported in full regardless."
+  },
+  "S_pers": {
+    "n_defined": 42,
+    "n_undefined": 0,
+    "mean": -402.51878339764835,
+    "median": 0.0943138301520938,
+    "earlier_mean": -704.372247107278,
+    "later_mean": -0.047498451475491005,
+    "n_positive": 24,
+    "interpretation": "> 0 improves on persistence; < 0 worse than persistence",
+    "is_a_V3_threshold": false,
+    "replaces_NRMSE": false
+  },
+  "gates": [
+    {
+      "gate": "V1",
+      "name": "information boundary",
+      "mandatory": true,
+      "authoritative_rule": "no target leakage; no admitted quantity with unresolved target ancestry",
+      "evidence": "all 13 primitive ancestors of C_dev_star are certified_independent_of_target under the frozen S7.3R boundary; all 12 coordinates carry TRANSITIVE_FROM_TARGET_INDEPENDENT_BOUNDARY",
+      "result": "PASS",
+      "qualification": "prmtan_neped is a density-family diagnostic. It is provenance-certified independent of the target SIGNAL. This does NOT establish physical or statistical independence from line-averaged density.",
+      "claim_consequence": "no leakage-based invalidation"
+    },
+    {
+      "gate": "V2",
+      "name": "development-only discovery",
+      "mandatory": true,
+      "authoritative_rule": "target, ontology, support, estimator and thresholds chosen without external outcomes",
+      "evidence": "S7.9 V2_EVIDENCE_COMPLETE; representation lock precedes baseline tuning; PRE_EXTERNAL_MODEL_FREEZE verified 13/13 before first external access at 2026-09-05T22:48:51.998142+00:00",
+      "result": "PASS",
+      "qualification": "",
+      "claim_consequence": "discovery discipline intact"
+    },
+    {
+      "gate": "V3",
+      "name": "nontrivial skill vs B0/B1",
+      "mandatory": true,
+      "authoritative_rule": "Delta_0 <= -0.01 AND Delta_1 <= -0.01",
+      "evidence": "Delta_0 = -0.180095 (meets), Delta_1 = +0.532091 (does NOT meet)",
+      "result": "FAIL",
+      "qualification": "the relational representation is materially WORSE than the persistence baseline on the external cohort",
+      "claim_consequence": "MANDATORY FAILURE: the primary q_rec result may NOT be presented as a successful nontrivial structural-transfer result"
+    },
+    {
+      "gate": "V4",
+      "name": "fair raw comparison vs B2/B3",
+      "mandatory": true,
+      "authoritative_rule": "fair comparison on identical information and geometry; fairness, not victory",
+      "evidence": "identical 42-discharge cohort, identical calibration and protected rows, identical target, identical calibration-fitted preprocessing, frozen information boundary, zero external hyperparameter tuning (B2 alpha=1, H0 alpha=1, B3 defaults + random_state, all frozen pre-external)",
+      "result": "PASS",
+      "qualification": "REL is materially worse than B2, B3 and H0; V4 does not require victory",
+      "claim_consequence": "the comparison is valid; no accuracy-superiority claim is available"
+    },
+    {
+      "gate": "V5",
+      "name": "external structural transfer",
+      "mandatory": true,
+      "authoritative_rule": "support frozen and hashed before any external evaluation",
+      "evidence": "PRE_EXTERNAL_MODEL_FREEZE frozen 2026-09-05T20:32:08.992754+00:00, first external value access 2026-09-05T22:48:51.998142+00:00, strict ordering verified; local external calibration changed coefficients only, never support or coordinate definitions",
+      "result": "PASS",
+      "qualification": "V5 governs freeze discipline, not performance; performance is V3",
+      "claim_consequence": "the transfer test was conducted honestly"
+    },
+    {
+      "gate": "V6",
+      "name": "processing-era robustness",
+      "mandatory": true,
+      "authoritative_rule": "external results reported separately for 24 earlier and 18 later discharges",
+      "evidence": "{\"Delta_0_earlier\": 0.2907794131889924, \"direction_0_earlier\": \"MATERIAL_ADVERSE\", \"Delta_1_earlier\": 0.9538968586776063, \"direction_1_earlier\": \"MATERIAL_ADVERSE\", \"Delta_0_later\": -0.8079276135727665, \"direction_0_later\": \"MATERIAL_IMPROVEMENT\", \"Delta_1_later\": -0.03031783355053282, \"direction_1_later\": \"MATERIAL_IMPROVEMENT\"}",
+      "result": "FAIL",
+      "qualification": "the three-valued S7.2C outcome schema is conditioned on pooled V3 passing; pooled V3 failed, so V6 resolves to FAIL under the parent four-state gate vocabulary. V6 may not rescue V3. Era results are reported in full regardless.",
+      "claim_consequence": "no era supports the claim; V6 may not rescue V3"
+    },
+    {
+      "gate": "V7",
+      "name": "common support",
+      "mandatory": true,
+      "authoritative_rule": "cross-representation comparisons use identical scored samples",
+      "evidence": "all 126 external blocks eligible; every method scored on identical protected rows; 0 ineligible blocks; no selective deletion",
+      "result": "PASS",
+      "qualification": "",
+      "claim_consequence": "paired comparisons are valid"
+    },
+    {
+      "gate": "V8",
+      "name": "discharge-level inference",
+      "mandatory": true,
+      "authoritative_rule": "discharge, not time sample, is the independent unit",
+      "evidence": "blocks aggregated to discharge before every inference; all paired differences and all bootstrap resampling operate on the 42 discharges",
+      "result": "PASS",
+      "qualification": "",
+      "claim_consequence": "precision is not overstated"
+    },
+    {
+      "gate": "V9",
+      "name": "sensitivity",
+      "mandatory": false,
+      "authoritative_rule": "no result depends catastrophically on one discharge, block or realization",
+      "evidence": "LODO computed and reported; S7.11 sensitivities predeclared and hashed before first external access but NOT executed",
+      "result": "PENDING_S7.11",
+      "qualification": "non-mandatory",
+      "claim_consequence": "not resolved here"
+    },
+    {
+      "gate": "V10",
+      "name": "numerical provenance",
+      "mandatory": true,
+      "authoritative_rule": "no claim rests on interpolation-created resolution without qualification",
+      "evidence": "S7.3R/S7.4 V2 source-cadence record carried unchanged; ID(pcdiamag3) carries UNCALIBRATED_SIGNAL; no aliasing or upsample flag set on any selected coordinate",
+      "result": "PASS",
+      "qualification": "ID(pcdiamag3) is uncalibrated digitiser output; its fitted coefficient has no certified physical-dimensional interpretation. Recorded whether or not the coordinate appears influential.",
+      "claim_consequence": "interpretation qualified, not invalidated"
+    }
+  ],
+  "mandatory_gates_failed": [
+    "V3",
+    "V6"
+  ],
+  "PRIMARY_EXTERNAL_RESULT": "NO_QUALIFIED_NONTRIVIAL_STRUCTURAL_TRANSFER",
+  "rescue_attempted": false,
+  "support_changed_after_external_access": false
+}

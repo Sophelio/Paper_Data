@@ -1,0 +1,125 @@
+{
+  "schema_id": "S7.2-TARGET-ELIGIBILITY-V1",
+  "applied_at": "S7.3",
+  "produces_ranking_at_S7_2": false,
+  "class_policy": {
+    "eligible": [
+      "DIRECT_MEASUREMENT with resolved physical meaning and unit",
+      "DIAGNOSTIC_RECONSTRUCTION with resolved physical meaning and unit"
+    ],
+    "normally_excluded": {
+      "CONTROL_COMMAND_OR_ACTUATION": {
+        "n": 14,
+        "reason": "reconstructing an actuator command describes the control system, not the plasma"
+      },
+      "EQUILIBRIUM_DERIVED": {
+        "n": 15,
+        "reason": "all LINEAGE_PARTIAL; EFIT ancestry unresolved so provenance closure cannot be certified"
+      },
+      "UNCALIBRATED_RAW": {
+        "n": 2,
+        "signals": [
+          "pcbcoil",
+          "pcdiamag3"
+        ],
+        "reason": "no physical unit exists; reconstruction error would be uninterpretable"
+      },
+      "DERIVED_EVENT_LABELS": {
+        "n": 0,
+        "reason": "none exist in the archive"
+      }
+    },
+    "override_allowed": true,
+    "override_conditions": [
+      "justified without reference to model performance",
+      "recorded in CONTRACT_DECISION_LEDGER.md",
+      "decided on development data only"
+    ]
+  },
+  "criteria": [
+    {
+      "id": 1,
+      "criterion": "scalar time series",
+      "decidable_from": "S7.1 metadata",
+      "cohort": "n/a"
+    },
+    {
+      "id": 2,
+      "criterion": "available across the frozen object",
+      "decidable_from": "S7.1 metadata",
+      "cohort": "n/a"
+    },
+    {
+      "id": 3,
+      "criterion": "physically interpretable",
+      "decidable_from": "units registry",
+      "cohort": "n/a"
+    },
+    {
+      "id": 4,
+      "criterion": "resolved physical unit",
+      "decidable_from": "units registry",
+      "cohort": "n/a"
+    },
+    {
+      "id": 5,
+      "criterion": "calibrated diagnostic or state quantity",
+      "decidable_from": "origin classification",
+      "cohort": "n/a"
+    },
+    {
+      "id": 6,
+      "criterion": "plausible residual explanatory information after boundary closure",
+      "decidable_from": "instantiated I_rec",
+      "cohort": "DEVELOPMENT_ONLY"
+    },
+    {
+      "id": 7,
+      "criterion": "no event taxonomy required",
+      "decidable_from": "task definition",
+      "cohort": "n/a"
+    },
+    {
+      "id": 8,
+      "criterion": "no specialist regime classification required",
+      "decidable_from": "task definition",
+      "cohort": "n/a"
+    },
+    {
+      "id": 9,
+      "criterion": "no obvious algebraic duplicate among admitted predictors",
+      "decidable_from": "provenance + values",
+      "cohort": "DEVELOPMENT_ONLY"
+    },
+    {
+      "id": 10,
+      "criterion": "meaningful temporal variation",
+      "decidable_from": "values",
+      "cohort": "DEVELOPMENT_ONLY"
+    },
+    {
+      "id": 11,
+      "criterion": "usable in both processing eras",
+      "decidable_from": "S7.1 metadata",
+      "cohort": "n/a"
+    },
+    {
+      "id": 12,
+      "criterion": "no dependence on an unresolved label-generation pipeline",
+      "decidable_from": "provenance",
+      "cohort": "n/a"
+    }
+  ],
+  "predeclared_thresholds": {
+    "min_admissible_predictors_after_closure": 10,
+    "min_coefficient_of_variation_development": 0.05,
+    "min_distinct_values_fraction": 0.1,
+    "max_identically_zero_development_discharges": 0
+  },
+  "firewall": {
+    "external_cohort_may_be_inspected": false,
+    "candidates_compared_on_reconstructability": false,
+    "model_fitted_for_eligibility": false
+  },
+  "multichannel_family_rule": "if the candidate belongs to ECE / CER / beams / filterscopes, the sibling rule in INFORMATION_BOUNDARY_POLICY.md applies: primary boundary excludes same-family siblings; full-boundary variant is a declared sensitivity"
+}

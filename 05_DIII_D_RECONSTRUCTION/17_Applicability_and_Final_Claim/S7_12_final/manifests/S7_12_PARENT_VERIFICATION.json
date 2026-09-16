@@ -1,0 +1,186 @@
+{
+  "record_id": "S7_12_PARENT_VERIFICATION_V1",
+  "generated_utc": "2026-09-07T04:58:19.214183+00:00",
+  "lineage": [
+    {
+      "stage": "S7.2",
+      "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V1",
+      "status": "FROZEN_READY_FOR_S7.3",
+      "timestamp_utc": "2026-09-02T22:25:17.903275+00:00",
+      "file_sha256": "5e65d87825024d2e62b0db8fab8add518f364110e41f3a63f61571c80cc3102f"
+    },
+    {
+      "stage": "S7.3",
+      "freeze_id": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-V1",
+      "status": "FROZEN_READY_FOR_S7.4",
+      "timestamp_utc": "2026-09-03T00:42:28.317528+00:00",
+      "file_sha256": "27d79631276fbbc59dfc3428bd566d5ca8a726878107a7fe38c3b9f2f784fa8a"
+    },
+    {
+      "stage": "S7.6",
+      "freeze_id": "D3D-SIR-S7.6-ADMISSIBLE-UNIVERSE-V1",
+      "status": "FROZEN_READY_FOR_S7.7",
+      "timestamp_utc": "2026-09-04T06:12:03.229767+00:00",
+      "file_sha256": "ac3127136678499d7ef65f3d0ab55adb6dbff123a4f37ab21498d656f672e5bf"
+    },
+    {
+      "stage": "S7.7",
+      "freeze_id": "D3D-SIR-S7.7-FROZEN-SEARCH-POLICY-AND-EXPLORED-FRONTIER-V1",
+      "status": "BLOCKED_SEARCH_BUDGET",
+      "timestamp_utc": "2026-09-05T00:04:47.399937+00:00",
+      "file_sha256": "fa688ac6586c152864f979cb10843ce61475b07e636a64c6a42d94916abb181e"
+    },
+    {
+      "stage": "S7.9",
+      "freeze_id": "D3D-SIR-S7.9-DEVELOPMENT-SELECTION-AND-PREEXTERNAL-FREEZE-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "timestamp_utc": "2026-09-05T20:32:09.546065+00:00",
+      "file_sha256": "966f9628dceb501e9f102d9ba3f74e0bfed3dddee7f25a58df47732eef3d553b"
+    },
+    {
+      "stage": "S7.10",
+      "freeze_id": "D3D-SIR-S7.10-EXTERNAL-VALIDATION-AND-GATE-EVALUATION-V1",
+      "status": "PRIMARY_EXTERNAL_GATE_FAILURE",
+      "timestamp_utc": "2026-09-05T22:59:39.923443+00:00",
+      "file_sha256": "8ea2062f0fc38fbf24e3b9d6477cace1d0fcd9a54e746e66c6e428d01437db97"
+    },
+    {
+      "stage": "S7.11",
+      "freeze_id": "D3D-SIR-S7.11-SENSITIVITY-AND-FAILURE-INTERPRETATION-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "timestamp_utc": "2026-09-05T23:50:49.762818+00:00",
+      "file_sha256": "b93edac44994240e1fda4d6a0c8fa668cf712ac6a64b8d9fe63278e15c302e26"
+    },
+    {
+      "stage": "S7.R1",
+      "freeze_id": "D3D-SIR-S7.R1-OPERATIONAL-STATE-RECONCILIATION-V1",
+      "status": "NO_CLEAN_OPERATIONAL_STATE_PARTITION",
+      "timestamp_utc": "2026-09-06T01:05:20.911744+00:00",
+      "file_sha256": "ae6092a67a0e099a868876611f7aeca769edac062c4c6a878d6f6a22146ca226"
+    },
+    {
+      "stage": "S7.K2",
+      "freeze_id": "D3D-SIR-S7.K2-OBSERVATIONAL-RANGE-SUPPORT-CONTRACT-V1",
+      "status": "FROZEN_READY_FOR_DISCOVERY_EPOCH_2",
+      "timestamp_utc": "2026-09-06T02:59:57.816714+00:00",
+      "file_sha256": "198fa046c7eb2650efcb910f02922752b8204477f8930300e6abf24163193459"
+    },
+    {
+      "stage": "S7.E2.0",
+      "freeze_id": "D3D-SIR-S7.E2.0-DISCOVERY-EPOCH2-PROTOCOL-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "timestamp_utc": "2026-09-06T04:02:06.709084+00:00",
+      "file_sha256": "89af08c32468f0c9fc97046db47affa09a2cc864759e4b28374ddd5baa3842e6"
+    },
+    {
+      "stage": "S7.E2.0A",
+      "freeze_id": "D3D-SIR-S7.E2.0A-PREDICTOR-SIDE-ADMISSIBILITY-RECONCILIATION-V1",
+      "status": "FROZEN_READY_FOR_EPOCH2_SEARCH",
+      "timestamp_utc": "2026-09-06T04:47:45.692687+00:00",
+      "file_sha256": "d0b956b8ca4d086f296bc647a14cc9e267b8fe6e67e05c79b172346024ddd81e"
+    },
+    {
+      "stage": "S7.E2.1",
+      "freeze_id": "D3D-SIR-S7.E2.1-CROSSFITTED-DISCOVERY-AND-QUALIFICATION-V1",
+      "status": "QUALIFIED_POSITIVE_RECONSTRUCTION_FORMAL_PASS",
+      "timestamp_utc": "2026-09-06T05:24:38.201504+00:00",
+      "file_sha256": "25300460534ea0ff2708374c0c491343ed930018b604e2a499a58163be71f53d"
+    },
+    {
+      "stage": "S7.E2.2",
+      "freeze_id": "D3D-SIR-S7.E2.2-FULL-OBJECT-DESCRIPTIVE-REPRESENTATION-V1",
+      "status": "FULL_OBJECT_DESCRIPTIVE_REPRESENTATION_FROZEN",
+      "timestamp_utc": "2026-09-07T04:51:42.196227+00:00",
+      "file_sha256": "91263a6439a0f52e572bfcedbb118ab76a135085196a6cfc5f875603db0b13c6"
+    }
+  ],
+  "parent_manifests": {
+    "S7.2": {
+      "n": 35,
+      "matched": 35,
+      "mismatched": [],
+      "self_referential_excluded": [
+        "S7_2_ACCEPTANCE_CHECKS.json",
+        "S7_2_FREEZE.json"
+      ]
+    },
+    "S7.3": {
+      "n": 33,
+      "matched": 33,
+      "mismatched": [],
+      "self_referential_excluded": []
+    },
+    "S7.6": {
+      "n": 27,
+      "matched": 27,
+      "mismatched": [],
+      "self_referential_excluded": []
+    },
+    "S7.7": {
+      "n": 19,
+      "matched": 19,
+      "mismatched": [],
+      "self_referential_excluded": []
+    },
+    "S7.9": {
+      "n": 45,
+      "matched": 45,
+      "mismatched": [],
+      "self_referential_excluded": []
+    },
+    "S7.10": {
+      "n": 31,
+      "matched": 31,
+      "mismatched": [],
+      "self_referential_excluded": []
+    },
+    "S7.11": {
+      "n": 26,
+      "matched": 26,
+      "mismatched": [],
+      "self_referential_excluded": []
+    },
+    "S7.R1": {
+      "n": 21,
+      "matched": 21,
+      "mismatched": [],
+      "self_referential_excluded": []
+    },
+    "S7.K2": {
+      "n": 29,
+      "matched": 29,
+      "mismatched": [],
+      "self_referential_excluded": []
+    },
+    "S7.E2.0": {
+      "n": 22,
+      "matched": 22,
+      "mismatched": [],
+      "self_referential_excluded": []
+    },
+    "S7.E2.0A": {
+      "n": 14,
+      "matched": 14,
+      "mismatched": [],
+      "self_referential_excluded": []
+    },
+    "S7.E2.1": {
+      "n": 39,
+      "matched": 39,
+      "mismatched": [],
+      "self_referential_excluded": []
+    },
+    "S7.E2.2": {
+      "n": 20,
+      "matched": 20,
+      "mismatched": [],
+      "self_referential_excluded": [
+        "E2_2_ACCEPTANCE_CHECKS.json"
+      ]
+    }
+  },
+  "all_reproduce": true,
+  "E2_2_frozen_before_S7_12": true,
+  "E2_1_frozen_before_E2_2": true,
+  "drift": []
+}

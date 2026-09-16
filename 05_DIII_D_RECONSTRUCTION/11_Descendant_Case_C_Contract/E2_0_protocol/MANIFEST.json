@@ -1,0 +1,48 @@
+{
+  "record_id": "S7_STAGE_MANIFEST_V1",
+  "generated_utc": "2026-09-08T00:51:17.508741+00:00",
+  "stage_id": "S7.E2.0",
+  "title": "Epoch-2 protocol and resampling freeze",
+  "directory": "E2_0_protocol_and_resampling_freeze",
+  "scientific_task_id": "q_rec",
+  "claim_branch": "QREC-B2",
+  "claim_branch_role": "DESCENDANT_ORIGIN",
+  "parent_claim_branch": "QREC-B1",
+  "operational_epoch": 2,
+  "revision_level": "CLAIM_DEFINING",
+  "branch": "q_rec",
+  "status": "CANONICAL_SUPERSEDED_BY_E2.0A",
+  "sir_architecture_mapping": [
+    "K_claim",
+    "K_op"
+  ],
+  "scientific_question": "Under what evidential design may discovery legitimately resume?",
+  "operation": "Six deterministic discharge-grouped outer folds; budget, qualification policy and stop rule frozen.",
+  "verdict": "FROZEN_WITH_QUALIFICATIONS. Applicability risk disclosed prospectively. EPOCH2_IS_FINAL_QREC_ATTEMPT = true. This stage CONSTITUTES the descendant claim branch QREC-B2.",
+  "parent_stages": [
+    "S7.K2"
+  ],
+  "child_stages": [
+    "S7.E2.0A"
+  ],
+  "key_numbers": {
+    "n_folds": 6,
+    "budget_per_fold": 300000,
+    "budget_total": 1800000
+  },
+  "notes": "Because Epoch-1 evaluation evidence had become development evidence for the revised procedure, the sealed-external claim of QREC-B1 could no longer be supported. Declaring target cross-fitting over the finite object MATERIALLY NARROWS V_rec, which constitutes descendant claim branch QREC-B2 under the same task q_rec. Omega_rec, the intended claim domain, is unchanged - the same frozen 62-discharge object; the qualified scope Omega*_rec supported downstream narrows as a consequence, but Omega*_rec is part of Q*_q, not a member of K_q^claim. Introduced a training-side headroom threshold (tau_train = 0.5) that E2.0A later retired. Preserved as historical parent.",
+  "governing_freeze": {
+    "path": "E2_0_FREEZE.json",
+    "freeze_id": "D3D-SIR-S7.E2.0-DISCOVERY-EPOCH2-PROTOCOL-V1",
+    "sha256": "89af08c32468f0c9fc97046db47affa09a2cc864759e4b28374ddd5baa3842e6",
+    "authoritative": true,
+    "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+  },
+  "executables": [
+    "scripts/e2_0_a_folds.py",
+    "scripts/e2_0_b_policies.py",
+    "scripts/e2_0_c_feasibility.py"
+  ],
+  "n_files": 26,
+  "indexes_not_replaces": true
+}

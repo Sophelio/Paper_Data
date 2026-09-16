@@ -1,0 +1,208 @@
+{
+  "audit_id": "D3D-SIR-62-IMPLICIT-CLOSURE-CONDITIONING-V1",
+  "canonical_run_id": "D3D-SIR-62-ALIGNED-V1",
+  "coefficient_correction_audit_id": "D3D-SIR-62-COEFFICIENT-CONDITIONING-CORRECTION-V1",
+  "created_utc": "2026-08-05T20:58:31Z",
+  "input_validation_pass": true,
+  "n_discharges": 62,
+  "n_samples_per_discharge": 1000,
+  "n_total_samples": 62000,
+  "n_features": 7,
+  "source_matrix_order": [
+    "d[pcdiamag3]/d[kappa]",
+    "d[kappa]/d[t]",
+    "r[q95]/r[kappa]",
+    "d[pcdiamag3]/d[betan]",
+    "d[kappa]/d[betan]",
+    "d[betan]/d[t]",
+    "d[li]/d[betan]"
+  ],
+  "manuscript_display_order": [
+    "D_kappa W_dia",
+    "D_betaN W_dia",
+    "D_betaN kappa",
+    "D_betaN l_i",
+    "q95 / kappa",
+    "dot beta_N",
+    "dot kappa"
+  ],
+  "historical_equation_key": "1_8*",
+  "coordinate_lineage_status": "D3D-EXACT-COORDINATE-LINEAGE-RESOLVED",
+  "shift_recovery_status": "EXACT_FROM_SERIALIZED_STATE",
+  "target_containing_features": [
+    "d[pcdiamag3]/d[kappa]",
+    "d[pcdiamag3]/d[betan]"
+  ],
+  "feature_reproduction_status": {
+    "target_containing_reproduced": true,
+    "max_target_feature_reproduction_error": 0.0,
+    "per_feature": [
+      {
+        "feature": "d[betan]/d[t]",
+        "display_name": "dot beta_N",
+        "max_abs_diff": 0.0,
+        "median_max_abs_diff": 0.0,
+        "min_corr": 0.9999999999999998,
+        "status": "EXACTLY_REPRODUCED"
+      },
+      {
+        "feature": "d[kappa]/d[betan]",
+        "display_name": "D_betaN kappa",
+        "max_abs_diff": 0.0,
+        "median_max_abs_diff": 0.0,
+        "min_corr": 0.9999999999999998,
+        "status": "EXACTLY_REPRODUCED"
+      },
+      {
+        "feature": "d[kappa]/d[t]",
+        "display_name": "dot kappa",
+        "max_abs_diff": 0.0,
+        "median_max_abs_diff": 0.0,
+        "min_corr": 0.9999999999999998,
+        "status": "EXACTLY_REPRODUCED"
+      },
+      {
+        "feature": "d[li]/d[betan]",
+        "display_name": "D_betaN l_i",
+        "max_abs_diff": 0.0,
+        "median_max_abs_diff": 0.0,
+        "min_corr": 0.9999999999999998,
+        "status": "EXACTLY_REPRODUCED"
+      },
+      {
+        "feature": "d[pcdiamag3]/d[betan]",
+        "display_name": "D_betaN W_dia",
+        "max_abs_diff": 0.0,
+        "median_max_abs_diff": 0.0,
+        "min_corr": 0.9999999999999998,
+        "status": "EXACTLY_REPRODUCED"
+      },
+      {
+        "feature": "d[pcdiamag3]/d[kappa]",
+        "display_name": "D_kappa W_dia",
+        "max_abs_diff": 0.0,
+        "median_max_abs_diff": 0.0,
+        "min_corr": 0.9999999999999998,
+        "status": "EXACTLY_REPRODUCED"
+      },
+      {
+        "feature": "r[q95]/r[kappa]",
+        "display_name": "q95 / kappa",
+        "max_abs_diff": 0.0,
+        "median_max_abs_diff": 0.0,
+        "min_corr": 0.9999999999999998,
+        "status": "EXACTLY_REPRODUCED"
+      }
+    ]
+  },
+  "max_target_feature_reproduction_error": 0.0,
+  "affine_target_dependence_verified": true,
+  "elimination_identity_max_error": 7.896461262646426e-15,
+  "primitive_denominator_summary": {
+    "n_crossing_events": 0,
+    "min_abs_over_all": 9.999999999999998
+  },
+  "A_summary": {
+    "min_abs_pooled": 2.6428213717455407e-07,
+    "q01_abs_pooled": 0.0005078251955232938,
+    "median_abs_pooled": 0.029684634521966957,
+    "n_sign_crossings": 5444,
+    "n_exact_zero": 0,
+    "frac_abs_lt": {
+      "1e-06": 1.6129032258064517e-05,
+      "1e-05": 0.00022580645161290321,
+      "0.0001": 0.0023548387096774194,
+      "0.001": 0.020080645161290323,
+      "0.01": 0.1934032258064516,
+      "0.05": 0.7087903225806451,
+      "0.1": 0.9256451612903226
+    }
+  },
+  "A_zero_count": 0,
+  "A_sign_crossing_count": 5444,
+  "explicit_closure_coverage": 1.0,
+  "explicit_closure_pooled_rmse": 187.2273661101626,
+  "implicit_residual_pooled_rmse": 0.05758467247445343,
+  "amplification_summary": {
+    "median": 33.68746213137521,
+    "q95": 392.08282553028533
+  },
+  "shift_sensitivity_summary": {
+    "frozen_at_1.0": {
+      "shift_multiplier": 1.0,
+      "pooled_implicit_rmse": 0.05758467247445344,
+      "pooled_explicit_rmse": 187.2273661101626,
+      "median_abs_A": 0.029684634521966957,
+      "min_abs_A": 2.6428213717455407e-07,
+      "frac_abs_A_lt_1e-2": 0.1934032258064516,
+      "frac_abs_A_lt_1e-1": 0.9256451612903226,
+      "n_nonfinite_coords": 0,
+      "coverage_coord_finite": 1.0
+    },
+    "frozen_at_0.99": {
+      "shift_multiplier": 0.99,
+      "pooled_implicit_rmse": 0.05979758852262024,
+      "pooled_explicit_rmse": 34.62313777391944,
+      "median_abs_A": 0.027299938925206657,
+      "min_abs_A": 9.283569963880467e-07,
+      "frac_abs_A_lt_1e-2": 0.21408064516129033,
+      "frac_abs_A_lt_1e-1": 0.9365161290322581,
+      "n_nonfinite_coords": 0,
+      "coverage_coord_finite": 1.0
+    },
+    "frozen_at_1.01": {
+      "shift_multiplier": 1.01,
+      "pooled_implicit_rmse": 0.05853535084865369,
+      "pooled_explicit_rmse": 33.63286541671442,
+      "median_abs_A": 0.03437853127906271,
+      "min_abs_A": 4.368555986844491e-06,
+      "frac_abs_A_lt_1e-2": 0.14793548387096775,
+      "frac_abs_A_lt_1e-1": 0.9118870967741936,
+      "n_nonfinite_coords": 0,
+      "coverage_coord_finite": 1.0
+    },
+    "note": "Perturbations applied to historical per-discharge shiftval; canonical mu/sigma retained for frozen-model branch."
+  },
+  "time_unit_consistency_summary": {
+    "status": "STANDARDIZED_TEMPORAL_DERIVATIVES_INVARIANT_SHIFTED_RATIOS_REQUIRE_MATCHED_SHIFT_UNITS",
+    "provider_dt_units": "milliseconds",
+    "finite_difference_uses_dt": true,
+    "zscored_temporal_derivatives_invariant_under_global_time_rescale": true,
+    "shifted_quotients_invariant_only_if_shift_rescaled": true,
+    "historical_shift_implicit_units": "same_as_zscored_derivative_units_not_physical_seconds"
+  },
+  "jacobian_validation": {
+    "max_abs_error": 2.723593794939916e-09,
+    "median_abs_error": 5.05990215005081e-11,
+    "pass_1e-4": true
+  },
+  "sub_verdicts": {
+    "exact_coordinate_lineage": "D3D-EXACT-COORDINATE-LINEAGE-RESOLVED",
+    "exact_shift_recovery": "EXACT_FROM_SERIALIZED_STATE",
+    "feature_reproduction": "TARGET_FEATURES_EXACTLY_REPRODUCED",
+    "primitive_denominator_conditioning": "SEE_TABLES",
+    "eliminated_A_conditioning": "SEE_TABLES",
+    "explicit_residual_amplification": "SEE_TABLES",
+    "shift_policy_robustness": "MILD",
+    "time_unit_consistency": "STANDARDIZED_TEMPORAL_DERIVATIVES_INVARIANT_SHIFTED_RATIOS_REQUIRE_MATCHED_SHIFT_UNITS",
+    "overall_implicit_closure_conditioning": "D3D-IMPLICIT-CLOSURE-EXPLICITLY-ILL-CONDITIONED"
+  },
+  "overall_verdict": "D3D-IMPLICIT-CLOSURE-EXPLICITLY-ILL-CONDITIONED",
+  "shift_sensitivity_ratio": 0.038428907434499816,
+  "supported_interpretation": "The canonical relation is a target-containing implicit closure. Exact shifted Y-phaseder coordinates were recovered from the historical .psir. Local explicit solvability is governed by A(t)=1-sum c alpha; small |A| amplifies implicit residuals into explicit target errors.",
+  "explicit_nonclaims": [
+    "Support uniqueness not tested",
+    "Causal/mechanistic interpretation not established",
+    "Predictive transfer not tested",
+    "Matched-complexity nulls not tested"
+  ],
+  "limitations": [
+    "Historical nmin UI value UNKNOWN (effective shiftval known).",
+    "Shift sensitivity uses canonical pre-zscore mu/sigma for frozen-model branch.",
+    "Level/X-phaseder reconstruction depends on combination ordering matching consumer."
+  ],
+  "unresolved_items": [
+    "HISTORICAL_NMIN_UI_VALUE_UNKNOWN"
+  ],
+  "reproduced_pooled_rmse": 0.05758467247445343
+}

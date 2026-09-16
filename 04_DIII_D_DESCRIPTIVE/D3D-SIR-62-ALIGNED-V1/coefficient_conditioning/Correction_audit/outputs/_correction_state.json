@@ -1,0 +1,257 @@
+{
+  "correction_audit_id": "D3D-SIR-62-COEFFICIENT-CONDITIONING-CORRECTION-V1",
+  "original_audit_id": "D3D-SIR-62-COEFFICIENT-CONDITIONING-V1",
+  "canonical_run_id": "D3D-SIR-62-ALIGNED-V1",
+  "created_utc": "2026-08-05T19:54:47Z",
+  "seed": 20260805,
+  "input_validation_pass": true,
+  "reference_pooled_rmse": 0.05758467247445343,
+  "reproduced_pooled_rmse": 0.05758467247445343,
+  "original_truncation_removed_any_direction": false,
+  "fixed_threshold_results": {
+    "0.001": 2.7917711482371532e-15,
+    "0.005": 2.7917711482371532e-15,
+    "0.01": 2.7917711482371532e-15,
+    "0.02": 3.706044787337195e-15,
+    "0.05": 0.8234488091890453,
+    "0.1": 0.8275092294994468
+  },
+  "fixed_rank_results": {
+    "median_rel_coef": {
+      "7": 2.7917711482371532e-15,
+      "6": 0.7993154563548318,
+      "5": 0.8275092294994468,
+      "4": 0.8856882389869715
+    },
+    "median_abs_rmse_change": {
+      "7": 1.3877787807814457e-17,
+      "6": 0.031029606819801332,
+      "5": 0.04134361025857103,
+      "4": 0.1891733322039283
+    },
+    "class_counts_rank6": {
+      "LARGE_COEFFICIENT_MOVEMENT_CHANGED_RECONSTRUCTION": 40,
+      "LARGE_COEFFICIENT_MOVEMENT_STABLE_RECONSTRUCTION": 18,
+      "STABLE_COEFFICIENTS_STABLE_RECONSTRUCTION": 4
+    }
+  },
+  "ridge_path_results": {
+    "median_rel_coef_by_lambda_rel": {
+      "0.0": 2.5615596024309465e-15,
+      "1e-06": 0.0011569985572081527,
+      "1e-05": 0.011433555896960962,
+      "0.0001": 0.10227625254308229,
+      "0.001": 0.48023147170337804,
+      "0.01": 0.7791576518226064,
+      "0.1": 0.8715477695177771,
+      "1.0": 0.9607738974200898
+    },
+    "median_abs_rmse_by_lambda_rel": {
+      "0.0": 1.3877787807814457e-17,
+      "1e-06": 1.2711061987344396e-07,
+      "1e-05": 1.2358741986205624e-05,
+      "0.0001": 0.0009468349386243177,
+      "0.001": 0.01755732486842759,
+      "0.01": 0.055314265983461966,
+      "0.1": 0.2642438314986375,
+      "1.0": 0.654585886021203
+    }
+  },
+  "random_effects_estimator_type": "REML_primary_with_ML_sensitivity",
+  "random_effects_original_label_accurate": false,
+  "coefficient_classifications_original": {
+    "d[pcdiamag3]/d[kappa]": "WITHIN_DISCHARGE_UNCERTAINTY_DOMINATES",
+    "d[kappa]/d[t]": "BETWEEN_DISCHARGE_VARIATION_RESOLVED",
+    "r[q95]/r[kappa]": "WITHIN_DISCHARGE_UNCERTAINTY_DOMINATES",
+    "d[pcdiamag3]/d[betan]": "BETWEEN_DISCHARGE_VARIATION_PARTIALLY_RESOLVED",
+    "d[kappa]/d[betan]": "BETWEEN_DISCHARGE_VARIATION_RESOLVED",
+    "d[betan]/d[t]": "BETWEEN_DISCHARGE_VARIATION_RESOLVED",
+    "d[li]/d[betan]": "BETWEEN_DISCHARGE_VARIATION_RESOLVED"
+  },
+  "coefficient_classifications_corrected": {
+    "d[pcdiamag3]/d[kappa]": "WITHIN_DISCHARGE_UNCERTAINTY_DOMINATES",
+    "d[kappa]/d[t]": "ROBUSTLY_RESOLVED",
+    "r[q95]/r[kappa]": "WITHIN_DISCHARGE_UNCERTAINTY_DOMINATES",
+    "d[pcdiamag3]/d[betan]": "ROBUSTLY_RESOLVED",
+    "d[kappa]/d[betan]": "ROBUSTLY_RESOLVED",
+    "d[betan]/d[t]": "ROBUSTLY_RESOLVED",
+    "d[li]/d[betan]": "ROBUSTLY_RESOLVED"
+  },
+  "n_coefficients_robustly_resolved": 5,
+  "n_coefficients_partially_resolved": 0,
+  "n_coefficients_uncertainty_dominated": 2,
+  "n_coefficients_indeterminate": 0,
+  "original_positive_multivariate_directions": 5,
+  "corrected_robust_multivariate_directions": 2,
+  "multivariate_null_thresholds": [
+    0.13310821562806383,
+    0.01566659174646174,
+    0.0005816071891541179,
+    0.00011126450472793882,
+    -1.3264765175247547e-05,
+    -0.0001500193913357042,
+    -0.0006508986941612969
+  ],
+  "block_length_robustness": {
+    "median_var_ratio_short": 0.7695131119980201,
+    "median_var_ratio_long": 1.1298073120891057,
+    "features_block_dependent": [
+      {
+        "feature": "d[pcdiamag3]/d[kappa]",
+        "display_name": "D_kappa W_dia",
+        "tau2_primary": 0.0,
+        "tau2_short": 0.0006194953101192,
+        "tau2_long": 0.0,
+        "lower_primary": 0.0,
+        "lower_short": 0.0,
+        "lower_long": 0.0,
+        "sign_of_heterogeneity_changes_with_block": true
+      },
+      {
+        "feature": "d[kappa]/d[t]",
+        "display_name": "dot kappa",
+        "tau2_primary": 0.1842212676348568,
+        "tau2_short": 0.1842212676348568,
+        "tau2_long": 0.1700770883751373,
+        "lower_primary": 0.1235577514662536,
+        "lower_short": 0.1338332271482681,
+        "lower_long": 0.1140712084188428,
+        "sign_of_heterogeneity_changes_with_block": false
+      },
+      {
+        "feature": "r[q95]/r[kappa]",
+        "display_name": "q95 / kappa",
+        "tau2_primary": 2.3729905271652148e-05,
+        "tau2_short": 1.2247319707416138e-05,
+        "tau2_long": 1.945895526540696e-05,
+        "lower_primary": 0.0,
+        "lower_short": 0.0,
+        "lower_long": 0.0,
+        "sign_of_heterogeneity_changes_with_block": false
+      },
+      {
+        "feature": "d[pcdiamag3]/d[betan]",
+        "display_name": "D_betaN W_dia",
+        "tau2_primary": 0.0697362773004243,
+        "tau2_short": 0.0883690681871883,
+        "tau2_long": 0.0644433716873408,
+        "lower_primary": 0.0370864034178885,
+        "lower_short": 0.0508553607088306,
+        "lower_long": 0.0316704116050532,
+        "sign_of_heterogeneity_changes_with_block": false
+      },
+      {
+        "feature": "d[kappa]/d[betan]",
+        "display_name": "D_betaN kappa",
+        "tau2_primary": 0.2668910444759042,
+        "tau2_short": 0.2894369292442045,
+        "tau2_long": 0.2461013866041272,
+        "lower_primary": 0.164064401070879,
+        "lower_short": 0.1929542011099276,
+        "lower_long": 0.164064401070879,
+        "sign_of_heterogeneity_changes_with_block": false
+      },
+      {
+        "feature": "d[betan]/d[t]",
+        "display_name": "dot beta_N",
+        "tau2_primary": 0.2076699285303199,
+        "tau2_short": 0.2250017138653801,
+        "tau2_long": 0.2076699285303199,
+        "lower_primary": 0.1507039940506541,
+        "lower_short": 0.1507039940506541,
+        "lower_long": 0.1390953301469426,
+        "sign_of_heterogeneity_changes_with_block": false
+      },
+      {
+        "feature": "d[li]/d[betan]",
+        "display_name": "D_betaN l_i",
+        "tau2_primary": 7.840525300128936e-05,
+        "tau2_short": 9.00049292519863e-05,
+        "tau2_long": 7.840525300128936e-05,
+        "lower_primary": 3.197847782846395e-05,
+        "lower_short": 3.933140757300379e-05,
+        "lower_long": 3.426244526035372e-05,
+        "sign_of_heterogeneity_changes_with_block": false
+      }
+    ],
+    "sensitivity_replicates": 300,
+    "note": "B=300 implies Monte Carlo SE for variance ~ var*sqrt(2/299); no near-boundary re-bootstrap required unless flagged."
+  },
+  "leave_one_out_robustness": {
+    "d[pcdiamag3]/d[kappa]": {
+      "loo_frac_positive": 0.0,
+      "single_discharge_driver": false
+    },
+    "d[kappa]/d[t]": {
+      "loo_frac_positive": 1.0,
+      "single_discharge_driver": false
+    },
+    "r[q95]/r[kappa]": {
+      "loo_frac_positive": 0.9838709677419356,
+      "single_discharge_driver": false
+    },
+    "d[pcdiamag3]/d[betan]": {
+      "loo_frac_positive": 1.0,
+      "single_discharge_driver": false
+    },
+    "d[kappa]/d[betan]": {
+      "loo_frac_positive": 1.0,
+      "single_discharge_driver": false
+    },
+    "d[betan]/d[t]": {
+      "loo_frac_positive": 1.0,
+      "single_discharge_driver": false
+    },
+    "d[li]/d[betan]": {
+      "loo_frac_positive": 1.0,
+      "single_discharge_driver": false
+    }
+  },
+  "stale_artifact_status": "ARCHIVED_AND_REMOVED_FROM_ACTIVE_OUTPUTS",
+  "corrected_overall_verdict": "D3D-MIXED-COEFFICIENT-IDENTIFIABILITY",
+  "sub_verdicts": {
+    "design_matrix_rank": "FULL_RANK_7_ALL_DISCHARGES",
+    "numerical_conditioning": "MILD_MEDIAN_KAPPA_LT_100",
+    "reconstruction_stability": "STABLE_DISCHARGE_SPECIFIC_RMSE",
+    "individual_coefficient_identifiability": "ROBUST=5, PARTIAL=0, WITHIN=2, INDET=0",
+    "multivariate_coefficient_identifiability": "ROBUST_DIRECTIONS=2",
+    "robustness_to_block_length": "SEE_BLOCK_LENGTH_SUMMARY",
+    "robustness_to_singular_direction_removal": "SEE_FIXED_RANK_TSVD"
+  },
+  "supported_interpretation": "Conditional on the selected seven-coordinate support, discharge-specific reconstruction remains stable. Coefficient identifiability is mixed after uncertainty-aware and sensitivity-corrected analysis.",
+  "limitations": [
+    "Conditional on selected support; support uniqueness not tested.",
+    "Block bootstrap approximates temporal dependence.",
+    "REML assumes Gaussian sampling distributions of coefficient estimates.",
+    "Eigenvalue ordering can switch for poorly separated eigenvalues."
+  ],
+  "unresolved_items": [
+    "EXACT_SHIFT_VALUE_UNKNOWN inherited from canonical package",
+    "Structural-search hyperparameters UNKNOWN"
+  ],
+  "median_rmse_change_rank6": 0.031029606819801332,
+  "median_coefficient_change_rank6": 0.7993154563548318,
+  "input_hashes": {
+    "audit_config": "f3584a03ecd04caea35d447540ef110330bd56aa793da736008359e87fa03f80",
+    "audit_manifest": "ecf61922b92ef0de315899939cf608dcc06ee70f721a5e5a3702080bb4a37ac9",
+    "summary": "73dfd90dc8079628f1945d652c6eb431457ded75abbfb8094a767273b7ea7ff6",
+    "input_validation": "64abe7972c104f308802896aaf9a95f708681ec99eccda007d1bd8250ab61d45",
+    "boot_primary": "2caedc91cccb768028e58ea4036898b7a1dafecf4b9223e5709b27e85b1a8169",
+    "boot_sens": "a85fd58969e073b647a8dab8dff49c4a281eeec58685d4824c75fe9eb61ecfca",
+    "mv_npz": "2c96a31f70bf7f21a97f5255783101c42ea4513c3e21c6d4904e6526460af1a5",
+    "cond": "326a5c3049af5945047fc7948d890aad798276bc66bf741fda77f8656a3440c4",
+    "sing": "e7350713aad1090d8d2effff94a12d9e2ff5c52c2e92deeefc3b851199f78afb",
+    "trunc": "7305a151502250905f2c66b2a0b22b6ccbe785faded1540f438ddbcc3d0e1182",
+    "boot_sum": "6af6837692963a1fa8cd5867100aa04f6b78b75fe07a57f7c64c06a2cf70ddd4",
+    "boot_block_sens": "ecf694fd0b2a2ed8edff45243e43e9d19bf32fb51889fb1037c046b1b77d4291",
+    "boot_cov": "1177c1cd63f87a38aadd8548fc777925a235d7a607bd68417afc3d8905995884",
+    "het": "74cdc318078e5561dc9e0eea349e9d2708c84a937216c4bae40c48c82641d9dd",
+    "mv_evec": "6522d8549d3d2e84742d59cfe578d47a6e8e67ce34f5a99e009a0867633c8d70",
+    "blocks": "8b6b76170535cc99bef0a23c4a1a2ad5a20b5e6403f8f3020aad4be894c8596d",
+    "vif": "2cc0236dbc293c3308b05802c4160f270af1a1f6b3567a7712a9da7858416520",
+    "near": "d1faa026d2897c4d83bf3741dbbb5215bab989853a05c06478aa751d5500c377",
+    "report": "caa2b787886f3f9e660ec8978d1babcbd4b04ba5e28ccbd216634a894188b47c",
+    "utils": "6d3344d2fb1c969671d5ed0374fa47d907d02247be51125fc82de949f59413d3",
+    "driver": "eac52fde73f278aaa1d431da71f3d1bbf5e6f6c2051cc18104a172a84619df6c"
+  }
+}

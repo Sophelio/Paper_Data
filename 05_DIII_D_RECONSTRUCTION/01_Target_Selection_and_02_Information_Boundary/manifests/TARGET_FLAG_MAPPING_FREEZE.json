@@ -1,0 +1,104 @@
+{
+  "frozen_utc": "2026-09-03T00:39:01.661412+00:00",
+  "frozen_before_any_signal_value_opened": true,
+  "source": "frozen S7.1 MAJOR issue register only",
+  "attachment": {
+    "U001": {
+      "scope": "GLOBAL",
+      "n_signals": 95,
+      "reason": "the upstream resampling generator is absent for the whole object; attaches equally to every candidate and therefore does not discriminate"
+    },
+    "U003": {
+      "scope": "SIGNAL_SPECIFIC",
+      "n_signals": 15,
+      "signals": [
+        "aminor",
+        "area",
+        "betan",
+        "drsep",
+        "kappa",
+        "li",
+        "q95",
+        "rmaxis",
+        "rsurf",
+        "tribot",
+        "tritop",
+        "volume",
+        "zcur",
+        "zmaxis",
+        "zsurf"
+      ],
+      "reason": "EFIT settings unresolved; attaches to the 15 equilibrium outputs only. These are already class-excluded as targets, so U003 is NOT used to alter the candidate set"
+    },
+    "U004": {
+      "scope": "GLOBAL",
+      "n_signals": 95,
+      "reason": "no uncertainty metadata anywhere in the object; attaches equally, does not discriminate"
+    },
+    "U009": {
+      "scope": "SIGNAL_SPECIFIC",
+      "n_signals": 4,
+      "signals": [
+        "bt",
+        "ip",
+        "prmtan_neped",
+        "prmtan_teped"
+      ],
+      "reason": "upstream resampling method varies across the processing-era boundary for exactly these signals (S7.1 evidence)"
+    },
+    "U010": {
+      "scope": "SIGNAL_SPECIFIC",
+      "n_signals": 18,
+      "signals": [
+        "bt",
+        "cerqrott10",
+        "cerqrott11",
+        "cerqrott12",
+        "cerqrott13",
+        "cerqrott3",
+        "cerqrott6",
+        "cerqrott8",
+        "cerqtit10",
+        "cerqtit11",
+        "cerqtit12",
+        "cerqtit13",
+        "cerqtit3",
+        "cerqtit6",
+        "cerqtit8",
+        "ip",
+        "prmtan_neped",
+        "prmtan_teped"
+      ],
+      "reason": "downsampled by interpolation with no anti-alias stage (S7.1 evidence)"
+    }
+  },
+  "ranking_key_definition": "target_side_major_flags = count of SIGNAL-SPECIFIC major flags (U003, U009, U010). Global flags U001 and U004 attach to every candidate identically and so add a constant that cannot change a lexicographic ordering; both are recorded per signal for the audit trail.",
+  "attachment_source": {
+    "source": "data/resampled_data_v6/shot_*_metadata.json (62 files)",
+    "fields_read": [
+      "method",
+      "category",
+      "original_length",
+      "resampled_length"
+    ],
+    "signal_values_read": false,
+    "component": "A (ancillary observational information)",
+    "firewall": "permitted for all discharges by EXTERNAL_COHORT_FIREWALL.md",
+    "u009_rule": "resampling method not identical across all 62 shots",
+    "u010_rule": "downsampled in some shot (length ratio < 0.99) by a method that is not decimate_with_antialiasing",
+    "u009_n": 4,
+    "u010_n": 18,
+    "documented_s7_1_counts": {
+      "U009": 4,
+      "U010": 18
+    },
+    "matches_documented": true
+  },
+  "rules_observed": [
+    "no new flag class invented",
+    "no MODERATE or MINOR issue promoted to MAJOR",
+    "no flag derived from statistical behaviour",
+    "U003 not used creatively to alter the candidate set"
+  ],
+  "sha256_target_flag_mapping_csv": "0495a2e6f1d143f51969493d0e643491165062b23603f70af73c905b2d06d95f"
+}

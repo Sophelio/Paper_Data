@@ -1,0 +1,44 @@
+{
+  "config_id": "RELATIONAL_ESTIMATOR_CONFIG_V1",
+  "estimator_id": "DEVELOPMENT_RELATION_OLS_V1",
+  "generated_utc": "2026-09-05T20:22:16.533827+00:00",
+  "support_id": "ID(cerqtit6)|ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(cerqtit10)|RECIP(prmtan_neped)",
+  "procedure": [
+    "1. compute coordinate means and standard deviations on the cell CALIBRATION interval only (ddof=0)",
+    "2. sd <= 0 or non-finite -> divisor is the exact value 1.0 (no epsilon)",
+    "3. standardize calibration coordinates with those values",
+    "4. apply the SAME calibration mean and divisor UNCHANGED to the protected rows",
+    "5. fit an intercept",
+    "6. solve affine OLS of the calibration target on the standardized calibration design",
+    "7. predict the protected rows; score NRMSE against std(y_calibration, ddof=0)"
+  ],
+  "solver": "numpy.linalg.lstsq on the explicit [1, Z] design, rcond=None",
+  "intercept": {
+    "fitted": true,
+    "penalized": false,
+    "counted_in_parsimony": false,
+    "counted_in_conditioning": false
+  },
+  "coefficients": {
+    "scope": "discharge/block local",
+    "shared_across_discharges": false,
+    "global_coefficients_exist": false,
+    "note": "there are NO learned global coefficients to carry into external discharges"
+  },
+  "what_transfers_externally": [
+    "support identity",
+    "coordinate definitions",
+    "numerical construction rules",
+    "estimator class and procedure"
+  ],
+  "external_procedure_at_S7_10": "each external discharge receives locally calibrated coefficients estimated only from its permitted calibration interval",
+  "ridge_used_for_relational_representation": false,
+  "ridge_rejected_on_performance_grounds": false,
+  "numerical_equivalence_check": {
+    "reference": "frozen S7.7R per-cell NRMSE arrays (SEARCH_PROXY_OLS_V1)",
+    "recomputed_independently_in_S7_9": true,
+    "max_relative_deviation": 4.406e-08,
+    "float32_storage_eps": 1.192e-07,
+    "verdict": "AGREES_TO_FLOAT32_STORAGE_PRECISION"
+  }
+}

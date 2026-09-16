@@ -1,0 +1,146 @@
+{
+  "acceptance_id": "S7_R1_ACCEPTANCE_CHECKS_V1",
+  "generated_utc": "2026-09-06T01:05:20.911744+00:00",
+  "n_checks": 34,
+  "n_passed": 34,
+  "result": "34/34",
+  "failed": [],
+  "checks": [
+    {
+      "check": "all parents through S7.11 verified",
+      "passed": true
+    },
+    {
+      "check": "no parent artifact modified",
+      "passed": true
+    },
+    {
+      "check": "Epoch-1 result pinned immutable",
+      "passed": true
+    },
+    {
+      "check": "C_dev_star unchanged",
+      "passed": true
+    },
+    {
+      "check": "no model rerun",
+      "passed": true
+    },
+    {
+      "check": "no V3 recomputation",
+      "passed": true
+    },
+    {
+      "check": "no search rerun",
+      "passed": true
+    },
+    {
+      "check": "two-seed remains NOT_EXECUTED",
+      "passed": true
+    },
+    {
+      "check": "no shot removed",
+      "passed": true
+    },
+    {
+      "check": "no block removed",
+      "passed": true
+    },
+    {
+      "check": "exact gasa semantics verified or uncertainty recorded",
+      "passed": true
+    },
+    {
+      "check": "gasa not mislabeled as pellet injection",
+      "passed": true
+    },
+    {
+      "check": "pellet status separately resolved or marked unresolved",
+      "passed": true
+    },
+    {
+      "check": "operational-state definition target-blind",
+      "passed": true
+    },
+    {
+      "check": "target reads during state-rule construction = 0",
+      "passed": true
+    },
+    {
+      "check": "model-error reads during state-rule construction = 0",
+      "passed": true
+    },
+    {
+      "check": "no shot ids in state rule",
+      "passed": true
+    },
+    {
+      "check": "no supervised failure classifier",
+      "passed": true
+    },
+    {
+      "check": "primary one-dimensional gasa audit completed",
+      "passed": true
+    },
+    {
+      "check": "at most one multivariate fallback used",
+      "passed": true
+    },
+    {
+      "check": "state rule frozen before comparison with failure identities",
+      "passed": true
+    },
+    {
+      "check": "all 62 discharges / relevant blocks assigned",
+      "passed": true
+    },
+    {
+      "check": "development support coverage quantified",
+      "passed": true
+    },
+    {
+      "check": "R1-A resolved",
+      "passed": true
+    },
+    {
+      "check": "R1-B resolved",
+      "passed": true
+    },
+    {
+      "check": "R1-C resolved",
+      "passed": true
+    },
+    {
+      "check": "earliest invalidated SIR stage identified",
+      "passed": true
+    },
+    {
+      "check": "K_rec-change requirement resolved",
+      "passed": true
+    },
+    {
+      "check": "gained knowledge written to provenance ledger",
+      "passed": true
+    },
+    {
+      "check": "no revised model performance computed",
+      "passed": true
+    },
+    {
+      "check": "paper-utility assessment explicit",
+      "passed": true
+    },
+    {
+      "check": "Markdown files <= 20",
+      "passed": true
+    },
+    {
+      "check": "S7.R2 not started",
+      "passed": true
+    },
+    {
+      "check": "S7.12 not started",
+      "passed": true
+    }
+  ]
+}

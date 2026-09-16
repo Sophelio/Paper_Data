@@ -1,0 +1,222 @@
+{
+  "record_id": "Q_REC_PROVENANCE_CHAIN_V1",
+  "generated_utc": "2026-09-07T04:58:19.214183+00:00",
+  "lineage": [
+    {
+      "stage": "S7.2",
+      "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V1",
+      "status": "FROZEN_READY_FOR_S7.3",
+      "timestamp_utc": "2026-09-02T22:25:17.903275+00:00",
+      "file_sha256": "5e65d87825024d2e62b0db8fab8add518f364110e41f3a63f61571c80cc3102f"
+    },
+    {
+      "stage": "S7.3",
+      "freeze_id": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-V1",
+      "status": "FROZEN_READY_FOR_S7.4",
+      "timestamp_utc": "2026-09-03T00:42:28.317528+00:00",
+      "file_sha256": "27d79631276fbbc59dfc3428bd566d5ca8a726878107a7fe38c3b9f2f784fa8a"
+    },
+    {
+      "stage": "S7.6",
+      "freeze_id": "D3D-SIR-S7.6-ADMISSIBLE-UNIVERSE-V1",
+      "status": "FROZEN_READY_FOR_S7.7",
+      "timestamp_utc": "2026-09-04T06:12:03.229767+00:00",
+      "file_sha256": "ac3127136678499d7ef65f3d0ab55adb6dbff123a4f37ab21498d656f672e5bf"
+    },
+    {
+      "stage": "S7.7",
+      "freeze_id": "D3D-SIR-S7.7-FROZEN-SEARCH-POLICY-AND-EXPLORED-FRONTIER-V1",
+      "status": "BLOCKED_SEARCH_BUDGET",
+      "timestamp_utc": "2026-09-05T00:04:47.399937+00:00",
+      "file_sha256": "fa688ac6586c152864f979cb10843ce61475b07e636a64c6a42d94916abb181e"
+    },
+    {
+      "stage": "S7.9",
+      "freeze_id": "D3D-SIR-S7.9-DEVELOPMENT-SELECTION-AND-PREEXTERNAL-FREEZE-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "timestamp_utc": "2026-09-05T20:32:09.546065+00:00",
+      "file_sha256": "966f9628dceb501e9f102d9ba3f74e0bfed3dddee7f25a58df47732eef3d553b"
+    },
+    {
+      "stage": "S7.10",
+      "freeze_id": "D3D-SIR-S7.10-EXTERNAL-VALIDATION-AND-GATE-EVALUATION-V1",
+      "status": "PRIMARY_EXTERNAL_GATE_FAILURE",
+      "timestamp_utc": "2026-09-05T22:59:39.923443+00:00",
+      "file_sha256": "8ea2062f0fc38fbf24e3b9d6477cace1d0fcd9a54e746e66c6e428d01437db97"
+    },
+    {
+      "stage": "S7.11",
+      "freeze_id": "D3D-SIR-S7.11-SENSITIVITY-AND-FAILURE-INTERPRETATION-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "timestamp_utc": "2026-09-05T23:50:49.762818+00:00",
+      "file_sha256": "b93edac44994240e1fda4d6a0c8fa668cf712ac6a64b8d9fe63278e15c302e26"
+    },
+    {
+      "stage": "S7.R1",
+      "freeze_id": "D3D-SIR-S7.R1-OPERATIONAL-STATE-RECONCILIATION-V1",
+      "status": "NO_CLEAN_OPERATIONAL_STATE_PARTITION",
+      "timestamp_utc": "2026-09-06T01:05:20.911744+00:00",
+      "file_sha256": "ae6092a67a0e099a868876611f7aeca769edac062c4c6a878d6f6a22146ca226"
+    },
+    {
+      "stage": "S7.K2",
+      "freeze_id": "D3D-SIR-S7.K2-OBSERVATIONAL-RANGE-SUPPORT-CONTRACT-V1",
+      "status": "FROZEN_READY_FOR_DISCOVERY_EPOCH_2",
+      "timestamp_utc": "2026-09-06T02:59:57.816714+00:00",
+      "file_sha256": "198fa046c7eb2650efcb910f02922752b8204477f8930300e6abf24163193459"
+    },
+    {
+      "stage": "S7.E2.0",
+      "freeze_id": "D3D-SIR-S7.E2.0-DISCOVERY-EPOCH2-PROTOCOL-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "timestamp_utc": "2026-09-06T04:02:06.709084+00:00",
+      "file_sha256": "89af08c32468f0c9fc97046db47affa09a2cc864759e4b28374ddd5baa3842e6"
+    },
+    {
+      "stage": "S7.E2.0A",
+      "freeze_id": "D3D-SIR-S7.E2.0A-PREDICTOR-SIDE-ADMISSIBILITY-RECONCILIATION-V1",
+      "status": "FROZEN_READY_FOR_EPOCH2_SEARCH",
+      "timestamp_utc": "2026-09-06T04:47:45.692687+00:00",
+      "file_sha256": "d0b956b8ca4d086f296bc647a14cc9e267b8fe6e67e05c79b172346024ddd81e"
+    },
+    {
+      "stage": "S7.E2.1",
+      "freeze_id": "D3D-SIR-S7.E2.1-CROSSFITTED-DISCOVERY-AND-QUALIFICATION-V1",
+      "status": "QUALIFIED_POSITIVE_RECONSTRUCTION_FORMAL_PASS",
+      "timestamp_utc": "2026-09-06T05:24:38.201504+00:00",
+      "file_sha256": "25300460534ea0ff2708374c0c491343ed930018b604e2a499a58163be71f53d"
+    },
+    {
+      "stage": "S7.E2.2",
+      "freeze_id": "D3D-SIR-S7.E2.2-FULL-OBJECT-DESCRIPTIVE-REPRESENTATION-V1",
+      "status": "FULL_OBJECT_DESCRIPTIVE_REPRESENTATION_FROZEN",
+      "timestamp_utc": "2026-09-07T04:51:42.196227+00:00",
+      "file_sha256": "91263a6439a0f52e572bfcedbb118ab76a135085196a6cfc5f875603db0b13c6"
+    }
+  ],
+  "arc": [
+    {
+      "step": 1,
+      "stage": "S7.9",
+      "event": "Discovery Epoch 1 selected a development representation under K_REC_V1",
+      "C_dev_star": "ID(cerqtit6)|ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(cerqtit10)|RECIP(prmtan_neped)",
+      "selection_domain_cardinality": 162845,
+      "bootstrap_selection_frequency": 0.093,
+      "distinct_bootstrap_winners": 217
+    },
+    {
+      "step": 2,
+      "stage": "S7.10",
+      "event": "frozen external qualification FAILED",
+      "verdict": "NO_QUALIFIED_NONTRIVIAL_STRUCTURAL_TRANSFER",
+      "REL_mean": 0.7423647781201324,
+      "Delta_1": 0.5320905620084037,
+      "V3": "FAIL",
+      "V6": "FAIL",
+      "catastrophic_discharges": 2,
+      "max_NRMSE": 11.95,
+      "IMMUTABLE": true
+    },
+    {
+      "step": 3,
+      "stage": "S7.11",
+      "event": "provenance localized the failure to extreme extrapolation of PROD(gasa,gasa)",
+      "verdict": "S7_11_DEVELOPMENT_EQUIVALENCE_DOES_NOT_IDENTIFY_EXTERNAL_ROBUSTNESS__CANONICAL_REPRESENTATIVE_EXTERNALLY_FRAGILE__PRIMARY_FAILURE_UNCHANGED",
+      "V9": "FAIL",
+      "development_equivalent_family_V3_style_pass": 0.3286384976525822,
+      "no_support_beat_persistence_by_more_than": 0.0287
+    },
+    {
+      "step": 4,
+      "stage": "S7.R1",
+      "event": "an operational-state explanation was TESTED target-blindly and REFUTED",
+      "hypothesis": "X_rec^(1) pooled at least two physically meaningful operational states",
+      "verdict": "REFUTED",
+      "evidence": "development covers the external gasa range and a development discharge (195650, gasa 7.447) exceeds both catastrophic discharges (5.937, 5.923); no clean actuator state separates the failures",
+      "defect_localized_to": "P_rec",
+      "X_rec_revision_proposed": false
+    },
+    {
+      "step": 5,
+      "stage": "S7.K2",
+      "event": "minimal contract revision: a generic observational range-support predicate",
+      "revision_class": "MINIMAL_P_ONLY",
+      "metric": "E_RANGE_HULL_EXCESS_OVER_CALIBRATION_RANGE_V1",
+      "tau": 1.0,
+      "properties": [
+        "constructor-generic",
+        "dimensionless",
+        "unit-scale invariant",
+        "sign-symmetric",
+        "target-blind"
+      ],
+      "full_domain_atoms": 3451,
+      "of": 10778,
+      "gas_provenance": "GAS_SIGNAL_UNIT_RESOLVED_COMMAND_VOLTAGE"
+    },
+    {
+      "step": 6,
+      "stage": "S7.E2.0",
+      "event": "Epoch-2 protocol and six-fold resampling frozen; applicability risk disclosed prospectively",
+      "n_outer_folds": 6,
+      "EPOCH2_IS_FINAL_QREC_ATTEMPT": true
+    },
+    {
+      "step": 7,
+      "stage": "S7.E2.0A",
+      "event": "transition-specific information boundary clarified; tau_train retired",
+      "principle": "PREDICTOR_QUALIFIED_TARGET_CROSS_FITTED_RECONSTRUCTION",
+      "candidate_basis": "C_E2_FULL_DOMAIN",
+      "n": 3451,
+      "I_q_notation_change_required": false
+    },
+    {
+      "step": 8,
+      "stage": "S7.E2.1",
+      "event": "fresh cross-fitted discovery under K_REC_V2 formally PASSED",
+      "status": "QUALIFIED_POSITIVE_RECONSTRUCTION_FORMAL_PASS",
+      "FORMAL": "FORMAL_PASS",
+      "CLEAN": "CLEAN_DEMO_NOT_MET",
+      "Delta_0": -0.764488716015979,
+      "Delta_1": -0.027307619479192535,
+      "V3": "PASS",
+      "V6": "PASS_WITH_QUALIFICATION",
+      "V_RANGE": "PASS"
+    },
+    {
+      "step": 9,
+      "stage": "S7.E2.2",
+      "event": "full-object descriptive representation frozen for exposition",
+      "status": "FULL_OBJECT_DESCRIPTIVE_REPRESENTATION_FROZEN",
+      "machine_name": "C_E2_ALL_DESC",
+      "sha256": "e7935c35fd303be4fadff5637799b943f28a42c2b7944fc6d503b0dacd029645",
+      "descriptive_only": true
+    }
+  ],
+  "epoch_1_to_epoch_2": {
+    "epoch1_mean": 0.7423647781201324,
+    "epoch2_mean": 0.18911466503138652,
+    "epoch1_max": 11.95,
+    "epoch2_max": 0.91988453225983,
+    "epoch1_discharges_above_1": 2,
+    "epoch2_discharges_above_1": 0,
+    "shot_187019": {
+      "epoch1": 11.95,
+      "epoch2": 0.297
+    },
+    "shot_187022": {
+      "epoch1": 11.77,
+      "epoch2": 0.436
+    },
+    "causal_language_policy": {
+      "permitted": "The revised range-support-qualified discovery procedure eliminated the catastrophic extrapolation tail observed in Epoch 1.",
+      "also_permitted": "The disappearance of the failure mode is consistent with the reconciliation having localized the relevant contract defect.",
+      "forbidden": "K2 proved the range-support rule caused the improvement.",
+      "reason": "too many things differ between Epoch 1 and Epoch 2 - the contract, the basis, the validation geometry and the supports all changed"
+    }
+  },
+  "epoch_1_preserved_unmodified": true,
+  "R1_refutation_preserved": true,
+  "K2_revision_preserved": true,
+  "E2_0A_reconciliation_preserved": true
+}

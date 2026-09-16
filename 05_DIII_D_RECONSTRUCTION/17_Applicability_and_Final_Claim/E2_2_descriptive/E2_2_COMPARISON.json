@@ -1,0 +1,109 @@
+{
+  "record_id": "E2_2_COMPARISON_V1",
+  "descriptive_support_sha256": "e7935c35fd303be4fadff5637799b943f28a42c2b7944fc6d503b0dacd029645",
+  "n_fold_supports": 6,
+  "per_fold": [
+    {
+      "fold": 0,
+      "fold_support_sha256": "4654cd92613002c10ee9d97a480ae6a04dd9682d34fa802ef630d3d60258c8ac",
+      "n_shared": 4,
+      "jaccard": 0.2,
+      "shared_coordinates": "ID(pcdiamag3)|RATIO(ece21,cerqtit10)|RATIO(fs03da,cerqtit3)|RECIP(cerqtit10)"
+    },
+    {
+      "fold": 1,
+      "fold_support_sha256": "c3206098d6177f64aeac55049feda714d904d155d39e382db3b4cc9683136adb",
+      "n_shared": 8,
+      "jaccard": 0.5,
+      "shared_coordinates": "ID(pcdiamag3)|PROD(ece37,ece39)|RATIO(ece21,cerqtit10)|RATIO(fs03da,cerqtit3)|RATIO(ip,ece39)|RATIO(prmtan_neped,ece38)|RATIO(tinj,ece20)|RECIP(cerqtit10)"
+    },
+    {
+      "fold": 2,
+      "fold_support_sha256": "08fd3481eeea2e70375c7c346c02b32195501349da0250dbe900a2910e35781d",
+      "n_shared": 4,
+      "jaccard": 0.2,
+      "shared_coordinates": "ID(pcdiamag3)|RATIO(ece21,cerqtit10)|RATIO(ip,ece39)|RATIO(tinj,ece20)"
+    },
+    {
+      "fold": 3,
+      "fold_support_sha256": "e69c6efc20b77d1cd2b1cb87d167621fa8be08b597e3cff805b4360a3839c44a",
+      "n_shared": 6,
+      "jaccard": 0.3333333333333333,
+      "shared_coordinates": "ID(pcdiamag3)|PROD(ece37,ece39)|RATIO(ece21,cerqtit10)|RATIO(pinj_33r,cerqtit10)|RATIO(tinj,ece20)|RECIP(cerqtit10)"
+    },
+    {
+      "fold": 4,
+      "fold_support_sha256": "688791d4cb56a0ee96019a96ff99d7a66bd1027a41e65b91f4fe7364d4dc94af",
+      "n_shared": 8,
+      "jaccard": 0.5,
+      "shared_coordinates": "ID(pcdiamag3)|PROD(ece37,ece39)|RATIO(ece21,cerqtit10)|RATIO(fs03da,cerqtit3)|RATIO(ip,ece39)|RATIO(pinj_33r,cerqtit10)|RATIO(tinj,ece20)|RECIP(cerqtit10)"
+    },
+    {
+      "fold": 5,
+      "fold_support_sha256": "358854514ab519b94437227dc2ab8fe4c2a435ccbc2c355c1cdc8afc88ecf1be",
+      "n_shared": 3,
+      "jaccard": 0.14285714285714285,
+      "shared_coordinates": "ID(pcdiamag3)|RATIO(ece21,cerqtit10)|RATIO(tinj,ece20)"
+    }
+  ],
+  "mean_jaccard_with_folds": 0.31269841269841264,
+  "min_jaccard_with_folds": 0.14285714285714285,
+  "max_jaccard_with_folds": 0.5,
+  "identical_to_any_fold_support": false,
+  "coordinates_in_at_least_4_fold_supports": [
+    "ID(pcdiamag3)",
+    "RATIO(ece21,cerqtit10)",
+    "RATIO(prmtan_neped,cerqtit3)",
+    "RATIO(tinj,ece20)",
+    "RECIP(cerqtit10)"
+  ],
+  "shared_with_at_least_4_folds": [
+    "ID(pcdiamag3)",
+    "RATIO(ece21,cerqtit10)",
+    "RATIO(tinj,ece20)",
+    "RECIP(cerqtit10)"
+  ],
+  "coordinates_in_all_six_fold_supports": [
+    "ID(pcdiamag3)",
+    "RATIO(ece21,cerqtit10)"
+  ],
+  "shared_with_all_six_folds": [
+    "ID(pcdiamag3)",
+    "RATIO(ece21,cerqtit10)"
+  ],
+  "coordinates_unique_to_descriptive": [
+    "PROD(pinj,pinj_30l)",
+    "RATIO(gasc,cerqtit10)",
+    "RATIO(gasc,cerqtit11)"
+  ],
+  "coordinate_fold_recurrence": {
+    "ID(pcdiamag3)": 6,
+    "PROD(ece37,ece39)": 3,
+    "PROD(pinj,pinj_30l)": 0,
+    "RATIO(ece21,cerqtit10)": 6,
+    "RATIO(fs03da,cerqtit3)": 3,
+    "RATIO(gasc,cerqtit10)": 0,
+    "RATIO(gasc,cerqtit11)": 0,
+    "RATIO(ip,ece39)": 3,
+    "RATIO(pinj_33r,cerqtit10)": 2,
+    "RATIO(prmtan_neped,ece38)": 1,
+    "RATIO(tinj,ece20)": 5,
+    "RECIP(cerqtit10)": 4
+  },
+  "constructor_composition_descriptive": {
+    "C0": 1,
+    "C2": 2,
+    "C3": 8,
+    "C5": 1
+  },
+  "constructor_composition_folds": {
+    "C0": 7,
+    "C2": 16,
+    "C3": 34,
+    "C5": 11,
+    "C6": 2,
+    "C7": 2
+  },
+  "comparison_made_after_freeze": true,
+  "comparison_did_not_influence_selection": true
+}

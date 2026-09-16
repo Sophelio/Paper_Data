@@ -1,0 +1,127 @@
+{
+  "audit_id": "S7.1R",
+  "generated_utc": "2026-09-02T07:25:50.863732+00:00",
+  "issue_1_formal_O": {
+    "authoritative_definition_located": false,
+    "searched": [
+      "all local .md/.tex",
+      "SIR_paper_orig.pdf (22pp)",
+      "sir-web Paper Examples tree"
+    ],
+    "A_reinterpreted": "ancillary observational information",
+    "A_status": "PARTIALLY_INSTANTIATED",
+    "prior_interpretation_rejected": "admissibility (task-conditioned)"
+  },
+  "issue_2_units": {
+    "n_signals": 95,
+    "verified_local": 0,
+    "authoritative_external": 8,
+    "strongly_inferred": 86,
+    "unresolved": 1,
+    "local_units_artifact_exists": false,
+    "note": "_units_for() returns a BLANK data unit for every signal"
+  },
+  "issue_3_equilibrium": {
+    "n_quantities": 15,
+    "LINEAGE_RESOLVED": 0,
+    "LINEAGE_PARTIAL": 15,
+    "LINEAGE_UNRESOLVED": 0,
+    "producing_code_identified": false,
+    "suitable_for_target_independence_decision": false
+  },
+  "issue_4_temporal": {
+    "verdict": "OUTCOME_C_DIFFERENT_PROVIDERS_DIFFERENT_GRIDS",
+    "equilibrium_native_dt_ms": 20.0,
+    "analysis_grid_dt_ms": "4.08-6.03 (variable)",
+    "both_real": true,
+    "manuscript_claim_of_20ms_analysis_grid": "INCORRECT",
+    "equilibrium_oversampling_factor": 4.03
+  },
+  "issue_5_upstream_gap": {
+    "recommendation": "RECLASSIFY_U001_TO_MAJOR_CONDITIONAL",
+    "condition": "Omega_q must be defined over the ARCHIVED object",
+    "operation_characterized_per_signal_per_shot": true,
+    "generator_code_available": false,
+    "methods_observed": [
+      "cubic_spline",
+      "cubic_spline_simple",
+      "decimate_with_antialiasing",
+      "pchip_careful",
+      "pchip_no_smoothing"
+    ],
+    "categories_observed": [
+      "fast_transient",
+      "noisy",
+      "slow_varying",
+      "smooth_high_snr"
+    ],
+    "signals_with_method_varying_across_shots": 4,
+    "signals_downsampled_without_antialias": 18,
+    "signals_upsampled": 16
+  },
+  "cohort_stratification": {
+    "n_strata": 7,
+    "shot_span": [
+      155537,
+      195659
+    ],
+    "ip_processing_split_at_shot": 189646,
+    "n_shots_cubic_spline": 35,
+    "n_shots_decimate": 27,
+    "partially_resolves": "U008 (ordering only; no calendar dates)"
+  },
+  "component_A_evidence": {
+    "per_signal_per_shot_records": 5890,
+    "fields": [
+      "resample_method",
+      "resample_category",
+      "original_length",
+      "resampled_length"
+    ],
+    "plus": [
+      "signal group membership",
+      "cohort provenance flags",
+      "shot identifiers"
+    ],
+    "absent": [
+      "units",
+      "uncertainty",
+      "date/campaign",
+      "regime labels",
+      "event annotations"
+    ]
+  },
+  "gate": {
+    "target_selected": false,
+    "ontology_generated": false,
+    "coordinates_generated": false,
+    "regression_run": false,
+    "performance_inspected": false,
+    "canonical_artifacts_modified": false
+  },
+  "unresolved_register": {
+    "U001": "MAJOR_CONDITIONAL (was CRITICAL)",
+    "U002": "MAJOR (was CRITICAL)",
+    "U003": "CRITICAL (unchanged; closed as negative)",
+    "U004": "MAJOR (unchanged)",
+    "U005": "MAJOR (unchanged)",
+    "U006": "MAJOR (elevated in practice)",
+    "U007": "MODERATE (unchanged)",
+    "U008": "PARTIALLY_RESOLVED (was MODERATE)",
+    "U009": "MAJOR (new) cohort processing discontinuity at shot 189646",
+    "U010": "MAJOR (new) 18 signals downsampled without anti-aliasing"
+  },
+  "acceptance_checks": {
+    "1_formal_O_reconciled_by_addendum": true,
+    "2_units_recovery_artifacts_present": true,
+    "3_no_strongly_inferred_unit_promoted_to_verified": true,
+    "4_equilibrium_lineage_artifacts_present": true,
+    "5_every_equilibrium_quantity_has_a_lineage_status": true,
+    "6_temporal_reconciliation_artifacts_present": true,
+    "7_temporal_stages_traced_separately_not_forced": true,
+    "8_U001_reassessed_with_stated_condition": true,
+    "9_stage_gate_held": true
+  },
+  "acceptance_checks_passed": "9/9",
+  "s7_2_authorised": false
+}

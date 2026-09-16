@@ -1,0 +1,52 @@
+{
+  "policy_id": "CONDITIONING_POLICY_V1",
+  "generated_utc": "2026-09-05T08:07:46.430834+00:00",
+  "parent_wording": "conditioning: better-conditioned design matrix (lower condition number)",
+  "design": {
+    "matrix": "Z_{s,b}(C)",
+    "rows": "the CALIBRATION rows of discharge s, block b",
+    "columns": "the |C| scientific coordinates of the support",
+    "standardization": "calibration mean and sd of that same cell (see CALIBRATION_STANDARDIZATION_V1)",
+    "intercept_column": "EXCLUDED",
+    "centring_note": "because standardization subtracts the calibration mean, Z restricted to the calibration rows is already exactly column-centred; the centred-design and standardized-design readings coincide, so no ambiguity remains"
+  },
+  "kappa": {
+    "definition": "kappa_{s,b}(C) = sigma_max(Z_{s,b}) / sigma_min(Z_{s,b})",
+    "computed_from": "singular values of Z (SVD)",
+    "normal_equation_squared_condition_number": "FORBIDDEN",
+    "zero_sigma_min_rule": "sigma_min == 0 implies kappa = +inf",
+    "singleton_note": "for |C| = 1 the design has a single singular value and kappa = 1 exactly, so log10(kappa) = 0; this is an arithmetic consequence of the frozen definition, recorded here in advance rather than discovered later"
+  },
+  "candidate_level": {
+    "COND_MEDIAN": "median over the 60 discharge/block cells of log10(kappa_{s,b}(C))",
+    "COND_P90": "numpy.percentile(log10(kappa) over the 60 cells, 90, method='linear')",
+    "COND_MAX": "max over the 60 cells of log10(kappa_{s,b}(C))",
+    "log_base": 10,
+    "infinite_cells": "log10(+inf) = +inf propagates; the median remains defined unless at least half the cells are infinite, in which case COND_MEDIAN = +inf"
+  },
+  "rank_4_order": [
+    "minimize COND_MEDIAN",
+    "tie-break by COND_P90",
+    "then COND_MAX"
+  ],
+  "no_cutoff": {
+    "arbitrary_condition_number_cutoff_introduced": false,
+    "conditioning_is_a_utility_criterion_not_an_admissibility_rule": true,
+    "statement": "a candidate is not declared inadmissible solely because another candidate is better conditioned"
+  },
+  "relation_to_search_rank_deficiency": {
+    "search_rule": "S7.7R used eigenvalues of the centred Gram with sqrt(min/max) <= max(n_prot, m+1)*eps to set J_search = +inf and label SEARCH_PROXY_RANK_DEFICIENT",
+    "s7_8_rule": "Rank-4 conditioning uses the SVD of Z directly",
+    "conflict": false,
+    "reading": "these are different quantities serving different purposes: the search rule governs whether a navigation score is defined; the Rank-4 rule ranks admissible candidates by conditioning; neither was changed"
+  },
+  "also_reported": [
+    "COND_P90",
+    "COND_MAX"
+  ],
+  "execution_stage": "S7.9",
+  "selection_domain": "AHAT_REC_DENSITY_ONE_SEED_V2",
+  "selection_domain_cardinality": 162845,
+  "global_optimality_claim": false,
+  "domain_reading": "every quantity defined here is evaluated over the frozen explored frontier Ahat_rec only; A_rec minus Ahat_rec remains ADMISSIBLE_UNSEARCHED and carries no negative finding"
+}

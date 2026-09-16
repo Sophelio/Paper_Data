@@ -1,0 +1,200 @@
+{
+  "verification_id": "S7_8_PARENT_FREEZE_VERIFICATION_V1",
+  "generated_utc": "2026-09-05T08:08:17.668814+00:00",
+  "stage": "S7.8",
+  "lineage": [
+    {
+      "stage": "S7.1",
+      "path": "01_observational_object/reconciliation_final/S7_1_FINAL_FREEZE.json",
+      "freeze_id": "D3D-SIR-S7.1-OBSERVATIONAL-OBJECT-FINAL-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "be4807c65cdcf330244f2d80f0007f8f0448208b56ff3095f19fbdcf3097600f"
+    },
+    {
+      "stage": "S7.2 V1",
+      "path": "02_reconstruction_contract/S7_2_FREEZE.json",
+      "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V1",
+      "status": "FROZEN_READY_FOR_S7.3",
+      "file_sha256": "5e65d87825024d2e62b0db8fab8add518f364110e41f3a63f61571c80cc3102f"
+    },
+    {
+      "stage": "S7.2 V2 (S7.2C)",
+      "path": "02_reconstruction_contract/correction_v1/S7_2_FREEZE_V2.json",
+      "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V2",
+      "status": "FROZEN_READY_FOR_S7.3",
+      "file_sha256": "ecd15ef9e833e0b25feb42cdbcf30c67634f1949f4e50b08546f38bb61e7faab"
+    },
+    {
+      "stage": "S7.3 V1 historical",
+      "path": "03_target_feasibility_and_boundary/S7_3_FREEZE.json",
+      "freeze_id": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-V1",
+      "status": "FROZEN_READY_FOR_S7.4",
+      "file_sha256": "27d79631276fbbc59dfc3428bd566d5ca8a726878107a7fe38c3b9f2f784fa8a"
+    },
+    {
+      "stage": "S7.4 V1 historical",
+      "path": "04_mathematical_interpretation/S7_4_FREEZE.json",
+      "freeze_id": "D3D-SIR-S7.4-MATHEMATICAL-INTERPRETATION-V1",
+      "status": "TARGET_TEMPORAL_RESOLUTION_RECONCILIATION_REQUIRED",
+      "file_sha256": "7fdf4140986acb7df5e7aabd59b2007931c89654ed165d9a8f6b5ad638943879"
+    },
+    {
+      "stage": "S7.3R V2",
+      "path": "03_target_feasibility_and_boundary/reconciliation_source_resolution/S7_3_FREEZE_V2.json",
+      "freeze_id": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-SOURCE-RESOLUTION-V2",
+      "status": "FROZEN_READY_TO_RETRY_S7.4",
+      "file_sha256": "a8477f185c8dfb31d799c7607fa1a183d762405353c8bc21f195ff2524ff8a74"
+    },
+    {
+      "stage": "S7.4 V2",
+      "path": "04_mathematical_interpretation/retry_source_resolution_v2/S7_4_FREEZE_V2.json",
+      "freeze_id": "D3D-SIR-S7.4-MATHEMATICAL-INTERPRETATION-SOURCE-RESOLUTION-V2",
+      "status": "FROZEN_READY_FOR_S7.5",
+      "file_sha256": "0658d3c9949c19108ba5f8de17ba37966b5bd6bf41d9836f3ccc2ccf45c5183a"
+    },
+    {
+      "stage": "S7.5 V1",
+      "path": "05_typed_relational_ontology/S7_5_FREEZE.json",
+      "freeze_id": "D3D-SIR-S7.5-TYPED-RELATIONAL-ONTOLOGY-V1",
+      "status": "FROZEN_READY_FOR_S7.6",
+      "file_sha256": "2cd73e77e0734177c56df175e084a319ad5913fcf1038d0dc87f7507a8a86721"
+    },
+    {
+      "stage": "S7.5H V1",
+      "path": "05H_primitive_space_and_ontology_hardening/S7_5H_FREEZE.json",
+      "freeze_id": "D3D-SIR-S7.5H-PRIMITIVE-SPACE-AND-ONTOLOGY-HARDENING-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "dffdd834ecf40b0f22b4844040bfe0ab5dd2bebb4b73d517a67387f4718f43d9"
+    },
+    {
+      "stage": "S7.6 V1 historical",
+      "path": "06_admissible_universe/S7_6_FREEZE.json",
+      "freeze_id": "D3D-SIR-S7.6-ADMISSIBLE-UNIVERSE-V1",
+      "status": "FROZEN_READY_FOR_S7.7",
+      "file_sha256": "ac3127136678499d7ef65f3d0ab55adb6dbff123a4f37ab21498d656f672e5bf"
+    },
+    {
+      "stage": "S7.6R hardened V2",
+      "path": "06_admissible_universe/hardened_v2/S7_6R_FREEZE.json",
+      "freeze_id": "D3D-SIR-S7.6-ADMISSIBLE-UNIVERSE-HARDENED-V2",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "0cf779767940249fa515221f3fbd4bf2f7a93281c21cb63383b084504426fa59"
+    },
+    {
+      "stage": "S7.7 V1 historical blocked",
+      "path": "07_search_policy_and_frontier/S7_7_FREEZE.json",
+      "freeze_id": "D3D-SIR-S7.7-FROZEN-SEARCH-POLICY-AND-EXPLORED-FRONTIER-V1",
+      "status": "BLOCKED_SEARCH_BUDGET",
+      "file_sha256": "fa688ac6586c152864f979cb10843ce61475b07e636a64c6a42d94916abb181e"
+    },
+    {
+      "stage": "S7.7R one-seed primary V2",
+      "path": "07_search_policy_and_frontier/one_seed_primary_v2/S7_7R_FREEZE.json",
+      "freeze_id": "D3D-SIR-S7.7-ONE-SEED-PRIMARY-SEARCH-AND-EXPLORED-FRONTIER-V2",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "576b1087b8fd767c631ad65cc1123f4e1ff40be7816b46dfe4fe77b7aafd47e2"
+    }
+  ],
+  "n_lineage_entries": 13,
+  "s7_7r_manifest_recomputation": {
+    "n_recorded": 41,
+    "n_matched": 41,
+    "mismatched": [],
+    "missing": []
+  },
+  "frontier_integrity": {
+    "frontier_id": "AHAT_REC_DENSITY_ONE_SEED_V2",
+    "sigma_rec_id": "SIGMA_REC_ONE_SEED_PRIMARY_V2",
+    "registry_rows": 162845,
+    "registry_unique_support_ids": 162845,
+    "Ahat_rec_cardinality_recorded": 162845,
+    "singleton_supports": 10778,
+    "multivariate_supports": 152067,
+    "supports_by_size": {
+      "1": 10778,
+      "2": 8126,
+      "3": 12462,
+      "4": 14376,
+      "5": 14423,
+      "6": 14366,
+      "7": 14568,
+      "8": 14507,
+      "9": 14784,
+      "10": 14855,
+      "11": 14857,
+      "12": 14743
+    },
+    "supports_by_size_matches_freeze": true,
+    "support_size_min": 1,
+    "support_size_max": 12,
+    "per_cell_arrays": {
+      "explored_rows": 152067,
+      "atomic_rows": 10778,
+      "union_rows": 162845,
+      "n_cells": 60,
+      "cells_identical_across_files": true,
+      "explored_atomic_id_overlap": 0,
+      "all_cells_finite_explored": true,
+      "all_cells_finite_atomic": true,
+      "dtype": "float32"
+    },
+    "canonical_id": {
+      "separator": "top-level pipe at parenthesis depth 0",
+      "naive_split_is_unsafe": true,
+      "naive_split_mismatch_rows": 116608,
+      "depth_aware_split_reproduces_support_size": true,
+      "atoms_ascending_sorted_within_support_id": true,
+      "support_id_equals_coordinate_ids": true,
+      "distinct_atoms_used": 10778
+    },
+    "cell_geometry": {
+      "n_development_shots": 20,
+      "blocks": [
+        "A",
+        "B",
+        "C"
+      ],
+      "shots_match_frozen_cohort": true
+    }
+  },
+  "contract_facts": {
+    "target": "density",
+    "target_is_density": true,
+    "development_cohort_n": 20,
+    "external_cohort_n": 42,
+    "external_by_era": {
+      "earlier": 24,
+      "later": 18
+    },
+    "external_sealed": true,
+    "v6_external_counts_authoritative": {
+      "earlier": 24,
+      "later": 18,
+      "total": 42
+    },
+    "v6_parent_object_counts_superseded": {
+      "earlier": 35,
+      "later": 27,
+      "total": 62
+    },
+    "practical_equivalence_authoritative": "max(SE_delta, 0.01)",
+    "primary_metric_scale": "scale_{s,b} = std(y_calibration_{s,b}, ddof=0)",
+    "search_policy": "SIGMA_REC_ONE_SEED_PRIMARY_V2",
+    "one_seed_primary": true,
+    "two_seed_sensitivity": [
+      "DECLARED_OPTIONAL",
+      "NOT_EXECUTED"
+    ],
+    "baselines_run": 0,
+    "external_signal_values_opened_by_parents": 0,
+    "external_target_values_opened_by_parents": 0
+  },
+  "drift": [],
+  "verdict": "ZERO_SUBSTANTIVE_DRIFT",
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

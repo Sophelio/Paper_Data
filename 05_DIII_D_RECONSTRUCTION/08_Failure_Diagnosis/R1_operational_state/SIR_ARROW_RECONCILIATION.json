@@ -1,0 +1,67 @@
+{
+  "record_id": "SIR_ARROW_RECONCILIATION_V1",
+  "generated_utc": "2026-09-06T01:05:20.911744+00:00",
+  "arrows": [
+    {
+      "arrow": "O -> O_q",
+      "prior_instantiation": "O_DIIID_FINAL, 62 discharges, 95 signals",
+      "downstream_evidence": "the actuator information needed to test the state hypothesis was already present and admitted",
+      "status": "VALID",
+      "proposed_revision": null,
+      "K_rec_change_required": false
+    },
+    {
+      "arrow": "O_q -> X_rec",
+      "prior_instantiation": "X_rec^(1), pooled discharge ensemble",
+      "downstream_evidence": "the operational-state hypothesis was TESTED and REFUTED: the development cohort covers the external gasa range (dev -0.019..7.51 vs ext -0.018..7.98) and a development discharge (195650, gasa 7.45) exceeds both catastrophic discharges (5.94, 5.92). No actuator-level state separates them; the multivariate fallback places them among 75 ordinary blocks",
+      "status": "VALID_NOT_INVALIDATED",
+      "proposed_revision": "NONE. X_rec^(2) as an operational-state-indexed ensemble is NOT supported by the evidence. The record genuinely is one operational ensemble with respect to gas actuation.",
+      "K_rec_change_required": false
+    },
+    {
+      "arrow": "X_rec -> G_rec",
+      "prior_instantiation": "G_REC_DENSITY_HARDENED_V2",
+      "downstream_evidence": "coordinates remain typed and admissible as constructed",
+      "status": "VALID",
+      "proposed_revision": null,
+      "K_rec_change_required": false
+    },
+    {
+      "arrow": "G_rec -> A_rec",
+      "prior_instantiation": "A_REC_DENSITY_HARDENED_V2",
+      "downstream_evidence": "A_rec was constructed correctly UNDER THE CONTRACT AS WRITTEN. DENOMINATOR_ADMISSIBILITY_PRIMARY_V1 guards denominators, and S7.6R states explicitly that C0/C1/C2/C6 have no denominator and no gate. PROD(gasa,gasa) was therefore admissible by rule, not by oversight",
+      "status": "VALID_UNDER_CONTRACT_AS_WRITTEN",
+      "proposed_revision": "none to the instantiated object; the ADMISSIBILITY CONDITION itself is incomplete",
+      "K_rec_change_required": true
+    },
+    {
+      "arrow": "A_rec -> Ahat_rec",
+      "prior_instantiation": "AHAT_REC_DENSITY_ONE_SEED_V2",
+      "downstream_evidence": "search executed as frozen; nothing downstream invalidates it",
+      "status": "VALID",
+      "proposed_revision": null,
+      "K_rec_change_required": false
+    },
+    {
+      "arrow": "Ahat_rec -> (C*, R*)",
+      "prior_instantiation": "C_dev_star + DEVELOPMENT_RELATION_OLS_V1",
+      "downstream_evidence": "S7.11 showed development equivalence did not identify external robustness, but the selection executed the frozen utility exactly",
+      "status": "VALID",
+      "proposed_revision": null,
+      "K_rec_change_required": false
+    },
+    {
+      "arrow": "(C*, R*) -> Q_rec",
+      "prior_instantiation": "Q_rec^(1), V3 FAIL / V6 FAIL",
+      "downstream_evidence": "the qualification is what exposed the incomplete admissibility condition",
+      "status": "VALID_AND_INFORMATIVE",
+      "proposed_revision": null,
+      "K_rec_change_required": false
+    }
+  ],
+  "earliest_invalidated_instantiated_object": null,
+  "earliest_invalidated_stage": "NONE_OF_THE_INSTANTIATED_OBJECTS",
+  "finding": "no instantiated SIR object was invalidated. Every object was constructed correctly under K_rec as written. The defect is in K_rec itself: the admissibility condition covers denominator singularity but not observational range support for total nonlinear constructors.",
+  "hypothesis_tested_and_refuted": "X_rec^(1) pooled at least two operational states",
+  "why_refuted": "the strong-gas condition IS represented in development. What is absent from development is a BLOCK ALIGNMENT - an actuator transition inside the protected window following a quiet calibration window. Maximum development protected/calibration gasa ratio is 1.018; the two catastrophic blocks are 41.0 and 40.2. That is a property of the validation geometry, not of the plasma."
+}

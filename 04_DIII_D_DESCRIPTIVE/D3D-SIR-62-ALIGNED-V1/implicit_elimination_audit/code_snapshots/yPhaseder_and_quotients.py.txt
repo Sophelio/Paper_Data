@@ -1,0 +1,45 @@
+# original_path: submodules/Archaieus/src/Archaieus/sir/consumer_function.py
+# lines: 394-432
+# sha256: 965fe8fb400b0150c56849a0b6da0b5b1fdf8adc0cc92c146ebb1ef947385d28
+# git_commit: aefd942ea111f7bd24d1d86cafb954639aff3fb1
+# historical_match_status: CODE_PRESENT_MATCHES_ARTIFACT_CONSTRUCTION
+
+    shiftval = get_shiftval(x, dx, d2x, d3x, d4x, nmin, out_type)
+         
+    # first order ders — quotients need 2+ signals, yPhaseder works with 1.
+    # XPhaseders and xi/xj both include both orientations (a/b and b/a).
+    # YPhaseders are built separately below with the target always in the numerator.
+    if num_x >= 2:
+        xPhaseder, xPhasedername = TRANSFORMS.make_Quotients(
+            dx, dxname, shiftval, add_inverse=True
+        )
+        xPhaseder_mSD = (np.mean(xPhaseder, axis=-1), np.std(xPhaseder, axis=-1))
+        quotients, quotientsname = TRANSFORMS.make_Quotients(
+            x, xname, shiftval, add_inverse=True
+        )
+        quotients_mSD = (np.mean(quotients, axis=-1), np.std(quotients, axis=-1))
+    else:
+        xPhaseder = np.array([]).reshape(0, x.shape[1])
+        xPhasedername = []
+        xPhaseder_mSD = (np.array([]), np.array([]))
+        quotients = np.array([]).reshape(0, x.shape[1])
+        quotientsname = []
+        quotients_mSD = (np.array([]), np.array([]))
+
+    temp_y    = dy + shiftval
+    temp_x    = dx + shiftval
+    yPhaseder = np.array([temp_y/_dxi for _dxi in temp_x])
+    yPhasedername = [dyname[0]/dxname[i] for i in range(len(dxname))]
+    yPhaseder_mSD = (np.mean(yPhaseder, axis=-1), np.std(yPhaseder, axis=-1))
+
+    temp_y    = y + shiftval
+    temp_x    = x + shiftval
+    quotientyx = np.array([temp_y/_xi for _xi in temp_x])
+    quotientyx_mSD = (np.mean(quotientyx, axis=-1), np.std(quotientyx, axis=-1))
+    quotientyxname = [yname[0]/xname[i] for i in range(len(xname))]
+
+    if total_normalization:
+        xPhaseder  = zscore(xPhaseder,axis=-1)
+        yPhaseder  = zscore(yPhaseder,axis=-1)
+        quotients  = zscore(quotients,axis=-1)
+        quotientyx = zscore(quotientyx,axis=-1)

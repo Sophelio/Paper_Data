@@ -1,0 +1,134 @@
+{
+  "dimensional_type_algebra": {
+    "level": "COMPONENT, never block. Broad blocks are organizational only and three of the eight are dimensionally heterogeneous.",
+    "heterogeneous_blocks": [
+      "X_NBI",
+      "X_density_aux",
+      "X_mag"
+    ],
+    "base_dimension_classes": [
+      "electric_current",
+      "electric_potential",
+      "magnetic_flux_density",
+      "number_density",
+      "photon_flux",
+      "power",
+      "temperature_energy",
+      "time",
+      "torque",
+      "uncalibrated_raw_signal",
+      "velocity"
+    ],
+    "constructor_output": {
+      "C0": "[x_i]",
+      "C1": "[x_i] / time",
+      "C2": "[x_i] * [x_j]",
+      "C3": "[x_i] / [x_j]",
+      "C4": "[x_i] / [x_j]"
+    },
+    "standardization_does_not_alter_scientific_type": true,
+    "note": "a coordinate is NOT declared dimensionless merely because its values are numerically standardized later"
+  },
+  "temporal_resolution_propagation": {
+    "C0": "inherit the primitive's temporal metadata unchanged",
+    "C1": "inherit the source primitive's temporal-resolution qualification PLUS DERIVED_FROM_NUMERICAL_REALIZATION",
+    "C2": "limited by the COARSER provenance-supported temporal resolution of the two operands, within each discharge",
+    "C3": "limited by the COARSER provenance-supported temporal resolution of the two operands, within each discharge",
+    "C4": "limited by the COARSER derivative-source resolution of numerator and denominator",
+    "invariant": "no constructed coordinate may claim temporal information finer than either operand"
+  },
+  "flag_propagation": {
+    "ALIASING_RISK": "propagates from any operand to the output; levels remain primary admissible; no high-frequency physical claim may be made",
+    "UPSTREAM_UPSAMPLED": "level remains primary admissible; the first derivative is NUMERICAL_SENSITIVITY_ONLY and leaves the primary grammar",
+    "precedence": "where both flags occur, NUMERICAL_SENSITIVITY_ONLY dominates PRIMARY eligibility",
+    "UNCALIBRATED_SIGNAL": "level primary admissible; ALL derived constructors excluded from the primary ontology"
+  },
+  "provenance_propagation": {
+    "stored_per_coordinate": [
+      "constructor",
+      "ordered operands",
+      "primitive ancestors",
+      "input provenance classes",
+      "input units and types",
+      "temporal qualifications",
+      "transformation depth",
+      "target-independence status"
+    ],
+    "primitive_ancestors_recoverable_exactly": true,
+    "target_independence_is_transitive": true,
+    "invariant": "if any primitive ancestor is target-forbidden, the coordinate is forbidden",
+    "holds_automatically_because": "G_rec is generated from the already target-independent 78-primitive boundary; the invariant is encoded regardless"
+  },
+  "uncalibrated_signal_policy": {
+    "signals": [
+      "pcbcoil",
+      "pcdiamag3"
+    ],
+    "primitive_level": "PRIMARY_ADMISSIBLE",
+    "derived_coordinate": "DIMENSIONALLY_UNCERTIFIED_PRIMARY_EXCLUDED",
+    "excluded_from": [
+      "C1",
+      "C2",
+      "C3",
+      "C4"
+    ],
+    "rationale": "their physical dimensions are unresolved, so the dimensional type of any constructed coordinate cannot be scientifically certified. This is a fail-closed dimensional-admissibility decision, NOT a claim that the signals carry no information."
+  },
+  "numerical_realization": {
+    "id": "FD2_PHYSICAL_TIME_V1",
+    "rule": "second-order finite difference with respect to actual physical time t in seconds",
+    "reference_implementation": "numpy.gradient(x, t, edge_order=2)",
+    "uses_actual_T_s": true,
+    "assumes_global_dt": false,
+    "fitted_smoothing_parameter": false,
+    "spline_or_RTS_in_primary": false,
+    "target_values_involved": false,
+    "cross_discharge_stencil": false,
+    "differentiates_wrt_tau": false,
+    "capability_check": {
+      "rule": "second-order finite difference with respect to physical time t",
+      "reference_implementation": "numpy.gradient(x, t, edge_order=2)",
+      "numpy_version": "2.5.2",
+      "grids_tested_ms": [
+        5.853,
+        6.824,
+        14.187
+      ],
+      "per_grid": [
+        {
+          "dt_ms": 5.853,
+          "max_interior_abs_error": 4.567605999694635e-05,
+          "n_samples": 400
+        },
+        {
+          "dt_ms": 6.824,
+          "max_interior_abs_error": 6.208852079758742e-05,
+          "n_samples": 400
+        },
+        {
+          "dt_ms": 14.187,
+          "max_interior_abs_error": 0.00026834763810690276,
+          "n_samples": 400
+        }
+      ],
+      "observed_convergence_ratios": [
+        3.999972059931178,
+        3.999981459803801
+      ],
+      "expected_ratio_for_second_order": 4.0,
+      "second_order_confirmed": true,
+      "nonuniform_grid_max_interior_error": 0.00012216565714973093,
+      "nonuniform_note": "np.gradient accepts a non-uniform t vector but is only first-order there. Not relied upon: each T_s is UNIFORM within its own discharge; only dt differs BETWEEN discharges, which is the second-order case tested above.",
+      "reproducible_on_discharge_specific_grid": true,
+      "uses_actual_T_s_values": true,
+      "assumed_global_dt": false,
+      "fitted_smoothing_parameter": false,
+      "target_values_involved": false,
+      "cross_discharge_stencil": false,
+      "synthetic_data_only": true,
+      "observational_values_touched": 0
+    },
+    "alternative_realizations": "spline / RTS / other smooth realizations belong to S7.11 sensitivity qualification, not to the primary ontology",
+    "interpretation": "a derivative-valued coordinate is a constructor acting through a DECLARED numerical realization of a sampled trajectory; it is not evidence that the samples possess an exact classical derivative"
+  }
+}

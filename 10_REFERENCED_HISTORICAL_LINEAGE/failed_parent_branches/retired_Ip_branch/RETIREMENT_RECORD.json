@@ -1,0 +1,39 @@
+{
+  "retirement_id": "D3D-FIG6-QREC-RETIREMENT-V1",
+  "generated_utc": "2026-09-02T04:48:03.049247+00:00",
+  "retired_artifact": "D:\\SIR_paper\\DIIID_example\\Figure_data\\d3d_reconstruction_summary.json",
+  "retired_artifact_sha256": "a6aa4347e6ae97a15d633851e2ec1b02c6b6074464f464f8fe30d5e3b47deb41",
+  "retired_run_id": "D3D-SIR-62-ALIGNED-V1 (reconstruction branch only)",
+  "status": "RETIRED_FOR_PROVENANCE_LEAKAGE",
+  "artifact_modified": false,
+  "note": "The canonical artifact is preserved byte-for-byte. This record marks its reconstruction branch retired; it must not be cited for Figure 6.",
+  "reasons": [
+    {
+      "id": "PROVENANCE_LEAKAGE",
+      "detail": "6/10 REL10 and 4/10 RAW10 features carry upstream I_p dependence. q95 is essentially shape*a^2*Bt/Ip in this archive (median |corr| with 1/Ip = 0.945; 7.3% residual scatter after removing Ip; Ip recovered from a^2*Bt/q95 at median R^2 = 0.79)."
+    },
+    {
+      "id": "NO_SKILL_OVER_TRIVIAL_BASELINE",
+      "detail": "A constant persistence predictor reaches median normalised RMSE 0.0685 on the protected final 20%, beating REL141 0.1137, REL10 0.1257 and RAW10 0.1821. var(eval)/var(calib) median 0.0032. Indicative pending exact-protocol confirmation."
+    }
+  ],
+  "retired_numbers": {
+    "n_rel10_wins_of_55": 46,
+    "pooled_rmse_REL141": 0.1136860324756109,
+    "pooled_rmse_REL10": 0.1257122694487528,
+    "pooled_rmse_RAW10": 0.182086862730149,
+    "median_effective_df_REL141": 98.99646122678683,
+    "median_effective_df_REL10": 10.572839159428751,
+    "median_effective_df_RAW10": 5.973214114824849
+  },
+  "unaffected": {
+    "q_desc": "q_desc is an explicitly target-containing descriptive closure; target-dependent coordinates are admissible there by design. Its audits remain outstanding, not failed."
+  },
+  "required_before_any_qrec_claim": [
+    "rebuild the candidate universe from target-independent primitives only",
+    "rerun development-cohort support selection and freeze it",
+    "rerun all 55 external discharges",
+    "report skill against a persistence baseline, not normalised RMSE alone",
+    "confirm the evaluation-window variance issue with the exact frozen protocol"
+  ]
+}

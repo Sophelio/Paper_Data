@@ -1,0 +1,215 @@
+{
+  "record_id": "APPLICABILITY_FEASIBILITY_V1",
+  "generated_utc": "2026-09-06T03:58:10.250277+00:00",
+  "status": "PROSPECTIVE_TARGET_BLIND_DISCLOSURE",
+  "purpose": "quantify how demanding FULL_CROSSFITTED_DOMAIN_RANGE_SUPPORT is before any search is run",
+  "influences_coordinate_selection": false,
+  "target_used": false,
+  "performance_used": false,
+  "method": "for each fold, draw 4000 random 12-coordinate subsets of the training-admissible basis and measure the fraction whose coordinates are ALL range-supported on that fold's held-out discharges at tau=1.0",
+  "caveat": "the real search selects by utility, not at random. Whether utility-selected supports carry over better or worse than random draws is unknown and cannot be determined without running the search, which this stage may not do. The random estimate is the honest prospective guide, not a prediction",
+  "basis_size_by_tau_train": {
+    "0.25": {
+      "min": 1072,
+      "max": 1293,
+      "per_fold": [
+        1072,
+        1132,
+        1121,
+        1293,
+        1146,
+        1197
+      ],
+      "smallest_constructor_family": 5
+    },
+    "0.4": {
+      "min": 1869,
+      "max": 1980,
+      "per_fold": [
+        1869,
+        1896,
+        1876,
+        1942,
+        1882,
+        1980
+      ],
+      "smallest_constructor_family": 5
+    },
+    "0.5": {
+      "min": 2217,
+      "max": 2352,
+      "per_fold": [
+        2258,
+        2217,
+        2238,
+        2253,
+        2238,
+        2352
+      ],
+      "smallest_constructor_family": 5
+    },
+    "0.6": {
+      "min": 2550,
+      "max": 2678,
+      "per_fold": [
+        2584,
+        2552,
+        2550,
+        2555,
+        2571,
+        2678
+      ],
+      "smallest_constructor_family": 6
+    },
+    "0.75": {
+      "min": 3022,
+      "max": 3184,
+      "per_fold": [
+        3034,
+        3070,
+        3024,
+        3022,
+        3035,
+        3184
+      ],
+      "smallest_constructor_family": 6
+    },
+    "1.0": {
+      "min": 3653,
+      "max": 3817,
+      "per_fold": [
+        3741,
+        3748,
+        3683,
+        3653,
+        3714,
+        3817
+      ],
+      "smallest_constructor_family": 8
+    }
+  },
+  "joint12_by_tau_train": {
+    "0.25": {
+      "per_fold": [
+        1.0,
+        0.5775,
+        0.9105,
+        0.991,
+        1.0,
+        0.6763
+      ],
+      "per_fold_range": "0.58-1.00",
+      "six_fold_product": 0.3524
+    },
+    "0.4": {
+      "per_fold": [
+        0.9698,
+        0.626,
+        0.9133,
+        0.9667,
+        0.848,
+        0.6685
+      ],
+      "per_fold_range": "0.63-0.97",
+      "six_fold_product": 0.3038
+    },
+    "0.5": {
+      "per_fold": [
+        0.9303,
+        0.6165,
+        0.8163,
+        0.9008,
+        0.7843,
+        0.604
+      ],
+      "per_fold_range": "0.60-0.93",
+      "six_fold_product": 0.1997
+    },
+    "0.6": {
+      "per_fold": [
+        0.8958,
+        0.6185,
+        0.7957,
+        0.8725,
+        0.7087,
+        0.5565
+      ],
+      "per_fold_range": "0.56-0.90",
+      "six_fold_product": 0.1517
+    },
+    "0.75": {
+      "per_fold": [
+        0.748,
+        0.539,
+        0.6753,
+        0.7212,
+        0.6035,
+        0.4188
+      ],
+      "per_fold_range": "0.42-0.75",
+      "six_fold_product": 0.0496
+    },
+    "1.0": {
+      "per_fold": [
+        0.3825,
+        0.3668,
+        0.461,
+        0.5098,
+        0.4098,
+        0.2985
+      ],
+      "per_fold_range": "0.30-0.51",
+      "six_fold_product": 0.004
+    }
+  },
+  "held_out_discharge_hostility": {
+    "min_frac_fold_basis_supported": 0.9720342805593144,
+    "median": 1.0,
+    "n_below_0.80": 0,
+    "n_below_0.50": 0,
+    "hardest": [
+      {
+        "discharge": "159310",
+        "outer_fold": 1,
+        "era": "earlier",
+        "frac_fold_basis_supported": 0.9720342805593144,
+        "worst_block": "A",
+        "worst_block_rate": 0.9720342805593144
+      },
+      {
+        "discharge": "189646",
+        "outer_fold": 5,
+        "era": "later",
+        "frac_fold_basis_supported": 0.9804421768707483,
+        "worst_block": "A",
+        "worst_block_rate": 0.9804421768707483
+      },
+      {
+        "discharge": "161414",
+        "outer_fold": 4,
+        "era": "earlier",
+        "frac_fold_basis_supported": 0.9879356568364611,
+        "worst_block": "A",
+        "worst_block_rate": 0.9879356568364611
+      },
+      {
+        "discharge": "187018",
+        "outer_fold": 5,
+        "era": "earlier",
+        "frac_fold_basis_supported": 0.9885204081632653,
+        "worst_block": "A",
+        "worst_block_rate": 0.9940476190476191
+      },
+      {
+        "discharge": "160715",
+        "outer_fold": 2,
+        "era": "earlier",
+        "frac_fold_basis_supported": 0.9915102770330653,
+        "worst_block": "A",
+        "worst_block_rate": 0.9915102770330653
+      }
+    ],
+    "reading": "no hostile discharge exists. Every discharge retains at least 93.8 percent of its fold's training basis. The joint difficulty is compounding attrition across 12 coordinates and ~10 held-out discharges, not a pathological shot"
+  },
+  "conclusion": "the applicability gate, not reconstruction skill, is the dominant risk to Epoch 2. Disclosed prospectively; the standard was not weakened"
+}

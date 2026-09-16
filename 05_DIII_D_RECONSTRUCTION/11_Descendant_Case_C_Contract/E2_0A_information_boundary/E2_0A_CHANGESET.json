@@ -1,0 +1,72 @@
+{
+  "changeset_id": "E2_0A_CHANGESET_V1",
+  "generated_utc": "2026-09-06T04:47:45.692687+00:00",
+  "parent": "E2_0_PROTOCOL_V1",
+  "child": "E2_0A_PROTOCOL",
+  "parent_overwritten": false,
+  "parent_status": "PRESERVED_AS_HISTORICAL_PARENT",
+  "child_status": "AUTHORITATIVE_FOR_EPOCH2_EXECUTION",
+  "changes": [
+    {
+      "item": "held-out predictor ranges may not influence candidate filtering",
+      "from": "FORBIDDEN (E2.0)",
+      "to": "PERMITTED for P-RANGE applicability only (E2.0A)",
+      "type": "RELAXATION",
+      "justified_on": "claim semantics + contract precedent",
+      "affects_target_side": false
+    },
+    {
+      "item": "tau_train",
+      "from": 0.5,
+      "to": null,
+      "type": "RETIREMENT",
+      "justified_on": "conceptual - unnecessary under the finite-object claim",
+      "replacement_threshold_created": false
+    },
+    {
+      "item": "candidate basis",
+      "from": "per-fold, rebuilt from D_train at tau_train = 0.5 (2217-2352 coords)",
+      "to": "common C_E2_FULL_DOMAIN, K2-certified over all 62 (3451 coords)",
+      "type": "SUBSTITUTION"
+    },
+    {
+      "item": "access order",
+      "from": "13 per-fold steps",
+      "to": "5 global pre-search steps + 10 per-fold steps",
+      "type": "RESTRUCTURE"
+    },
+    {
+      "item": "V-RANGE",
+      "from": "a substantive held-out gate",
+      "to": "expected to pass by construction; retained as an INTEGRITY CHECK",
+      "type": "ROLE_CHANGE",
+      "deleted": false
+    }
+  ],
+  "unchanged": [
+    "claim type",
+    "the six outer folds",
+    "tau = 1",
+    "K_REC_V2",
+    "G_rec",
+    "A_rec",
+    "P_rec",
+    "U_rec",
+    "V3",
+    "V6",
+    "baselines",
+    "search budget",
+    "one-seed policy",
+    "CLEAN_DEMO_PASS",
+    "stop rule",
+    "forbidden claim wording"
+  ],
+  "epistemic_effect": "E2.0's stricter rule would have tested TWO things on held-out data: whether the target relationship transfers, AND whether the support's predictor geometry holds up on discharges whose ranges were never consulted. E2.0A tests only the first; the second is now satisfied by construction. A positive Epoch-2 result is therefore a WEAKER statement than E2.0 would have produced, and the claim boundary must say so",
+  "amendment_justified_by_success_probability": false,
+  "e2_0_feasibility_estimate": {
+    "value": "roughly 1 in 5 six-fold applicability under random draws",
+    "role_now": "HISTORICAL_CONTEXT_ONLY",
+    "was_the_justification": false,
+    "preserved_at": "E2_0_protocol_and_resampling_freeze/manifests/APPLICABILITY_FEASIBILITY.json"
+  }
+}

@@ -1,0 +1,21 @@
+parent,child,dependency_type,evidence,evidence_class,confidence,notes
+magnetic_probes,efit_equilibrium_reconstruction,presumed_input,external convention only,UNRESOLVED,low,NOT verified for this pipeline
+flux_loops,efit_equilibrium_reconstruction,presumed_input,external convention only,UNRESOLVED,low,NOT verified for this pipeline
+measured_plasma_current,efit_equilibrium_reconstruction,presumed_input,external convention only,UNRESOLVED,low,NOT verified for this pipeline
+toroidal_field,efit_equilibrium_reconstruction,presumed_input,external convention only,UNRESOLVED,low,NOT verified for this pipeline
+kinetic_profiles,efit_equilibrium_reconstruction,presumed_input,external convention only,UNRESOLVED,low,NOT verified for this pipeline
+efit_equilibrium_reconstruction,aminor,reconstructed_from,description names EFIT,LOCAL_DOCUMENTED,high,
+efit_equilibrium_reconstruction,area,reconstructed_from,description names EFIT,LOCAL_DOCUMENTED,high,
+efit_equilibrium_reconstruction,betan,reconstructed_from,group coherence with aminor/area,STRONGLY_INFERRED,medium,
+efit_equilibrium_reconstruction,drsep,reconstructed_from,group coherence with aminor/area,STRONGLY_INFERRED,medium,
+efit_equilibrium_reconstruction,kappa,reconstructed_from,group coherence with aminor/area,STRONGLY_INFERRED,medium,
+efit_equilibrium_reconstruction,li,reconstructed_from,group coherence with aminor/area,STRONGLY_INFERRED,medium,
+efit_equilibrium_reconstruction,q95,reconstructed_from,group coherence with aminor/area,STRONGLY_INFERRED,medium,
+efit_equilibrium_reconstruction,rmaxis,reconstructed_from,group coherence with aminor/area,STRONGLY_INFERRED,medium,
+efit_equilibrium_reconstruction,rsurf,reconstructed_from,group coherence with aminor/area,STRONGLY_INFERRED,medium,
+efit_equilibrium_reconstruction,tribot,reconstructed_from,group coherence with aminor/area,STRONGLY_INFERRED,medium,
+efit_equilibrium_reconstruction,tritop,reconstructed_from,group coherence with aminor/area,STRONGLY_INFERRED,medium,
+efit_equilibrium_reconstruction,volume,reconstructed_from,group coherence with aminor/area,STRONGLY_INFERRED,medium,
+efit_equilibrium_reconstruction,zcur,reconstructed_from,group coherence with aminor/area,STRONGLY_INFERRED,medium,
+efit_equilibrium_reconstruction,zmaxis,reconstructed_from,group coherence with aminor/area,STRONGLY_INFERRED,medium,
+efit_equilibrium_reconstruction,zsurf,reconstructed_from,group coherence with aminor/area,STRONGLY_INFERRED,medium,

@@ -1,0 +1,154 @@
+{
+  "freeze_id": "D3D-SIR-S7.E2.2-FULL-OBJECT-DESCRIPTIVE-REPRESENTATION-V1",
+  "status": "FULL_OBJECT_DESCRIPTIVE_REPRESENTATION_FROZEN",
+  "timestamp_utc": "2026-09-07T04:51:42.196227+00:00",
+  "stage": "S7.E2.2",
+  "label": "FULL_OBJECT_DESCRIPTIVE_REPRESENTATION",
+  "machine_name": "C_E2_ALL_DESC",
+  "support_id": "ID(pcdiamag3)|PROD(ece37,ece39)|PROD(pinj,pinj_30l)|RATIO(ece21,cerqtit10)|RATIO(fs03da,cerqtit3)|RATIO(gasc,cerqtit10)|RATIO(gasc,cerqtit11)|RATIO(ip,ece39)|RATIO(pinj_33r,cerqtit10)|RATIO(prmtan_neped,ece38)|RATIO(tinj,ece20)|RECIP(cerqtit10)",
+  "support_sha256": "e7935c35fd303be4fadff5637799b943f28a42c2b7944fc6d503b0dacd029645",
+  "support_size": 12,
+  "constructor_counts": {
+    "C0": 1,
+    "C2": 2,
+    "C3": 8,
+    "C5": 1
+  },
+  "basis": {
+    "name": "C_E2_FULL_DOMAIN",
+    "n": 3451,
+    "sha256": "1d22aeac2e5fa116e2dc44606b4da8e9466a1189f75af4fe1d75989b3c3e5852"
+  },
+  "search": {
+    "policy": "SIGMA_REC_ONE_SEED_PRIMARY_V2",
+    "proposals": 127642,
+    "unique_supports_evaluated": 102100,
+    "frontier_size": 102100,
+    "budget": 300000,
+    "within_budget": true,
+    "n_strata": 108,
+    "shortlist_size": 461,
+    "seeds": 108,
+    "second_seed_used": false,
+    "budget_extended": false,
+    "reused_E2_1_supports": false,
+    "search_seconds": 66.4
+  },
+  "utility": {
+    "E1_fit_equivalent": 3212,
+    "E2_stability": 1,
+    "E3_parsimony": 1,
+    "E4_conditioning": 1,
+    "E5_support_stability": 1,
+    "FIT": 0.17750883647522675,
+    "FIT_best_in_frontier": 0.1701047873791629,
+    "BLOCK_WORST": 0.19028648402264714,
+    "worst_block": "A",
+    "SHOT_P90": 0.2441174405056688,
+    "support_size": 12,
+    "ACTIVE_TERMS": 12,
+    "COND_MEDIAN": 2.003927144935714,
+    "COND_P90": 2.379869970663166,
+    "COND_MAX": 2.9327599535024236,
+    "BOOT_SELECTION_FREQ": 0.009,
+    "BLOCK_OMISSION_FREQ": 0.0,
+    "n_unique_bootstrap_winners": 365,
+    "bootstrap_seed": 2026090501,
+    "bootstrap_replicates": 1000,
+    "block_omission_winners": {
+      "omit_A": 92423,
+      "omit_B": 86257,
+      "omit_C": 95593
+    }
+  },
+  "descriptive_fit": {
+    "mean_cell_nrmse": 0.17750883647522472,
+    "median_cell_nrmse": 0.13714527962376266,
+    "mean_discharge_nrmse": 0.1775088364752247,
+    "median_discharge_nrmse": 0.15388893555134198,
+    "p90_discharge_nrmse": 0.24411744050566966,
+    "max_discharge_nrmse": 0.9241896515868979,
+    "worst_discharge": "187024",
+    "n_discharges_above_1": 0,
+    "earlier_mean": 0.19626872909169382,
+    "later_mean": 0.1531904571575796,
+    "IS_NOT_A_VALIDATION_METRIC": true,
+    "note": "in-sample descriptive fit over the whole object; the qualification evidence is the E2.1 cross-fitted result"
+  },
+  "overlap_with_cross_fitted_supports": {
+    "mean_jaccard": 0.31269841269841264,
+    "min_jaccard": 0.14285714285714285,
+    "max_jaccard": 0.5,
+    "identical_to_any": false
+  },
+  "ALL_OBJECT_TARGET_ACCESS_PERMITTED_FOR_DESCRIPTION": true,
+  "is_externally_validated": false,
+  "is_held_out": false,
+  "is_canonical_equation": false,
+  "is_the_support_that_produced_the_cross_fitted_metric": false,
+  "cannot_alter": [
+    "E2.1 FORMAL_PASS",
+    "CLEAN_DEMO_NOT_MET",
+    "V3",
+    "V6",
+    "V-RANGE",
+    "any cross-fitted metric"
+  ],
+  "E2_1_result_unchanged": {
+    "status": "QUALIFIED_POSITIVE_RECONSTRUCTION_FORMAL_PASS",
+    "FORMAL": "FORMAL_PASS",
+    "CLEAN": "CLEAN_DEMO_NOT_MET",
+    "V3": {
+      "Delta_0": -0.764488716015979,
+      "Delta_1": -0.027307619479192535,
+      "pass": true
+    },
+    "V6": "PASS_WITH_QUALIFICATION",
+    "V_RANGE": "PASS"
+  },
+  "EPOCH2_IS_FINAL_QREC_ATTEMPT": true,
+  "no_new_discovery_epoch": true,
+  "acceptance_checks": "34/34",
+  "acceptance_failed": [],
+  "n_artifacts": 21,
+  "n_markdown": 3,
+  "markdown_limit": 6,
+  "markdown_files": [
+    "E2_2_DESCRIPTIVE_REPRESENTATION_AUDIT_REPORT.md",
+    "E2_2_DESCRIPTIVE_REPRESENTATION_FINAL.md",
+    "README.md"
+  ],
+  "all_artifact_hashes": {
+    "E2_2_ACCEPTANCE_CHECKS.json": "d9b194dc5db264800190253b32dce67af5920dd5dda1c457234af969ce2e2326",
+    "E2_2_COMPARISON.json": "2883c1b4c59d1c652e263ed22f19858380b33a05a4cbc6523066854101e6ab41",
+    "E2_2_DESCRIPTIVE_REPRESENTATION_AUDIT_REPORT.md": "128734fff3340f3def5c428a0b8e9df8b28736735aa574fed4fa153a59023c2f",
+    "E2_2_DESCRIPTIVE_REPRESENTATION_FINAL.md": "db11a31b8e65a17b00a0c598ebee0f8fad36b2f5b6f5983798347803ec2db4e1",
+    "E2_2_QUALIFICATIONS.json": "939495dada951578904025f3090e5a6a4bff0b344b987237c9d75cdeadfae260",
+    "E2_2_RESULT.json": "b116b25a768e7da7d73d2f857fb56383286f858f7f0e737780baf57a4498b862",
+    "E2_2_SUPPORT_FREEZE.json": "ea245bfd27c5a95c5c97c166e4e3850a479f2782e836919151d309d36b0b7bfc",
+    "README.md": "dbcd275018d5463970340fb3b1fa385f7c25ad20f9a98f2e271c2d669290c627",
+    "full_object_coordinate_details.csv": "f3f6b4d46516ead40d17fc7af1a3649455db3067f9612abef7f0e644b9492070",
+    "full_object_descriptive_cell_metrics.csv": "4d8e9ab986a71ef48f2623c181c63d7ba0b91ec3e7ef1b7a13404253869c0792",
+    "full_object_selected_support.csv": "2bb64e926e3669faa29184f69085e699bcca18f15bf5e407f06ad3dd9caca6e3",
+    "full_object_support_overlap.csv": "9a8fbfb24815598f4bdf3882cdd8b68ebba8a710a6f1ab7c45dfc1f55cd2535c",
+    "manifests/C_E2_FULL_DOMAIN_E2_2.csv": "c5d2a415ebf17974f3273b44a03f1b643c08eaa5f1222ff615fce51770448855",
+    "manifests/E2_2_PRESEARCH.json": "408bf321701c15766dc0fa8060d1863da42e53c656a4435bb9d89192c52ed6b5",
+    "manifests/E2_2_SEARCH_AUDIT.json": "1bfdbf0ed819d7ee035cc4d75d17be705357f226fe91b0da687174643804efbf",
+    "manifests/_e2_2_basis.npz": "01bec35eddfad32a86111782ecd1ea67744484fb44156a359c362100d663a3b0",
+    "manifests/frontier_summary.csv": "2737e783e0fcae519e38eb366a018262531fd4f5aee354f8c1c08cf7382d80fd",
+    "manifests/shortlist.csv": "da6efdfe89be7f7a5734db4035e91c74e42790910799e31911390b2d4532cc4d",
+    "scripts/e2_2_a_verify.py": "35298fb944e3ea47c205c3122626205dfb9286c78af1b70340e52da3ca58395e",
+    "scripts/e2_2_b_search.py": "13bef2c5dc2053f6105560be155129736ec2369de16219c2946fa5d00d64ef71",
+    "scripts/e2_2_c_freeze.py": "dcbd576feb719ad33c6bdd0858e26de384be7f7541f51fdbe7a7fca82b4f0cfe"
+  },
+  "self_referential_excluded": [
+    "E2_2_FREEZE.json"
+  ],
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "next_stage": "S7.12 - qualified reconstruction result (assembly only)"
+}

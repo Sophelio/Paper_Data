@@ -1,0 +1,96 @@
+signal_id,signal_group,units,units_status,units_evidence_class,dimensional_signature,semantic_type,is_dimensionless,sign_convention,source_classification,scientific_description
+bt,magnetics,T,resolved_partial,LOCAL_DOCUMENTED (units registry),M T^-2 I^-1,resolved_partial,False,signed_or_unknown,DIRECT_MEASUREMENT,Toroidal magnetic field
+ip,magnetics,A,resolved_spelling,LOCAL_DOCUMENTED (units registry),I,resolved_spelling,False,signed_or_unknown,DIRECT_MEASUREMENT,Plasma current
+pcbcoil,magnetics,,uncalibrated,LOCAL_DOCUMENTED (units registry),UNIT_LESS_UNCALIBRATED,uncalibrated,False,signed_or_unknown,DIRECT_MEASUREMENT,Plasma control B-coil signal (uncalibrated)
+pcdiamag3,magnetics,,uncalibrated,LOCAL_DOCUMENTED (units registry),UNIT_LESS_UNCALIBRATED,uncalibrated,False,signed_or_unknown,DIRECT_MEASUREMENT,Diamagnetic loop signal (uncalibrated)
+vsurf,magnetics,V,documented,LOCAL_DOCUMENTED (units registry),L^2 M T^-3 I^-1,documented,False,signed_or_unknown,DIRECT_MEASUREMENT,Surface loop voltage
+aminor,equilibrium_shape,m,documented,LOCAL_DOCUMENTED (units registry),L,documented,False,nonnegative,EQUILIBRIUM_DERIVED,Plasma minor radius (EFIT)
+area,equilibrium_shape,m^2,documented,LOCAL_DOCUMENTED (units registry),L^2,documented,False,nonnegative,EQUILIBRIUM_DERIVED,Plasma poloidal cross-sectional area (EFIT)
+betan,equilibrium_shape,1,dimensionless,LOCAL_DOCUMENTED (units registry),dimensionless,dimensionless,True,signed_or_unknown,EQUILIBRIUM_DERIVED,Normalised beta
+drsep,equilibrium_shape,m,documented,LOCAL_DOCUMENTED (units registry),L,documented,False,signed_or_unknown,EQUILIBRIUM_DERIVED,Separatrix-to-separatrix distance (upper/lower balance)
+kappa,equilibrium_shape,1,dimensionless,LOCAL_DOCUMENTED (units registry),dimensionless,dimensionless,True,nonnegative,EQUILIBRIUM_DERIVED,Plasma elongation
+li,equilibrium_shape,1,dimensionless,LOCAL_DOCUMENTED (units registry),dimensionless,dimensionless,True,nonnegative,EQUILIBRIUM_DERIVED,Normalised internal inductance
+q95,equilibrium_shape,1,dimensionless,LOCAL_DOCUMENTED (units registry),dimensionless,dimensionless,True,nonnegative,EQUILIBRIUM_DERIVED,Safety factor at the 95% flux surface
+rmaxis,equilibrium_shape,m,documented,LOCAL_DOCUMENTED (units registry),L,documented,False,signed_or_unknown,EQUILIBRIUM_DERIVED,Magnetic axis major radius
+rsurf,equilibrium_shape,m,documented,LOCAL_DOCUMENTED (units registry),L,documented,False,signed_or_unknown,EQUILIBRIUM_DERIVED,"Plasma boundary geometric centre, major radius"
+tribot,equilibrium_shape,1,dimensionless,LOCAL_DOCUMENTED (units registry),dimensionless,dimensionless,True,signed_or_unknown,EQUILIBRIUM_DERIVED,Bottom triangularity
+tritop,equilibrium_shape,1,dimensionless,LOCAL_DOCUMENTED (units registry),dimensionless,dimensionless,True,signed_or_unknown,EQUILIBRIUM_DERIVED,Top triangularity
+volume,equilibrium_shape,m^3,documented,LOCAL_DOCUMENTED (units registry),L^3,documented,False,nonnegative,EQUILIBRIUM_DERIVED,Plasma volume
+zcur,equilibrium_shape,m,documented,LOCAL_DOCUMENTED (units registry),L,documented,False,signed_or_unknown,EQUILIBRIUM_DERIVED,Vertical position of the plasma current centroid
+zmaxis,equilibrium_shape,m,documented,LOCAL_DOCUMENTED (units registry),L,documented,False,signed_or_unknown,EQUILIBRIUM_DERIVED,Magnetic axis vertical position
+zsurf,equilibrium_shape,m,documented,LOCAL_DOCUMENTED (units registry),L,documented,False,signed_or_unknown,EQUILIBRIUM_DERIVED,"Plasma boundary geometric centre, vertical position"
+density,density,cm^-3,documented,LOCAL_DOCUMENTED (units registry),L^-3,documented,False,nonnegative,DIAGNOSTIC_RECONSTRUCTION,Line-averaged electron density
+prmtan_neped,density,m^-3,documented,LOCAL_DOCUMENTED (units registry),L^-3,documented,False,nonnegative,DIAGNOSTIC_RECONSTRUCTION,Pedestal electron density from tanh fit
+prmtan_teped,density,eV,documented,LOCAL_DOCUMENTED (units registry),L^2 M T^-2,documented,False,nonnegative,DIAGNOSTIC_RECONSTRUCTION,Pedestal electron temperature from tanh fit
+fs04,filterscope_dalpha,ph/(sr cm^2 s),resolved_spelling,LOCAL_DOCUMENTED (units registry),L^-2 T^-1 (photon flux),resolved_spelling,False,signed_or_unknown,DIRECT_MEASUREMENT,Filterscope D-alpha channel (fs04)
+fs03da,filterscope_dalpha,ph/(sr cm^2 s),resolved_spelling,LOCAL_DOCUMENTED (units registry),L^-2 T^-1 (photon flux),resolved_spelling,False,signed_or_unknown,DIRECT_MEASUREMENT,Filterscope D-alpha channel (fs03da)
+fs04da,filterscope_dalpha,ph/(sr cm^2 s),resolved_spelling,LOCAL_DOCUMENTED (units registry),L^-2 T^-1 (photon flux),resolved_spelling,False,signed_or_unknown,DIRECT_MEASUREMENT,Filterscope D-alpha channel (fs04da)
+fs05da,filterscope_dalpha,ph/(sr cm^2 s),resolved_spelling,LOCAL_DOCUMENTED (units registry),L^-2 T^-1 (photon flux),resolved_spelling,False,signed_or_unknown,DIRECT_MEASUREMENT,Filterscope D-alpha channel (fs05da)
+gasa,gas_injection,V,resolved_partial,LOCAL_DOCUMENTED (units registry),L^2 M T^-3 I^-1,resolved_partial,False,signed_or_unknown,CONTROL_COMMAND_OR_ACTUATION,"Gas injection valve command, manifold A"
+gasb,gas_injection,V,resolved_partial,LOCAL_DOCUMENTED (units registry),L^2 M T^-3 I^-1,resolved_partial,False,signed_or_unknown,CONTROL_COMMAND_OR_ACTUATION,"Gas injection valve command, manifold B"
+gasc,gas_injection,V,resolved_partial,LOCAL_DOCUMENTED (units registry),L^2 M T^-3 I^-1,resolved_partial,False,signed_or_unknown,CONTROL_COMMAND_OR_ACTUATION,"Gas injection valve command, manifold C"
+gasd,gas_injection,V,documented,LOCAL_DOCUMENTED (units registry),L^2 M T^-3 I^-1,documented,False,signed_or_unknown,CONTROL_COMMAND_OR_ACTUATION,"Gas injection valve command, manifold D"
+pinj,neutral_beams,kW,documented,LOCAL_DOCUMENTED (units registry),L^2 M T^-3,documented,False,signed_or_unknown,CONTROL_COMMAND_OR_ACTUATION,Total injected neutral beam power
+pinj_15l,neutral_beams,W,documented,LOCAL_DOCUMENTED (units registry),L^2 M T^-3,documented,False,signed_or_unknown,CONTROL_COMMAND_OR_ACTUATION,"Injected neutral beam power, beamline 15L"
+pinj_15r,neutral_beams,W,documented,LOCAL_DOCUMENTED (units registry),L^2 M T^-3,documented,False,signed_or_unknown,CONTROL_COMMAND_OR_ACTUATION,"Injected neutral beam power, beamline 15R"
+pinj_21l,neutral_beams,W,documented,LOCAL_DOCUMENTED (units registry),L^2 M T^-3,documented,False,signed_or_unknown,CONTROL_COMMAND_OR_ACTUATION,"Injected neutral beam power, beamline 21L"
+pinj_21r,neutral_beams,W,documented,LOCAL_DOCUMENTED (units registry),L^2 M T^-3,documented,False,signed_or_unknown,CONTROL_COMMAND_OR_ACTUATION,"Injected neutral beam power, beamline 21R"
+pinj_30l,neutral_beams,W,documented,LOCAL_DOCUMENTED (units registry),L^2 M T^-3,documented,False,signed_or_unknown,CONTROL_COMMAND_OR_ACTUATION,"Injected neutral beam power, beamline 30L"
+pinj_30r,neutral_beams,W,documented,LOCAL_DOCUMENTED (units registry),L^2 M T^-3,documented,False,signed_or_unknown,CONTROL_COMMAND_OR_ACTUATION,"Injected neutral beam power, beamline 30R"
+pinj_33l,neutral_beams,W,documented,LOCAL_DOCUMENTED (units registry),L^2 M T^-3,documented,False,signed_or_unknown,CONTROL_COMMAND_OR_ACTUATION,"Injected neutral beam power, beamline 33L"
+pinj_33r,neutral_beams,W,documented,LOCAL_DOCUMENTED (units registry),L^2 M T^-3,documented,False,signed_or_unknown,CONTROL_COMMAND_OR_ACTUATION,"Injected neutral beam power, beamline 33R"
+tinj,neutral_beams,N m,documented,LOCAL_DOCUMENTED (units registry),L^2 M T^-2,documented,False,signed_or_unknown,CONTROL_COMMAND_OR_ACTUATION,Injected neutral beam torque
+ece1,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 1
+ece2,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 2
+ece3,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 3
+ece4,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 4
+ece5,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 5
+ece6,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 6
+ece7,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 7
+ece8,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 8
+ece9,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 9
+ece10,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 10
+ece11,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 11
+ece12,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 12
+ece13,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 13
+ece14,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 14
+ece15,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 15
+ece16,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 16
+ece17,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 17
+ece18,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 18
+ece19,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 19
+ece20,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 20
+ece21,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 21
+ece22,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 22
+ece23,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 23
+ece24,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 24
+ece25,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 25
+ece26,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 26
+ece27,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 27
+ece28,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 28
+ece29,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 29
+ece30,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 30
+ece31,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 31
+ece32,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 32
+ece33,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 33
+ece34,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 34
+ece35,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 35
+ece36,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 36
+ece37,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 37
+ece38,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 38
+ece39,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 39
+ece40,ece_te_profile,keV,domain_authorized,DOMAIN_AUTHORIZED,L^2 M T^-2,domain_authorized,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,ECE radiometer channel 40
+cerqrott3,cer_rotation_ti,km/s,documented,LOCAL_DOCUMENTED (units registry),L T^-1,documented,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,"CER toroidal rotation velocity, channel 3"
+cerqrott6,cer_rotation_ti,km/s,documented,LOCAL_DOCUMENTED (units registry),L T^-1,documented,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,"CER toroidal rotation velocity, channel 6"
+cerqrott8,cer_rotation_ti,km/s,documented,LOCAL_DOCUMENTED (units registry),L T^-1,documented,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,"CER toroidal rotation velocity, channel 8"
+cerqrott10,cer_rotation_ti,km/s,documented,LOCAL_DOCUMENTED (units registry),L T^-1,documented,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,"CER toroidal rotation velocity, channel 10"
+cerqrott11,cer_rotation_ti,km/s,documented,LOCAL_DOCUMENTED (units registry),L T^-1,documented,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,"CER toroidal rotation velocity, channel 11"
+cerqrott12,cer_rotation_ti,km/s,documented,LOCAL_DOCUMENTED (units registry),L T^-1,documented,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,"CER toroidal rotation velocity, channel 12"
+cerqrott13,cer_rotation_ti,km/s,documented,LOCAL_DOCUMENTED (units registry),L T^-1,documented,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,"CER toroidal rotation velocity, channel 13"
+cerqtit3,cer_rotation_ti,eV,documented,LOCAL_DOCUMENTED (units registry),L^2 M T^-2,documented,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,"CER ion temperature, channel 3"
+cerqtit6,cer_rotation_ti,eV,documented,LOCAL_DOCUMENTED (units registry),L^2 M T^-2,documented,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,"CER ion temperature, channel 6"
+cerqtit8,cer_rotation_ti,eV,documented,LOCAL_DOCUMENTED (units registry),L^2 M T^-2,documented,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,"CER ion temperature, channel 8"
+cerqtit10,cer_rotation_ti,eV,documented,LOCAL_DOCUMENTED (units registry),L^2 M T^-2,documented,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,"CER ion temperature, channel 10"
+cerqtit11,cer_rotation_ti,eV,documented,LOCAL_DOCUMENTED (units registry),L^2 M T^-2,documented,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,"CER ion temperature, channel 11"
+cerqtit12,cer_rotation_ti,eV,documented,LOCAL_DOCUMENTED (units registry),L^2 M T^-2,documented,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,"CER ion temperature, channel 12"
+cerqtit13,cer_rotation_ti,eV,documented,LOCAL_DOCUMENTED (units registry),L^2 M T^-2,documented,False,signed_or_unknown,DIAGNOSTIC_RECONSTRUCTION,"CER ion temperature, channel 13"

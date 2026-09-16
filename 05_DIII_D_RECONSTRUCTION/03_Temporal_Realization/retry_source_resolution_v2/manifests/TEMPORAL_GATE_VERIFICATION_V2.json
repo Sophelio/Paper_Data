@@ -1,0 +1,19 @@
+{
+  "target": "density",
+  "target_archived_dt_ms": 1.0,
+  "target_source_supported_dt_min_ms": 0.9997563352826512,
+  "target_source_supported_dt_max_ms": 0.9998347926647944,
+  "target_n_shots_upsampled": 0,
+  "target_never_upsampled": true,
+  "check_1_every_admitted_satisfies_numerical_support": true,
+  "check_1_violations": [],
+  "check_2_no_admitted_quantity_forces_grid_finer_than_its_estimate": true,
+  "check_3_all_62_validation_feasible": true,
+  "check_4_vsurf_excluded": true,
+  "check_5_no_external_value_needed": true,
+  "n_discharges_checked": 62,
+  "grid_dt_min_ms": 5.8533333333333335,
+  "grid_dt_max_ms": 14.186746987951809,
+  "grid_dt_median_ms": 6.823895378364652,
+  "verdict": "TEMPORAL_GATE_SATISFIED"
+}

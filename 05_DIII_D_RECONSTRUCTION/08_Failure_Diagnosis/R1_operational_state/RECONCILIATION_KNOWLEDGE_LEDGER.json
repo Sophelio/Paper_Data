@@ -1,0 +1,181 @@
+{
+  "record_id": "RECONCILIATION_KNOWLEDGE_LEDGER_V1",
+  "generated_utc": "2026-09-06T01:05:20.911744+00:00",
+  "principle": "knowledge accumulates; history is not overwritten",
+  "entries": [
+    {
+      "knowledge_id": "K-R1-01",
+      "statement": "gasa..gasd are gas injection valve commands, manifold A-D, origin_class CONTROL_COMMAND_OR_ACTUATION, certified_independent_of_target, family gas_injection, IN_P_HARD.",
+      "stage_discovered": "S7.R1",
+      "evidence_class": "FROZEN_SIGNAL_PROVENANCE",
+      "source": "S7.3 corrected_selected_target_boundary.csv; S7.5H primitive_basis_hardened.csv",
+      "data_fields_used": [
+        "signal",
+        "family",
+        "units",
+        "origin_class",
+        "description"
+      ],
+      "target_used": false,
+      "model_error_used": false,
+      "confidence": "HIGH",
+      "implication": "gas actuation is the correct physical reading of the failing coordinate",
+      "changes_instantiated_SIR_object": false,
+      "changes_K_rec": false
+    },
+    {
+      "knowledge_id": "K-R1-02",
+      "statement": "PROVENANCE DEFECT: the unit of gasa..gasd is recorded inconsistently across the frozen lineage. The data provider manifest records Torr*L/s (a flow rate, evidence STRONGLY_INFERRED) and S7.1 units_sources.md describes 'gas injection flow'; S7.3 and S7.5H record V with scientific_dimension_class electric_potential and description 'valve command'. These are physically different quantities.",
+      "stage_discovered": "S7.R1",
+      "evidence_class": "FROZEN_SIGNAL_PROVENANCE",
+      "source": "diiid_sir_data_provider.py SIGNAL_MANIFEST; S7.1 units_sources.md; S7.3/S7.5H registries",
+      "data_fields_used": [
+        "SIGNAL_UNIT",
+        "units",
+        "canonical_unit",
+        "scientific_dimension_class"
+      ],
+      "target_used": false,
+      "model_error_used": false,
+      "confidence": "HIGH",
+      "implication": "NO NUMERICAL IMPACT: the CANON scale table contains neither 'V' nor 'Torr*L/s', so the applied scale factor is exactly 1.0 under either label and every archived value is unchanged. The defect is a DIMENSIONAL LABEL inconsistency; the frozen coordinate PROD(gasa,gasa) carries output_dimension (V)*(V), which may be wrong. It must be reconciled before any dimensional claim about that coefficient.",
+      "changes_instantiated_SIR_object": false,
+      "changes_K_rec": false
+    },
+    {
+      "knowledge_id": "K-R1-03",
+      "statement": "No pellet-injection signal exists anywhere in the 95-signal observational object, and no pellet metadata field was found. PELLET_STATUS_UNRESOLVED.",
+      "stage_discovered": "S7.R1",
+      "evidence_class": "FROZEN_SIGNAL_PROVENANCE",
+      "source": "diiid_sir_data_provider.py SIGNAL_MANIFEST",
+      "data_fields_used": [
+        "ALL_SIGNALS"
+      ],
+      "target_used": false,
+      "model_error_used": false,
+      "confidence": "HIGH",
+      "implication": "gasa must NOT be described as pellet injection; gas puffing and pellet injection are different fueling actuators and the object cannot distinguish them",
+      "changes_instantiated_SIR_object": false,
+      "changes_K_rec": false
+    },
+    {
+      "knowledge_id": "K-R1-04",
+      "statement": "The development cohort COVERS the external gasa range: development -0.0185..7.5056 against external -0.0183..7.9821. Development discharge 195650 reaches gasa 7.447, HIGHER than either catastrophic discharge (5.937, 5.923).",
+      "stage_discovered": "S7.R1",
+      "evidence_class": "PREDICTOR_VALUE_EVIDENCE",
+      "source": "actuator_support_coverage.csv",
+      "data_fields_used": [
+        "gasa"
+      ],
+      "target_used": false,
+      "model_error_used": false,
+      "confidence": "HIGH",
+      "implication": "the strong-gas OPERATIONAL CONDITION was represented during discovery; GATE R1-B FAILS for the state route",
+      "changes_instantiated_SIR_object": false,
+      "changes_K_rec": false
+    },
+    {
+      "knowledge_id": "K-R1-05",
+      "statement": "No natural isolated high-command group exists in the block-level gasa distribution. The largest gap in the sorted distribution is interior to the development set, and the catastrophic blocks do not occupy the high tail: 187019/C and 187022/C rank 11th and 12th by gasa protected maximum while 187019/B and 187022/B are far lower.",
+      "stage_discovered": "S7.R1",
+      "evidence_class": "PREDICTOR_VALUE_EVIDENCE",
+      "source": "manifests/gasa_pro_max_sorted.csv",
+      "data_fields_used": [
+        "gasa_pro_max"
+      ],
+      "target_used": false,
+      "model_error_used": false,
+      "confidence": "HIGH",
+      "implication": "GATE R1-A FAILS on the primary 1D audit",
+      "changes_instantiated_SIR_object": false,
+      "changes_K_rec": false
+    },
+    {
+      "knowledge_id": "K-R1-06",
+      "statement": "The single permitted multivariate actuator fallback also fails to separate. A deterministic two-cluster PCA partition of actuator LEVEL summaries places both catastrophic blocks in a cluster containing 25 development and 50 external blocks. External discharge 187018 has actuator blocks FURTHER from development than 187022/B and reconstructs normally.",
+      "stage_discovered": "S7.R1",
+      "evidence_class": "PREDICTOR_VALUE_EVIDENCE",
+      "source": "manifests/MULTIVARIATE_FALLBACK_RESULT.json",
+      "data_fields_used": [
+        "gasa",
+        "gasb",
+        "gasc",
+        "gasd",
+        "pinj",
+        "tinj"
+      ],
+      "target_used": false,
+      "model_error_used": false,
+      "confidence": "HIGH",
+      "implication": "STATE_IDENTIFICATION_GATE = FAIL; the operational-state route stops here",
+      "changes_instantiated_SIR_object": false,
+      "changes_K_rec": false
+    },
+    {
+      "knowledge_id": "K-R1-07",
+      "statement": "The ONLY block-level predictor quantity that isolates the two catastrophic blocks is the block-relative excursion ratio gasa_pro_max/gasa_cal_max: 40.2 and 41.0 against a maximum of 1.018 anywhere in development and 1.35 elsewhere externally.",
+      "stage_discovered": "S7.R1",
+      "evidence_class": "PREDICTOR_VALUE_EVIDENCE",
+      "source": "actuator_block_summary.csv",
+      "data_fields_used": [
+        "gasa_cal_max",
+        "gasa_pro_max"
+      ],
+      "target_used": false,
+      "model_error_used": false,
+      "confidence": "HIGH",
+      "implication": "this is NOT an operational state: it measures where the frozen validation-block boundary falls relative to an actuator transition. The same discharge under a different block split would not be flagged.",
+      "changes_instantiated_SIR_object": false,
+      "changes_K_rec": false
+    },
+    {
+      "knowledge_id": "K-R1-08",
+      "statement": "Within-discharge structure of both catastrophic discharges: block A has gas essentially off (gasa cal_max ~0.040, pro_max ~0.040); block B has the puff onset INSIDE the protected window (cal_max 0.041, pro_max 1.63); block C has gas fully on and the calibration window has absorbed the puff (cal_max 4.41, pro_max 5.94) and reconstructs normally.",
+      "stage_discovered": "S7.R1",
+      "evidence_class": "PREDICTOR_VALUE_EVIDENCE",
+      "source": "actuator_block_summary.csv",
+      "data_fields_used": [
+        "gasa_cal_max",
+        "gasa_pro_max"
+      ],
+      "target_used": false,
+      "model_error_used": false,
+      "confidence": "HIGH",
+      "implication": "the failure is a temporal SUPPORT-COVERAGE artifact of the rolling-origin geometry, not a distinct plasma state",
+      "changes_instantiated_SIR_object": false,
+      "changes_K_rec": false
+    },
+    {
+      "knowledge_id": "K-R1-09",
+      "statement": "No instantiated SIR object was invalidated. Every object was constructed correctly under K_rec as written. A_rec admitted PROD(gasa,gasa) by rule: S7.6R states that C0/C1/C2/C6 have no denominator and no gate.",
+      "stage_discovered": "S7.R1",
+      "evidence_class": "INFERENCE",
+      "source": "SIR_ARROW_RECONCILIATION.json",
+      "data_fields_used": [
+        "frozen contract text"
+      ],
+      "target_used": false,
+      "model_error_used": false,
+      "confidence": "HIGH",
+      "implication": "the reconciliation target is K_rec, not X_rec",
+      "changes_instantiated_SIR_object": false,
+      "changes_K_rec": true
+    },
+    {
+      "knowledge_id": "K-R1-10",
+      "statement": "MINIMAL_K_REC_REVISION_REQUIRED: P_rec lacks an observational range-support admissibility condition for total nonlinear constructors (products, powers), analogous to the existing denominator guard for partial maps. V_rec would carry the consequential per-block applicability outcome.",
+      "stage_discovered": "S7.R1",
+      "evidence_class": "INFERENCE",
+      "source": "K_REC_CHANGE_AUDIT.json",
+      "data_fields_used": [
+        "frozen contract text"
+      ],
+      "target_used": false,
+      "model_error_used": false,
+      "confidence": "HIGH",
+      "implication": "belongs to a future contract epoch, declared prospectively before any new discovery; NOT applied here",
+      "changes_instantiated_SIR_object": false,
+      "changes_K_rec": true
+    }
+  ]
+}

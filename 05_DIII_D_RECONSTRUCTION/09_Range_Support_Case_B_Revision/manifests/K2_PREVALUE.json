@@ -1,0 +1,166 @@
+{
+  "prevalue_id": "S7_K2_PREVALUE_V1",
+  "generated_utc": "2026-09-06T02:49:44.653123+00:00",
+  "lineage": [
+    {
+      "stage": "S7.1",
+      "freeze_id": "D3D-SIR-S7.1-OBSERVATIONAL-OBJECT-FINAL-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "be4807c65cdcf330244f2d80f0007f8f0448208b56ff3095f19fbdcf3097600f"
+    },
+    {
+      "stage": "S7.2 V1",
+      "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V1",
+      "status": "FROZEN_READY_FOR_S7.3",
+      "file_sha256": "5e65d87825024d2e62b0db8fab8add518f364110e41f3a63f61571c80cc3102f"
+    },
+    {
+      "stage": "S7.2 V2",
+      "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V2",
+      "status": "FROZEN_READY_FOR_S7.3",
+      "file_sha256": "ecd15ef9e833e0b25feb42cdbcf30c67634f1949f4e50b08546f38bb61e7faab"
+    },
+    {
+      "stage": "S7.3R V2",
+      "freeze_id": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-SOURCE-RESOLUTION-V2",
+      "status": "FROZEN_READY_TO_RETRY_S7.4",
+      "file_sha256": "a8477f185c8dfb31d799c7607fa1a183d762405353c8bc21f195ff2524ff8a74"
+    },
+    {
+      "stage": "S7.4 V2",
+      "freeze_id": "D3D-SIR-S7.4-MATHEMATICAL-INTERPRETATION-SOURCE-RESOLUTION-V2",
+      "status": "FROZEN_READY_FOR_S7.5",
+      "file_sha256": "0658d3c9949c19108ba5f8de17ba37966b5bd6bf41d9836f3ccc2ccf45c5183a"
+    },
+    {
+      "stage": "S7.5 V1",
+      "freeze_id": "D3D-SIR-S7.5-TYPED-RELATIONAL-ONTOLOGY-V1",
+      "status": "FROZEN_READY_FOR_S7.6",
+      "file_sha256": "2cd73e77e0734177c56df175e084a319ad5913fcf1038d0dc87f7507a8a86721"
+    },
+    {
+      "stage": "S7.5H V1",
+      "freeze_id": "D3D-SIR-S7.5H-PRIMITIVE-SPACE-AND-ONTOLOGY-HARDENING-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "dffdd834ecf40b0f22b4844040bfe0ab5dd2bebb4b73d517a67387f4718f43d9"
+    },
+    {
+      "stage": "S7.6R V2",
+      "freeze_id": "D3D-SIR-S7.6-ADMISSIBLE-UNIVERSE-HARDENED-V2",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "0cf779767940249fa515221f3fbd4bf2f7a93281c21cb63383b084504426fa59"
+    },
+    {
+      "stage": "S7.7R V2",
+      "freeze_id": "D3D-SIR-S7.7-ONE-SEED-PRIMARY-SEARCH-AND-EXPLORED-FRONTIER-V2",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "576b1087b8fd767c631ad65cc1123f4e1ff40be7816b46dfe4fe77b7aafd47e2"
+    },
+    {
+      "stage": "S7.8 V1",
+      "freeze_id": "D3D-SIR-S7.8-UTILITY-AND-QUALIFICATION-RULES-V1",
+      "status": "FROZEN_READY_FOR_S7.9",
+      "file_sha256": "1d12f78d165c09b77b4b853053e60a9a87784da2aaa2b38c4b882bb575d398e0"
+    },
+    {
+      "stage": "S7.9 V1",
+      "freeze_id": "D3D-SIR-S7.9-DEVELOPMENT-SELECTION-AND-PREEXTERNAL-FREEZE-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "966f9628dceb501e9f102d9ba3f74e0bfed3dddee7f25a58df47732eef3d553b"
+    },
+    {
+      "stage": "S7.10 V1",
+      "freeze_id": "D3D-SIR-S7.10-EXTERNAL-VALIDATION-AND-GATE-EVALUATION-V1",
+      "status": "PRIMARY_EXTERNAL_GATE_FAILURE",
+      "file_sha256": "8ea2062f0fc38fbf24e3b9d6477cace1d0fcd9a54e746e66c6e428d01437db97"
+    },
+    {
+      "stage": "S7.11 V1",
+      "freeze_id": "D3D-SIR-S7.11-SENSITIVITY-AND-FAILURE-INTERPRETATION-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "b93edac44994240e1fda4d6a0c8fa668cf712ac6a64b8d9fe63278e15c302e26"
+    },
+    {
+      "stage": "S7.R1 V1",
+      "freeze_id": "D3D-SIR-S7.R1-OPERATIONAL-STATE-RECONCILIATION-V1",
+      "status": "NO_CLEAN_OPERATIONAL_STATE_PARTITION",
+      "file_sha256": "ae6092a67a0e099a868876611f7aeca769edac062c4c6a878d6f6a22146ca226"
+    }
+  ],
+  "n_authoritative": 14,
+  "manifest_recomputation": {
+    "S7.9": {
+      "n": 45,
+      "matched": 45,
+      "mismatched": []
+    },
+    "S7.10": {
+      "n": 31,
+      "matched": 31,
+      "mismatched": []
+    },
+    "S7.11": {
+      "n": 26,
+      "matched": 26,
+      "mismatched": []
+    },
+    "S7.R1": {
+      "n": 21,
+      "matched": 21,
+      "mismatched": []
+    }
+  },
+  "primary_epoch1_invariant": {
+    "PRIMARY_EPOCH1_RESULT_IMMUTABLE": true,
+    "DISCOVERY_EPOCH_1_INTACT": true,
+    "C_dev_star": "ID(cerqtit6)|ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(cerqtit10)|RECIP(prmtan_neped)",
+    "C_dev_star_size": 12,
+    "S7_10_primary_verdict": "NO_QUALIFIED_NONTRIVIAL_STRUCTURAL_TRANSFER",
+    "gate_table": {
+      "V1": "PASS",
+      "V2": "PASS",
+      "V3": "FAIL",
+      "V4": "PASS",
+      "V5": "PASS",
+      "V6": "FAIL",
+      "V7": "PASS",
+      "V8": "PASS",
+      "V10": "PASS",
+      "V9": "FAIL"
+    },
+    "S7_R1_status": "NO_CLEAN_OPERATIONAL_STATE_PARTITION",
+    "S7_R1_recommendation": "STOP_OPERATIONAL_STATE_ROUTE",
+    "R1_gates": {
+      "R1_A_STATE_IDENTIFICATION": "FAIL",
+      "R1_B_SUPPORT_COVERAGE": "FAIL",
+      "R1_C_FAILURE_ALIGNMENT": "NOT_REACHED (no state rule frozen)"
+    },
+    "earliest_invalidated_stage": "NONE_OF_THE_INSTANTIATED_OBJECTS",
+    "K_rec_minimal_component": "P_rec",
+    "two_seed": "NOT_EXECUTED",
+    "S7_R2_exists": false,
+    "S7_12_exists": false
+  },
+  "firewall_sha256": "3d75739ce167b91a6d93bafc22c7195829d64a0376ed1e6ce83367f21074bda6",
+  "gas_provenance_sha256": "86d38794a5560f3433e06e94cb89f75e235829077c118694804eb5caf48e28d0",
+  "concept_sha256": "f8b5abec1958610cf0a5791cc466a070b8ab8d582fb967b89130cf0cf3b99c12",
+  "desiderata_sha256": "ef5054345f1a2cbc3e70781153e6d25f877a3a83c06f6572d2519850f0189893",
+  "order_enforced": [
+    "lineage",
+    "invariant",
+    "firewall",
+    "provenance",
+    "concept",
+    "desiderata",
+    "(then candidates)"
+  ],
+  "candidate_metrics_evaluated_in_this_script": 0,
+  "drift": [],
+  "verdict": "PREVALUE_FROZEN",
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

@@ -1,0 +1,11 @@
+shot_id,block,support_worst_coordinate_score,worst_coordinate,RANGE_SUPPORT_PASS,n_coordinates_failing
+187019,B,1641.5009765625,"PROD(gasa,gasa)",False,1
+187022,B,1705.189208984375,"PROD(gasa,gasa)",False,1
+187019,C,0.8137568831443787,"PROD(gasa,gasa)",True,0
+187022,C,0.8065679669380188,"PROD(gasa,gasa)",True,0
+187019,A,0.2664696276187897,"PROD(prmtan_neped,prmtan_neped)",True,0
+187022,A,0.01907466910779476,"RATIO(ece21,prmtan_neped)",True,0
+195650,B,0.0,ID(cerqtit6),True,0
+165028,B,0.2105974704027176,"PROD(prmtan_neped,prmtan_neped)",True,0
+189652,A,0.16411930322647095,"PROD(prmtan_neped,prmtan_neped)",True,0
+195274,C,0.0,ID(cerqtit6),True,0

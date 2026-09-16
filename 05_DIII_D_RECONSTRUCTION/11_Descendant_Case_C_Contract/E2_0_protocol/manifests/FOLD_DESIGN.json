@@ -1,0 +1,347 @@
+{
+  "record_id": "E2_0_FOLD_DESIGN_V1",
+  "generated_utc": "2026-09-06T03:53:06.773433+00:00",
+  "lineage": [
+    {
+      "stage": "S7.1",
+      "freeze_id": "D3D-SIR-S7.1-OBSERVATIONAL-OBJECT-FINAL-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "be4807c65cdcf330244f2d80f0007f8f0448208b56ff3095f19fbdcf3097600f"
+    },
+    {
+      "stage": "S7.2 V1",
+      "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V1",
+      "status": "FROZEN_READY_FOR_S7.3",
+      "file_sha256": "5e65d87825024d2e62b0db8fab8add518f364110e41f3a63f61571c80cc3102f"
+    },
+    {
+      "stage": "S7.2 V2",
+      "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V2",
+      "status": "FROZEN_READY_FOR_S7.3",
+      "file_sha256": "ecd15ef9e833e0b25feb42cdbcf30c67634f1949f4e50b08546f38bb61e7faab"
+    },
+    {
+      "stage": "S7.3R V2",
+      "freeze_id": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-SOURCE-RESOLUTION-V2",
+      "status": "FROZEN_READY_TO_RETRY_S7.4",
+      "file_sha256": "a8477f185c8dfb31d799c7607fa1a183d762405353c8bc21f195ff2524ff8a74"
+    },
+    {
+      "stage": "S7.4 V2",
+      "freeze_id": "D3D-SIR-S7.4-MATHEMATICAL-INTERPRETATION-SOURCE-RESOLUTION-V2",
+      "status": "FROZEN_READY_FOR_S7.5",
+      "file_sha256": "0658d3c9949c19108ba5f8de17ba37966b5bd6bf41d9836f3ccc2ccf45c5183a"
+    },
+    {
+      "stage": "S7.5 V1",
+      "freeze_id": "D3D-SIR-S7.5-TYPED-RELATIONAL-ONTOLOGY-V1",
+      "status": "FROZEN_READY_FOR_S7.6",
+      "file_sha256": "2cd73e77e0734177c56df175e084a319ad5913fcf1038d0dc87f7507a8a86721"
+    },
+    {
+      "stage": "S7.5H V1",
+      "freeze_id": "D3D-SIR-S7.5H-PRIMITIVE-SPACE-AND-ONTOLOGY-HARDENING-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "dffdd834ecf40b0f22b4844040bfe0ab5dd2bebb4b73d517a67387f4718f43d9"
+    },
+    {
+      "stage": "S7.6R V2",
+      "freeze_id": "D3D-SIR-S7.6-ADMISSIBLE-UNIVERSE-HARDENED-V2",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "0cf779767940249fa515221f3fbd4bf2f7a93281c21cb63383b084504426fa59"
+    },
+    {
+      "stage": "S7.7R V2",
+      "freeze_id": "D3D-SIR-S7.7-ONE-SEED-PRIMARY-SEARCH-AND-EXPLORED-FRONTIER-V2",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "576b1087b8fd767c631ad65cc1123f4e1ff40be7816b46dfe4fe77b7aafd47e2"
+    },
+    {
+      "stage": "S7.8 V1",
+      "freeze_id": "D3D-SIR-S7.8-UTILITY-AND-QUALIFICATION-RULES-V1",
+      "status": "FROZEN_READY_FOR_S7.9",
+      "file_sha256": "1d12f78d165c09b77b4b853053e60a9a87784da2aaa2b38c4b882bb575d398e0"
+    },
+    {
+      "stage": "S7.9 V1",
+      "freeze_id": "D3D-SIR-S7.9-DEVELOPMENT-SELECTION-AND-PREEXTERNAL-FREEZE-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "966f9628dceb501e9f102d9ba3f74e0bfed3dddee7f25a58df47732eef3d553b"
+    },
+    {
+      "stage": "S7.10 V1",
+      "freeze_id": "D3D-SIR-S7.10-EXTERNAL-VALIDATION-AND-GATE-EVALUATION-V1",
+      "status": "PRIMARY_EXTERNAL_GATE_FAILURE",
+      "file_sha256": "8ea2062f0fc38fbf24e3b9d6477cace1d0fcd9a54e746e66c6e428d01437db97"
+    },
+    {
+      "stage": "S7.11 V1",
+      "freeze_id": "D3D-SIR-S7.11-SENSITIVITY-AND-FAILURE-INTERPRETATION-V1",
+      "status": "FROZEN_WITH_QUALIFICATIONS",
+      "file_sha256": "b93edac44994240e1fda4d6a0c8fa668cf712ac6a64b8d9fe63278e15c302e26"
+    },
+    {
+      "stage": "S7.R1 V1",
+      "freeze_id": "D3D-SIR-S7.R1-OPERATIONAL-STATE-RECONCILIATION-V1",
+      "status": "NO_CLEAN_OPERATIONAL_STATE_PARTITION",
+      "file_sha256": "ae6092a67a0e099a868876611f7aeca769edac062c4c6a878d6f6a22146ca226"
+    },
+    {
+      "stage": "S7.K2 V1",
+      "freeze_id": "D3D-SIR-S7.K2-OBSERVATIONAL-RANGE-SUPPORT-CONTRACT-V1",
+      "status": "FROZEN_READY_FOR_DISCOVERY_EPOCH_2",
+      "file_sha256": "198fa046c7eb2650efcb910f02922752b8204477f8930300e6abf24163193459"
+    }
+  ],
+  "n_authoritative": 15,
+  "manifest_recomputation": {
+    "S7.9": {
+      "n": 45,
+      "matched": 45,
+      "mismatched": []
+    },
+    "S7.10": {
+      "n": 31,
+      "matched": 31,
+      "mismatched": []
+    },
+    "S7.11": {
+      "n": 26,
+      "matched": 26,
+      "mismatched": []
+    },
+    "S7.R1": {
+      "n": 21,
+      "matched": 21,
+      "mismatched": []
+    },
+    "S7.K2": {
+      "n": 29,
+      "matched": 29,
+      "mismatched": []
+    }
+  },
+  "contract_verification": {
+    "K_REC_V2_sha256": "4fe95d45c6d6f9e0d66918cdc4cc7347276a915363b4a29501c2084d4f506407",
+    "K_REC_V2_matches_K2_freeze": true,
+    "K_REC_V1_preserved": true,
+    "K_REC_V1_overwritten": false,
+    "revision_class": "MINIMAL_P_ONLY",
+    "tau": 1.0,
+    "P_RANGE_SUPPORT_equation": "E(c,s,b) = max_{z in c_app} max(L - z, 0, z - U) / (U - L), where L = min(c_cal), U = max(c_cal)",
+    "U_rec_status": "UNCHANGED",
+    "V_rec_status": "CONSEQUENTIAL_ONLY",
+    "V_RANGE_replaces_V3": false,
+    "epoch1_verdict": "NO_QUALIFIED_NONTRIVIAL_STRUCTURAL_TRANSFER",
+    "epoch1_gate_table": {
+      "V1": "PASS",
+      "V2": "PASS",
+      "V3": "FAIL",
+      "V4": "PASS",
+      "V5": "PASS",
+      "V6": "FAIL",
+      "V7": "PASS",
+      "V8": "PASS",
+      "V10": "PASS",
+      "V9": "FAIL"
+    },
+    "S7_12_exists": false,
+    "epoch2_result_exists": false
+  },
+  "fold_algorithm": {
+    "algorithm_id": "E2_OUTER_FOLD_ASSIGNMENT_V1",
+    "steps": [
+      "1. take the 62 discharges of the frozen observational object",
+      "2. sort by (processing_era in the fixed order [earlier, later], then discharge id ascending)",
+      "3. assign outer_fold = position mod 6"
+    ],
+    "deterministic": true,
+    "random_seed": null,
+    "uses_randomness": false,
+    "trial_and_selection": false,
+    "n_partitions_generated": 1,
+    "note": "exactly one partition is generated. No alternative partition was produced, scored or compared, so no partition could have been chosen for its appearance",
+    "balancing_variable": "processing_era",
+    "balancing_mechanism": "systematic assignment within an era-sorted ordering distributes each era across folds by construction; no balance search is performed and no balance criterion is optimised",
+    "target_blind": true,
+    "performance_blind": true
+  },
+  "n_folds": 6,
+  "fold_sizes": {
+    "0": 11,
+    "1": 11,
+    "2": 10,
+    "3": 10,
+    "4": 10,
+    "5": 10
+  },
+  "every_discharge_held_out_exactly_once": true,
+  "era_balance": [
+    {
+      "outer_fold": 0,
+      "n_discharges": 11,
+      "n_earlier": 6,
+      "n_later": 5,
+      "n_epoch1_development": 7,
+      "n_epoch1_external": 4,
+      "n_outer_discovery": 51
+    },
+    {
+      "outer_fold": 1,
+      "n_discharges": 11,
+      "n_earlier": 6,
+      "n_later": 5,
+      "n_epoch1_development": 2,
+      "n_epoch1_external": 9,
+      "n_outer_discovery": 51
+    },
+    {
+      "outer_fold": 2,
+      "n_discharges": 10,
+      "n_earlier": 6,
+      "n_later": 4,
+      "n_epoch1_development": 2,
+      "n_epoch1_external": 8,
+      "n_outer_discovery": 52
+    },
+    {
+      "outer_fold": 3,
+      "n_discharges": 10,
+      "n_earlier": 6,
+      "n_later": 4,
+      "n_epoch1_development": 6,
+      "n_epoch1_external": 4,
+      "n_outer_discovery": 52
+    },
+    {
+      "outer_fold": 4,
+      "n_discharges": 10,
+      "n_earlier": 6,
+      "n_later": 4,
+      "n_epoch1_development": 2,
+      "n_epoch1_external": 8,
+      "n_outer_discovery": 52
+    },
+    {
+      "outer_fold": 5,
+      "n_discharges": 10,
+      "n_earlier": 5,
+      "n_later": 5,
+      "n_epoch1_development": 1,
+      "n_epoch1_external": 9,
+      "n_outer_discovery": 52
+    }
+  ],
+  "training_admissible_basis": [
+    {
+      "outer_fold": 0,
+      "n_train_discharges": 51,
+      "n_heldout_discharges": 11,
+      "n_train_cells": 153,
+      "training_admissible_atoms": 3741,
+      "training_admissible_fraction": 0.3470959361662646,
+      "of_those_also_supported_on_heldout": 3451,
+      "heldout_carryover_rate": 0.9224806201550387,
+      "adm_C0": 51,
+      "adm_C1": 20,
+      "adm_C2": 1498,
+      "adm_C3": 456,
+      "adm_C5": 8,
+      "adm_C6": 1075,
+      "adm_C7": 633
+    },
+    {
+      "outer_fold": 1,
+      "n_train_discharges": 51,
+      "n_heldout_discharges": 11,
+      "n_train_cells": 153,
+      "training_admissible_atoms": 3748,
+      "training_admissible_fraction": 0.34774540731118947,
+      "of_those_also_supported_on_heldout": 3451,
+      "heldout_carryover_rate": 0.9207577374599787,
+      "adm_C0": 53,
+      "adm_C1": 19,
+      "adm_C2": 1596,
+      "adm_C3": 449,
+      "adm_C5": 8,
+      "adm_C6": 1044,
+      "adm_C7": 579
+    },
+    {
+      "outer_fold": 2,
+      "n_train_discharges": 52,
+      "n_heldout_discharges": 10,
+      "n_train_cells": 156,
+      "training_admissible_atoms": 3683,
+      "training_admissible_fraction": 0.3417146038226016,
+      "of_those_also_supported_on_heldout": 3451,
+      "heldout_carryover_rate": 0.937007874015748,
+      "adm_C0": 53,
+      "adm_C1": 20,
+      "adm_C2": 1499,
+      "adm_C3": 422,
+      "adm_C5": 9,
+      "adm_C6": 1122,
+      "adm_C7": 558
+    },
+    {
+      "outer_fold": 3,
+      "n_train_discharges": 52,
+      "n_heldout_discharges": 10,
+      "n_train_cells": 156,
+      "training_admissible_atoms": 3653,
+      "training_admissible_fraction": 0.33893115605863794,
+      "of_those_also_supported_on_heldout": 3451,
+      "heldout_carryover_rate": 0.9447029838488913,
+      "adm_C0": 52,
+      "adm_C1": 19,
+      "adm_C2": 1530,
+      "adm_C3": 448,
+      "adm_C5": 10,
+      "adm_C6": 990,
+      "adm_C7": 604
+    },
+    {
+      "outer_fold": 4,
+      "n_train_discharges": 52,
+      "n_heldout_discharges": 10,
+      "n_train_cells": 156,
+      "training_admissible_atoms": 3714,
+      "training_admissible_fraction": 0.3445908331786973,
+      "of_those_also_supported_on_heldout": 3451,
+      "heldout_carryover_rate": 0.9291868605277329,
+      "adm_C0": 52,
+      "adm_C1": 20,
+      "adm_C2": 1492,
+      "adm_C3": 427,
+      "adm_C5": 9,
+      "adm_C6": 1112,
+      "adm_C7": 602
+    },
+    {
+      "outer_fold": 5,
+      "n_train_discharges": 52,
+      "n_heldout_discharges": 10,
+      "n_train_cells": 156,
+      "training_admissible_atoms": 3817,
+      "training_admissible_fraction": 0.3541473371683058,
+      "of_those_also_supported_on_heldout": 3451,
+      "heldout_carryover_rate": 0.9041131778883941,
+      "adm_C0": 52,
+      "adm_C1": 19,
+      "adm_C2": 1492,
+      "adm_C3": 505,
+      "adm_C5": 13,
+      "adm_C6": 1123,
+      "adm_C7": 613
+    }
+  ],
+  "drift": [],
+  "verdict": "FOLD_DESIGN_FROZEN",
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

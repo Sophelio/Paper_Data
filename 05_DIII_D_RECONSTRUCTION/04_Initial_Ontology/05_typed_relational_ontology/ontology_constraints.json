@@ -1,0 +1,27 @@
+{
+  "max_constructor_depth": 1,
+  "constructors_consume_primitives_only": true,
+  "recursive_construction": "FORBIDDEN",
+  "not_primary_examples": [
+    "d(x_i x_j)/dt",
+    "x_i * (d x_j/dt)",
+    "(x_i/x_j) * x_k",
+    "D_{x_k}(x_i x_j)",
+    "ratio of two constructed ratios",
+    "product of phase derivatives"
+  ],
+  "A_rec_enumerated": false,
+  "no_search_priority_assigned": true,
+  "search_priority_belongs_to": "S7.7",
+  "knowledge_is_not_validation_evidence": true,
+  "no_q_desc_seeding": true,
+  "no_model_fitted": true,
+  "no_baseline_evaluated": true,
+  "no_predictor_target_correlation": true,
+  "no_reconstruction_performance_inspected": true,
+  "external_values_accessed": 0,
+  "raw_comparator_nested_in_ontology": {
+    "statement": "a representation whose coordinates are all C0 primitive levels is an admissible special case of G_rec",
+    "consequence": "the raw-coordinate baseline B2 is nested inside the SIR ontology rather than being an external alternative"
+  }
+}

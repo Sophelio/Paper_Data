@@ -1,0 +1,47 @@
+{
+  "record_id": "E2_2_QUALIFICATIONS_V1",
+  "primitives_in_support": [
+    "cerqtit10",
+    "cerqtit11",
+    "cerqtit3",
+    "ece20",
+    "ece21",
+    "ece37",
+    "ece38",
+    "ece39",
+    "fs03da",
+    "gasc",
+    "ip",
+    "pcdiamag3",
+    "pinj",
+    "pinj_30l",
+    "pinj_33r",
+    "prmtan_neped",
+    "tinj"
+  ],
+  "flagged_primitives_present": [
+    "gasc",
+    "pcdiamag3",
+    "prmtan_neped"
+  ],
+  "carried_qualifications": {
+    "gasc": {
+      "qualification": "actuator command voltage, not a fueling rate",
+      "source": "SIGNAL_UNITS.json"
+    },
+    "pcdiamag3": {
+      "qualification": "UNCALIBRATED_SIGNAL; its fitted coefficient has no certified physical-dimensional interpretation",
+      "source": "S7_11_QUALIFICATIONS.json"
+    },
+    "prmtan_neped": {
+      "qualification": "a same-family observable whose provenance is certified independent of the target signal under the frozen information boundary; this does NOT establish physical or statistical independence from line-averaged density",
+      "source": "S7_11_QUALIFICATIONS.json"
+    }
+  },
+  "general_qualifications": [
+    "coefficients are locally calibrated per discharge and block; there is no universal coefficient vector",
+    "support recurrence does not confer coefficient transfer",
+    "C_E2_ALL_DESC is representative, not unique and not externally validated"
+  ],
+  "acquires_new_physical_meaning": false
+}

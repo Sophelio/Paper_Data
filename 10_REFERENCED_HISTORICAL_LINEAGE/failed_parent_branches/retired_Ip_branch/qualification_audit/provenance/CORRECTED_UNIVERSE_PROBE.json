@@ -1,0 +1,17 @@
+{
+  "probe_id": "D3D-FIG6-CORRECTED-UNIVERSE-PROBE-V1",
+  "generated_utc": "2026-09-02T04:43:28.814875+00:00",
+  "status": "FEASIBILITY_PROBE_NOT_A_QREC_RESULT",
+  "admissible_primitives": [
+    "pcdiamag3",
+    "pinj",
+    "density"
+  ],
+  "n_features_per_shot": 24,
+  "n_shots": 62,
+  "median_normalised_rmse": 0.20006390424774895,
+  "median_r2": -3.000698265143035,
+  "frac_r2_above_0": 0.016129032258064516,
+  "frac_r2_above_0p5": 0.0,
+  "caveat": "No development-cohort support selection and no frozen support. These numbers establish only whether the corrected universe can support the task at all; they are not a corrected q_rec result and must not be quoted as one."
+}

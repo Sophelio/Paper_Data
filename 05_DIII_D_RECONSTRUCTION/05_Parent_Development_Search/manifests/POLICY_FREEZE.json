@@ -1,0 +1,9 @@
+{
+  "file": "SEARCH_POLICY_PREVALUE.json",
+  "sha256": "a97e690e414da7a0ace4c70ab56e7d5851eb73f940d98e9f2a7add7f33d4b265",
+  "frozen_utc": "2026-09-04T23:59:29.337658+00:00",
+  "frozen_before_any_density_value_opened": true,
+  "stage_a_and_b_open_no_archive": true,
+  "ordering_is_structural": "stages A and B contain no data-loading code path at all; the later scoring stage verifies this hash before opening anything",
+  "contamination_check": "SEARCH_POLICY_CONTAMINATED if the hash changes after any density value is opened"
+}

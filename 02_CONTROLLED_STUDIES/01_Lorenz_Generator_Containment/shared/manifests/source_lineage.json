@@ -1,0 +1,776 @@
+{
+  "generator": {
+    "module": "D:\\SIR_paper\\Lorenz\\Lorenz_attractor.py",
+    "function": "generate_lorenz",
+    "sha256": "b09e093cd5273609fa55eb06de485b37357d7ade4f67e4a2bc5c3363bc7fb663",
+    "reused": true,
+    "integrator": "scipy.integrate.solve_ivp(method='DOP853')",
+    "rtol": 1e-12,
+    "atol": 1e-12
+  },
+  "parameters": {
+    "sigma": 10.0,
+    "rho": 28.0,
+    "beta": 2.6666666666666665
+  },
+  "artifacts": [
+    {
+      "path": "shared\\data\\containment.parquet",
+      "origin": "D:\\SIR_paper\\Lorenz\\data\\lorenz_dt001_exact_derivatives.parquet",
+      "origin_sha256": "1ab2d69d649e4c981afce427bf833150ba268b71dab618d0fcaa2e454efc160f",
+      "sha256": "26de71778eb56795ba84fc8a14b19264b39897b06cc715f4d860ab7f69282854",
+      "status": "REUSED (copied verbatim from the manuscript dataset)",
+      "n_samples": 40001,
+      "dt": 0.001,
+      "columns": [
+        "times",
+        "x",
+        "y",
+        "z",
+        "dx",
+        "dy",
+        "dz"
+      ]
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_000.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_000",
+      "x0": [
+        13.688921322345353,
+        7.9773710607840655,
+        39.006156691643994
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "24efda1dcdaba6f14bfa737346195ecd105e235261d9b70d22371334705ac99d"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_001.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_001",
+      "x0": [
+        1.9623063609313514,
+        0.8744298664503396,
+        21.88885866911737
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "6a96916e6d5e1e0aadf0a4a2577bda55d997fc284ea3525f32191be0a0fe4b3a"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_002.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_002",
+      "x0": [
+        -12.639718175555931,
+        -15.60079464573964,
+        28.96040587073247
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "347ba0ccd8bc4299c3b8adca90a33ee95ea81b6e2f90bb909ebae703843e081e"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_003.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_003",
+      "x0": [
+        -6.047063783964979,
+        -3.164368835473654,
+        28.017293415799845
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "2c9a89a2c86285e8d2ad96ee3e006536c498811178558bc9a6c1371f7f13fdd0"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_004.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_004",
+      "x0": [
+        11.681098518497407,
+        7.865363803671836,
+        34.91360144961586
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "56d6951de6db531c8ec283e5c6a37cb3d2fa09c19a2c4f4a7ae1920d23081eed"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_005.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_005",
+      "x0": [
+        -4.633331695627253,
+        -0.7600398460891604,
+        28.028783282667696
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "17f5327fd048644c02dab8d7e14c08627e61867a4fbf4153b9cce547eef536c8"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_006.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_006",
+      "x0": [
+        5.927454995648461,
+        10.738705288839215,
+        11.829994171030954
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "7be3c73cf6fecd98f020da958365207e87892549aa840ae8b6a25a34a11f26d6"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_007.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_007",
+      "x0": [
+        -0.6049527171392588,
+        -1.7981584139796376,
+        19.662036281416864
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "f2bef98f19510de8ba0a183c95d49ad86bdafafcfba30163bde6672a11530629"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_008.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_008",
+      "x0": [
+        -12.10406226730555,
+        -14.364044875427972,
+        29.066715357328174
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "717e41aa5fdadc20544294cd6275d1a12b2f9f4291b7ac7151532ba2a89e68a9"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_009.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_009",
+      "x0": [
+        -5.9293948152375755,
+        -8.981664092049362,
+        17.68916336489784
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "78021eabebaa191aa6e031c09a29cc1aad554610f30c0a1d3dc29905ab39c014"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_010.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_010",
+      "x0": [
+        -1.2844362520348818,
+        -1.071524327214929,
+        18.76754012461451
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "a69d20fd66cb837020b19d6dd60665f573dd4927054f52549dd92568f637ab62"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_011.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_011",
+      "x0": [
+        -0.6288869350146662,
+        -1.1788256866981364,
+        14.598810549091617
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "ac876c9830bf575f2efd9f7203509a5a05348e0160713702b0cce07720be2392"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_012.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_012",
+      "x0": [
+        -5.224647097736119,
+        -8.562849900354571,
+        15.540697067164482
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "391a20629053fe4a37f9fef245b2f712a49408dd6a5d272aaa22a80f6dfc8da4"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_013.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_013",
+      "x0": [
+        -0.6336310418160922,
+        -1.1656076599418113,
+        13.981962626875095
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "36396d79836bccc08be84e9731f9ffc6a44cf7f3d80432adb413551e10bcb919"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_014.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_014",
+      "x0": [
+        6.2688152632494365,
+        0.08590624404559495,
+        31.58961166808867
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "dcac4c656dbb4fab7024179b10cff850104d8290d6311f22c14f77da3e0dc72f"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_015.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_015",
+      "x0": [
+        3.8977167151981886,
+        6.211937066934575,
+        16.556751891878115
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "48038185cae4abe825978212fa868f87a223a2c6c682ad894e8cfccc850c077a"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_016.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_016",
+      "x0": [
+        0.4495694676382692,
+        1.3054562993510228,
+        18.340287481749716
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "4b9d946962a5f3c6421b84d27e75b2ac37c9c9f6892e70db282bcf2a77dfe95a"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_017.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_017",
+      "x0": [
+        10.56783239524895,
+        1.4394877020716788,
+        37.88056493605098
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "75592a78cffb25f9b5289a8362f5ad8ab92607b596e9de729854d5a248741d9a"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_018.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_018",
+      "x0": [
+        -4.172189218447487,
+        -3.9408699457389162,
+        22.393773757294397
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "d4e611176ac564001336114951449baae86438ed2125c446b04c308837a7c72a"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_019.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_019",
+      "x0": [
+        2.617993294801959,
+        3.3982424026323557,
+        17.74769571911707
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "1d06d54ffed5edc0f09659c82efafe52e6214a5eb13301d100b7a2310aa6ab71"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_020.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_020",
+      "x0": [
+        -10.187170259264866,
+        -15.477310704270803,
+        21.187672420919053
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "bee47ed32c944adda57a76b2889ea65a92aa94245d7ebc0fe61b480d3745a48a"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_021.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_021",
+      "x0": [
+        8.655316891368308,
+        13.92300992008318,
+        18.133945028518678
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "7b794be7b42d1b2e2012851907b8d362f288043273985d4e8a8deeebd51c9515"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_022.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_022",
+      "x0": [
+        -0.5180525119783302,
+        -0.9572863480713992,
+        10.051100776647239
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "b7d53d5bbe7d297ac5707347486ce3732a112ce74a3bc0d24fc9b49e6da95da6"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_023.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_023",
+      "x0": [
+        -3.631970624460034,
+        -7.567105187541904,
+        3.575587850240123
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "06b49415af00ed19e91395a062fa0c03fc01a488ddf1fb124d4a38b15b79f55a"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_024.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_024",
+      "x0": [
+        -5.1815815146554804,
+        -8.006858449166286,
+        16.679880043496762
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "9687ad2297623b9e53aad6b1b9667daf9ae3003a7dfe9f7436acda7187e5627f"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_025.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_025",
+      "x0": [
+        3.106096178465673,
+        4.9349748007658985,
+        18.3430195788859
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "c09d497351e71a647905fff07d26fff0789f03a3491001bdade0bed327e03b02"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_026.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_026",
+      "x0": [
+        -14.003073083759851,
+        -18.846465564590133,
+        28.757430310974918
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "c86e9a4483f07ee3447945fbe36fa26f1267cf0dedcfc931157442ef9821e2d3"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_027.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_027",
+      "x0": [
+        -6.91072627745943,
+        -11.764579576585412,
+        14.92568446118521
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "51d71656cef400add71b3dd3fe57cc1c1ae22c07b3693bd2d59a0fe8f7e65124"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_028.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_028",
+      "x0": [
+        1.379198721512974,
+        2.3841142363820174,
+        14.124409565749202
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "dc958aa67e287f711e51f59f5a71c7fdc613f659b7c623d1eea670517459903b"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_029.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_029",
+      "x0": [
+        10.782734870413371,
+        13.75777470642968,
+        26.05297960926038
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "c86d4ed690c6c2bb8d7382d0f4cfe78257120d5716c50b998affce4285523e06"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_030.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_030",
+      "x0": [
+        -13.39879714387696,
+        -21.891524381051717,
+        22.07259746096775
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "90e393688073760cc6a9d3a5aa882df1589caa2de79fe69bb84ca0f08ed3d443"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_031.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_031",
+      "x0": [
+        -2.63148471271341,
+        -4.683848152800491,
+        11.538870947758952
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "4dc72106344feacd8beb22a3a0b20198d9031702e40bbfdbfd8b664bd4772f85"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_032.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_032",
+      "x0": [
+        -7.538190088288945,
+        -11.773297834329885,
+        18.314465600055385
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "260999114525560a6d8b06f0ebfd3cdf77019074a50510537621509ece08b32c"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_033.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_033",
+      "x0": [
+        12.757268869913794,
+        16.816771137072223,
+        27.71062136910266
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "438291f623478d2a1d204e5cb81a1075e6b51630345f224afc8b198988c67072"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_034.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_034",
+      "x0": [
+        -3.1093000360063936,
+        -5.328291168932189,
+        13.29949736530151
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "ad8a564f3160a75cbfa60e46082d0e3e8e936d7997b3b913a2dfd9be92319fd3"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_035.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_035",
+      "x0": [
+        -0.5963231025165798,
+        -1.1344814271150496,
+        8.224696260773259
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "1714c688b51927ef798c552a8b9c00417bc88b70bb44d456f0e9cd817b6d2728"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_036.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_036",
+      "x0": [
+        4.776273469532955,
+        7.087536019717798,
+        17.335439677511612
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "851d02f94749828432c80e61222322d8ff54b5b36006233c4cc09a22511e8367"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_037.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_037",
+      "x0": [
+        -3.5704470989321644,
+        -5.548738958391173,
+        19.07934588484409
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "bdec664c9a59926a233d72590926a2f4849721fd62fda5a194ea3fa31bac68cb"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_038.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_038",
+      "x0": [
+        -0.20044274277839172,
+        -0.3850461776989942,
+        11.360502295346645
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "20055ca0bce0149285a07e9aea4eba759966565260b9d493e50b58aebbd98b71"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_039.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_039",
+      "x0": [
+        -12.582633927563016,
+        -19.592194130228,
+        22.87561078290045
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "181cf08afef7684aeb56d7df94b23ee79b4a9af3f4edb9b46fd98587dee442c5"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_040.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_040",
+      "x0": [
+        2.555628621586242,
+        4.151168604351135,
+        13.926729605668688
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "75915bacb18590b78c2248a848113253322d78451442beab432520a947f54fb7"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_041.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_041",
+      "x0": [
+        -5.9841832966088795,
+        -1.1927590198466798,
+        30.03492396665948
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "f92e03e1c6a2d63ec7e480a27fcf7c4737c1fc38966f737aaadcea233047c827"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_042.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_042",
+      "x0": [
+        -2.8708940408122126,
+        -1.1722192144147412,
+        23.780588334630174
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "abcf4877ee2929055c7f58774463ba25b9b0af8f3cae5d1e85e3fdca24c78ed1"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_043.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_043",
+      "x0": [
+        -10.25171750359668,
+        -14.6965461503403,
+        22.84361228294975
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "6ee6672902b1ac750cabf8dad785bf0414eadde24d72b330b9fc195d433dad16"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_044.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_044",
+      "x0": [
+        -6.33417784934917,
+        -9.429427330002857,
+        19.21735894314989
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "b01c6c5198c29cc89ba80a5fa5891e6b7f569ced5e04ce0fb750ecfa40383648"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_045.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_045",
+      "x0": [
+        -13.190992185916585,
+        -21.455290624047887,
+        22.0102007911902
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "209e0e72edc19ea09b6dcb82289a8860cfecbd0b7889b4dea7bbe57f6d529c08"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_046.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_046",
+      "x0": [
+        13.785038763861863,
+        8.53082059568502,
+        38.772843523922226
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "ebe7ff95c0e52575c52bde872c56db97a6a87bac1aebe0bd0573bc0e11f3488f"
+    },
+    {
+      "path": "shared\\data\\ensemble\\traj_047.parquet",
+      "status": "GENERATED",
+      "trajectory_id": "traj_047",
+      "x0": [
+        -1.6282963445973777,
+        0.5048248969586483,
+        23.66906181758072
+      ],
+      "n_samples": 2401,
+      "dt": 0.005,
+      "tmax": 12.0,
+      "sha256": "973a1a482f696328dadd54f558c095f2440f28eb6b97db17f2cb3d5c71ab6e3d"
+    }
+  ],
+  "splits": {
+    "train": {
+      "n": 32,
+      "members": [
+        "traj_000",
+        "traj_002",
+        "traj_003",
+        "traj_004",
+        "traj_005",
+        "traj_006",
+        "traj_007",
+        "traj_008",
+        "traj_010",
+        "traj_011",
+        "traj_012",
+        "traj_013",
+        "traj_014",
+        "traj_015",
+        "traj_017",
+        "traj_018",
+        "traj_019",
+        "traj_020",
+        "traj_021",
+        "traj_022",
+        "traj_023",
+        "traj_028",
+        "traj_030",
+        "traj_031",
+        "traj_034",
+        "traj_035",
+        "traj_036",
+        "traj_037",
+        "traj_040",
+        "traj_043",
+        "traj_045",
+        "traj_046"
+      ],
+      "sha256": "4a1045f07aeefc37ea4ad093cc7c966d5c5199c123aaf577385437ffea8bfa0e"
+    },
+    "validation": {
+      "n": 8,
+      "members": [
+        "traj_024",
+        "traj_026",
+        "traj_027",
+        "traj_032",
+        "traj_038",
+        "traj_039",
+        "traj_041",
+        "traj_044"
+      ],
+      "sha256": "ef2d435258099c7e6ef0d4b64b4a980ce62f22a26bbc012642f442547b7ab879"
+    },
+    "test": {
+      "n": 8,
+      "members": [
+        "traj_001",
+        "traj_009",
+        "traj_016",
+        "traj_025",
+        "traj_029",
+        "traj_033",
+        "traj_042",
+        "traj_047"
+      ],
+      "sha256": "95e62eb96ab370077ee6d97b131a58bdeb909f3b30a8862802f22fbf8cae9ffd"
+    }
+  }
+}

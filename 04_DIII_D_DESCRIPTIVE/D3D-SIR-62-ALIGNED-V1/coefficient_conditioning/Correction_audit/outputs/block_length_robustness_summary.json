@@ -1,0 +1,85 @@
+{
+  "median_var_ratio_short": 0.7695131119980201,
+  "median_var_ratio_long": 1.1298073120891057,
+  "features_block_dependent": [
+    {
+      "feature": "d[pcdiamag3]/d[kappa]",
+      "display_name": "D_kappa W_dia",
+      "tau2_primary": 0.0,
+      "tau2_short": 0.0006194953101192,
+      "tau2_long": 0.0,
+      "lower_primary": 0.0,
+      "lower_short": 0.0,
+      "lower_long": 0.0,
+      "sign_of_heterogeneity_changes_with_block": true
+    },
+    {
+      "feature": "d[kappa]/d[t]",
+      "display_name": "dot kappa",
+      "tau2_primary": 0.1842212676348568,
+      "tau2_short": 0.1842212676348568,
+      "tau2_long": 0.1700770883751373,
+      "lower_primary": 0.1235577514662536,
+      "lower_short": 0.1338332271482681,
+      "lower_long": 0.1140712084188428,
+      "sign_of_heterogeneity_changes_with_block": false
+    },
+    {
+      "feature": "r[q95]/r[kappa]",
+      "display_name": "q95 / kappa",
+      "tau2_primary": 2.3729905271652148e-05,
+      "tau2_short": 1.2247319707416138e-05,
+      "tau2_long": 1.945895526540696e-05,
+      "lower_primary": 0.0,
+      "lower_short": 0.0,
+      "lower_long": 0.0,
+      "sign_of_heterogeneity_changes_with_block": false
+    },
+    {
+      "feature": "d[pcdiamag3]/d[betan]",
+      "display_name": "D_betaN W_dia",
+      "tau2_primary": 0.0697362773004243,
+      "tau2_short": 0.0883690681871883,
+      "tau2_long": 0.0644433716873408,
+      "lower_primary": 0.0370864034178885,
+      "lower_short": 0.0508553607088306,
+      "lower_long": 0.0316704116050532,
+      "sign_of_heterogeneity_changes_with_block": false
+    },
+    {
+      "feature": "d[kappa]/d[betan]",
+      "display_name": "D_betaN kappa",
+      "tau2_primary": 0.2668910444759042,
+      "tau2_short": 0.2894369292442045,
+      "tau2_long": 0.2461013866041272,
+      "lower_primary": 0.164064401070879,
+      "lower_short": 0.1929542011099276,
+      "lower_long": 0.164064401070879,
+      "sign_of_heterogeneity_changes_with_block": false
+    },
+    {
+      "feature": "d[betan]/d[t]",
+      "display_name": "dot beta_N",
+      "tau2_primary": 0.2076699285303199,
+      "tau2_short": 0.2250017138653801,
+      "tau2_long": 0.2076699285303199,
+      "lower_primary": 0.1507039940506541,
+      "lower_short": 0.1507039940506541,
+      "lower_long": 0.1390953301469426,
+      "sign_of_heterogeneity_changes_with_block": false
+    },
+    {
+      "feature": "d[li]/d[betan]",
+      "display_name": "D_betaN l_i",
+      "tau2_primary": 7.840525300128936e-05,
+      "tau2_short": 9.00049292519863e-05,
+      "tau2_long": 7.840525300128936e-05,
+      "lower_primary": 3.197847782846395e-05,
+      "lower_short": 3.933140757300379e-05,
+      "lower_long": 3.426244526035372e-05,
+      "sign_of_heterogeneity_changes_with_block": false
+    }
+  ],
+  "sensitivity_replicates": 300,
+  "note": "B=300 implies Monte Carlo SE for variance ~ var*sqrt(2/299); no near-boundary re-bootstrap required unless flagged."
+}

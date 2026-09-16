@@ -1,0 +1,40 @@
+{
+  "audit_id": "STATISTICAL_INFERENCE_PARENT_AUDIT_V1",
+  "generated_utc": "2026-09-05T22:47:11.395345+00:00",
+  "principle": "PARENT DEFINITIONS WIN",
+  "already_frozen_by_parents": {
+    "inferential_unit": "discharge",
+    "bootstrap_replicates_minimum": 10000,
+    "confidence_level": "95%",
+    "aggregation": "blocks -> discharge first",
+    "V3_rule": "Delta_0 <= -0.01 AND Delta_1 <= -0.01",
+    "V3_ci_role": "reported, not used as a significance threshold for V3",
+    "V6_external_counts": {
+      "earlier": 24,
+      "later": 18,
+      "total": 42
+    },
+    "V6_outcomes": [
+      "PASS",
+      "PASS_WITH_QUALIFICATION",
+      "FAIL_FOR_FULL_DOMAIN"
+    ],
+    "win_tie_loss_floor": "0.01 calibration-normalized RMSE (STATISTICAL_INFERENCE_PLAN item 8)",
+    "lodo_required": "leave-one-discharge-out sensitivity (item 9)"
+  },
+  "unspecified_by_parents_completed_here": [
+    "bootstrap RNG seeds",
+    "bootstrap CI type (percentile vs BCa)",
+    "percentile interpolation method",
+    "whether bootstrap indices are shared across methods",
+    "exact era-specific practical-direction thresholds for V6"
+  ],
+  "bca_required_by_parent": false,
+  "parent_text_checked": [
+    "STATISTICAL_INFERENCE_PLAN.md",
+    "K_REC_PRE_V2.json",
+    "metric_and_gate_definitions.json",
+    "BASELINE_PROTOCOL.md"
+  ],
+  "parent_specifies_seed": true
+}

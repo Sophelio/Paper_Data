@@ -1,0 +1,458 @@
+{
+  "record_id": "DEVELOPMENT_SELECTED_REPRESENTATION_V1",
+  "terminology": "DEVELOPMENT_SELECTED_REPRESENTATION",
+  "not_claimed": [
+    "externally validated",
+    "structural-transfer success",
+    "global optimum",
+    "universal relation"
+  ],
+  "generated_utc": "2026-09-05T20:22:16.501853+00:00",
+  "support_id": "ID(cerqtit6)|ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(cerqtit10)|RECIP(prmtan_neped)",
+  "support_size": 12,
+  "canonical_coordinate_ids": [
+    "ID(cerqtit6)",
+    "ID(pcdiamag3)",
+    "ID(prmtan_neped)",
+    "PROD(ece37,ece39)",
+    "PROD(gasa,gasa)",
+    "PROD(pinj,cerqrott6)",
+    "PROD(prmtan_neped,prmtan_neped)",
+    "RATIO(ece21,prmtan_neped)",
+    "RATIO(fs03da,prmtan_neped)",
+    "RATIO(ip,ece22)",
+    "RECIP(cerqtit10)",
+    "RECIP(prmtan_neped)"
+  ],
+  "canonical_serialization": "ID(cerqtit6)|ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(cerqtit10)|RECIP(prmtan_neped)",
+  "canonical_serialization_matches_registry": true,
+  "coordinates": [
+    {
+      "coordinate_id": "ID(cerqtit6)",
+      "constructor": "C0",
+      "constructor_name": "identity level",
+      "ordered_operands": "cerqtit6",
+      "operand_roles": "level",
+      "primitive_ancestors": [
+        "cerqtit6"
+      ],
+      "n_ancestors": 1,
+      "depth": 0,
+      "output_dimension": "eV",
+      "unit_expression": "eV",
+      "temporal_resolution_rule": "inherit",
+      "temporal_resolution_bound_ms": 9.98003992015968,
+      "provenance_lineage": "cerqtit6:cer_rotation_ti",
+      "target_independence": "TRANSITIVE_FROM_TARGET_INDEPENDENT_BOUNDARY",
+      "aliasing_flag": true,
+      "upsample_flag": false,
+      "uncalibrated_flag": false,
+      "primary_or_sensitivity": "PRIMARY",
+      "numerical_realization_id": "NONE",
+      "domain_predicate": null,
+      "ancestor_scientific_families": [
+        "cer_rotation_ti"
+      ],
+      "ancestor_uncalibrated": []
+    },
+    {
+      "coordinate_id": "ID(pcdiamag3)",
+      "constructor": "C0",
+      "constructor_name": "identity level",
+      "ordered_operands": "pcdiamag3",
+      "operand_roles": "level",
+      "primitive_ancestors": [
+        "pcdiamag3"
+      ],
+      "n_ancestors": 1,
+      "depth": 0,
+      "output_dimension": "UNCALIBRATED",
+      "unit_expression": "UNCALIBRATED",
+      "temporal_resolution_rule": "inherit",
+      "temporal_resolution_bound_ms": 0.2500127818618758,
+      "provenance_lineage": "pcdiamag3:magnetics",
+      "target_independence": "TRANSITIVE_FROM_TARGET_INDEPENDENT_BOUNDARY",
+      "aliasing_flag": false,
+      "upsample_flag": false,
+      "uncalibrated_flag": true,
+      "primary_or_sensitivity": "PRIMARY",
+      "numerical_realization_id": "NONE",
+      "domain_predicate": null,
+      "ancestor_scientific_families": [
+        "magnetics"
+      ],
+      "ancestor_uncalibrated": [
+        "pcdiamag3"
+      ]
+    },
+    {
+      "coordinate_id": "ID(prmtan_neped)",
+      "constructor": "C0",
+      "constructor_name": "identity level",
+      "ordered_operands": "prmtan_neped",
+      "operand_roles": "level",
+      "primitive_ancestors": [
+        "prmtan_neped"
+      ],
+      "n_ancestors": 1,
+      "depth": 0,
+      "output_dimension": "m^-3",
+      "unit_expression": "m^-3",
+      "temporal_resolution_rule": "inherit",
+      "temporal_resolution_bound_ms": 13.267605633802816,
+      "provenance_lineage": "prmtan_neped:density",
+      "target_independence": "TRANSITIVE_FROM_TARGET_INDEPENDENT_BOUNDARY",
+      "aliasing_flag": true,
+      "upsample_flag": true,
+      "uncalibrated_flag": false,
+      "primary_or_sensitivity": "PRIMARY",
+      "numerical_realization_id": "NONE",
+      "domain_predicate": null,
+      "ancestor_scientific_families": [
+        "density"
+      ],
+      "ancestor_uncalibrated": []
+    },
+    {
+      "coordinate_id": "PROD(ece37,ece39)",
+      "constructor": "C2",
+      "constructor_name": "level-level product",
+      "ordered_operands": "ece37|ece39",
+      "operand_roles": "level|level",
+      "primitive_ancestors": [
+        "ece37",
+        "ece39"
+      ],
+      "n_ancestors": 2,
+      "depth": 1,
+      "output_dimension": "(eV)*(eV)",
+      "unit_expression": "eV*eV",
+      "temporal_resolution_rule": "coarser_of_operands",
+      "temporal_resolution_bound_ms": 0.2,
+      "provenance_lineage": "ece37:ece_te_profile|ece39:ece_te_profile",
+      "target_independence": "TRANSITIVE_FROM_TARGET_INDEPENDENT_BOUNDARY",
+      "aliasing_flag": false,
+      "upsample_flag": false,
+      "uncalibrated_flag": false,
+      "primary_or_sensitivity": "PRIMARY",
+      "numerical_realization_id": "NONE",
+      "domain_predicate": null,
+      "ancestor_scientific_families": [
+        "ece_te_profile"
+      ],
+      "ancestor_uncalibrated": []
+    },
+    {
+      "coordinate_id": "PROD(gasa,gasa)",
+      "constructor": "C2",
+      "constructor_name": "level-level product",
+      "ordered_operands": "gasa|gasa",
+      "operand_roles": "level|level",
+      "primitive_ancestors": [
+        "gasa"
+      ],
+      "n_ancestors": 1,
+      "depth": 1,
+      "output_dimension": "(V)*(V)",
+      "unit_expression": "V*V",
+      "temporal_resolution_rule": "coarser_of_operands",
+      "temporal_resolution_bound_ms": 0.5,
+      "provenance_lineage": "gasa:gas_injection",
+      "target_independence": "TRANSITIVE_FROM_TARGET_INDEPENDENT_BOUNDARY",
+      "aliasing_flag": false,
+      "upsample_flag": false,
+      "uncalibrated_flag": false,
+      "primary_or_sensitivity": "PRIMARY",
+      "numerical_realization_id": "NONE",
+      "domain_predicate": null,
+      "ancestor_scientific_families": [
+        "gas_injection"
+      ],
+      "ancestor_uncalibrated": []
+    },
+    {
+      "coordinate_id": "PROD(pinj,cerqrott6)",
+      "constructor": "C2",
+      "constructor_name": "level-level product",
+      "ordered_operands": "pinj|cerqrott6",
+      "operand_roles": "level|level",
+      "primitive_ancestors": [
+        "cerqrott6",
+        "pinj"
+      ],
+      "n_ancestors": 2,
+      "depth": 1,
+      "output_dimension": "(W)*(m s^-1)",
+      "unit_expression": "W*m/s",
+      "temporal_resolution_rule": "coarser_of_operands",
+      "temporal_resolution_bound_ms": 9.98003992015968,
+      "provenance_lineage": "cerqrott6:cer_rotation_ti|pinj:neutral_beams",
+      "target_independence": "TRANSITIVE_FROM_TARGET_INDEPENDENT_BOUNDARY",
+      "aliasing_flag": true,
+      "upsample_flag": false,
+      "uncalibrated_flag": false,
+      "primary_or_sensitivity": "PRIMARY",
+      "numerical_realization_id": "NONE",
+      "domain_predicate": null,
+      "ancestor_scientific_families": [
+        "cer_rotation_ti",
+        "neutral_beams"
+      ],
+      "ancestor_uncalibrated": []
+    },
+    {
+      "coordinate_id": "PROD(prmtan_neped,prmtan_neped)",
+      "constructor": "C2",
+      "constructor_name": "level-level product",
+      "ordered_operands": "prmtan_neped|prmtan_neped",
+      "operand_roles": "level|level",
+      "primitive_ancestors": [
+        "prmtan_neped"
+      ],
+      "n_ancestors": 1,
+      "depth": 1,
+      "output_dimension": "(m^-3)*(m^-3)",
+      "unit_expression": "m^-3*m^-3",
+      "temporal_resolution_rule": "coarser_of_operands",
+      "temporal_resolution_bound_ms": 13.267605633802816,
+      "provenance_lineage": "prmtan_neped:density",
+      "target_independence": "TRANSITIVE_FROM_TARGET_INDEPENDENT_BOUNDARY",
+      "aliasing_flag": true,
+      "upsample_flag": true,
+      "uncalibrated_flag": false,
+      "primary_or_sensitivity": "PRIMARY",
+      "numerical_realization_id": "NONE",
+      "domain_predicate": null,
+      "ancestor_scientific_families": [
+        "density"
+      ],
+      "ancestor_uncalibrated": []
+    },
+    {
+      "coordinate_id": "RATIO(ece21,prmtan_neped)",
+      "constructor": "C3",
+      "constructor_name": "level-level ratio",
+      "ordered_operands": "ece21|prmtan_neped",
+      "operand_roles": "level|level_denominator",
+      "primitive_ancestors": [
+        "ece21",
+        "prmtan_neped"
+      ],
+      "n_ancestors": 2,
+      "depth": 1,
+      "output_dimension": "(eV)/(m^-3)",
+      "unit_expression": "eV/m^-3",
+      "temporal_resolution_rule": "coarser_of_operands",
+      "temporal_resolution_bound_ms": 13.267605633802816,
+      "provenance_lineage": "ece21:ece_te_profile|prmtan_neped:density",
+      "target_independence": "TRANSITIVE_FROM_TARGET_INDEPENDENT_BOUNDARY",
+      "aliasing_flag": true,
+      "upsample_flag": true,
+      "uncalibrated_flag": false,
+      "primary_or_sensitivity": "PRIMARY",
+      "numerical_realization_id": "NONE",
+      "domain_predicate": "DOMAIN_DENOMINATOR_LEVEL_NONZERO",
+      "ancestor_scientific_families": [
+        "density",
+        "ece_te_profile"
+      ],
+      "ancestor_uncalibrated": []
+    },
+    {
+      "coordinate_id": "RATIO(fs03da,prmtan_neped)",
+      "constructor": "C3",
+      "constructor_name": "level-level ratio",
+      "ordered_operands": "fs03da|prmtan_neped",
+      "operand_roles": "level|level_denominator",
+      "primitive_ancestors": [
+        "fs03da",
+        "prmtan_neped"
+      ],
+      "n_ancestors": 2,
+      "depth": 1,
+      "output_dimension": "(ph sr^-1 m^-2 s^-1)/(m^-3)",
+      "unit_expression": "ph/(sr m^2 s)/m^-3",
+      "temporal_resolution_rule": "coarser_of_operands",
+      "temporal_resolution_bound_ms": 13.267605633802816,
+      "provenance_lineage": "fs03da:filterscope_dalpha|prmtan_neped:density",
+      "target_independence": "TRANSITIVE_FROM_TARGET_INDEPENDENT_BOUNDARY",
+      "aliasing_flag": true,
+      "upsample_flag": true,
+      "uncalibrated_flag": false,
+      "primary_or_sensitivity": "PRIMARY",
+      "numerical_realization_id": "NONE",
+      "domain_predicate": "DOMAIN_DENOMINATOR_LEVEL_NONZERO",
+      "ancestor_scientific_families": [
+        "density",
+        "filterscope_dalpha"
+      ],
+      "ancestor_uncalibrated": []
+    },
+    {
+      "coordinate_id": "RATIO(ip,ece22)",
+      "constructor": "C3",
+      "constructor_name": "level-level ratio",
+      "ordered_operands": "ip|ece22",
+      "operand_roles": "level|level_denominator",
+      "primitive_ancestors": [
+        "ece22",
+        "ip"
+      ],
+      "n_ancestors": 2,
+      "depth": 1,
+      "output_dimension": "(A)/(eV)",
+      "unit_expression": "A/eV",
+      "temporal_resolution_rule": "coarser_of_operands",
+      "temporal_resolution_bound_ms": 0.4999593727147152,
+      "provenance_lineage": "ece22:ece_te_profile|ip:magnetics",
+      "target_independence": "TRANSITIVE_FROM_TARGET_INDEPENDENT_BOUNDARY",
+      "aliasing_flag": true,
+      "upsample_flag": false,
+      "uncalibrated_flag": false,
+      "primary_or_sensitivity": "PRIMARY",
+      "numerical_realization_id": "NONE",
+      "domain_predicate": "DOMAIN_DENOMINATOR_LEVEL_NONZERO",
+      "ancestor_scientific_families": [
+        "ece_te_profile",
+        "magnetics"
+      ],
+      "ancestor_uncalibrated": []
+    },
+    {
+      "coordinate_id": "RECIP(cerqtit10)",
+      "constructor": "C5",
+      "constructor_name": "unary reciprocal",
+      "ordered_operands": "cerqtit10",
+      "operand_roles": "level_denominator",
+      "primitive_ancestors": [
+        "cerqtit10"
+      ],
+      "n_ancestors": 1,
+      "depth": 1,
+      "output_dimension": "(eV)^-1",
+      "unit_expression": "1/(eV)",
+      "temporal_resolution_rule": "inherit",
+      "temporal_resolution_bound_ms": 9.973614775725594,
+      "provenance_lineage": "cerqtit10:cer_rotation_ti",
+      "target_independence": "TRANSITIVE_FROM_TARGET_INDEPENDENT_BOUNDARY",
+      "aliasing_flag": true,
+      "upsample_flag": false,
+      "uncalibrated_flag": false,
+      "primary_or_sensitivity": "PRIMARY",
+      "numerical_realization_id": "NONE",
+      "domain_predicate": "DOMAIN_DENOMINATOR_LEVEL_NONZERO",
+      "ancestor_scientific_families": [
+        "cer_rotation_ti"
+      ],
+      "ancestor_uncalibrated": []
+    },
+    {
+      "coordinate_id": "RECIP(prmtan_neped)",
+      "constructor": "C5",
+      "constructor_name": "unary reciprocal",
+      "ordered_operands": "prmtan_neped",
+      "operand_roles": "level_denominator",
+      "primitive_ancestors": [
+        "prmtan_neped"
+      ],
+      "n_ancestors": 1,
+      "depth": 1,
+      "output_dimension": "(m^-3)^-1",
+      "unit_expression": "1/(m^-3)",
+      "temporal_resolution_rule": "inherit",
+      "temporal_resolution_bound_ms": 13.267605633802816,
+      "provenance_lineage": "prmtan_neped:density",
+      "target_independence": "TRANSITIVE_FROM_TARGET_INDEPENDENT_BOUNDARY",
+      "aliasing_flag": true,
+      "upsample_flag": true,
+      "uncalibrated_flag": false,
+      "primary_or_sensitivity": "PRIMARY",
+      "numerical_realization_id": "NONE",
+      "domain_predicate": "DOMAIN_DENOMINATOR_LEVEL_NONZERO",
+      "ancestor_scientific_families": [
+        "density"
+      ],
+      "ancestor_uncalibrated": []
+    }
+  ],
+  "constructor_composition": {
+    "C0": 3,
+    "C2": 4,
+    "C3": 3,
+    "C5": 2
+  },
+  "constructor_composition_registry": "C0+C0+C0+C2+C2+C2+C2+C3+C3+C3+C5+C5",
+  "scientific_ancestor_families": [
+    "cer_rotation_ti",
+    "density",
+    "ece_te_profile",
+    "filterscope_dalpha",
+    "gas_injection",
+    "magnetics",
+    "neutral_beams"
+  ],
+  "ancestor_family_composition_registry": "cer_rotation_ti+density+ece_te_profile+filterscope_dalpha+gas_injection+magnetics+neutral_beams",
+  "interpretation_flags": {
+    "contains_uncalibrated_primitive": true,
+    "uncalibrated_primitives": [
+      "pcdiamag3"
+    ],
+    "UNCALIBRATED_SIGNAL": true,
+    "uncalibrated_consequence": "coefficients involving the uncalibrated primitive have no certified physical-dimensional interpretation",
+    "support_rejected_for_uncalibrated": false,
+    "contains_C6": false,
+    "contains_C7": false,
+    "c6_c7_treated_as_surprising_or_repaired": false,
+    "contains_ece_ancestry": true,
+    "ece_penalty_applied": false,
+    "any_aliasing_flag": true,
+    "any_upsample_flag": true,
+    "partial_map_status": [
+      "DOMAIN_DENOMINATOR_LEVEL_NONZERO"
+    ],
+    "all_primary_not_sensitivity": true
+  },
+  "development_utility_quantities": {
+    "FIT": 0.16639756507550676,
+    "FIT_best_in_E0": 0.16628151489421725,
+    "FIT_gap_to_best": 0.0001160501812895176,
+    "SE_delta_vs_best": 0.00024981376112339254,
+    "delta_equiv_vs_best": 0.01,
+    "BLOCK_WORST": 0.19425169937312603,
+    "b_star": "A",
+    "SHOT_P90": 0.21141211638847987,
+    "ACTIVE_TERMS": 12,
+    "support_size": 12,
+    "ACTIVE_TERMS_equals_support_size": true,
+    "COND_MEDIAN": 1.9917544203843867,
+    "COND_P90": 2.173041735453102,
+    "COND_MAX": 2.2596409414020897,
+    "n_infinite_conditioning_cells": 0,
+    "n_degenerate_sd_cells": 0,
+    "BOOT_SELECTION_FREQ": 0.093,
+    "FOLD_SELECTION_FREQ": 0.3333333333333333
+  },
+  "lineage": {
+    "target": "density",
+    "ontology_id": "G_REC_DENSITY_HARDENED_V2",
+    "admissible_universe_id": "A_REC_DENSITY_HARDENED_V2",
+    "search_policy_id": "SIGMA_REC_ONE_SEED_PRIMARY_V2",
+    "Ahat_rec_id": "AHAT_REC_DENSITY_ONE_SEED_V2",
+    "utility_policy_id": "U_REC_OPERATIONAL_V1",
+    "qualification_policy_id": "V_REC_OPERATIONAL_V1",
+    "estimator_id": "DEVELOPMENT_RELATION_OLS_V1"
+  },
+  "selection_provenance": {
+    "E0": 162845,
+    "E1": 1055,
+    "E2": 1,
+    "E3": 1,
+    "E4": 1,
+    "E5": 1,
+    "binding_rank": 2,
+    "binding_criterion": "Rank 2 SHOT_P90 exact minimum among BLOCK_WORST-equivalent survivors",
+    "ranks_3_4_5_non_binding_because_E2_was_a_singleton": true,
+    "selected_within": "AHAT_REC_DENSITY_ONE_SEED_V2",
+    "global_optimality_claim": false
+  }
+}

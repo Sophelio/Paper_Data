@@ -1,0 +1,59 @@
+{
+  "V_RANGE": {
+    "result": "PASS",
+    "expected_by_construction": true,
+    "n_checks": 2232,
+    "n_failures": 0
+  },
+  "V3": {
+    "Delta_0": -0.764488716015979,
+    "Delta_1": -0.027307619479192535,
+    "threshold": -0.01,
+    "result": "PASS",
+    "unchanged": true
+  },
+  "V6": {
+    "result": "PASS_WITH_QUALIFICATION",
+    "Delta_0_earlier": -0.7016931820152212,
+    "direction_0_earlier": "MATERIAL_IMPROVEMENT",
+    "Delta_1_earlier": 0.007613725877654367,
+    "direction_1_earlier": "PRACTICAL_TIE",
+    "Delta_0_later": -0.8458903341651096,
+    "direction_0_later": "MATERIAL_IMPROVEMENT",
+    "Delta_1_later": -0.07257603012695703,
+    "direction_1_later": "MATERIAL_IMPROVEMENT",
+    "pooled_V3_passed": true,
+    "era_counts": {
+      "earlier": 35,
+      "later": 27
+    }
+  },
+  "V1": {
+    "result": "INHERITED_PASS",
+    "note": "information boundary unchanged from Epoch 1"
+  },
+  "V2": {
+    "result": "PASS",
+    "note": "target cross-fitting: no discharge's own target informed its support"
+  },
+  "V4": {
+    "result": "PASS",
+    "note": "identical protected rows, no external tuning"
+  },
+  "V5": {
+    "result": "PASS",
+    "note": "support hashed before held-out target access, per fold"
+  },
+  "V7": {
+    "result": "PASS",
+    "note": "identical scored rows for all methods"
+  },
+  "V8": {
+    "result": "PASS",
+    "note": "discharge is the inference unit; n=62"
+  },
+  "V10": {
+    "result": "INHERITED_PASS",
+    "note": "numerical provenance unchanged; uncalibrated/aliasing flags carried"
+  }
+}

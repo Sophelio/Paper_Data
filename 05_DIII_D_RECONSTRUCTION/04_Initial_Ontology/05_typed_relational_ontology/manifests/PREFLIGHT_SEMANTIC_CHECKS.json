@@ -1,0 +1,27 @@
+{
+  "check_4_1_heterogeneous_blocks": {
+    "machine_readable_count": 3,
+    "machine_readable_blocks": [
+      "X_NBI",
+      "X_density_aux",
+      "X_mag"
+    ],
+    "independent_component_level_implication": [
+      "X_NBI",
+      "X_density_aux",
+      "X_mag"
+    ],
+    "agree": true,
+    "prose_claimed": 4,
+    "correct_value": 3,
+    "verdict": "DOCUMENTARY_ERRATUM_ONLY",
+    "action": "record erratum 'four' -> 'three'; do NOT reopen S7.4"
+  },
+  "check_4_2_cadence_denominator": {
+    "machine_readable_definition": "archived_support(i,s) / (original_length(i,s) - 1)",
+    "uses_n_minus_1_in_definition": true,
+    "implementation_uses_n_minus_1": true,
+    "verdict": "DOCUMENTARY_ERRATUM_ONLY",
+    "action": "correct prose wording to 'one fewer than the number of source samples over the recorded support'; frozen computation unchanged"
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "freeze_id": "D3D-SIR-S7.12-QUALIFIED-RECONSTRUCTION-RESULT-V1",
+  "status": "Q_REC_FINAL_QUALIFIED_POSITIVE_RESULT",
+  "subsidiary_statuses": [
+    "FORMAL_PASS",
+    "CLEAN_DEMO_NOT_MET",
+    "NON_UNIQUE_RELATIONAL_SUPPORTS",
+    "BRANCH_CLOSED"
+  ],
+  "timestamp_utc": "2026-09-07T04:58:19.214183+00:00",
+  "stage": "S7.12 - final qualified reconstruction result (assembly only)",
+  "Q_REC_STATUS": "QUALIFIED_POSITIVE_RECONSTRUCTION_FORMAL_PASS",
+  "CLEAN_DEMO_STATUS": "CLEAN_DEMO_NOT_MET",
+  "qualified_claim": "Within the predictor-qualified frozen 62-discharge observational object, relational supports discovered without a discharge's own target values reconstruct that discharge nontrivially relative to the frozen baselines.",
+  "claims_not_supported": [
+    "virgin external validation",
+    "untouched external validation",
+    "unknown-predictor-distribution transfer",
+    "fully inductive predictor generalization",
+    "future-discharge applicability",
+    "zero-shot transfer",
+    "universal DIII-D relation",
+    "universal DIII-D generalization",
+    "cross-device generalization",
+    "unique physical equation",
+    "universal coefficient vector"
+  ],
+  "Delta_0": -0.764488716015979,
+  "Delta_1": -0.027307619479192535,
+  "V3": "PASS",
+  "V6": "PASS_WITH_QUALIFICATION",
+  "V_RANGE": "PASS",
+  "gate_table": {
+    "V_RANGE": "PASS",
+    "V3": "PASS",
+    "V6": "PASS_WITH_QUALIFICATION",
+    "V1": "INHERITED_PASS",
+    "V2": "PASS",
+    "V4": "PASS",
+    "V5": "PASS",
+    "V7": "PASS",
+    "V8": "PASS",
+    "V10": "INHERITED_PASS"
+  },
+  "REL": {
+    "mean": 0.18911466503138652,
+    "median": 0.1514612356828322,
+    "p90": 0.29590270276661684,
+    "max": 0.91988453225983
+  },
+  "era": {
+    "earlier": {
+      "n": 35,
+      "Delta_1": 0.007613725877654367,
+      "direction": "PRACTICAL_TIE"
+    },
+    "later": {
+      "n": 27,
+      "Delta_1": -0.07257603012695703,
+      "direction": "MATERIAL_IMPROVEMENT"
+    }
+  },
+  "representation_family": "{(C_k*, R_k*)}_{k=1}^{6}",
+  "n_fold_supports": 6,
+  "support_non_uniqueness": true,
+  "canonical_equation_claim": false,
+  "descriptive_realization": {
+    "available": true,
+    "machine_name": "C_E2_ALL_DESC",
+    "sha256": "e7935c35fd303be4fadff5637799b943f28a42c2b7944fc6d503b0dacd029645",
+    "role": "REPRESENTATIVE_ONLY"
+  },
+  "provenance_stages": [
+    "S7.2",
+    "S7.3",
+    "S7.6",
+    "S7.7",
+    "S7.9",
+    "S7.10",
+    "S7.11",
+    "S7.R1",
+    "S7.K2",
+    "S7.E2.0",
+    "S7.E2.0A",
+    "S7.E2.1",
+    "S7.E2.2"
+  ],
+  "Q_REC_BRANCH_CLOSED": true,
+  "NO_FURTHER_DISCOVERY_EPOCH_AUTHORIZED": true,
+  "EPOCH2_IS_FINAL_QREC_ATTEMPT": true,
+  "q_desc_branch": "UNTOUCHED",
+  "parent_artifacts_modified": 0,
+  "acceptance_checks": "36/36",
+  "acceptance_failed": [],
+  "n_artifacts": 15,
+  "n_markdown": 6,
+  "markdown_limit": 8,
+  "markdown_files": [
+    "README.md",
+    "S7_12_CLAIM_BOUNDARY.md",
+    "S7_12_MANUSCRIPT_SUMMARY.md",
+    "S7_12_QUALIFIED_RESULT_AUDIT_REPORT.md",
+    "S7_12_QUALIFIED_RESULT_FINAL.md",
+    "S7_12_SUPPLEMENT_SUMMARY.md"
+  ],
+  "markdown_E2_2": 3,
+  "markdown_combined": 9,
+  "markdown_combined_limit": 14,
+  "all_artifact_hashes": {
+    "FIGURE_6_HANDOFF.json": "08a46db1360535bf0eb240077d7d759c979c47baf32c54ce5329566c1305e90d",
+    "Q_REC_BRANCH_CLOSURE.json": "c2067fa44f2a167e280ef8ff779b6a778f66f060426b15b72748f0ec594110a6",
+    "Q_REC_GATE_TABLE.json": "85878a2f7013368867c7da7a0a7007d6b39f3dcb6f6369e92063ecafff5604ac",
+    "Q_REC_LIMITATIONS.json": "7216b793df720ea7f65d5f41cc7fd686552ab22d4944f6ad1e983e9d98a8b3cd",
+    "Q_REC_PROVENANCE_CHAIN.json": "f2605d2c8a4eb045cc2efbec072017baf4c61bc84217a0119a7f9da8d4058e54",
+    "Q_REC_STAR.json": "21fcba26f6220c34d3c05d0573b481f2b4bd2966ae2bab32547df76a3c883926",
+    "README.md": "2507e37f52caa277a2e6f1b87f9191603a136f876adafb8f25b64f72d4949300",
+    "S7_12_ACCEPTANCE_CHECKS.json": "8fb4b3be49843f7cdf3b7041122b0c613928860fa8eae03f21658e1a98eaae5e",
+    "S7_12_CLAIM_BOUNDARY.md": "903c91b02f086b75c786fba360ce2992acfa270b1b25a8a3a157bf00ca74193f",
+    "S7_12_MANUSCRIPT_SUMMARY.md": "8fe3fee62c754296951d9efc2b4ead3cfafb4fef4d81942649967bcb84816c02",
+    "S7_12_QUALIFIED_RESULT_AUDIT_REPORT.md": "192a4a889fdedc19c901769a6006580e1322b47cd99fc300650b4b2bc10f9dbe",
+    "S7_12_QUALIFIED_RESULT_FINAL.md": "4587e5f10b4304af908c43e8f25d2aa9c110d9d5bc0c30ff1cd2f2e88f430e7e",
+    "S7_12_SUPPLEMENT_SUMMARY.md": "d5b98422a651839e73a3ee0dc756f9d7f40a3abde96bef1bd420a743ab08eafe",
+    "manifests/S7_12_PARENT_VERIFICATION.json": "ec0ab1e36c624cf019a322f46f0036749331d5b72ac087ec541c33eaa98ddc0c",
+    "scripts/s7_12_assemble.py": "2ac80e6ad73481ad415c0da28b059e1fecf81e50bdc3af7d17dd021ccd04d196"
+  },
+  "self_referential_excluded": [
+    "S7_12_FREEZE.json"
+  ],
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "next_stage": "NONE. The q_rec branch is closed. No Epoch 3, no S7.13."
+}

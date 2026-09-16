@@ -1,0 +1,48 @@
+{
+  "record_id": "S7_STAGE_MANIFEST_V1",
+  "generated_utc": "2026-09-08T00:51:17.508741+00:00",
+  "stage_id": "S7.E2.2",
+  "title": "Full-object descriptive representation",
+  "directory": "E2_2_full_object_descriptive_representation",
+  "scientific_task_id": "q_rec",
+  "claim_branch": "QREC-B2",
+  "claim_branch_role": "MEMBER",
+  "parent_claim_branch": "QREC-B1",
+  "operational_epoch": 2,
+  "revision_level": "NONE",
+  "branch": "q_rec",
+  "status": "CANONICAL_DESCRIPTIVE_ONLY",
+  "sir_architecture_mapping": [
+    "CR"
+  ],
+  "scientific_question": "What single representation best exhibits the object, for exposition?",
+  "operation": "One fresh all-62-discharge search under the same frozen policy and utility, run AFTER the qualification verdict was frozen.",
+  "verdict": "FULL_OBJECT_DESCRIPTIVE_REPRESENTATION_FROZEN. C_E2_ALL_DESC, size 12.",
+  "parent_stages": [
+    "S7.E2.1"
+  ],
+  "child_stages": [
+    "S7.12"
+  ],
+  "key_numbers": {
+    "support_size": 12,
+    "proposals": 127642,
+    "descriptive_fit": 0.177509,
+    "mean_jaccard_with_folds": 0.313
+  },
+  "notes": "NOT validation evidence. Descriptive, representative, in-sample. Its 0.1775 must never be compared with the cross-fitted 0.1891 as a competing accuracy score.",
+  "governing_freeze": {
+    "path": "E2_2_FREEZE.json",
+    "freeze_id": "D3D-SIR-S7.E2.2-FULL-OBJECT-DESCRIPTIVE-REPRESENTATION-V1",
+    "sha256": "91263a6439a0f52e572bfcedbb118ab76a135085196a6cfc5f875603db0b13c6",
+    "authoritative": true,
+    "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+  },
+  "executables": [
+    "scripts/e2_2_a_verify.py",
+    "scripts/e2_2_b_search.py",
+    "scripts/e2_2_c_freeze.py"
+  ],
+  "n_files": 24,
+  "indexes_not_replaces": true
+}

@@ -1,0 +1,43 @@
+{
+  "record_id": "S7_STAGE_MANIFEST_V1",
+  "generated_utc": "2026-09-08T00:51:17.508741+00:00",
+  "stage_id": "S7.12",
+  "title": "Final qualified reconstruction result",
+  "directory": "S7_12_qualified_result",
+  "scientific_task_id": "q_rec",
+  "claim_branch": "QREC-B2",
+  "claim_branch_role": "MEMBER",
+  "parent_claim_branch": "QREC-B1",
+  "operational_epoch": 2,
+  "revision_level": "NONE",
+  "branch": "q_rec",
+  "status": "CANONICAL_FINAL",
+  "sir_architecture_mapping": [
+    "Q_q"
+  ],
+  "scientific_question": "What does the completed branch establish, and what does it not?",
+  "operation": "Assembly and qualification only. No search, no fit, no gate evaluation, no new metric.",
+  "verdict": "Q_REC_FINAL_QUALIFIED_POSITIVE_RESULT. Q_REC_BRANCH_CLOSED.",
+  "parent_stages": [
+    "S7.E2.1",
+    "S7.E2.2"
+  ],
+  "child_stages": [],
+  "key_numbers": {
+    "acceptance": "36/36",
+    "branch_closed": true
+  },
+  "notes": "Q_rec* carries a qualified representation FAMILY, not one uniquely identified (C*, R*).",
+  "governing_freeze": {
+    "path": "S7_12_FREEZE.json",
+    "freeze_id": "D3D-SIR-S7.12-QUALIFIED-RECONSTRUCTION-RESULT-V1",
+    "sha256": "1b1228cc5c33763836fa3bcb592affd6a8c300431df5d8fd5b742305faa7133b",
+    "authoritative": true,
+    "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+  },
+  "executables": [
+    "scripts/s7_12_assemble.py"
+  ],
+  "n_files": 18,
+  "indexes_not_replaces": true
+}

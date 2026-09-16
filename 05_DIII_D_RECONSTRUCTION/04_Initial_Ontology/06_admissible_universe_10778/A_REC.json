@@ -1,0 +1,94 @@
+{
+  "universe_id": "A_REC_DENSITY_V1",
+  "freeze_id": "D3D-SIR-S7.6-ADMISSIBLE-UNIVERSE-V1",
+  "formal_definition": "A_rec = { (C,R) : C subset C_rec^atom, 1 <= |C| <= 12, Phi_set(C) = 1, R in R_rec(C) }",
+  "R_rec": "T_REC_V1 for every C (affine-linear in constructed coordinates, intercept allowed and not counted toward |C|, shared support identity, discharge-specific coefficients)",
+  "C_rec_atom": {
+    "universe_id": "C_REC_ATOM_V1",
+    "n_atoms": 6034,
+    "by_constructor": {
+      "C3": 3266,
+      "C2": 2628,
+      "C0": 74,
+      "C1": 66
+    },
+    "symbolic_before_admissibility": {
+      "C3": 5700,
+      "C4": 4830,
+      "C2": 2926,
+      "C0": 78,
+      "C1": 70
+    },
+    "sensitivity_only_registry": "sensitivity_only_coordinate_registry.csv",
+    "atoms_file": "primary_atomic_coordinate_universe.csv"
+  },
+  "Phi_set": {
+    "constraint_id": "PHI_SET_V1",
+    "constraints": [
+      {
+        "id": "size",
+        "rule": "1 <= |C| <= 12",
+        "source": "frozen B_rec"
+      },
+      {
+        "id": "no_duplicates",
+        "rule": "no duplicate coordinate IDs in C"
+      },
+      {
+        "id": "atoms_only",
+        "rule": "every coordinate in C belongs to C_rec^atom"
+      },
+      {
+        "id": "no_sensitivity_only",
+        "rule": "no SENSITIVITY_ONLY_CONSTRUCTOR_OUTPUT coordinate in C"
+      },
+      {
+        "id": "phi_dependency",
+        "rule": "C must NOT contain the COMPLETE membership of any frozen exact linear dependency group",
+        "n_groups_binding": 0,
+        "n_groups_attempted": 197,
+        "note": "a support may contain the aggregate and SOME components; it may not contain the aggregate and ALL eight component restatements in the same linear context. Neither form is privileged a priori."
+      },
+      {
+        "id": "no_target",
+        "rule": "the target never appears in C"
+      }
+    ],
+    "explicitly_not_imposed": [
+      "must contain a phase derivative",
+      "must contain multiple families",
+      "must include raw levels",
+      "any search heuristic or preference"
+    ]
+  },
+  "representation": {
+    "is_finite": true,
+    "materialized_support_by_support": false,
+    "factorized_representation_is_exact": true,
+    "why": "the coordinate atoms together with the set-level predicates are a complete finite representation of A_rec. Enumerating every C is unnecessary and astronomically large.",
+    "unconstrained_subset_count_1_to_12": 4819914731079443036843258814965737431,
+    "note": "this count IGNORES Phi_dependency and is reported only to show why materialization was not attempted"
+  },
+  "explored_subset": "S7.7 explores only a subset Ahat_rec",
+  "search_priority_assigned": false,
+  "estimator_run": false,
+  "target_values_accessed": 0,
+  "external_values_accessed": 0,
+  "external_partial_map_rule": {
+    "same_rule_applies": true,
+    "on_failure": [
+      "do NOT shift or regularize",
+      "do NOT replace the coordinate",
+      "do NOT refit the support",
+      "record the representation as NOT_APPLICABLE on that discharge/block"
+    ],
+    "outcome_decided_by": "the downstream qualification stage, not S7.6"
+  },
+  "raw_baseline_nesting": {
+    "true": "primitive-only coordinate representations are nested within A_rec whenever their support size satisfies 1..12 and the set-level predicates",
+    "not_claimed": "B2 itself is necessarily a member of A_rec",
+    "b2_description": "the frozen raw Ridge comparator using the same admissible primitive information, potentially all 78 primitives",
+    "fairness_claim": "SAME INFORMATION BOUNDARY, not identical support-size constraint",
+    "b2_modified": false
+  }
+}

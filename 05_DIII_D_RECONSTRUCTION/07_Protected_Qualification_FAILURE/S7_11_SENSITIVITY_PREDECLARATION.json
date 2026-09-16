@@ -1,0 +1,64 @@
+{
+  "record_id": "S7_11_SENSITIVITY_PREDECLARATION_V1",
+  "status": "PREDECLARED_NOT_EXECUTED",
+  "declared_utc": "2026-09-05T22:47:11.395345+00:00",
+  "declared_before_first_external_value_access": true,
+  "executed_in_S7_10": false,
+  "can_alter_S7_10_primary_result": false,
+  "class": "POST_SELECTION_PRE_EXTERNAL_INTERPRETATION_SENSITIVITIES",
+  "sensitivities": {
+    "SUPPORT_FAMILY_EXTERNAL_SENSITIVITY": {
+      "definition": "externally evaluate ALL unique Rank-4 winning supports from the frozen S7.9 development bootstrap, under the same local-calibration estimator and scoring geometry",
+      "n_supports": 217,
+      "top_k_subset": false,
+      "external_result_based_support_selection": false,
+      "purpose": "determine whether external transfer is a property of the broader development-equivalent support family or unusually specific to C_dev_star",
+      "primary_remains": "C_dev_star regardless of outcome",
+      "support_ids_sha256": "d33bf2234899341f23e0f57a2ad668751bed367bf386921961c1d78c9365e7a7"
+    },
+    "PRIMARY_MINUS_PRMTAN_NEPED_ANCESTRY": {
+      "definition": "C_dev_star with every coordinate having prmtan_neped ancestry removed",
+      "removed_coordinates": [
+        "ID(prmtan_neped)",
+        "PROD(prmtan_neped,prmtan_neped)",
+        "RATIO(ece21,prmtan_neped)",
+        "RATIO(fs03da,prmtan_neped)",
+        "RECIP(prmtan_neped)"
+      ],
+      "n_removed": 5,
+      "resulting_support": [
+        "ID(cerqtit6)",
+        "ID(pcdiamag3)",
+        "PROD(ece37,ece39)",
+        "PROD(gasa,gasa)",
+        "PROD(pinj,cerqrott6)",
+        "RATIO(ip,ece22)",
+        "RECIP(cerqtit10)"
+      ],
+      "resulting_support_size": 7,
+      "replacement_coordinates_added": false,
+      "re_search": false,
+      "re_selection": false,
+      "estimator": "same local affine OLS procedure"
+    },
+    "PRMTAN_NEPED_ONLY": {
+      "definition": "ID(prmtan_neped) alone under the same local affine OLS estimator",
+      "support": [
+        "ID(prmtan_neped)"
+      ],
+      "support_size": 1,
+      "purpose": "quantify how much of the observed external reconstruction is associated with the semantically close pedestal-density diagnostic"
+    },
+    "TWO_SEED_SEARCH_DEPTH_SENSITIVITY": {
+      "status": [
+        "DECLARED_OPTIONAL",
+        "NOT_EXECUTED"
+      ],
+      "carried_unchanged": true,
+      "executed_here": false,
+      "may_replace_primary_frontier": false
+    }
+  },
+  "are_mandatory_gates": false,
+  "owner_stage": "S7.11"
+}

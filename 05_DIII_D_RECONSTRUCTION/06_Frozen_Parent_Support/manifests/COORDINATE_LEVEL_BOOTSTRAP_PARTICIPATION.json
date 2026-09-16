@@ -1,0 +1,72 @@
+{
+  "record_id": "COORDINATE_LEVEL_BOOTSTRAP_PARTICIPATION_V1",
+  "generated_utc": "2026-09-05T20:29:45.438636+00:00",
+  "status": "REPORTING_ONLY",
+  "defines_a_criterion": false,
+  "applies_a_threshold": false,
+  "prunes_any_candidate": false,
+  "changes_C_dev_star": false,
+  "source": "the frozen 1000-replicate Rank-5 bootstrap output, unmodified",
+  "n_distinct_winning_supports": 217,
+  "n_distinct_coordinates_across_winners": 91,
+  "universal_core": [
+    "ID(pcdiamag3)"
+  ],
+  "coordinates_in_at_least_half_of_winners": [
+    {
+      "coordinate_id": "ID(pcdiamag3)",
+      "share": 1.0,
+      "participation_weight": 1.0000000000000007,
+      "in_C_dev_star": true
+    },
+    {
+      "coordinate_id": "RATIO(ip,ece22)",
+      "share": 0.8387096774193549,
+      "participation_weight": 0.9300000000000006,
+      "in_C_dev_star": true
+    },
+    {
+      "coordinate_id": "RATIO(fs03da,prmtan_neped)",
+      "share": 0.7511520737327189,
+      "participation_weight": 0.7720000000000005,
+      "in_C_dev_star": true
+    },
+    {
+      "coordinate_id": "PROD(prmtan_neped,ece39)",
+      "share": 0.7373271889400922,
+      "participation_weight": 0.7390000000000004,
+      "in_C_dev_star": false
+    },
+    {
+      "coordinate_id": "PROD(ip,prmtan_neped)",
+      "share": 0.7142857142857143,
+      "participation_weight": 0.5970000000000003,
+      "in_C_dev_star": false
+    },
+    {
+      "coordinate_id": "PROD(fs03da,cerqtit11)",
+      "share": 0.6175115207373272,
+      "participation_weight": 0.4430000000000003,
+      "in_C_dev_star": false
+    },
+    {
+      "coordinate_id": "PROD(ece37,ece39)",
+      "share": 0.511520737327189,
+      "participation_weight": 0.6180000000000003,
+      "in_C_dev_star": true
+    },
+    {
+      "coordinate_id": "PROD(gasa,ece1)",
+      "share": 0.5023041474654378,
+      "participation_weight": 0.45500000000000024,
+      "in_C_dev_star": false
+    }
+  ],
+  "C_dev_star_coordinates_in_at_least_half_of_winners": [
+    "ID(pcdiamag3)",
+    "PROD(ece37,ece39)",
+    "RATIO(fs03da,prmtan_neped)",
+    "RATIO(ip,ece22)"
+  ],
+  "reading": "support-level selection stability is LOW (0.093) while several individual coordinates recur in most winning supports; the specific 12-atom support should be read as one representative of a broad equivalence class the 20-discharge development cohort cannot resolve between, not as a uniquely identified structure"
+}

@@ -1,0 +1,14 @@
+# The scientific value of this package is that every file reproduces its
+# recorded SHA-256. Git must therefore perform NO content conversion of any
+# kind: no CRLF/LF translation, no smudge/clean filters, no text munging.
+# `* -text` guarantees a byte-exact round trip through clone/checkout, so
+# 09_REPRODUCIBILITY/validation_scripts/verify_paper_data.py passes on a
+# fresh clone exactly as it passes on the machine that built the package.
+* -text
+
+# Do not attempt diffs or merges on frozen artifacts.
+*.npz   binary
+*.parquet binary
+*.pdf   binary
+*.png   binary
+*.psir  binary

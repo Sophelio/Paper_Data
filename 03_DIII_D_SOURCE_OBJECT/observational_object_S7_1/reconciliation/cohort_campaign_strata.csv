@@ -1,0 +1,8 @@
+stratum_index,first_shot,last_shot,n_shots,ip_resample_method,calendar_date,basis
+1,155537,155537,1,cubic_spline,UNRESOLVED,contiguous shot-number family (gap > 2000); shot number is monotone in time on DIII-D
+2,159310,161414,10,cubic_spline,UNRESOLVED,contiguous shot-number family (gap > 2000); shot number is monotone in time on DIII-D
+3,165017,165965,13,cubic_spline,UNRESOLVED,contiguous shot-number family (gap > 2000); shot number is monotone in time on DIII-D
+4,170394,170411,3,cubic_spline,UNRESOLVED,contiguous shot-number family (gap > 2000); shot number is monotone in time on DIII-D
+5,186997,187024,8,cubic_spline,UNRESOLVED,contiguous shot-number family (gap > 2000); shot number is monotone in time on DIII-D
+6,189646,189652,6,decimate_with_antialiasing,UNRESOLVED,contiguous shot-number family (gap > 2000); shot number is monotone in time on DIII-D
+7,195261,195659,21,decimate_with_antialiasing,UNRESOLVED,contiguous shot-number family (gap > 2000); shot number is monotone in time on DIII-D

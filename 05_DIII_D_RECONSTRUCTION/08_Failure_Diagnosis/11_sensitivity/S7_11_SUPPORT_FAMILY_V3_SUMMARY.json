@@ -1,0 +1,117 @@
+{
+  "record_id": "S7_11_SUPPORT_FAMILY_SUMMARY_V1",
+  "generated_utc": "2026-09-05T23:50:49.714227+00:00",
+  "n_supports": 217,
+  "n_full_domain": 213,
+  "n_not_full_domain": 4,
+  "not_full_domain_reason": "E_DENOM on 6 of 126 blocks; 40 of 42 discharges evaluable",
+  "V3_STYLE_PASS_full_domain": 70,
+  "V3_STYLE_FAIL_full_domain": 143,
+  "V3_STYLE_PASS_fraction_full_domain": 0.3286384976525822,
+  "failure_mode_breakdown": {
+    "fail_Delta_1_only": 139,
+    "fail_Delta_0_only": 0,
+    "fail_both": 4
+  },
+  "distributions": {
+    "mean_nrmse": {
+      "p0": 0.1815320135012774,
+      "p5": 0.18815764356876902,
+      "p25": 0.1981671790941585,
+      "p50": 0.209893517159976,
+      "p75": 0.5236214738814067,
+      "p95": 0.7924589409100519,
+      "p100": 4.938514405989363
+    },
+    "median_nrmse": {
+      "p0": 0.1463925381600339,
+      "p5": 0.1520488999316647,
+      "p25": 0.1607190121523975,
+      "p50": 0.1684881379569197,
+      "p75": 0.1736492280298237,
+      "p95": 0.1813243599795832,
+      "p100": 0.1929089255793197
+    },
+    "Delta_0": {
+      "p0": -0.7409277914706163,
+      "p5": -0.7343021614031247,
+      "p25": -0.7242926258777351,
+      "p50": -0.7125662878119177,
+      "p75": -0.3988383310904871,
+      "p95": -0.13000086406184178,
+      "p100": 4.016054601017468
+    },
+    "Delta_1": {
+      "p0": -0.028742202610451,
+      "p5": -0.022116572542959376,
+      "p25": -0.0121070370175699,
+      "p50": -0.0003806989517524,
+      "p75": 0.3133472577696781,
+      "p95": 0.5821847247983234,
+      "p100": 4.728240189877635
+    }
+  },
+  "C_dev_star": {
+    "mean_nrmse": 0.7423647781201324,
+    "median_nrmse": 0.1698616283279307,
+    "Delta_0": -0.1800950268517613,
+    "Delta_1": 0.5320905620084038,
+    "V3_STYLE_PASS": false,
+    "percentile_in_family": {
+      "mean_nrmse": 86.3849765258216,
+      "median_nrmse": 56.8075117370892,
+      "Delta_1": 86.3849765258216
+    },
+    "rank_ascending_in_family": {
+      "mean_nrmse": 184,
+      "median_nrmse": 121,
+      "Delta_1": 184
+    },
+    "n_full_domain": 213,
+    "development_bootstrap_selection_frequency": 0.093,
+    "is_family_max_development_frequency": true
+  },
+  "LOWEST_EXTERNAL_ERROR_SUPPORT_IN_PREDECLARED_SENSITIVITY": {
+    "support_id": "ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,cerqtit6)|PROD(prmtan_neped,cerqtit6)|PROD(prmtan_neped,ece39)|RATIO(cerqrott12,cerqtit10)|RATIO(ip,bt)|RATIO(ip,ece22)|RATIO(pinj_33r,cerqtit10)|RATIO(prmtan_neped,cerqtit10)|RECIP(bt)",
+    "mean_nrmse": 0.1815320135012774,
+    "median_nrmse": 0.1672326099705073,
+    "Delta_0": -0.7409277914706163,
+    "Delta_1": -0.028742202610451,
+    "development_bootstrap_selection_frequency": 0.034,
+    "IS_NOT_A_REPLACEMENT_PRIMARY_SUPPORT": true,
+    "may_not_be_called_C_star": true
+  },
+  "passing_subfamily_is_marginal": {
+    "Delta_1_min": -0.028742202610451,
+    "Delta_1_median": -0.01442219137615945,
+    "Delta_1_max": -0.0102688309674349,
+    "largest_margin_below_threshold": 0.018742202610451,
+    "n_beating_persistence_by_more_than_0.05": 0,
+    "reading": "no family member beats persistence by more than 0.0287 NRMSE; the passers clear the frozen 0.01 floor by at most 0.0187. The passing subfamily is marginal, not strong."
+  },
+  "development_frequency_does_not_predict_external_behaviour": {
+    "spearman_boot_freq_vs_mean_nrmse": -0.09270004148960388,
+    "spearman_boot_freq_vs_Delta_1": -0.09270004148960388,
+    "C_dev_star_had_highest_development_frequency": true,
+    "C_dev_star_external_percentile": 86.3849765258216
+  },
+  "tail_vs_typical": {
+    "passers_with_any_discharge_nrmse_above_1": 0,
+    "failures_with_any_discharge_nrmse_above_1": 93,
+    "n_passers": 70,
+    "n_failures": 143,
+    "family_median_nrmse_below_B1_median": 186,
+    "family_mean_nrmse_below_B1_mean": 107,
+    "reading": "V3-style outcome tracks the presence of a catastrophic tail, not typical-case accuracy: 186 of 213 full-domain supports have a median NRMSE below the persistence median, but only 107 have a mean below the persistence mean"
+  },
+  "era_structure_is_family_wide": {
+    "n_with_Delta_1_later_le_-0.01": 206,
+    "n_with_Delta_1_earlier_le_-0.01": 7,
+    "n_full_domain": 213,
+    "reading": "the era asymmetry observed for C_dev_star in S7.10 is a property of the cohort, not of the canonical representative: essentially the whole family transfers in the later era and essentially none of it in the earlier era",
+    "claim_domain_narrowing": false
+  },
+  "coordinate_participation_note": "reported for every coordinate across ALL_217 / FULL_DOMAIN / V3_STYLE_PASS / V3_STYLE_FAIL; used for description only, never to select, prune or gate",
+  "no_support_substituted_for_C_dev_star": true,
+  "no_top_k_selection": true
+}

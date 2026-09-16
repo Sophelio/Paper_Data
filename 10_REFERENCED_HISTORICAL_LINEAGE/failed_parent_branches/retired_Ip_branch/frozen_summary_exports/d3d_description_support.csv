@@ -1,0 +1,8 @@
+display_name,export_column,family,target_containing,primitives
+D_kappa W_dia,[d[pcdiamag3]/d[kappa]],trajectory,True,pcdiamag3;kappa
+D_betaN W_dia,[d[pcdiamag3]/d[betan]],trajectory,True,pcdiamag3;betan
+D_betaN kappa,[d[kappa]/d[betan]],trajectory,False,kappa;betan
+D_betaN l_i,[d[li]/d[betan]],trajectory,False,li;betan
+q95 / kappa,[r[q95]/r[kappa]],algebraic,False,q95;kappa
+dot beta_N,[d[betan]/d[t]],temporal,False,betan
+dot kappa,[d[kappa]/d[t]],temporal,False,kappa

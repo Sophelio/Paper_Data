@@ -1,0 +1,201 @@
+{
+  "nodes": [
+    {
+      "node_id": "native_diagnostics",
+      "node_type": "acquisition",
+      "evidence_class": "UNRESOLVED",
+      "notes": "native DIII-D diagnostic acquisition; not present locally"
+    },
+    {
+      "node_id": "upstream_fetch_and_resample",
+      "node_type": "transformation",
+      "evidence_class": "DOCUMENTED_OPERATION_CODE_ABSENT",
+      "notes": "per-signal method/category/lengths recorded for all 5890 pairs; generator code absent"
+    },
+    {
+      "node_id": "efit_equilibrium_reconstruction",
+      "node_type": "reconstruction",
+      "evidence_class": "STRONGLY_INFERRED",
+      "notes": "EFIT named in aminor/area descriptions; settings and inputs absent"
+    },
+    {
+      "node_id": "resampled_archive_v6",
+      "node_type": "archive",
+      "evidence_class": "CODE_VERIFIED",
+      "notes": "62 shots x 95 signals, native per-signal ms time axes"
+    },
+    {
+      "node_id": "units_registry",
+      "node_type": "metadata",
+      "evidence_class": "LOCAL_DOCUMENTED",
+      "notes": "SIGNAL_UNITS.json; upstream source tree absent"
+    },
+    {
+      "node_id": "reference_provider_95",
+      "node_type": "loader",
+      "evidence_class": "CODE_VERIFIED",
+      "notes": "diiid_sir_data_provider.py, frozen manifest"
+    },
+    {
+      "node_id": "dalia_backend_loader",
+      "node_type": "loader",
+      "evidence_class": "CODE_VERIFIED",
+      "notes": "dalia project 36a4813a-23b1-4c9f-abc3-592f98b4abe2 v164, 95/95 catalog"
+    },
+    {
+      "node_id": "full_provider_common_grid",
+      "node_type": "grid",
+      "evidence_class": "CODE_VERIFIED",
+      "notes": "grids to coarsest requested native dt (~20 ms with equilibrium)"
+    },
+    {
+      "node_id": "paper_provider_8",
+      "node_type": "restriction",
+      "evidence_class": "CODE_VERIFIED",
+      "notes": "8-signal historical search surface, TARGET_N=1000"
+    },
+    {
+      "node_id": "paper_grid_1000",
+      "node_type": "grid",
+      "evidence_class": "CODE_VERIFIED",
+      "notes": "1000-point linspace on intersection window; dt 4.08-6.03 ms"
+    },
+    {
+      "node_id": "numerical_realizations",
+      "node_type": "transformation",
+      "evidence_class": "LOCAL_DOCUMENTED",
+      "notes": "none / spline k=5 s=0.1 / RTS R=1 Q=1e-4"
+    },
+    {
+      "node_id": "within_discharge_zscore",
+      "node_type": "normalisation",
+      "evidence_class": "CODE_VERIFIED",
+      "notes": "ddof=0, per discharge, no pooled statistics"
+    },
+    {
+      "node_id": "dfl_feature_export",
+      "node_type": "derived_export",
+      "evidence_class": "CODE_VERIFIED",
+      "notes": "parquet feature bundle with phaseders; target-conditioned"
+    }
+  ],
+  "edges": [
+    {
+      "parent": "native_diagnostics",
+      "child": "upstream_fetch_and_resample",
+      "dependency_type": "acquired_by",
+      "evidence": "external convention",
+      "evidence_class": "UNRESOLVED",
+      "confidence": "low",
+      "notes": "acquisition chain not present locally"
+    },
+    {
+      "parent": "native_diagnostics",
+      "child": "efit_equilibrium_reconstruction",
+      "dependency_type": "constrains",
+      "evidence": "external convention",
+      "evidence_class": "UNRESOLVED",
+      "confidence": "low",
+      "notes": "EFIT inputs not documented locally"
+    },
+    {
+      "parent": "efit_equilibrium_reconstruction",
+      "child": "upstream_fetch_and_resample",
+      "dependency_type": "produces",
+      "evidence": "group coherence + EFIT named in 2/15 descriptions",
+      "evidence_class": "STRONGLY_INFERRED",
+      "confidence": "medium",
+      "notes": "15 equilibrium outputs"
+    },
+    {
+      "parent": "upstream_fetch_and_resample",
+      "child": "resampled_archive_v6",
+      "dependency_type": "resampled_to",
+      "evidence": "shot_*_metadata.json method/category/lengths",
+      "evidence_class": "CODE_VERIFIED",
+      "confidence": "high",
+      "notes": "operation documented per signal per discharge"
+    },
+    {
+      "parent": "upstream_fetch_and_resample",
+      "child": "units_registry",
+      "dependency_type": "supplies_units",
+      "evidence": "registry provenance field",
+      "evidence_class": "LOCAL_DOCUMENTED",
+      "confidence": "medium",
+      "notes": "source tree absent locally"
+    },
+    {
+      "parent": "resampled_archive_v6",
+      "child": "reference_provider_95",
+      "dependency_type": "loaded_by",
+      "evidence": "diiid_sir_data_provider.py",
+      "evidence_class": "CODE_VERIFIED",
+      "confidence": "high",
+      "notes": ""
+    },
+    {
+      "parent": "resampled_archive_v6",
+      "child": "dalia_backend_loader",
+      "dependency_type": "loaded_by",
+      "evidence": "dalia data_provider.py",
+      "evidence_class": "CODE_VERIFIED",
+      "confidence": "high",
+      "notes": "95/95; 12 numerical spot checks exact"
+    },
+    {
+      "parent": "resampled_archive_v6",
+      "child": "full_provider_common_grid",
+      "dependency_type": "gridded_by",
+      "evidence": "diiid_elm_data_provider.py L140-167",
+      "evidence_class": "CODE_VERIFIED",
+      "confidence": "high",
+      "notes": "coarsest requested native dt"
+    },
+    {
+      "parent": "resampled_archive_v6",
+      "child": "paper_provider_8",
+      "dependency_type": "restricted_by",
+      "evidence": "Paper provider ALLOWED_SIGNALS",
+      "evidence_class": "CODE_VERIFIED",
+      "confidence": "high",
+      "notes": "historical subset, not O"
+    },
+    {
+      "parent": "paper_provider_8",
+      "child": "paper_grid_1000",
+      "dependency_type": "gridded_by",
+      "evidence": "TARGET_N=1000 linspace",
+      "evidence_class": "CODE_VERIFIED",
+      "confidence": "high",
+      "notes": "dt 4.08-6.03 ms, discharge-specific"
+    },
+    {
+      "parent": "paper_grid_1000",
+      "child": "numerical_realizations",
+      "dependency_type": "realized_as",
+      "evidence": "spline_processor / KalmanProcessor",
+      "evidence_class": "LOCAL_DOCUMENTED",
+      "confidence": "high",
+      "notes": ""
+    },
+    {
+      "parent": "numerical_realizations",
+      "child": "within_discharge_zscore",
+      "dependency_type": "normalised_by",
+      "evidence": "provenance ledger",
+      "evidence_class": "CODE_VERIFIED",
+      "confidence": "high",
+      "notes": "ddof=0, per discharge"
+    },
+    {
+      "parent": "within_discharge_zscore",
+      "child": "dfl_feature_export",
+      "dependency_type": "exported_as",
+      "evidence": "SIR_to_dFL provider",
+      "evidence_class": "CODE_VERIFIED",
+      "confidence": "high",
+      "notes": "derived features, target-conditioned"
+    }
+  ]
+}

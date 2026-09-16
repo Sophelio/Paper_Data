@@ -1,0 +1,364 @@
+{
+  "ontology_id": "G_REC_DENSITY_V1",
+  "version": "1.0.0",
+  "freeze_id": "D3D-SIR-S7.5-TYPED-RELATIONAL-ONTOLOGY-V1",
+  "generated_utc": "2026-09-04T05:45:50.065181+00:00",
+  "formal_definition": "G_rec = Gamma(X_rec, O_rec, K_rec; Lambda_rec, T_rec)",
+  "parent_X_rec_id": "X_REC_DENSITY_V2",
+  "parent_O_rec_id": "O_REC_DENSITY_V2",
+  "parent_K_rec_id": "K_REC_PRE_V2",
+  "parent_freezes": {
+    "s7_1": "D3D-SIR-S7.1-OBSERVATIONAL-OBJECT-FINAL-V1",
+    "s7_2_v1": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V1",
+    "s7_2_v2": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V2",
+    "s7_3_v1": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-V1",
+    "s7_4_v1": "D3D-SIR-S7.4-MATHEMATICAL-INTERPRETATION-V1",
+    "s7_3r_v2": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-SOURCE-RESOLUTION-V2",
+    "s7_4_v2": "D3D-SIR-S7.4-MATHEMATICAL-INTERPRETATION-SOURCE-RESOLUTION-V2"
+  },
+  "target": "density",
+  "target_forbidden_as_coordinate": true,
+  "target_history_forbidden": true,
+  "primitive_count": 78,
+  "primitive_registry": "primitive_type_registry.csv",
+  "constructor_catalogue": "constructor_catalog.json",
+  "Lambda_rec": [
+    "C0",
+    "C1",
+    "C2",
+    "C3",
+    "C4"
+  ],
+  "primary_constructors": {
+    "primitive": "C0",
+    "first_temporal_derivative": "C1",
+    "pairwise_product": "C2",
+    "pairwise_ratio": "C3",
+    "trajectory_relational_derivative": "C4"
+  },
+  "max_constructor_depth": 1,
+  "sensitivity_only_rules": {
+    "derivative_sensitivity_only_signals": [
+      "fs03da",
+      "fs04",
+      "fs04da",
+      "fs05da",
+      "prmtan_neped",
+      "prmtan_teped"
+    ],
+    "n": 6,
+    "output_label": "SENSITIVITY_ONLY_CONSTRUCTOR_OUTPUT",
+    "representable_in_G_rec": true,
+    "in_primary_A_rec": false,
+    "examined_by": "S7.11"
+  },
+  "excluded_constructor_families": "excluded_constructor_families.json",
+  "dimensional_type_system": {
+    "level": "COMPONENT, never block. Broad blocks are organizational only and three of the eight are dimensionally heterogeneous.",
+    "heterogeneous_blocks": [
+      "X_NBI",
+      "X_density_aux",
+      "X_mag"
+    ],
+    "base_dimension_classes": [
+      "electric_current",
+      "electric_potential",
+      "magnetic_flux_density",
+      "number_density",
+      "photon_flux",
+      "power",
+      "temperature_energy",
+      "time",
+      "torque",
+      "uncalibrated_raw_signal",
+      "velocity"
+    ],
+    "constructor_output": {
+      "C0": "[x_i]",
+      "C1": "[x_i] / time",
+      "C2": "[x_i] * [x_j]",
+      "C3": "[x_i] / [x_j]",
+      "C4": "[x_i] / [x_j]"
+    },
+    "standardization_does_not_alter_scientific_type": true,
+    "note": "a coordinate is NOT declared dimensionless merely because its values are numerically standardized later"
+  },
+  "temporal_type_system": {
+    "C0": "inherit the primitive's temporal metadata unchanged",
+    "C1": "inherit the source primitive's temporal-resolution qualification PLUS DERIVED_FROM_NUMERICAL_REALIZATION",
+    "C2": "limited by the COARSER provenance-supported temporal resolution of the two operands, within each discharge",
+    "C3": "limited by the COARSER provenance-supported temporal resolution of the two operands, within each discharge",
+    "C4": "limited by the COARSER derivative-source resolution of numerator and denominator",
+    "invariant": "no constructed coordinate may claim temporal information finer than either operand"
+  },
+  "flag_propagation": {
+    "ALIASING_RISK": "propagates from any operand to the output; levels remain primary admissible; no high-frequency physical claim may be made",
+    "UPSTREAM_UPSAMPLED": "level remains primary admissible; the first derivative is NUMERICAL_SENSITIVITY_ONLY and leaves the primary grammar",
+    "precedence": "where both flags occur, NUMERICAL_SENSITIVITY_ONLY dominates PRIMARY eligibility",
+    "UNCALIBRATED_SIGNAL": "level primary admissible; ALL derived constructors excluded from the primary ontology"
+  },
+  "provenance_propagation": {
+    "stored_per_coordinate": [
+      "constructor",
+      "ordered operands",
+      "primitive ancestors",
+      "input provenance classes",
+      "input units and types",
+      "temporal qualifications",
+      "transformation depth",
+      "target-independence status"
+    ],
+    "primitive_ancestors_recoverable_exactly": true,
+    "target_independence_is_transitive": true,
+    "invariant": "if any primitive ancestor is target-forbidden, the coordinate is forbidden",
+    "holds_automatically_because": "G_rec is generated from the already target-independent 78-primitive boundary; the invariant is encoded regardless"
+  },
+  "uncalibrated_signal_policy": {
+    "signals": [
+      "pcbcoil",
+      "pcdiamag3"
+    ],
+    "primitive_level": "PRIMARY_ADMISSIBLE",
+    "derived_coordinate": "DIMENSIONALLY_UNCERTIFIED_PRIMARY_EXCLUDED",
+    "excluded_from": [
+      "C1",
+      "C2",
+      "C3",
+      "C4"
+    ],
+    "rationale": "their physical dimensions are unresolved, so the dimensional type of any constructed coordinate cannot be scientifically certified. This is a fail-closed dimensional-admissibility decision, NOT a claim that the signals carry no information."
+  },
+  "exact_dependency_constraints": {
+    "constraints": [
+      {
+        "dependency_group_id": "DEP_NBI_POWER_SUM",
+        "aggregate": "pinj",
+        "components": [
+          "pinj_15l",
+          "pinj_15r",
+          "pinj_21l",
+          "pinj_21r",
+          "pinj_30l",
+          "pinj_30r",
+          "pinj_33l",
+          "pinj_33r"
+        ],
+        "exact_relation": "pinj = sum(pinj_*)",
+        "relation_type": "EXACT_DETERMINISTIC_SUM",
+        "evidence_class": "LOCAL_DOCUMENTED",
+        "evidence": "S7.1 units registry: pinj is 'Total injected neutral beam power'; the per-beamline channels are its components. Confirmed by additivity in canonical units (S7.1R: per-beam W vs aggregate kW).",
+        "target_leakage": false,
+        "deleted_at_S7_5": false,
+        "rule": "a candidate representation containing the aggregate level AND all eight component levels is marked EXACT_LINEAR_REDUNDANCY_RISK",
+        "risk_label": "EXACT_LINEAR_REDUNDANCY_RISK",
+        "scope": "REPRESENTATION_LEVEL, not coordinate level - at depth 1 with arity <= 2 no single coordinate can carry the whole exact set, so the redundancy can only appear in a coordinate SET",
+        "operational_exclusion_belongs_to": "S7.6",
+        "principle": "deterministic restatements are not counted as independent scientific evidence"
+      }
+    ],
+    "invariant": "neither aggregate nor components are removed at S7.5"
+  },
+  "numerical_realization": {
+    "id": "FD2_PHYSICAL_TIME_V1",
+    "rule": "second-order finite difference with respect to actual physical time t in seconds",
+    "reference_implementation": "numpy.gradient(x, t, edge_order=2)",
+    "uses_actual_T_s": true,
+    "assumes_global_dt": false,
+    "fitted_smoothing_parameter": false,
+    "spline_or_RTS_in_primary": false,
+    "target_values_involved": false,
+    "cross_discharge_stencil": false,
+    "differentiates_wrt_tau": false,
+    "capability_check": {
+      "rule": "second-order finite difference with respect to physical time t",
+      "reference_implementation": "numpy.gradient(x, t, edge_order=2)",
+      "numpy_version": "2.5.2",
+      "grids_tested_ms": [
+        5.853,
+        6.824,
+        14.187
+      ],
+      "per_grid": [
+        {
+          "dt_ms": 5.853,
+          "max_interior_abs_error": 4.567605999694635e-05,
+          "n_samples": 400
+        },
+        {
+          "dt_ms": 6.824,
+          "max_interior_abs_error": 6.208852079758742e-05,
+          "n_samples": 400
+        },
+        {
+          "dt_ms": 14.187,
+          "max_interior_abs_error": 0.00026834763810690276,
+          "n_samples": 400
+        }
+      ],
+      "observed_convergence_ratios": [
+        3.999972059931178,
+        3.999981459803801
+      ],
+      "expected_ratio_for_second_order": 4.0,
+      "second_order_confirmed": true,
+      "nonuniform_grid_max_interior_error": 0.00012216565714973093,
+      "nonuniform_note": "np.gradient accepts a non-uniform t vector but is only first-order there. Not relied upon: each T_s is UNIFORM within its own discharge; only dt differs BETWEEN discharges, which is the second-order case tested above.",
+      "reproducible_on_discharge_specific_grid": true,
+      "uses_actual_T_s_values": true,
+      "assumed_global_dt": false,
+      "fitted_smoothing_parameter": false,
+      "target_values_involved": false,
+      "cross_discharge_stencil": false,
+      "synthetic_data_only": true,
+      "observational_values_touched": 0
+    },
+    "alternative_realizations": "spline / RTS / other smooth realizations belong to S7.11 sensitivity qualification, not to the primary ontology",
+    "interpretation": "a derivative-valued coordinate is a constructor acting through a DECLARED numerical realization of a sampled trajectory; it is not evidence that the samples possess an exact classical derivative"
+  },
+  "relation_templates": {
+    "template_id": "T_REC_V1",
+    "primary_template": {
+      "form": "y_s(t) = beta_{0,s} + sum_{j=1..m} beta_{j,s} c_j(x_s)(t) + epsilon_s(t)",
+      "family": "affine-linear IN THE CONSTRUCTED COORDINATES",
+      "coordinate_functions_may_be_nonlinear": true,
+      "support_size_m": {
+        "min": 1,
+        "max": 12,
+        "source": "frozen K_rec B_rec bound"
+      },
+      "shared_across_discharges": "the coordinate SUPPORT C = {c_1..c_m}",
+      "discharge_specific": "the coefficients beta_s",
+      "intercept": {
+        "permitted": true,
+        "counts_toward_support_size": false
+      },
+      "target_on_explanatory_side": false,
+      "target_derivative": false,
+      "explicit_not_implicit": true,
+      "universal_coefficient_claim": false
+    },
+    "coefficient_dimensionality": {
+      "rule": "[beta_j] = [y] / [c_j]",
+      "target_dimension": "m^-3",
+      "consequence": "every affine term beta_j c_j carries the target dimension m^-3, so coordinates within one relation need NOT share physical units; the fitted coefficients carry the compensating dimensions",
+      "uncalibrated_operand": {
+        "numerical_coefficient_allowed": true,
+        "physical_dimensional_interpretation_claimable": false,
+        "coefficient_dimension_status": "UNCALIBRATED"
+      },
+      "coefficient_dimension_status_values": [
+        "PHYSICALLY_TYPED",
+        "UNCALIBRATED"
+      ]
+    },
+    "estimator": {
+      "chosen_here": false,
+      "note": "the relation FAMILY is frozen here; the numerical ESTIMATOR is not. OLS vs ridge and any hyperparameter belong to the later frozen search policy. No estimator was run in S7.5."
+    }
+  },
+  "T_rec": "T_REC_V1",
+  "coordinate_signature_schema": {
+    "schema_id": "COORDINATE_SIGNATURE_V1",
+    "purpose": "stable machine identity and duplicate prevention for coordinate instances that S7.6 will create",
+    "display_label_is_not_identity": true,
+    "canonicalization": {
+      "C0": "ID(signal_id)",
+      "C1": "DOT(signal_id)",
+      "C2": "PROD(i,j) with i = min(idx), j = max(idx) by frozen FINAL_SIGNAL_INVENTORY index",
+      "C3": "RATIO(i,j), directional, i != j",
+      "C4": "PHASE(i|j) meaning D_{x_j} x_i, directional, i != j"
+    },
+    "fields": [
+      "coordinate_id",
+      "constructor_family",
+      "depth",
+      "ordered_operands",
+      "primitive_ancestors",
+      "output_scientific_type",
+      "output_dimension",
+      "output_unit_expression",
+      "temporal_resolution_rule",
+      "provenance_lineage",
+      "target_independence",
+      "primary_or_sensitivity",
+      "aliasing_flags",
+      "numerical_realization_id",
+      "domain_predicate",
+      "dependency_group_membership"
+    ],
+    "duplicate_prevention": {
+      "product_symmetry": "PROD canonical ordering makes PROD(i,j) and PROD(j,i) the same identity",
+      "self_ratio": "RATIO(i,i) is not a valid signature",
+      "self_phase": "PHASE(i|i) is not a valid signature",
+      "ratio_direction_preserved": "RATIO(i,j) != RATIO(j,i)",
+      "phase_direction_preserved": "PHASE(i|j) != PHASE(j|i)"
+    }
+  },
+  "symbolic_upper_bounds": {
+    "note": "symbolic upper bounds for audit. NO coordinate instance is enumerated here; instantiation belongs to S7.6.",
+    "C0_primitive_level": 78,
+    "C1_first_temporal_derivative_primary": 70,
+    "C1_first_temporal_derivative_sensitivity_only": 6,
+    "C2_pairwise_product_incl_self": 2926,
+    "C3_pairwise_ratio_directional": 5700,
+    "C4_trajectory_relational_derivative_directional": 4830,
+    "primary_total": 13604,
+    "sensitivity_only_total": 6
+  },
+  "no_search_priority": true,
+  "A_rec_enumerated": false,
+  "ontology_constraints": {
+    "max_constructor_depth": 1,
+    "constructors_consume_primitives_only": true,
+    "recursive_construction": "FORBIDDEN",
+    "not_primary_examples": [
+      "d(x_i x_j)/dt",
+      "x_i * (d x_j/dt)",
+      "(x_i/x_j) * x_k",
+      "D_{x_k}(x_i x_j)",
+      "ratio of two constructed ratios",
+      "product of phase derivatives"
+    ],
+    "A_rec_enumerated": false,
+    "no_search_priority_assigned": true,
+    "search_priority_belongs_to": "S7.7",
+    "knowledge_is_not_validation_evidence": true,
+    "no_q_desc_seeding": true,
+    "no_model_fitted": true,
+    "no_baseline_evaluated": true,
+    "no_predictor_target_correlation": true,
+    "no_reconstruction_performance_inspected": true,
+    "external_values_accessed": 0,
+    "raw_comparator_nested_in_ontology": {
+      "statement": "a representation whose coordinates are all C0 primitive levels is an admissible special case of G_rec",
+      "consequence": "the raw-coordinate baseline B2 is nested inside the SIR ontology rather than being an external alternative"
+    }
+  },
+  "inherited_documentation_errata": {
+    "check_4_1_heterogeneous_blocks": {
+      "machine_readable_count": 3,
+      "machine_readable_blocks": [
+        "X_NBI",
+        "X_density_aux",
+        "X_mag"
+      ],
+      "independent_component_level_implication": [
+        "X_NBI",
+        "X_density_aux",
+        "X_mag"
+      ],
+      "agree": true,
+      "prose_claimed": 4,
+      "correct_value": 3,
+      "verdict": "DOCUMENTARY_ERRATUM_ONLY",
+      "action": "record erratum 'four' -> 'three'; do NOT reopen S7.4"
+    },
+    "check_4_2_cadence_denominator": {
+      "machine_readable_definition": "archived_support(i,s) / (original_length(i,s) - 1)",
+      "uses_n_minus_1_in_definition": true,
+      "implementation_uses_n_minus_1": true,
+      "verdict": "DOCUMENTARY_ERRATUM_ONLY",
+      "action": "correct prose wording to 'one fewer than the number of source samples over the recorded support'; frozen computation unchanged"
+    }
+  }
+}

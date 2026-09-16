@@ -1,0 +1,44 @@
+{
+  "symbolic": {
+    "C3": 5700,
+    "C4": 4830,
+    "C2": 2926,
+    "C0": 78,
+    "C1": 70
+  },
+  "symbolic_total": 13604,
+  "n_metadata_rejections": 0,
+  "admissible_by_constructor": {
+    "C3": 3266,
+    "C2": 2628,
+    "C0": 74,
+    "C1": 66
+  },
+  "n_admissible": 6034,
+  "rejections_by_class": {
+    "E": 7080,
+    "D": 490
+  },
+  "rejections_by_reason": {
+    "E_DENOM_SIGN_CHANGE": 6042,
+    "D_CONSTANT_ON_REQUIRED_CALIBRATION_BLOCK": 490,
+    "E_DENOM_MARGIN_BELOW_ETA": 450,
+    "E_DENOM_ZERO_VALUE": 300,
+    "E_DENOM_RMS_ZERO": 288
+  },
+  "rejections_by_constructor": {
+    "C4": 4830,
+    "C3": 2434,
+    "C2": 298,
+    "C0": 4,
+    "C1": 4
+  },
+  "denominators_level_pass": 46,
+  "denominators_level_total": 76,
+  "denominators_deriv_pass": 0,
+  "denominators_deriv_total": 70,
+  "n_dependency_groups_binding": 0,
+  "n_dependency_groups_attempted": 197,
+  "n_dependency_groups_vacuous": 197,
+  "min_calibration_samples": 130
+}

@@ -1,0 +1,99 @@
+{
+  "policy_id": "EPOCH2_QUALIFICATION_POLICY_V1",
+  "frozen_utc": "2026-09-06T04:02:06.709084+00:00",
+  "primary_statistical_unit": "discharge",
+  "pseudoreplication_over_time_samples": false,
+  "per_discharge_aggregation": "mean over the valid A/B/C blocks, exactly as frozen",
+  "cross_fitted_aggregation": {
+    "rule": "assemble the 62 out-of-fold discharge results, one per discharge, each produced by the support of the fold in which that discharge was held out",
+    "in_fold_development_scores_contribute": false,
+    "each_discharge_contributes_exactly_one_result": true
+  },
+  "V3": {
+    "Delta_0": "mean_s(NRMSE_REL,s - NRMSE_B0,s)",
+    "Delta_1": "mean_s(NRMSE_REL,s - NRMSE_B1,s)",
+    "pass": "Delta_0 <= -0.01 AND Delta_1 <= -0.01",
+    "unchanged_from_epoch1": true,
+    "ci_role": "reported, not a threshold"
+  },
+  "V6": {
+    "eras": {
+      "earlier": 35,
+      "later": 27
+    },
+    "note": "62-object era counts, since the qualification domain is now all 62",
+    "quantity": "Delta_{j,e} over out-of-fold discharges in era e",
+    "MATERIAL_IMPROVEMENT": "Delta <= -0.01",
+    "PRACTICAL_TIE": "-0.01 < Delta <= +0.01",
+    "MATERIAL_ADVERSE": "Delta > +0.01",
+    "one_era_may_not_rescue_another": true,
+    "threshold": 0.01,
+    "frozen_now": true
+  },
+  "V_RANGE_primary_coverage": {
+    "requirement": "FULL_CROSSFITTED_DOMAIN_RANGE_SUPPORT",
+    "definition": "every held-out discharge/block, under its own fold-selected support, satisfies V-RANGE at tau = 1",
+    "one_failure_fails_the_gate": true,
+    "silent_omission_forbidden": true,
+    "partial_domain_results": "may be reported diagnostically; cannot rescue the primary"
+  },
+  "positive_result_tiers": {
+    "FORMAL_PASS": "the frozen gates pass, exactly as written",
+    "CLEAN_DEMO_PASS": {
+      "requires": [
+        "FORMAL_PASS",
+        "Delta_1 <= -0.05",
+        "FULL_CROSSFITTED_DOMAIN_RANGE_SUPPORT",
+        "no out-of-fold discharge with REL NRMSE > 1.0",
+        "both eras MATERIAL_IMPROVEMENT against B1"
+      ],
+      "delta1_threshold": -0.05,
+      "derivation": "five times the frozen practical-equivalence floor of 0.01, which S7.2 declared before any result existed as lying BELOW any scientifically meaningful difference. Five times that floor is unambiguously above it",
+      "derived_from_any_outcome": false,
+      "option_chosen": "A - a simple prospective reporting threshold, frozen now",
+      "consequence_note": "this is a demanding standard: S7.11 recorded that no member of the Epoch-1 support family beat persistence by more than 0.0287, so no Epoch-1 object would reach it. Recorded as context AFTER the derivation, not as its basis"
+    },
+    "CLEAN_DEMO_PASS_can_change_the_scientific_gate": false
+  },
+  "baselines": {
+    "carried": [
+      "B0 calibration mean",
+      "B1 persistence",
+      "B1A AR(1)",
+      "B2 raw ridge",
+      "B3 raw HGBR",
+      "H0 hardened raw ridge"
+    ],
+    "hyperparameters_re_estimated_from": "D_train only, per fold",
+    "held_out_targets_may_influence_baseline_tuning": false,
+    "identical_protected_rows_for_all_comparable_methods": true
+  },
+  "U_rec": {
+    "status": "UNCHANGED",
+    "tail_penalty_added": false,
+    "rank1_changed": false,
+    "practical_equivalence_changed": false,
+    "range_support_rewarded_inside_U_rec": false,
+    "separation_principle": "range support is an admissibility/applicability condition in P_rec/V_rec, never a performance objective in U_rec"
+  },
+  "support_stability_reporting": {
+    "expected": "one selected support per outer fold, six in total",
+    "predeclared_descriptive_reports": [
+      "exact support overlap across folds",
+      "coordinate recurrence",
+      "constructor recurrence",
+      "primitive-family recurrence"
+    ],
+    "minimum_exact_support_agreement_required": null,
+    "new_exact_support_gate_created": false,
+    "legitimate_outcome": "stable reconstruction utility with non-unique relational supports, consistent with the S7.9/S7.11 lesson"
+  },
+  "optional_all_data_descriptive_support": {
+    "permitted": true,
+    "permitted_only_after": "the cross-fitted qualification is completely frozen",
+    "label": "FULL_OBJECT_DESCRIPTIVE_REPRESENTATION",
+    "may_be_called_externally_validated": false,
+    "may_alter_the_crossfitted_verdict": false,
+    "purpose": "description, visualization, manuscript interpretation"
+  }
+}

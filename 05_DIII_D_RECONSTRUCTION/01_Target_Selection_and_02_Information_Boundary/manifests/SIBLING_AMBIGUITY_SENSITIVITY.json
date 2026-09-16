@@ -1,0 +1,10 @@
+{
+  "question": "does the CER sibling-grouping reading change the winner?",
+  "primary_reading": "CER rotation and CER ion temperature are separate sibling subfamilies (different physical quantities)",
+  "alternative_reading": "the whole CER provider group is one sibling family",
+  "winner_primary": "vsurf",
+  "winner_alternative": "vsurf",
+  "winner_changes": false,
+  "conclusion": "the ambiguity is immaterial to selection: the winner is identical under both readings, so no human review is required under section 11",
+  "resolved_without_signal_values": true
+}

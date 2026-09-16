@@ -1,0 +1,63 @@
+{
+  "record_id": "SEARCH_BUDGET_PREFLIGHT_V2",
+  "computed_from": "METADATA_ONLY",
+  "no_density_value_opened": true,
+  "evaluated_utc": "2026-09-05T00:17:10.491291+00:00",
+  "search_policy_v2_sha256": "2049cf999dd99c0a1c5aa7f3539a7caaedbae8171d42678ea4cedef93734a255",
+  "MAX_SUPPORT_EVALUATIONS": 300000,
+  "SEEDS_PER_STRATUM": 1,
+  "active_stratum_count": 127,
+  "strata_per_constructor": {
+    "C0": 7,
+    "C1": 5,
+    "C2": 28,
+    "C3": 28,
+    "C5": 4,
+    "C6": 35,
+    "C7": 20
+  },
+  "atoms_per_constructor": {
+    "C0": 66,
+    "C1": 59,
+    "C2": 2080,
+    "C3": 2457,
+    "C5": 39,
+    "C6": 3776,
+    "C7": 2301
+  },
+  "expansion_shortlist_count": {
+    "C0": 66,
+    "C1": 59,
+    "C2": 96,
+    "C3": 96,
+    "C5": 39,
+    "C6": 96,
+    "C7": 96
+  },
+  "expansion_shortlist_total": 548,
+  "strata_represented_in_shortlist": 127,
+  "every_nonempty_stratum_gets_a_slot": true,
+  "atomic_scoring_evaluations": 10778,
+  "main_lane": {
+    "n_seeds": 127,
+    "growth_steps": 11,
+    "proposals_per_step_max": 127,
+    "evaluations_max": 177419,
+    "arithmetic": "127 x 11 x 127 = 177419"
+  },
+  "raw_only_lane": {
+    "n_seeds": 7,
+    "growth_steps": 11,
+    "proposals_per_step_max": 7,
+    "evaluations_max": 539,
+    "arithmetic": "7 x 11 x 7 = 539"
+  },
+  "max_projected_support_evaluations": 188736,
+  "expected_from_instruction": 188736,
+  "matches_expected": true,
+  "within_budget": true,
+  "headroom": 111264,
+  "policy_truncated_to_fit": false,
+  "policy_changed_to_fit": false,
+  "verdict": "SEARCH_BUDGET_OK"
+}

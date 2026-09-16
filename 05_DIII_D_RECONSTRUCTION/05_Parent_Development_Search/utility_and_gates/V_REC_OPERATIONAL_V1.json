@@ -1,0 +1,250 @@
+{
+  "qualification_id": "V_REC_OPERATIONAL_V1",
+  "generated_utc": "2026-09-05T08:07:46.430834+00:00",
+  "parent_contract": [
+    "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V1",
+    "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V2"
+  ],
+  "parent_status": "V_rec protocol FROZEN at S7.2; gate evaluation DEFERRED_TO_S7.10",
+  "mandatory_gates": [
+    "V1",
+    "V2",
+    "V3",
+    "V4",
+    "V5",
+    "V6",
+    "V7",
+    "V8",
+    "V10"
+  ],
+  "non_mandatory_gates": [
+    "V9"
+  ],
+  "mandatory_failure_meaning": "if a mandatory gate fails, Q_rec may NOT be presented as a successful structural-transfer result",
+  "gates": [
+    {
+      "gate": "V1",
+      "name": "information boundary",
+      "authoritative_definition": "no target leakage; no admitted quantity with unresolved target ancestry in the primary boundary",
+      "mandatory": true,
+      "authoritative_corrections": [],
+      "stage_owner": "S7.3 established the boundary; final gate table at S7.12",
+      "current_status": "PROTOCOL_VERIFIED",
+      "status_detail": "auditable now from lineage; the final gate table is produced downstream",
+      "evidence_required": "S7.3 information-boundary artifacts and the leakage matrix, carried unchanged",
+      "failure_meaning": "MANDATORY: a failure prevents presenting Q_rec as a successful structural-transfer result"
+    },
+    {
+      "gate": "V2",
+      "name": "development-only discovery",
+      "authoritative_definition": "target, ontology, support, estimator and thresholds chosen without external outcomes",
+      "mandatory": true,
+      "authoritative_corrections": [],
+      "stage_owner": "S7.9 freeze",
+      "current_status": "PENDING_S7.9",
+      "status_detail": "auditable now and provisionally satisfied; it remains provisional until the S7.9 freeze fixes the support and estimator",
+      "evidence_required": "access audits showing zero external signal and target values through S7.9, plus the S7.9 hash record",
+      "failure_meaning": "MANDATORY: a failure prevents the structural-transfer claim"
+    },
+    {
+      "gate": "V3",
+      "name": "nontrivial skill vs B0/B1",
+      "authoritative_definition": "Delta_j = mean over EXTERNAL discharges of (NRMSE_REL,s - NRMSE_Bj,s), with NRMSE_,s = mean over blocks A,B,C; PASS iff Delta_0 <= -0.01 AND Delta_1 <= -0.01",
+      "mandatory": true,
+      "authoritative_corrections": [
+        "S7.2C C-06 supplied the missing aggregate definition; the V1 wording 'predeclared aggregate sense' was not decidable"
+      ],
+      "stage_owner": "S7.10",
+      "current_status": "PENDING_S7.10",
+      "status_detail": "NOT evaluated in S7.8; requires the external cohort",
+      "evidence_required": "external protected scoring of the frozen representation and of B0 and B1 on identical samples",
+      "failure_meaning": "MANDATORY: this is the gate the retired q_rec failed"
+    },
+    {
+      "gate": "V4",
+      "name": "fair raw comparison vs B2/B3",
+      "authoritative_definition": "fair comparison against B2 and B3 on identical information and geometry",
+      "mandatory": true,
+      "authoritative_corrections": [],
+      "stage_owner": "S7.10",
+      "current_status": "PENDING_S7.10",
+      "status_detail": "NOT evaluated in S7.8",
+      "evidence_required": "identical calibration intervals, identical protected samples, identical estimator discipline for B2 and B3",
+      "failure_meaning": "MANDATORY, but requires FAIRNESS not victory: the gate passes if the comparison was conducted properly, whatever the outcome"
+    },
+    {
+      "gate": "V5",
+      "name": "external structural transfer",
+      "authoritative_definition": "support frozen and hashed before any external evaluation",
+      "mandatory": true,
+      "authoritative_corrections": [],
+      "stage_owner": "S7.10, conditioned on the S7.9 freeze",
+      "current_status": "PENDING_S7.10",
+      "status_detail": "NOT evaluated until S7.10; the precondition is created by the S7.9 hash",
+      "evidence_required": "the S7.9 freeze hash predating the first external access timestamp",
+      "failure_meaning": "MANDATORY: without it the local-calibration design makes the claim vacuous"
+    },
+    {
+      "gate": "V6",
+      "name": "processing-era robustness",
+      "authoritative_definition": "external results reported separately for the 24 earlier and 18 later external discharges; outcomes PASS / PASS_WITH_QUALIFICATION / FAIL_FOR_FULL_DOMAIN",
+      "mandatory": true,
+      "authoritative_corrections": [
+        "S7.2C C-07: external counts are 24 earlier / 18 later",
+        "the V1 wording 35 earlier / 27 later is SUPERSEDED_FOR_V6_BY_S7.2C_C07; those are PARENT OBJECT counts, not the external cohort the gate operates on"
+      ],
+      "stage_owner": "S7.10",
+      "current_status": "PENDING_S7.10",
+      "status_detail": "NOT evaluated in S7.8",
+      "evidence_required": "era-split external results using 24/18",
+      "failure_meaning": "MANDATORY; FAIL_FOR_FULL_DOMAIN does not erase the result but narrows Omega_rec rather than averaging across the processing discontinuity"
+    },
+    {
+      "gate": "V7",
+      "name": "common support",
+      "authoritative_definition": "cross-representation comparisons use identical scored samples",
+      "mandatory": true,
+      "authoritative_corrections": [],
+      "stage_owner": "protocol check S7.8; empirical comparison S7.10",
+      "current_status": "PROTOCOL_VERIFIED",
+      "status_detail": "the protocol requirement is verified now; the empirical common-support check belongs with the comparison",
+      "evidence_required": "identical protected sample sets across the representation and all four baselines",
+      "failure_meaning": "MANDATORY: unequal scored samples invalidate every paired comparison"
+    },
+    {
+      "gate": "V8",
+      "name": "discharge-level inference",
+      "authoritative_definition": "discharge, not time sample, is the independent unit",
+      "mandatory": true,
+      "authoritative_corrections": [],
+      "stage_owner": "protocol frozen S7.8; evaluated downstream",
+      "current_status": "PROTOCOL_VERIFIED",
+      "status_detail": "every S7.8 quantity aggregates to the discharge before any standard error is taken; SE_delta uses n = 20 discharges",
+      "evidence_required": "paired discharge-level differences and discharge bootstrap in all inference",
+      "failure_meaning": "MANDATORY: sample-level inference would overstate precision by orders of magnitude"
+    },
+    {
+      "gate": "V9",
+      "name": "sensitivity",
+      "authoritative_definition": "no result depends catastrophically on one discharge, one temporal block, or one numerical realization",
+      "mandatory": false,
+      "authoritative_corrections": [],
+      "stage_owner": "S7.11",
+      "current_status": "PENDING_S7.11",
+      "status_detail": "NON-MANDATORY; a single influential discharge is a finding to report rather than a disqualification, provided it is reported",
+      "evidence_required": "leave-one-discharge-out, block, and numerical-realization sensitivity",
+      "failure_meaning": "NON-MANDATORY: reported, does not block the claim"
+    },
+    {
+      "gate": "V10",
+      "name": "numerical provenance",
+      "authoritative_definition": "no claim rests on interpolation-created resolution without qualification",
+      "mandatory": true,
+      "authoritative_corrections": [],
+      "stage_owner": "lineage auditable S7.8; final qualification downstream",
+      "current_status": "PROTOCOL_VERIFIED",
+      "status_detail": "S7.3R source-resolution reconciliation is carried unchanged; the final qualification statement belongs with the result",
+      "evidence_required": "the S7.3R/S7.4 V2 source-cadence and numerical-admissibility record",
+      "failure_meaning": "MANDATORY: a claim resting on interpolated resolution must be qualified or withdrawn"
+    }
+  ],
+  "baselines": {
+    "B0": {
+      "definition": "calibration mean predicted throughout the protected block",
+      "status": "NOT_RUN",
+      "owner": "S7.9 configuration, S7.10 execution"
+    },
+    "B1": {
+      "definition": "persistence: last calibration sample of the block held constant",
+      "status": "NOT_RUN",
+      "owner": "S7.9 configuration, S7.10 execution"
+    },
+    "B1A_AR1": {
+      "definition": "AR(1) diagnostic baseline",
+      "status": "NOT_RUN",
+      "role": "DIAGNOSTIC",
+      "owner": "S7.9 configuration, S7.10 execution"
+    },
+    "B2": {
+      "definition": "raw ridge linear regression on target-admissible primitive predictors",
+      "status": "NOT_RUN",
+      "owner": "S7.9 configuration, S7.10 execution"
+    },
+    "B3": {
+      "definition": "sklearn.ensemble.HistGradientBoostingRegressor on the same raw predictors",
+      "status": "NOT_RUN",
+      "owner": "S7.9 configuration, S7.10 execution"
+    },
+    "H0_RAW_HARDENED": {
+      "definition": "hardened raw diagnostic",
+      "status": "NOT_RUN",
+      "role": "DIAGNOSTIC",
+      "owner": "S7.9 configuration, S7.10 execution"
+    }
+  },
+  "baseline_notes": {
+    "V3_requires": "actual skill versus B0 and B1",
+    "V4_requires": "FAIR comparison with B2 and B3; V4 does NOT require beating B2/B3",
+    "S_pers": "remains required reporting but does NOT guide S7.9 selection",
+    "identical_geometry_granted_to_every_comparator": true
+  },
+  "inferential_unit": "discharge",
+  "gate_inference_bootstrap_replicates": 10000,
+  "validation_geometry": {
+    "n_development_discharges": 20,
+    "blocks": [
+      "A",
+      "B",
+      "C"
+    ],
+    "n_cells": 60,
+    "block_windows": {
+      "A": {
+        "calibration": [
+          0.0,
+          0.4
+        ],
+        "evaluation": [
+          0.4,
+          0.5
+        ]
+      },
+      "B": {
+        "calibration": [
+          0.0,
+          0.6
+        ],
+        "evaluation": [
+          0.6,
+          0.7
+        ]
+      },
+      "C": {
+        "calibration": [
+          0.0,
+          0.8
+        ],
+        "evaluation": [
+          0.8,
+          0.9
+        ]
+      }
+    },
+    "protection_model": "BLOCK_LOCAL_PROTECTION",
+    "semantics": "sequential / prequential",
+    "external_cohort": "GLOBALLY SEALED until S7.10",
+    "unchanged_from": "S7.2 / S7.2C validation geometry"
+  },
+  "external_cohort": {
+    "n": 42,
+    "earlier": 24,
+    "later": 18,
+    "state": "SEALED",
+    "values_opened_in_s7_8": 0
+  },
+  "execution_stage": "S7.10 (V9: S7.11)",
+  "selection_domain": "AHAT_REC_DENSITY_ONE_SEED_V2",
+  "selection_domain_cardinality": 162845,
+  "global_optimality_claim": false,
+  "domain_reading": "every quantity defined here is evaluated over the frozen explored frontier Ahat_rec only; A_rec minus Ahat_rec remains ADMISSIBLE_UNSEARCHED and carries no negative finding"
+}

@@ -1,0 +1,11 @@
+contract,floor,selected,n_equivalent,margin_source
+q_compact,1e-05,C_all,1,practical_floor
+q_robust,1e-05,C_all,1,SE
+q_compact,0.0001,C0+Q_pair,4,practical_floor
+q_robust,0.0001,C_all,1,SE
+q_compact,0.001,C0+Q_pair,4,practical_floor
+q_robust,0.001,C_all,1,SE
+q_compact,0.01,C0+Q_pair,4,practical_floor
+q_robust,0.01,C_all,1,SE
+q_compact,0.1,C0+Q_pair,4,practical_floor
+q_robust,0.1,C_all,1,practical_floor

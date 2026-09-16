@@ -1,0 +1,18 @@
+{
+  "manifest_id": "NAVIGATION_VERSUS_UTILITY_V1",
+  "generated_utc": "2026-09-05T08:07:46.430834+00:00",
+  "s7_7_answered": "Where did the frozen search look?",
+  "s7_8_answers": "By what exact scientific rule will we judge what it found?",
+  "s7_8_does_not_answer": "Which representation wins? (that is S7.9)",
+  "invariants": [
+    "SEARCH FREQUENCY != SCIENTIFIC IMPORTANCE",
+    "SEARCH PRIORITY != VALIDATION",
+    "PRACTICAL EQUIVALENCE != NUMERICAL IDENTITY",
+    "SELECTED WITHIN Ahat_rec != GLOBALLY OPTIMAL"
+  ],
+  "numerical_coincidence_note": "FIT(C) may equal J_search(C) numerically because both are the mean over the 60 cells of the same OLS NRMSE; this is an identity of arithmetic, not of scientific role",
+  "selection_domain": "AHAT_REC_DENSITY_ONE_SEED_V2",
+  "selection_domain_cardinality": 162845,
+  "global_optimality_claim": false,
+  "domain_reading": "every quantity defined here is evaluated over the frozen explored frontier Ahat_rec only; A_rec minus Ahat_rec remains ADMISSIBLE_UNSEARCHED and carries no negative finding"
+}

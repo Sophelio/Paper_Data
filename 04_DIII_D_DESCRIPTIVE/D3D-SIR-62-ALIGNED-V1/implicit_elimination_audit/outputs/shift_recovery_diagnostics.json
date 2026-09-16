@@ -1,0 +1,10 @@
+{
+  "status": "EXACT_FROM_SERIALIZED_STATE",
+  "n_discharges": 62,
+  "shiftval_min": 14.643161791053483,
+  "shiftval_max": 24.2426158353731,
+  "shiftval_mean": 19.11105033015346,
+  "shiftval_std": 2.0956128972520607,
+  "nmin_ui": "UNKNOWN",
+  "note": "Effective per-discharge shiftval recovered from historical .psir; nmin UI unknown."
+}

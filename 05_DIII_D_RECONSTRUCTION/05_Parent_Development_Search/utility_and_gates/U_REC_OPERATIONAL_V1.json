@@ -1,0 +1,182 @@
+{
+  "utility_id": "U_REC_OPERATIONAL_V1",
+  "generated_utc": "2026-09-05T08:07:46.430834+00:00",
+  "parent_contract": [
+    "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V1",
+    "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V2"
+  ],
+  "parent_status": "U_rec FROZEN at S7.2; S7.8 instantiates execution rules only",
+  "primary_search": "D3D-SIR-S7.7-ONE-SEED-PRIMARY-SEARCH-AND-EXPLORED-FRONTIER-V2",
+  "structure": "lexicographic",
+  "no_weighted_sum": true,
+  "no_pareto_weight_tuning": true,
+  "no_family_penalty": true,
+  "no_scientific_family_bonus": true,
+  "no_constructor_preference": true,
+  "no_ece_penalty": true,
+  "no_c6_c7_penalty": true,
+  "no_diversity_bonus": true,
+  "primary_estimator": "DEVELOPMENT_RELATION_OLS_V1",
+  "primary_metric": {
+    "metric_id": "NRMSE_CALIBRATION_NORMALIZED_V1",
+    "inherited_from": "S7.2C metric_and_gate_definitions.json (unchanged)",
+    "scale": "scale_{s,b} = std(y_calibration_{s,b}, ddof=0)",
+    "cell": "NRMSE_{s,b} = RMSE(y_protected, yhat_protected) / scale_{s,b}",
+    "zero_scale_behaviour": "INVALID_FOR_NORMALIZED_SCORING",
+    "epsilon_added": false,
+    "per_discharge": "NRMSE_s(C) = mean over blocks A,B,C of NRMSE_{s,b}(C)",
+    "candidate_level": "FIT(C) = mean over the 20 development discharges of NRMSE_s(C)",
+    "units": "calibration-normalized RMSE units (dimensionless)",
+    "raw_rmse": {
+      "retained": true,
+      "role": "REPORTING_ONLY",
+      "is_primary_utility_measure": false,
+      "unit": "target physical unit (density)"
+    },
+    "non_finite_cell_rule": {
+      "rule": "a candidate with any non-finite cell has FIT = +inf and cannot enter E_fit",
+      "observed_in_frozen_frontier": 0,
+      "note": "all 162845 x 60 cells of the frozen frontier are finite; the rule is defensive"
+    }
+  },
+  "cell_geometry": {
+    "n_development_discharges": 20,
+    "blocks": [
+      "A",
+      "B",
+      "C"
+    ],
+    "n_cells": 60,
+    "block_windows": {
+      "A": {
+        "calibration": [
+          0.0,
+          0.4
+        ],
+        "evaluation": [
+          0.4,
+          0.5
+        ]
+      },
+      "B": {
+        "calibration": [
+          0.0,
+          0.6
+        ],
+        "evaluation": [
+          0.6,
+          0.7
+        ]
+      },
+      "C": {
+        "calibration": [
+          0.0,
+          0.8
+        ],
+        "evaluation": [
+          0.8,
+          0.9
+        ]
+      }
+    },
+    "protection_model": "BLOCK_LOCAL_PROTECTION",
+    "semantics": "sequential / prequential",
+    "external_cohort": "GLOBALLY SEALED until S7.10",
+    "unchanged_from": "S7.2 / S7.2C validation geometry"
+  },
+  "canonical_identity": {
+    "rule_id": "CANONICAL_SUPPORT_ID_V1",
+    "authoritative_registry": "07_search_policy_and_frontier/one_seed_primary_v2/explored_support_registry.csv",
+    "id_form": "atom signatures joined by a top-level pipe, atoms ascending-sorted",
+    "atom_membership_rule": "split the support_id on pipe characters occurring at parenthesis depth 0 ONLY",
+    "hazard": "C4/C6/C7/C8 atom signatures PHASE(i|j), LEVEL_RATE(i|j), RATE_OVER_LEVEL(i|j), LEVEL_OVER_RATE(i|j) embed a pipe inside their own parentheses; a naive split on the pipe returns the wrong atom count for 116608 of the 162845 registry rows (71.6 percent)",
+    "mandatory_checksum": "the depth-aware parse must reproduce registry support_size for all 162845 rows before any utility computation begins",
+    "verified_in_s7_8": true,
+    "tie_break": {
+      "rule": "lexicographic ascending byte order of the canonical support_id",
+      "role": "FINAL deterministic tie-break at every rank",
+      "sufficient": "support_ids are unique across Ahat_rec, so the tie-break always resolves to exactly one candidate"
+    }
+  },
+  "practical_equivalence": {
+    "delta_equiv": "max(SE_delta, 0.01)",
+    "test": "A and B practically equivalent iff |NRMSE_A - NRMSE_B| <= delta_equiv",
+    "reading": "within one SE OR within the 0.01 practical floor",
+    "units": "CALIBRATION-NORMALIZED RMSE units",
+    "raw_rmse_interpretation": "FORBIDDEN"
+  },
+  "rank_1_fit": {
+    "criterion": "primary fit quality",
+    "quantity": "FIT(C) = mean_s NRMSE_s(C)",
+    "best": "FIT_best = min_C FIT(C)",
+    "survivor_set": "E_fit = { C : |FIT(C) - FIT_best| <= max(SE_delta(C,best), 0.01) }",
+    "is_top_k": false,
+    "no_candidate_outside_E_fit_advances": true,
+    "policy_ref": "practical_equivalence_policy.json"
+  },
+  "rank_2_stability": {
+    "criterion": "development generalization / stability",
+    "quantities": [
+      "BLOCK_WORST(C)",
+      "SHOT_P90(C)"
+    ],
+    "order": [
+      "minimize BLOCK_WORST",
+      "among candidates practically equivalent on BLOCK_WORST, minimize SHOT_P90 exactly"
+    ],
+    "policy_ref": "stability_metric_policy.json"
+  },
+  "rank_3_parsimony": {
+    "criterion": "parsimony",
+    "quantities": [
+      "|C|",
+      "ACTIVE_TERMS(C)"
+    ],
+    "order": [
+      "minimize |C|",
+      "then minimize ACTIVE_TERMS(C)"
+    ],
+    "intercept_counted": false,
+    "policy_ref": "development_selection_algorithm.json"
+  },
+  "rank_4_conditioning": {
+    "criterion": "conditioning",
+    "quantities": [
+      "COND_MEDIAN(C)",
+      "COND_P90(C)",
+      "COND_MAX(C)"
+    ],
+    "order": [
+      "minimize COND_MEDIAN",
+      "tie-break by COND_P90",
+      "then COND_MAX"
+    ],
+    "policy_ref": "conditioning_policy.json"
+  },
+  "rank_5_support_stability": {
+    "criterion": "support stability",
+    "quantities": [
+      "BOOT_SELECTION_FREQ(C)",
+      "FOLD_SELECTION_FREQ(C)"
+    ],
+    "order": [
+      "maximize BOOT_SELECTION_FREQ",
+      "maximize FOLD_SELECTION_FREQ",
+      "canonical support ID tie-break"
+    ],
+    "policy_ref": "support_stability_policy.json"
+  },
+  "canonical_tie_break": {
+    "rule": "lexicographic ascending byte order of the canonical support_id",
+    "role": "FINAL deterministic tie-break at every rank",
+    "sufficient": "support_ids are unique across Ahat_rec, so the tie-break always resolves to exactly one candidate"
+  },
+  "fabricated_error_weights": false,
+  "measurement_error_weights": false,
+  "execution_stage": "S7.9",
+  "s7_8_selected_a_candidate": false,
+  "selection_domain": "AHAT_REC_DENSITY_ONE_SEED_V2",
+  "selection_domain_cardinality": 162845,
+  "global_optimality_claim": false,
+  "domain_reading": "every quantity defined here is evaluated over the frozen explored frontier Ahat_rec only; A_rec minus Ahat_rec remains ADMISSIBLE_UNSEARCHED and carries no negative finding"
+}

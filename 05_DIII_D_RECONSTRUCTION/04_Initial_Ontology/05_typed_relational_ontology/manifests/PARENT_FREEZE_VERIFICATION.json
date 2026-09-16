@@ -1,0 +1,55 @@
+{
+  "s7_1": {
+    "freeze_id": "D3D-SIR-S7.1-OBSERVATIONAL-OBJECT-FINAL-V1",
+    "n_verified": 9
+  },
+  "s7_2_v1": {
+    "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V1",
+    "status": "FROZEN_READY_FOR_S7.3",
+    "n_verified": 35
+  },
+  "s7_2_v2": {
+    "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V2",
+    "status": "FROZEN_READY_FOR_S7.3",
+    "n_verified": 10
+  },
+  "s7_3_v1": {
+    "freeze_id": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-V1",
+    "status": "FROZEN_READY_FOR_S7.4",
+    "n_verified": 33
+  },
+  "s7_4_v1": {
+    "freeze_id": "D3D-SIR-S7.4-MATHEMATICAL-INTERPRETATION-V1",
+    "status": "TARGET_TEMPORAL_RESOLUTION_RECONCILIATION_REQUIRED",
+    "n_verified": 7
+  },
+  "s7_3r_v2": {
+    "freeze_id": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-SOURCE-RESOLUTION-V2",
+    "status": "FROZEN_READY_TO_RETRY_S7.4",
+    "n_verified": 22
+  },
+  "s7_4_v2": {
+    "freeze_id": "D3D-SIR-S7.4-MATHEMATICAL-INTERPRETATION-SOURCE-RESOLUTION-V2",
+    "status": "FROZEN_READY_FOR_S7.5",
+    "n_verified": 15
+  },
+  "verified_utc": "2026-09-04T05:45:50.048121+00:00",
+  "substantive_checks": {
+    "target_is_density": true,
+    "canonical_target_unit_m3": true,
+    "predictor_count_78": true,
+    "broad_families_7": true,
+    "type_blocks_8": true,
+    "vsurf_excluded": true,
+    "external_cohort_42_sealed": true,
+    "X_rec_instantiated": true,
+    "s7_3r_v2_authoritative": true,
+    "s7_4_v2_authoritative": true,
+    "s7_4_v1_historical_preserved": true,
+    "support_size_bound_1_12": true,
+    "max_relational_depth_1": true
+  },
+  "n_drift": 0,
+  "drift": [],
+  "verdict": "PARENTS_VERIFIED"
+}

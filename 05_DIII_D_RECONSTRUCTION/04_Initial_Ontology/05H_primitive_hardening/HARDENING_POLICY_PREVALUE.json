@@ -1,0 +1,240 @@
+{
+  "policy_id": "S7_5H_HARDENING_POLICY_PREVALUE_V1",
+  "frozen_utc": "2026-09-04T22:19:49.073176+00:00",
+  "frozen_before_any_development_value_read": true,
+  "immutable_after_hash": true,
+  "if_impossible_or_inconsistent": "STOP FOR HUMAN REVIEW; do not tune",
+  "A_redundancy_eligible_group_rule": {
+    "all_five_required": [
+      "same broad scientific family",
+      "same scientific quantity/type",
+      "same canonical physical dimension",
+      "compatible origin / measurement class",
+      "documented repeated-channel or repeated-measurement series, not distinct actuators or distinct physical quantities"
+    ],
+    "eligible_groups": [
+      "X_CER_Ti",
+      "X_CER_v",
+      "X_ECE",
+      "X_fs"
+    ],
+    "explicitly_ineligible": [
+      "X_NBI",
+      "X_density_aux",
+      "X_gas",
+      "X_mag"
+    ],
+    "never_compressed_by_correlation_alone": [
+      "different gas valves / actuator channels",
+      "different neutral-beam lines",
+      "beam power versus beam torque",
+      "magnetic field versus plasma current",
+      "pedestal density versus pedestal temperature"
+    ]
+  },
+  "B_pairwise_statistic": {
+    "statistic": "Pearson correlation r_{ij,s,b}",
+    "computed_on": "common finite CALIBRATION samples of development discharge s and block b in {A,B,C}",
+    "target_read": false,
+    "aggregates": {
+      "R_med": "median |r| over valid cells",
+      "R_10": "10th percentile |r| over valid cells",
+      "sign_consistency": "max(fraction r>0, fraction r<0)",
+      "n_valid_cells": "count of cells where both signals are non-constant and finite"
+    },
+    "nominal_cells": 60,
+    "constant_signal_in_cell": "cell does not support a redundancy claim; NOT imputed"
+  },
+  "C_thresholds_STABLY_NEAR_REDUNDANT": {
+    "n_valid_cells_min": 54,
+    "R_med_min": 0.99,
+    "R_10_min": 0.97,
+    "sign_consistency_min": 0.95,
+    "frozen": true,
+    "may_be_altered_after_seeing_counts": false,
+    "absolute_correlation_rationale": "two measurements related by a stable sign flip and affine scaling are representationally redundant for the downstream affine relation family",
+    "sign_consistency_rationale": "a pair whose relation changes sign among discharges is not one stable observational direction"
+  },
+  "D_representative_selection": {
+    "graph": "undirected; node = primitive; edge iff STABLY_NEAR_REDUNDANT",
+    "algorithm": [
+      "among remaining nodes choose the one with the most redundancy edges to other remaining nodes",
+      "tie-break by LOWER frozen FINAL_SIGNAL_INVENTORY index",
+      "retain it in P_hard",
+      "mark every remaining node DIRECTLY connected to it as REDUNDANCY_DEFERRED to that representative",
+      "remove the representative and its directly covered neighbours",
+      "repeat"
+    ],
+    "transitive_only_deletion": "FORBIDDEN",
+    "every_deferred_needs_direct_witness": true,
+    "non_eligible_primitives": "automatically retained in P_hard",
+    "target_information_used": false
+  },
+  "E_constructor_catalogue": {
+    "Lambda_rec_H": [
+      "C0",
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8"
+    ],
+    "max_constructor_depth": 1,
+    "C0": {
+      "name": "primitive_level",
+      "symbol": "x_i",
+      "arity": 1
+    },
+    "C1": {
+      "name": "first_temporal_derivative",
+      "symbol": "dx_i/dt",
+      "arity": 1
+    },
+    "C2": {
+      "name": "level_level_product",
+      "symbol": "x_i x_j",
+      "arity": 2,
+      "symmetric": true,
+      "self_allowed": true,
+      "signature": "PROD(i,j) with i<=j"
+    },
+    "C3": {
+      "name": "level_level_ratio",
+      "symbol": "x_i / x_j",
+      "arity": 2,
+      "directional": true,
+      "signature": "RATIO(i,j)"
+    },
+    "C4": {
+      "name": "trajectory_relational_derivative",
+      "symbol": "(dx_i/dt)/(dx_j/dt)",
+      "arity": 2,
+      "directional": true,
+      "signature": "PHASE(i|j)"
+    },
+    "C5": {
+      "name": "unary_reciprocal",
+      "symbol": "1/x_i",
+      "arity": 1,
+      "signature": "RECIP(i)",
+      "semantics": "inverse observational scale"
+    },
+    "C6": {
+      "name": "level_rate_interaction",
+      "symbol": "x_i (dx_j/dt)",
+      "arity": 2,
+      "role_directional": true,
+      "signature": "LEVEL_RATE(i|j)",
+      "semantics": "the level of one observed quantity weighted by the instantaneous rate of another",
+      "self_allowed": true,
+      "note": "NOT collapsed with LEVEL_RATE(j|i): the semantic roles differ and the quantities are not generally equal"
+    },
+    "C7": {
+      "name": "rate_over_level",
+      "symbol": "(dx_i/dt)/x_j",
+      "arity": 2,
+      "directional": true,
+      "signature": "RATE_OVER_LEVEL(i|j)",
+      "semantics": "rate of one observed quantity relative to the level scale of another",
+      "self_allowed": true,
+      "special_case_i_eq_j": "fractional temporal rate; a logarithmic rate where defined; unit s^-1"
+    },
+    "C8": {
+      "name": "level_over_rate",
+      "symbol": "x_i/(dx_j/dt)",
+      "arity": 2,
+      "directional": true,
+      "signature": "LEVEL_OVER_RATE(i|j)",
+      "semantics": "an observed level relative to another quantity's rate",
+      "self_allowed": true,
+      "special_case_i_eq_j": "local characteristic-timescale coordinate; unit s"
+    },
+    "C6_C8_are_not_depth_2": "C6-C8 are PRIMITIVE-PAIR constructors with an internal declared rate operator. They do NOT consume C1 coordinate objects recursively.",
+    "derivative_realization": "FD2_PHYSICAL_TIME_V1 (unchanged)"
+  },
+  "F_typing_and_domains": {
+    "component_level_typing_only": true,
+    "output_dimensions": {
+      "C0": "[x_i]",
+      "C1": "[x_i]/s",
+      "C2": "[x_i][x_j]",
+      "C3": "[x_i]/[x_j]",
+      "C4": "[x_i]/[x_j]",
+      "C5": "[x_i]^-1",
+      "C6": "[x_i][x_j]/s",
+      "C7": "[x_i]/([x_j] s)",
+      "C8": "s [x_i]/[x_j]"
+    },
+    "special_case_units": {
+      "C7_i_eq_j": "s^-1",
+      "C8_i_eq_j": "s"
+    },
+    "partial_map_predicates_symbolic_only": {
+      "C3": "x_j != 0",
+      "C4": "dx_j/dt != 0",
+      "C5": "x_i != 0",
+      "C7": "x_j != 0",
+      "C8": "dx_j/dt != 0",
+      "C6": "NONE - no denominator, no singularity predicate"
+    },
+    "numerical_domain_evaluation": "DEFERRED_TO_S7.6",
+    "no_regularisation": [
+      "epsilon",
+      "shift",
+      "clipping",
+      "bounded reciprocal",
+      "denominator repair"
+    ],
+    "operand_eligibility": {
+      "C0": "any primitive in P_hard",
+      "C1": "P_dot",
+      "C2": "P_typed x P_typed (symmetric, self ok)",
+      "C3": "P_typed x P_typed, i != j",
+      "C4": "P_dot x P_dot, i != j",
+      "C5": "P_typed",
+      "C6": "level P_typed x rate P_dot, i may equal j",
+      "C7": "rate P_dot x level P_typed, i may equal j",
+      "C8": "level P_typed x rate P_dot, i may equal j"
+    },
+    "target_never_an_operand": true,
+    "uncalibrated": "C0 allowed; C1-C8 excluded",
+    "upstream_upsampled": "level use allowed (including as the LEVEL operand of C6/C7/C8); any constructor requiring THAT signal's derivative is NUMERICAL_SENSITIVITY_ONLY",
+    "aliasing_risk": "propagates from any operand; no high-frequency claim on a flagged coordinate"
+  },
+  "G_deferred_channel_treatment": {
+    "status": "REDUNDANCY_DEFERRED",
+    "is_not": [
+      "SCIENTIFICALLY_INADMISSIBLE",
+      "TARGET_IRRELEVANT",
+      "INFORMATION_FREE"
+    ],
+    "retained_in": "EXTENDED_SENSITIVITY_ONTOLOGY (G_REC_DENSITY_V1, preserved unmodified)",
+    "available_for": "S7.11 sensitivity analysis"
+  },
+  "H_hardened_raw_ablation": {
+    "id": "H0_RAW_HARDENED",
+    "definition": "Ridge regression using ONLY the primitive levels in P_hard; no constructed coordinates; same calibration geometry, preprocessing and penalty-selection rule as B2; development-only tuning; frozen before external evaluation",
+    "status": "DIAGNOSTIC_ABLATION",
+    "is_mandatory_gate_baseline": false,
+    "replaces_B2": false,
+    "B2_unchanged": true,
+    "evaluated_in_S7_5H": false,
+    "purpose": {
+      "B2_vs_H0": "isolates the effect of primitive-space hardening",
+      "H0_vs_relational_SIR": "isolates the effect of relational coordinate construction on the SAME hardened primitive information"
+    }
+  },
+  "forbidden_selection_criteria": [
+    "predictor-target correlation",
+    "mutual information with density",
+    "regression against density",
+    "density reconstruction error",
+    "feature importance from a target model",
+    "'probably does not matter for density'"
+  ],
+  "effective_rank_audit": "PERMITTED AS AUDIT SUMMARY ONLY; may not determine P_hard",
+  "no_target_primitive_count_imposed": true
+}

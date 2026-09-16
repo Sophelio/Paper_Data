@@ -1,0 +1,125 @@
+# Task-conditioning benchmark — frozen configuration.
+#
+# Declared BEFORE any confirmation evaluation. Hashed into
+# PRECONFIRMATION_FREEZE.json; the confirmation evaluator refuses to run if the
+# hash of this file changes.
+
+system:
+  name: lorenz
+  sigma: 10.0
+  rho: 28.0
+  beta: 2.6666666666666665
+  generator: "D:/SIR_paper/Lorenz/Lorenz_attractor.py::generate_lorenz"
+  integrator: DOP853
+  rtol: 1.0e-12
+  atol: 1.0e-12
+
+provenance:
+  # The 48-trajectory ensemble of the FIRST benchmark is EXPOSED development
+  # data: its protected test results have been inspected and informed this
+  # design. It may be used for search, CV and calibration — never as
+  # confirmatory evidence.
+  development_source: "D:/SIR_paper/Lorenz/benchmark/shared/data/ensemble"
+  development_n: 48
+  development_status: EXPOSED
+  prior_selected_representation: ["Q[dy|x]", "Q[y|x]"]
+
+confirmation:
+  # NEW, never-seen ensemble under a seed not used by the first benchmark.
+  n_trajectories: 24
+  dt: 0.005
+  tmax: 12.0
+  seed: 20260827904            # distinct from the first benchmark's 20260827
+  seed_traj_dt: 0.001
+  seed_traj_tmax: 900.0        # longer than the development seed trajectory
+  seed_traj_burn_in: 40.0
+  seed_traj_x0: [-3.1, 2.7, 19.4]   # different from development (1,1,1)
+  min_initial_state_separation: 0.5  # audited against development x0 set
+
+cross_validation:
+  scheme: GroupKFold
+  n_folds: 6                   # 8 development trajectories per fold
+  group: trajectory
+
+task:
+  kind: retrospective_reconstruction
+  observed: [x, y]
+  target: z
+  forbidden_dependencies: [z, dz, d2z]
+
+information_boundary:
+  stencil: centered_5point
+  half_width: 2
+  derivative_scheme: centered_5point
+  drop_edges: 2
+
+coordinates:
+  rho: 0.1
+  kappa: 1.0
+  scale_method: pooled_rms
+  quotient_mask_quantile: 0.05
+
+relation_families:
+  # Coordinate construction C is kept distinct from the relation basis R(C).
+  identity: {}                 # linear in the supplied coordinates
+  poly2: {degree: 2}           # strong conventional raw baseline
+  poly3: {degree: 3}
+
+noise:
+  # sigma expressed as a fraction of the DEVELOPMENT per-channel std.
+  envelope: [0.0, 0.005, 0.01]     # used for q_robust selection
+  stress_only: [0.05]              # NOT used for selection
+  development_seeds: [11, 12, 13]
+  confirmation_seeds: [901, 902, 903]   # independent of development
+
+contracts:
+  q_accuracy:
+    utility: min_mean_cv_rmse
+    tie_rule: none
+  q_compact:
+    utility: min_mean_cv_rmse
+    equivalence: one_standard_error_or_practical_floor
+    lexicographic: [n_coordinates, n_terms, condition_number, fold_stability]
+  q_robust:
+    utility: min_mean_worstcase_cv_nrmse_over_noise_envelope
+    equivalence: one_standard_error_or_practical_floor
+    lexicographic: [n_coordinates, n_terms, condition_number, fold_stability]
+
+equivalence:
+  # The plain one-SE rule degenerates here: across 6 folds of a near-exact fit
+  # the standard error is ~3e-7, so `best + SE` admits only the single best
+  # candidate and q_compact collapses onto q_accuracy by construction.
+  #
+  # The floor below ties practical equivalence to the DECLARED RESOLUTION OF THE
+  # SCIENTIFIC OBJECT rather than to fold noise: with sigma_z ~ 9.04, a
+  # reconstruction difference of 1e-3 is ~1e-4 of the target's own scale and is
+  # not scientifically resolvable. Candidates are therefore accuracy-equivalent
+  # when they fall within  best + max(SE_best, practical_equivalence_abs).
+  #
+  # Declared on DEVELOPMENT evidence only, BEFORE the freeze and before any
+  # confirmation data were inspected. Not tuned to retain any particular
+  # coordinate; see audit/EQUIVALENCE_RULE_AUDIT.md.
+  practical_equivalence_abs: 1.0e-3
+  target_scale_sigma_z: 9.04
+
+estimators:
+  stlsq:
+    thresholds: [1.0e-4, 1.0e-3, 1.0e-2, 5.0e-2, 1.0e-1, 5.0e-1]
+    alpha: 0.0
+    max_iter: 40
+  mlp:
+    hidden_layer_sizes: [64, 64]
+    activation: relu
+    solver: adam
+    alpha: 1.0e-4
+    learning_rate_init: 1.0e-3
+    max_iter: 400
+    early_stopping: true
+    n_iter_no_change: 20
+    seeds: [0, 1, 2, 3, 4]
+
+statistics:
+  unit: trajectory
+  bootstrap_n: 2000
+  bootstrap_seed: 0
+  ci: 0.95

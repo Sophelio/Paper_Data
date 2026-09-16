@@ -1,0 +1,770 @@
+{
+  "data_source": "smallELM_freq_v6_ZL_data",
+  "total_shots_in_dir": 93,
+  "qualifying_shots": 62,
+  "disqualified_shots": 31,
+  "successful": 62,
+  "failed": 0,
+  "shot_stats": {
+    "155537": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.31264305114746094,
+      "signals_skipped": []
+    },
+    "159310": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.2819850444793701,
+      "signals_skipped": []
+    },
+    "160715": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.2774341106414795,
+      "signals_skipped": []
+    },
+    "160717": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.2630748748779297,
+      "signals_skipped": []
+    },
+    "160719": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.27048492431640625,
+      "signals_skipped": []
+    },
+    "160720": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.3050808906555176,
+      "signals_skipped": []
+    },
+    "160721": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.2690308094024658,
+      "signals_skipped": []
+    },
+    "161136": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.25609421730041504,
+      "signals_skipped": []
+    },
+    "161138": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.25064897537231445,
+      "signals_skipped": []
+    },
+    "161145": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.2562570571899414,
+      "signals_skipped": []
+    },
+    "161414": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.4164571762084961,
+      "signals_skipped": []
+    },
+    "165017": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.3317561149597168,
+      "signals_skipped": []
+    },
+    "165022": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.3314199447631836,
+      "signals_skipped": []
+    },
+    "165026": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.33046984672546387,
+      "signals_skipped": []
+    },
+    "165027": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.37043285369873047,
+      "signals_skipped": []
+    },
+    "165028": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.3300328254699707,
+      "signals_skipped": []
+    },
+    "165029": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.33350300788879395,
+      "signals_skipped": []
+    },
+    "165031": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.32475805282592773,
+      "signals_skipped": []
+    },
+    "165042": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.32425689697265625,
+      "signals_skipped": []
+    },
+    "165043": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.3372478485107422,
+      "signals_skipped": []
+    },
+    "165860": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.330416202545166,
+      "signals_skipped": []
+    },
+    "165861": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.44149112701416016,
+      "signals_skipped": []
+    },
+    "165955": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.35574817657470703,
+      "signals_skipped": []
+    },
+    "165965": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.3467378616333008,
+      "signals_skipped": []
+    },
+    "170394": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.3558621406555176,
+      "signals_skipped": []
+    },
+    "170396": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.3632810115814209,
+      "signals_skipped": []
+    },
+    "170411": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.336759090423584,
+      "signals_skipped": []
+    },
+    "186997": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.3909480571746826,
+      "signals_skipped": []
+    },
+    "187017": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.405836820602417,
+      "signals_skipped": []
+    },
+    "187018": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.38706088066101074,
+      "signals_skipped": []
+    },
+    "187019": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.36582136154174805,
+      "signals_skipped": []
+    },
+    "187020": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.3983790874481201,
+      "signals_skipped": []
+    },
+    "187021": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.4534127712249756,
+      "signals_skipped": []
+    },
+    "187022": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.37152099609375,
+      "signals_skipped": []
+    },
+    "187024": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.4488048553466797,
+      "signals_skipped": []
+    },
+    "189646": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.33318233489990234,
+      "signals_skipped": []
+    },
+    "189647": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.3583550453186035,
+      "signals_skipped": []
+    },
+    "189649": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.34101319313049316,
+      "signals_skipped": []
+    },
+    "189650": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.33202528953552246,
+      "signals_skipped": []
+    },
+    "189651": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.3383150100708008,
+      "signals_skipped": []
+    },
+    "189652": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.3287339210510254,
+      "signals_skipped": []
+    },
+    "195261": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.3985469341278076,
+      "signals_skipped": []
+    },
+    "195264": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.4610280990600586,
+      "signals_skipped": []
+    },
+    "195265": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.386929988861084,
+      "signals_skipped": []
+    },
+    "195266": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.438601016998291,
+      "signals_skipped": []
+    },
+    "195267": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.3968241214752197,
+      "signals_skipped": []
+    },
+    "195268": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.39452576637268066,
+      "signals_skipped": []
+    },
+    "195269": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.3911900520324707,
+      "signals_skipped": []
+    },
+    "195273": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.39802098274230957,
+      "signals_skipped": []
+    },
+    "195274": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.38191795349121094,
+      "signals_skipped": []
+    },
+    "195626": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.3592989444732666,
+      "signals_skipped": []
+    },
+    "195638": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.34340882301330566,
+      "signals_skipped": []
+    },
+    "195642": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.35213708877563477,
+      "signals_skipped": []
+    },
+    "195645": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.33715200424194336,
+      "signals_skipped": []
+    },
+    "195647": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.346005916595459,
+      "signals_skipped": []
+    },
+    "195648": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.35084009170532227,
+      "signals_skipped": []
+    },
+    "195649": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.3504519462585449,
+      "signals_skipped": []
+    },
+    "195650": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.3523850440979004,
+      "signals_skipped": []
+    },
+    "195651": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.3391458988189697,
+      "signals_skipped": []
+    },
+    "195652": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.35541820526123047,
+      "signals_skipped": []
+    },
+    "195655": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.33542704582214355,
+      "signals_skipped": []
+    },
+    "195659": {
+      "signals_loaded": 95,
+      "signals_resampled": 95,
+      "processing_time": 0.2978029251098633,
+      "signals_skipped": []
+    }
+  },
+  "total_time_seconds": 122.08689427375793,
+  "failed_shots": [],
+  "frequency_targets": {
+    "aminor": 0.05,
+    "area": 0.05,
+    "betan": 0.05,
+    "drsep": 0.05,
+    "kappa": 0.05,
+    "li": 0.05,
+    "q95": 0.05,
+    "rmaxis": 0.05,
+    "rsurf": 0.05,
+    "tribot": 0.05,
+    "tritop": 0.05,
+    "volume": 0.05,
+    "vsurf": 0.05,
+    "zcur": 0.05,
+    "zmaxis": 0.05,
+    "zsurf": 0.05,
+    "cerqrott3": 0.1,
+    "cerqrott6": 0.1,
+    "cerqrott8": 0.1,
+    "cerqrott10": 0.1,
+    "cerqrott11": 0.1,
+    "cerqrott12": 0.1,
+    "cerqrott13": 0.1,
+    "cerqtit3": 0.1,
+    "cerqtit6": 0.1,
+    "cerqtit8": 0.1,
+    "cerqtit10": 0.1,
+    "cerqtit11": 0.1,
+    "cerqtit12": 0.1,
+    "cerqtit13": 0.1,
+    "prmtan_neped": 0.1,
+    "prmtan_teped": 0.1,
+    "gasa": 0.5,
+    "gasb": 0.5,
+    "gasc": 0.5,
+    "gasd": 0.5,
+    "density": 1.0,
+    "bt": 1.0,
+    "ip": 1.0,
+    "pcbcoil": 1.0,
+    "pcdiamag3": 1.0,
+    "ece1": 5.0,
+    "ece2": 5.0,
+    "ece3": 5.0,
+    "ece4": 5.0,
+    "ece5": 5.0,
+    "ece6": 5.0,
+    "ece7": 5.0,
+    "ece8": 5.0,
+    "ece9": 5.0,
+    "ece10": 5.0,
+    "ece11": 5.0,
+    "ece12": 5.0,
+    "ece13": 5.0,
+    "ece14": 5.0,
+    "ece15": 5.0,
+    "ece16": 5.0,
+    "ece17": 5.0,
+    "ece18": 5.0,
+    "ece19": 5.0,
+    "ece20": 5.0,
+    "ece21": 5.0,
+    "ece22": 5.0,
+    "ece23": 5.0,
+    "ece24": 5.0,
+    "ece25": 5.0,
+    "ece26": 5.0,
+    "ece27": 5.0,
+    "ece28": 5.0,
+    "ece29": 5.0,
+    "ece30": 5.0,
+    "ece31": 5.0,
+    "ece32": 5.0,
+    "ece33": 5.0,
+    "ece34": 5.0,
+    "ece35": 5.0,
+    "ece36": 5.0,
+    "ece37": 5.0,
+    "ece38": 5.0,
+    "ece39": 5.0,
+    "ece40": 5.0,
+    "pinj": 10.0,
+    "pinj_15l": 10.0,
+    "pinj_15r": 10.0,
+    "pinj_21l": 10.0,
+    "pinj_21r": 10.0,
+    "pinj_30l": 10.0,
+    "pinj_30r": 10.0,
+    "pinj_33l": 10.0,
+    "pinj_33r": 10.0,
+    "tinj": 10.0,
+    "fs03da": 50.0,
+    "fs04": 50.0,
+    "fs04da": 50.0,
+    "fs05da": 50.0,
+    "betanf": 2.0,
+    "wmhdf": 2.0
+  },
+  "required_signals": [
+    "aminor",
+    "area",
+    "betan",
+    "bt",
+    "cerqrott10",
+    "cerqrott11",
+    "cerqrott12",
+    "cerqrott13",
+    "cerqrott3",
+    "cerqrott6",
+    "cerqrott8",
+    "cerqtit10",
+    "cerqtit11",
+    "cerqtit12",
+    "cerqtit13",
+    "cerqtit3",
+    "cerqtit6",
+    "cerqtit8",
+    "density",
+    "drsep",
+    "ece1",
+    "ece2",
+    "ece3",
+    "ece4",
+    "ece5",
+    "ece6",
+    "ece7",
+    "ece8",
+    "ece9",
+    "ece10",
+    "ece11",
+    "ece12",
+    "ece13",
+    "ece14",
+    "ece15",
+    "ece16",
+    "ece17",
+    "ece18",
+    "ece19",
+    "ece20",
+    "ece21",
+    "ece22",
+    "ece23",
+    "ece24",
+    "ece25",
+    "ece26",
+    "ece27",
+    "ece28",
+    "ece29",
+    "ece30",
+    "ece31",
+    "ece32",
+    "ece33",
+    "ece34",
+    "ece35",
+    "ece36",
+    "ece37",
+    "ece38",
+    "ece39",
+    "ece40",
+    "fs03da",
+    "fs04",
+    "fs04da",
+    "fs05da",
+    "gasa",
+    "gasb",
+    "gasc",
+    "gasd",
+    "ip",
+    "kappa",
+    "li",
+    "pcbcoil",
+    "pcdiamag3",
+    "pinj",
+    "pinj_15l",
+    "pinj_15r",
+    "pinj_21l",
+    "pinj_21r",
+    "pinj_30l",
+    "pinj_30r",
+    "pinj_33l",
+    "pinj_33r",
+    "prmtan_neped",
+    "prmtan_teped",
+    "q95",
+    "rmaxis",
+    "rsurf",
+    "tinj",
+    "tribot",
+    "tritop",
+    "volume",
+    "vsurf",
+    "zcur",
+    "zmaxis",
+    "zsurf"
+  ],
+  "disqualified_shot_details": [
+    {
+      "shot_id": 161142,
+      "missing_count": 14
+    },
+    {
+      "shot_id": 161143,
+      "missing_count": 6
+    },
+    {
+      "shot_id": 187032,
+      "missing_count": 6
+    },
+    {
+      "shot_id": 187038,
+      "missing_count": 8
+    },
+    {
+      "shot_id": 195280,
+      "missing_count": 4
+    },
+    {
+      "shot_id": 200196,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 200197,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 200199,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 200204,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 200206,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 200213,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 200215,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 200437,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 200438,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 200439,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 200440,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 200441,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 200442,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 200443,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 200444,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 200447,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 201216,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 201217,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 201218,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 201219,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 201220,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 201221,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 201222,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 201223,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 201224,
+      "missing_count": 129
+    },
+    {
+      "shot_id": 201225,
+      "missing_count": 129
+    }
+  ],
+  "qualifying_shot_ids": [
+    155537,
+    159310,
+    160715,
+    160717,
+    160719,
+    160720,
+    160721,
+    161136,
+    161138,
+    161145,
+    161414,
+    165017,
+    165022,
+    165026,
+    165027,
+    165028,
+    165029,
+    165031,
+    165042,
+    165043,
+    165860,
+    165861,
+    165955,
+    165965,
+    170394,
+    170396,
+    170411,
+    186997,
+    187017,
+    187018,
+    187019,
+    187020,
+    187021,
+    187022,
+    187024,
+    189646,
+    189647,
+    189649,
+    189650,
+    189651,
+    189652,
+    195261,
+    195264,
+    195265,
+    195266,
+    195267,
+    195268,
+    195269,
+    195273,
+    195274,
+    195626,
+    195638,
+    195642,
+    195645,
+    195647,
+    195648,
+    195649,
+    195650,
+    195651,
+    195652,
+    195655,
+    195659
+  ]
+}

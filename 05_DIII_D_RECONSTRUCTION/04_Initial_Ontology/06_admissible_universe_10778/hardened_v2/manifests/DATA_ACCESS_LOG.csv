@@ -1,0 +1,21 @@
+stage,shot_id,development_or_external,predictor_signals_read,target_values_read,external_values_read,reason,timestamp
+S7.6R-B,160715,development,70,0,0,"atomic coordinate admissibility (classes D, E) on development calibration blocks",2026-09-04T22:51:40.262137+00:00
+S7.6R-B,160720,development,70,0,0,"atomic coordinate admissibility (classes D, E) on development calibration blocks",2026-09-04T22:51:40.375711+00:00
+S7.6R-B,161138,development,70,0,0,"atomic coordinate admissibility (classes D, E) on development calibration blocks",2026-09-04T22:51:40.484713+00:00
+S7.6R-B,165022,development,70,0,0,"atomic coordinate admissibility (classes D, E) on development calibration blocks",2026-09-04T22:51:40.596615+00:00
+S7.6R-B,165028,development,70,0,0,"atomic coordinate admissibility (classes D, E) on development calibration blocks",2026-09-04T22:51:40.707154+00:00
+S7.6R-B,165042,development,70,0,0,"atomic coordinate admissibility (classes D, E) on development calibration blocks",2026-09-04T22:51:40.818802+00:00
+S7.6R-B,165861,development,70,0,0,"atomic coordinate admissibility (classes D, E) on development calibration blocks",2026-09-04T22:51:40.931120+00:00
+S7.6R-B,170396,development,70,0,0,"atomic coordinate admissibility (classes D, E) on development calibration blocks",2026-09-04T22:51:41.042452+00:00
+S7.6R-B,187017,development,70,0,0,"atomic coordinate admissibility (classes D, E) on development calibration blocks",2026-09-04T22:51:41.176296+00:00
+S7.6R-B,187020,development,70,0,0,"atomic coordinate admissibility (classes D, E) on development calibration blocks",2026-09-04T22:51:41.311848+00:00
+S7.6R-B,187024,development,70,0,0,"atomic coordinate admissibility (classes D, E) on development calibration blocks",2026-09-04T22:51:41.444425+00:00
+S7.6R-B,189647,development,70,0,0,"atomic coordinate admissibility (classes D, E) on development calibration blocks",2026-09-04T22:51:41.556840+00:00
+S7.6R-B,189651,development,70,0,0,"atomic coordinate admissibility (classes D, E) on development calibration blocks",2026-09-04T22:51:41.668710+00:00
+S7.6R-B,195264,development,70,0,0,"atomic coordinate admissibility (classes D, E) on development calibration blocks",2026-09-04T22:51:41.798744+00:00
+S7.6R-B,195267,development,70,0,0,"atomic coordinate admissibility (classes D, E) on development calibration blocks",2026-09-04T22:51:41.935678+00:00
+S7.6R-B,195273,development,70,0,0,"atomic coordinate admissibility (classes D, E) on development calibration blocks",2026-09-04T22:51:42.069024+00:00
+S7.6R-B,195638,development,70,0,0,"atomic coordinate admissibility (classes D, E) on development calibration blocks",2026-09-04T22:51:42.188833+00:00
+S7.6R-B,195647,development,70,0,0,"atomic coordinate admissibility (classes D, E) on development calibration blocks",2026-09-04T22:51:42.305930+00:00
+S7.6R-B,195650,development,70,0,0,"atomic coordinate admissibility (classes D, E) on development calibration blocks",2026-09-04T22:51:42.424105+00:00
+S7.6R-B,195655,development,70,0,0,"atomic coordinate admissibility (classes D, E) on development calibration blocks",2026-09-04T22:51:42.536815+00:00

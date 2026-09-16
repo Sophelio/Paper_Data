@@ -1,0 +1,93 @@
+{
+  "record_id": "RETROSPECTIVE_SANITY_CHECK_V1",
+  "label": "RETROSPECTIVE_SANITY_CHECK - NOT VALIDATION OF K_rec^(2)",
+  "performed_after_policy_freeze": true,
+  "policy_sha256_at_time_of_check": "a878841db39bc213fc2d8775ce465615d8bd66f26c32641d630e140583dc1863",
+  "changed_metric_threshold_or_scale_handling": false,
+  "question": "would the newly frozen rule have marked the two Epoch-1 catastrophic blocks RANGE_SUPPORT_NOT_APPLICABLE?",
+  "answer": "YES",
+  "detail": [
+    {
+      "shot_id": "187019",
+      "block": "B",
+      "support_worst_coordinate_score": 1641.5009765625,
+      "worst_coordinate": "PROD(gasa,gasa)",
+      "RANGE_SUPPORT_PASS": false,
+      "n_coordinates_failing": 1
+    },
+    {
+      "shot_id": "187022",
+      "block": "B",
+      "support_worst_coordinate_score": 1705.189208984375,
+      "worst_coordinate": "PROD(gasa,gasa)",
+      "RANGE_SUPPORT_PASS": false,
+      "n_coordinates_failing": 1
+    },
+    {
+      "shot_id": "187019",
+      "block": "C",
+      "support_worst_coordinate_score": 0.8137568831443787,
+      "worst_coordinate": "PROD(gasa,gasa)",
+      "RANGE_SUPPORT_PASS": true,
+      "n_coordinates_failing": 0
+    },
+    {
+      "shot_id": "187022",
+      "block": "C",
+      "support_worst_coordinate_score": 0.8065679669380188,
+      "worst_coordinate": "PROD(gasa,gasa)",
+      "RANGE_SUPPORT_PASS": true,
+      "n_coordinates_failing": 0
+    },
+    {
+      "shot_id": "187019",
+      "block": "A",
+      "support_worst_coordinate_score": 0.2664696276187897,
+      "worst_coordinate": "PROD(prmtan_neped,prmtan_neped)",
+      "RANGE_SUPPORT_PASS": true,
+      "n_coordinates_failing": 0
+    },
+    {
+      "shot_id": "187022",
+      "block": "A",
+      "support_worst_coordinate_score": 0.01907466910779476,
+      "worst_coordinate": "RATIO(ece21,prmtan_neped)",
+      "RANGE_SUPPORT_PASS": true,
+      "n_coordinates_failing": 0
+    },
+    {
+      "shot_id": "195650",
+      "block": "B",
+      "support_worst_coordinate_score": 0.0,
+      "worst_coordinate": "ID(cerqtit6)",
+      "RANGE_SUPPORT_PASS": true,
+      "n_coordinates_failing": 0
+    },
+    {
+      "shot_id": "165028",
+      "block": "B",
+      "support_worst_coordinate_score": 0.2105974704027176,
+      "worst_coordinate": "PROD(prmtan_neped,prmtan_neped)",
+      "RANGE_SUPPORT_PASS": true,
+      "n_coordinates_failing": 0
+    },
+    {
+      "shot_id": "189652",
+      "block": "A",
+      "support_worst_coordinate_score": 0.16411930322647095,
+      "worst_coordinate": "PROD(prmtan_neped,prmtan_neped)",
+      "RANGE_SUPPORT_PASS": true,
+      "n_coordinates_failing": 0
+    },
+    {
+      "shot_id": "195274",
+      "block": "C",
+      "support_worst_coordinate_score": 0.0,
+      "worst_coordinate": "ID(cerqtit6)",
+      "RANGE_SUPPORT_PASS": true,
+      "n_coordinates_failing": 0
+    }
+  ],
+  "motivating_evidence_not_prospective_validation": true,
+  "cannot_establish": "that K_rec^(2) improves reconstruction - that belongs to Epoch 2"
+}

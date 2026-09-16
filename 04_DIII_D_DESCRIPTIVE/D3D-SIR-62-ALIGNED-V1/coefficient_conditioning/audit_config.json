@@ -1,0 +1,59 @@
+{
+  "audit_run_id": "D3D-SIR-62-COEFFICIENT-CONDITIONING-V1",
+  "canonical_run_id": "D3D-SIR-62-ALIGNED-V1",
+  "audit_seed": 20260805,
+  "repo_relative_canonical_package": "Paper Examples/Relational Coordinates for Multimodal Plasma Observations/canonical_d3d_62_shot_run_v1",
+  "reference_pooled_rmse_discharge_specific": 0.05758467247445343,
+  "reference_pooled_rmse_cohort_mean": 0.4125238315775986,
+  "rmse_acceptance_tolerance": 1e-8,
+  "n_discharges": 62,
+  "n_samples_per_discharge": 1000,
+  "n_features": 7,
+  "rank_tolerances": [1e-12, 1e-10, 1e-8, 1e-6],
+  "truncation_tolerances": [1e-12, 1e-10, 1e-8, 1e-6],
+  "truncation_classification": {
+    "stable_coefficient_relative_change": 0.10,
+    "stable_reconstruction_abs_rmse_change": 0.01,
+    "stable_reconstruction_prediction_correlation": 0.99,
+    "epsilon": 1e-15
+  },
+  "vif_perfect_dependence_tolerance": 1e-14,
+  "bootstrap": {
+    "primary_replicates": 1000,
+    "sensitivity_replicates": 300,
+    "min_block_samples": 5,
+    "max_block_samples": 250,
+    "method": "circular_moving_block"
+  },
+  "autocorrelation": {
+    "max_lag_fraction": 0.25,
+    "iac_positive_run_required": true
+  },
+  "random_effects": {
+    "primary_estimator": "profile_likelihood_gaussian_heteroscedastic",
+    "tau2_bootstrap_replicates": 2000,
+    "resolved_fraction_threshold": 0.25,
+    "heterogeneity_ratio_resolved": 2.0,
+    "heterogeneity_ratio_partial": 1.25
+  },
+  "fdr_alpha": 0.05,
+  "coefficient_relative_eps": 1e-15,
+  "source_matrix_order_keys": [
+    "d[pcdiamag3]/d[kappa]",
+    "d[kappa]/d[t]",
+    "r[q95]/r[kappa]",
+    "d[pcdiamag3]/d[betan]",
+    "d[kappa]/d[betan]",
+    "d[betan]/d[t]",
+    "d[li]/d[betan]"
+  ],
+  "manuscript_display_order": [
+    {"key": "d[pcdiamag3]/d[kappa]", "display": "D_kappa W_dia", "csv_column": "coef_Dkappa_Wdia"},
+    {"key": "d[pcdiamag3]/d[betan]", "display": "D_betaN W_dia", "csv_column": "coef_Dbetan_Wdia"},
+    {"key": "d[kappa]/d[betan]", "display": "D_betaN kappa", "csv_column": "coef_Dbetan_kappa"},
+    {"key": "d[li]/d[betan]", "display": "D_betaN l_i", "csv_column": "coef_Dbetan_li"},
+    {"key": "r[q95]/r[kappa]", "display": "q95 / kappa", "csv_column": "coef_q95_over_kappa"},
+    {"key": "d[betan]/d[t]", "display": "dot beta_N", "csv_column": "coef_dot_betan"},
+    {"key": "d[kappa]/d[t]", "display": "dot kappa", "csv_column": "coef_dot_kappa"}
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "historical_reported_count": 16,
+  "recomputed_count": 22,
+  "agrees": false,
+  "recomputed_signals": [
+    "aminor",
+    "area",
+    "betan",
+    "drsep",
+    "fs03da",
+    "fs04",
+    "fs04da",
+    "fs05da",
+    "kappa",
+    "li",
+    "prmtan_neped",
+    "prmtan_teped",
+    "q95",
+    "rmaxis",
+    "rsurf",
+    "tribot",
+    "tritop",
+    "volume",
+    "vsurf",
+    "zcur",
+    "zmaxis",
+    "zsurf"
+  ],
+  "correction": "The historical figure of 16 used a per-signal MEDIAN length ratio > 1.01, which misses signals upsampled in only a minority of discharges. Recomputed directly from primary metadata with the criterion 'upsampled in ANY discharge', the count is 22. The 6 additional signals are prmtan_neped, prmtan_teped (3 discharges each) and the four filterscopes (9 discharges each). The earlier count is corrected, not forced to agree.",
+  "newly_identified": [
+    "fs03da",
+    "fs04",
+    "fs04da",
+    "fs05da",
+    "prmtan_neped",
+    "prmtan_teped"
+  ]
+}

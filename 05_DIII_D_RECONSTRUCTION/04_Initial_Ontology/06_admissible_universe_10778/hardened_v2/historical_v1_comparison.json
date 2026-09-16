@@ -1,0 +1,122 @@
+{
+  "comparison_id": "V1_VS_HARDENED_V2_AGGREGATE",
+  "status": "AUDIT_ONLY",
+  "performed_after_hardened_universe_was_determined": true,
+  "no_rule_changed_as_a_result": true,
+  "no_v1_pass_fail_status_reused": true,
+  "historical_v1": {
+    "freeze_id": "D3D-SIR-S7.6-ADMISSIBLE-UNIVERSE-V1",
+    "ontology": "G_REC_DENSITY_V1",
+    "primitives": 78,
+    "families": [
+      "C0",
+      "C1",
+      "C2",
+      "C3",
+      "C4"
+    ],
+    "symbolic_total": 13604,
+    "atoms": 6034,
+    "by_constructor": {
+      "C3": 3266,
+      "C2": 2628,
+      "C0": 74,
+      "C1": 66
+    }
+  },
+  "hardened_v2": {
+    "freeze_id": "D3D-SIR-S7.6-ADMISSIBLE-UNIVERSE-HARDENED-V2",
+    "ontology": "G_REC_DENSITY_HARDENED_V2",
+    "primitives": 70,
+    "families": [
+      "C0",
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8"
+    ],
+    "symbolic_total": 23861,
+    "atoms": 10778,
+    "by_constructor": {
+      "C0": 66,
+      "C1": 59,
+      "C2": 2080,
+      "C3": 2457,
+      "C4": 0,
+      "C5": 39,
+      "C6": 3776,
+      "C7": 2301,
+      "C8": 0
+    }
+  },
+  "family_shift": {
+    "C0": {
+      "v1_symbolic": 78,
+      "v1_atoms": 74,
+      "v2_symbolic": 70,
+      "v2_atoms": 66
+    },
+    "C1": {
+      "v1_symbolic": 70,
+      "v1_atoms": 66,
+      "v2_symbolic": 63,
+      "v2_atoms": 59
+    },
+    "C2": {
+      "v1_symbolic": 2926,
+      "v1_atoms": 2628,
+      "v2_symbolic": 2346,
+      "v2_atoms": 2080
+    },
+    "C3": {
+      "v1_symbolic": 5700,
+      "v1_atoms": 3266,
+      "v2_symbolic": 4556,
+      "v2_atoms": 2457
+    },
+    "C4": {
+      "v1_symbolic": 4830,
+      "v1_atoms": 0,
+      "v2_symbolic": 3906,
+      "v2_atoms": 0
+    },
+    "C5": {
+      "v1_symbolic": null,
+      "v1_atoms": 0,
+      "v2_symbolic": 68,
+      "v2_atoms": 39
+    },
+    "C6": {
+      "v1_symbolic": null,
+      "v1_atoms": 0,
+      "v2_symbolic": 4284,
+      "v2_atoms": 3776
+    },
+    "C7": {
+      "v1_symbolic": null,
+      "v1_atoms": 0,
+      "v2_symbolic": 4284,
+      "v2_atoms": 2301
+    },
+    "C8": {
+      "v1_symbolic": null,
+      "v1_atoms": 0,
+      "v2_symbolic": 4284,
+      "v2_atoms": 0
+    }
+  },
+  "aggregate": {
+    "symbolic_ratio": 1.7539694207586005,
+    "atom_ratio": 1.786211468346039,
+    "v1_survival_rate": 0.44354601587768305,
+    "v2_survival_rate": 0.45169942584133105
+  },
+  "shared_findings": {
+    "C4_zero_in_both": true,
+    "note": "the two stages reached the C4 result independently; V2 recomputed every rate denominator from scratch on the hardened basis and did not consult V1"
+  }
+}

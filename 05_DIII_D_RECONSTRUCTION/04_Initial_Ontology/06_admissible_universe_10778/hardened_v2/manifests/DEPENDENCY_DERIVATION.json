@@ -1,0 +1,61 @@
+{
+  "exact_relation": "pinj = sum_b pinj_b over eight beamlines",
+  "evidence_class": "LOCAL_DOCUMENTED",
+  "rederived_over": [
+    "C0",
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C6",
+    "C7",
+    "C8"
+  ],
+  "copied_from_S7_6_V1": false,
+  "families_with_exact_groups": [
+    "C0",
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C6",
+    "C7",
+    "C8"
+  ],
+  "n_attempted": 400,
+  "n_binding": 0,
+  "n_vacuous": 400,
+  "forms_with_no_exact_linear_identity": [
+    {
+      "family": "C5",
+      "form": "RECIP(pinj)",
+      "why": "1/sum_b x_b != sum_b 1/x_b. The reciprocal is not linear in its operand; no exact restatement exists."
+    },
+    {
+      "family": "C3",
+      "form": "RATIO(z,pinj)",
+      "why": "the aggregate is the DENOMINATOR level; z/sum_b x_b is not a sum of z/x_b."
+    },
+    {
+      "family": "C4",
+      "form": "PHASE(z|pinj)",
+      "why": "the aggregate rate is the DENOMINATOR."
+    },
+    {
+      "family": "C7",
+      "form": "RATE_OVER_LEVEL(z|pinj)",
+      "why": "the aggregate level is the DENOMINATOR."
+    },
+    {
+      "family": "C8",
+      "form": "LEVEL_OVER_RATE(z|pinj)",
+      "why": "the aggregate rate is the DENOMINATOR."
+    },
+    {
+      "family": "C2",
+      "form": "PROD(pinj,pinj)",
+      "why": "quadratic in the aggregate; (sum_b x_b)^2 != sum_b x_b^2."
+    }
+  ],
+  "neither_representation_privileged": true
+}

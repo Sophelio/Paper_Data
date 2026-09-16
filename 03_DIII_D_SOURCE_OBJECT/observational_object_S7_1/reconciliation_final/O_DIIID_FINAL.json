@@ -1,0 +1,157 @@
+{
+  "object_id": "O_DIIID_FINAL_V1",
+  "freeze_id": "D3D-SIR-S7.1-OBSERVATIONAL-OBJECT-FINAL-V1",
+  "frozen_utc": "2026-09-02T20:40:39.176422+00:00",
+  "stage": "S7.1 (final)",
+  "formal_definition": "O = (D, Omega_obs, S, E, Pi, A)",
+  "definition_source": "No prose artifact states the 6-tuple. The architecture is established from the manuscript's own visual-abstract figure generator, General/sir_representational_prism.py, which draws the scientific object and the task contract as separate boxes and lists the contract's attributes as 'Admissibility / Information / Intended Use'. A prose definition would supersede this.",
+  "definition_evidence_class": "LOCAL_DOCUMENTED (figure source)",
+  "D_scientific_data": {
+    "status": "INSTANTIATED",
+    "n_signals": 95,
+    "n_present_in_all_discharges": 95,
+    "groups": {
+      "ece_te_profile": 40,
+      "equilibrium_shape": 15,
+      "cer_rotation_ti": 14,
+      "neutral_beams": 10,
+      "magnetics": 5,
+      "filterscope_dalpha": 4,
+      "gas_injection": 4,
+      "density": 3
+    },
+    "archive_identity": "<signal>_data / <signal>_times in shot_<id>_resampled.npz",
+    "canonical_names": "identical to archive names",
+    "aliases": "none; mapping is one-to-one throughout",
+    "backend_identity": "identical to archive names (95/95 verified)",
+    "artifact": "FINAL_SIGNAL_INVENTORY.csv",
+    "sha256": "60c6245da695bd897d62c82dd138c4c10cb8fb2387beeb71e5d547262d6eb39d"
+  },
+  "Omega_obs_observational_support": {
+    "status": "INSTANTIATED",
+    "device": "DIII-D",
+    "n_discharges": 62,
+    "shot_range": [
+      155537,
+      195659
+    ],
+    "time_basis": "milliseconds, per-signal native axes",
+    "common_window_ms_median_all95": 4590.0,
+    "documented_inclusion_criterion": "the archival pipeline could build a common temporal grid across all 95 signals for that discharge",
+    "parent_population": "UNRESOLVED",
+    "calendar_dates": "UNRESOLVED",
+    "operating_regimes": "NOT_ASSIGNED (assignment would be inference)",
+    "artifact": "FINAL_SHOT_INVENTORY.csv",
+    "sha256": "7d3c3ab1ab289ea2c7c038397ffb2524ae6dfd00813551dfe3efccf0a415cd8c"
+  },
+  "S_sampling_structure": {
+    "status": "INSTANTIATED",
+    "primary_realization_unit": "discharge",
+    "per_signal_native_time_arrays": true,
+    "native_dt_range_ms": [
+      0.0199999999999818,
+      20.0
+    ],
+    "equilibrium_native_dt_ms": 20.0,
+    "common_grid_rule": "TARGET_N=1000 linspace on the intersection window; dt is discharge-specific",
+    "common_grid_dt_ms_all95_median": 4.594594594594595,
+    "common_grid_dt_ms_paper8_median": 4.965,
+    "channel_groups": {
+      "ece_te_profile": 40,
+      "equilibrium_shape": 15,
+      "cer_rotation_ti": 14,
+      "neutral_beams": 10,
+      "magnetics": 5,
+      "filterscope_dalpha": 4,
+      "gas_injection": 4,
+      "density": 3
+    },
+    "channel_identity": "ECE 1-40, CER 3/6/8/10-13, beams 15L-33R, filterscopes fs03da/fs04/fs04da/fs05da, gas manifolds A-D",
+    "artifact": "FINAL_TEMPORAL_LINEAGE.csv",
+    "sha256": "9bb6d09e365688ac8438376986f00009aa735af0cdfb6283c95ade7359e05a67"
+  },
+  "E_uncertainty_model": {
+    "status": "NOT_INSTANTIATED",
+    "reason": "No measurement-error metadata exists anywhere in the observational record. No uncertainty was invented. The spline and RTS variants are numerical realizations of the same quantities and must NOT be described retroactively as observational uncertainty.",
+    "what_would_instantiate_it": "per-signal measurement uncertainty from the diagnostic archive"
+  },
+  "Pi_provenance": {
+    "status": "PARTIALLY_INSTANTIATED",
+    "analysis_side": "CODE_VERIFIED end to end",
+    "upstream_resample": "operation documented per signal per discharge; generator code absent",
+    "equilibrium_reconstruction": "EFIT family identified; settings, inputs and constraints unresolved",
+    "native_acquisition": "UNRESOLVED",
+    "artifact": "provenance_graph.json",
+    "sha256": "aec053f80d951d37f2c1096158799b14112e84ca6db695e1a8fbdf2433d1b24c"
+  },
+  "A_ancillary_information": {
+    "status": "PARTIALLY_INSTANTIATED",
+    "meaning": "ancillary observational information / annotations / metadata carried by the object; NOT a task-conditioned admissibility rule",
+    "present": {
+      "per_signal_per_shot_resampling_records": 5890,
+      "fields": [
+        "method",
+        "category",
+        "original_length",
+        "resampled_length"
+      ],
+      "signal_group_membership": 95,
+      "units_registry_entries": 95,
+      "channel_identity": true,
+      "cohort_provenance_flags": 62,
+      "shot_identifiers_and_ordering": 62
+    },
+    "absent": [
+      "measurement uncertainty",
+      "calendar dates",
+      "campaign identifiers",
+      "operating regime labels",
+      "ELM or other event annotations",
+      "operator commentary"
+    ]
+  },
+  "admissibility_note": "Admissibility is an attribute of the task contract q, entering through I_q / P_q and A_q. It is NOT a component of O and is not instantiated at S7.1. No task contract exists.",
+  "units": {
+    "registry": "D:\\SIR_paper\\DIIID_example\\S7\\SIGNAL_UNITS.json",
+    "sha256": "b8b3cead0d1d23d8fc42a54824421472847c0744fb293b6fd2196ac93e598e72",
+    "n_with_physical_unit": 93,
+    "n_uncalibrated_no_unit_exists": 2,
+    "uncalibrated_signals": [
+      "pcbcoil",
+      "pcdiamag3"
+    ],
+    "n_genuinely_unresolved": 0,
+    "ece_channels_assigned_keV": 40
+  },
+  "origin_classification": {
+    "DIAGNOSTIC_RECONSTRUCTION": 57,
+    "EQUILIBRIUM_DERIVED": 15,
+    "CONTROL_COMMAND_OR_ACTUATION": 14,
+    "DIRECT_MEASUREMENT": 9
+  },
+  "gate": {
+    "target_selected": false,
+    "K_rec_defined": false,
+    "I_rec_defined": false,
+    "admissibility_classified": false,
+    "coordinates_generated": false,
+    "G_rec_constructed": false,
+    "A_rec_constructed": false,
+    "sir_run": false,
+    "regression_run": false,
+    "performance_inspected": false,
+    "cohorts_selected": false,
+    "s7_2_started": false
+  },
+  "hashes": {
+    "signal_inventory_sha256": "60c6245da695bd897d62c82dd138c4c10cb8fb2387beeb71e5d547262d6eb39d",
+    "shot_inventory_sha256": "7d3c3ab1ab289ea2c7c038397ffb2524ae6dfd00813551dfe3efccf0a415cd8c",
+    "units_registry_sha256": "b8b3cead0d1d23d8fc42a54824421472847c0744fb293b6fd2196ac93e598e72",
+    "provenance_graph_sha256": "aec053f80d951d37f2c1096158799b14112e84ca6db695e1a8fbdf2433d1b24c",
+    "dalia_parity_sha256": "405856b6f1220a782dffac6202b1a91396e939a6a1db2991517a2f15a6706506",
+    "temporal_lineage_sha256": "9bb6d09e365688ac8438376986f00009aa735af0cdfb6283c95ade7359e05a67",
+    "equilibrium_lineage_sha256": "e7f6f8049ed4a214e8a60069cfe3fc68fc42bd06f604da968add207171573b56",
+    "source_inventory_sha256": "aa913025890d632ebab82ef65a5583e432c9eab0b6b7058ada0fe07471910754",
+    "quality_summary_sha256": "bd6953095c3ca67ab47451380d16f0c5f08259fba159c77aa9c721707412168e"
+  }
+}

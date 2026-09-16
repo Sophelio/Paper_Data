@@ -1,0 +1,21 @@
+stage,shot_id,cohort,archive,predictor_signals_read,target_signal_read,target_values_read,external_values_read,reason,timestamp
+S7.7R-B,160715,development,shot_160715_resampled.npz,70,density,729,0,SEARCH_PROXY_OLS_V1 navigation scoring,2026-09-05T00:27:42.867409+00:00
+S7.7R-B,160720,development,shot_160720_resampled.npz,70,density,730,0,SEARCH_PROXY_OLS_V1 navigation scoring,2026-09-05T00:27:42.977653+00:00
+S7.7R-B,161138,development,shot_161138_resampled.npz,70,density,380,0,SEARCH_PROXY_OLS_V1 navigation scoring,2026-09-05T00:27:43.082218+00:00
+S7.7R-B,165022,development,shot_165022_resampled.npz,70,density,730,0,SEARCH_PROXY_OLS_V1 navigation scoring,2026-09-05T00:27:43.191817+00:00
+S7.7R-B,165028,development,shot_165028_resampled.npz,70,density,730,0,SEARCH_PROXY_OLS_V1 navigation scoring,2026-09-05T00:27:43.297546+00:00
+S7.7R-B,165042,development,shot_165042_resampled.npz,70,density,733,0,SEARCH_PROXY_OLS_V1 navigation scoring,2026-09-05T00:27:43.405214+00:00
+S7.7R-B,165861,development,shot_165861_resampled.npz,70,density,731,0,SEARCH_PROXY_OLS_V1 navigation scoring,2026-09-05T00:27:43.510398+00:00
+S7.7R-B,170396,development,shot_170396_resampled.npz,70,density,326,0,SEARCH_PROXY_OLS_V1 navigation scoring,2026-09-05T00:27:43.618299+00:00
+S7.7R-B,187017,development,shot_187017_resampled.npz,70,density,600,0,SEARCH_PROXY_OLS_V1 navigation scoring,2026-09-05T00:27:43.749134+00:00
+S7.7R-B,187020,development,shot_187020_resampled.npz,70,density,619,0,SEARCH_PROXY_OLS_V1 navigation scoring,2026-09-05T00:27:43.881024+00:00
+S7.7R-B,187024,development,shot_187024_resampled.npz,70,density,645,0,SEARCH_PROXY_OLS_V1 navigation scoring,2026-09-05T00:27:44.015497+00:00
+S7.7R-B,189647,development,shot_189647_resampled.npz,70,density,585,0,SEARCH_PROXY_OLS_V1 navigation scoring,2026-09-05T00:27:44.125652+00:00
+S7.7R-B,189651,development,shot_189651_resampled.npz,70,density,607,0,SEARCH_PROXY_OLS_V1 navigation scoring,2026-09-05T00:27:44.232532+00:00
+S7.7R-B,195264,development,shot_195264_resampled.npz,70,density,775,0,SEARCH_PROXY_OLS_V1 navigation scoring,2026-09-05T00:27:44.356150+00:00
+S7.7R-B,195267,development,shot_195267_resampled.npz,70,density,780,0,SEARCH_PROXY_OLS_V1 navigation scoring,2026-09-05T00:27:44.487358+00:00
+S7.7R-B,195273,development,shot_195273_resampled.npz,70,density,782,0,SEARCH_PROXY_OLS_V1 navigation scoring,2026-09-05T00:27:44.617450+00:00
+S7.7R-B,195638,development,shot_195638_resampled.npz,70,density,704,0,SEARCH_PROXY_OLS_V1 navigation scoring,2026-09-05T00:27:44.734926+00:00
+S7.7R-B,195647,development,shot_195647_resampled.npz,70,density,669,0,SEARCH_PROXY_OLS_V1 navigation scoring,2026-09-05T00:27:44.847622+00:00
+S7.7R-B,195650,development,shot_195650_resampled.npz,70,density,717,0,SEARCH_PROXY_OLS_V1 navigation scoring,2026-09-05T00:27:44.963803+00:00
+S7.7R-B,195655,development,shot_195655_resampled.npz,70,density,674,0,SEARCH_PROXY_OLS_V1 navigation scoring,2026-09-05T00:27:45.074512+00:00

@@ -1,0 +1,28 @@
+path,kind,reason,recorded_by
+General/admissible_relational_space_hierarchical_v14.py,figure_generation_asset,obsolete figure version; current manuscript uses the v15 metaball figure,Phase 9 allow-list
+General/admissible_relational_space_v2.py,figure_generation_asset,obsolete figure version; superseded by the v15 hierarchical metaball figure,Phase 9 allow-list
+General/sir_representational_prism.py,figure_generation_asset,visual-abstract concept not present in the current manuscript,Phase 9 allow-list
+General/sir_representational_prism_visual_abstract_v9.py,figure_generation_asset,visual-abstract concept not present in the current manuscript,Phase 9 allow-list
+DIIID_example/phase_turning_manifold_sensitivity_centered_with_x2_purple_v4.py,figure_generation_asset,obsolete figure version; current manuscript uses v8,Phase 9 allow-list
+DIIID_example/phase_turning_manifold_reference_shifted.py,figure_generation_asset,earlier reference-shifted variant; not the manuscript figure,Phase 9 allow-list
+DIIID_example/Plotter/d3d_task_conditioned_discovery.py,figure_generation_asset,superseded DIII-D figure; replaced by d3d_task_conditioned_4panel_v5,Phase 9 allow-list
+DIIID_example/relational_plasma_reconstruction_infographic.py,figure_generation_asset,infographic not present in the current manuscript,Phase 9 allow-list
+Lorenz/figure5_lorenz_representation_landscape_final_tnr_v4.py,figure_generation_asset,obsolete figure version; current manuscript uses v5_nature,Phase 9 allow-list
+Lorenz/figure5_lorenz_representation_landscape_prototype.py,figure_generation_asset,rejected prototype,Phase 9 allow-list
+Lorenz/figure5_lorenz_nested_representation_discovery.py,figure_generation_asset,"exploratory figure concept; retained as a controlled-study script, not as a manuscript figure asset",Phase 9 allow-list
+Lorenz/Lorenz_attractor.py,figure_generation_asset,illustrative attractor plot; not a manuscript figure,Phase 9 allow-list
+Pendulum/Plotter/make_pendulum_task_conditioned_panel.py,figure_generation_asset,superseded pendulum panel; Figure 4 uses figure4_task_contracts_...,Phase 9 allow-list
+Pendulum/Plotter/make_pendulum_task_conditioned_panel_compact.py,figure_generation_asset,superseded compact variant,Phase 9 allow-list
+Pendulum/Plotter/pendulum_task_conditioned_panel_v5.py,figure_generation_asset,superseded pendulum panel version,Phase 9 allow-list
+Figures/degeneracy.py,figure_generation_asset,standalone heat-equation plot; not a manuscript figure,Phase 9 allow-list
+Figures/ECDF_plot.py,figure_generation_asset,exploratory ECDF plot; not a manuscript figure,Phase 9 allow-list
+Figures/lift_map.py,figure_generation_asset,exploratory lift-map plot; not a manuscript figure,Phase 9 allow-list
+Figures/lift_map_reveal.py,figure_generation_asset,presentation reveal variant,Phase 9 allow-list
+Figures/organic_multicrossing.py,figure_generation_asset,exploratory geometry plot,Phase 9 allow-list
+Figures/organic_multicrossing_reveal.py,figure_generation_asset,presentation reveal variant,Phase 9 allow-list
+DIIID_example/S7/figures/make_s7_figures.py,figure_generation_asset,"internal S7 audit figures; retained under 05_.../18_Machine_Readable_Lineage, not a manuscript figure",Phase 9 allow-list
+DIIID_example/data/resampled_data_v6/*_resampled.npz,restricted_source_data,"DIII-D archive arrays, 1.1 GB across 62 shots; redistribution not established. Indexed with SHA-256 in RESTRICTED_SOURCE_INDEX.csv; the derived per-shot metadata IS bundled.",Phase 6/13
+DIIID_example/S7.zip,duplicate_archive,Byte-archive of the S7 tree that is already bundled file-by-file.,Phase 3
+"Lorenz/fig5data.zip, DIIID_example/fig6data.zip",duplicate_archive,Archives of figure data already bundled file-by-file.,Phase 3
+D:/sir-web/.../DIII-D reconstruction-frontier discovery study; DIII-D A-constrained reconstruction-frontier study; DIII-D fixed-support Phase-RS conditioning probe,retired_branch_bulk_studies,2.7 GB of exploratory studies belonging to the RETIRED I_p branch. The retirement record and its evidence ARE bundled under 10_REFERENCED_HISTORICAL_LINEAGE; the bulk studies are indexed in LOCAL_INTERNAL_SOURCE_INDEX.csv rather than copied.,Phase 12
+"**/__pycache__, .venv_lorenz_benchmark, .pytest_cache, .dalia, .git, *.pyc, LaTeX aux/log/synctex",build_noise,Standard software and build noise.,Phase 3

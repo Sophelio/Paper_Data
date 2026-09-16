@@ -1,0 +1,7 @@
+set,rank,criterion,count
+E0,0,explored frontier,162845
+E1,1,primary fit quality,1055
+E2,2,development generalization / stability,1
+E3,3,parsimony,1
+E4,4,conditioning,1
+E5,5,support stability,1

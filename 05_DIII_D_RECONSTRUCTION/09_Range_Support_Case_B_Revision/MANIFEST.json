@@ -1,0 +1,51 @@
+{
+  "record_id": "S7_STAGE_MANIFEST_V1",
+  "generated_utc": "2026-09-08T00:51:17.508741+00:00",
+  "stage_id": "S7.K2",
+  "title": "Observational range-support contract revision",
+  "directory": "K2_observational_range_support_contract",
+  "scientific_task_id": "q_rec",
+  "claim_branch": "QREC-B1",
+  "claim_branch_role": "MEMBER",
+  "parent_claim_branch": null,
+  "operational_epoch": "1 -> 2",
+  "revision_level": "OPERATIONAL_CONTRACT",
+  "branch": "q_rec",
+  "status": "CANONICAL",
+  "sir_architecture_mapping": [
+    "K_op",
+    "rho"
+  ],
+  "scientific_question": "What minimal operational-contract revision addresses the localized defect?",
+  "operation": "A generic, dimensionless, constructor-generic observational range-support predicate added to P_rec, with threshold and companion gate frozen before any new search.",
+  "verdict": "FROZEN_READY_FOR_DISCOVERY_EPOCH_2. Revision class MINIMAL_P_ONLY. K_REC_V2 issued.",
+  "parent_stages": [
+    "S7.R1"
+  ],
+  "child_stages": [
+    "S7.E2.0"
+  ],
+  "key_numbers": {
+    "tau": 1.0,
+    "full_domain_atoms": 3451,
+    "of": 10778,
+    "degenerate_cells": 263,
+    "of_cells": 2004708
+  },
+  "notes": "Case B. q, I_rec, U_rec, V_rec and Omega_rec are unchanged as SEMANTIC COMMITMENTS; only the operational admissibility rule P_rec is revised, and the operational qualification procedure is correspondingly extended with the V-RANGE check that tests satisfaction of the new admissibility condition. V-RANGE is an operational check of revised P_rec, NOT evidence that the claim-defining V_rec changed. K2 did not create the descendant claim branch; it advanced the operational epoch within QREC-B1.",
+  "governing_freeze": {
+    "path": "S7_K2_FREEZE.json",
+    "freeze_id": "D3D-SIR-S7.K2-OBSERVATIONAL-RANGE-SUPPORT-CONTRACT-V1",
+    "sha256": "198fa046c7eb2650efcb910f02922752b8204477f8930300e6abf24163193459",
+    "authoritative": true,
+    "note": "This MANIFEST indexes the stage freeze; it does not replace it. The freeze remains the authority for hashes, acceptance checks and numerical facts."
+  },
+  "executables": [
+    "scripts/s7_k2_a_prevalue.py",
+    "scripts/s7_k2_b_stress.py",
+    "scripts/s7_k2_c_threshold.py",
+    "scripts/s7_k2_d_policy_and_freeze.py"
+  ],
+  "n_files": 34,
+  "indexes_not_replaces": true
+}

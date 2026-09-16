@@ -1,0 +1,36 @@
+{
+  "verified_utc": "2026-09-03T03:35:34.008910+00:00",
+  "hash_convention": "sha256 raw file bytes; self-referential excluded",
+  "s7_1": {
+    "freeze_id": "D3D-SIR-S7.1-OBSERVATIONAL-OBJECT-FINAL-V1",
+    "n_verified": 9,
+    "drift": []
+  },
+  "s7_2_v1": {
+    "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V1",
+    "n_verified": 35,
+    "drift": []
+  },
+  "s7_2_v2": {
+    "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V2",
+    "n_verified": 10,
+    "drift": []
+  },
+  "s7_3": {
+    "freeze_id": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-V1",
+    "n_verified": 33,
+    "drift": []
+  },
+  "substantive_checks": {
+    "target_is_vsurf": true,
+    "predictor_count_79": true,
+    "families_7": true,
+    "external_cohort_42": true,
+    "development_cohort_20": true,
+    "selected_boundary_unchanged": true,
+    "I_REC_SELECTED_unchanged": true,
+    "O_REC_SELECTED_unchanged": true
+  },
+  "n_drift_total": 0,
+  "verdict": "PARENTS_VERIFIED"
+}

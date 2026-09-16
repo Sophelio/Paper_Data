@@ -1,0 +1,52 @@
+FIGURE-5 AUGMENTATION (not the canonical benchmark)
+  noise grid   : [0.0, 0.001, 0.002, 0.003, 0.004, 0.005, 0.006, 0.007, 0.008, 0.009, 0.01]
+  replicates   : 3
+  representations: ['C0_poly2', 'C_compact', 'C_all']
+  sigma=0.000 rep=0 seeds=(5000,5500) done  [6s]
+  sigma=0.001 rep=0 seeds=(5010,5510) done  [11s]
+  sigma=0.001 rep=1 seeds=(5011,5511) done  [15s]
+  sigma=0.001 rep=2 seeds=(5012,5512) done  [19s]
+  sigma=0.002 rep=0 seeds=(5020,5520) done  [23s]
+  sigma=0.002 rep=1 seeds=(5021,5521) done  [27s]
+  sigma=0.002 rep=2 seeds=(5022,5522) done  [31s]
+  sigma=0.003 rep=0 seeds=(5030,5530) done  [35s]
+  sigma=0.003 rep=1 seeds=(5031,5531) done  [40s]
+  sigma=0.003 rep=2 seeds=(5032,5532) done  [44s]
+  sigma=0.004 rep=0 seeds=(5040,5540) done  [47s]
+  sigma=0.004 rep=1 seeds=(5041,5541) done  [52s]
+  sigma=0.004 rep=2 seeds=(5042,5542) done  [56s]
+  sigma=0.005 rep=0 seeds=(5050,5550) done  [60s]
+  sigma=0.005 rep=1 seeds=(5051,5551) done  [65s]
+  sigma=0.005 rep=2 seeds=(5052,5552) done  [69s]
+  sigma=0.006 rep=0 seeds=(5060,5560) done  [74s]
+  sigma=0.006 rep=1 seeds=(5061,5561) done  [78s]
+  sigma=0.006 rep=2 seeds=(5062,5562) done  [82s]
+  sigma=0.007 rep=0 seeds=(5070,5570) done  [86s]
+  sigma=0.007 rep=1 seeds=(5071,5571) done  [91s]
+  sigma=0.007 rep=2 seeds=(5072,5572) done  [95s]
+  sigma=0.008 rep=0 seeds=(5080,5580) done  [100s]
+  sigma=0.008 rep=1 seeds=(5081,5581) done  [103s]
+  sigma=0.008 rep=2 seeds=(5082,5582) done  [107s]
+  sigma=0.009 rep=0 seeds=(5090,5590) done  [111s]
+  sigma=0.009 rep=1 seeds=(5091,5591) done  [115s]
+  sigma=0.009 rep=2 seeds=(5092,5592) done  [119s]
+  sigma=0.010 rep=0 seeds=(5100,5600) done  [123s]
+  sigma=0.010 rep=1 seeds=(5101,5601) done  [127s]
+  sigma=0.010 rep=2 seeds=(5102,5602) done  [131s]
+
+wrote noise_sweep_trajectory_level.csv (4464 rows) and AUGMENTATION_MANIFEST.json
+
+mean confirmation RMSE (common support):
+representation_id  C0_poly2     C_all  C_compact
+noise_sigma                                     
+0.000                 2.177 1.331e-05    3.3e-05
+0.001                 2.396    0.6176     0.6438
+0.002                 2.492     1.088      1.236
+0.003                 2.586      1.43      1.831
+0.004                  2.66      1.66      2.404
+0.005                 2.719     1.833      3.003
+0.006                 2.765     1.948      3.489
+0.007                 2.796     2.036      3.876
+0.008                 2.822     2.108      4.317
+0.009                 2.845     2.174       4.67
+0.010                 2.866     2.235      4.999

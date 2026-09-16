@@ -1,0 +1,258 @@
+{
+  "canonical_run_id": "D3D-SIR-62-ALIGNED-V1",
+  "audit_run_id": "D3D-SIR-62-COEFFICIENT-CONDITIONING-V1",
+  "created_utc": "2026-08-05T19:17:57Z",
+  "audit_seed": 20260805,
+  "n_discharges": 62,
+  "n_samples_per_discharge": 1000,
+  "n_features": 7,
+  "source_matrix_order": [
+    "d[pcdiamag3]/d[kappa]",
+    "d[kappa]/d[t]",
+    "r[q95]/r[kappa]",
+    "d[pcdiamag3]/d[betan]",
+    "d[kappa]/d[betan]",
+    "d[betan]/d[t]",
+    "d[li]/d[betan]"
+  ],
+  "manuscript_display_order": [
+    "D_kappa W_dia",
+    "D_betaN W_dia",
+    "D_betaN kappa",
+    "D_betaN l_i",
+    "q95 / kappa",
+    "dot beta_N",
+    "dot kappa"
+  ],
+  "reference_pooled_rmse": 0.05758467247445343,
+  "reproduced_pooled_rmse": 0.05758467247445343,
+  "maximum_coefficient_reproduction_error": 2.220446049250313e-16,
+  "rank_counts_by_tolerance": [
+    {
+      "tolerance": 1e-12,
+      "n_full_rank_7": 62,
+      "n_rank_lt_7": 0
+    },
+    {
+      "tolerance": 1e-10,
+      "n_full_rank_7": 62,
+      "n_rank_lt_7": 0
+    },
+    {
+      "tolerance": 1e-08,
+      "n_full_rank_7": 62,
+      "n_rank_lt_7": 0
+    },
+    {
+      "tolerance": 1e-06,
+      "n_full_rank_7": 62,
+      "n_rank_lt_7": 0
+    }
+  ],
+  "condition_number_summary": {
+    "median": 41.3202464096063,
+    "max": 71.31667876056015,
+    "q25": 35.79241200540421,
+    "q75": 49.05065504315964
+  },
+  "normalized_sigma7_summary": {
+    "median": 0.024201253740739233,
+    "min": 0.014021965371626702
+  },
+  "maximum_vif_summary": {
+    "median": 260.2966901249893,
+    "max": 697.4619079381462
+  },
+  "truncation_sensitivity_summary": {
+    "frac_unstable_coefficients_stable_reconstruction_at_1e-6": 0.0,
+    "classification_counts_at_1e-6": {
+      "STABLE_COEFFICIENTS_STABLE_RECONSTRUCTION": 62
+    }
+  },
+  "bootstrap_replicates_primary": 1000,
+  "bootstrap_replicates_sensitivity": 300,
+  "block_length_summary": {
+    "median_primary": 58.0,
+    "min_primary": 13,
+    "max_primary": 116
+  },
+  "coefficient_heterogeneity_results": [
+    {
+      "feature": "d[pcdiamag3]/d[kappa]",
+      "feature_order": "source_matrix_order",
+      "mu_r": 0.24521793692617108,
+      "observed_between_variance": 0.013375865355175187,
+      "mean_within_variance": 0.07263358152194953,
+      "heterogeneity_ratio": 0.1841553875617859,
+      "resolved_fraction": 0.0,
+      "tau2_REML": 0.0,
+      "tau_REML": 0.0,
+      "tau2_interval_low": 0.0,
+      "tau2_interval_high": 0.00544139564363798,
+      "tau2_bootstrap_q025": 0.0,
+      "tau2_bootstrap_q975": 1.0977237160503522e-16,
+      "fraction_total_variance_between": 0.0,
+      "number_of_discharges": 62,
+      "status": "WITHIN_DISCHARGE_UNCERTAINTY_DOMINATES"
+    },
+    {
+      "feature": "d[kappa]/d[t]",
+      "feature_order": "source_matrix_order",
+      "mu_r": 0.8970050287912411,
+      "observed_between_variance": 0.20861470003072188,
+      "mean_within_variance": 0.020635697656142295,
+      "heterogeneity_ratio": 10.109408632890437,
+      "resolved_fraction": 0.9010822456274493,
+      "tau2_REML": 0.16966895506568255,
+      "tau_REML": 0.4119089159822625,
+      "tau2_interval_low": 0.12572882110695255,
+      "tau2_interval_high": 0.25302247962503216,
+      "tau2_bootstrap_q025": 0.12986015834075748,
+      "tau2_bootstrap_q975": 0.21320912981655038,
+      "fraction_total_variance_between": 0.8915649335893735,
+      "number_of_discharges": 62,
+      "status": "BETWEEN_DISCHARGE_VARIATION_RESOLVED"
+    },
+    {
+      "feature": "r[q95]/r[kappa]",
+      "feature_order": "source_matrix_order",
+      "mu_r": -0.01025447253102932,
+      "observed_between_variance": 0.0002193228294484748,
+      "mean_within_variance": 0.000491424488524381,
+      "heterogeneity_ratio": 0.44630016323981697,
+      "resolved_fraction": 0.0,
+      "tau2_REML": 2.0717299594890256e-05,
+      "tau_REML": 0.004551626038559215,
+      "tau2_interval_low": 0.0,
+      "tau2_interval_high": 7.782713091968073e-05,
+      "tau2_bootstrap_q025": 0.0,
+      "tau2_bootstrap_q975": 5.8742636198365014e-05,
+      "fraction_total_variance_between": 0.04045227332643565,
+      "number_of_discharges": 62,
+      "status": "WITHIN_DISCHARGE_UNCERTAINTY_DOMINATES"
+    },
+    {
+      "feature": "d[pcdiamag3]/d[betan]",
+      "feature_order": "source_matrix_order",
+      "mu_r": 0.9250570490871793,
+      "observed_between_variance": 0.1297280705536616,
+      "mean_within_variance": 0.1085156666707682,
+      "heterogeneity_ratio": 1.1954778008898097,
+      "resolved_fraction": 0.16351437119477505,
+      "tau2_REML": 0.06819464075791758,
+      "tau_REML": 0.26114103614314926,
+      "tau2_interval_low": 0.03417003881624088,
+      "tau2_interval_high": 0.12330563075864348,
+      "tau2_bootstrap_q025": 0.035270558777955464,
+      "tau2_bootstrap_q975": 0.09243985713711661,
+      "fraction_total_variance_between": 0.3859120712889858,
+      "number_of_discharges": 62,
+      "status": "BETWEEN_DISCHARGE_VARIATION_PARTIALLY_RESOLVED"
+    },
+    {
+      "feature": "d[kappa]/d[betan]",
+      "feature_order": "source_matrix_order",
+      "mu_r": -0.897881167318979,
+      "observed_between_variance": 0.38177917483500406,
+      "mean_within_variance": 0.14479804095761623,
+      "heterogeneity_ratio": 2.6366321830745933,
+      "resolved_fraction": 0.6207282887543708,
+      "tau2_REML": 0.2608841546813202,
+      "tau_REML": 0.5107682005384833,
+      "tau2_interval_low": 0.1738840425794299,
+      "tau2_interval_high": 0.3914133876470986,
+      "tau2_bootstrap_q025": 0.18704648045784705,
+      "tau2_bootstrap_q975": 0.3113670239947665,
+      "fraction_total_variance_between": 0.6430751891155491,
+      "number_of_discharges": 62,
+      "status": "BETWEEN_DISCHARGE_VARIATION_RESOLVED"
+    },
+    {
+      "feature": "d[betan]/d[t]",
+      "feature_order": "source_matrix_order",
+      "mu_r": 0.04981701254210351,
+      "observed_between_variance": 0.23897695362992727,
+      "mean_within_variance": 0.0209989544188434,
+      "heterogeneity_ratio": 11.380421561155513,
+      "resolved_fraction": 0.9121297928529052,
+      "tau2_REML": 0.21137396542710565,
+      "tau_REML": 0.45975424459933556,
+      "tau2_interval_low": 0.1415478191500167,
+      "tau2_interval_high": 0.28553722156817246,
+      "tau2_bootstrap_q025": 0.1574216076736703,
+      "tau2_bootstrap_q975": 0.2412640838994892,
+      "fraction_total_variance_between": 0.9096325233045031,
+      "number_of_discharges": 62,
+      "status": "BETWEEN_DISCHARGE_VARIATION_RESOLVED"
+    },
+    {
+      "feature": "d[li]/d[betan]",
+      "feature_order": "source_matrix_order",
+      "mu_r": -0.005941864449774143,
+      "observed_between_variance": 0.000906535602464401,
+      "mean_within_variance": 0.00024165666718202944,
+      "heterogeneity_ratio": 3.7513370230399947,
+      "resolved_fraction": 0.7334283766405973,
+      "tau2_REML": 7.547889779128287e-05,
+      "tau_REML": 0.008687859217970953,
+      "tau2_interval_low": 3.185156216981969e-05,
+      "tau2_interval_high": 0.00015051556023275693,
+      "tau2_bootstrap_q025": 2.5256664940367264e-05,
+      "tau2_bootstrap_q975": 0.00013779247905067012,
+      "fraction_total_variance_between": 0.2380019970249461,
+      "number_of_discharges": 62,
+      "status": "BETWEEN_DISCHARGE_VARIATION_RESOLVED"
+    }
+  ],
+  "multivariate_identifiability_results": {
+    "n_resolved_directions": 5,
+    "evals_between": [
+      7.180760009154721e-05,
+      0.000153179595693447,
+      0.0007301144650855645,
+      0.0014788008572388554,
+      0.0063367325146179414,
+      0.021951503799548275,
+      0.942878484004127
+    ],
+    "evals_within": [
+      8.557863581424954e-05,
+      0.0002726159171052267,
+      0.0004913667608002764,
+      0.0006738635226426012,
+      0.002183798515443531,
+      0.05323394228354993,
+      0.3113738567456703
+    ],
+    "evals_difference": [
+      -0.1752745117228193,
+      -0.0004340684057647297,
+      5.096974783613021e-05,
+      0.00014906717138559567,
+      0.0008894032184988716,
+      0.002894813602865529,
+      0.777009926843375
+    ],
+    "fraction_observed_variance_surviving_subtraction": 0.802170995236918
+  },
+  "n_coefficients_between_resolved": 4,
+  "n_coefficients_partial": 1,
+  "n_coefficients_within_dominates": 2,
+  "n_multivariate_resolved_directions": 5,
+  "overall_verdict": "D3D-COEFFICIENT-FAMILY-RESOLVED",
+  "limitations": [
+    "Conditional on selected seven-term support; support uniqueness not tested.",
+    "Block-bootstrap approximates temporal dependence; block length is estimated.",
+    "Exact historical shift values remain UNKNOWN (inherited from canonical package).",
+    "Random-effects model assumes Gaussian sampling distributions of coefficients."
+  ],
+  "unresolved_items": [
+    "EXACT_SHIFT_VALUE_UNKNOWN inherited from canonical package",
+    "Original structural-search hyperparameters UNKNOWN"
+  ],
+  "dependency_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "python": "3.11.15"
+  }
+}

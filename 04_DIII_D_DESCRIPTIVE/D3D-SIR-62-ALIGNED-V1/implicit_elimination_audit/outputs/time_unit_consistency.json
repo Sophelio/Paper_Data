@@ -1,0 +1,8 @@
+{
+  "status": "STANDARDIZED_TEMPORAL_DERIVATIVES_INVARIANT_SHIFTED_RATIOS_REQUIRE_MATCHED_SHIFT_UNITS",
+  "provider_dt_units": "milliseconds",
+  "finite_difference_uses_dt": true,
+  "zscored_temporal_derivatives_invariant_under_global_time_rescale": true,
+  "shifted_quotients_invariant_only_if_shift_rescaled": true,
+  "historical_shift_implicit_units": "same_as_zscored_derivative_units_not_physical_seconds"
+}

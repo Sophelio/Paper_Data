@@ -1,0 +1,7 @@
+A(t) = 1 - c_k * alpha_k(t) - c_b * alpha_b(t)
+alpha = 1 / (sigma * (d + shift))
+beta = shift/(sigma*(d+shift)) - mu/sigma
+B(t) = c0 + c_k*beta_k + c_b*beta_b + sum_{r not in T} c_r z_r(t)
+epsilon(t) = A(t)*y(t) - B(t) = y(t) - yhat(t)
+y_explicit(t) = B(t)/A(t)
+y - y_explicit = epsilon / A

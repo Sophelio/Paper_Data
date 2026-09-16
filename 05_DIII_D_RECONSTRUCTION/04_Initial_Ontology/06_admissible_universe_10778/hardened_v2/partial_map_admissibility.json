@@ -1,0 +1,100 @@
+{
+  "record_id": "PARTIAL_MAP_ADMISSIBILITY_H_V2",
+  "rule": {
+    "id": "DENOMINATOR_ADMISSIBILITY_PRIMARY_V1",
+    "sha256": "6d4004eb3ae95067b2a01dddeb90226748cfee7097217d68ab5377ac50ed716d",
+    "hash_verified_unchanged": true,
+    "eta_min": 0.05,
+    "reopened": false,
+    "regularisation": "NONE PERMITTED"
+  },
+  "LEVEL_DENOMINATOR_STATUS": {
+    "used_by": [
+      "C3",
+      "C5",
+      "C7"
+    ],
+    "n_candidates": 68,
+    "n_pass_all_required_blocks": 39,
+    "n_fail": 29,
+    "first_failure_reason_by_signal": {
+      "prmtan_teped": "E_DENOM_SIGN_CHANGE",
+      "fs04": "E_DENOM_SIGN_CHANGE",
+      "fs03da": "E_DENOM_SIGN_CHANGE",
+      "fs05da": "E_DENOM_MARGIN_BELOW_ETA",
+      "gasa": "E_DENOM_MARGIN_BELOW_ETA",
+      "gasb": "E_DENOM_SIGN_CHANGE",
+      "gasc": "E_DENOM_SIGN_CHANGE",
+      "gasd": "E_DENOM_SIGN_CHANGE",
+      "pinj": "E_DENOM_SIGN_CHANGE",
+      "pinj_15l": "E_DENOM_ZERO_VALUE",
+      "pinj_15r": "E_DENOM_ZERO_VALUE",
+      "pinj_21l": "E_DENOM_RMS_ZERO",
+      "pinj_21r": "E_DENOM_RMS_ZERO",
+      "pinj_30l": "E_DENOM_ZERO_VALUE",
+      "pinj_30r": "E_DENOM_SIGN_CHANGE",
+      "pinj_33l": "E_DENOM_ZERO_VALUE",
+      "pinj_33r": "E_DENOM_SIGN_CHANGE",
+      "tinj": "E_DENOM_SIGN_CHANGE",
+      "cerqrott3": "E_DENOM_MARGIN_BELOW_ETA",
+      "cerqrott6": "E_DENOM_SIGN_CHANGE",
+      "cerqrott8": "E_DENOM_SIGN_CHANGE",
+      "cerqrott10": "E_DENOM_SIGN_CHANGE",
+      "cerqrott11": "E_DENOM_SIGN_CHANGE",
+      "cerqrott12": "E_DENOM_SIGN_CHANGE",
+      "cerqrott13": "E_DENOM_SIGN_CHANGE",
+      "cerqtit6": "E_DENOM_MARGIN_BELOW_ETA",
+      "cerqtit8": "E_DENOM_MARGIN_BELOW_ETA",
+      "cerqtit12": "E_DENOM_SIGN_CHANGE",
+      "cerqtit13": "E_DENOM_MARGIN_BELOW_ETA"
+    }
+  },
+  "RATE_DENOMINATOR_STATUS": {
+    "used_by": [
+      "C4",
+      "C8"
+    ],
+    "n_candidates": 63,
+    "n_pass_all_required_blocks": 0,
+    "n_fail": 63,
+    "first_failure_reason_counts": {
+      "E_DENOM_SIGN_CHANGE": 61,
+      "E_DENOM_RMS_ZERO": 2
+    }
+  },
+  "outcomes": {
+    "C3": 2457,
+    "C4": 0,
+    "C5": 39,
+    "C7": 2301,
+    "C8": 0
+  },
+  "zero_survivor_families": [
+    "C4",
+    "C8"
+  ],
+  "interpretation": "G_rec^H admitted the constructor family conceptually; the observational object failed to support stable primary instances under K_rec's numerical-domain condition. The constructor is NOT mathematically invalid, the gate was NOT weakened, and the ontology was NOT revised.",
+  "mechanism": "A time derivative computed by FD2_PHYSICAL_TIME_V1 on a physically fluctuating signal crosses zero inside every required calibration block, so the no-sign-change condition fails before the magnitude margin is even reached. Two beam derivatives fail earlier still, on RMS(d) == 0, because those beamlines never fired in some development discharge.",
+  "not_done": [
+    "epsilon",
+    "shift",
+    "clipping",
+    "masking rescue",
+    "bounded reciprocal",
+    "regularisation",
+    "branch repair",
+    "threshold relaxation",
+    "family removal from the ontology"
+  ],
+  "alternatives_are_separate_constructions": "shifted, bounded or local-domain variants are DIFFERENT constructors and would require their own prospective declaration; they are available to S7.11 sensitivity study, not to S7.6R.",
+  "external_rule": {
+    "same_rule_applies": true,
+    "on_failure": [
+      "do NOT shift or regularize",
+      "do NOT replace the coordinate",
+      "do NOT refit the support",
+      "record the representation as NOT_APPLICABLE on that discharge/block"
+    ],
+    "outcome_decided_by": "the downstream qualification stage, not S7.6"
+  }
+}

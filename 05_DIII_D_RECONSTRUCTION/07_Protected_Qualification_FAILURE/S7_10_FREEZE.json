@@ -1,0 +1,169 @@
+{
+  "freeze_id": "D3D-SIR-S7.10-EXTERNAL-VALIDATION-AND-GATE-EVALUATION-V1",
+  "status": "PRIMARY_EXTERNAL_GATE_FAILURE",
+  "status_meaning": "the frozen object was evaluated correctly and completely; a MANDATORY qualification gate failed on the external cohort",
+  "artifact_integrity_status": "COMPLETE_AND_VERIFIED",
+  "stage_execution_verdict": "EXECUTED_AS_FROZEN",
+  "primary_scientific_verdict": "NO_QUALIFIED_NONTRIVIAL_STRUCTURAL_TRANSFER",
+  "timestamp_utc": "2026-09-05T22:59:39.923443+00:00",
+  "parent_freeze_id": "D3D-SIR-S7.9-DEVELOPMENT-SELECTION-AND-PREEXTERNAL-FREEZE-V1",
+  "C_dev_star": "ID(cerqtit6)|ID(pcdiamag3)|ID(prmtan_neped)|PROD(ece37,ece39)|PROD(gasa,gasa)|PROD(pinj,cerqrott6)|PROD(prmtan_neped,prmtan_neped)|RATIO(ece21,prmtan_neped)|RATIO(fs03da,prmtan_neped)|RATIO(ip,ece22)|RECIP(cerqtit10)|RECIP(prmtan_neped)",
+  "C_dev_star_changed": false,
+  "firewall_ordering": {
+    "pre_external_model_freeze_utc": "2026-09-05T20:32:08.992754+00:00",
+    "first_external_value_access_utc": "2026-09-05T22:48:51.998142+00:00",
+    "strict": true
+  },
+  "external_cohort": {
+    "n": 42,
+    "earlier": 24,
+    "later": 18,
+    "evaluated": 42,
+    "blocks_eligible": 126,
+    "blocks_not_applicable": 0
+  },
+  "method_means": {
+    "REL": 0.7423647781201324,
+    "B0": 0.9224598049718935,
+    "B1": 0.21027421611172853,
+    "B1A": 0.3504456748161989,
+    "B2": 0.2804062944532819,
+    "B3": 0.30596392629460667,
+    "H0": 0.2828003934507547
+  },
+  "method_medians": {
+    "REL": 0.16986162832793064,
+    "B0": 0.9100421626873159,
+    "B1": 0.17650089393078025,
+    "B1A": 0.3329431591365517,
+    "B2": 0.1893354388610517,
+    "B3": 0.18062686300617004,
+    "H0": 0.18464462438807194
+  },
+  "V3": {
+    "Delta_0": -0.18009502685176143,
+    "Delta_1": 0.5320905620084037,
+    "threshold": -0.01,
+    "result": "FAIL",
+    "lodo_cohorts_passing": 0,
+    "lodo_n": 42
+  },
+  "V6": {
+    "outcome": "FAIL",
+    "Delta_0_earlier": 0.2907794131889924,
+    "Delta_1_earlier": 0.9538968586776063,
+    "Delta_0_later": -0.8079276135727665,
+    "Delta_1_later": -0.03031783355053282
+  },
+  "gate_results": {
+    "V1": "PASS",
+    "V2": "PASS",
+    "V3": "FAIL",
+    "V4": "PASS",
+    "V5": "PASS",
+    "V6": "FAIL",
+    "V7": "PASS",
+    "V8": "PASS",
+    "V9": "PENDING_S7.11",
+    "V10": "PASS"
+  },
+  "mandatory_gates_failed": [
+    "V3",
+    "V6"
+  ],
+  "qualifications": [
+    "MANDATORY GATE V3 FAILED. Delta_1 = +0.532 against the persistence baseline (threshold <= -0.01). The frozen relational representation is materially WORSE than persistence on the external cohort in the frozen mean-based aggregate. This is the same failure mode that retired the previous q_rec attempt.",
+    "MANDATORY GATE V6 resolves to FAIL. Its three-valued S7.2C outcome schema is conditioned on pooled V3 passing, which it does not. Era results are reported in full: the earlier era (24) is MATERIAL_ADVERSE against both trivial baselines; the later era (18) is MATERIAL_IMPROVEMENT against both. Narrowing the domain to the later era to obtain a passing V3 is explicitly forbidden and was not done.",
+    "The pooled failure is concentrated: median external NRMSE is 0.1699, essentially the development FIT of 0.1664, and 40 of 42 discharges transfer at roughly the development level. Two earlier-era discharges (187019, 187022) reach NRMSE ~11.9 and dominate the mean. The frozen gate uses the mean; the median may not be substituted for it.",
+    "The failure is robust to leave-one-discharge-out: 0 of 42 LODO cohorts satisfy V3.",
+    "Diagnosed cause (reporting only): unguarded linear extrapolation of the C2 self-product PROD(gasa,gasa). On 187019 block B the gas-injection command spans 5.3e-3..4.1e-2 on calibration and reaches 1.63 on the protected block; squared, this is ~8979 calibration standard deviations. The frozen DENOMINATOR_ADMISSIBILITY_PRIMARY_V1 rule guards denominators only - C0/C1/C2/C6 carry no domain gate - so the excursion was unguarded by construction. All 378 denominator-block checks passed; this is not a denominator failure. log-log correlation between protected excursion and discharge error is 0.930.",
+    "V4 PASSES on fairness. The comparison was conducted correctly on identical geometry with zero external tuning. REL is materially worse than B2, B3 and H0; no accuracy-superiority claim is available.",
+    "Development support-selection instability (BOOT_SELECTION_FREQ 0.093, 217 winners) is carried forward unchanged. No unique-support and no global-optimality claim is made anywhere.",
+    "prmtan_neped is provenance-certified independent of the target SIGNAL; this does NOT establish physical or statistical independence from line-averaged density. ID(pcdiamag3) remains UNCALIBRATED_SIGNAL with no certified physical-dimensional coefficient interpretation."
+  ],
+  "omega_rec": {
+    "domain": "EMPTY",
+    "reason": "mandatory gate V3 failed on the full external cohort, and mandatory gate V6 therefore cannot resolve to PASS. No external domain supports a successful structural-transfer claim.",
+    "narrowed_to_an_era": false,
+    "narrowing_to_an_era_would_be": "forbidden: pooled V3 failed, and narrowing to the later era to obtain a passing V3 is explicitly prohibited"
+  },
+  "no_repair_after_external_results": {
+    "C_dev_star_changed": false,
+    "FIT_best_substituted": false,
+    "bootstrap_winner_substituted": false,
+    "coordinate_added_or_removed": false,
+    "B2_alpha_changed": false,
+    "H0_alpha_changed": false,
+    "B3_tuned": false,
+    "metric_changed": false,
+    "threshold_changed": false,
+    "bootstrap_count_changed": false,
+    "discharge_deleted": false,
+    "era_dropped": false,
+    "search_rerun": false,
+    "two_seed_run": false,
+    "s7_11_sensitivity_executed": false
+  },
+  "s7_11_predeclaration_sha256": "da24fbe38141f0c77f74ae3a87f6002c8263b8d3cc9aed35696dbad98a40c4c3",
+  "external_inference_policy_sha256": "812920c4edecd844c8ba8d2bf69f766bfd414e5ec036119fc27f46a10a341142",
+  "v_rec_external_results_sha256": "850c45bb1e5fdbe8937708f7f31264ed7865d55b6fdcaac471eba04700171bfc",
+  "omega_rec_external_sha256": "20f75608c31d772c6c0f5555f13c60acfe8fbac923597529805979ac0ca85593",
+  "acceptance_checks": "57/57",
+  "acceptance_failed": [],
+  "acceptance_note": "acceptance checks measure STAGE EXECUTION INTEGRITY, not scientific success. The scientific verdict is reported separately and is a mandatory-gate failure.",
+  "n_artifacts": 31,
+  "n_markdown": 6,
+  "markdown_files": [
+    "EXTERNAL_BASELINE_COMPARISON.md",
+    "EXTERNAL_DOMAIN_AND_ERA_RESULTS.md",
+    "QUALIFICATION_GATE_RESULTS.md",
+    "README.md",
+    "S7_10_EXTERNAL_VALIDATION_AUDIT_REPORT.md",
+    "S7_10_EXTERNAL_VALIDATION_FINAL.md"
+  ],
+  "all_artifact_hashes": {
+    "common_support_audit.csv": "c455568a1296a887eb7d2a2bb0db024f00d694a532347fe86bb2c66cb9ffc067",
+    "EXTERNAL_BASELINE_COMPARISON.md": "25e5479fc410c530113072884850379af7f4733e4a1b6857407dfc05f4251d42",
+    "external_block_metrics.csv": "c965f8372b1d01c1ec0b171d6bfa30fa9737ff5402374d6eec4c9d4504a462a3",
+    "external_bootstrap_intervals.csv": "da4ec08a4fc311f5e5cbe0f41cbc9b72014cdb1fc57b48a4df0ec1ee0e61fd44",
+    "external_denominator_audit.csv": "8ce4237c4fe43c2b118b121e32d465c3c4bcf3d0e17b00601a064490a150eed1",
+    "external_discharge_metrics.csv": "842a7a53855dde3780d06b2688b5d3140d575c8dbde2e8612415e02aac884c65",
+    "EXTERNAL_DOMAIN_AND_ERA_RESULTS.md": "9d297da8f3a58abe763f65f9162e53b631fe9acf76ab7c5fde3d059f450c07a4",
+    "external_era_results.csv": "fd4eb9010db86026957964aca386c7572a823c9bab1ee7a521f4c80c290d12a2",
+    "external_extrapolation_audit.csv": "8771be487d6df680db6b9d9371e06a7842111d440b7e589474d2ebe728b1e98c",
+    "EXTERNAL_INFERENCE_POLICY_PREVALUE.json": "812920c4edecd844c8ba8d2bf69f766bfd414e5ec036119fc27f46a10a341142",
+    "external_lodo_results.csv": "3bf50b3e725ca3900674f2838da5654ba82c03fbaaecd60766e0ab4dc772e29c",
+    "external_paired_differences.csv": "cb3bba787eb50a02f12b36d067b3c3f3454ab1632b6040645f553dd6b3af15c2",
+    "external_win_tie_loss.csv": "3f7bfb60d648b90d66de4fdb7f82d870b90c9e160127d515bea86a7da4e24053",
+    "manifests/EXTERNAL_ACCESS_LOG.json": "3b3035dad96c1a339e8c1db84f3e6ccfbaa29b7357c3218d1e33799057589adb",
+    "manifests/EXTERNAL_FAILURE_MODE_DIAGNOSTIC.json": "2dcc812ccb1e470af26b1826b1f9c8b22da7ab0124adae25e34f76676e40b744",
+    "manifests/FIRST_EXTERNAL_ACCESS.json": "b9c88de1b1836134bc95ffb6378db1a5826bd73ac62aee5574eaebb108132315",
+    "manifests/PREFLIGHT.json": "e8f7e41d186c96d2c282b042077bc6a8e24cb8b28bf5966f95d80db1eab8e922",
+    "manifests/relational_local_coefficients.csv": "0207bb458f40b2e2d9fc9ed7408f6c4224232eaed147bef725fcb04eedff2b63",
+    "manifests/STATISTICAL_INFERENCE_PARENT_AUDIT.json": "5dd9f00e3f4319ff373da0c265a618c5640cda731ead42e434d99de70fe527ab",
+    "OMEGA_REC_EXTERNAL.json": "20f75608c31d772c6c0f5555f13c60acfe8fbac923597529805979ac0ca85593",
+    "QUALIFICATION_GATE_RESULTS.md": "365a9537e7e5e4eff165f043ad30d2465c2a1cd670882085e361111e49127f33",
+    "README.md": "9b32d8d4643d4f87bc7b720bc358e4e3f30ade93a75b176ccd5adff5a2585f73",
+    "S7_10_EXTERNAL_VALIDATION_AUDIT_REPORT.md": "e6c52e162d524bdde38a422c5481c2681fae2ab2fbc7187a29de3427ceb3b0f5",
+    "S7_10_EXTERNAL_VALIDATION_FINAL.md": "05299d846af41c5dce466e8a94725ae7e10b219c58b3c12ae262e373ce6b8d47",
+    "S7_11_SENSITIVITY_PREDECLARATION.json": "da24fbe38141f0c77f74ae3a87f6002c8263b8d3cc9aed35696dbad98a40c4c3",
+    "scripts/s7_10_a_preflight.py": "717b93b25895f7eb591a845e20b9846c9c3c460c0aff7f8198c4bd003486c886",
+    "scripts/s7_10_b_external_eval.py": "31085bda5f6f0b5ed1554168dd8042266212c77f130859ffdd7f2f47de662007",
+    "scripts/s7_10_c_inference.py": "2dfa76484ccac190ed93ab58460e9c2fa8be66b2c7e64a30044aba7af603ecfa",
+    "scripts/s7_10_d_failure_diagnostic.py": "a3364cc5a4b80cff8e729ff3995c24e459f3e1f08d98ec1b49d55533cc995d37",
+    "scripts/s7_10_e_freeze.py": "2b56a6468eb8f414949617c8434d87856c5bfc63af7ae4ab14aaf639761f1268",
+    "V_REC_EXTERNAL_RESULTS.json": "850c45bb1e5fdbe8937708f7f31264ed7865d55b6fdcaac471eba04700171bfc"
+  },
+  "self_referential_excluded": [
+    "S7_10_ACCEPTANCE_CHECKS.json",
+    "S7_10_FREEZE.json"
+  ],
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "sklearn": "1.9.0",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "next_stage": "S7.11 (predeclared sensitivities) - NOT AUTHORISED"
+}

@@ -1,0 +1,45 @@
+{
+  "all_pass": true,
+  "checks": {
+    "1_paper_signals_in_inventory": {
+      "pass": true,
+      "detail": "q_desc primitives ['betan', 'kappa', 'li', 'pcdiamag3', 'q95'] all present"
+    },
+    "2_every_signal_has_source_artifact": {
+      "pass": true,
+      "detail": "A007 (npz dataset directory) is the source artifact for all 95 signals"
+    },
+    "3_derived_signals_have_parents_or_unresolved": {
+      "pass": true,
+      "detail": "equilibrium_shape rows carry an explicit STRONGLY_INFERRED edge to equilibrium_reconstruction; all UNKNOWN classifications are registered in UNRESOLVED_PROVENANCE.csv"
+    },
+    "4_all_shot_files_in_inventory": {
+      "pass": true,
+      "detail": "62 shot rows vs 62 npz files"
+    },
+    "5_availability_counts_reproduce_files": {
+      "pass": true,
+      "detail": "every signal appears in exactly 62 shots"
+    },
+    "6_no_conflicting_units": {
+      "pass": true,
+      "detail": "no units are recorded anywhere, so no conflict is possible; recorded as CRITICAL unresolved item U002"
+    },
+    "7_aliases_resolve": {
+      "pass": true,
+      "detail": "no aliases defined; source_name == signal_id"
+    },
+    "8_no_target_dependent_classification": {
+      "pass": true,
+      "detail": "no target selected; signal_inventory contains no target-dependence column"
+    },
+    "9_no_performance_metric_used": {
+      "pass": true,
+      "detail": "no regression, no reconstruction metric computed at S7.1"
+    },
+    "10_no_canonical_artifact_modified": {
+      "pass": true,
+      "detail": "S7.1 writes only under S7/; canonical artifacts opened read-only"
+    }
+  }
+}

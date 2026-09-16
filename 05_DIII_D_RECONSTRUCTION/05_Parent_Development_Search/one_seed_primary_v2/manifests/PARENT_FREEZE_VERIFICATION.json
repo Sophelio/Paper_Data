@@ -1,0 +1,85 @@
+{
+  "s7_1": {
+    "freeze_id": "D3D-SIR-S7.1-OBSERVATIONAL-OBJECT-FINAL-V1",
+    "n_verified": 9
+  },
+  "s7_2_v1": {
+    "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V1",
+    "status": "FROZEN_READY_FOR_S7.3",
+    "n_verified": 35
+  },
+  "s7_2_v2": {
+    "freeze_id": "D3D-SIR-S7.2-RECONSTRUCTION-CONTRACT-PRETARGET-V2",
+    "status": "FROZEN_READY_FOR_S7.3",
+    "n_verified": 10
+  },
+  "s7_3_v1": {
+    "freeze_id": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-V1",
+    "status": "FROZEN_READY_FOR_S7.4",
+    "n_verified": 33
+  },
+  "s7_4_v1": {
+    "freeze_id": "D3D-SIR-S7.4-MATHEMATICAL-INTERPRETATION-V1",
+    "status": "TARGET_TEMPORAL_RESOLUTION_RECONCILIATION_REQUIRED",
+    "n_verified": 7
+  },
+  "s7_3r_v2": {
+    "freeze_id": "D3D-SIR-S7.3-TARGET-AND-INFORMATION-BOUNDARY-SOURCE-RESOLUTION-V2",
+    "status": "FROZEN_READY_TO_RETRY_S7.4",
+    "n_verified": 22
+  },
+  "s7_4_v2": {
+    "freeze_id": "D3D-SIR-S7.4-MATHEMATICAL-INTERPRETATION-SOURCE-RESOLUTION-V2",
+    "status": "FROZEN_READY_FOR_S7.5",
+    "n_verified": 15
+  },
+  "s7_5": {
+    "freeze_id": "D3D-SIR-S7.5-TYPED-RELATIONAL-ONTOLOGY-V1",
+    "status": "FROZEN_READY_FOR_S7.6",
+    "n_verified": 20
+  },
+  "s7_5h": {
+    "freeze_id": "D3D-SIR-S7.5H-PRIMITIVE-SPACE-AND-ONTOLOGY-HARDENING-V1",
+    "status": "FROZEN_WITH_QUALIFICATIONS",
+    "n_verified": 30
+  },
+  "s7_6_v1_historical": {
+    "freeze_id": "D3D-SIR-S7.6-ADMISSIBLE-UNIVERSE-V1",
+    "status": "FROZEN_READY_FOR_S7.7",
+    "n_verified": 27
+  },
+  "s7_6r_v2": {
+    "freeze_id": "D3D-SIR-S7.6-ADMISSIBLE-UNIVERSE-HARDENED-V2",
+    "status": "FROZEN_WITH_QUALIFICATIONS",
+    "n_verified": 34
+  },
+  "s7_7_v1_blocked": {
+    "freeze_id": "D3D-SIR-S7.7-FROZEN-SEARCH-POLICY-AND-EXPLORED-FRONTIER-V1",
+    "status": "BLOCKED_SEARCH_BUDGET",
+    "n_verified": 19
+  },
+  "verified_utc": "2026-09-05T00:17:10.472074+00:00",
+  "substantive_checks": {
+    "target_is_density": true,
+    "A_REC_DENSITY_HARDENED_V2_authoritative": true,
+    "atomic_universe_10778": true,
+    "active_strata_127": true,
+    "support_bound_1_12": true,
+    "C4_admissible_zero": true,
+    "C8_admissible_zero": true,
+    "denominator_rule_unchanged": true,
+    "T_REC_V1_unchanged": true,
+    "external_cohort_42_sealed": true,
+    "ontology_is_G_REC_DENSITY_HARDENED_V2": true,
+    "P_hard_70": true,
+    "historical_s7_7_v1_blocked": true,
+    "historical_s7_7_v1_Ahat_not_constructed": true,
+    "historical_s7_7_v1_opened_nothing": true,
+    "search_priority_not_yet_assigned": true,
+    "estimator_not_yet_run": true,
+    "s7_7r_never_previously_run": true
+  },
+  "n_drift": 0,
+  "drift": [],
+  "verdict": "PARENTS_VERIFIED"
+}

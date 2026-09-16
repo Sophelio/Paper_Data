@@ -1,0 +1,102 @@
+{
+  "record_id": "EXTERNAL_FAILURE_MODE_DIAGNOSTIC_V1",
+  "generated_utc": "2026-09-05T22:53:34.318713+00:00",
+  "status": "REPORTING_ONLY",
+  "changes_C_dev_star": false,
+  "removes_any_coordinate": false,
+  "changes_any_threshold_metric_or_configuration": false,
+  "deletes_any_discharge": false,
+  "question": "why does the frozen relational representation fail V3 on the external cohort?",
+  "finding": {
+    "headline": "the pooled failure is driven by unguarded LINEAR EXTRAPOLATION of the self-product coordinate PROD(gasa,gasa) on two earlier-era discharges",
+    "mechanism": [
+      "the frozen estimator fits affine OLS on the calibration interval only",
+      "gasa (gas injection valve command, manifold A) undergoes a large excursion inside the protected window on discharges 187019 and 187022",
+      "on 187019 block B, gasa spans 5.3e-3..4.1e-2 on calibration but reaches 1.63 on the protected block, a ~40x excursion beyond the calibration maximum",
+      "squaring amplifies the excursion: PROD(gasa,gasa) reaches ~8979 calibration standard deviations on the protected rows",
+      "the affine relation extrapolates linearly on that coordinate and the prediction diverges"
+    ],
+    "why_the_frozen_domain_rule_did_not_catch_it": "DENOMINATOR_ADMISSIBILITY_PRIMARY_V1 guards DENOMINATORS only. Per the frozen S7.6R partial-map policy, 'C0, C1, C2 and C6 have no denominator and no gate'. PROD(gasa,gasa) is a C2 self-product, so it carries no domain gate at all. All three required denominators (prmtan_neped, ece22, cerqtit10) were admissible on every one of the 126 external calibration blocks, and remain well-conditioned on the protected intervals too. The failure is an unguarded RANGE excursion in a product coordinate, not a denominator failure.",
+    "not_a_domain_rule_violation": true,
+    "not_a_leakage_failure": true,
+    "not_an_implementation_error": true
+  },
+  "extrapolation_vs_error": {
+    "spearman_style_log_correlation": 0.9302858010856508,
+    "note": "log10 max standardized protected excursion vs log10 discharge REL NRMSE"
+  },
+  "worst_blocks": [
+    {
+      "shot_id": "187019",
+      "era": "earlier",
+      "block": "B",
+      "max_abs_z_protected": 8978.635849692124,
+      "worst_coordinate": "PROD(gasa,gasa)",
+      "REL_nrmse_discharge": 11.952633158377472
+    },
+    {
+      "shot_id": "187022",
+      "era": "earlier",
+      "block": "B",
+      "max_abs_z_protected": 8958.60276210311,
+      "worst_coordinate": "PROD(gasa,gasa)",
+      "REL_nrmse_discharge": 11.766571685014748
+    },
+    {
+      "shot_id": "160717",
+      "era": "earlier",
+      "block": "C",
+      "max_abs_z_protected": 12.977860668612156,
+      "worst_coordinate": "RATIO(ip,ece22)",
+      "REL_nrmse_discharge": 0.3667649468845722
+    },
+    {
+      "shot_id": "195269",
+      "era": "later",
+      "block": "B",
+      "max_abs_z_protected": 12.3698166710327,
+      "worst_coordinate": "PROD(prmtan_neped,prmtan_neped)",
+      "REL_nrmse_discharge": 0.2077212378630986
+    },
+    {
+      "shot_id": "187019",
+      "era": "earlier",
+      "block": "C",
+      "max_abs_z_protected": 9.171581104201614,
+      "worst_coordinate": "PROD(gasa,gasa)",
+      "REL_nrmse_discharge": 11.952633158377472
+    },
+    {
+      "shot_id": "187022",
+      "era": "earlier",
+      "block": "C",
+      "max_abs_z_protected": 9.14973225720637,
+      "worst_coordinate": "PROD(gasa,gasa)",
+      "REL_nrmse_discharge": 11.766571685014748
+    }
+  ],
+  "worst_coordinate_frequency": {
+    "PROD(prmtan_neped,prmtan_neped)": 44,
+    "RATIO(fs03da,prmtan_neped)": 38,
+    "RATIO(ip,ece22)": 16,
+    "PROD(gasa,gasa)": 12,
+    "PROD(pinj,cerqrott6)": 8,
+    "RATIO(ece21,prmtan_neped)": 4,
+    "PROD(ece37,ece39)": 4
+  },
+  "distribution_context": {
+    "REL_median_external_nrmse": 0.16986162832793064,
+    "REL_mean_external_nrmse": 0.7423647781201324,
+    "development_FIT": 0.166397565,
+    "n_discharges_above_nrmse_1": 2,
+    "n_discharges_above_nrmse_2": 2,
+    "reading": "on 40 of 42 external discharges the frozen representation transfers at roughly its development level; two discharges are catastrophic and they dominate the mean, which is the quantity the frozen V3 gate uses",
+    "the_gate_uses_the_mean": true,
+    "median_may_not_be_substituted_for_the_mean": true
+  },
+  "consequence": "V3 fails on the frozen mean-based rule and the failure is robust: no single leave-one-discharge-out cohort satisfies V3. The result stands as frozen.",
+  "motivates_but_does_not_execute": [
+    "S7.11 V9 sensitivity",
+    "any future prospective range-admissibility rule for non-denominator constructors, which would be a NEW contract decision for a future study, not a repair of this one"
+  ]
+}

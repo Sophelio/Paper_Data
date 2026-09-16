@@ -1,0 +1,21 @@
+{
+  "manifest_id": "NO_OUTCOME_BASED_UTILITY_REVISION_V1",
+  "generated_utc": "2026-09-05T08:07:46.430834+00:00",
+  "forbidden_and_not_done": {
+    "changed_the_0.01_floor": false,
+    "changed_stability_quantiles_after_seeing_candidate_behaviour": false,
+    "changed_the_bootstrap_count_after_seeing_stability": false,
+    "added_a_c6_c7_penalty": false,
+    "added_an_ece_penalty": false,
+    "added_a_family_diversity_term": false,
+    "changed_support_size_preferences": false,
+    "changed_condition_number_rules_to_favour_a_candidate": false,
+    "chose_ridge_because_a_support_performs_better_with_ridge": false,
+    "deleted_pcdiamag3_because_its_coefficient_is_hard_to_interpret": false,
+    "changed_the_utility_ordering": false
+  },
+  "precondition_for_all_of_the_above": "no candidate-level utility quantity was computed over Ahat_rec in S7.8, so no outcome was available to revise against",
+  "conflict_procedure": "if an inherited rule had been mathematically impossible to execute, S7.8 would STOP with UTILITY_SPECIFICATION_CONFLICT rather than repair it using observed outcomes",
+  "conflicts_found": 0,
+  "verdict": "NO_OUTCOME_BASED_REVISION"
+}

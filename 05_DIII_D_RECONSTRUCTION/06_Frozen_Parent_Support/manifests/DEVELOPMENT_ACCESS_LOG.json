@@ -1,0 +1,207 @@
+{
+  "reads": [
+    {
+      "stage": "S7.9",
+      "shot_id": "160715",
+      "cohort": "development",
+      "predictor_signals_read": 70,
+      "target_signal_read": "density",
+      "target_values_read": 729,
+      "external_values_read": 0,
+      "reason": "Rank-3 ACTIVE_TERMS and Rank-4 conditioning"
+    },
+    {
+      "stage": "S7.9",
+      "shot_id": "160720",
+      "cohort": "development",
+      "predictor_signals_read": 70,
+      "target_signal_read": "density",
+      "target_values_read": 730,
+      "external_values_read": 0,
+      "reason": "Rank-3 ACTIVE_TERMS and Rank-4 conditioning"
+    },
+    {
+      "stage": "S7.9",
+      "shot_id": "161138",
+      "cohort": "development",
+      "predictor_signals_read": 70,
+      "target_signal_read": "density",
+      "target_values_read": 380,
+      "external_values_read": 0,
+      "reason": "Rank-3 ACTIVE_TERMS and Rank-4 conditioning"
+    },
+    {
+      "stage": "S7.9",
+      "shot_id": "165022",
+      "cohort": "development",
+      "predictor_signals_read": 70,
+      "target_signal_read": "density",
+      "target_values_read": 730,
+      "external_values_read": 0,
+      "reason": "Rank-3 ACTIVE_TERMS and Rank-4 conditioning"
+    },
+    {
+      "stage": "S7.9",
+      "shot_id": "165028",
+      "cohort": "development",
+      "predictor_signals_read": 70,
+      "target_signal_read": "density",
+      "target_values_read": 730,
+      "external_values_read": 0,
+      "reason": "Rank-3 ACTIVE_TERMS and Rank-4 conditioning"
+    },
+    {
+      "stage": "S7.9",
+      "shot_id": "165042",
+      "cohort": "development",
+      "predictor_signals_read": 70,
+      "target_signal_read": "density",
+      "target_values_read": 733,
+      "external_values_read": 0,
+      "reason": "Rank-3 ACTIVE_TERMS and Rank-4 conditioning"
+    },
+    {
+      "stage": "S7.9",
+      "shot_id": "165861",
+      "cohort": "development",
+      "predictor_signals_read": 70,
+      "target_signal_read": "density",
+      "target_values_read": 731,
+      "external_values_read": 0,
+      "reason": "Rank-3 ACTIVE_TERMS and Rank-4 conditioning"
+    },
+    {
+      "stage": "S7.9",
+      "shot_id": "170396",
+      "cohort": "development",
+      "predictor_signals_read": 70,
+      "target_signal_read": "density",
+      "target_values_read": 326,
+      "external_values_read": 0,
+      "reason": "Rank-3 ACTIVE_TERMS and Rank-4 conditioning"
+    },
+    {
+      "stage": "S7.9",
+      "shot_id": "187017",
+      "cohort": "development",
+      "predictor_signals_read": 70,
+      "target_signal_read": "density",
+      "target_values_read": 600,
+      "external_values_read": 0,
+      "reason": "Rank-3 ACTIVE_TERMS and Rank-4 conditioning"
+    },
+    {
+      "stage": "S7.9",
+      "shot_id": "187020",
+      "cohort": "development",
+      "predictor_signals_read": 70,
+      "target_signal_read": "density",
+      "target_values_read": 619,
+      "external_values_read": 0,
+      "reason": "Rank-3 ACTIVE_TERMS and Rank-4 conditioning"
+    },
+    {
+      "stage": "S7.9",
+      "shot_id": "187024",
+      "cohort": "development",
+      "predictor_signals_read": 70,
+      "target_signal_read": "density",
+      "target_values_read": 645,
+      "external_values_read": 0,
+      "reason": "Rank-3 ACTIVE_TERMS and Rank-4 conditioning"
+    },
+    {
+      "stage": "S7.9",
+      "shot_id": "189647",
+      "cohort": "development",
+      "predictor_signals_read": 70,
+      "target_signal_read": "density",
+      "target_values_read": 585,
+      "external_values_read": 0,
+      "reason": "Rank-3 ACTIVE_TERMS and Rank-4 conditioning"
+    },
+    {
+      "stage": "S7.9",
+      "shot_id": "189651",
+      "cohort": "development",
+      "predictor_signals_read": 70,
+      "target_signal_read": "density",
+      "target_values_read": 607,
+      "external_values_read": 0,
+      "reason": "Rank-3 ACTIVE_TERMS and Rank-4 conditioning"
+    },
+    {
+      "stage": "S7.9",
+      "shot_id": "195264",
+      "cohort": "development",
+      "predictor_signals_read": 70,
+      "target_signal_read": "density",
+      "target_values_read": 775,
+      "external_values_read": 0,
+      "reason": "Rank-3 ACTIVE_TERMS and Rank-4 conditioning"
+    },
+    {
+      "stage": "S7.9",
+      "shot_id": "195267",
+      "cohort": "development",
+      "predictor_signals_read": 70,
+      "target_signal_read": "density",
+      "target_values_read": 780,
+      "external_values_read": 0,
+      "reason": "Rank-3 ACTIVE_TERMS and Rank-4 conditioning"
+    },
+    {
+      "stage": "S7.9",
+      "shot_id": "195273",
+      "cohort": "development",
+      "predictor_signals_read": 70,
+      "target_signal_read": "density",
+      "target_values_read": 782,
+      "external_values_read": 0,
+      "reason": "Rank-3 ACTIVE_TERMS and Rank-4 conditioning"
+    },
+    {
+      "stage": "S7.9",
+      "shot_id": "195638",
+      "cohort": "development",
+      "predictor_signals_read": 70,
+      "target_signal_read": "density",
+      "target_values_read": 704,
+      "external_values_read": 0,
+      "reason": "Rank-3 ACTIVE_TERMS and Rank-4 conditioning"
+    },
+    {
+      "stage": "S7.9",
+      "shot_id": "195647",
+      "cohort": "development",
+      "predictor_signals_read": 70,
+      "target_signal_read": "density",
+      "target_values_read": 669,
+      "external_values_read": 0,
+      "reason": "Rank-3 ACTIVE_TERMS and Rank-4 conditioning"
+    },
+    {
+      "stage": "S7.9",
+      "shot_id": "195650",
+      "cohort": "development",
+      "predictor_signals_read": 70,
+      "target_signal_read": "density",
+      "target_values_read": 717,
+      "external_values_read": 0,
+      "reason": "Rank-3 ACTIVE_TERMS and Rank-4 conditioning"
+    },
+    {
+      "stage": "S7.9",
+      "shot_id": "195655",
+      "cohort": "development",
+      "predictor_signals_read": 70,
+      "target_signal_read": "density",
+      "target_values_read": 674,
+      "external_values_read": 0,
+      "reason": "Rank-3 ACTIVE_TERMS and Rank-4 conditioning"
+    }
+  ],
+  "external_predictor_reads": 0,
+  "external_target_reads": 0,
+  "external_model_evaluations": 0
+}

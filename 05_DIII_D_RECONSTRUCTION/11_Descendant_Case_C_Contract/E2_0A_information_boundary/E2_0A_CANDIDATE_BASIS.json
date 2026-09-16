@@ -1,0 +1,42 @@
+{
+  "record_id": "E2_0A_CANDIDATE_BASIS_V1",
+  "frozen_utc": "2026-09-06T04:47:45.692687+00:00",
+  "id": "C_E2_FULL_DOMAIN",
+  "definition": "exactly the K2-certified atomic coordinates with FULL_DOMAIN_RANGE_SUPPORT over all 62 discharges and 186 blocks at tau = 1",
+  "n": 3451,
+  "of_atomic_universe": 10778,
+  "constructor_counts": {
+    "C0": 51,
+    "C1": 18,
+    "C2": 1488,
+    "C3": 382,
+    "C5": 8,
+    "C6": 965,
+    "C7": 539
+  },
+  "matches_K2_freeze": true,
+  "coordinate_ids_sha256": "1d22aeac2e5fa116e2dc44606b4da8e9466a1189f75af4fe1d75989b3c3e5852",
+  "listing": "manifests/C_E2_FULL_DOMAIN.csv",
+  "tau": 1.0,
+  "tau_train": null,
+  "different_ontology_generated": false,
+  "role": "the common initial candidate basis for EVERY outer fold",
+  "closure_property": {
+    "claim": "any support assembled solely from C_E2_FULL_DOMAIN is FULL_DOMAIN_RANGE_SUPPORTED by construction",
+    "verified_not_assumed": true,
+    "verified_at_support_sizes": [
+      1,
+      2,
+      5,
+      8,
+      12
+    ],
+    "all_pass": true,
+    "adversarial_control_fraction": 0.0,
+    "control_purpose": "shows the check is not vacuous - adding a single unsupported coordinate always breaks the support"
+  },
+  "A_rec_status": "UNCHANGED - the 7,327 locally partial atoms are NOT erased",
+  "G_rec_status": "UNCHANGED",
+  "P_rec_status": "UNCHANGED from K_REC_V2",
+  "relationship": "C_E2_FULL_DOMAIN is a subset of Coord(G_rec) selected by the frozen P_rec applicability predicate over the intended domain. It constrains the Epoch-2 SEARCH FRONTIER; it does not redefine A_rec"
+}

@@ -1,0 +1,100 @@
+{
+  "record_id": "Q_REC_LIMITATIONS_V1",
+  "generated_utc": "2026-09-07T04:58:19.214183+00:00",
+  "note": "these limitations are PART OF Q_rec*, not footnotes outside it",
+  "claim_boundary": {
+    "supported": "Within the predictor-qualified frozen 62-discharge observational object, relational supports discovered without a discharge's own target values reconstruct that discharge nontrivially relative to the frozen baselines.",
+    "not_supported": [
+      "virgin external validation",
+      "untouched external validation",
+      "unknown-predictor-distribution transfer",
+      "fully inductive predictor generalization",
+      "future-discharge applicability",
+      "zero-shot transfer",
+      "universal DIII-D relation",
+      "universal DIII-D generalization",
+      "cross-device generalization",
+      "unique physical equation",
+      "universal coefficient vector"
+    ]
+  },
+  "predictor_side_finite_object_qualification": {
+    "statement": "predictor-side applicability was instantiated from the non-target observations of the entire finite 62-discharge object",
+    "consequence": "Epoch 2 tests transfer of the TARGET RELATIONSHIP to withheld targets, not transfer of predictor geometry to genuinely unseen discharges",
+    "authority": "E2_0A_PROTOCOL, PREDICTOR_QUALIFIED_TARGET_CROSS_FITTED_RECONSTRUCTION"
+  },
+  "era_asymmetry": {
+    "earlier": {
+      "n": 35,
+      "Delta_1": 0.007613725877654367,
+      "direction": "PRACTICAL_TIE"
+    },
+    "later": {
+      "n": 27,
+      "Delta_1": -0.07257603012695703,
+      "direction": "MATERIAL_IMPROVEMENT"
+    },
+    "forbidden_statement": "both eras improve materially",
+    "required": "the pooled pass is carried by the later era"
+  },
+  "modest_persistence_margin": {
+    "Delta_1": -0.027307619479192535,
+    "median_delta": -0.012204355793874001,
+    "wins": 32,
+    "ties": 5,
+    "losses": 25,
+    "description": "MODEST",
+    "forbidden_headline": "SIR dramatically beats persistence",
+    "context": "persistence is a demanding baseline for a slowly varying target; the Epoch-1 sensitivity analysis found no support in the development-equivalent family beating persistence by more than 0.0287, which suggests the margin is a property of the object and task rather than of any one representation"
+  },
+  "clean_demo_not_met": {
+    "status": "CLEAN_DEMO_NOT_MET",
+    "criteria_missed": [
+      "Delta_1 <= -0.05 (achieved -0.027308)",
+      "material improvement vs B1 in BOTH eras"
+    ],
+    "criteria_met": [
+      "FORMAL_PASS",
+      "full cross-fitted range support",
+      "no discharge above NRMSE 1.0"
+    ],
+    "threshold_frozen_before_the_run": true,
+    "threshold_adjusted": false,
+    "tier_promoted_to_a_gate": false
+  },
+  "support_non_uniqueness": {
+    "n_supports": 6,
+    "all_size": 12,
+    "any_two_identical": false,
+    "mean_pairwise_jaccard": 0.28524448375841566,
+    "distinct_coordinates": 35,
+    "in_all_six": [
+      "ID(pcdiamag3)",
+      "RATIO(ece21,cerqtit10)"
+    ],
+    "seventh_search_E2_2": {
+      "identical_to_any_fold_support": false,
+      "mean_jaccard_with_folds": 0.31269841269841264
+    },
+    "conclusion": "STABLE_RECONSTRUCTION_UTILITY_WITH_NON_UNIQUE_RELATIONAL_SUPPORTS",
+    "canonical_equation_claim": false
+  },
+  "coefficient_qualifications": {
+    "locally_calibrated": "coefficients are calibrated per discharge and per block; support transfer does not imply coefficient transfer",
+    "universal_coefficient_vector": false,
+    "pcdiamag3": "UNCALIBRATED_SIGNAL; its fitted coefficient has no certified physical-dimensional interpretation",
+    "prmtan_neped": "a same-family observable whose provenance is certified independent of the target signal under the frozen information boundary; this does NOT establish physical or statistical independence from line-averaged density",
+    "gas_actuators": "gasa...gasd are actuator command voltages, not fueling rates",
+    "flagged_primitives_in_C_E2_ALL_DESC": [
+      "gasc",
+      "pcdiamag3",
+      "prmtan_neped"
+    ]
+  },
+  "search_boundary": {
+    "global_optimality_claim": false,
+    "proposals_epoch2": 765758,
+    "budget_epoch2": 1800000,
+    "unsearched_status": "ADMISSIBLE_UNSEARCHED"
+  }
+}

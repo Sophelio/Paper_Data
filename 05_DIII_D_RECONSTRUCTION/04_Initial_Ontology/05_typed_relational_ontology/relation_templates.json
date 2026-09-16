@@ -1,0 +1,41 @@
+{
+  "template_id": "T_REC_V1",
+  "primary_template": {
+    "form": "y_s(t) = beta_{0,s} + sum_{j=1..m} beta_{j,s} c_j(x_s)(t) + epsilon_s(t)",
+    "family": "affine-linear IN THE CONSTRUCTED COORDINATES",
+    "coordinate_functions_may_be_nonlinear": true,
+    "support_size_m": {
+      "min": 1,
+      "max": 12,
+      "source": "frozen K_rec B_rec bound"
+    },
+    "shared_across_discharges": "the coordinate SUPPORT C = {c_1..c_m}",
+    "discharge_specific": "the coefficients beta_s",
+    "intercept": {
+      "permitted": true,
+      "counts_toward_support_size": false
+    },
+    "target_on_explanatory_side": false,
+    "target_derivative": false,
+    "explicit_not_implicit": true,
+    "universal_coefficient_claim": false
+  },
+  "coefficient_dimensionality": {
+    "rule": "[beta_j] = [y] / [c_j]",
+    "target_dimension": "m^-3",
+    "consequence": "every affine term beta_j c_j carries the target dimension m^-3, so coordinates within one relation need NOT share physical units; the fitted coefficients carry the compensating dimensions",
+    "uncalibrated_operand": {
+      "numerical_coefficient_allowed": true,
+      "physical_dimensional_interpretation_claimable": false,
+      "coefficient_dimension_status": "UNCALIBRATED"
+    },
+    "coefficient_dimension_status_values": [
+      "PHYSICALLY_TYPED",
+      "UNCALIBRATED"
+    ]
+  },
+  "estimator": {
+    "chosen_here": false,
+    "note": "the relation FAMILY is frozen here; the numerical ESTIMATOR is not. OLS vs ridge and any hyperparameter belong to the later frozen search policy. No estimator was run in S7.5."
+  }
+}
