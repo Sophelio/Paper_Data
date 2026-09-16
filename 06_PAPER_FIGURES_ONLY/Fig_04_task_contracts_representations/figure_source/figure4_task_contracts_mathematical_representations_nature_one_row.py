@@ -386,7 +386,6 @@ def add_relation_strip(
     title: str,
     equation: str,
     parameter: str,
-    residual: float,
 ) -> None:
     height = 0.245
     strip = FancyBboxPatch(
@@ -421,16 +420,6 @@ def add_relation_strip(
         va="center",
         fontsize=4.65,
         color=INK,
-    )
-    ax.text(
-        0.97,
-        y0 + 0.177,
-        rf"$\|R\|_\infty={sci_tex(residual, 1)}$",
-        transform=ax.transAxes,
-        ha="right",
-        va="center",
-        fontsize=4.55,
-        color=MID,
     )
     ax.text(
         0.055,
@@ -525,7 +514,6 @@ def draw_panel_b(
         "Temporal representation",
         r"$u_t+\alpha u=0$",
         rf"$\alpha={result.alpha:.5f}$",
-        result.temporal_residual,
     )
     add_relation_strip(
         ax_relations,
@@ -533,7 +521,6 @@ def draw_panel_b(
         "Spatial representation",
         r"$u_{xx}+(m\pi)^2u=0$",
         rf"$m={source.HEAT_MODE}$",
-        result.spatial_residual,
     )
     add_relation_strip(
         ax_relations,
@@ -541,7 +528,6 @@ def draw_panel_b(
         "Coupled diffusion representation",
         r"$u_t-\kappa u_{xx}=0$",
         rf"$\kappa={source.KAPPA:.2f}$",
-        result.coupled_residual,
     )
     ax_relations.text(
         0.50,
