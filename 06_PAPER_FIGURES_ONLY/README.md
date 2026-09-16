@@ -48,3 +48,40 @@ PDF/PNG/SVG variant its script emits.
 
 Updated rows carry the new source path, size, hash and timestamp in
 `00_START_HERE/PACKAGE_MANIFEST.csv`.
+
+## Polishing pass (2026-09-16)
+
+All figures in this folder (1, 2, 4, 5, 6, S1) were brought to one
+typographic standard for Nature Computational Science. Wording, data, colours
+and figure geometry are unchanged except for small, documented local nudges.
+
+**Font.** Every string is typeset by LaTeX (`text.usetex`) with
+`\usepackage[T1]{fontenc}\usepackage{lmodern}\usepackage{amsmath,amssymb}`,
+matching the manuscript. Each script also carries `LM_DESIGN_SIZE_PIN`, which
+pins the 10 pt Latin Modern design at every size. Without it `lmodern`
+switches to its 5–8 pt optical designs, which are 15–23% wider. The PDFs embed
+only LMRoman10 / LMMath*10 fonts, plus EUFM10/MSBM10 in Fig 1 for ℜ and 𝔼.
+
+**Maths.** Every symbol, variable, subscript, operator and equation is LaTeX
+math. No Unicode maths glyphs remain in any script.
+
+**Type scale** (points at the printed size, assuming 183 mm double-column
+width; Fig 1's 14.4 in canvas scales every size through `pt()`):
+
+| Role | Size |
+|---|---|
+| Figure title / figure-level header | 8 pt bold |
+| Panel letter | 8 pt bold |
+| Panel title (and schematic region titles) | 7 pt bold |
+| Panel subtitle | 6 pt, upright |
+| Axis and colourbar labels; featured equation displays | 6.5 pt |
+| Tick labels, legends, annotations, node labels, boxed equations | 6 pt |
+| Fine print (footnotes, dense category labels, inset ticks) | 5.5 pt |
+
+Minimum 5 pt; every ink element at least 2 mm from the canvas edge.
+
+**Regenerating.** Needs a TeX installation with `lmodern` (TeX Live 2026 was
+used) and **matplotlib 3.9.x**. matplotlib 3.11.0 silently drops maths minus
+signs (and some delimiters) from usetex PDFs; PNGs are unaffected. Every
+bundled asset was re-rendered from the bundled script with matplotlib 3.9.2
+and verified pixel-identical. Per-figure commands are in each folder's README.

@@ -18,6 +18,8 @@ Verified: the v8 script declares this exact stem. Superseded v4 and v7 scripts a
 
 **Colour edit, 2026-09-16.** The $x_2(t)$ trace in panel a (and its legend entry) was recoloured from purple `#4B2E83` to `#A94700`, the orange used for $\omega$ in Figure 4, by changing the `REFERENCE` constant in the bundled script. The PDF/PNG/SVG here were re-rendered from that edited script, so this folder now **diverges from the working-folder copy** of v8. The `_purple` filename stem is kept so references stay stable.
 
+**Polished 2026-09-16** (see `../README.md`). The script's built-in font audit now requires usetex with `lmodern`; its overlap and containment audits still pass. Outputs are written next to the script, in `figure_source/`.
+
 ## Are the plotted values exact?
 
 Analytic; values are computed by the script, not loaded.

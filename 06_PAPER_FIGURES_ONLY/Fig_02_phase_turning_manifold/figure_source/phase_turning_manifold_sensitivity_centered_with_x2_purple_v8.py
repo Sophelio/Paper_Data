@@ -18,7 +18,6 @@ from pathlib import Path
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
-from matplotlib import font_manager
 from matplotlib.lines import Line2D
 from matplotlib.patches import ConnectionPatch, Rectangle
 from matplotlib.text import Text
@@ -64,34 +63,86 @@ MUTED = "#555555"
 GUIDE = "#777777"
 PANEL_BG = "#F5F5F5"
 BRANCH_ALPHA = 0.96
-APPROVED_SANS = {"Arial", "Helvetica", "DejaVu Sans"}
+# Standard SIR type scale, in points at the final printed size. The canvas is
+# already the 183 mm double-column print width, so PRINT_SCALE is 1.
+PRINT_WIDTH_IN = 183.0 / 25.4
+PRINT_SCALE = (WIDTH_MM / MM_PER_INCH) / PRINT_WIDTH_IN
 
-# Override the serif defaults set when the analytical v7 module is imported.
-# SVG text remains editable and PDF text is embedded as Type 42 TrueType.
+
+def pt(size):
+    """Convert a printed point size to canvas points."""
+    return size * PRINT_SCALE
+
+
+FS_TITLE = pt(8.0)
+FS_PANEL_LETTER = pt(8.0)
+FS_PANEL_TITLE = pt(7.0)
+FS_SUBTITLE = pt(6.0)
+FS_LABEL = pt(6.5)
+FS_TICK = pt(6.0)
+FS_BODY = pt(6.0)
+FS_FINE = pt(5.5)
+# Latin Modern ships optical sizes: at 5-8 pt it switches to the lmr5-lmr8
+# designs, which are 15-23% wider than lmr10 and overflow this fixed layout.
+# Declaring the families before their .fd files load pins every shape to the
+# 10 pt design, scaled; glyphs stay Latin Modern.
+LM_DESIGN_SIZE_PIN = (
+    r"\DeclareFontFamily{T1}{lmr}{}"
+    r"\DeclareFontShape{T1}{lmr}{m}{n}{<-> ec-lmr10}{}"
+    r"\DeclareFontShape{T1}{lmr}{m}{it}{<-> ec-lmri10}{}"
+    r"\DeclareFontShape{T1}{lmr}{bx}{n}{<-> ec-lmbx10}{}"
+    r"\DeclareFontShape{T1}{lmr}{bx}{it}{<-> ec-lmbxi10}{}"
+    r"\DeclareFontShape{T1}{lmr}{b}{n}{<->ssub * lmr/bx/n}{}"
+    r"\DeclareFontFamily{OT1}{lmr}{}"
+    r"\DeclareFontShape{OT1}{lmr}{m}{n}{<-> rm-lmr10}{}"
+    r"\DeclareFontShape{OT1}{lmr}{m}{it}{<-> rm-lmri10}{}"
+    r"\DeclareFontShape{OT1}{lmr}{bx}{n}{<-> rm-lmbx10}{}"
+    r"\DeclareFontShape{OT1}{lmr}{b}{n}{<->ssub * lmr/bx/n}{}"
+    r"\DeclareFontFamily{OML}{lmm}{\skewchar\font127 }"
+    r"\DeclareFontShape{OML}{lmm}{m}{it}{<-> lmmi10}{}"
+    r"\DeclareFontShape{OML}{lmm}{b}{it}{<-> lmmib10}{}"
+    r"\DeclareFontShape{OML}{lmm}{bx}{it}{<->ssub * lmm/b/it}{}"
+    r"\DeclareFontFamily{OMS}{lmsy}{\skewchar\font48 }"
+    r"\DeclareFontShape{OMS}{lmsy}{m}{n}{<-> lmsy10}{}"
+    r"\DeclareFontShape{OMS}{lmsy}{b}{n}{<-> lmbsy10}{}"
+)
+LATEX_PREAMBLE = (
+    r"\usepackage[T1]{fontenc}"
+    r"\usepackage{lmodern}"
+    r"\usepackage{amsmath,amssymb}"
+    + LM_DESIGN_SIZE_PIN
+)
+
+# Override the serif/STIX defaults set when the analytical v7 module is
+# imported. All text, including math, is typeset by LaTeX in Latin Modern to
+# match the manuscript.
 mpl.rcParams.update({
-    "font.family": "sans-serif",
-    "font.sans-serif": ["Arial", "Helvetica", "DejaVu Sans"],
-    "font.size": 6.2,
-    "mathtext.fontset": "dejavusans",
+    "text.usetex": True,
+    "font.family": "serif",
+    "text.latex.preamble": LATEX_PREAMBLE,
+    "font.size": FS_BODY,
     "pdf.fonttype": 42,
     "ps.fonttype": 42,
-    "svg.fonttype": "none",
+    "svg.fonttype": "path",
     "axes.grid": False,
     "axes.linewidth": 0.80,
     "axes.labelcolor": TEXT,
-    "axes.labelsize": 6.6,
+    "axes.labelsize": FS_LABEL,
     "xtick.color": TEXT,
     "ytick.color": TEXT,
-    "xtick.labelsize": 5.8,
-    "ytick.labelsize": 5.8,
-    "legend.fontsize": 6.2,
+    "xtick.labelsize": FS_TICK,
+    "ytick.labelsize": FS_TICK,
+    "legend.fontsize": FS_BODY,
+    "legend.title_fontsize": FS_BODY,
+    "axes.titlesize": FS_PANEL_TITLE,
+    "figure.titlesize": FS_TITLE,
     "text.color": TEXT,
     "figure.facecolor": "white",
     "savefig.facecolor": "white",
 })
 
 
-def style_axis(ax, *, tick_size=5.8, label_size=6.6):
+def style_axis(ax, *, tick_size=FS_TICK, label_size=FS_LABEL):
     ax.spines[["top", "right"]].set_visible(False)
     ax.spines[["left", "bottom"]].set_linewidth(0.80)
     ax.tick_params(
@@ -119,21 +170,21 @@ def add_panel_header(fig, spec, letter, title, subtitle):
     )
     artists = [
         header.text(
-            0.00, 0.70, letter,
+            0.00, 0.70, rf"\textbf{{{letter}}}",
             transform=header.transAxes,
-            fontsize=8.0, fontweight="bold", fontstyle="normal",
+            fontsize=FS_PANEL_LETTER,
             ha="left", va="center",
         ),
         header.text(
-            0.00, 0.70, title,
+            0.00, 0.70, rf"\textbf{{{title}}}",
             transform=title_transform,
-            fontsize=7.0, fontweight="semibold",
+            fontsize=FS_PANEL_TITLE,
             ha="left", va="center",
         ),
         header.text(
             0.00, 0.20, subtitle,
             transform=title_transform,
-            fontsize=5.7, color=MUTED,
+            fontsize=FS_SUBTITLE, color=MUTED,
             ha="left", va="center",
         ),
     ]
@@ -205,26 +256,26 @@ def add_panel_c_key(ax):
     ))
     artists = []
 
-    y_rows = [0.80, 0.50, 0.20]
+    y_rows = [0.84, 0.50, 0.16]
     ax.plot([0.02, 0.14], [y_rows[0], y_rows[0]], color=MANIFOLD, lw=1.40,
             transform=ax.transAxes, clip_on=False)
     artists.append(ax.text(
         0.20, y_rows[0], r"$\dot{x}_1=0$",
-        transform=ax.transAxes, fontsize=5.0, va="center"
+        transform=ax.transAxes, fontsize=FS_BODY, va="center"
     ))
 
     ax.plot([0.02, 0.14], [y_rows[1], y_rows[1]], color=CONDITION, lw=1.20,
             linestyle=(0, (4.0, 2.5)), transform=ax.transAxes, clip_on=False)
     artists.append(ax.text(
-        0.20, y_rows[1], r"$g=\bar g$ locus",
-        transform=ax.transAxes, fontsize=5.0, va="center"
+        0.20, y_rows[1], r"$g=\bar{g}$ locus",
+        transform=ax.transAxes, fontsize=FS_BODY, va="center"
     ))
 
     ax.scatter([0.08], [y_rows[2]], marker="x", s=22, color=INTERSECTION,
                linewidth=1.05, transform=ax.transAxes, clip_on=False)
     artists.append(ax.text(
         0.20, y_rows[2], "Intersection",
-        transform=ax.transAxes, fontsize=5.0, va="center"
+        transform=ax.transAxes, fontsize=FS_BODY, va="center"
     ))
     return artists
 
@@ -245,11 +296,13 @@ def add_panel_c_condition_note(ax):
     note = ax.text(
         0.50,
         0.50,
-        r"$g=\bar g$: Direct Numerator Sensitivity"
+        r"$g=\bar{g}$: Direct Numerator"
         "\n"
-        "Vanishes At The Conditioning Locus",
+        "Sensitivity Vanishes At"
+        "\n"
+        "The Conditioning Locus",
         transform=ax.transAxes,
-        fontsize=5.3,
+        fontsize=FS_BODY,
         linespacing=1.08,
         color=MUTED,
         ha="center",
@@ -270,13 +323,13 @@ def add_panel_c_equations(ax):
     ax.set_axis_off()
     ax.set_facecolor("none")
     equation = ax.text(
-        0.03,
-        0.82,
-        r"$D^{\rm sc}=u_n(g-\bar g)+s_{\rm eff}g$"
+        0.0,
+        0.72,
+        r"$D^{\mathrm{sc}}=u_n(g-\bar{g})+s_{\mathrm{eff}}\,g$"
         "\n"
-        r"$\dot{x}_1=0\;\Longleftrightarrow\;D^{\rm sc}=s_{\rm eff}g(\dot{x}_2)$",
+        r"$\dot{x}_1=0 \;\Leftrightarrow\; D^{\mathrm{sc}}=s_{\mathrm{eff}}\,g(\dot{x}_2)$",
         transform=ax.transAxes,
-        fontsize=5.3,
+        fontsize=FS_BODY,
         linespacing=1.18,
         ha="left",
         va="top",
@@ -327,28 +380,25 @@ def audit_dimensions(fig):
 
 
 def audit_typography(fig, panel_labels, figure_title):
-    """Assert panel-label, title, text-size, color, and sans-serif requirements."""
+    """Assert panel-label, title, text-size, color, and Latin Modern requirements."""
     fig.canvas.draw()
     expected_letters = list("abcde")
-    if [artist.get_text() for artist in panel_labels] != expected_letters:
+    if [artist.get_text() for artist in panel_labels] != [
+        rf"\textbf{{{letter}}}" for letter in expected_letters
+    ]:
         raise RuntimeError("Panel labels must be exactly lowercase a-e in order.")
 
     for artist in panel_labels:
-        if not np.isclose(artist.get_fontsize(), 8.0, rtol=0.0, atol=1e-12):
+        if not np.isclose(artist.get_fontsize(), FS_PANEL_LETTER, rtol=0.0, atol=1e-12):
             raise RuntimeError(f"Panel label {artist.get_text()!r} is not exactly 8 pt.")
-        if artist.get_fontweight() != "bold" or artist.get_fontstyle() != "normal":
-            raise RuntimeError(
-                f"Panel label {artist.get_text()!r} must be bold and upright."
-            )
 
-    if not np.isclose(figure_title.get_fontsize(), 9.0, rtol=0.0, atol=1e-12):
-        raise RuntimeError("The global figure title must be exactly 9 pt.")
-    if figure_title.get_fontweight() != "bold":
+    if not np.isclose(figure_title.get_fontsize(), FS_TITLE, rtol=0.0, atol=1e-12):
+        raise RuntimeError("The global figure title must be exactly 8 pt.")
+    if not figure_title.get_text().startswith(r"\textbf{"):
         raise RuntimeError("The global figure title must be bold.")
 
     exempt_ids = {id(artist) for artist in panel_labels} | {id(figure_title)}
     invalid_sizes = []
-    invalid_fonts = []
     colored_text = []
     for artist in visible_nonempty_text(fig):
         if id(artist) not in exempt_ids:
@@ -356,24 +406,20 @@ def audit_typography(fig, panel_labels, figure_title):
             if not 5.0 <= size <= 7.0:
                 invalid_sizes.append((artist.get_text(), size))
 
-        requested = {family.lower() for family in artist.get_fontfamily()}
-        resolved = artist.get_fontproperties().get_name()
-        if not (
-            "sans-serif" in requested
-            or bool(requested & {name.lower() for name in APPROVED_SANS})
-        ) or resolved not in APPROVED_SANS:
-            invalid_fonts.append((artist.get_text(), sorted(requested), resolved))
-
         rgba = mpl.colors.to_rgba(artist.get_color())
         if not np.allclose(rgba[:3], [rgba[0]] * 3, rtol=0.0, atol=1e-12):
             colored_text.append((artist.get_text(), artist.get_color()))
 
     if invalid_sizes:
         raise RuntimeError(f"Visible non-panel text outside 5-7 pt: {invalid_sizes}")
-    if invalid_fonts or mpl.rcParams["mathtext.fontset"] != "dejavusans":
+    if not (
+        mpl.rcParams["text.usetex"]
+        and "lmodern" in mpl.rcParams["text.latex.preamble"]
+        and LM_DESIGN_SIZE_PIN in mpl.rcParams["text.latex.preamble"]
+    ):
         raise RuntimeError(
-            "Figure text must resolve to the approved sans-serif stack and "
-            f"use sans-serif math: {invalid_fonts}"
+            "Figure text must be typeset by LaTeX in Latin Modern (lmodern) "
+            "with the 10 pt design-size pin."
         )
     if colored_text:
         raise RuntimeError(f"Figure text must be black or gray: {colored_text}")
@@ -537,7 +583,7 @@ def main():
         loc="center right",
         bbox_to_anchor=(1.0, 0.48),
         frameon=False,
-        fontsize=6.2,
+        fontsize=FS_BODY,
         handlelength=2.2,
         handletextpad=0.50,
         borderaxespad=0.0,
@@ -587,12 +633,14 @@ def main():
     ax_c = fig.add_subplot(c_grid[1])
     ax_c_zoom = ax_c.inset_axes([0.60, 0.66, 0.38, 0.32], zorder=20)
     # Use the open upper-left region for the borderless semantic key.
-    ax_c_key = ax_c.inset_axes([0.12, 0.75, 0.2, 0.18], zorder=19)
-    # Place the conditioning statement directly below the local zoom.
-    ax_c_condition = ax_c.inset_axes([0.55, 0.43, 0.48, 0.14], zorder=19)
+    ax_c_key = ax_c.inset_axes([0.12, 0.735, 0.24, 0.25], zorder=19)
+    # Place the conditioning statement directly below the local zoom, right of
+    # the zoom connectors and inside the panel's right spine (three lines keep
+    # it clear of both at 6 pt).
+    ax_c_condition = ax_c.inset_axes([0.586, 0.337, 0.411, 0.215], zorder=19)
     # Place the defining identities in the lower-left white region near x=-1,
-    # with only a compact horizontal margin around the equation text.
-    ax_c_equations = ax_c.inset_axes([0.04, 0.04, 0.41, 0.18], zorder=19)
+    # clear of the g = g-bar locus and the zoom source box.
+    ax_c_equations = ax_c.inset_axes([0.0155, 0.012, 0.47, 0.235], zorder=19)
 
     draw_branch_runs(ax_c, r2, d_sc, increasing, lw=1.25, alpha=BRANCH_ALPHA)
     draw_turning_events(ax_c, tp_r2, tp_d_sc, size=15)
@@ -654,9 +702,9 @@ def main():
     )
     ax_c_zoom.set_xlim(*zoom_xlim)
     ax_c_zoom.set_ylim(*zoom_ylim)
-    ax_c_zoom.tick_params(labelsize=5.3, length=2.4, width=0.65, pad=1.2)
-    ax_c_zoom.xaxis.get_offset_text().set_fontsize(5.3)
-    ax_c_zoom.yaxis.get_offset_text().set_fontsize(5.3)
+    ax_c_zoom.tick_params(labelsize=FS_FINE, length=2.4, width=0.65, pad=1.2)
+    ax_c_zoom.xaxis.get_offset_text().set_fontsize(FS_FINE)
+    ax_c_zoom.yaxis.get_offset_text().set_fontsize(FS_FINE)
     ax_c_zoom.grid(False)
     for spine in ax_c_zoom.spines.values():
         spine.set_linewidth(0.75)
@@ -759,11 +807,10 @@ def main():
                label=r"$x_1$ turning event"),
     ]
     figure_title = fig.suptitle(
-        "Relational Coordinates Can Simplify The Organization Of A Scientific Target",
+        r"\textbf{Relational Coordinates Can Simplify The Organization Of A Scientific Target}",
         x=0.5,
         y=0.985,
-        fontsize=9.0,
-        fontweight="bold",
+        fontsize=FS_TITLE,
         color=TEXT,
     )
     fig.legend(
@@ -772,7 +819,7 @@ def main():
         bbox_to_anchor=(0.5, 0.958),
         ncol=3,
         frameon=False,
-        fontsize=6.2,
+        fontsize=FS_BODY,
         handlelength=2.2,
         columnspacing=1.25,
         handletextpad=0.50,

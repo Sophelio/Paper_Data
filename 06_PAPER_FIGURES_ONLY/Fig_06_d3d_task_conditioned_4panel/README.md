@@ -16,7 +16,7 @@ DIII-D task-conditioned relational discovery: descriptive organization and coeff
 
 Verified. The script carries a preflight check for all 10 required inputs and an optional cross-check of its own 6x35 fold-support matrix against the pre-derived `panel2_fold_support_matrix.csv`.
 
-Updated 2026-09-16 to the latest layout revision; frozen inputs unchanged, and the cross-check passes. **Known small mismatch:** the working-folder script was saved about 3 s after the bundled assets were rendered, so a fresh render differs from the bundled PNG in about 1% of pixels (small positional offsets, e.g. divider length; no data or text change). The assets are kept verbatim as produced. Re-render and replace them to make script and asset byte-consistent.
+Updated 2026-09-16 to the latest layout revision; frozen inputs unchanged. **Polished 2026-09-16** (see `../README.md`). The assets were re-rendered from the bundled script, so they now match it exactly. This resolves the small script/asset mismatch noted in the earlier update. The fold-support cross-check still passes.
 
 ## Are the plotted values exact?
 

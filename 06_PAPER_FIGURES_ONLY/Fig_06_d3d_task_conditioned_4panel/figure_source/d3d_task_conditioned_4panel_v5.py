@@ -57,16 +57,10 @@ LOSS_FACE = "#F7EFE8"
 UNUSED = "#637480"
 UNUSED_FACE = "#FAFBFC"
 
-# Semantic enlargement for explanatory slate/gray text only. Scientific marks,
-# colored annotations, equations, and axis typography retain their own scales.
-GRAY_TEXT_SCALE = 1.15
-LOWER_PANEL_GRAY_BOOST = 1.15
-GLOBAL_SUBTITLE_FONTSIZE = 7.8
-
 
 @dataclass(frozen=True)
 class PanelLayout:
-    """Top-level transform and typography controls for one panel.
+    """Top-level transform controls for one panel.
 
     ``rect`` is ``(left, bottom, width, height)`` in the panel GridSpec cell.
     Editing this one tuple moves or scales every content artist in the panel;
@@ -74,18 +68,17 @@ class PanelLayout:
     """
 
     rect: tuple[float, float, float, float]
-    font_scale: float = 1.0
     box_scale: float = 1.0
 
 
 # --------------------------------------------------------------------------
 # Panel containers: tune the whole figure from these four lines.
-# ``font_scale`` changes type only; ``box_scale`` changes Panel-A nodes only.
+# ``box_scale`` changes Panel-A nodes only; type follows the FS_* tiers below.
 # --------------------------------------------------------------------------
-PANEL_A_LAYOUT = PanelLayout(rect=(-0.025, -0.005, 1.055, 0.995), font_scale=1.12, box_scale=1.04)
-PANEL_B_LAYOUT = PanelLayout(rect=(-0.015, -0.005, 1.030, 0.995), font_scale=1.10)
-PANEL_C_LAYOUT = PanelLayout(rect=(-0.015, -0.005, 1.030, 0.995), font_scale=1.10)
-PANEL_D_LAYOUT = PanelLayout(rect=(-0.010, -0.005, 1.020, 0.995), font_scale=1.12)
+PANEL_A_LAYOUT = PanelLayout(rect=(-0.025, -0.005, 1.055, 0.995), box_scale=1.04)
+PANEL_B_LAYOUT = PanelLayout(rect=(-0.015, -0.005, 1.030, 0.995))
+PANEL_C_LAYOUT = PanelLayout(rect=(-0.015, -0.005, 1.030, 0.995))
+PANEL_D_LAYOUT = PanelLayout(rect=(-0.010, -0.005, 1.020, 0.995))
 
 # Panel-A bottom summaries share a height but allocate width according to content:
 # the semantic inventory is compact, while the complete cohort equation is wide.
@@ -98,6 +91,31 @@ PANEL_A_FORM_BOX_SIZE = (0.700, 0.185)
 # publisher-specific requirements should be checked at submission time.
 FIGURE_SIZE_IN = (7.15, 6.90)
 EXPORT_DPI = 600
+
+# Standard SIR figure type scale, in points at the printed size (183 mm wide).
+PRINT_WIDTH_IN = 183.0 / 25.4
+PRINT_SCALE = FIGURE_SIZE_IN[0] / PRINT_WIDTH_IN
+
+
+def pt(size: float) -> float:
+    """Convert a printed point size to canvas points."""
+    return size * PRINT_SCALE
+
+
+FS_TITLE = pt(8.0)
+FS_PANEL_LETTER = pt(8.0)
+FS_PANEL_TITLE = pt(7.0)
+FS_SUBTITLE = pt(6.0)
+FS_LABEL = pt(6.5)
+FS_TICK = pt(6.0)
+FS_BODY = pt(6.0)
+FS_FINE = pt(5.5)
+
+
+def _bold(text: str) -> str:
+    """Bold text under usetex, line by line so multi-line labels stay valid TeX."""
+    return "\n".join(r"\textbf{" + line + "}" for line in text.split("\n"))
+
 
 PRIM_MATH = {
     "pcdiamag3": r"$W_{\mathrm{dia}}$",
@@ -128,6 +146,32 @@ COEF_COLS = {
 }
 
 
+# Latin Modern ships optical sizes: at 5-8 pt it switches to the lmr5-lmr8
+# designs, which are 15-23% wider than lmr10 and overflow this fixed layout.
+# Declaring the families before their .fd files load pins every shape to the
+# 10 pt design, scaled; glyphs stay Latin Modern.
+LM_DESIGN_SIZE_PIN = (
+    r"\DeclareFontFamily{T1}{lmr}{}"
+    r"\DeclareFontShape{T1}{lmr}{m}{n}{<-> ec-lmr10}{}"
+    r"\DeclareFontShape{T1}{lmr}{m}{it}{<-> ec-lmri10}{}"
+    r"\DeclareFontShape{T1}{lmr}{bx}{n}{<-> ec-lmbx10}{}"
+    r"\DeclareFontShape{T1}{lmr}{bx}{it}{<-> ec-lmbxi10}{}"
+    r"\DeclareFontShape{T1}{lmr}{b}{n}{<->ssub * lmr/bx/n}{}"
+    r"\DeclareFontFamily{OT1}{lmr}{}"
+    r"\DeclareFontShape{OT1}{lmr}{m}{n}{<-> rm-lmr10}{}"
+    r"\DeclareFontShape{OT1}{lmr}{m}{it}{<-> rm-lmri10}{}"
+    r"\DeclareFontShape{OT1}{lmr}{bx}{n}{<-> rm-lmbx10}{}"
+    r"\DeclareFontShape{OT1}{lmr}{b}{n}{<->ssub * lmr/bx/n}{}"
+    r"\DeclareFontFamily{OML}{lmm}{\skewchar\font127 }"
+    r"\DeclareFontShape{OML}{lmm}{m}{it}{<-> lmmi10}{}"
+    r"\DeclareFontShape{OML}{lmm}{b}{it}{<-> lmmib10}{}"
+    r"\DeclareFontShape{OML}{lmm}{bx}{it}{<->ssub * lmm/b/it}{}"
+    r"\DeclareFontFamily{OMS}{lmsy}{\skewchar\font48 }"
+    r"\DeclareFontShape{OMS}{lmsy}{m}{n}{<-> lmsy10}{}"
+    r"\DeclareFontShape{OMS}{lmsy}{b}{n}{<-> lmbsy10}{}"
+)
+
+
 def _style() -> dict[str, object]:
     """Return a scoped print style without mutating caller-wide rcParams."""
     return {
@@ -137,25 +181,26 @@ def _style() -> dict[str, object]:
         "savefig.pad_inches": 0.0,
         "savefig.facecolor": WHITE,
         "savefig.transparent": False,
+        # Latin Modern throughout, typeset by LaTeX to match the manuscript.
+        "text.usetex": True,
         "font.family": "serif",
-        "font.serif": [
-            "Times New Roman",
-            "Tinos",
-            "Nimbus Roman No9 L",
-            "Liberation Serif",
-            "DejaVu Serif",
-        ],
-        # STIX supplies Times-compatible glyphs if the primary family lacks one.
-        "mathtext.fontset": "custom",
-        "mathtext.rm": "Times New Roman",
-        "mathtext.it": "Times New Roman:italic",
-        "mathtext.bf": "Times New Roman:bold",
-        "mathtext.sf": "Times New Roman",
-        "mathtext.fallback": "stix",
+        "text.latex.preamble": (
+            r"\usepackage[T1]{fontenc}"
+            r"\usepackage{lmodern}"
+            r"\usepackage{amsmath,amssymb}"
+            + LM_DESIGN_SIZE_PIN
+        ),
         "pdf.fonttype": 42,
         "ps.fonttype": 42,
-        "svg.fonttype": "none",
-        "font.size": 7.3,
+        "svg.fonttype": "path",
+        "font.size": FS_BODY,
+        "axes.labelsize": FS_LABEL,
+        "axes.titlesize": FS_PANEL_TITLE,
+        "xtick.labelsize": FS_TICK,
+        "ytick.labelsize": FS_TICK,
+        "legend.fontsize": FS_BODY,
+        "legend.title_fontsize": FS_BODY,
+        "figure.titlesize": FS_TITLE,
         "axes.linewidth": 0.6,
     }
 
@@ -197,21 +242,20 @@ def _node(
     ec=RULE,
     lw=0.8,
     ls="-",
-    fontsize=6.2,
+    fontsize=FS_BODY,
     color=INK,
-    weight="normal",
+    bold=False,
     z=4,
 ):
     _round_box(ax, x, y, w, h, fc, ec, lw=lw, ls=ls, z=z)
     ax.text(
         x,
         y,
-        text,
+        _bold(text) if bold else text,
         ha="center",
         va="center",
         fontsize=fontsize,
         color=color,
-        fontweight=weight,
         zorder=z + 1,
         clip_on=False,
     )
@@ -254,12 +298,11 @@ def _panel_title(ax, letter: str, title: str, task: str, color: str) -> None:
     ax.text(
         0.00,
         baseline_y,
-        letter,
+        _bold(letter),
         transform=ax.transAxes,
         ha="left",
         va="baseline",
-        fontsize=9.8,
-        fontweight="bold",
+        fontsize=FS_PANEL_LETTER,
         color=INK,
         clip_on=False,
         zorder=20,
@@ -267,12 +310,12 @@ def _panel_title(ax, letter: str, title: str, task: str, color: str) -> None:
     ax.text(
         0.060,
         baseline_y,
-        f"{title} ({task})",
+        # Math in the task contract stays regular weight, as in LaTeX headings.
+        _bold(f"{title} (") + task + _bold(")"),
         transform=ax.transAxes,
         ha="left",
         va="baseline",
-        fontsize=8.35,
-        fontweight="bold",
+        fontsize=FS_PANEL_TITLE,
         color=color,
         clip_on=False,
         zorder=20,
@@ -365,8 +408,6 @@ def _assert_invariants(coef, cls, held, folds, matrix):
 
 def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
     layout = PANEL_A_LAYOUT
-    fs = lambda size: size * layout.font_scale
-    gfs = lambda size: fs(size) * GRAY_TEXT_SCALE
     bs = lambda size: size * layout.box_scale
 
     _panel_title(
@@ -384,32 +425,29 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
     ax.text(
         0.11,
         header_y,
-        "Observed",
+        _bold("Observed"),
         ha="center",
         va="top",
-        fontsize=gfs(6.5),
+        fontsize=FS_BODY,
         color=SLATE,
-        fontweight="bold",
     )
     ax.text(
         0.53,
         header_y,
-        "Selected Coordinates",
+        _bold("Selected Coordinates"),
         ha="center",
         va="top",
-        fontsize=gfs(6.5),
+        fontsize=FS_BODY,
         color=SLATE,
-        fontweight="bold",
     )
     ax.text(
         0.91,
         header_y,
-        "Response",
+        _bold("Response"),
         ha="center",
         va="top",
-        fontsize=gfs(6.5),
+        fontsize=FS_BODY,
         color=SLATE,
-        fontweight="bold",
     )
 
     selected_engines = ["pcdiamag3", "betan", "kappa", "q95", "li"]
@@ -426,7 +464,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
             fc=WHITE,
             ec="#9FB0BE",
             lw=0.7,
-            fontsize=fs(7.15),
+            fontsize=FS_BODY,
         )
 
     unused_x, unused_y = PANEL_A_UNUSED_BOX_CENTER
@@ -445,12 +483,11 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
     ax.text(
         unused_x,
         unused_y + 0.19 * unused_h,
-        "Available,\nUnselected",
+        _bold("Available,\nUnselected"),
         ha="center",
         va="center",
-        fontsize=gfs(5.65),
+        fontsize=FS_BODY,
         color=UNUSED,
-        fontweight="bold",
         linespacing=1.06,
     )
     ax.text(
@@ -459,7 +496,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         r"$P_{\mathrm{NBI}}\quad n_e\quad I_p$",
         ha="center",
         va="center",
-        fontsize=gfs(6.20),
+        fontsize=FS_BODY,
         color=UNUSED,
     )
 
@@ -479,12 +516,11 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         ax.text(
             0.53,
             y,
-            text,
+            _bold(text),
             ha="center",
             va="center",
-            fontsize=fs(5.35),
+            fontsize=FS_BODY,
             color=GREEN,
-            fontweight="bold",
             zorder=6,
         )
 
@@ -499,7 +535,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         COORD_MATH["dot beta_N"],
         fc=GREEN_PALE,
         ec=GREEN_LIGHT,
-        fontsize=fs(6.65),
+        fontsize=FS_BODY,
     )
     c_dotk = _node(
         ax,
@@ -510,7 +546,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         COORD_MATH["dot kappa"],
         fc=GREEN_PALE,
         ec=GREEN_LIGHT,
-        fontsize=fs(6.65),
+        fontsize=FS_BODY,
     )
 
     pill(0.720, "Trajectory-Relational", 0.29)
@@ -523,7 +559,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         COORD_MATH["D_betaN kappa"],
         fc=WHITE,
         ec=GREEN_LIGHT,
-        fontsize=fs(6.55),
+        fontsize=FS_BODY,
     )
     c_dbl = _node(
         ax,
@@ -534,7 +570,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         COORD_MATH["D_betaN l_i"],
         fc=WHITE,
         ec=GREEN_LIGHT,
-        fontsize=fs(6.55),
+        fontsize=FS_BODY,
     )
 
     pill(0.550, "Target-Containing", 0.25)
@@ -547,7 +583,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         COORD_MATH["D_kappa W_dia"],
         fc="#FFFCF5",
         ec=GREEN,
-        fontsize=fs(6.45),
+        fontsize=FS_BODY,
         ls=(0, (2.4, 1.3)),
     )
     c_dbw = _node(
@@ -559,7 +595,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         COORD_MATH["D_betaN W_dia"],
         fc="#FFFCF5",
         ec=GREEN,
-        fontsize=fs(6.45),
+        fontsize=FS_BODY,
         ls=(0, (2.4, 1.3)),
     )
 
@@ -573,7 +609,7 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         COORD_MATH["q95 / kappa"],
         fc=WHITE,
         ec=GREEN_LIGHT,
-        fontsize=fs(6.55),
+        fontsize=FS_BODY,
     )
 
     coords = {
@@ -602,19 +638,17 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
         fc=GREEN_PALE,
         ec=GREEN,
         lw=1.0,
-        fontsize=fs(8.1),
-        weight="bold",
+        fontsize=FS_BODY,
         z=5,
     )
     ax.text(
         0.91,
         target_y - 0.5 * target_h - 0.025,
-        "Shared Support",
+        _bold("Shared Support"),
         ha="center",
         va="center",
-        fontsize=fs(5.45),
+        fontsize=FS_BODY,
         color=GREEN,
-        fontweight="bold",
     )
     for node, _ in coords.values():
         _curve(ax, node, target, color="#B7C6BE", lw=0.5, bend=0.0, z=2)
@@ -637,24 +671,23 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
     ax.text(
         form_x,
         form_y + 0.39 * form_h,
-        "Cohort-Mean Descriptive Form",
+        _bold("Cohort-Mean Descriptive Form"),
         ha="center",
         va="center",
-        fontsize=fs(6.15),
+        fontsize=FS_BODY,
         color=GREEN,
-        fontweight="bold",
         zorder=5,
     )
     equation_lines = [
-        rf"$\dot W_{{\rm dia}}={means['D_kappa W_dia']:.3f}D_\kappa^{{(s)}} W_{{\rm dia}}"
-        rf"{means['D_betaN W_dia']:+.3f}D_{{\beta_N}}^{{(s)}}W_{{\rm dia}}"
+        rf"$\dot W_{{\mathrm{{dia}}}}={means['D_kappa W_dia']:.3f}D_\kappa^{{(s)}} W_{{\mathrm{{dia}}}}"
+        rf"{means['D_betaN W_dia']:+.3f}D_{{\beta_N}}^{{(s)}}W_{{\mathrm{{dia}}}}"
         rf"{means['D_betaN kappa']:+.3f}D_{{\beta_N}}^{{(s)}}\kappa$",
         rf"${means['D_betaN l_i']:+.4f}D_{{\beta_N}}^{{(s)}}\ell_i"
-        rf"{means['q95 / kappa']:+.4f}\left(\frac{{q_{{95}}}}{{\kappa}}\right)^{{(s)}}"
+        rf"{means['q95 / kappa']:+.4f}(\tfrac{{q_{{95}}}}{{\kappa}})^{{(s)}}"
         rf"{means['dot beta_N']:+.4f}\dot\beta_N"
         rf"{means['dot kappa']:+.3f}\dot\kappa+\varepsilon$",
     ]
-    equation_offsets = (0.12, -0.07)
+    equation_offsets = (0.13, -0.09)
     for line, offset in zip(equation_lines, equation_offsets, strict=True):
         ax.text(
             form_x,
@@ -662,19 +695,18 @@ def _draw_panel_a(panel_ax: plt.Axes, coef: pd.DataFrame) -> None:
             line,
             ha="center",
             va="center",
-            fontsize=fs(5.35),
+            fontsize=FS_BODY,
             color=INK,
             zorder=5,
         )
     ax.text(
         form_x,
         form_y - 0.36 * form_h,
-        "62 discharges · shared support · discharge-specific coefficients",
+        r"62 discharges $\cdot$ shared support $\cdot$ discharge-specific coefficients",
         ha="center",
         va="center",
-        fontsize=gfs(4.35),
+        fontsize=FS_FINE,
         color=SLATE,
-        fontstyle="italic",
         zorder=5,
     )
 
@@ -686,8 +718,6 @@ def _draw_panel_b(
     het: pd.DataFrame,
 ) -> None:
     layout = PANEL_B_LAYOUT
-    fs = lambda size: size * layout.font_scale
-    gfs = lambda size: fs(size) * GRAY_TEXT_SCALE
     _panel_title(
         panel_ax,
         "b",
@@ -702,9 +732,8 @@ def _draw_panel_b(
         transform=panel_ax.transAxes,
         ha="left",
         va="top",
-        fontsize=gfs(5.05),
+        fontsize=FS_SUBTITLE,
         color=SLATE,
-        fontstyle="italic",
         clip_on=False,
         zorder=20,
     )
@@ -725,25 +754,24 @@ def _draw_panel_b(
     het = het.set_index("display_name")
 
     ax.text(
-        0.85,
+        0.835,
         1.005,
-        "Decision rule",
+        _bold("Decision rule"),
         transform=ax.transAxes,
         ha="center",
         va="top",
-        fontsize=fs(4.75),
+        fontsize=FS_BODY,
         color=GREEN,
-        fontweight="bold",
     )
     ax.text(
-        0.85,
+        0.835,
         0.966,
         "Resolved when between-discharge variation\n"
         "persists beyond within-discharge uncertainty",
         transform=ax.transAxes,
         ha="center",
         va="top",
-        fontsize=fs(4.15),
+        fontsize=FS_FINE,
         color=GREEN,
         linespacing=1.05,
     )
@@ -809,13 +837,13 @@ def _draw_panel_b(
         iax.set_xlim(vmin, vmax)
         iax.set_yticks([])
         iax.set_xticks([vmin, vmax])
-        iax.set_xticklabels([f"{vmin:.2g}", f"{vmax:.2g}"])
+        iax.set_xticklabels([f"${vmin:.2g}$", f"${vmax:.2g}$"])
         iax.set_xticks(np.linspace(vmin, vmax, 5)[1:-1], minor=True)
         iax.tick_params(
             axis="x",
             which="major",
             labelbottom=True,
-            labelsize=gfs(3.55),
+            labelsize=FS_FINE,
             labelcolor=SLATE,
             color="#AAB6BE",
             length=1.5,
@@ -846,12 +874,12 @@ def _draw_panel_b(
             transform=ax.transAxes,
             ha="left",
             va="center",
-            fontsize=fs(5.15),
+            fontsize=FS_BODY,
             color=INK,
         )
 
         ratio = float(het.loc[name, "heterogeneity_ratio"])
-        status = "Resolved" if robust else "Uncertainty\ndominated"
+        status = _bold("Resolved" if robust else "Uncertainty\ndominated")
         ax.text(
             0.79,
             y0 + 0.70 * row_h,
@@ -859,19 +887,18 @@ def _draw_panel_b(
             transform=ax.transAxes,
             ha="left",
             va="center",
-            fontsize=fs(4.25) if robust else gfs(4.25),
+            fontsize=FS_FINE,
             color=GREEN if robust else MID_SLATE,
-            fontweight="bold",
             linespacing=0.90,
         )
         ax.text(
             0.79,
             y0 + 0.10 * row_h,
-            rf"$H_r=\widehat{{s}}_{{B,r}}^{{\,2}}\,/\,\overline{{s}}_{{W,r}}^{{\,2}}={ratio:.2f}$",
+            rf"$H_r=\hat{{s}}_{{B,r}}^{{\,2}}\,/\,\overline{{s}}_{{W,r}}^{{\,2}}={ratio:.2f}$",
             transform=ax.transAxes,
             ha="left",
             va="center",
-            fontsize=gfs(4.05),
+            fontsize=FS_FINE,
             color=SLATE,
         )
 
@@ -879,29 +906,30 @@ def _draw_panel_b(
     unresolved_ratio = float(het.loc["D_kappa W_dia", "heterogeneity_ratio"])
     unresolved_tau2 = float(het.loc["D_kappa W_dia", "tau2_REML"])
     tau_text = (
-        r"$\tau^2_{\rm REML}=0$"
+        r"$\tau^2_{\mathrm{REML}}=0$"
         if np.isclose(unresolved_tau2, 0.0)
-        else rf"$\tau^2_{{\rm REML}}={unresolved_tau2:.2g}$"
+        else rf"$\tau^2_{{\mathrm{{REML}}}}={unresolved_tau2:.2g}$"
     )
     ax.text(
         0.01,
         0.082,
-        r"Native-scale histogram + KDE; range: observed min–max; diamond: random-effects mean $\mu_{\rm REML}$.",
+        r"Native-scale histogram + KDE; range: observed min--max; diamond: random-effects mean $\mu_{\mathrm{REML}}$.",
         transform=ax.transAxes,
         ha="left",
         va="top",
-        fontsize=gfs(4.45),
+        fontsize=FS_FINE,
         color=SLATE,
     )
     ax.text(
         0.01,
         0.027,
-        rf"$D_{{\beta_N}}\ell_i$ is resolved ($H_r={resolved_ratio:.2f}$, $\tau^2_{{\rm REML}}>0$); "
-        rf"$D_\kappa W_{{\rm dia}}$ is uncertainty-dominated ($H_r={unresolved_ratio:.2f}$, {tau_text}).",
+        rf"$D_{{\beta_N}}\ell_i$ is resolved ($H_r={resolved_ratio:.2f}$, $\tau^2_{{\mathrm{{REML}}}}>0$);"
+        "\n"
+        rf"$D_\kappa W_{{\mathrm{{dia}}}}$ is uncertainty-dominated ($H_r={unresolved_ratio:.2f}$, {tau_text}).",
         transform=ax.transAxes,
         ha="left",
         va="top",
-        fontsize=gfs(4.45),
+        fontsize=FS_FINE,
         color=NAVY,
         linespacing=1.05,
     )
@@ -912,46 +940,52 @@ def _coord_family(c: str) -> str:
 
 
 def _short_signal(s: str) -> str:
+    """Math-mode body (no surrounding $) for one signal in a support term.
+
+    Signals with an established physics symbol use it; diagnostic channel
+    identifiers are set upright with \\mathrm{}.
+    """
     mapping = {
-        "pcdiamag3": r"$W_{\rm dia}$",
-        "ece21": "ece21",
-        "cerqtit10": "cerTi10",
-        "prmtan_neped": r"$n_{e,{\rm ped}}$",
-        "cerqtit3": "cerTi3",
-        "tinj": r"$t_{\rm inj}$",
-        "ece20": "ece20",
-        "bt": r"$B_t$",
-        "ip": r"$I_p$",
-        "fs03da": r"D$\alpha$03",
-        "ece37": "ece37",
-        "ece39": "ece39",
-        "cerqtit6": "cerTi6",
-        "pinj": r"$P_{\rm inj}$",
-        "pinj_33r": r"$P_{33R}$",
-        "fs04": r"D$\alpha$04",
-        "cerqrott8": "cerV8",
+        "pcdiamag3": r"W_{\mathrm{dia}}",
+        "ece21": r"\mathrm{ece21}",
+        "cerqtit10": r"\mathrm{cerTi10}",
+        "prmtan_neped": r"n_{e,\mathrm{ped}}",
+        "cerqtit3": r"\mathrm{cerTi3}",
+        "tinj": r"t_{\mathrm{inj}}",
+        "ece20": r"\mathrm{ece20}",
+        "bt": r"B_t",
+        "ip": r"I_p",
+        "fs03da": r"\mathrm{D}\alpha\mathrm{03}",
+        "ece37": r"\mathrm{ece37}",
+        "ece39": r"\mathrm{ece39}",
+        "cerqtit6": r"\mathrm{cerTi6}",
+        "pinj": r"P_{\mathrm{inj}}",
+        "pinj_33r": r"P_{\mathrm{33R}}",
+        "fs04": r"\mathrm{D}\alpha\mathrm{04}",
+        "cerqrott8": r"\mathrm{cerV8}",
     }
-    return mapping.get(s, s)
+    return mapping.get(s, r"\mathrm{" + s.replace("_", r"\_") + "}")
 
 
 def _short_coord(c: str) -> str:
+    """Render one support term entirely in math mode."""
     if c.startswith("ID(") and c.endswith(")"):
-        return _short_signal(c[3:-1])
-    if c.startswith("RATIO(") and c.endswith(")"):
+        body = _short_signal(c[3:-1])
+    elif c.startswith("RATIO(") and c.endswith(")"):
         a, b = c[6:-1].split(",")
-        return f"{_short_signal(a)} / {_short_signal(b)}"
-    if c.startswith("RECIP(") and c.endswith(")"):
-        return f"1 / {_short_signal(c[6:-1])}"
-    if c.startswith("PROD(") and c.endswith(")"):
+        body = rf"{_short_signal(a)}\,/\,{_short_signal(b)}"
+    elif c.startswith("RECIP(") and c.endswith(")"):
+        body = rf"1\,/\,{_short_signal(c[6:-1])}"
+    elif c.startswith("PROD(") and c.endswith(")"):
         a, b = c[5:-1].split(",")
-        return f"{_short_signal(a)} × {_short_signal(b)}"
-    return c
+        body = rf"{_short_signal(a)}\times {_short_signal(b)}"
+    else:
+        body = r"\mathrm{" + c.replace("_", r"\_") + "}"
+    return f"${body}$"
 
 
 def _draw_panel_c(panel_ax: plt.Axes, matrix: pd.DataFrame) -> None:
     layout = PANEL_C_LAYOUT
-    fs = lambda size: size * layout.font_scale
-    gfs = lambda size: fs(size) * GRAY_TEXT_SCALE * LOWER_PANEL_GRAY_BOOST
     _panel_title(
         panel_ax,
         "c",
@@ -982,6 +1016,7 @@ def _draw_panel_c(panel_ax: plt.Axes, matrix: pd.DataFrame) -> None:
     rec_bar_left = 5.58
     rec_bar_max = 0.34
     rec_count_x = 6.24
+    TYPE_COLUMN_X = -2.17
 
     ax.set_xlim(-2.25, 6.65)
     ax.set_ylim(len(ordered) - 0.5, -1.70)
@@ -990,44 +1025,40 @@ def _draw_panel_c(panel_ax: plt.Axes, matrix: pd.DataFrame) -> None:
     ax.spines[:].set_visible(False)
 
     ax.text(
-        -2.05,
+        TYPE_COLUMN_X,
         -1.35,
-        "Type",
+        _bold("Type"),
         ha="left",
         va="center",
-        fontsize=gfs(4.65),
+        fontsize=FS_BODY,
         color=SLATE,
-        fontweight="bold",
     )
     ax.text(
         0.55,
         -1.35,
-        "Relational Term",
+        _bold("Relational Term"),
         ha="right",
         va="center",
-        fontsize=gfs(4.65),
+        fontsize=FS_BODY,
         color=SLATE,
-        fontweight="bold",
     )
     ax.text(
         np.mean(support_x),
         -1.35,
-        "Fold Support",
+        _bold("Fold Support"),
         ha="center",
         va="center",
-        fontsize=gfs(4.65),
+        fontsize=FS_BODY,
         color=SLATE,
-        fontweight="bold",
     )
     ax.text(
         rec_header_x,
         -1.35,
-        "Rec.",
+        _bold("Rec."),
         ha="center",
         va="center",
-        fontsize=gfs(4.65),
+        fontsize=FS_BODY,
         color=SLATE,
-        fontweight="bold",
     )
 
     for k, xk in enumerate(support_x):
@@ -1037,7 +1068,7 @@ def _draw_panel_c(panel_ax: plt.Axes, matrix: pd.DataFrame) -> None:
             f"F{k + 1}",
             ha="center",
             va="center",
-            fontsize=gfs(4.55),
+            fontsize=FS_FINE,
             color=SLATE,
         )
 
@@ -1048,14 +1079,13 @@ def _draw_panel_c(panel_ax: plt.Axes, matrix: pd.DataFrame) -> None:
         edge, face = family_palette.get(family, (MID_SLATE, BLUE_LIGHT))
 
         ax.text(
-            -2.05,
+            TYPE_COLUMN_X,
             i,
-            family.lower(),
+            _bold(family.lower()),
             ha="left",
             va="center",
-            fontsize=fs(4.30) if family in family_palette else gfs(4.30),
+            fontsize=FS_FINE,
             color=edge,
-            fontweight="bold",
         )
         ax.text(
             0.55,
@@ -1063,7 +1093,7 @@ def _draw_panel_c(panel_ax: plt.Axes, matrix: pd.DataFrame) -> None:
             _short_coord(term),
             ha="right",
             va="center",
-            fontsize=fs(4.25),
+            fontsize=FS_FINE,
             color=INK,
         )
 
@@ -1110,12 +1140,11 @@ def _draw_panel_c(panel_ax: plt.Axes, matrix: pd.DataFrame) -> None:
         ax.text(
             rec_count_x,
             i,
-            str(int(recurrent[term])),
+            _bold(str(int(recurrent[term]))),
             ha="center",
             va="center",
-            fontsize=fs(4.45) if int(recurrent[term]) >= 4 else gfs(4.45),
+            fontsize=FS_FINE,
             color=INK if int(recurrent[term]) >= 4 else MID_SLATE,
-            fontweight="bold",
         )
 
     legend_items = [
@@ -1145,7 +1174,7 @@ def _draw_panel_c(panel_ax: plt.Axes, matrix: pd.DataFrame) -> None:
             transform=footer.transAxes,
             ha="left",
             va="center",
-            fontsize=gfs(4.35),
+            fontsize=FS_BODY,
             color=SLATE,
         )
 
@@ -1157,7 +1186,7 @@ def _draw_panel_c(panel_ax: plt.Axes, matrix: pd.DataFrame) -> None:
         transform=footer.transAxes,
         ha="center",
         va="top",
-        fontsize=gfs(4.40),
+        fontsize=FS_FINE,
         color=SLATE,
         linespacing=1.05,
     )
@@ -1169,7 +1198,7 @@ def _draw_panel_c(panel_ax: plt.Axes, matrix: pd.DataFrame) -> None:
         transform=footer.transAxes,
         ha="center",
         va="top",
-        fontsize=fs(5.5),
+        fontsize=FS_FINE,
         color=NAVY,
         linespacing=1.08,
     )
@@ -1177,8 +1206,6 @@ def _draw_panel_c(panel_ax: plt.Axes, matrix: pd.DataFrame) -> None:
 
 def _draw_panel_d(panel_ax: plt.Axes, held: pd.DataFrame) -> None:
     layout = PANEL_D_LAYOUT
-    fs = lambda size: size * layout.font_scale
-    gfs = lambda size: fs(size) * GRAY_TEXT_SCALE * LOWER_PANEL_GRAY_BOOST
     _panel_title(
         panel_ax,
         "d",
@@ -1244,7 +1271,7 @@ def _draw_panel_d(panel_ax: plt.Axes, held: pd.DataFrame) -> None:
         bbox_to_anchor=(0.095, 0.995),
         ncol=3,
         frameon=False,
-        fontsize=fs(4.55),
+        fontsize=FS_BODY,
         handletextpad=0.35,
         columnspacing=0.85,
         borderaxespad=0.0,
@@ -1252,13 +1279,16 @@ def _draw_panel_d(panel_ax: plt.Axes, held: pd.DataFrame) -> None:
     container.text(
         0.985,
         0.995,
-        f"mean NRMSE  {mean_y:.3f} vs {mean_x:.3f}\nW / T / L  {wins} / {ties} / {losses}",
+        _bold(
+            rf"mean NRMSE\enspace {mean_y:.3f} vs {mean_x:.3f}"
+            "\n"
+            rf"W / T / L\enspace {wins} / {ties} / {losses}"
+        ),
         transform=container.transAxes,
         ha="right",
         va="top",
-        fontsize=fs(4.85),
+        fontsize=FS_BODY,
         color=NAVY,
-        fontweight="bold",
         linespacing=1.12,
         bbox=dict(
             boxstyle="round,pad=0.24",
@@ -1308,9 +1338,9 @@ def _draw_panel_d(panel_ax: plt.Axes, held: pd.DataFrame) -> None:
 
     ax.set_xlim(0, 0.70)
     ax.set_ylim(0, 1.00)
-    ax.set_xlabel("Persistence NRMSE", fontsize=fs(6.0), labelpad=2)
-    ax.set_ylabel("Relational NRMSE", fontsize=fs(6.0), labelpad=2)
-    ax.tick_params(labelsize=fs(5.25), length=2.5, width=0.55)
+    ax.set_xlabel("Persistence NRMSE", fontsize=FS_LABEL, labelpad=2)
+    ax.set_ylabel("Relational NRMSE", fontsize=FS_LABEL, labelpad=2)
+    ax.tick_params(labelsize=FS_TICK, length=2.5, width=0.55)
     ax.grid(True, color=GRID, lw=0.42, alpha=0.75)
     ax.set_axisbelow(True)
     ax.spines[["top", "right"]].set_visible(False)
@@ -1318,13 +1348,12 @@ def _draw_panel_d(panel_ax: plt.Axes, held: pd.DataFrame) -> None:
     ax.text(
         0.96,
         0.055,
-        "Relational lower error",
+        _bold("Relational lower error"),
         transform=ax.transAxes,
         ha="right",
         va="bottom",
-        fontsize=fs(4.85),
+        fontsize=FS_BODY,
         color=GREEN,
-        fontweight="bold",
     )
     ax.text(
         0.04,
@@ -1333,41 +1362,43 @@ def _draw_panel_d(panel_ax: plt.Axes, held: pd.DataFrame) -> None:
         transform=ax.transAxes,
         ha="left",
         va="top",
-        fontsize=fs(4.75),
+        fontsize=FS_BODY,
         color=LOSS,
     )
 
     container.text(
         0.125,
         0.905,
-        f"Earlier mean Δ = {early_delta:+.4f}  ·  later mean Δ = {late_delta:+.4f}",
+        rf"Earlier mean $\Delta = {early_delta:+.4f}$ $\;\cdot\;$ later mean $\Delta = {late_delta:+.4f}$",
         transform=container.transAxes,
         ha="left",
         va="top",
-        fontsize=gfs(4.35),
+        fontsize=FS_BODY,
         color=SLATE,
     )
-    container.text(
+    footnote = container.text(
         0.05,
         0.130,
-        "62 out-of-fold discharges · finite-object, target-cross-fitted qualification",
+        r"62 out-of-fold discharges $\cdot$ finite-object, target-cross-fitted qualification",
         transform=container.transAxes,
         ha="left",
         va="top",
-        fontsize=gfs(5),
+        fontsize=FS_FINE,
         color=NAVY,
-        fontstyle="italic",
     )
+    # Centre the second line under the first; its width depends on the TeX metrics.
+    footnote_box = footnote.get_window_extent(
+        container.figure.canvas.get_renderer()
+    ).transformed(container.transAxes.inverted())
     container.text(
-        0.4,
+        0.5 * (footnote_box.x0 + footnote_box.x1),
         0.095,
         "not external validation",
         transform=container.transAxes,
-        ha="left",
+        ha="center",
         va="top",
-        fontsize=gfs(5),
+        fontsize=FS_FINE,
         color=NAVY,
-        fontstyle="italic",
     )
 
 
@@ -1398,22 +1429,20 @@ def _build_figure(
     fig.text(
         0.50,
         0.975,
-        "DIII-D: Task-Conditioned Relational Discovery",
+        _bold("DIII-D: Task-Conditioned Relational Discovery"),
         ha="center",
         va="top",
-        fontsize=11.4,
+        fontsize=FS_TITLE,
         color=INK,
-        fontweight="bold",
     )
     fig.text(
         0.50,
         0.945,
-        r"One 62-discharge observational record $\;\rightarrow\;$ Distinct qualified organizations under $q_{\rm desc}$ and $q_{\rm rec}$",
+        r"One 62-discharge observational record $\;\rightarrow\;$ Distinct qualified organizations under $q_{\mathrm{desc}}$ and $q_{\mathrm{rec}}$",
         ha="center",
         va="top",
-        fontsize=GLOBAL_SUBTITLE_FONTSIZE,
+        fontsize=FS_SUBTITLE,
         color=SLATE,
-        fontstyle="italic",
     )
 
     _draw_panel_a(ax_a, coef)

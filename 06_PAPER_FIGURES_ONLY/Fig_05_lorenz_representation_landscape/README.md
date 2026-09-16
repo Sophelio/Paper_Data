@@ -18,6 +18,8 @@ Verified: the v5_nature script declares this exact stem. The v4 version and both
 
 Updated 2026-09-16 to the latest v5_nature revision (typography and layout only; frozen inputs unchanged). Re-running the bundled script against `figure_source_data/` reproduces the bundled PNG pixel-for-pixel. Without `--data-dir`, the script looks for `fig5data/` beside itself.
 
+**Polished 2026-09-16** (see `../README.md`).
+
 ## Are the plotted values exact?
 
 Plotted values are read from the frozen fig5data package; `PROVENANCE_MANIFEST.json` there records their origin.

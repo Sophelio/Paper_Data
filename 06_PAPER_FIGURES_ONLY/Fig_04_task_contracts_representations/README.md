@@ -5,11 +5,11 @@ Task contracts and the mathematical representations they induce, one row.
 | | |
 |---|---|
 | manuscript figure | **Figure 4** |
-| final asset | `figure4_task_contracts_mathematical_representations_nature_one_row.pdf` |
-| generation script | `figure4_task_contracts_mathematical_representations_nature_one_row.py` |
-| input data | panel_data.py (module-level panel definitions) |
+| final asset | `figure4_task_contracts_mathematical_representations_nature_one_row.pdf` (+ `.png`, `.svg`) |
+| generation script | `figure4_task_contracts_mathematical_representations_nature_one_row.py` + required helper `figure4_task_contracts_mathematical_representations_nature.py` |
+| input data | `figure_source/manifest.csv` (read by the helper, which recomputes the pendulum and heat-equation fits); `panel_data.py` is bundled but not imported |
 | source run | SIR-PENDULUM |
-| regenerate | `python figure_source/figure4_task_contracts_mathematical_representations_nature_one_row.py` |
+| regenerate | `python figure_source/figure4_task_contracts_mathematical_representations_nature_one_row.py` (writes to `figure_source/figs/`) |
 | expected output | `figure4_task_contracts_mathematical_representations_nature_one_row.pdf` (plus .svg/.png where the script emits them) |
 
 ## Provenance note
@@ -18,7 +18,9 @@ Task contracts and the mathematical representations they induce, one row.
 
 ## Are the plotted values exact?
 
-Panel values come from `panel_data.py`, bundled alongside.
+Panel values are recomputed at render time by the helper from `manifest.csv`. The script prints the key scientific values, and these were unchanged by the 2026-09-16 polish.
+
+**Polished 2026-09-16** (see `../README.md`). The helper module and its `manifest.csv` were added to `figure_source/` because the one_row script cannot run without them. They were previously missing from this package. The helper is an unedited, verbatim copy of the working-folder file; the one_row script overrides its style. `manifest.csv` is byte-identical to `02_CONTROLLED_STUDIES/04_Pendulum_Task_Conditioning/manifest.csv`.
 
 ## Files here
 
