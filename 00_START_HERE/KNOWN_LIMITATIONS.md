@@ -59,8 +59,9 @@ not *missing*. See `ACCESS_AND_LICENSE.md`.
 - No frozen paired-bootstrap interval for Δ₁; per-discharge Δⱼ is present, so it
   is computable.
 - Spline and RTS numerical realizations are untied to a frozen run manifest.
-- The Figure 1 script → asset mapping is **ambiguous**; both candidate scripts
-  are bundled.
+- The Figure 1 script → asset mapping, formerly ambiguous, was **resolved on
+  2026-09-16**: the bundled asset is the render of `_final.py`. Both scripts
+  remain bundled for lineage.
 
 All are itemised in `90_AUDIT_REPORTS/missing_artifacts.csv` and
 `ambiguous_artifacts.csv`.

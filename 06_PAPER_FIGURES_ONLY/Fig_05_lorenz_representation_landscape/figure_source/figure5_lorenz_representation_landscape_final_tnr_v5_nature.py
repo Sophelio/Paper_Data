@@ -34,6 +34,7 @@ import matplotlib as mpl
 mpl.use("Agg")
 
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 import numpy as np
 import pandas as pd
 
@@ -88,17 +89,17 @@ STYLE: Final = {
     "pdf.fonttype": 42,
     "ps.fonttype": 42,
     "svg.fonttype": "none",
-    "font.size": 6.6,
-    "axes.labelsize": 7.0,
-    "axes.titlesize": 7.6,
+    "font.size": 6.9,
+    "axes.labelsize": 7.4,
+    "axes.titlesize": 8.0,
     "axes.titleweight": "semibold",
     "axes.labelcolor": INK,
     "axes.edgecolor": INK,
     "axes.linewidth": 0.65,
     "axes.spines.top": False,
     "axes.spines.right": False,
-    "xtick.labelsize": 6.3,
-    "ytick.labelsize": 6.3,
+    "xtick.labelsize": 6.65,
+    "ytick.labelsize": 6.65,
     "xtick.color": INK,
     "ytick.color": INK,
     "xtick.direction": "out",
@@ -107,7 +108,7 @@ STYLE: Final = {
     "ytick.major.size": 2.5,
     "xtick.major.width": 0.6,
     "ytick.major.width": 0.6,
-    "legend.fontsize": 6.2,
+    "legend.fontsize": 6.4,
     "lines.solid_capstyle": "round",
     "lines.solid_joinstyle": "round",
 }
@@ -533,7 +534,7 @@ def add_panel_header(
         label,
         ha="left",
         va="baseline",
-        fontsize=8.2,
+        fontsize=8.5,
         fontweight="bold",
         color=INK,
     )
@@ -543,7 +544,7 @@ def add_panel_header(
         title,
         ha="left",
         va="baseline",
-        fontsize=7.6,
+        fontsize=8.0,
         fontweight="semibold",
         color=INK,
     )
@@ -553,7 +554,7 @@ def add_panel_header(
         subtitle,
         ha="left",
         va="baseline",
-        fontsize=5.55,
+        fontsize=6.0,
         color=MID,
     )
 
@@ -562,7 +563,7 @@ def draw_panel_a(fig: plt.Figure, slot, data: FigureData) -> None:
     # Give the attractor most of the cell and use the lower strip only for the
     # recovered equations.  The tighter split avoids the unused vertical band
     # produced by a square 3D axes inside this narrow panel.
-    sub = slot.subgridspec(2, 1, height_ratios=[0.76, 0.24], hspace=0.0)
+    sub = slot.subgridspec(2, 1, height_ratios=[0.80, 0.20], hspace=0.0)
     ax = fig.add_subplot(sub[0], projection="3d")
     text_ax = fig.add_subplot(sub[1])
     text_ax.set_axis_off()
@@ -571,10 +572,18 @@ def draw_panel_a(fig: plt.Figure, slot, data: FigureData) -> None:
     y = data.attractor["y"].to_numpy()
     z = data.attractor["z"].to_numpy()
     ax.set_proj_type("ortho")
-    ax.plot(x, y, z, color="#263A59", lw=0.34, alpha=0.95)
+    ax.plot(
+        x,
+        y,
+        z,
+        color="#263A59",
+        lw=0.40,
+        alpha=0.95,
+        clip_on=True,
+    )
     ax.set_axis_off()
     ax.view_init(elev=16, azim=-62)
-    ax.set_box_aspect((np.ptp(x), np.ptp(y), np.ptp(z) * 0.90), zoom=1.60)
+    ax.set_box_aspect((np.ptp(x), np.ptp(y), np.ptp(z) * 0.90), zoom=1.50)
 
     dy = data.recovery["equations"]["dy"]["recovered_coefficients"]
     dz = data.recovery["equations"]["dz"]["recovered_coefficients"]
@@ -589,19 +598,20 @@ def draw_panel_a(fig: plt.Figure, slot, data: FigureData) -> None:
         equations,
         ha="center",
         va="top",
-        fontsize=7.8,
+        fontsize=8.1,
         color=INK,
         linespacing=1.16,
     )
     text_ax.text(
         0.50,
-        0.02,
-        "Exact support recovered; max. "
-        + rf"$|\Delta c|={data.recovery['max_abs_coefficient_deviation']:.1e}$",
+        -0.68,
+        "Exact support recovered; "
+        + rf"$\|\Delta\mathbf{{c}}\|_\infty={data.recovery['max_abs_coefficient_deviation']:.1e}$",
         ha="center",
         va="bottom",
-        fontsize=6.15,
+        fontsize=6.5,
         color=MID,
+        clip_on=False,
     )
 
 
@@ -617,14 +627,23 @@ def draw_panel_b(ax: plt.Axes, landscape: pd.DataFrame) -> None:
         x[frontier][order],
         y[frontier][order],
         color="#555B63",
-        lw=1.45,
-        linestyle=(0, (3.2, 1.8)),
+        lw=1.55,
+        linestyle=(0, (4.0, 2.0)),
         marker="o",
         markersize=3.4,
         markerfacecolor="white",
         markeredgecolor="#555B63",
         markeredgewidth=0.75,
         zorder=4,
+        label="Pareto frontier",
+    )
+    frontier_legend = Line2D(
+        [0],
+        [0],
+        color="#555B63",
+        lw=1.65,
+        linestyle=(0, (4.0, 2.0)),
+        dash_capstyle="butt",
         label="Pareto frontier",
     )
     ax.errorbar(
@@ -683,7 +702,7 @@ def draw_panel_b(ax: plt.Axes, landscape: pd.DataFrame) -> None:
         xytext=(1.6, 0.16),
         ha="left",
         va="center",
-        fontsize=5.8,
+        fontsize=6.05,
         linespacing=1.12,
         color=COLORS["C0_poly2"],
         bbox=dict(boxstyle="round,pad=0.20", fc="white", ec="#D3A27E", lw=0.6),
@@ -703,7 +722,7 @@ def draw_panel_b(ax: plt.Axes, landscape: pd.DataFrame) -> None:
         xytext=(14.3, 1.8e-3),
         ha="left",
         va="center",
-        fontsize=5.8,
+        fontsize=6.05,
         linespacing=1.15,
         color=COLORS["C_compact"],
         bbox=dict(boxstyle="round,pad=0.20", fc="white", ec="#8CB9AA", lw=0.6),
@@ -720,10 +739,10 @@ def draw_panel_b(ax: plt.Axes, landscape: pd.DataFrame) -> None:
         "Accuracy and robustness criteria\n"
         r"$C_{\rm all}$: 38 coordinates",
         xy=(all_rep["n_coordinates"], all_rep["cv_rmse_mean"]),
-        xytext=(24.0, 2.2e-4),
+        xytext=(26.5, 2.2e-4),
         ha="left",
         va="center",
-        fontsize=5.8,
+        fontsize=6.05,
         linespacing=1.15,
         color=COLORS["C_all"],
         bbox=dict(boxstyle="round,pad=0.20", fc="white", ec="#8EB0C8", lw=0.6),
@@ -740,7 +759,7 @@ def draw_panel_b(ax: plt.Axes, landscape: pd.DataFrame) -> None:
         r"$C_0+Q_{\dot y|x}$",
         xy=(one_q["n_coordinates"], one_q["cv_rmse_mean"]),
         xytext=(13.5, 1.4),
-        fontsize=5.7,
+        fontsize=6.0,
         color=MID,
         arrowprops=dict(arrowstyle="-", color=LIGHT, lw=0.55),
     )
@@ -754,23 +773,23 @@ def draw_panel_b(ax: plt.Axes, landscape: pd.DataFrame) -> None:
     ax.grid(axis="y", which="major", color=RULE, lw=0.45, zorder=0)
     ax.set_axisbelow(True)
     ax.legend(
-        handles=[frontier_line],
+        handles=[frontier_legend],
         loc="upper right",
         bbox_to_anchor=(0.995, 0.995),
         frameon=False,
-        handlelength=2.6,
-        handletextpad=0.55,
+        handlelength=4.4,
+        handletextpad=0.65,
         borderaxespad=0.0,
-        fontsize=5.8,
+        fontsize=6.2,
     )
     ax.text(
         0.985,
         0.905,
-        "Error bars: mean ± s.e.",
+        "Error bars: mean ± SE",
         transform=ax.transAxes,
         ha="right",
         va="top",
-        fontsize=5.3,
+        fontsize=5.75,
         color=MID,
     )
 
@@ -851,7 +870,7 @@ def draw_panel_c(
         transform=ax.transAxes,
         ha="right",
         va="top",
-        fontsize=6.0,
+        fontsize=6.25,
         color=INK,
         linespacing=1.15,
     )
@@ -862,7 +881,7 @@ def draw_panel_c(
         transform=ax.transAxes,
         ha="right",
         va="top",
-        fontsize=5.25,
+        fontsize=5.75,
         color=MID,
         linespacing=1.15,
     )
@@ -912,7 +931,7 @@ def draw_panel_d(ax: plt.Axes, bootstrap: BootstrapResult) -> None:
             textcoords="offset points",
             ha="left",
             va="center",
-            fontsize=5.9,
+            fontsize=6.15,
             fontweight="semibold" if rep == "C_all" else "normal",
             color=COLORS[rep],
             clip_on=False,
@@ -931,10 +950,10 @@ def draw_panel_d(ax: plt.Axes, bootstrap: BootstrapResult) -> None:
     ax.text(
         0.39,
         3.68,
-        "compact–quadratic\ncrossover ≈ 0.45%",
+        "Compact–Quadratic\ncrossover ≈ 0.45%",
         ha="right",
         va="bottom",
-        fontsize=5.25,
+        fontsize=5.75,
         color=MID,
         linespacing=1.1,
     )
@@ -954,7 +973,7 @@ def draw_panel_d(ax: plt.Axes, bootstrap: BootstrapResult) -> None:
         transform=ax.transAxes,
         ha="left",
         va="top",
-        fontsize=5.85,
+        fontsize=6.15,
         color=COLORS["C_all"],
         linespacing=1.18,
         bbox=dict(boxstyle="round,pad=0.22", fc=PALE_BLUE, ec="#A9C1D3", lw=0.55),
@@ -967,7 +986,7 @@ def draw_panel_d(ax: plt.Axes, bootstrap: BootstrapResult) -> None:
         transform=ax.transAxes,
         ha="right",
         va="bottom",
-        fontsize=5.3,
+        fontsize=5.75,
         color=MID,
     )
 
@@ -1031,7 +1050,7 @@ def build_figure(data: FigureData, bootstrap: BootstrapResult) -> plt.Figure:
         "Development data select representations; the protected confirmation cohort is used only for evaluation.",
         ha="center",
         va="bottom",
-        fontsize=5.35,
+        fontsize=5.75,
         color=MID,
     )
     return fig

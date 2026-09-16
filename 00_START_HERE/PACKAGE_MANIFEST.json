@@ -1,8 +1,8 @@
 {
  "record_id": "SIR_PAPER_DATA_MANIFEST_V1",
- "generated_utc": "2026-09-16T03:25:15.819616+00:00",
- "n_files": 1587,
- "total_bytes": 587275650,
+ "generated_utc": "2026-09-16T17:00:57.063269+00:00",
+ "n_files": 1594,
+ "total_bytes": 595958025,
  "files": [
   {
    "package_path": "01_MANUSCRIPT_SNAPSHOT/main_manuscript/SIR_paper_2026-09-02.pdf",
@@ -19831,16 +19831,42 @@
   },
   {
    "package_path": "06_PAPER_FIGURES_ONLY/Fig_01_admissible_relational_space/admissible_relational_space_hierarchical_v15_metaball.pdf",
-   "original_path": "D:\\SIR_paper\\Figures\\figs\\admissible_relational_space_hierarchical_v15_metaball.pdf",
-   "size_bytes": 100906,
-   "sha256": "97a326d65c4c620c1851d92f9a43e47af726286111130a8437619309892298e1",
-   "modified_utc": "2026-09-07T20:41:58.388648+00:00",
+   "original_path": "/Users/ganatma/SapientAI/Documents/Papers/figures/figs/admissible_relational_space_hierarchical_v15_metaball.pdf",
+   "size_bytes": 100915,
+   "sha256": "7024617213cf80c3d00f59d70b88b5289746a06c21dbcd1fc3fab5d99f8dfc51",
+   "modified_utc": "2026-09-09T18:03:32.468881+00:00",
    "category": "figure",
    "paper_sections": "main manuscript",
    "run_id": "",
    "status": "CANONICAL_FIGURE_ASSET",
    "redistributable": "yes",
-   "notes": "AMBIGUOUS script->asset mapping; see README and 90_AUDIT_REPORTS/ambiguous_artifacts.csv."
+   "notes": "Rendered 2026-09-09 by ..._metaball_final.py (byte-identical to the working-folder script); resolves the former AMBIGUOUS mapping. Updated 2026-09-16 from the Documents/Papers/figures working folder."
+  },
+  {
+   "package_path": "06_PAPER_FIGURES_ONLY/Fig_01_admissible_relational_space/admissible_relational_space_hierarchical_v15_metaball.png",
+   "original_path": "/Users/ganatma/SapientAI/Documents/Papers/figures/figs/admissible_relational_space_hierarchical_v15_metaball.png",
+   "size_bytes": 3365076,
+   "sha256": "32e787666e95ab8234fc89f3b8cf2bb59c8ff3f8078bec53bdb2ace5fcaccd58",
+   "modified_utc": "2026-09-09T18:03:34.475224+00:00",
+   "category": "figure",
+   "paper_sections": "main manuscript",
+   "run_id": "",
+   "status": "CANONICAL_FIGURE_ASSET",
+   "redistributable": "yes",
+   "notes": "Rendered 2026-09-09 by ..._metaball_final.py (byte-identical to the working-folder script); resolves the former AMBIGUOUS mapping. Updated 2026-09-16 from the Documents/Papers/figures working folder."
+  },
+  {
+   "package_path": "06_PAPER_FIGURES_ONLY/Fig_01_admissible_relational_space/admissible_relational_space_hierarchical_v15_metaball.svg",
+   "original_path": "/Users/ganatma/SapientAI/Documents/Papers/figures/figs/admissible_relational_space_hierarchical_v15_metaball.svg",
+   "size_bytes": 356160,
+   "sha256": "485ed396a2687224b10be21e05841c16e16a8300a43a96b487274c2a474d358e",
+   "modified_utc": "2026-09-09T18:03:32.605533+00:00",
+   "category": "figure",
+   "paper_sections": "main manuscript",
+   "run_id": "",
+   "status": "CANONICAL_FIGURE_ASSET",
+   "redistributable": "yes",
+   "notes": "Rendered 2026-09-09 by ..._metaball_final.py (byte-identical to the working-folder script); resolves the former AMBIGUOUS mapping. Updated 2026-09-16 from the Documents/Papers/figures working folder."
   },
   {
    "package_path": "06_PAPER_FIGURES_ONLY/Fig_01_admissible_relational_space/figure_source/admissible_relational_space_hierarchical_v15_metaball.py",
@@ -19851,22 +19877,22 @@
    "category": "figure_script",
    "paper_sections": "main manuscript",
    "run_id": "",
-   "status": "CANONICAL_FIGURE_SCRIPT",
+   "status": "SUPERSEDED_FIGURE_SCRIPT",
    "redistributable": "yes",
-   "notes": "AMBIGUOUS script->asset mapping; see README and 90_AUDIT_REPORTS/ambiguous_artifacts.csv."
+   "notes": "Superseded by ..._metaball_final.py (differs only in a patch edge colour/linewidth); retained for lineage. The bundled asset was rendered by _final.py."
   },
   {
    "package_path": "06_PAPER_FIGURES_ONLY/Fig_01_admissible_relational_space/figure_source/admissible_relational_space_hierarchical_v15_metaball_final.py",
-   "original_path": "D:\\SIR_paper\\General\\admissible_relational_space_hierarchical_v15_metaball_final.py",
+   "original_path": "/Users/ganatma/SapientAI/Documents/Papers/figures/admissible_relational_space_hierarchical_v15_metaball.py",
    "size_bytes": 31060,
    "sha256": "369d8795b3e97f374761fe02d95d3bf02de317b7d78764dfd523bff65a46569c",
-   "modified_utc": "2026-09-09T18:16:12.932406+00:00",
+   "modified_utc": "2026-09-09T18:03:05.169200+00:00",
    "category": "figure_script",
    "paper_sections": "main manuscript",
    "run_id": "",
    "status": "CANONICAL_FIGURE_SCRIPT",
    "redistributable": "yes",
-   "notes": "AMBIGUOUS script->asset mapping; see README and 90_AUDIT_REPORTS/ambiguous_artifacts.csv."
+   "notes": "Rendered 2026-09-09 by ..._metaball_final.py (byte-identical to the working-folder script); resolves the former AMBIGUOUS mapping. Updated 2026-09-16 from the Documents/Papers/figures working folder."
   },
   {
    "package_path": "06_PAPER_FIGURES_ONLY/Fig_02_phase_turning_manifold/figure_source/phase_turning_manifold_sensitivity_centered_with_x2_purple_v8.py",
@@ -19895,6 +19921,32 @@
    "notes": "v8 script writes this exact stem."
   },
   {
+   "package_path": "06_PAPER_FIGURES_ONLY/Fig_02_phase_turning_manifold/phase_turning_manifold_sensitivity_centered_with_x2_purple_v8.png",
+   "original_path": "/Users/ganatma/SapientAI/Documents/Papers/figures/phase_turning_manifold_sensitivity_centered_with_x2_purple_v8.png",
+   "size_bytes": 1357503,
+   "sha256": "1d031e19fbc3f75ad4282c69505c0053a996c5a26df8d702e20b79d3cea1e87a",
+   "modified_utc": "2026-09-10T16:15:41.103948+00:00",
+   "category": "figure",
+   "paper_sections": "main manuscript",
+   "run_id": "",
+   "status": "CANONICAL_FIGURE_ASSET",
+   "redistributable": "yes",
+   "notes": "v8 script writes this exact stem. Same-stem PNG/SVG variant added 2026-09-16 from the Documents/Papers/figures working folder."
+  },
+  {
+   "package_path": "06_PAPER_FIGURES_ONLY/Fig_02_phase_turning_manifold/phase_turning_manifold_sensitivity_centered_with_x2_purple_v8.svg",
+   "original_path": "/Users/ganatma/SapientAI/Documents/Papers/figures/phase_turning_manifold_sensitivity_centered_with_x2_purple_v8.svg",
+   "size_bytes": 519399,
+   "sha256": "117013d35de2ea9f770bc4efc19983cbeee53be4e184ec3361f3d9fc481af046",
+   "modified_utc": "2026-09-10T16:15:40.853944+00:00",
+   "category": "figure",
+   "paper_sections": "main manuscript",
+   "run_id": "",
+   "status": "CANONICAL_FIGURE_ASSET",
+   "redistributable": "yes",
+   "notes": "v8 script writes this exact stem. Same-stem PNG/SVG variant added 2026-09-16 from the Documents/Papers/figures working folder."
+  },
+  {
    "package_path": "06_PAPER_FIGURES_ONLY/Fig_04_task_contracts_representations/figure4_task_contracts_mathematical_representations_nature_one_row.pdf",
    "original_path": "D:\\SIR_paper\\Figures\\figs\\figure4_task_contracts_mathematical_representations_nature_one_row.pdf",
    "size_bytes": 190928,
@@ -19906,6 +19958,19 @@
    "status": "CANONICAL_FIGURE_ASSET",
    "redistributable": "yes",
    "notes": "Script writes to Pendulum/Plotter/figs; the asset was moved to Figures/figs by hand. Manual relocation step recorded."
+  },
+  {
+   "package_path": "06_PAPER_FIGURES_ONLY/Fig_04_task_contracts_representations/figure4_task_contracts_mathematical_representations_nature_one_row.png",
+   "original_path": "/Users/ganatma/SapientAI/Documents/Papers/figures/figs/figure4_task_contracts_mathematical_representations_nature_one_row.png",
+   "size_bytes": 764267,
+   "sha256": "e37c6545331228459420fb1630facf2709df2aefb44046da4fba5b81d5727074",
+   "modified_utc": "2026-09-12T20:43:36.768765+00:00",
+   "category": "figure",
+   "paper_sections": "main manuscript",
+   "run_id": "",
+   "status": "CANONICAL_FIGURE_ASSET",
+   "redistributable": "yes",
+   "notes": "Script writes to Pendulum/Plotter/figs; the asset was moved to Figures/figs by hand. Manual relocation step recorded. PNG variant added 2026-09-16 from the Documents/Papers/figures working folder."
   },
   {
    "package_path": "06_PAPER_FIGURES_ONLY/Fig_04_task_contracts_representations/figure4_task_contracts_mathematical_representations_nature_one_row.svg",
@@ -19948,29 +20013,55 @@
   },
   {
    "package_path": "06_PAPER_FIGURES_ONLY/Fig_05_lorenz_representation_landscape/figure5_lorenz_representation_landscape_final_tnr_v5_nature.pdf",
-   "original_path": "D:\\SIR_paper\\Lorenz\\figure5_lorenz_representation_landscape_final_tnr_v5_nature.pdf",
-   "size_bytes": 97568,
-   "sha256": "91eac1f7b5b5965705a94af69be0ff79a322d8e4e6f4d18053108506a920e398",
-   "modified_utc": "2026-09-12T22:26:34.312788+00:00",
+   "original_path": "/Users/ganatma/SapientAI/Documents/Papers/figures/figure5_lorenz_representation_landscape_final_tnr_v5_nature.pdf",
+   "size_bytes": 101041,
+   "sha256": "d08ef62d4acc4f1edc950d5309391f72d80d932a2344dbb7b7718d06b0d6ff8b",
+   "modified_utc": "2026-09-14T16:28:15.069248+00:00",
    "category": "figure",
    "paper_sections": "main manuscript",
    "run_id": "",
    "status": "CANONICAL_FIGURE_ASSET",
    "redistributable": "yes",
-   "notes": "Inputs are the frozen fig5data package, copied under 02_CONTROLLED_STUDIES and referenced here."
+   "notes": "Inputs are the frozen fig5data package, copied under 02_CONTROLLED_STUDIES and referenced here. Updated 2026-09-16 (v5_nature typography/layout revision) from the Documents/Papers/figures working folder; frozen inputs unchanged."
+  },
+  {
+   "package_path": "06_PAPER_FIGURES_ONLY/Fig_05_lorenz_representation_landscape/figure5_lorenz_representation_landscape_final_tnr_v5_nature.png",
+   "original_path": "/Users/ganatma/SapientAI/Documents/Papers/figures/figure5_lorenz_representation_landscape_final_tnr_v5_nature.png",
+   "size_bytes": 1493055,
+   "sha256": "61e4e9682a4411f8269abe73d087afa36f3990c8fcff8dac65c5afd87b909911",
+   "modified_utc": "2026-09-14T16:28:14.671443+00:00",
+   "category": "figure",
+   "paper_sections": "main manuscript",
+   "run_id": "",
+   "status": "CANONICAL_FIGURE_ASSET",
+   "redistributable": "yes",
+   "notes": "Inputs are the frozen fig5data package, copied under 02_CONTROLLED_STUDIES and referenced here. Updated 2026-09-16 (v5_nature typography/layout revision) from the Documents/Papers/figures working folder; frozen inputs unchanged."
+  },
+  {
+   "package_path": "06_PAPER_FIGURES_ONLY/Fig_05_lorenz_representation_landscape/figure5_lorenz_representation_landscape_final_tnr_v5_nature.svg",
+   "original_path": "/Users/ganatma/SapientAI/Documents/Papers/figures/figure5_lorenz_representation_landscape_final_tnr_v5_nature.svg",
+   "size_bytes": 159460,
+   "sha256": "03890efb7cf4e6a59034aa1c9e7cd49311ee8889a94cb1972b4788b4382bafff",
+   "modified_utc": "2026-09-14T16:28:15.198139+00:00",
+   "category": "figure",
+   "paper_sections": "main manuscript",
+   "run_id": "",
+   "status": "CANONICAL_FIGURE_ASSET",
+   "redistributable": "yes",
+   "notes": "Inputs are the frozen fig5data package, copied under 02_CONTROLLED_STUDIES and referenced here. Updated 2026-09-16 (v5_nature typography/layout revision) from the Documents/Papers/figures working folder; frozen inputs unchanged."
   },
   {
    "package_path": "06_PAPER_FIGURES_ONLY/Fig_05_lorenz_representation_landscape/figure_source/figure5_lorenz_representation_landscape_final_tnr_v5_nature.py",
-   "original_path": "D:\\SIR_paper\\Lorenz\\figure5_lorenz_representation_landscape_final_tnr_v5_nature.py",
-   "size_bytes": 35022,
-   "sha256": "8fd234ca15e77b25968b0dfc9a44507dcda8cdbb11933e5c9197eb765cb2d24c",
-   "modified_utc": "2026-09-12T22:26:35.755700+00:00",
+   "original_path": "/Users/ganatma/SapientAI/Documents/Papers/figures/figure5_lorenz_representation_landscape_final_tnr_v5_nature.py",
+   "size_bytes": 35382,
+   "sha256": "1465b61e78f92ac6d28d78c7f139329bc6f4eb3fcbac58f72ea99bf8e76e1d94",
+   "modified_utc": "2026-09-14T16:27:53.856608+00:00",
    "category": "figure_script",
    "paper_sections": "main manuscript",
    "run_id": "",
    "status": "CANONICAL_FIGURE_SCRIPT",
    "redistributable": "yes",
-   "notes": "Inputs are the frozen fig5data package, copied under 02_CONTROLLED_STUDIES and referenced here."
+   "notes": "Inputs are the frozen fig5data package, copied under 02_CONTROLLED_STUDIES and referenced here. Updated 2026-09-16 (v5_nature typography/layout revision) from the Documents/Papers/figures working folder; frozen inputs unchanged."
   },
   {
    "package_path": "06_PAPER_FIGURES_ONLY/Fig_05_lorenz_representation_landscape/figure_source_data/PROVENANCE_MANIFEST.json",
@@ -20117,55 +20208,55 @@
   },
   {
    "package_path": "06_PAPER_FIGURES_ONLY/Fig_06_d3d_task_conditioned_4panel/d3d_task_conditioned_4panel_v5.pdf",
-   "original_path": "D:\\SIR_paper\\DIIID_example\\d3d_task_conditioned_4panel_v5.pdf",
-   "size_bytes": 139104,
-   "sha256": "d822b4b34c6fcfe100e1ac71d17fda1afd5ffa35ee60b8243aa35c206a204f8a",
-   "modified_utc": "2026-09-13T06:33:31.239658+00:00",
+   "original_path": "/Users/ganatma/SapientAI/Documents/Papers/figures/d3d_task_conditioned_4panel_v5.pdf",
+   "size_bytes": 130609,
+   "sha256": "3df34da5be9cc4d35a5fbce28835f0db0eac98c766c485d941c3acc52b835d52",
+   "modified_utc": "2026-09-16T16:10:14.832857+00:00",
    "category": "figure",
    "paper_sections": "main manuscript",
    "run_id": "",
    "status": "CANONICAL_FIGURE_ASSET",
    "redistributable": "yes",
-   "notes": "Inputs are DIIID_example/fig6data, copied into figure_source_data/ here."
+   "notes": "Inputs are DIIID_example/fig6data, copied into figure_source_data/ here. Updated 2026-09-16 (layout revision) from the Documents/Papers/figures working folder; frozen inputs unchanged."
   },
   {
    "package_path": "06_PAPER_FIGURES_ONLY/Fig_06_d3d_task_conditioned_4panel/d3d_task_conditioned_4panel_v5.png",
-   "original_path": "D:\\SIR_paper\\DIIID_example\\d3d_task_conditioned_4panel_v5.png",
-   "size_bytes": 915415,
-   "sha256": "f4f530f62123d96859776f9b322f681f6609bedc02231f75dff1d4d9ad04611b",
-   "modified_utc": "2026-09-13T06:33:29.363800+00:00",
+   "original_path": "/Users/ganatma/SapientAI/Documents/Papers/figures/d3d_task_conditioned_4panel_v5.png",
+   "size_bytes": 1557658,
+   "sha256": "124e68349fe461cf721a95d1b47b94bfe20ccc4ee718dbdb5b4920dc96934481",
+   "modified_utc": "2026-09-16T16:10:14.420304+00:00",
    "category": "figure",
    "paper_sections": "main manuscript",
    "run_id": "",
    "status": "CANONICAL_FIGURE_ASSET",
    "redistributable": "yes",
-   "notes": "Inputs are DIIID_example/fig6data, copied into figure_source_data/ here."
+   "notes": "Inputs are DIIID_example/fig6data, copied into figure_source_data/ here. Updated 2026-09-16 (layout revision) from the Documents/Papers/figures working folder; frozen inputs unchanged."
   },
   {
    "package_path": "06_PAPER_FIGURES_ONLY/Fig_06_d3d_task_conditioned_4panel/d3d_task_conditioned_4panel_v5.svg",
-   "original_path": "D:\\SIR_paper\\DIIID_example\\d3d_task_conditioned_4panel_v5.svg",
-   "size_bytes": 340329,
-   "sha256": "9728a8e214fc8f68ccaddd3dabb63e2eeeb2b4da686947facb9c587f56fe1625",
-   "modified_utc": "2026-09-13T06:33:32.648077+00:00",
+   "original_path": "/Users/ganatma/SapientAI/Documents/Papers/figures/d3d_task_conditioned_4panel_v5.svg",
+   "size_bytes": 356404,
+   "sha256": "57063e767ed2c8b960c8131f8c11173eec8c2f538baa9cd19ba5f0b842edb635",
+   "modified_utc": "2026-09-16T16:10:15.116359+00:00",
    "category": "figure",
    "paper_sections": "main manuscript",
    "run_id": "",
    "status": "CANONICAL_FIGURE_ASSET",
    "redistributable": "yes",
-   "notes": "Inputs are DIIID_example/fig6data, copied into figure_source_data/ here."
+   "notes": "Inputs are DIIID_example/fig6data, copied into figure_source_data/ here. Updated 2026-09-16 (layout revision) from the Documents/Papers/figures working folder; frozen inputs unchanged."
   },
   {
    "package_path": "06_PAPER_FIGURES_ONLY/Fig_06_d3d_task_conditioned_4panel/figure_source/d3d_task_conditioned_4panel_v5.py",
-   "original_path": "D:\\SIR_paper\\DIIID_example\\d3d_task_conditioned_4panel_v5.py",
-   "size_bytes": 29693,
-   "sha256": "42e16e9ba94fd111e9a5765a67f2fdf80250cbec6dcac584a91a1e7267e1a830",
-   "modified_utc": "2026-09-13T06:33:14.589665+00:00",
+   "original_path": "/Users/ganatma/SapientAI/Documents/Papers/figures/d3d_task_conditioned_4panel_v5.py",
+   "size_bytes": 43483,
+   "sha256": "480d6222f19c551f1ca4dd4782910bb431b144a2e2a1e6f6e804085e593b9eba",
+   "modified_utc": "2026-09-16T16:10:17.345042+00:00",
    "category": "figure_script",
    "paper_sections": "main manuscript",
    "run_id": "",
    "status": "CANONICAL_FIGURE_SCRIPT",
    "redistributable": "yes",
-   "notes": "Inputs are DIIID_example/fig6data, copied into figure_source_data/ here."
+   "notes": "Inputs are DIIID_example/fig6data, copied into figure_source_data/ here. Updated 2026-09-16 (layout revision) from the Documents/Papers/figures working folder; frozen inputs unchanged."
   },
   {
    "package_path": "06_PAPER_FIGURES_ONLY/Fig_06_d3d_task_conditioned_4panel/figure_source_data/corrected_coefficient_classification.csv",

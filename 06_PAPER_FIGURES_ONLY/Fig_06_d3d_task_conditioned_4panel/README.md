@@ -9,12 +9,14 @@ DIII-D task-conditioned relational discovery: descriptive organization and coeff
 | generation script | `d3d_task_conditioned_4panel_v5.py` |
 | input data | figure_source_data/ — 11 frozen files from DIIID_example/fig6data |
 | source run | D3D-SIR-62-ALIGNED-V1 (a-b) + D3D-SIR-S7.E2.1-...-V1 (c-d) |
-| regenerate | `python figure_source/d3d_task_conditioned_4panel_v5.py --data-dir figure_source_data` |
+| regenerate | `python figure_source/d3d_task_conditioned_4panel_v5.py --data-dir figure_source_data --out-dir .` |
 | expected output | `d3d_task_conditioned_4panel_v5.pdf` (plus .svg/.png where the script emits them) |
 
 ## Provenance note
 
 Verified. The script carries a preflight check for all 10 required inputs and an optional cross-check of its own 6x35 fold-support matrix against the pre-derived `panel2_fold_support_matrix.csv`.
+
+Updated 2026-09-16 to the latest layout revision; frozen inputs unchanged, and the cross-check passes. **Known small mismatch:** the working-folder script was saved about 3 s after the bundled assets were rendered, so a fresh render differs from the bundled PNG in about 1% of pixels (small positional offsets, e.g. divider length; no data or text change). The assets are kept verbatim as produced. Re-render and replace them to make script and asset byte-consistent.
 
 ## Are the plotted values exact?
 

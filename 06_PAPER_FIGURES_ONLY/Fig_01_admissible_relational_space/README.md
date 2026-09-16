@@ -5,7 +5,7 @@ Admissible relational space: coordinate-generation operators and relation famili
 | | |
 |---|---|
 | manuscript figure | **Figure 1** |
-| final asset | `admissible_relational_space_hierarchical_v15_metaball.pdf` |
+| final asset | `admissible_relational_space_hierarchical_v15_metaball.pdf` (+ `.png`, `.svg`) |
 | generation script | `admissible_relational_space_hierarchical_v15_metaball_final.py` · `admissible_relational_space_hierarchical_v15_metaball.py` |
 | input data | none — schematic, no numerical inputs |
 | source run | — |
@@ -14,7 +14,7 @@ Admissible relational space: coordinate-generation operators and relation famili
 
 ## Provenance note
 
-**AMBIGUOUS.** Both scripts declare the identical output stem `admissible_relational_space_hierarchical_v15_metaball` and write to `Figures/figs`. The asset on disk carries the modification time of the NON-final script (2026-09-07 15:41); `_final.py` is newer (2026-09-09) and appears never to have been rendered. The two differ by six lines — a patch edge colour and linewidth. Neither script can produce the `..._metaball_final.pdf` filename used in the figure cross-check. **Both are bundled.** Render `_final.py` and confirm which asset the manuscript embeds.
+**Resolved 2026-09-16.** Both scripts declare the output stem `admissible_relational_space_hierarchical_v15_metaball`. The bundled PDF/PNG/SVG are the render of `_final.py`: the working-folder script that produced them is byte-identical to `_final.py`, carries the same timestamp as the assets (2026-09-09), and re-running `_final.py` reproduces the PNG pixel-for-pixel. The non-final script differs by six lines (a patch edge colour and linewidth) and is kept for lineage only. The script writes to `../Figures/figs` relative to its own folder.
 
 ## Are the plotted values exact?
 

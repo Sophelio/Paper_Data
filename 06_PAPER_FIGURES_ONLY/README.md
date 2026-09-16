@@ -16,7 +16,7 @@ figure calls, and it is the one place where this package rests on inference.
 
 | Folder | Figure | Mapping status |
 |---|---|---|
-| `Fig_01_admissible_relational_space` | admissible relational space | **AMBIGUOUS** |
+| `Fig_01_admissible_relational_space` | admissible relational space | verified (resolved 2026-09-16) |
 | `Fig_02_phase_turning_manifold` | turning manifold | verified |
 | `Fig_04_task_contracts_representations` | task contracts | verified, manual relocation |
 | `Fig_05_lorenz_representation_landscape` | Lorenz landscape | verified |
@@ -29,3 +29,22 @@ recorded in `90_AUDIT_REPORTS/missing_artifacts.csv`.
 
 Per-figure detail is in each folder's `README.md` and in
 `00_START_HERE/FIGURE_TO_SOURCE_INDEX.csv`.
+
+## Update of 2026-09-16
+
+Figure assets and scripts were refreshed from the working figures folder
+(`Documents/Papers/figures`). Frozen `figure_source_data/` inputs were compared
+by SHA-256 and are unchanged. Each figure folder now carries every same-stem
+PDF/PNG/SVG variant its script emits.
+
+| Folder | Change |
+|---|---|
+| `Fig_01` | PDF replaced by the render of `_final.py`; PNG/SVG added; mapping resolved |
+| `Fig_02` | PNG/SVG added; PDF and script already current |
+| `Fig_04` | PNG added; PDF/SVG and script already current |
+| `Fig_05` | script and PDF updated (typography/layout revision); PNG/SVG added |
+| `Fig_06` | script and PDF/PNG/SVG updated (layout revision) |
+| `FigS1` | no counterpart in the working folder; unchanged |
+
+Updated rows carry the new source path, size, hash and timestamp in
+`00_START_HERE/PACKAGE_MANIFEST.csv`.
