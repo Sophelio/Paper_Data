@@ -23,6 +23,29 @@ Where the PDF and the artifacts disagree, **the artifacts are canonical.** Every
 disagreement is enumerated in
 [`90_AUDIT_REPORTS/unresolved_release_fields.csv`](90_AUDIT_REPORTS/unresolved_release_fields.csv).
 
+## Cloning
+
+```bash
+git clone https://github.com/Sophelio/Paper_Data.git
+```
+
+**On Windows, do this first:**
+
+```bash
+git config --global core.longpaths true
+```
+
+The deepest path in this package is 150 characters. Combined with a long clone
+location, that exceeds the legacy 260-character `MAX_PATH` limit, and git will
+silently fail to check out the seven deepest files — `git clone` still reports
+success. Either enable `core.longpaths` as above, or clone to a short directory
+such as `C:\Paper_Data`. Run the verifier below to confirm your checkout is
+complete; `manifest/present` catches exactly this failure.
+
+No `core.autocrlf` configuration is needed. `.gitattributes` sets `* -text`, so
+git performs no content conversion and every file round-trips byte-exactly
+regardless of your local line-ending settings.
+
 ## Verify the package
 
 ```bash
