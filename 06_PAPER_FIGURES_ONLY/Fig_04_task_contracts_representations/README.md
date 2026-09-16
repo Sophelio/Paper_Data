@@ -16,7 +16,7 @@ Task contracts and the mathematical representations they induce, one row.
 
 **Manual step recorded.** The script writes to `Pendulum/Plotter/figs`, which does not exist on disk; the asset lives in `Figures/figs`. The file was relocated by hand after generation.
 
-**Edit 2026-09-16.** Panel b's three representation boxes no longer show per-representation residuals ($\|R\|_\infty$); each shows only its parameter ($\alpha$, $m$, $\kappa$). The residuals are still computed and printed by the script, and the panel footer still reports $\|R\|_\infty<10^{-4}$ for all displayed relations.
+**Edit 2026-09-16.** Panel b's three representation boxes no longer show per-representation residuals ($\|R\|_\infty$); each shows only its parameter ($\alpha$, $m$, $\kappa$), set at 5.5 pt in the figure's near-black ink (`#202124`) rather than 4.7 pt grey. The residuals are still computed and printed by the script, and the panel footer still reports $\|R\|_\infty<10^{-4}$ for all displayed relations.
 
 ## Are the plotted values exact?
 

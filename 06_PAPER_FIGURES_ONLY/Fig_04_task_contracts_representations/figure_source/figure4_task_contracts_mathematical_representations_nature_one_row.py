@@ -438,8 +438,8 @@ def add_relation_strip(
         transform=ax.transAxes,
         ha="right",
         va="center",
-        fontsize=4.7,
-        color=MID,
+        fontsize=5.5,
+        color=INK,
     )
 
 
