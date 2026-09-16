@@ -40,7 +40,7 @@ PDF/PNG/SVG variant its script emits.
 | Folder | Change |
 |---|---|
 | `Fig_01` | PDF replaced by the render of `_final.py`; PNG/SVG added; mapping resolved |
-| `Fig_02` | PNG/SVG added; PDF and script already current |
+| `Fig_02` | PNG/SVG added; then $x_2(t)$ recoloured purple → Figure 4 orange `#A94700` and re-rendered (diverges from working folder) |
 | `Fig_04` | PNG added; PDF/SVG and script already current |
 | `Fig_05` | script and PDF updated (typography/layout revision); PNG/SVG added |
 | `Fig_06` | script and PDF/PNG/SVG updated (layout revision) |

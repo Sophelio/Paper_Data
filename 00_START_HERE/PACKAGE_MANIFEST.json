@@ -1,8 +1,8 @@
 {
  "record_id": "SIR_PAPER_DATA_MANIFEST_V1",
- "generated_utc": "2026-09-16T17:00:57.063269+00:00",
+ "generated_utc": "2026-09-16T17:28:32.294394+00:00",
  "n_files": 1594,
- "total_bytes": 595958025,
+ "total_bytes": 596064291,
  "files": [
   {
    "package_path": "01_MANUSCRIPT_SNAPSHOT/main_manuscript/SIR_paper_2026-09-02.pdf",
@@ -19896,55 +19896,55 @@
   },
   {
    "package_path": "06_PAPER_FIGURES_ONLY/Fig_02_phase_turning_manifold/figure_source/phase_turning_manifold_sensitivity_centered_with_x2_purple_v8.py",
-   "original_path": "D:\\SIR_paper\\DIIID_example\\phase_turning_manifold_sensitivity_centered_with_x2_purple_v8.py",
-   "size_bytes": 28856,
-   "sha256": "afd454a73bcb5b5a006ee9a3160cc77f0539dc3e169cec7521859968d0df29ac",
-   "modified_utc": "2026-09-10T18:17:57.201382+00:00",
+   "original_path": "Paper_Data-derived edit of D:\\SIR_paper\\DIIID_example\\phase_turning_manifold_sensitivity_centered_with_x2_purple_v8.py",
+   "size_bytes": 28901,
+   "sha256": "a0ce9678867bca17ca7fb22bc8b354e7396f073c85055b15390886ace8c9e905",
+   "modified_utc": "2026-09-16T17:28:32.294394+00:00",
    "category": "figure_script",
    "paper_sections": "main manuscript",
    "run_id": "",
    "status": "CANONICAL_FIGURE_SCRIPT",
    "redistributable": "yes",
-   "notes": "v8 script writes this exact stem."
+   "notes": "2026-09-16: x_2(t) colour changed in this package from purple #4B2E83 to the Figure 4 omega orange #A94700 (REFERENCE constant); assets re-rendered from the edited script (needs 02_CONTROLLED_STUDIES/06_Trajectory_Relational_Geometry on PYTHONPATH for the v7 helpers). Diverges from the working-folder copy; the '_purple' stem is kept for continuity."
   },
   {
    "package_path": "06_PAPER_FIGURES_ONLY/Fig_02_phase_turning_manifold/phase_turning_manifold_sensitivity_centered_with_x2_purple_v8.pdf",
-   "original_path": "D:\\SIR_paper\\DIIID_example\\phase_turning_manifold_sensitivity_centered_with_x2_purple_v8.pdf",
-   "size_bytes": 190052,
-   "sha256": "cb61e8343bfc9a5c637b7893b01c34784db5ec6f995915babfc0376fca11dec5",
-   "modified_utc": "2026-09-10T18:18:01.445257+00:00",
+   "original_path": "Paper_Data-derived edit of D:\\SIR_paper\\DIIID_example\\phase_turning_manifold_sensitivity_centered_with_x2_purple_v8.pdf",
+   "size_bytes": 190141,
+   "sha256": "676e34303fca7a4b6eef42f35ebee51e2c26494de508cba08e92f609d4ec825e",
+   "modified_utc": "2026-09-16T17:28:32.294394+00:00",
    "category": "figure",
    "paper_sections": "main manuscript",
    "run_id": "",
    "status": "CANONICAL_FIGURE_ASSET",
    "redistributable": "yes",
-   "notes": "v8 script writes this exact stem."
+   "notes": "2026-09-16: x_2(t) colour changed in this package from purple #4B2E83 to the Figure 4 omega orange #A94700 (REFERENCE constant); assets re-rendered from the edited script (needs 02_CONTROLLED_STUDIES/06_Trajectory_Relational_Geometry on PYTHONPATH for the v7 helpers). Diverges from the working-folder copy; the '_purple' stem is kept for continuity."
   },
   {
    "package_path": "06_PAPER_FIGURES_ONLY/Fig_02_phase_turning_manifold/phase_turning_manifold_sensitivity_centered_with_x2_purple_v8.png",
-   "original_path": "/Users/ganatma/SapientAI/Documents/Papers/figures/phase_turning_manifold_sensitivity_centered_with_x2_purple_v8.png",
-   "size_bytes": 1357503,
-   "sha256": "1d031e19fbc3f75ad4282c69505c0053a996c5a26df8d702e20b79d3cea1e87a",
-   "modified_utc": "2026-09-10T16:15:41.103948+00:00",
+   "original_path": "Paper_Data-derived edit of /Users/ganatma/SapientAI/Documents/Papers/figures/phase_turning_manifold_sensitivity_centered_with_x2_purple_v8.png",
+   "size_bytes": 1511811,
+   "sha256": "2b91fabc058b149397ccc0a7489029f727651804f9accea4c1b42af7160995aa",
+   "modified_utc": "2026-09-16T17:28:32.294394+00:00",
    "category": "figure",
    "paper_sections": "main manuscript",
    "run_id": "",
    "status": "CANONICAL_FIGURE_ASSET",
    "redistributable": "yes",
-   "notes": "v8 script writes this exact stem. Same-stem PNG/SVG variant added 2026-09-16 from the Documents/Papers/figures working folder."
+   "notes": "2026-09-16: x_2(t) colour changed in this package from purple #4B2E83 to the Figure 4 omega orange #A94700 (REFERENCE constant); assets re-rendered from the edited script (needs 02_CONTROLLED_STUDIES/06_Trajectory_Relational_Geometry on PYTHONPATH for the v7 helpers). Diverges from the working-folder copy; the '_purple' stem is kept for continuity."
   },
   {
    "package_path": "06_PAPER_FIGURES_ONLY/Fig_02_phase_turning_manifold/phase_turning_manifold_sensitivity_centered_with_x2_purple_v8.svg",
-   "original_path": "/Users/ganatma/SapientAI/Documents/Papers/figures/phase_turning_manifold_sensitivity_centered_with_x2_purple_v8.svg",
-   "size_bytes": 519399,
-   "sha256": "117013d35de2ea9f770bc4efc19983cbeee53be4e184ec3361f3d9fc481af046",
-   "modified_utc": "2026-09-10T16:15:40.853944+00:00",
+   "original_path": "Paper_Data-derived edit of /Users/ganatma/SapientAI/Documents/Papers/figures/phase_turning_manifold_sensitivity_centered_with_x2_purple_v8.svg",
+   "size_bytes": 471223,
+   "sha256": "aee0a4d587345749c5642c3027abfce6378203bd10c40114d08d024f253fa252",
+   "modified_utc": "2026-09-16T17:28:32.294394+00:00",
    "category": "figure",
    "paper_sections": "main manuscript",
    "run_id": "",
    "status": "CANONICAL_FIGURE_ASSET",
    "redistributable": "yes",
-   "notes": "v8 script writes this exact stem. Same-stem PNG/SVG variant added 2026-09-16 from the Documents/Papers/figures working folder."
+   "notes": "2026-09-16: x_2(t) colour changed in this package from purple #4B2E83 to the Figure 4 omega orange #A94700 (REFERENCE constant); assets re-rendered from the edited script (needs 02_CONTROLLED_STUDIES/06_Trajectory_Relational_Geometry on PYTHONPATH for the v7 helpers). Diverges from the working-folder copy; the '_purple' stem is kept for continuity."
   },
   {
    "package_path": "06_PAPER_FIGURES_ONLY/Fig_04_task_contracts_representations/figure4_task_contracts_mathematical_representations_nature_one_row.pdf",

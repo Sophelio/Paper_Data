@@ -55,7 +55,7 @@ PNG_DPI = 450
 # is solid, so branch meaning does not depend on color alone.
 NEGATIVE = "#2F6FA5"
 POSITIVE = "#4F9B68"
-REFERENCE = "#4B2E83"
+REFERENCE = "#A94700"  # x_2(t); matches the Figure 4 omega orange
 CONDITION = "#2F7D4F"
 INTERSECTION = "#1D4E78"
 MANIFOLD = "#111111"
