@@ -1,0 +1,55 @@
+{
+  "correction_audit_id": "D3D-SIR-62-COEFFICIENT-CONDITIONING-CORRECTION-V1",
+  "original_audit_id": "D3D-SIR-62-COEFFICIENT-CONDITIONING-V1",
+  "canonical_run_id": "D3D-SIR-62-ALIGNED-V1",
+  "seed": 20260805,
+  "reference_pooled_rmse_discharge_specific": 0.05758467247445343,
+  "reference_pooled_rmse_cohort_mean": 0.4125238315775986,
+  "rmse_acceptance_tolerance": 1e-8,
+  "n_discharges": 62,
+  "n_samples_per_discharge": 1000,
+  "n_features": 7,
+  "original_truncation_tolerances": [1e-12, 1e-10, 1e-8, 1e-6],
+  "fixed_relative_thresholds": [1e-3, 5e-3, 1e-2, 2e-2, 5e-2, 1e-1],
+  "fixed_ranks": [7, 6, 5, 4],
+  "ridge_lambda_relative": [0.0, 1e-6, 1e-5, 1e-4, 1e-3, 1e-2, 1e-1, 1.0],
+  "reconstruction_labels": {
+    "stable_abs_rmse_change": 0.01,
+    "stable_prediction_correlation": 0.99,
+    "moderate_abs_rmse_change": 0.05,
+    "material_prediction_correlation": 0.95,
+    "stable_coefficient_relative_change": 0.10,
+    "epsilon": 1e-15
+  },
+  "random_effects": {
+    "primary_estimator": "REML_heteroscedastic_random_intercept",
+    "sensitivity_estimators": ["ML_profile", "REML"],
+    "tau2_bootstrap_replicates": 5000,
+    "tau2_positive_tolerance": 1e-16,
+    "profile_chi2_crit": 3.841458448338683
+  },
+  "multivariate": {
+    "eigen_bootstrap_replicates": 5000,
+    "null_replicates": 5000
+  },
+  "block_sensitivity_min_replicates_near_boundary": 1000,
+  "fdr_alpha": 0.05,
+  "source_matrix_order_keys": [
+    "d[pcdiamag3]/d[kappa]",
+    "d[kappa]/d[t]",
+    "r[q95]/r[kappa]",
+    "d[pcdiamag3]/d[betan]",
+    "d[kappa]/d[betan]",
+    "d[betan]/d[t]",
+    "d[li]/d[betan]"
+  ],
+  "manuscript_display_order": [
+    {"key": "d[pcdiamag3]/d[kappa]", "display": "D_kappa W_dia"},
+    {"key": "d[pcdiamag3]/d[betan]", "display": "D_betaN W_dia"},
+    {"key": "d[kappa]/d[betan]", "display": "D_betaN kappa"},
+    {"key": "d[li]/d[betan]", "display": "D_betaN l_i"},
+    {"key": "r[q95]/r[kappa]", "display": "q95 / kappa"},
+    {"key": "d[betan]/d[t]", "display": "dot beta_N"},
+    {"key": "d[kappa]/d[t]", "display": "dot kappa"}
+  ]
+}

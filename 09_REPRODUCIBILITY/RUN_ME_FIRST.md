@@ -44,10 +44,13 @@ Checks 527 frozen artifacts across 21 stages and recomputes the headline metrics
 
 ### Minutes — regenerate the paper figures
 ```
-python 06_PAPER_FIGURES_ONLY/Fig_06_d3d_task_conditioned_4panel/figure_source/d3d_task_conditioned_4panel_v5.py --data-dir ../figure_source_data
+python 06_PAPER_FIGURES_ONLY/Fig_06_d3d_task_conditioned_4panel/figure_source/d3d_task_conditioned_4panel_v5.py
 python 06_PAPER_FIGURES_ONLY/Fig_05_lorenz_representation_landscape/figure_source/figure5_lorenz_representation_landscape_final_tnr_v5_nature.py
 ```
-Each figure folder's README gives its exact command.
+Every figure folder is self-contained: its script needs no arguments, reads only
+its own `figure_source/` and `figure_source_data/`, and writes the PDF/PNG/SVG into
+that figure folder. The figures need LaTeX with `lmodern` and matplotlib 3.9.x (see
+`06_PAPER_FIGURES_ONLY/README.md`). Each figure folder's README gives its exact command.
 
 ### Minutes — independent recomputations of the DIII-D contract
 ```

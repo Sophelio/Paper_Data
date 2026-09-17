@@ -1,9 +1,11 @@
 """Render the DIII-D task-conditioned four-panel manuscript figure.
 
-The frozen data bundle is expected in ``fig6data`` beside this script unless a
-location is supplied with ``--data-dir``.  All panel-level movement, scaling,
-and typography controls live together near the top of this file so layout
-adjustments do not require retuning individual artists.
+The frozen data bundle is expected in ``figure_source_data`` in the figure
+folder (the parent of this script's folder) unless a location is supplied with
+``--data-dir``. Outputs are written to the figure folder by default.  All
+panel-level movement, scaling, and typography controls live together near the
+top of this file so layout adjustments do not require retuning individual
+artists.
 """
 
 from dataclasses import dataclass
@@ -23,7 +25,10 @@ from scipy.stats import gaussian_kde
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-DATA_DIR = SCRIPT_DIR / "fig6data"
+# Defaults resolve inside the figure folder: frozen inputs in figure_source_data/,
+# outputs next to figure_source/.
+FIGURE_DIR = SCRIPT_DIR.parent
+DATA_DIR = FIGURE_DIR / "figure_source_data"
 
 REQUIRED_FILES = [
     "d3d_discharge_coefficients.csv",
@@ -1487,7 +1492,7 @@ def make_figure(
     out_stem: str = "d3d_task_conditioned_4panel_v5",
 ):
     data_dir = Path(data_dir).expanduser().resolve()
-    out_dir = SCRIPT_DIR if out_dir is None else Path(out_dir).expanduser().resolve()
+    out_dir = FIGURE_DIR if out_dir is None else Path(out_dir).expanduser().resolve()
     _preflight(data_dir)
     coef, cls, het, held, folds, matrix = _load(data_dir)
     _assert_invariants(coef, cls, held, folds, matrix)
@@ -1514,8 +1519,8 @@ def _parse_args(argv=None):
     parser.add_argument(
         "--out-dir",
         type=Path,
-        default=SCRIPT_DIR,
-        help=f"directory to write PNG/PDF/SVG (default: {SCRIPT_DIR})",
+        default=FIGURE_DIR,
+        help=f"directory to write PNG/PDF/SVG (default: {FIGURE_DIR})",
     )
     parser.add_argument(
         "--out-stem",

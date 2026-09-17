@@ -9,7 +9,7 @@ Task contracts and the mathematical representations they induce, one row.
 | generation script | `figure4_task_contracts_mathematical_representations_nature_one_row.py` + required helper `figure4_task_contracts_mathematical_representations_nature.py` |
 | input data | `figure_source/manifest.csv` (read by the helper, which recomputes the pendulum and heat-equation fits); `panel_data.py` is bundled but not imported |
 | source run | SIR-PENDULUM |
-| regenerate | `python figure_source/figure4_task_contracts_mathematical_representations_nature_one_row.py` (writes to `figure_source/figs/`) |
+| regenerate | `python figure_source/figure4_task_contracts_mathematical_representations_nature_one_row.py` (run from this folder; writes here) |
 | expected output | `figure4_task_contracts_mathematical_representations_nature_one_row.pdf` (plus .svg/.png where the script emits them) |
 
 ## Provenance note
@@ -23,6 +23,8 @@ Task contracts and the mathematical representations they induce, one row.
 Panel values are recomputed at render time by the helper from `manifest.csv`. The script prints the key scientific values, and these were unchanged by the 2026-09-16 polish.
 
 **Polished 2026-09-16** (see `../README.md`). The helper module and its `manifest.csv` were added to `figure_source/` because the one_row script cannot run without them. They were previously missing from this package. The helper is an unedited, verbatim copy of the working-folder file; the one_row script overrides its style. `manifest.csv` is byte-identical to `02_CONTROLLED_STUDIES/04_Pendulum_Task_Conditioning/manifest.csv`.
+
+**Self-contained, 2026-09-17.** Everything this figure needs is in this folder. Run the regenerate command from anywhere (paths resolve relative to the script); it reads only `figure_source/` (the helper and `manifest.csv`) and writes the PDF/PNG/SVG into this folder, overwriting the bundled assets. Verified by running a copy of this folder on its own, outside the repository, with no `PYTHONPATH`: the PNG reproduced pixel-for-pixel. The one_row script previously wrote to `figure_source/figs/`. `figure_source_data/panel_data.py` is not needed: nothing imports it, and its loaders point at the original `D:\SIR_paper\Pendulum` tree. It is kept as provenance only.
 
 ## Files here
 

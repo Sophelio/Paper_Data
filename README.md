@@ -52,7 +52,7 @@ regardless of your local line-ending settings.
 python 09_REPRODUCIBILITY/validation_scripts/verify_paper_data.py
 ```
 
-17 checks: manifest integrity, all 1,603 SHA-256 hashes, figure allow-list
+17 checks: manifest integrity, all 1,615 SHA-256 hashes, figure allow-list
 compliance, claim→artifact resolution, restricted-data containment, historical
 marking, and five headline numbers re-derived from raw per-record data rather
 than read back from the ledger. Offline; no network, no credentials.
