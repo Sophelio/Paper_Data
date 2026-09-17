@@ -16,8 +16,16 @@ vector PDF/SVG exports.
 from __future__ import annotations
 
 from dataclasses import dataclass
+import os
 from pathlib import Path
 from typing import Final
+
+if os.name == "nt":
+    os.environ.setdefault("MIKTEX_UNATTENDED", "1")
+    os.environ.setdefault("MIKTEX_AUTOINSTALL", "1")
+    _miktex_bin = Path.home() / r"AppData\Local\Programs\MiKTeX\miktex\bin\x64"
+    if _miktex_bin.is_dir():
+        os.environ["PATH"] = str(_miktex_bin) + os.pathsep + os.environ.get("PATH", "")
 
 import matplotlib as mpl
 

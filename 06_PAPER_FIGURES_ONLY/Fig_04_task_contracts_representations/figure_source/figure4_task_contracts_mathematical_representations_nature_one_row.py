@@ -13,8 +13,16 @@ background and no tight bounding box.
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 from typing import Final
+
+if os.name == "nt":
+    os.environ.setdefault("MIKTEX_UNATTENDED", "1")
+    os.environ.setdefault("MIKTEX_AUTOINSTALL", "1")
+    _miktex_bin = Path.home() / r"AppData\Local\Programs\MiKTeX\miktex\bin\x64"
+    if _miktex_bin.is_dir():
+        os.environ["PATH"] = str(_miktex_bin) + os.pathsep + os.environ.get("PATH", "")
 
 import matplotlib as mpl
 
@@ -35,6 +43,26 @@ STEM: Final = "figure4_task_contracts_mathematical_representations_nature_one_ro
 WIDTH_MM: Final = 183.0
 HEIGHT_MM: Final = 92.0
 MM_PER_INCH: Final = 25.4
+
+# Multiply every type size in this figure. 1 is the manuscript original.
+# A new value misses Matplotlib's LaTeX cache, so the first run at that
+# scale recompiles every label (several minutes).
+Font_scaling = 1.3
+
+# Figure-fraction gap between wrapped title lines (panel b only).
+# Larger = more space between "Structural Uncertainty Supports" and
+# "Multiple Representations".
+TITLE_LINE_SPACING = 0.04
+
+# Figure-fraction drop for everything under the panel b title (subtitle,
+# observed field, and relation strips). The two title lines stay put.
+# Larger = more downward shift.
+PANEL_B_BELOW_TITLE_SHIFT = 0.022
+
+
+def _fs(pt: float) -> float:
+    return pt * Font_scaling
+
 
 INK: Final = source.INK
 GREEN: Final = source.GREEN
@@ -87,12 +115,12 @@ STYLE.update(
         "pdf.fonttype": 42,
         "ps.fonttype": 42,
         "svg.fonttype": "path",
-        "font.size": 5.9,
-        "axes.labelsize": 6.25,
-        "axes.titlesize": 6.5,
-        "xtick.labelsize": 5.55,
-        "ytick.labelsize": 5.55,
-        "legend.fontsize": 4.8,
+        "font.size": _fs(5.9),
+        "axes.labelsize": _fs(6.25),
+        "axes.titlesize": _fs(6.5),
+        "xtick.labelsize": _fs(5.55),
+        "ytick.labelsize": _fs(5.55),
+        "legend.fontsize": _fs(4.8),
     }
 )
 
@@ -110,7 +138,6 @@ def sci_tex(value: float, digits: int) -> str:
 # panel letter and first title line sits one title line higher so the letters stay
 # aligned across the row.
 HEADER_FIRST_BASELINE: Final = 0.138
-HEADER_LINE_STEP: Final = 0.030
 
 
 def add_panel_header(
@@ -119,9 +146,12 @@ def add_panel_header(
     label: str,
     title: str | tuple[str, ...],
     subtitle: str,
-    title_fontsize: float = 7.35,
+    title_fontsize: float | None = None,
+    below_title_shift: float = 0.0,
 ) -> None:
     """Align panel labels and headers above both side-by-side cells."""
+    if title_fontsize is None:
+        title_fontsize = _fs(7.35)
     bounds = slot.get_position(fig)
     title_lines = (title,) if isinstance(title, str) else title
     fig.text(
@@ -130,13 +160,13 @@ def add_panel_header(
         rf"\textbf{{{label}}}",
         ha="left",
         va="baseline",
-        fontsize=8.2,
+        fontsize=_fs(8.2),
         color=INK,
     )
     for index, line in enumerate(title_lines):
         fig.text(
             bounds.x0,
-            bounds.y1 + HEADER_FIRST_BASELINE - index * HEADER_LINE_STEP,
+            bounds.y1 + HEADER_FIRST_BASELINE - index * TITLE_LINE_SPACING,
             rf"\textbf{{{line}}}",
             ha="left",
             va="baseline",
@@ -145,11 +175,11 @@ def add_panel_header(
         )
     fig.text(
         bounds.x0,
-        bounds.y1 + 0.056,
+        bounds.y1 + 0.065 - below_title_shift,
         subtitle,
         ha="left",
         va="baseline",
-        fontsize=5.4,
+        fontsize=_fs(5.4),
         color=MID,
     )
 
@@ -169,7 +199,7 @@ def add_contract_header(
         rf"\textbf{{{title}}}",
         ha="left",
         va="top",
-        fontsize=7.0,
+        fontsize=_fs(7.0),
         color=color,
     )
     ax.text(
@@ -178,7 +208,7 @@ def add_contract_header(
         subtitle,
         ha="left",
         va="top",
-        fontsize=5.35,
+        fontsize=_fs(5.35),
         color=MID,
     )
     ax.text(
@@ -187,7 +217,7 @@ def add_contract_header(
         equation,
         ha="left",
         va="bottom",
-        fontsize=6.05,
+        fontsize=_fs(6.05),
         color=INK,
         bbox={
             "boxstyle": "round,pad=0.23",
@@ -269,7 +299,7 @@ def draw_panel_a(
         transform=ax_comp.transAxes,
         ha="left",
         va="top",
-        fontsize=4.8,
+        fontsize=_fs(4.8),
         color=MID,
     )
     ax_comp.text(
@@ -281,7 +311,7 @@ def draw_panel_a(
         transform=ax_comp.transAxes,
         ha="right",
         va="bottom",
-        fontsize=4.35,
+        fontsize=_fs(4.35),
         color=INK,
         linespacing=1.18,
         bbox={
@@ -298,10 +328,10 @@ def draw_panel_a(
     scalar_map.set_array([])
     colorbar = fig.colorbar(scalar_map, cax=cax)
     colorbar.set_label("")
-    colorbar.ax.set_title(r"$E_i$", fontsize=4.8, color=INK, pad=1.5)
+    colorbar.ax.set_title(r"$E_i$", fontsize=_fs(4.8), color=INK, pad=1.5)
     colorbar.ax.yaxis.set_ticks_position("left")
     colorbar.ax.tick_params(
-        labelsize=4.7,
+        labelsize=_fs(4.7),
         colors=MID,
         length=1.5,
         width=0.45,
@@ -348,7 +378,7 @@ def draw_panel_a(
         transform=ax_pred.transAxes,
         ha="left",
         va="top",
-        fontsize=4.7,
+        fontsize=_fs(4.7),
         color=MID,
     )
     ax_pred.legend(
@@ -367,7 +397,7 @@ def draw_panel_a(
         transform=ax_pred.transAxes,
         ha="right",
         va="bottom",
-        fontsize=4.25,
+        fontsize=_fs(4.25),
         color=INK,
         linespacing=1.15,
         bbox={
@@ -419,7 +449,7 @@ def add_relation_strip(
         transform=ax.transAxes,
         ha="left",
         va="center",
-        fontsize=4.65,
+        fontsize=_fs(4.65),
         color=INK,
     )
     ax.text(
@@ -429,7 +459,7 @@ def add_relation_strip(
         transform=ax.transAxes,
         ha="left",
         va="center",
-        fontsize=6.15,
+        fontsize=_fs(6.15),
         color=ORANGE,
     )
     ax.text(
@@ -439,7 +469,7 @@ def add_relation_strip(
         transform=ax.transAxes,
         ha="right",
         va="center",
-        fontsize=5.5,
+        fontsize=_fs(5.5),
         color=INK,
     )
 
@@ -483,7 +513,7 @@ def draw_panel_b(
         rasterized=True,
     )
     ax_field.set(xlabel="$x$", ylabel="$t$", title=r"\textbf{Observed field} $u(x,t)$")
-    ax_field.title.set_fontsize(5.9)
+    ax_field.title.set_fontsize(_fs(5.9))
     ax_field.title.set_color(INK)
     ax_field.tick_params(length=2.0)
     ax_field.spines[["top", "right"]].set_visible(True)
@@ -493,14 +523,14 @@ def draw_panel_b(
     colorbar.set_ticks([-1.0, 0.0, 1.0])
     colorbar.set_label(
         r"Field amplitude $u(x,t)$",
-        fontsize=4.55,
+        fontsize=_fs(4.55),
         color=INK,
         labelpad=1.0,
         rotation=270,
         va="bottom",
     )
     colorbar.ax.tick_params(
-        labelsize=4.65,
+        labelsize=_fs(4.65),
         colors=MID,
         length=1.4,
         width=0.45,
@@ -537,9 +567,22 @@ def draw_panel_b(
         transform=ax_relations.transAxes,
         ha="center",
         va="bottom",
-        fontsize=4.5,
+        fontsize=_fs(4.5),
         color=ORANGE,
     )
+
+
+def shifted_slot(fig: plt.Figure, spec, dy_down: float):
+    """Copy a gridspec cell, moved down by dy_down in figure fraction."""
+    pos = spec.get_position(fig)
+    return fig.add_gridspec(
+        1,
+        1,
+        left=pos.x0,
+        right=pos.x1,
+        bottom=max(pos.y0 - dy_down, 0.02),
+        top=pos.y1 - dy_down,
+    )[0]
 
 
 def build_figure(
@@ -561,21 +604,21 @@ def build_figure(
         wspace=0.17,
     )
     draw_panel_a(fig, outer[0], pendulum)
-    draw_panel_b(fig, outer[1], heat)
+    draw_panel_b(fig, shifted_slot(fig, outer[1], PANEL_B_BELOW_TITLE_SHIFT), heat)
     add_panel_header(
         fig,
         outer[0],
         "a",
-        "Task contracts select trajectory representations",
+        "Task Contracts Select Trajectory Representations",
         r"32 realizations $\cdot$ compression invariant and protected autonomous prediction",
     )
     add_panel_header(
         fig,
         outer[1],
         "b",
-        ("Structural uncertainty supports", "multiple representations"),
+        ("Structural Uncertainty Supports", "Multiple Representations"),
         "Temporal, spatial and coupled relations on one mode",
-        title_fontsize=6.65,
+        below_title_shift=PANEL_B_BELOW_TITLE_SHIFT,
     )
     return fig
 

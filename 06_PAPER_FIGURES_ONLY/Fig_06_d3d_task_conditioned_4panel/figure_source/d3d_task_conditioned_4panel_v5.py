@@ -12,7 +12,15 @@ from dataclasses import dataclass
 from pathlib import Path
 import argparse
 import json
+import os
 import sys
+
+if os.name == "nt":
+    os.environ.setdefault("MIKTEX_UNATTENDED", "1")
+    os.environ.setdefault("MIKTEX_AUTOINSTALL", "1")
+    _miktex_bin = Path.home() / r"AppData\Local\Programs\MiKTeX\miktex\bin\x64"
+    if _miktex_bin.is_dir():
+        os.environ["PATH"] = str(_miktex_bin) + os.pathsep + os.environ.get("PATH", "")
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt

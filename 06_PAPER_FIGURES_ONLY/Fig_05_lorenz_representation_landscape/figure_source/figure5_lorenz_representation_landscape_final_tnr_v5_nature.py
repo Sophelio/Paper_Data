@@ -24,9 +24,17 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Final
+
+if os.name == "nt":
+    os.environ.setdefault("MIKTEX_UNATTENDED", "1")
+    os.environ.setdefault("MIKTEX_AUTOINSTALL", "1")
+    _miktex_bin = Path.home() / r"AppData\Local\Programs\MiKTeX\miktex\bin\x64"
+    if _miktex_bin.is_dir():
+        os.environ["PATH"] = str(_miktex_bin) + os.pathsep + os.environ.get("PATH", "")
 
 import matplotlib as mpl
 
@@ -50,6 +58,20 @@ STEM: Final = "figure5_lorenz_representation_landscape_final_tnr_v5_nature"
 WIDTH_MM: Final = 183.0
 HEIGHT_MM: Final = 150.0
 MM_PER_INCH: Final = 25.4
+
+# Multiply every type size in this figure. 1 is the manuscript original.
+# A new value misses Matplotlib's LaTeX cache, so the first run at that
+# scale recompiles every label (several minutes).
+Font_scaling = 1.2
+
+
+def _fs(pt: float) -> float:
+    return pt * Font_scaling
+
+
+# Figure-fraction gap between stacked panel-title lines.
+TITLE_LINE_SPACING = 0.028
+
 
 # Pin the 10 pt Latin Modern design at every size (SIR style spec, section 7A).
 LM_DESIGN_SIZE_PIN = (
@@ -114,16 +136,16 @@ STYLE: Final = {
     "pdf.fonttype": 42,
     "ps.fonttype": 42,
     "svg.fonttype": "path",
-    "font.size": 6.9,
-    "axes.labelsize": 7.4,
-    "axes.titlesize": 8.0,
+    "font.size": _fs(6.9),
+    "axes.labelsize": _fs(7.4),
+    "axes.titlesize": _fs(8.0),
     "axes.labelcolor": INK,
     "axes.edgecolor": INK,
     "axes.linewidth": 0.65,
     "axes.spines.top": False,
     "axes.spines.right": False,
-    "xtick.labelsize": 6.65,
-    "ytick.labelsize": 6.65,
+    "xtick.labelsize": _fs(6.65),
+    "ytick.labelsize": _fs(6.65),
     "xtick.color": INK,
     "ytick.color": INK,
     "xtick.direction": "out",
@@ -132,7 +154,7 @@ STYLE: Final = {
     "ytick.major.size": 2.5,
     "xtick.major.width": 0.6,
     "ytick.major.width": 0.6,
-    "legend.fontsize": 6.4,
+    "legend.fontsize": _fs(6.4),
     "lines.solid_capstyle": "round",
     "lines.solid_joinstyle": "round",
 }
@@ -541,42 +563,55 @@ def add_panel_header(
     fig: plt.Figure,
     slot,
     label: str,
-    title: str,
+    title: str | tuple[str, ...],
     subtitle: str,
+    *,
+    center_title: bool = False,
 ) -> None:
     """Place a panel header on the outer GridSpec cell, not the child axes.
 
     Using the cell bounds gives 3D panel a and 2D panels b-d identical title
-    baselines, left edges, and title-to-subtitle spacing.
+    baselines, left edges, and title-to-subtitle spacing.  Extra title lines
+    stack above the original baseline so the subtitle does not drop into the
+    plot.  ``center_title`` places the title and subtitle on the cell midline.
     """
     bounds = slot.get_position(fig)
-    title_y = bounds.y1 + 0.043
+    title_lines = (title,) if isinstance(title, str) else tuple(title)
+    last_title_y = bounds.y1 + 0.043
     subtitle_y = bounds.y1 + 0.012
+    if center_title:
+        title_x = 0.5 * (bounds.x0 + bounds.x1)
+        title_ha = "center"
+    else:
+        title_x = bounds.x0
+        title_ha = "left"
+    first_title_y = last_title_y + (len(title_lines) - 1) * TITLE_LINE_SPACING
     fig.text(
         bounds.x0 - 0.026,
-        title_y,
+        first_title_y,
         rf"\textbf{{{label}}}",
         ha="left",
         va="baseline",
-        fontsize=8.5,
+        fontsize=_fs(8.5),
         color=INK,
     )
+    for index, line in enumerate(title_lines):
+        fig.text(
+            title_x,
+            first_title_y - index * TITLE_LINE_SPACING,
+            rf"\textbf{{{line}}}",
+            ha=title_ha,
+            va="baseline",
+            fontsize=_fs(8.0),
+            color=INK,
+        )
     fig.text(
-        bounds.x0,
-        title_y,
-        rf"\textbf{{{title}}}",
-        ha="left",
-        va="baseline",
-        fontsize=8.0,
-        color=INK,
-    )
-    fig.text(
-        bounds.x0,
+        title_x,
         subtitle_y,
         subtitle,
-        ha="left",
+        ha=title_ha,
         va="baseline",
-        fontsize=6.0,
+        fontsize=_fs(6.0),
         color=MID,
     )
 
@@ -626,7 +661,7 @@ def draw_panel_a(fig: plt.Figure, slot, data: FigureData) -> None:
         equations,
         ha="center",
         va="top",
-        fontsize=8.1,
+        fontsize=_fs(8.1),
         color=INK,
         linespacing=1.16,
     )
@@ -637,7 +672,7 @@ def draw_panel_a(fig: plt.Figure, slot, data: FigureData) -> None:
         + rf"$\|\Delta\mathbf{{c}}\|_\infty={_latex_sci(data.recovery['max_abs_coefficient_deviation'])}$",
         ha="center",
         va="bottom",
-        fontsize=6.5,
+        fontsize=_fs(6.5),
         color=MID,
         clip_on=False,
     )
@@ -730,7 +765,7 @@ def draw_panel_b(ax: plt.Axes, landscape: pd.DataFrame) -> None:
         xytext=(1.6, 0.16),
         ha="left",
         va="center",
-        fontsize=6.05,
+        fontsize=_fs(6.05),
         linespacing=1.12,
         color=COLORS["C0_poly2"],
         bbox=dict(boxstyle="round,pad=0.20", fc="white", ec="#D3A27E", lw=0.6),
@@ -750,7 +785,7 @@ def draw_panel_b(ax: plt.Axes, landscape: pd.DataFrame) -> None:
         xytext=(14.3, 1.8e-3),
         ha="left",
         va="center",
-        fontsize=6.05,
+        fontsize=_fs(6.05),
         linespacing=1.15,
         color=COLORS["C_compact"],
         bbox=dict(boxstyle="round,pad=0.20", fc="white", ec="#8CB9AA", lw=0.6),
@@ -770,7 +805,7 @@ def draw_panel_b(ax: plt.Axes, landscape: pd.DataFrame) -> None:
         xytext=(26.5, 2.2e-4),
         ha="left",
         va="center",
-        fontsize=6.05,
+        fontsize=_fs(6.05),
         linespacing=1.15,
         color=COLORS["C_all"],
         bbox=dict(boxstyle="round,pad=0.20", fc="white", ec="#8EB0C8", lw=0.6),
@@ -787,7 +822,7 @@ def draw_panel_b(ax: plt.Axes, landscape: pd.DataFrame) -> None:
         r"$C_0+Q_{\dot y|x}$",
         xy=(one_q["n_coordinates"], one_q["cv_rmse_mean"]),
         xytext=(13.5, 1.4),
-        fontsize=6.0,
+        fontsize=_fs(6.0),
         color=MID,
         arrowprops=dict(arrowstyle="-", color=LIGHT, lw=0.55),
     )
@@ -808,7 +843,7 @@ def draw_panel_b(ax: plt.Axes, landscape: pd.DataFrame) -> None:
         handlelength=4.4,
         handletextpad=0.65,
         borderaxespad=0.0,
-        fontsize=6.2,
+        fontsize=_fs(6.2),
     )
     ax.text(
         0.985,
@@ -817,7 +852,7 @@ def draw_panel_b(ax: plt.Axes, landscape: pd.DataFrame) -> None:
         transform=ax.transAxes,
         ha="right",
         va="top",
-        fontsize=5.75,
+        fontsize=_fs(5.75),
         color=MID,
     )
 
@@ -877,16 +912,18 @@ def draw_panel_c(
     )
 
     ax.set_yscale("log")
-    ax.set_xlim(-0.48, 2.48)
+    # Keep only a thin pad past the outer markers so the three two-line
+    # tick labels sit farther apart and the second rows do not collide.
+    ax.set_xlim(-0.12, 2.12)
     ax.set_ylim(7.5e-6, 5.0)
     ax.set_xticks(positions)
     ax.set_xticklabels(
         [
             "Quadratic\n" r"10 $\rightarrow$ 65 features",
             "Compact\n12 coordinates",
-            "$C_{\\mathrm{all}}$\n38 coordinates",
+            r"$C_{\mathrm{all}}$" "\n38 coordinates",
         ],
-        linespacing=1.16,
+        linespacing=1.55,
     )
     ax.set_ylabel("Confirmation RMSE in $z$")
     ax.grid(axis="y", which="major", color=RULE, lw=0.45, zorder=0)
@@ -898,7 +935,7 @@ def draw_panel_c(
         transform=ax.transAxes,
         ha="right",
         va="top",
-        fontsize=6.25,
+        fontsize=_fs(6.25),
         color=INK,
         linespacing=1.15,
     )
@@ -909,7 +946,7 @@ def draw_panel_c(
         transform=ax.transAxes,
         ha="right",
         va="top",
-        fontsize=5.75,
+        fontsize=_fs(5.75),
         color=MID,
         linespacing=1.15,
     )
@@ -959,7 +996,7 @@ def draw_panel_d(ax: plt.Axes, bootstrap: BootstrapResult) -> None:
             textcoords="offset points",
             ha="left",
             va="center",
-            fontsize=6.15,
+            fontsize=_fs(6.15),
             color=COLORS[rep],
             clip_on=False,
         )
@@ -975,12 +1012,12 @@ def draw_panel_d(ax: plt.Axes, bootstrap: BootstrapResult) -> None:
         zorder=2,
     )
     ax.text(
-        0.39,
+        0.49,
         3.68,
         "Compact--Quadratic\n" r"crossover $\approx 0.45\%$",
         ha="right",
         va="bottom",
-        fontsize=5.75,
+        fontsize=_fs(5.75),
         color=MID,
         linespacing=1.1,
     )
@@ -1000,7 +1037,7 @@ def draw_panel_d(ax: plt.Axes, bootstrap: BootstrapResult) -> None:
         transform=ax.transAxes,
         ha="left",
         va="top",
-        fontsize=6.15,
+        fontsize=_fs(6.15),
         color=COLORS["C_all"],
         linespacing=1.18,
         bbox=dict(boxstyle="round,pad=0.22", fc=PALE_BLUE, ec="#A9C1D3", lw=0.55),
@@ -1013,7 +1050,7 @@ def draw_panel_d(ax: plt.Axes, bootstrap: BootstrapResult) -> None:
         transform=ax.transAxes,
         ha="right",
         va="bottom",
-        fontsize=5.75,
+        fontsize=_fs(5.75),
         color=MID,
     )
 
@@ -1046,29 +1083,33 @@ def build_figure(data: FigureData, bootstrap: BootstrapResult) -> plt.Figure:
         fig,
         grid[0, 0],
         "a",
-        "Fixed-representation support recovery",
+        ("Fixed-Representation", "Support Recovery"),
         r"Full-state recovery $\cdot$ exact analytic RHS targets",
+        center_title=True,
     )
     add_panel_header(
         fig,
         grid[0, 1],
         "b",
-        "Accuracy and compactness select different representations",
+        ("Accuracy and Compactness", "Select Different Representations"),
         r"17 admissible representations $\cdot$ 48 development trajectories $\cdot$ 6 grouped folds",
+        center_title=True,
     )
     add_panel_header(
         fig,
         grid[1, 0],
         "c",
-        "Clean-data relational advantage",
+        "Clean-Data Relational Advantage",
         r"$N=24$ independent trajectories $\cdot$ common support",
+        center_title=True,
     )
     add_panel_header(
         fig,
         grid[1, 1],
         "d",
-        "Observation noise changes relative ranking",
+        "Observation Noise Changes Relative Ranking",
         r"Controlled stress test $\cdot$ $N=24$ trajectories $\times$ 3 replicates $\cdot$ common support",
+        center_title=True,
     )
 
     fig.text(
@@ -1077,7 +1118,7 @@ def build_figure(data: FigureData, bootstrap: BootstrapResult) -> plt.Figure:
         "Development data select representations; the protected confirmation cohort is used only for evaluation.",
         ha="center",
         va="bottom",
-        fontsize=5.75,
+        fontsize=_fs(5.75),
         color=MID,
     )
     return fig

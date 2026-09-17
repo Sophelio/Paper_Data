@@ -277,8 +277,8 @@ categories = [
         subs=[
             dict(x=1.38, y=7.78, w=1.08, h=0.50, text=r"$y=F(x)$"),
             dict(x=2.47, y=7.79, w=0.99, h=0.50, text=r"$F=0$"),
-            dict(x=1.68, y=7.16, w=0.96, h=0.47, text=r"$P/Q$"),
-            dict(x=2.70, y=7.16, w=1.02, h=0.47,
+            dict(x=1.6, y=7.16, w=0.96, h=0.47, text=r"$P/Q$"),
+            dict(x=2.63, y=7.16, w=1.02, h=0.47,
                  text=r"$\mathcal{R}_{\mathrm{SR}}$", fs=15.8,
                  fc=AMBER_FILL, ec=AMBER, lw=0.85, alpha=0.96),
         ],
@@ -332,7 +332,7 @@ categories = [
         title_x=9.43, title_y=5.68, title_fs=15.9, top_widen=0.14,
         title_linespacing=0.82,
         subs=[
-            dict(x=8.78, y=4.80, w=1.01, h=0.49, text=r"$p(y|x)$"),
+            dict(x=8.7, y=4.80, w=1.01, h=0.49, text=r"$p(y|x)$"),
             dict(x=9.95, y=4.80, w=1.34, h=0.49,
                  text=r"$\theta^{(j)}\!\sim P_\theta$", fs=13.3),
             dict(x=9.35, y=4.16, w=1.26, h=0.48,
@@ -347,7 +347,7 @@ categories = [
         subs=[
             dict(x=1.43, y=1.87, w=0.92, h=0.46, text=r"$C=0$"),
             dict(x=2.47, y=1.87, w=0.98, h=0.46, text=r"$C\leq0$"),
-            dict(x=1.72, y=1.29, w=1.08, h=0.45, text=r"$\nabla\!\cdot J$"),
+            dict(x=1.63, y=1.29, w=1.08, h=0.45, text=r"$\nabla\!\cdot J$"),
             dict(x=2.82, y=1.29, w=1.16, h=0.45, text=r"$\delta\mathcal{J}=0$", fs=14.0),
         ],
     ),
@@ -377,8 +377,8 @@ categories = [
 fig = plt.figure(figsize=(14.4, 8.35), dpi=180)
 ax = fig.add_axes([0, 0, 1, 1])
 fig.patch.set_facecolor("white")
-ax.set_xlim(-0.1, 19.20)
-ax.set_ylim(-0.05, 11.05)
+ax.set_xlim(-0.1, 19.0)
+ax.set_ylim(-0.0, 10.8)
 ax.axis("off")
 
 # Adaptive living membrane. The relational space is deliberately drawn without
@@ -849,13 +849,13 @@ if smooth_field[:, 1].min() <= 0.40:
     raise RuntimeError("Metaball membrane extends too close to the footer.")
 
 fig.savefig(
-    PDF_PATH, bbox_inches="tight", pad_inches=0.04, facecolor="white"
+    PDF_PATH, bbox_inches="tight", pad_inches=0.01, facecolor="white"
 )
 fig.savefig(
-    SVG_PATH, bbox_inches="tight", pad_inches=0.04, facecolor="white"
+    SVG_PATH, bbox_inches="tight", pad_inches=0.01, facecolor="white"
 )
 fig.savefig(
-    PNG_PATH, dpi=600, bbox_inches="tight", pad_inches=0.04,
+    PNG_PATH, dpi=600, bbox_inches="tight", pad_inches=0.01,
     facecolor="white"
 )
 plt.close(fig)

@@ -13,7 +13,17 @@ phase_turning_manifold_sensitivity_centered_with_x2_purple_v8.svg
 phase_turning_manifold_sensitivity_centered_with_x2_purple_v8.png
 """
 
+import os
 from pathlib import Path
+
+# User-level MiKTeX is often missing from IDE PATH. Do not call kpsewhich
+# here: a fresh MiKTeX install can block forever on its update prompt.
+if os.name == "nt":
+    os.environ.setdefault("MIKTEX_UNATTENDED", "1")
+    os.environ.setdefault("MIKTEX_AUTOINSTALL", "1")
+    _miktex_bin = Path.home() / r"AppData\Local\Programs\MiKTeX\miktex\bin\x64"
+    if _miktex_bin.is_dir():
+        os.environ["PATH"] = str(_miktex_bin) + os.pathsep + os.environ.get("PATH", "")
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
@@ -21,7 +31,7 @@ import numpy as np
 from matplotlib.lines import Line2D
 from matplotlib.patches import ConnectionPatch, Rectangle
 from matplotlib.text import Text
-from matplotlib.transforms import ScaledTranslation
+from matplotlib.transforms import Bbox, ScaledTranslation
 from scipy.optimize import brentq
 
 from phase_turning_manifold_sensitivity_centered_with_x2_purple_v7 import (
@@ -50,6 +60,11 @@ HEIGHT_MM = 170.0
 MM_PER_INCH = 25.4
 PNG_DPI = 450
 
+# Multiply every type size in this figure. 1 is the manuscript original.
+# A new value misses Matplotlib's LaTeX cache, so the first run at that
+# scale recompiles every label (several minutes of silence unless you wait).
+Font_scaling = 1.2
+
 # Restore the v7 blue/green/purple visual identity while retaining the v8
 # line-style redundancy: the negative branch is dashed and the positive branch
 # is solid, so branch meaning does not depend on color alone.
@@ -64,17 +79,17 @@ MUTED = "#555555"
 GUIDE = "#777777"
 PANEL_BG = "#F5F5F5"
 BRANCH_ALPHA = 0.96
-# Font sizes in points at the final 183 x 170 mm print size.
-FS_TITLE = 9.0
-FS_PANEL_LETTER = 8.0
-FS_PANEL_TITLE = 7.0
-FS_SUBTITLE = 5.7
-FS_LABEL = 6.6
-FS_TICK = 5.8
-FS_BODY = 6.2
-FS_KEY = 5.0
-FS_NOTE = 5.3
-FS_INSET_TICK = 5.3
+# Font sizes in points at the final 183 x 170 mm print size, times Font_scaling.
+FS_TITLE = 9.0 * Font_scaling
+FS_PANEL_LETTER = 8.0 * Font_scaling
+FS_PANEL_TITLE = 7.0 * Font_scaling
+FS_SUBTITLE = 5.7 * Font_scaling
+FS_LABEL = 6.6 * Font_scaling
+FS_TICK = 5.8 * Font_scaling
+FS_BODY = 6.2 * Font_scaling
+FS_KEY = 5.0 * Font_scaling
+FS_NOTE = 5.3 * Font_scaling
+FS_INSET_TICK = 5.3 * Font_scaling
 # Latin Modern ships optical sizes: at 5-8 pt it switches to the lmr5-lmr8
 # designs, which are 15-23% wider than lmr10 and overflow this fixed layout.
 # Declaring the families before their .fd files load pins every shape to the
@@ -156,27 +171,38 @@ def add_panel_header(fig, spec, letter, title, subtitle):
     """Create a dedicated header band so panel text never covers data."""
     header = fig.add_subplot(spec)
     header.set_axis_off()
-    # Use a fixed physical offset rather than a fraction of axis width so the
-    # full-width Panel A title starts at the same margin as Panels B-E.
+    # Place title and subtitle in physical points from the header top so the
+    # gap is identical on every panel. Axes fractions (0.70 / 0.20) made Panel
+    # A look tighter because its header band is shorter. 7.0 pt from the top
+    # and an 11.6 pt title-to-subtitle gap match the current B-E layout.
+    title_from_top_pt = 7.0
+    subtitle_gap_pt = 11.6
+    letter_transform = header.transAxes + ScaledTranslation(
+        0.0, -title_from_top_pt / 72.0, fig.dpi_scale_trans
+    )
     title_transform = header.transAxes + ScaledTranslation(
-        15.0 / 72.0, 0.0, fig.dpi_scale_trans
+        15.0 / 72.0, -title_from_top_pt / 72.0, fig.dpi_scale_trans
+    )
+    subtitle_transform = header.transAxes + ScaledTranslation(
+        15.0 / 72.0, -(title_from_top_pt + subtitle_gap_pt) / 72.0,
+        fig.dpi_scale_trans,
     )
     artists = [
         header.text(
-            0.00, 0.70, rf"\textbf{{{letter}}}",
-            transform=header.transAxes,
+            0.00, 1.00, rf"\textbf{{{letter}}}",
+            transform=letter_transform,
             fontsize=FS_PANEL_LETTER,
             ha="left", va="center",
         ),
         header.text(
-            0.00, 0.70, rf"\textbf{{{title}}}",
+            0.00, 1.00, rf"\textbf{{{title}}}",
             transform=title_transform,
             fontsize=FS_PANEL_TITLE,
             ha="left", va="center",
         ),
         header.text(
-            0.00, 0.20, subtitle,
-            transform=title_transform,
+            0.00, 1.00, subtitle,
+            transform=subtitle_transform,
             fontsize=FS_SUBTITLE, color=MUTED,
             ha="left", va="center",
         ),
@@ -287,11 +313,13 @@ def add_panel_c_condition_note(ax):
         clip_on=False,
     ))
     note = ax.text(
-        0.50,
-        0.50,
-        r"$g=\bar{g}$: Direct Numerator Sensitivity"
+        0.64,
+        0.47,
+        r"$g=\bar{g}$: Direct numerator"
         "\n"
-        "Vanishes At The Conditioning Locus",
+        "sensitivity vanishes at the"
+        "\n"
+        "conditioning locus",
         transform=ax.transAxes,
         fontsize=FS_NOTE,
         linespacing=1.08,
@@ -314,14 +342,14 @@ def add_panel_c_equations(ax):
     ax.set_axis_off()
     ax.set_facecolor("none")
     equation = ax.text(
-        0.03,
-        0.82,
+        -0.0,
+        0.71,
         r"$D^{\mathrm{sc}}=u_n(g-\bar{g})+s_{\mathrm{eff}}g$"
         "\n"
         r"$\dot{x}_1=0\;\Longleftrightarrow\;D^{\mathrm{sc}}=s_{\mathrm{eff}}g(\dot{x}_2)$",
         transform=ax.transAxes,
         fontsize=FS_NOTE,
-        linespacing=1.18,
+        linespacing=1.28,
         ha="left",
         va="top",
         bbox=dict(
@@ -372,7 +400,14 @@ def audit_dimensions(fig):
 
 def audit_typography(fig, panel_labels, figure_title):
     """Assert panel-label, title, text-size, color, and Latin Modern requirements."""
+    print(
+        f"Typesetting with LaTeX (Font_scaling={Font_scaling:g}). "
+        "The first run at a new scale rebuilds the TeX cache and can take "
+        "several minutes...",
+        flush=True,
+    )
     fig.canvas.draw()
+    print("LaTeX typesetting finished.", flush=True)
     expected_letters = list("abcde")
     if [artist.get_text() for artist in panel_labels] != [
         rf"\textbf{{{letter}}}" for letter in expected_letters
@@ -381,20 +416,27 @@ def audit_typography(fig, panel_labels, figure_title):
 
     for artist in panel_labels:
         if not np.isclose(artist.get_fontsize(), FS_PANEL_LETTER, rtol=0.0, atol=1e-12):
-            raise RuntimeError(f"Panel label {artist.get_text()!r} is not exactly 8 pt.")
+            raise RuntimeError(
+                f"Panel label {artist.get_text()!r} is not exactly "
+                f"{FS_PANEL_LETTER:g} pt."
+            )
 
     if not np.isclose(figure_title.get_fontsize(), FS_TITLE, rtol=0.0, atol=1e-12):
-        raise RuntimeError("The global figure title must be exactly 9 pt.")
+        raise RuntimeError(
+            f"The global figure title must be exactly {FS_TITLE:g} pt."
+        )
     if not figure_title.get_text().startswith(r"\textbf{"):
         raise RuntimeError("The global figure title must be bold.")
 
     exempt_ids = {id(artist) for artist in panel_labels} | {id(figure_title)}
     invalid_sizes = []
     colored_text = []
+    min_body_pt = 5.0 * Font_scaling
+    max_body_pt = 7.0 * Font_scaling
     for artist in visible_nonempty_text(fig):
         if id(artist) not in exempt_ids:
             size = float(artist.get_fontsize())
-            if not 5.0 <= size <= 7.0:
+            if not min_body_pt <= size <= max_body_pt:
                 invalid_sizes.append((artist.get_text(), size))
 
         rgba = mpl.colors.to_rgba(artist.get_color())
@@ -402,7 +444,10 @@ def audit_typography(fig, panel_labels, figure_title):
             colored_text.append((artist.get_text(), artist.get_color()))
 
     if invalid_sizes:
-        raise RuntimeError(f"Visible non-panel text outside 5-7 pt: {invalid_sizes}")
+        raise RuntimeError(
+            f"Visible non-panel text outside {min_body_pt:g}-{max_body_pt:g} pt: "
+            f"{invalid_sizes}"
+        )
     if not (
         mpl.rcParams["text.usetex"]
         and "lmodern" in mpl.rcParams["text.latex.preamble"]
@@ -414,6 +459,51 @@ def audit_typography(fig, panel_labels, figure_title):
         )
     if colored_text:
         raise RuntimeError(f"Figure text must be black or gray: {colored_text}")
+
+
+def fit_inset_to_artists(fig, ax, artists, pad_px=3.0):
+    """Shift text onto the canvas, then enlarge the host inset to contain it.
+
+    Font_scaling grows labels without growing a fixed inset, so this keeps the
+    rounded condition note (and similar insets) on the figure and inside their
+    allocated axes before the layout audit runs.
+    """
+    fig.canvas.draw()
+    renderer = fig.canvas.get_renderer()
+    canvas = fig.bbox
+    pad = float(pad_px)
+
+    for artist in artists:
+        bbox = artist.get_window_extent(renderer)
+        dx = 0.0
+        dy = 0.0
+        if bbox.x1 > canvas.x1 - pad:
+            dx = (canvas.x1 - pad) - bbox.x1
+        if bbox.x0 + dx < canvas.x0 + pad:
+            dx = (canvas.x0 + pad) - bbox.x0
+        if bbox.y0 < canvas.y0 + pad:
+            dy = (canvas.y0 + pad) - bbox.y0
+        if bbox.y1 + dy > canvas.y1 - pad:
+            dy = (canvas.y1 - pad) - bbox.y1
+        if dx or dy:
+            x, y = artist.get_position()
+            display = np.asarray(ax.transAxes.transform((x, y)), dtype=float)
+            artist.set_position(
+                ax.transAxes.inverted().transform(display + np.array([dx, dy]))
+            )
+
+    fig.canvas.draw()
+    renderer = fig.canvas.get_renderer()
+    boxes = [artist.get_window_extent(renderer) for artist in artists]
+    boxes.append(ax.get_window_extent(renderer))
+    union = Bbox.union(boxes)
+    x0 = min(max(union.x0 - pad, canvas.x0), canvas.x1)
+    y0 = min(max(union.y0 - pad, canvas.y0), canvas.y1)
+    x1 = max(min(union.x1 + pad, canvas.x1), x0 + 1.0)
+    y1 = max(min(union.y1 + pad, canvas.y1), y0 + 1.0)
+    fig_w = float(canvas.width)
+    fig_h = float(canvas.height)
+    ax.set_position([x0 / fig_w, y0 / fig_h, (x1 - x0) / fig_w, (y1 - y0) / fig_h])
 
 
 def audit_layout(fig, data_axes, contained_groups=(), grid_axes=()):
@@ -483,6 +573,10 @@ def audit_exports(outputs):
 
 
 def main():
+    print(
+        f"Building Figure 2 at Font_scaling={Font_scaling:g}.",
+        flush=True,
+    )
     # Scientific construction retained exactly from v7.
     t = np.linspace(0.0, 36.0, 12000)
     y1 = x1(t)
@@ -526,7 +620,7 @@ def main():
         left=0.080,
         right=0.985,
         bottom=0.070,
-        top=0.895,
+        top=0.905,
     )
 
     header_groups = []
@@ -534,13 +628,13 @@ def main():
 
     # Panel a: dedicated header band plus full-width time-series axis.
     a_grid = outer[0].subgridspec(
-        2, 1, height_ratios=[0.20, 0.80], hspace=0.02
+        2, 1, height_ratios=[0.275, 0.725], hspace=0.02
     )
     header, artists = add_panel_header(
         fig,
         a_grid[0],
         "a",
-        "Multiscale analytical target",
+        "Multiscale Analytical Target",
         r"Branch style follows the sign of $\dot{x}_1$; circles mark $x_1$ turning events",
     )
     header_groups.append((header, artists))
@@ -593,7 +687,7 @@ def main():
         fig,
         b_grid[0],
         "b",
-        "Level-rate coordinates",
+        "Level-Rate Coordinates",
         r"The target branches remain folded in $(x_2,\dot{x}_2)$",
     )
     header_groups.append((header, artists))
@@ -613,7 +707,7 @@ def main():
         fig,
         c_grid[0],
         "c",
-        "Sensitivity-centered phase coordinates",
+        "Sensitivity-Centered Phase Coordinates",
         "Manifold geometry and conditioning organize the target",
     )
     header_groups.append((header, artists))
@@ -624,12 +718,24 @@ def main():
     ax_c = fig.add_subplot(c_grid[1])
     ax_c_zoom = ax_c.inset_axes([0.60, 0.66, 0.38, 0.32], zorder=20)
     # Use the open upper-left region for the borderless semantic key.
-    ax_c_key = ax_c.inset_axes([0.12, 0.75, 0.2, 0.18], zorder=19)
+    ax_c_key = ax_c.inset_axes(
+        [0.12, 0.75, 0.20 * Font_scaling, 0.18 * Font_scaling],
+        zorder=19,
+    )
     # Place the conditioning statement directly below the local zoom.
-    ax_c_condition = ax_c.inset_axes([0.55, 0.43, 0.48, 0.14], zorder=19)
+    # Right-align so a larger Font_scaling cannot run the box off the figure.
+    condition_width = min(0.48 * Font_scaling, 0.57)
+    condition_height = 0.16 * Font_scaling
+    ax_c_condition = ax_c.inset_axes(
+        [1.0 - condition_width, 0.36, condition_width, condition_height],
+        zorder=19,
+    )
     # Place the defining identities in the lower-left white region near x=-1,
     # with only a compact horizontal margin around the equation text.
-    ax_c_equations = ax_c.inset_axes([0.04, 0.04, 0.41, 0.18], zorder=19)
+    ax_c_equations = ax_c.inset_axes(
+        [0.04, 0.04, 0.41 * Font_scaling, 0.18 * Font_scaling],
+        zorder=19,
+    )
 
     draw_branch_runs(ax_c, r2, d_sc, increasing, lw=1.25, alpha=BRANCH_ALPHA)
     draw_turning_events(ax_c, tp_r2, tp_d_sc, size=15)
@@ -746,7 +852,7 @@ def main():
         fig,
         d_grid[0],
         "d",
-        "Rate-rate coordinates",
+        "Rate-Rate Coordinates",
         r"Turning events lie on $\dot{x}_1=0$ with reference-rate context",
     )
     header_groups.append((header, artists))
@@ -767,7 +873,7 @@ def main():
         fig,
         e_grid[0],
         "e",
-        "Rate-acceleration coordinates",
+        "Rate-Acceleration Coordinates",
         r"Turning events map to local curvature values on $\dot{x}_1=0$",
     )
     header_groups.append((header, artists))
@@ -796,7 +902,7 @@ def main():
                label=r"$x_1$ turning event"),
     ]
     figure_title = fig.suptitle(
-        r"\textbf{Relational Coordinates Can Simplify The Organization Of A Scientific Target}",
+        r"\textbf{Relational Coordinates Can Simplify the Organization of a Scientific Target}",
         x=0.5,
         # 0.9845 (not 0.985) keeps the taller Latin Modern title's top
         # clearance no smaller than the pre-polish Arial render.
@@ -820,6 +926,9 @@ def main():
     audit_scientific_invariants(tp_r1, x_cond, y_cond, phase)
     audit_dimensions(fig)
     audit_typography(fig, panel_labels, figure_title)
+    fit_inset_to_artists(fig, ax_c_condition, c_condition_artists)
+    fit_inset_to_artists(fig, ax_c_key, c_key_artists)
+    fit_inset_to_artists(fig, ax_c_equations, c_equation_artists)
 
     c_position = ax_c.get_position()
     e_position = ax_e.get_position()
@@ -844,18 +953,32 @@ def main():
         grid_axes=[*data_axes, ax_c_zoom],
     )
 
-    # Tight bounding boxes include the local view's tick labels. Keep those
-    # labels physically disjoint from the sensitivity note placed below it.
+    # Tight bounding boxes include the local view's tick labels. If a larger
+    # font scale makes the note overlap the zoom, drop the note until they
+    # separate instead of aborting the figure.
+    fig.canvas.draw()
     renderer = fig.canvas.get_renderer()
-    if ax_c_zoom.get_tightbbox(renderer).overlaps(
-        ax_c_condition.get_tightbbox(renderer)
-    ):
-        raise RuntimeError(
-            "Panel C local-view labels overlap the sensitivity note."
+    zoom_box = ax_c_zoom.get_tightbbox(renderer)
+    cond_box = ax_c_condition.get_tightbbox(renderer)
+    if zoom_box.overlaps(cond_box):
+        dy_px = zoom_box.y0 - cond_box.y1 - 2.0
+        pos = ax_c_condition.get_position()
+        ax_c_condition.set_position(
+            [pos.x0, pos.y0 + dy_px / float(fig.bbox.height), pos.width, pos.height]
         )
+        fit_inset_to_artists(fig, ax_c_condition, c_condition_artists)
+        fig.canvas.draw()
+        renderer = fig.canvas.get_renderer()
+        if ax_c_zoom.get_tightbbox(renderer).overlaps(
+            ax_c_condition.get_tightbbox(renderer)
+        ):
+            raise RuntimeError(
+                "Panel C local-view labels overlap the sensitivity note."
+            )
 
     # PDF is the primary editable vector output; SVG remains editable, and PNG
     # is a 450-dpi RGB preview. Exact page size is preserved without tight bbox.
+    print("Writing PDF/SVG/PNG...", flush=True)
     fig.savefig(PDF, dpi=PNG_DPI, facecolor="white")
     fig.savefig(SVG, facecolor="white")
     fig.savefig(PNG, dpi=PNG_DPI, facecolor="white")

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-"""Five-panel turning-manifold figure with sensitivity-centered phase coordinates in Panel C.
+r"""Five-panel turning-manifold figure with sensitivity-centered phase coordinates in Panel C.
 
 Panel D uses $\dot{x}_1$ versus $\dot{x}_2$.
 
