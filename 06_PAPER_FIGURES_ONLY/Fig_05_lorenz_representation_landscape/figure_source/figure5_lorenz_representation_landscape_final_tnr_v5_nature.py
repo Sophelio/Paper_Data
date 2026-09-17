@@ -34,6 +34,7 @@ import matplotlib as mpl
 mpl.use("Agg")
 
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 import numpy as np
 import pandas as pd
 
@@ -46,6 +47,28 @@ STEM: Final = "figure5_lorenz_representation_landscape_final_tnr_v5_nature"
 WIDTH_MM: Final = 183.0
 HEIGHT_MM: Final = 150.0
 MM_PER_INCH: Final = 25.4
+
+# Pin the 10 pt Latin Modern design at every size (SIR style spec, section 7A).
+LM_DESIGN_SIZE_PIN = (
+    r"\DeclareFontFamily{T1}{lmr}{}"
+    r"\DeclareFontShape{T1}{lmr}{m}{n}{<-> ec-lmr10}{}"
+    r"\DeclareFontShape{T1}{lmr}{m}{it}{<-> ec-lmri10}{}"
+    r"\DeclareFontShape{T1}{lmr}{bx}{n}{<-> ec-lmbx10}{}"
+    r"\DeclareFontShape{T1}{lmr}{bx}{it}{<-> ec-lmbxi10}{}"
+    r"\DeclareFontShape{T1}{lmr}{b}{n}{<->ssub * lmr/bx/n}{}"
+    r"\DeclareFontFamily{OT1}{lmr}{}"
+    r"\DeclareFontShape{OT1}{lmr}{m}{n}{<-> rm-lmr10}{}"
+    r"\DeclareFontShape{OT1}{lmr}{m}{it}{<-> rm-lmri10}{}"
+    r"\DeclareFontShape{OT1}{lmr}{bx}{n}{<-> rm-lmbx10}{}"
+    r"\DeclareFontShape{OT1}{lmr}{b}{n}{<->ssub * lmr/bx/n}{}"
+    r"\DeclareFontFamily{OML}{lmm}{\skewchar\font127 }"
+    r"\DeclareFontShape{OML}{lmm}{m}{it}{<-> lmmi10}{}"
+    r"\DeclareFontShape{OML}{lmm}{b}{it}{<-> lmmib10}{}"
+    r"\DeclareFontShape{OML}{lmm}{bx}{it}{<->ssub * lmm/b/it}{}"
+    r"\DeclareFontFamily{OMS}{lmsy}{\skewchar\font48 }"
+    r"\DeclareFontShape{OMS}{lmsy}{m}{n}{<-> lmsy10}{}"
+    r"\DeclareFontShape{OMS}{lmsy}{b}{n}{<-> lmbsy10}{}"
+)
 BOOTSTRAP_RESAMPLES: Final = 20_000
 BOOTSTRAP_SEED: Final = 0
 
@@ -76,29 +99,28 @@ STYLE: Final = {
     "savefig.pad_inches": 0.0,
     "savefig.facecolor": "white",
     "savefig.transparent": False,
-    "font.family": "sans-serif",
-    "font.sans-serif": [
-        "Arial",
-        "Helvetica",
-        "Nimbus Sans L",
-        "Liberation Sans",
-        "DejaVu Sans",
-    ],
-    "mathtext.fontset": "dejavusans",
+    # Latin Modern through LaTeX, matching the manuscript typeface.
+    "text.usetex": True,
+    "font.family": "serif",
+    "text.latex.preamble": (
+        r"\usepackage[T1]{fontenc}"
+        r"\usepackage{lmodern}"
+        r"\usepackage{amsmath,amssymb}"
+        + LM_DESIGN_SIZE_PIN
+    ),
     "pdf.fonttype": 42,
     "ps.fonttype": 42,
-    "svg.fonttype": "none",
-    "font.size": 6.6,
-    "axes.labelsize": 7.0,
-    "axes.titlesize": 7.6,
-    "axes.titleweight": "semibold",
+    "svg.fonttype": "path",
+    "font.size": 6.9,
+    "axes.labelsize": 7.4,
+    "axes.titlesize": 8.0,
     "axes.labelcolor": INK,
     "axes.edgecolor": INK,
     "axes.linewidth": 0.65,
     "axes.spines.top": False,
     "axes.spines.right": False,
-    "xtick.labelsize": 6.3,
-    "ytick.labelsize": 6.3,
+    "xtick.labelsize": 6.65,
+    "ytick.labelsize": 6.65,
     "xtick.color": INK,
     "ytick.color": INK,
     "xtick.direction": "out",
@@ -107,7 +129,7 @@ STYLE: Final = {
     "ytick.major.size": 2.5,
     "xtick.major.width": 0.6,
     "ytick.major.width": 0.6,
-    "legend.fontsize": 6.2,
+    "legend.fontsize": 6.4,
     "lines.solid_capstyle": "round",
     "lines.solid_joinstyle": "round",
 }
@@ -521,7 +543,7 @@ def add_panel_header(
 ) -> None:
     """Place a panel header on the outer GridSpec cell, not the child axes.
 
-    Using the cell bounds gives 3D panel a and 2D panels b–d identical title
+    Using the cell bounds gives 3D panel a and 2D panels b-d identical title
     baselines, left edges, and title-to-subtitle spacing.
     """
     bounds = slot.get_position(fig)
@@ -530,21 +552,19 @@ def add_panel_header(
     fig.text(
         bounds.x0 - 0.026,
         title_y,
-        label,
+        rf"\textbf{{{label}}}",
         ha="left",
         va="baseline",
-        fontsize=8.2,
-        fontweight="bold",
+        fontsize=8.5,
         color=INK,
     )
     fig.text(
         bounds.x0,
         title_y,
-        title,
+        rf"\textbf{{{title}}}",
         ha="left",
         va="baseline",
-        fontsize=7.6,
-        fontweight="semibold",
+        fontsize=8.0,
         color=INK,
     )
     fig.text(
@@ -553,16 +573,22 @@ def add_panel_header(
         subtitle,
         ha="left",
         va="baseline",
-        fontsize=5.55,
+        fontsize=6.0,
         color=MID,
     )
+
+
+def _latex_sci(value: float, digits: int = 1) -> str:
+    """Format a number as LaTeX scientific notation, e.g. 2.0\\times10^{-3}."""
+    mantissa, exponent = f"{value:.{digits}e}".split("e")
+    return rf"{mantissa}\times10^{{{int(exponent)}}}"
 
 
 def draw_panel_a(fig: plt.Figure, slot, data: FigureData) -> None:
     # Give the attractor most of the cell and use the lower strip only for the
     # recovered equations.  The tighter split avoids the unused vertical band
     # produced by a square 3D axes inside this narrow panel.
-    sub = slot.subgridspec(2, 1, height_ratios=[0.76, 0.24], hspace=0.0)
+    sub = slot.subgridspec(2, 1, height_ratios=[0.80, 0.20], hspace=0.0)
     ax = fig.add_subplot(sub[0], projection="3d")
     text_ax = fig.add_subplot(sub[1])
     text_ax.set_axis_off()
@@ -571,10 +597,18 @@ def draw_panel_a(fig: plt.Figure, slot, data: FigureData) -> None:
     y = data.attractor["y"].to_numpy()
     z = data.attractor["z"].to_numpy()
     ax.set_proj_type("ortho")
-    ax.plot(x, y, z, color="#263A59", lw=0.34, alpha=0.95)
+    ax.plot(
+        x,
+        y,
+        z,
+        color="#263A59",
+        lw=0.40,
+        alpha=0.95,
+        clip_on=True,
+    )
     ax.set_axis_off()
     ax.view_init(elev=16, azim=-62)
-    ax.set_box_aspect((np.ptp(x), np.ptp(y), np.ptp(z) * 0.90), zoom=1.60)
+    ax.set_box_aspect((np.ptp(x), np.ptp(y), np.ptp(z) * 0.90), zoom=1.50)
 
     dy = data.recovery["equations"]["dy"]["recovered_coefficients"]
     dz = data.recovery["equations"]["dz"]["recovered_coefficients"]
@@ -589,19 +623,20 @@ def draw_panel_a(fig: plt.Figure, slot, data: FigureData) -> None:
         equations,
         ha="center",
         va="top",
-        fontsize=7.8,
+        fontsize=8.1,
         color=INK,
         linespacing=1.16,
     )
     text_ax.text(
         0.50,
-        0.02,
-        "Exact support recovered; max. "
-        + rf"$|\Delta c|={data.recovery['max_abs_coefficient_deviation']:.1e}$",
+        -0.68,
+        "Exact support recovered; "
+        + rf"$\|\Delta\mathbf{{c}}\|_\infty={_latex_sci(data.recovery['max_abs_coefficient_deviation'])}$",
         ha="center",
         va="bottom",
-        fontsize=6.15,
+        fontsize=6.5,
         color=MID,
+        clip_on=False,
     )
 
 
@@ -617,14 +652,23 @@ def draw_panel_b(ax: plt.Axes, landscape: pd.DataFrame) -> None:
         x[frontier][order],
         y[frontier][order],
         color="#555B63",
-        lw=1.45,
-        linestyle=(0, (3.2, 1.8)),
+        lw=1.55,
+        linestyle=(0, (4.0, 2.0)),
         marker="o",
         markersize=3.4,
         markerfacecolor="white",
         markeredgecolor="#555B63",
         markeredgewidth=0.75,
         zorder=4,
+        label="Pareto frontier",
+    )
+    frontier_legend = Line2D(
+        [0],
+        [0],
+        color="#555B63",
+        lw=1.65,
+        linestyle=(0, (4.0, 2.0)),
+        dash_capstyle="butt",
         label="Pareto frontier",
     )
     ax.errorbar(
@@ -678,12 +722,12 @@ def draw_panel_b(ax: plt.Axes, landscape: pd.DataFrame) -> None:
     # text boxes do not cover the Pareto path; only their leader lines approach
     # the corresponding selected points.
     ax.annotate(
-        "Quadratic baseline\n10 coordinates\n→ 65 features",
+        "Quadratic baseline\n10 coordinates\n" r"$\rightarrow$ 65 features",
         xy=(quadratic["n_coordinates"], quadratic["cv_rmse_mean"]),
         xytext=(1.6, 0.16),
         ha="left",
         va="center",
-        fontsize=5.8,
+        fontsize=6.05,
         linespacing=1.12,
         color=COLORS["C0_poly2"],
         bbox=dict(boxstyle="round,pad=0.20", fc="white", ec="#D3A27E", lw=0.6),
@@ -698,12 +742,12 @@ def draw_panel_b(ax: plt.Axes, landscape: pd.DataFrame) -> None:
     )
     ax.annotate(
         "Compactness criterion\n(pre-specified practical floor)\n"
-        r"$C_0+Q_{\rm pair}$: 12 coordinates",
+        r"$C_0+Q_{\mathrm{pair}}$: 12 coordinates",
         xy=(compact["n_coordinates"], compact["cv_rmse_mean"]),
         xytext=(14.3, 1.8e-3),
         ha="left",
         va="center",
-        fontsize=5.8,
+        fontsize=6.05,
         linespacing=1.15,
         color=COLORS["C_compact"],
         bbox=dict(boxstyle="round,pad=0.20", fc="white", ec="#8CB9AA", lw=0.6),
@@ -718,12 +762,12 @@ def draw_panel_b(ax: plt.Axes, landscape: pd.DataFrame) -> None:
     )
     ax.annotate(
         "Accuracy and robustness criteria\n"
-        r"$C_{\rm all}$: 38 coordinates",
+        r"$C_{\mathrm{all}}$: 38 coordinates",
         xy=(all_rep["n_coordinates"], all_rep["cv_rmse_mean"]),
-        xytext=(24.0, 2.2e-4),
+        xytext=(26.5, 2.2e-4),
         ha="left",
         va="center",
-        fontsize=5.8,
+        fontsize=6.05,
         linespacing=1.15,
         color=COLORS["C_all"],
         bbox=dict(boxstyle="round,pad=0.20", fc="white", ec="#8EB0C8", lw=0.6),
@@ -740,7 +784,7 @@ def draw_panel_b(ax: plt.Axes, landscape: pd.DataFrame) -> None:
         r"$C_0+Q_{\dot y|x}$",
         xy=(one_q["n_coordinates"], one_q["cv_rmse_mean"]),
         xytext=(13.5, 1.4),
-        fontsize=5.7,
+        fontsize=6.0,
         color=MID,
         arrowprops=dict(arrowstyle="-", color=LIGHT, lw=0.55),
     )
@@ -754,23 +798,23 @@ def draw_panel_b(ax: plt.Axes, landscape: pd.DataFrame) -> None:
     ax.grid(axis="y", which="major", color=RULE, lw=0.45, zorder=0)
     ax.set_axisbelow(True)
     ax.legend(
-        handles=[frontier_line],
+        handles=[frontier_legend],
         loc="upper right",
         bbox_to_anchor=(0.995, 0.995),
         frameon=False,
-        handlelength=2.6,
-        handletextpad=0.55,
+        handlelength=4.4,
+        handletextpad=0.65,
         borderaxespad=0.0,
-        fontsize=5.8,
+        fontsize=6.2,
     )
     ax.text(
         0.985,
         0.905,
-        "Error bars: mean ± s.e.",
+        r"Error bars: mean $\pm$ SE",
         transform=ax.transAxes,
         ha="right",
         va="top",
-        fontsize=5.3,
+        fontsize=5.75,
         color=MID,
     )
 
@@ -785,7 +829,7 @@ def draw_panel_c(
     class_means = clean_summary.loc[list(REPRESENTATIONS), "mean_rmse"].to_numpy(
         float
     )
-    # Connect the three class means—not individual trajectories—to make the
+    # Connect the three class means (not individual trajectories) to make the
     # clean scale separation visible while avoiding any implication of a fit.
     ax.plot(
         positions,
@@ -835,7 +879,7 @@ def draw_panel_c(
     ax.set_xticks(positions)
     ax.set_xticklabels(
         [
-            "Quadratic\n10 → 65 features",
+            "Quadratic\n" r"10 $\rightarrow$ 65 features",
             "Compact\n12 coordinates",
             "$C_{\\mathrm{all}}$\n38 coordinates",
         ],
@@ -851,18 +895,18 @@ def draw_panel_c(
         transform=ax.transAxes,
         ha="right",
         va="top",
-        fontsize=6.0,
+        fontsize=6.25,
         color=INK,
         linespacing=1.15,
     )
     ax.text(
         0.96,
         0.61,
-        "Mean and 95%\ntrajectory-bootstrap CI",
+        "Mean and 95\\%\ntrajectory-bootstrap CI",
         transform=ax.transAxes,
         ha="right",
         va="top",
-        fontsize=5.25,
+        fontsize=5.75,
         color=MID,
         linespacing=1.15,
     )
@@ -912,8 +956,7 @@ def draw_panel_d(ax: plt.Axes, bootstrap: BootstrapResult) -> None:
             textcoords="offset points",
             ha="left",
             va="center",
-            fontsize=5.9,
-            fontweight="semibold" if rep == "C_all" else "normal",
+            fontsize=6.15,
             color=COLORS[rep],
             clip_on=False,
         )
@@ -931,10 +974,10 @@ def draw_panel_d(ax: plt.Axes, bootstrap: BootstrapResult) -> None:
     ax.text(
         0.39,
         3.68,
-        "compact–quadratic\ncrossover ≈ 0.45%",
+        "Compact--Quadratic\n" r"crossover $\approx 0.45\%$",
         ha="right",
         va="bottom",
-        fontsize=5.25,
+        fontsize=5.75,
         color=MID,
         linespacing=1.1,
     )
@@ -942,7 +985,7 @@ def draw_panel_d(ax: plt.Axes, bootstrap: BootstrapResult) -> None:
     ax.set_xlim(0.075, 1.13)
     ax.set_ylim(0.35, 5.55)
     ax.set_xticks(np.arange(0.1, 1.01, 0.1))
-    ax.set_xlabel(r"Observation noise, $\sigma$ (% of channel s.d.)")
+    ax.set_xlabel(r"Observation noise, $\sigma$ (\% of channel s.d.)")
     ax.set_ylabel("Confirmation RMSE in $z$")
     ax.grid(axis="y", which="major", color=RULE, lw=0.45, zorder=0)
     ax.set_axisbelow(True)
@@ -954,7 +997,7 @@ def draw_panel_d(ax: plt.Axes, bootstrap: BootstrapResult) -> None:
         transform=ax.transAxes,
         ha="left",
         va="top",
-        fontsize=5.85,
+        fontsize=6.15,
         color=COLORS["C_all"],
         linespacing=1.18,
         bbox=dict(boxstyle="round,pad=0.22", fc=PALE_BLUE, ec="#A9C1D3", lw=0.55),
@@ -963,11 +1006,11 @@ def draw_panel_d(ax: plt.Axes, bootstrap: BootstrapResult) -> None:
     ax.text(
         0.955,
         0.055,
-        "Mean and pointwise 95% trajectory-cluster bootstrap CI",
+        "Mean and pointwise 95\\% trajectory-cluster bootstrap CI",
         transform=ax.transAxes,
         ha="right",
         va="bottom",
-        fontsize=5.3,
+        fontsize=5.75,
         color=MID,
     )
 
@@ -1001,28 +1044,28 @@ def build_figure(data: FigureData, bootstrap: BootstrapResult) -> plt.Figure:
         grid[0, 0],
         "a",
         "Fixed-representation support recovery",
-        "Full-state recovery · exact analytic RHS targets",
+        r"Full-state recovery $\cdot$ exact analytic RHS targets",
     )
     add_panel_header(
         fig,
         grid[0, 1],
         "b",
         "Accuracy and compactness select different representations",
-        "17 admissible representations · 48 development trajectories · 6 grouped folds",
+        r"17 admissible representations $\cdot$ 48 development trajectories $\cdot$ 6 grouped folds",
     )
     add_panel_header(
         fig,
         grid[1, 0],
         "c",
         "Clean-data relational advantage",
-        "$N=24$ independent trajectories · common support",
+        r"$N=24$ independent trajectories $\cdot$ common support",
     )
     add_panel_header(
         fig,
         grid[1, 1],
         "d",
         "Observation noise changes relative ranking",
-        "Controlled stress test · $N=24$ trajectories × 3 replicates · common support",
+        r"Controlled stress test $\cdot$ $N=24$ trajectories $\times$ 3 replicates $\cdot$ common support",
     )
 
     fig.text(
@@ -1031,7 +1074,7 @@ def build_figure(data: FigureData, bootstrap: BootstrapResult) -> plt.Figure:
         "Development data select representations; the protected confirmation cohort is used only for evaluation.",
         ha="center",
         va="bottom",
-        fontsize=5.35,
+        fontsize=5.75,
         color=MID,
     )
     return fig

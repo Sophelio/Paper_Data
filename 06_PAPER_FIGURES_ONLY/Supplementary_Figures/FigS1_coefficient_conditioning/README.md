@@ -9,7 +9,8 @@ coefficient-conditioning audit.
 | panel b | `d3d_heterogeneity_interval_by_coefficient.pdf` — REML between-discharge variance with profile-likelihood intervals |
 | panel c | `d3d_multivariate_eigenvalue_uncertainty.pdf` — ordered eigenvalues of Σ_B − Σ_W with bootstrap intervals and matched-null thresholds |
 | run | `D3D-SIR-62-COEFFICIENT-CONDITIONING-CORRECTION-V1` |
-| script | `figure_source/generate_correction_figures.py` |
+| script | `figure_source/generate_correction_figures.py`, driven by `figure_source/render_figS1.py` |
+| regenerate | `python figure_source/render_figS1.py --audit-dir ../../../04_DIII_D_DESCRIPTIVE/D3D-SIR-62-ALIGNED-V1/coefficient_conditioning/Correction_audit --out-dir .` (run from this folder) |
 | inputs | `04_DIII_D_DESCRIPTIVE/.../Correction_audit/outputs` and `/tables` |
 
 ## Assembly
@@ -31,3 +32,20 @@ These panels come from the **Correction_audit**, whose verdict is
 `D3D-MIXED-COEFFICIENT-IDENTIFIABILITY`. The original audit in the parent
 directory carried the retired verdict `D3D-COEFFICIENT-FAMILY-RESOLVED` and
 mislabelled profile-ML as REML. Do not plot from the original.
+
+## Polishing pass (2026-09-16)
+
+See `../../README.md` for the standard. S1-specific points:
+
+- The spec style is applied only to the three S1 plots, via `mpl.rc_context`. The
+  other seven audit figures from the same generator are untouched, because their
+  raw-underscore labels are not LaTeX-safe.
+- Original canvases (10×4 in; 8×4.5 in) and original font sizes are kept.
+- Panel b tick labels use the same coefficient notation as Figure 6.
+- `render_figS1.py` writes all audit figures to a temporary directory and
+  copies out only the three `d3d_` panels as PDF, PNG and SVG. The PNG/SVG
+  variants are new to this folder. The input and output directories can also be
+  set with the `CORRECTION_AUDIT_DIR` and `CORRECTION_FIGURE_DIR` environment
+  variables; the script's defaults are unchanged.
+- The pre-polish PDFs were confirmed to reproduce pixel-for-pixel from this
+  generator before editing.

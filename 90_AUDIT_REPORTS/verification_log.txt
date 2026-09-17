@@ -1,10 +1,10 @@
 SIR Paper_Data verification
-2026-09-16T03:29:52.263007+00:00
+2026-09-16T18:24:38.953053+00:00
 
 [PASS] structure/required                 all 22 required package files present
-[PASS] manifest/rows                      1587 records
+[PASS] manifest/rows                      1603 records
 [PASS] manifest/present                   every manifest entry exists on disk
-[PASS] manifest/hashes                    all 1587 SHA-256 values reproduce
+[PASS] manifest/hashes                    all 1603 SHA-256 values reproduce
 [PASS] manifest/no_self_reference         no source path points inside Paper_Data
 [PASS] figures/allow_list                 only allow-listed figure folders present (6)
 [PASS] figures/readme                     every figure folder documents its provenance

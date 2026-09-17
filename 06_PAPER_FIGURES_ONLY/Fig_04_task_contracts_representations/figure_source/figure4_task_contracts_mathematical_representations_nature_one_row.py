@@ -46,9 +46,46 @@ WHITE: Final = source.WHITE
 PALE_GREEN: Final = source.PALE_GREEN
 PALE_BLUE: Final = source.PALE_BLUE
 
+# Pin the 10 pt Latin Modern design at every size (STYLE_SPEC 7A); copied
+# verbatim from the Figure 6 script.
+LM_DESIGN_SIZE_PIN = (
+    r"\DeclareFontFamily{T1}{lmr}{}"
+    r"\DeclareFontShape{T1}{lmr}{m}{n}{<-> ec-lmr10}{}"
+    r"\DeclareFontShape{T1}{lmr}{m}{it}{<-> ec-lmri10}{}"
+    r"\DeclareFontShape{T1}{lmr}{bx}{n}{<-> ec-lmbx10}{}"
+    r"\DeclareFontShape{T1}{lmr}{bx}{it}{<-> ec-lmbxi10}{}"
+    r"\DeclareFontShape{T1}{lmr}{b}{n}{<->ssub * lmr/bx/n}{}"
+    r"\DeclareFontFamily{OT1}{lmr}{}"
+    r"\DeclareFontShape{OT1}{lmr}{m}{n}{<-> rm-lmr10}{}"
+    r"\DeclareFontShape{OT1}{lmr}{m}{it}{<-> rm-lmri10}{}"
+    r"\DeclareFontShape{OT1}{lmr}{bx}{n}{<-> rm-lmbx10}{}"
+    r"\DeclareFontShape{OT1}{lmr}{b}{n}{<->ssub * lmr/bx/n}{}"
+    r"\DeclareFontFamily{OML}{lmm}{\skewchar\font127 }"
+    r"\DeclareFontShape{OML}{lmm}{m}{it}{<-> lmmi10}{}"
+    r"\DeclareFontShape{OML}{lmm}{b}{it}{<-> lmmib10}{}"
+    r"\DeclareFontShape{OML}{lmm}{bx}{it}{<->ssub * lmm/b/it}{}"
+    r"\DeclareFontFamily{OMS}{lmsy}{\skewchar\font48 }"
+    r"\DeclareFontShape{OMS}{lmsy}{m}{n}{<-> lmsy10}{}"
+    r"\DeclareFontShape{OMS}{lmsy}{b}{n}{<-> lmbsy10}{}"
+)
+
 STYLE: Final = dict(source.STYLE)
+for _dead_key in ("font.sans-serif", "mathtext.fontset", "axes.titleweight"):
+    STYLE.pop(_dead_key, None)
 STYLE.update(
     {
+        # Latin Modern through LaTeX, matching the manuscript typography.
+        "text.usetex": True,
+        "font.family": "serif",
+        "text.latex.preamble": (
+            r"\usepackage[T1]{fontenc}"
+            r"\usepackage{lmodern}"
+            r"\usepackage{amsmath,amssymb}"
+            + LM_DESIGN_SIZE_PIN
+        ),
+        "pdf.fonttype": 42,
+        "ps.fonttype": 42,
+        "svg.fonttype": "path",
         "font.size": 5.9,
         "axes.labelsize": 6.25,
         "axes.titlesize": 6.5,
@@ -59,36 +96,52 @@ STYLE.update(
 )
 
 
+def sci_tex(value: float, digits: int) -> str:
+    """Format a number as LaTeX scientific notation (no 'e' notation)."""
+    if value == 0.0:
+        return "0"
+    mantissa, exponent = f"{value:.{digits}e}".split("e")
+    return rf"{mantissa}\times 10^{{{int(exponent)}}}"
+
+
+# Header baselines (figure fraction above the panel slot). In Latin Modern bold,
+# panel b's title overruns the canvas on one line, so it wraps to two lines; every
+# panel letter and first title line sits one title line higher so the letters stay
+# aligned across the row.
+HEADER_FIRST_BASELINE: Final = 0.138
+HEADER_LINE_STEP: Final = 0.030
+
+
 def add_panel_header(
     fig: plt.Figure,
     slot,
     label: str,
-    title: str,
+    title: str | tuple[str, ...],
     subtitle: str,
     title_fontsize: float = 7.35,
 ) -> None:
     """Align panel labels and headers above both side-by-side cells."""
     bounds = slot.get_position(fig)
+    title_lines = (title,) if isinstance(title, str) else title
     fig.text(
         bounds.x0 - 0.030,
-        bounds.y1 + 0.108,
-        label,
+        bounds.y1 + HEADER_FIRST_BASELINE,
+        rf"\textbf{{{label}}}",
         ha="left",
         va="baseline",
         fontsize=8.2,
-        fontweight="bold",
         color=INK,
     )
-    fig.text(
-        bounds.x0,
-        bounds.y1 + 0.108,
-        title,
-        ha="left",
-        va="baseline",
-        fontsize=title_fontsize,
-        fontweight="semibold",
-        color=INK,
-    )
+    for index, line in enumerate(title_lines):
+        fig.text(
+            bounds.x0,
+            bounds.y1 + HEADER_FIRST_BASELINE - index * HEADER_LINE_STEP,
+            rf"\textbf{{{line}}}",
+            ha="left",
+            va="baseline",
+            fontsize=title_fontsize,
+            color=INK,
+        )
     fig.text(
         bounds.x0,
         bounds.y1 + 0.056,
@@ -112,11 +165,10 @@ def add_contract_header(
     ax.text(
         0.0,
         1.10,
-        title,
+        rf"\textbf{{{title}}}",
         ha="left",
         va="top",
         fontsize=7.0,
-        fontweight="semibold",
         color=color,
     )
     ax.text(
@@ -159,7 +211,7 @@ def draw_panel_a(
     add_contract_header(
         compression_header,
         "Compression",
-        "Shared invariant + one scalar per realization",
+        r"Shared invariant $+$ one scalar per realization",
         r"$\omega^2=-3.645(1-\cos\theta)+2E_i$",
         GREEN,
         PALE_GREEN,
@@ -167,7 +219,7 @@ def draw_panel_a(
     add_contract_header(
         prediction_header,
         "Prediction",
-        "Frozen law + eight protected holdouts",
+        r"Frozen law $+$ eight protected holdouts",
         r"$\dot{\theta}=\omega,\quad \dot{\omega}=-1.82245149\sin\theta$",
         BLUE,
         PALE_BLUE,
@@ -212,7 +264,7 @@ def draw_panel_a(
     ax_comp.text(
         0.02,
         0.98,
-        "8 trajectories shown · 32 fits",
+        r"8 trajectories shown $\cdot$ 32 fits",
         transform=ax_comp.transAxes,
         ha="left",
         va="top",
@@ -224,7 +276,7 @@ def draw_panel_a(
         0.045,
         rf"median $A_i={result.median_slope:.4f}$"
         + "\n"
-        + rf"max $|B_i-2E_i|={result.max_intercept_error:.1e}$",
+        + rf"max $|B_i-2E_i|={sci_tex(result.max_intercept_error, 1)}$",
         transform=ax_comp.transAxes,
         ha="right",
         va="bottom",
@@ -308,9 +360,9 @@ def draw_panel_a(
     ax_pred.text(
         0.97,
         0.055,
-        rf"30 s: $\mathrm{{RMSE}}_\theta={result.theta_rmse[-1]:.2e}$"
+        rf"30 s: $\mathrm{{RMSE}}_\theta={sci_tex(result.theta_rmse[-1], 2)}$"
         + "\n"
-        + rf"$\mathrm{{RMSE}}_\omega={result.omega_rmse[-1]:.2e}$",
+        + rf"$\mathrm{{RMSE}}_\omega={sci_tex(result.omega_rmse[-1], 2)}$",
         transform=ax_pred.transAxes,
         ha="right",
         va="bottom",
@@ -334,7 +386,6 @@ def add_relation_strip(
     title: str,
     equation: str,
     parameter: str,
-    residual: float,
 ) -> None:
     height = 0.245
     strip = FancyBboxPatch(
@@ -363,23 +414,12 @@ def add_relation_strip(
     ax.text(
         0.055,
         y0 + 0.177,
-        title,
+        rf"\textbf{{{title}}}",
         transform=ax.transAxes,
         ha="left",
         va="center",
         fontsize=4.65,
-        fontweight="semibold",
         color=INK,
-    )
-    ax.text(
-        0.97,
-        y0 + 0.177,
-        rf"$\|R\|_\infty={residual:.1e}$",
-        transform=ax.transAxes,
-        ha="right",
-        va="center",
-        fontsize=4.55,
-        color=MID,
     )
     ax.text(
         0.055,
@@ -398,8 +438,8 @@ def add_relation_strip(
         transform=ax.transAxes,
         ha="right",
         va="center",
-        fontsize=4.7,
-        color=MID,
+        fontsize=5.5,
+        color=INK,
     )
 
 
@@ -441,9 +481,8 @@ def draw_panel_b(
         norm=TwoSlopeNorm(vmin=-1.0, vcenter=0.0, vmax=1.0),
         rasterized=True,
     )
-    ax_field.set(xlabel="$x$", ylabel="$t$", title=r"Observed field $u(x,t)$")
+    ax_field.set(xlabel="$x$", ylabel="$t$", title=r"\textbf{Observed field} $u(x,t)$")
     ax_field.title.set_fontsize(5.9)
-    ax_field.title.set_fontweight("semibold")
     ax_field.title.set_color(INK)
     ax_field.tick_params(length=2.0)
     ax_field.spines[["top", "right"]].set_visible(True)
@@ -475,33 +514,29 @@ def draw_panel_b(
         "Temporal representation",
         r"$u_t+\alpha u=0$",
         rf"$\alpha={result.alpha:.5f}$",
-        result.temporal_residual,
     )
     add_relation_strip(
         ax_relations,
         0.405,
         "Spatial representation",
-        r"$u_{{xx}}+(m\pi)^2u=0$",
+        r"$u_{xx}+(m\pi)^2u=0$",
         rf"$m={source.HEAT_MODE}$",
-        result.spatial_residual,
     )
     add_relation_strip(
         ax_relations,
         0.120,
         "Coupled diffusion representation",
-        r"$u_t-\kappa u_{{xx}}=0$",
+        r"$u_t-\kappa u_{xx}=0$",
         rf"$\kappa={source.KAPPA:.2f}$",
-        result.coupled_residual,
     )
     ax_relations.text(
         0.50,
         0.015,
-        r"All displayed relations: $\|R\|_\infty<10^{-4}$",
+        r"\textbf{All displayed relations:} $\|R\|_\infty<10^{-4}$",
         transform=ax_relations.transAxes,
         ha="center",
         va="bottom",
         fontsize=4.5,
-        fontweight="semibold",
         color=ORANGE,
     )
 
@@ -531,13 +566,13 @@ def build_figure(
         outer[0],
         "a",
         "Task contracts select trajectory representations",
-        "32 realizations · compression invariant and protected autonomous prediction",
+        r"32 realizations $\cdot$ compression invariant and protected autonomous prediction",
     )
     add_panel_header(
         fig,
         outer[1],
         "b",
-        "Structural uncertainty supports multiple representations",
+        ("Structural uncertainty supports", "multiple representations"),
         "Temporal, spatial and coupled relations on one mode",
         title_fontsize=6.65,
     )

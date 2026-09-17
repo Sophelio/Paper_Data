@@ -15,12 +15,42 @@ PNG_PATH = OUT / f"{STEM}.png"
 PDF_PATH = OUT / f"{STEM}.pdf"
 SVG_PATH = OUT / f"{STEM}.svg"
 
+LM_DESIGN_SIZE_PIN = (
+    r"\DeclareFontFamily{T1}{lmr}{}"
+    r"\DeclareFontShape{T1}{lmr}{m}{n}{<-> ec-lmr10}{}"
+    r"\DeclareFontShape{T1}{lmr}{m}{it}{<-> ec-lmri10}{}"
+    r"\DeclareFontShape{T1}{lmr}{bx}{n}{<-> ec-lmbx10}{}"
+    r"\DeclareFontShape{T1}{lmr}{bx}{it}{<-> ec-lmbxi10}{}"
+    r"\DeclareFontShape{T1}{lmr}{b}{n}{<->ssub * lmr/bx/n}{}"
+    r"\DeclareFontFamily{OT1}{lmr}{}"
+    r"\DeclareFontShape{OT1}{lmr}{m}{n}{<-> rm-lmr10}{}"
+    r"\DeclareFontShape{OT1}{lmr}{m}{it}{<-> rm-lmri10}{}"
+    r"\DeclareFontShape{OT1}{lmr}{bx}{n}{<-> rm-lmbx10}{}"
+    r"\DeclareFontShape{OT1}{lmr}{b}{n}{<->ssub * lmr/bx/n}{}"
+    r"\DeclareFontFamily{OML}{lmm}{\skewchar\font127 }"
+    r"\DeclareFontShape{OML}{lmm}{m}{it}{<-> lmmi10}{}"
+    r"\DeclareFontShape{OML}{lmm}{b}{it}{<-> lmmib10}{}"
+    r"\DeclareFontShape{OML}{lmm}{bx}{it}{<->ssub * lmm/b/it}{}"
+    r"\DeclareFontFamily{OMS}{lmsy}{\skewchar\font48 }"
+    r"\DeclareFontShape{OMS}{lmsy}{m}{n}{<-> lmsy10}{}"
+    r"\DeclareFontShape{OMS}{lmsy}{b}{n}{<-> lmbsy10}{}"
+)
+
+
+# Latin Modern via LaTeX, matching the manuscript. Font sizes are the original
+# canvas sizes (the canvas prints at about half size at 183 mm).
 mpl.rcParams.update({
-    "font.family": "STIXGeneral",
-    "mathtext.fontset": "stix",
+    "text.usetex": True,
+    "font.family": "serif",
+    "text.latex.preamble": (
+        r"\usepackage[T1]{fontenc}"
+        r"\usepackage{lmodern}"
+        r"\usepackage{amsmath,amssymb}"
+        + LM_DESIGN_SIZE_PIN
+    ),
     "pdf.fonttype": 42,
     "ps.fonttype": 42,
-    "axes.unicode_minus": True,
+    "svg.fonttype": "path",
 })
 
 DARK = "#0D4B25"
@@ -275,8 +305,8 @@ categories = [
         cx=2.10, cy=7.92, rx=1.58, ry=1.23, phase=0.35, fill=CAT_C,
         title_x=2.10, title_y=8.55, title_fs=18.4, top_widen=0.09,
         subs=[
-            dict(x=1.38, y=7.78, w=1.08, h=0.50, text=r"$y=F(x)$"),
-            dict(x=2.47, y=7.79, w=0.99, h=0.50, text=r"$F=0$"),
+            dict(x=1.38, y=7.78, w=1.37, h=0.50, text=r"$y=F(x)$"),
+            dict(x=2.62, y=7.79, w=0.99, h=0.50, text=r"$F=0$"),
             dict(x=1.68, y=7.16, w=0.96, h=0.47, text=r"$P/Q$"),
             dict(x=2.70, y=7.16, w=1.02, h=0.47,
                  text=r"$\mathcal{R}_{\mathrm{SR}}$", fs=15.8,
@@ -299,7 +329,7 @@ categories = [
         cx=9.44, cy=7.93, rx=1.57, ry=1.23, phase=1.95, fill=CAT_C,
         title_x=9.44, title_y=8.55, title_fs=17.5, top_widen=0.11,
         subs=[
-            dict(x=8.76, y=7.79, w=0.85, h=0.51, text=r"$\int$", fs=18.0),
+            dict(x=8.76, y=7.79, w=0.85, h=0.51, text=r"$\displaystyle\int$", fs=18.0),
             dict(x=9.88, y=7.79, w=1.16, h=0.51, text=r"$u(t-\tau)$", fs=15.0),
             dict(x=9.30, y=7.15, w=1.08, h=0.48, text=r"$K*u$"),
         ],
@@ -323,7 +353,7 @@ categories = [
         subs=[
             dict(x=5.08, y=4.85, w=1.28, h=0.50, text=r"$L\phi=\lambda\phi$", fs=14.0),
             dict(x=6.39, y=4.85, w=1.24, h=0.50, text=r"$\sum a_k\phi_k$", fs=14.0),
-            dict(x=5.80, y=4.19, w=1.48, h=0.48, text=r"$u_0+\epsilon u_1+\cdots$", fs=13.1),
+            dict(x=5.80, y=4.19, w=1.72, h=0.48, text=r"$u_0+\epsilon u_1+\cdots$", fs=13.1),
         ],
     ),
     dict(
@@ -356,8 +386,8 @@ categories = [
         cx=5.84, cy=2.04, rx=1.70, ry=1.15, phase=5.65, fill=CAT_B,
         title_x=5.84, title_y=2.68, title_fs=16.2, top_widen=0.10,
         subs=[
-            dict(x=5.06, y=1.91, w=1.36, h=0.47, text=r"$x_{n+1}=F(x_n)$", fs=13.0),
-            dict(x=6.32, y=1.91, w=0.94, h=0.47, text=r"$L_Gx$"),
+            dict(x=5.06, y=1.91, w=1.60, h=0.47, text=r"$x_{n+1}=F(x_n)$", fs=13.0),
+            dict(x=6.44, y=1.91, w=0.94, h=0.47, text=r"$L_Gx$"),
             dict(x=5.78, y=1.31, w=1.18, h=0.45, text=r"$R_k|_{\Omega_k}$", fs=13.8),
         ],
     ),
@@ -366,8 +396,8 @@ categories = [
         cx=9.43, cy=1.97, rx=1.65, ry=1.15, phase=0.15, fill=CAT_A,
         title_x=9.43, title_y=2.61, title_fs=17.0, top_widen=0.09,
         subs=[
-            dict(x=8.79, y=1.88, w=1.18, h=0.47, text=r"$z=\Phi_\theta(x)$", fs=13.8),
-            dict(x=9.96, y=1.88, w=1.03, h=0.47, text=r"$K(x,x')$", fs=14.0),
+            dict(x=8.76, y=1.88, w=1.31, h=0.47, text=r"$z=\Phi_\theta(x)$", fs=13.8),
+            dict(x=10.03, y=1.88, w=1.09, h=0.47, text=r"$K(x,x')$", fs=14.0),
             dict(x=9.37, y=1.28, w=1.25, h=0.45, text=r"$\widehat{F}_{\mathrm{data}}$", fs=13.6),
         ],
     ),
@@ -420,9 +450,9 @@ ax.text(
 FRONTIER_LABEL_Y = 6.46
 frontier_label = ax.text(
     12.45, FRONTIER_LABEL_Y,
-    "Open, Expandable\nDiscovery Frontier",
+    "\\textbf{Open, Expandable}\n\\textbf{Discovery Frontier}",
     ha="center", va="center", fontsize=14.0, color=DARK,
-    fontweight="semibold", style="italic", linespacing=0.92,
+    linespacing=0.92,
 )
 
 for category in categories:
@@ -468,42 +498,48 @@ ax.text(
     6.02, overlap_y,
     "Overlapping categories permit hybrid/composed representations",
     ha="center", va="center", fontsize=11.8,
-    color=MID, style="italic"
+    color=MID,
 )
 
 # Kept as a plain Text artist so its extent can be audited independently of the
 # connector; the leader line is attached once the text extent is known.
 sr_caption = ax.text(
-    sr_x, sr_y, "Symbolic Regression: One Restricted Subfamily",
+    sr_x, sr_y, r"Symbolic Regression:\ One Restricted Subfamily",
     ha="center", va="center", fontsize=11.9,
-    color=AMBER, style="italic", zorder=8,
+    color=AMBER, zorder=8,
 )
 
 ax.text(
     6.10, 0.30,
     "Illustrative, non-exhaustive categories; each SIR run instantiates a finite, auditable grammar.",
     ha="center", va="center", fontsize=11.8,
-    color="black", style="italic"
+    color="black",
 )
 
 # Coordinate-generation panel: content retained from v14 and shifted as one
 # unit to preserve its internal alignment while opening a clear visual gutter.
-OP_SHIFT = 0.65
+# Latin Modern at the original sizes is wider than STIX: the panel moves 0.11
+# further right so the frontier clouds keep a visible gutter (pre-polish 0.65).
+OP_SHIFT = 0.76
 SYMBOL_SHIFT = 0.35
+# Header and subtitle sit together slightly left of the shifted column centre;
+# centred there the header would cross the right canvas edge, and this position
+# keeps the right-edge clearance set by the composition box.
+HEADER_X = 15.63
 ax.text(
-    15.28 + OP_SHIFT, 10.38, "Coordinate-Generation Operators",
+    HEADER_X, 10.38, "Coordinate-Generation Operators",
     ha="center", va="center", fontsize=23.3, color=DARK
 )
 ax.text(
-    15.28 + OP_SHIFT, 9.98, "Representative groups; recursively composable",
+    HEADER_X, 9.98, "Representative groups; recursively composable",
     ha="center", va="center", fontsize=12.5,
-    color=MID, style="italic"
+    color=MID,
 )
 
 op_rows = [
-    (r"$\partial,\ d,\ \Delta,\ D^\gamma$", "Local",
+    (r"$\partial,\,d,\,\Delta,\,D^\gamma$", "Local",
      "Derivatives, differences,\ntangent / phase constructions"),
-    (r"$\int,\ *,\ \mathcal{L}_\tau$", "Nonlocal / History",
+    (r"$\displaystyle\int,\ *,\ \mathcal{L}_\tau$", "Nonlocal / History",
      "Integrals, convolutions,\nlags and memory operators"),
     (r"$\mathcal{T},\ \mathcal{B},\ \Pi$", "Algebraic / Basis",
      "Transforms, ratios, reductions,\nnondimensional groups and bases"),
@@ -526,8 +562,8 @@ for sym, heading, detail in op_rows:
         fontsize=18.8, color=DARK
     ))
     row_artists.append(ax.text(
-        14.27 + OP_SHIFT, y + 0.10, heading, ha="left", va="center",
-        fontsize=15.0, color=DARK, fontweight="semibold"
+        14.27 + OP_SHIFT, y + 0.10, rf"\textbf{{{heading}}}", ha="left", va="center",
+        fontsize=15.0, color=DARK
     ))
     row_artists.append(ax.text(
         14.27 + OP_SHIFT, y - 0.25, detail, ha="left", va="center",
@@ -550,12 +586,12 @@ ax.text(
 ax.text(
     15.40 + OP_SHIFT, 1.58, "Operators may compose recursively",
     ha="center", va="center", fontsize=12.4,
-    color=MID, style="italic"
+    color=MID,
 )
 
 ax.text(
-    12.82 + OP_SHIFT, 0.42, "Key", fontsize=12.2, color=DARK,
-    fontweight="semibold", ha="left", va="center"
+    12.74 + OP_SHIFT, 0.42, r"\textbf{Key}", fontsize=12.2, color=DARK,
+    ha="left", va="center"
 )
 ax.add_patch(Ellipse(
     (13.45 + OP_SHIFT, 0.42), 0.34, 0.21,

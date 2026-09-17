@@ -5,17 +5,81 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 from pathlib import Path
 
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-BASE = Path(__file__).resolve().parent
+# Both locations can be overridden so the figures can be rendered outside the
+# audit tree (e.g. by render_figS1.py) without writing into the frozen package.
+BASE = Path(os.environ.get("CORRECTION_AUDIT_DIR", Path(__file__).resolve().parent))
 OUT = BASE / "outputs"
 TAB = BASE / "tables"
-FIG = BASE / "figures"
+FIG = Path(os.environ.get("CORRECTION_FIGURE_DIR", BASE / "figures"))
 FIG.mkdir(parents=True, exist_ok=True)
+
+# ---------------------------------------------------------------------------
+# Manuscript typography: Latin Modern through LaTeX. Font sizes and canvases
+# are the original ones (matplotlib defaults plus the per-site values below).
+# The style is applied only to the three Supplementary Figure S1 panels (via
+# rc_context); the other audit figures keep matplotlib defaults.
+# ---------------------------------------------------------------------------
+# Pin the 10 pt Latin Modern design at every size (copied verbatim from
+# Figure 6); otherwise lmodern switches to wider optical designs below 10 pt.
+LM_DESIGN_SIZE_PIN = (
+    r"\DeclareFontFamily{T1}{lmr}{}"
+    r"\DeclareFontShape{T1}{lmr}{m}{n}{<-> ec-lmr10}{}"
+    r"\DeclareFontShape{T1}{lmr}{m}{it}{<-> ec-lmri10}{}"
+    r"\DeclareFontShape{T1}{lmr}{bx}{n}{<-> ec-lmbx10}{}"
+    r"\DeclareFontShape{T1}{lmr}{bx}{it}{<-> ec-lmbxi10}{}"
+    r"\DeclareFontShape{T1}{lmr}{b}{n}{<->ssub * lmr/bx/n}{}"
+    r"\DeclareFontFamily{OT1}{lmr}{}"
+    r"\DeclareFontShape{OT1}{lmr}{m}{n}{<-> rm-lmr10}{}"
+    r"\DeclareFontShape{OT1}{lmr}{m}{it}{<-> rm-lmri10}{}"
+    r"\DeclareFontShape{OT1}{lmr}{bx}{n}{<-> rm-lmbx10}{}"
+    r"\DeclareFontShape{OT1}{lmr}{b}{n}{<->ssub * lmr/bx/n}{}"
+    r"\DeclareFontFamily{OML}{lmm}{\skewchar\font127 }"
+    r"\DeclareFontShape{OML}{lmm}{m}{it}{<-> lmmi10}{}"
+    r"\DeclareFontShape{OML}{lmm}{b}{it}{<-> lmmib10}{}"
+    r"\DeclareFontShape{OML}{lmm}{bx}{it}{<->ssub * lmm/b/it}{}"
+    r"\DeclareFontFamily{OMS}{lmsy}{\skewchar\font48 }"
+    r"\DeclareFontShape{OMS}{lmsy}{m}{n}{<-> lmsy10}{}"
+    r"\DeclareFontShape{OMS}{lmsy}{b}{n}{<-> lmbsy10}{}"
+)
+
+S1_STYLE = {
+    "text.usetex": True,
+    "font.family": "serif",
+    "text.latex.preamble": (
+        r"\usepackage[T1]{fontenc}"
+        r"\usepackage{lmodern}"
+        r"\usepackage{amsmath,amssymb}"
+        + LM_DESIGN_SIZE_PIN
+    ),
+    "pdf.fonttype": 42,
+    "ps.fonttype": 42,
+    "svg.fonttype": "path",
+}
+
+
+def bold(text: str) -> str:
+    return r"\textbf{" + text + "}"
+
+
+# LaTeX notation for the coefficient display names; identical to the mapping
+# used in Figure 6 (d3d_task_conditioned_4panel_v5.py, COORD_MATH).
+COORD_MATH = {
+    "D_kappa W_dia": r"$D_{\kappa}^{(s)}W_{\mathrm{dia}}$",
+    "D_betaN W_dia": r"$D_{\beta_N}^{(s)}W_{\mathrm{dia}}$",
+    "D_betaN kappa": r"$D_{\beta_N}^{(s)}\kappa$",
+    "D_betaN l_i": r"$D_{\beta_N}^{(s)}\ell_i$",
+    "q95 / kappa": r"$\left(\frac{q_{95}}{\kappa}\right)^{(s)}$",
+    "dot beta_N": r"$\dot{\beta}_N$",
+    "dot kappa": r"$\dot{\kappa}$",
+}
 
 
 def sha256_file(path: Path) -> str:
@@ -100,30 +164,31 @@ def main():
         rows,
     )
 
-    # 2. coefficient_change_vs_rank_removed
-    fig, ax = plt.subplots(1, 2, figsize=(10, 4))
-    for rk in [7, 6, 5, 4]:
-        g = frank[frank.retained_rank == rk]
-        ax[0].boxplot(g["relative_coefficient_change"], positions=[7 - rk], widths=0.6)
-        ax[1].boxplot(g["absolute_rmse_change"], positions=[7 - rk], widths=0.6)
-    ax[0].set_xticks([0, 1, 2, 3])
-    ax[0].set_xticklabels(["0", "1", "2", "3"])
-    ax[1].set_xticks([0, 1, 2, 3])
-    ax[1].set_xticklabels(["0", "1", "2", "3"])
-    ax[0].set_xlabel("singular directions removed")
-    ax[1].set_xlabel("singular directions removed")
-    ax[0].set_ylabel("relative coefficient change")
-    ax[1].set_ylabel("absolute RMSE change")
-    ax[0].set_title("Coefficient movement")
-    ax[1].set_title("Reconstruction change")
-    fig.suptitle("Coefficient change versus rank removed")
-    save_fig(
-        fig,
-        "coefficient_change_vs_rank_removed",
-        "Coefficient vs RMSE change under fixed-rank truncation",
-        "corrected_tsvd_fixed_rank.csv",
-        rows,
-    )
+    # 2. coefficient_change_vs_rank_removed  (Supplementary Figure S1a)
+    with mpl.rc_context(S1_STYLE):
+        fig, ax = plt.subplots(1, 2, figsize=(10, 4))
+        for rk in [7, 6, 5, 4]:
+            g = frank[frank.retained_rank == rk]
+            ax[0].boxplot(g["relative_coefficient_change"], positions=[7 - rk], widths=0.6)
+            ax[1].boxplot(g["absolute_rmse_change"], positions=[7 - rk], widths=0.6)
+        ax[0].set_xticks([0, 1, 2, 3])
+        ax[0].set_xticklabels(["0", "1", "2", "3"])
+        ax[1].set_xticks([0, 1, 2, 3])
+        ax[1].set_xticklabels(["0", "1", "2", "3"])
+        ax[0].set_xlabel("singular directions removed")
+        ax[1].set_xlabel("singular directions removed")
+        ax[0].set_ylabel("relative coefficient change")
+        ax[1].set_ylabel(r"absolute $\mathrm{RMSE}$ change")
+        ax[0].set_title(bold("Coefficient movement"))
+        ax[1].set_title(bold("Reconstruction change"))
+        fig.suptitle(bold("Coefficient change versus rank removed"))
+        save_fig(
+            fig,
+            "coefficient_change_vs_rank_removed",
+            "Coefficient vs RMSE change under fixed-rank truncation",
+            "corrected_tsvd_fixed_rank.csv",
+            rows,
+        )
 
     # 3. ridge_path_coefficient_stability
     fig, ax = plt.subplots(1, 2, figsize=(10, 4))
@@ -169,37 +234,38 @@ def main():
         rows,
     )
 
-    # 5. heterogeneity_interval_by_coefficient
-    fig, ax = plt.subplots(figsize=(8, 4.5))
-    y = np.arange(len(keys))
-    p = primary.set_index("feature").reindex(keys)
-    ax.errorbar(
-        p["tau2_REML"],
-        y,
-        xerr=[
-            p["tau2_REML"] - p["tau2_REML_interval_low"],
-            p["tau2_REML_interval_high"] - p["tau2_REML"],
-        ],
-        fmt="o",
-        capsize=3,
-    )
-    ax.set_yticks(y)
-    ax.set_yticklabels([disp[k] for k in keys], fontsize=8)
-    ax.set_xlabel(r"$\tau^2$ (REML) with profile interval")
-    ax.set_title("Corrected heterogeneity intervals")
-    ax.set_xscale("symlog", linthresh=1e-6)
-    save_fig(
-        fig,
-        "heterogeneity_interval_by_coefficient",
-        "REML tau2 intervals",
-        "corrected_coefficient_heterogeneity_primary.csv",
-        rows,
-    )
+    # 5. heterogeneity_interval_by_coefficient  (Supplementary Figure S1b)
+    with mpl.rc_context(S1_STYLE):
+        fig, ax = plt.subplots(figsize=(8, 4.5))
+        y = np.arange(len(keys))
+        p = primary.set_index("feature").reindex(keys)
+        ax.errorbar(
+            p["tau2_REML"],
+            y,
+            xerr=[
+                p["tau2_REML"] - p["tau2_REML_interval_low"],
+                p["tau2_REML_interval_high"] - p["tau2_REML"],
+            ],
+            fmt="o",
+            capsize=3,
+        )
+        ax.set_yticks(y)
+        ax.set_yticklabels([COORD_MATH[disp[k]] for k in keys], fontsize=8)
+        ax.set_xlabel(r"$\tau^2$ (REML) with profile interval")
+        ax.set_title(bold("Corrected heterogeneity intervals"))
+        ax.set_xscale("symlog", linthresh=1e-6)
+        save_fig(
+            fig,
+            "heterogeneity_interval_by_coefficient",
+            "REML tau2 intervals",
+            "corrected_coefficient_heterogeneity_primary.csv",
+            rows,
+        )
 
     # 6. leave_one_out_heterogeneity
     fig, ax = plt.subplots(figsize=(9, 4.5))
     data = [loo.loc[loo.feature == k, "tau2_REML"].to_numpy() for k in keys]
-    ax.boxplot(data, orientation="vertical")
+    ax.boxplot(data)  # vertical is the default in every matplotlib version
     ax.set_xticks(range(1, len(keys) + 1))
     ax.set_xticklabels([disp[k] for k in keys], rotation=45, ha="right", fontsize=8)
     ax.set_ylabel(r"LOO $\tau^2$")
@@ -213,33 +279,34 @@ def main():
         rows,
     )
 
-    # 7. multivariate_eigenvalue_uncertainty
-    fig, ax = plt.subplots(figsize=(8, 4.5))
-    idx = eigs["eigenvalue_index"]
-    ax.errorbar(
-        idx,
-        eigs["observed_eigenvalue"],
-        yerr=[
-            eigs["observed_eigenvalue"] - eigs["boot_q025"],
-            eigs["boot_q975"] - eigs["observed_eigenvalue"],
-        ],
-        fmt="o",
-        capsize=3,
-        label="observed ± bootstrap 95%",
-    )
-    ax.plot(idx, eigs["null_q95"], "s--", label="null 95th percentile")
-    ax.axhline(0, color="k", lw=0.8)
-    ax.set_xlabel("ordered eigenvalue index")
-    ax.set_ylabel("eigenvalue of $\\Sigma_B-\\Sigma_W$")
-    ax.legend(fontsize=8)
-    ax.set_title("Multivariate eigenvalue uncertainty")
-    save_fig(
-        fig,
-        "multivariate_eigenvalue_uncertainty",
-        "Bootstrap intervals and null thresholds for eigenvalues",
-        "d3d_multivariate_eigenvalue_intervals.csv",
-        rows,
-    )
+    # 7. multivariate_eigenvalue_uncertainty  (Supplementary Figure S1c)
+    with mpl.rc_context(S1_STYLE):
+        fig, ax = plt.subplots(figsize=(8, 4.5))
+        idx = eigs["eigenvalue_index"]
+        ax.errorbar(
+            idx,
+            eigs["observed_eigenvalue"],
+            yerr=[
+                eigs["observed_eigenvalue"] - eigs["boot_q025"],
+                eigs["boot_q975"] - eigs["observed_eigenvalue"],
+            ],
+            fmt="o",
+            capsize=3,
+            label=r"observed $\pm$ bootstrap 95\%",
+        )
+        ax.plot(idx, eigs["null_q95"], "s--", label="null 95th percentile")
+        ax.axhline(0, color="k", lw=0.8)
+        ax.set_xlabel("ordered eigenvalue index")
+        ax.set_ylabel("eigenvalue of $\\Sigma_B-\\Sigma_W$")
+        ax.legend(fontsize=8)
+        ax.set_title(bold("Multivariate eigenvalue uncertainty"))
+        save_fig(
+            fig,
+            "multivariate_eigenvalue_uncertainty",
+            "Bootstrap intervals and null thresholds for eigenvalues",
+            "d3d_multivariate_eigenvalue_intervals.csv",
+            rows,
+        )
 
     # 8. robust_multivariate_direction_loadings
     fig, ax = plt.subplots(figsize=(8, 4.5))
