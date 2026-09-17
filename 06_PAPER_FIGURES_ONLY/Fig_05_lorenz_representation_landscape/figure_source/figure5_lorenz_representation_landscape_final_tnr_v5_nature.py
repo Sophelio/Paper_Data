@@ -2,7 +2,8 @@
 
 The ``figure5_*`` working stem is retained for continuity with the frozen v4
 artwork, although this artwork is Figure 4 in the current manuscript.  All
-scientific values are read from the frozen ``fig5data`` package.  The script
+scientific values are read from the frozen ``figure_source_data`` package
+(originally ``fig5data``) in the figure folder.  The script
 never writes to that package and never modifies the v4 script or artwork.
 
 Evidence encoded
@@ -40,8 +41,10 @@ import pandas as pd
 
 
 HERE: Final = Path(__file__).resolve().parent
-DEFAULT_DATA: Final = HERE / "fig5data"
-DEFAULT_OUT: Final = HERE
+# Defaults resolve inside the figure folder: frozen inputs in figure_source_data/,
+# outputs next to figure_source/.
+DEFAULT_DATA: Final = HERE.parent / "figure_source_data"
+DEFAULT_OUT: Final = HERE.parent
 STEM: Final = "figure5_lorenz_representation_landscape_final_tnr_v5_nature"
 
 WIDTH_MM: Final = 183.0
@@ -1104,7 +1107,7 @@ def parse_args() -> argparse.Namespace:
         "--data-dir",
         type=Path,
         default=DEFAULT_DATA,
-        help="Frozen fig5data directory (default: script_dir/fig5data).",
+        help="Frozen input directory (default: ../figure_source_data).",
     )
     parser.add_argument(
         "--output-dir",

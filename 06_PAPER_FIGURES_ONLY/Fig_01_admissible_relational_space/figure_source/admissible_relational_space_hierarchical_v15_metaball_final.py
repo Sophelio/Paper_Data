@@ -8,7 +8,8 @@ from matplotlib.patches import Ellipse, FancyBboxPatch, PathPatch
 
 # This is an intentionally separate rendering variant; v14 and its outputs
 # remain untouched.
-OUT = Path(__file__).resolve().parents[1] / "Figures" / "figs"
+# Outputs go to the figure folder (the parent of figure_source/).
+OUT = Path(__file__).resolve().parents[1]
 OUT.mkdir(parents=True, exist_ok=True)
 STEM = "admissible_relational_space_hierarchical_v15_metaball"
 PNG_PATH = OUT / f"{STEM}.png"

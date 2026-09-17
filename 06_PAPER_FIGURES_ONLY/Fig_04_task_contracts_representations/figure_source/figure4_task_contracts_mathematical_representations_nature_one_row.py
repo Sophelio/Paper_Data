@@ -29,7 +29,8 @@ import figure4_task_contracts_mathematical_representations_nature as source
 
 
 HERE: Final = Path(__file__).resolve().parent
-OUTPUT_DIR: Final = HERE / "figs"
+# Outputs go to the figure folder (the parent of figure_source/).
+OUTPUT_DIR: Final = HERE.parent
 STEM: Final = "figure4_task_contracts_mathematical_representations_nature_one_row"
 WIDTH_MM: Final = 183.0
 HEIGHT_MM: Final = 92.0

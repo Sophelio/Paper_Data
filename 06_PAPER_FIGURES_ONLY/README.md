@@ -78,3 +78,28 @@ used) and **matplotlib 3.9.x**. matplotlib 3.11.0 silently drops maths minus
 signs (and some delimiters) from usetex PDFs; PNGs are unaffected. Every
 bundled asset was re-rendered from the bundled script with matplotlib 3.9.2
 and verified pixel-identical. Per-figure commands are in each folder's README.
+
+## Self-contained figure folders (2026-09-17)
+
+Each figure folder now regenerates on its own. From inside the folder:
+
+```
+python figure_source/<script>.py
+```
+
+No arguments and no `PYTHONPATH` are needed. Scripts resolve paths from their own
+location, read only `figure_source/` and `figure_source_data/`, and write the
+PDF/PNG/SVG into the figure folder, overwriting the bundled assets.
+
+| Folder | What was missing | Fix |
+|---|---|---|
+| `Fig_01` | output went to a `Figures/figs/` subfolder | output to the figure folder |
+| `Fig_02` | imported the v7 script from `02_CONTROLLED_STUDIES` via `PYTHONPATH`; output into `figure_source/` | v7 bundled in `figure_source/` (byte-identical); output to the figure folder |
+| `Fig_04` | output went to `figure_source/figs/` | output to the figure folder |
+| `Fig_05` | default data dir `fig5data/` did not exist; output into `figure_source/` | defaults: `figure_source_data/`, figure folder |
+| `Fig_06` | default data dir `fig6data/` did not exist; output into `figure_source/` | defaults: `figure_source_data/`, figure folder |
+| `FigS1` | `--audit-dir` into `04_DIII_D_DESCRIPTIVE` was required; bundled `correction_audit_utils.py` imported a module from that tree | config + 11 tables bundled in `figure_source_data/`; driver defaults to them; unused `correction_audit_utils.py` removed |
+
+Only path defaults changed; no plotting code changed. Every folder was copied on
+its own outside the repository and run with no arguments from an unrelated working
+directory. All eight PNGs reproduced the bundled ones pixel-for-pixel.

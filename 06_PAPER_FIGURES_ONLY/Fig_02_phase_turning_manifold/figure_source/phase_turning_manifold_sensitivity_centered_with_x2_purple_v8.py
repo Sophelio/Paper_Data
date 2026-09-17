@@ -38,7 +38,8 @@ from phase_turning_manifold_sensitivity_centered_with_x2_purple_v7 import (
     x2,
 )
 
-OUTDIR = Path(__file__).resolve().parent
+# Outputs go to the figure folder (the parent of figure_source/).
+OUTDIR = Path(__file__).resolve().parents[1]
 STEM = "phase_turning_manifold_sensitivity_centered_with_x2_purple_v8"
 PNG = OUTDIR / f"{STEM}.png"
 PDF = OUTDIR / f"{STEM}.pdf"

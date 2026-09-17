@@ -1,11 +1,15 @@
 #!/usr/bin/env python
-"""Render the three Supplementary Figure S1 panels outside the audit tree.
+"""Render the three Supplementary Figure S1 panels from this figure folder.
 
 Runs generate_correction_figures.py against the frozen Correction_audit inputs,
 writing every audit figure to a temporary directory, then copies the three S1
 panels to --out-dir under their manuscript (d3d_-prefixed) names.
 
-    python render_figS1.py --audit-dir <.../Correction_audit> --out-dir .
+By default the inputs are the copies bundled in ../figure_source_data (same
+layout as the audit tree: Correction_audit/ plus the parent tables/) and the
+outputs go to the figure folder, so no arguments are needed:
+
+    python figure_source/render_figS1.py
 """
 from __future__ import annotations
 
@@ -17,6 +21,8 @@ import tempfile
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
+FIGURE_DIR = HERE.parent
+DEFAULT_AUDIT = FIGURE_DIR / "figure_source_data" / "Correction_audit"
 PANELS = (
     "coefficient_change_vs_rank_removed",       # S1a
     "heterogeneity_interval_by_coefficient",    # S1b
@@ -26,9 +32,11 @@ PANELS = (
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--audit-dir", type=Path, required=True,
-                    help="Correction_audit directory holding tables/ and the config")
-    ap.add_argument("--out-dir", type=Path, default=Path.cwd())
+    ap.add_argument("--audit-dir", type=Path, default=DEFAULT_AUDIT,
+                    help="Correction_audit directory holding tables/ and the config "
+                         "(default: ../figure_source_data/Correction_audit)")
+    ap.add_argument("--out-dir", type=Path, default=FIGURE_DIR,
+                    help="directory for the d3d_ PDF/PNG/SVG (default: the figure folder)")
     a = ap.parse_args()
     audit = a.audit_dir.expanduser().resolve()
     out = a.out_dir.expanduser().resolve()

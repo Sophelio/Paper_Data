@@ -10,8 +10,8 @@ coefficient-conditioning audit.
 | panel c | `d3d_multivariate_eigenvalue_uncertainty.pdf` — ordered eigenvalues of Σ_B − Σ_W with bootstrap intervals and matched-null thresholds |
 | run | `D3D-SIR-62-COEFFICIENT-CONDITIONING-CORRECTION-V1` |
 | script | `figure_source/generate_correction_figures.py`, driven by `figure_source/render_figS1.py` |
-| regenerate | `python figure_source/render_figS1.py --audit-dir ../../../04_DIII_D_DESCRIPTIVE/D3D-SIR-62-ALIGNED-V1/coefficient_conditioning/Correction_audit --out-dir .` (run from this folder) |
-| inputs | `04_DIII_D_DESCRIPTIVE/.../Correction_audit/outputs` and `/tables` |
+| regenerate | `python figure_source/render_figS1.py` (run from this folder; reads `figure_source_data/`, writes the three `d3d_` panels here) |
+| inputs | `figure_source_data/` — the config and 11 tables the generator reads, copied verbatim from `04_DIII_D_DESCRIPTIVE/D3D-SIR-62-ALIGNED-V1/coefficient_conditioning/` |
 
 ## Assembly
 
@@ -47,5 +47,33 @@ See `../../README.md` for the standard. S1-specific points:
   variants are new to this folder. The input and output directories can also be
   set with the `CORRECTION_AUDIT_DIR` and `CORRECTION_FIGURE_DIR` environment
   variables; the script's defaults are unchanged.
+
+## Self-contained (2026-09-17)
+
+Everything S1 needs is in this folder. `render_figS1.py` needs no arguments:
+`--audit-dir` defaults to `figure_source_data/Correction_audit` and `--out-dir`
+to this folder. Both still accept other locations.
+
+`figure_source_data/` keeps the audit tree's layout, because the generator reads
+`Correction_audit/tables/` and also the parent `tables/`:
+
+```
+figure_source_data/
+  Correction_audit/correction_audit_config.json
+  Correction_audit/tables/   9 CSVs (TSVD, ridge path, heterogeneity, eigenvalue/loading intervals)
+  tables/                    d3d_conditioning_per_discharge.csv, d3d_bootstrap_coefficient_summary.csv
+```
+
+Each file is byte-identical to its counterpart under
+`04_DIII_D_DESCRIPTIVE/D3D-SIR-62-ALIGNED-V1/coefficient_conditioning/`. The generator
+reads all 12 up front, including inputs for the seven non-S1 audit figures.
+
+`correction_audit_utils.py` was removed from `figure_source/`. Neither script
+imports it, and it could not be imported from here because it imports
+`coefficient_conditioning_utils` from the audit tree. The canonical copy stays in
+`04_DIII_D_DESCRIPTIVE/.../Correction_audit/`.
+
+Verified by running a copy of this folder on its own, outside the repository:
+all three PNGs reproduced pixel-for-pixel.
 - The pre-polish PDFs were confirmed to reproduce pixel-for-pixel from this
   generator before editing.
