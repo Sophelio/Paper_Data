@@ -314,8 +314,8 @@ categories = [
         cx=2.10, cy=7.92, rx=1.58, ry=1.23, phase=0.35, fill=CAT_C,
         title_x=2.10, title_y=8.55, title_fs=18.4, top_widen=0.09,
         subs=[
-            dict(x=1.38, y=7.78, w=1.08, h=0.50, text=r"$y=F(x)$"),
-            dict(x=2.47, y=7.79, w=0.99, h=0.50, text=r"$F=0$"),
+            dict(x=1.38, y=7.78, w=1.26, h=0.52, text=r"$y=F(x)$"),
+            dict(x=2.58, y=7.79, w=0.99, h=0.50, text=r"$F=0$"),
             dict(x=1.6, y=7.16, w=0.96, h=0.47, text=r"$P/Q$"),
             dict(x=2.63, y=7.16, w=1.02, h=0.47,
                  text=r"$\mathcal{R}_{\mathrm{SR}}$", fs=15.8,
@@ -395,8 +395,8 @@ categories = [
         cx=5.84, cy=2.04, rx=1.70, ry=1.15, phase=5.65, fill=CAT_B,
         title_x=5.84, title_y=2.68, title_fs=16.2, top_widen=0.10,
         subs=[
-            dict(x=5.06, y=1.91, w=1.36, h=0.47, text=r"$x_{n+1}=F(x_n)$", fs=13.0),
-            dict(x=6.32, y=1.91, w=0.94, h=0.47, text=r"$L_Gx$"),
+            dict(x=5.06, y=1.91, w=1.52, h=0.50, text=r"$x_{n+1}=F(x_n)$", fs=13.0),
+            dict(x=6.40, y=1.91, w=0.94, h=0.47, text=r"$L_Gx$"),
             dict(x=5.78, y=1.31, w=1.18, h=0.45, text=r"$R_k|_{\Omega_k}$", fs=13.8),
         ],
     ),
@@ -405,8 +405,8 @@ categories = [
         cx=9.43, cy=1.97, rx=1.65, ry=1.15, phase=0.15, fill=CAT_A,
         title_x=9.43, title_y=2.61, title_fs=17.0, top_widen=0.09,
         subs=[
-            dict(x=8.79, y=1.88, w=1.18, h=0.47, text=r"$z=\Phi_\theta(x)$", fs=13.8),
-            dict(x=9.96, y=1.88, w=1.03, h=0.47, text=r"$K(x,x')$", fs=14.0),
+            dict(x=8.79, y=1.88, w=1.32, h=0.50, text=r"$z=\Phi_\theta(x)$", fs=13.8),
+            dict(x=10.04, y=1.88, w=1.03, h=0.47, text=r"$K(x,x')$", fs=14.0),
             dict(x=9.37, y=1.28, w=1.25, h=0.45, text=r"$\widehat{F}_{\mathrm{data}}$", fs=13.6),
         ],
     ),
@@ -454,15 +454,17 @@ ax.text(
     ha="center", va="center", fontsize=29.6, color=DARK
 )
 
-# Temporary label position; after the operator panel is measured, the label and
-# cloud sequence share the exact centre of the inter-panel white gutter.
+# Temporary label position; after the operator panel is measured, the label
+# is placed in the inter-panel white gutter. Negative FRONTIER_LABEL_DX
+# moves the two-line title left of the thought-clouds.
 FRONTIER_LABEL_Y = 6.46
+FRONTIER_LABEL_DX = -0.244
 frontier_label = ax.text(
     12.45, FRONTIER_LABEL_Y,
-    r"\textit{\textbf{Open, Expandable}}" "\n"
-    r"\textit{\textbf{Discovery Frontier}}",
+    r"\textbf{Open, Expandable}" "\n"
+    r"\textbf{Discovery Frontier}",
     ha="center", va="center", fontsize=14.0, color=DARK,
-    linespacing=0.92,
+    linespacing=1.20,
 )
 
 for category in categories:
@@ -699,7 +701,8 @@ def place_frontier_clouds():
 
 
 cloud_gap = place_frontier_clouds()
-frontier_label.set_x(gutter_center)
+frontier_label_x = gutter_center + FRONTIER_LABEL_DX
+frontier_label.set_x(frontier_label_x)
 
 fig.canvas.draw()
 row_boxes = [data_bbox(artist) for artist in row_artists]
@@ -766,8 +769,8 @@ if min(measured_cloud_gaps) < 0.05:
     raise RuntimeError(
         f"Frontier thought clouds are not visibly separated: {measured_cloud_gaps}"
     )
-if abs(label_center_measured - gutter_center) > 0.025:
-    raise RuntimeError("Frontier label is not centred over the thought clouds.")
+if abs(label_center_measured - frontier_label_x) > 0.025:
+    raise RuntimeError("Frontier label is not at the requested gutter offset.")
 if any(
     field_path.intersects_path(patch.get_path(), filled=True)
     for patch in frontier_cloud_artists
